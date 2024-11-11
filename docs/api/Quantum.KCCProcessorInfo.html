@@ -1,0 +1,560 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class KCCProcessorInfo | Rwby Vytal Versus Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KCCProcessorInfo | Rwby Vytal Versus Documentation ">
+      
+      <meta name="description" content="Data structure which is passed in processor callbacks. Contains information about the processor registration source and a collider/entity that is referencing currently executed processor.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Rwby Vytal Versus Documentation">
+            Rwby Vytal Versus Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quantum.KCCProcessorInfo">
+
+
+
+  <h1 id="Quantum_KCCProcessorInfo" data-uid="Quantum.KCCProcessorInfo" class="text-break">
+Class KCCProcessorInfo  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=7"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quantum.html">Quantum</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quantum.Simulation.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Data structure which is passed in processor callbacks.
+Contains information about the processor registration source and a collider/entity that is referencing currently executed processor.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public record KCCProcessorInfo</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">KCCProcessorInfo</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quantum_KCCProcessorInfo__ctor_" data-uid="Quantum.KCCProcessorInfo.#ctor*"></a>
+
+  <h3 id="Quantum_KCCProcessorInfo__ctor_Quantum_EKCCProcessorSource_Quantum_EntityRef_System_Int32_" data-uid="Quantum.KCCProcessorInfo.#ctor(Quantum.EKCCProcessorSource,Quantum.EntityRef,System.Int32)">
+  KCCProcessorInfo(EKCCProcessorSource, EntityRef, int)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KCCProcessorInfo(EKCCProcessorSource source, EntityRef entity, int colliderIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="Quantum.EKCCProcessorSource.html">EKCCProcessorSource</a></dt>
+    <dd></dd>
+    <dt><code>entity</code> <span class="xref">EntityRef</span></dt>
+    <dd></dd>
+    <dt><code>colliderIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Quantum_KCCProcessorInfo_ColliderIndex" data-uid="Quantum.KCCProcessorInfo.ColliderIndex">
+  ColliderIndex
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Index of a static collider which references the currently executed processor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int ColliderIndex</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_KCCProcessorInfo_Default" data-uid="Quantum.KCCProcessorInfo.Default">
+  Default
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly KCCProcessorInfo Default</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quantum.KCCProcessorInfo.html">KCCProcessorInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_KCCProcessorInfo_Entity" data-uid="Quantum.KCCProcessorInfo.Entity">
+  Entity
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference to an entity which references the currently executed processor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly EntityRef Entity</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EntityRef</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_KCCProcessorInfo_Source" data-uid="Quantum.KCCProcessorInfo.Source">
+  Source
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defines source of the processor (manually registered modifier processor, a processor linked to static collider, a processor linked to KCCProcessorSource component on an entity).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly EKCCProcessorSource Source</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quantum.EKCCProcessorSource.html">EKCCProcessorSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quantum_KCCProcessorInfo_HasEntity_" data-uid="Quantum.KCCProcessorInfo.HasEntity*"></a>
+
+  <h3 id="Quantum_KCCProcessorInfo_HasEntity" data-uid="Quantum.KCCProcessorInfo.HasEntity">
+  HasEntity
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasEntity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quantum_KCCProcessorInfo_IsCollider_" data-uid="Quantum.KCCProcessorInfo.IsCollider*"></a>
+
+  <h3 id="Quantum_KCCProcessorInfo_IsCollider" data-uid="Quantum.KCCProcessorInfo.IsCollider">
+  IsCollider
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCollider { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quantum_KCCProcessorInfo_IsEntityCollider_" data-uid="Quantum.KCCProcessorInfo.IsEntityCollider*"></a>
+
+  <h3 id="Quantum_KCCProcessorInfo_IsEntityCollider" data-uid="Quantum.KCCProcessorInfo.IsEntityCollider">
+  IsEntityCollider
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEntityCollider { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quantum_KCCProcessorInfo_IsModifier_" data-uid="Quantum.KCCProcessorInfo.IsModifier*"></a>
+
+  <h3 id="Quantum_KCCProcessorInfo_IsModifier" data-uid="Quantum.KCCProcessorInfo.IsModifier">
+  IsModifier
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsModifier { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Quantum_KCCProcessorInfo_IsStaticCollider_" data-uid="Quantum.KCCProcessorInfo.IsStaticCollider*"></a>
+
+  <h3 id="Quantum_KCCProcessorInfo_IsStaticCollider" data-uid="Quantum.KCCProcessorInfo.IsStaticCollider">
+  IsStaticCollider
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsStaticCollider { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quantum_KCCProcessorInfo_GetStaticCollider_" data-uid="Quantum.KCCProcessorInfo.GetStaticCollider*"></a>
+
+  <h3 id="Quantum_KCCProcessorInfo_GetStaticCollider_Quantum_Frame_Quantum_MapStaticCollider3D__" data-uid="Quantum.KCCProcessorInfo.GetStaticCollider(Quantum.Frame,Quantum.MapStaticCollider3D@)">
+  GetStaticCollider(Frame, out MapStaticCollider3D)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns MapStaticCollider3D if the KCC processor source is a collision with a static collider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetStaticCollider(Frame frame, out MapStaticCollider3D collider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frame</code> <a class="xref" href="Quantum.Frame.html">Frame</a></dt>
+    <dd></dd>
+    <dt><code>collider</code> <span class="xref">MapStaticCollider3D</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_KCCProcessorInfo_GetStaticColliderData_" data-uid="Quantum.KCCProcessorInfo.GetStaticColliderData*"></a>
+
+  <h3 id="Quantum_KCCProcessorInfo_GetStaticColliderData_Quantum_Frame_Quantum_StaticColliderData__" data-uid="Quantum.KCCProcessorInfo.GetStaticColliderData(Quantum.Frame,Quantum.StaticColliderData@)">
+  GetStaticColliderData(Frame, out StaticColliderData)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns StaticColliderData if the KCC processor source is a collision with a static collider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetStaticColliderData(Frame frame, out StaticColliderData colliderData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frame</code> <a class="xref" href="Quantum.Frame.html">Frame</a></dt>
+    <dd></dd>
+    <dt><code>colliderData</code> <span class="xref">StaticColliderData</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessorInfo.cs&amp;version=GBdev&amp;line=7" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

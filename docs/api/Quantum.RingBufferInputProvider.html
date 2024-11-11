@@ -1,0 +1,532 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RingBufferInputProvider | Rwby Vytal Versus Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RingBufferInputProvider | Rwby Vytal Versus Documentation ">
+      
+      <meta name="description" content="This input provider can store a certain amount of input sets in a ring buffer.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Rwby Vytal Versus Documentation">
+            Rwby Vytal Versus Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quantum.RingBufferInputProvider">
+
+
+
+  <h1 id="Quantum_RingBufferInputProvider" data-uid="Quantum.RingBufferInputProvider" class="text-break">
+Class RingBufferInputProvider  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6494"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quantum.html">Quantum</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quantum.Simulation.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This input provider can store a certain amount of input sets in a ring buffer.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RingBufferInputProvider</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RingBufferInputProvider</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Quantum_RingBufferInputProvider__ctor_" data-uid="Quantum.RingBufferInputProvider.#ctor*"></a>
+
+  <h3 id="Quantum_RingBufferInputProvider__ctor_Photon_Deterministic_DeterministicSessionConfig_System_Int32_" data-uid="Quantum.RingBufferInputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32)">
+  RingBufferInputProvider(DeterministicSessionConfig, int)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6505"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a ring buffer input provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RingBufferInputProvider(DeterministicSessionConfig sessionConfig, int capacity = 256)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sessionConfig</code> <span class="xref">DeterministicSessionConfig</span></dt>
+    <dd><p>Session config</p>
+</dd>
+    <dt><code>capacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Total capacity</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_RingBufferInputProvider__ctor_" data-uid="Quantum.RingBufferInputProvider.#ctor*"></a>
+
+  <h3 id="Quantum_RingBufferInputProvider__ctor_Photon_Deterministic_DeterministicTickInputSet___" data-uid="Quantum.RingBufferInputProvider.#ctor(Photon.Deterministic.DeterministicTickInputSet[])">
+  RingBufferInputProvider(DeterministicTickInputSet[])
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6528"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a ring buffer input provider from a list of input sets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RingBufferInputProvider(DeterministicTickInputSet[] inputList)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inputList</code> <span class="xref">DeterministicTickInputSet</span>[]</dt>
+    <dd><p>Input sets</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_RingBufferInputProvider__ctor_" data-uid="Quantum.RingBufferInputProvider.#ctor*"></a>
+
+  <h3 id="Quantum_RingBufferInputProvider__ctor_System_Int32_System_Int32_System_Int32_" data-uid="Quantum.RingBufferInputProvider.#ctor(System.Int32,System.Int32,System.Int32)">
+  RingBufferInputProvider(int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6548"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a ring buffer input provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RingBufferInputProvider(int playerCount, int startFrame, int capacity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>playerCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Max player count</p>
+</dd>
+    <dt><code>startFrame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Start frame</p>
+</dd>
+    <dt><code>capacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Ring buffer capacity</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quantum_RingBufferInputProvider_AddRpc_" data-uid="Quantum.RingBufferInputProvider.AddRpc*"></a>
+
+  <h3 id="Quantum_RingBufferInputProvider_AddRpc_System_Int32_System_Byte___System_Boolean_" data-uid="Quantum.RingBufferInputProvider.AddRpc(System.Int32,System.Byte[],System.Boolean)">
+  AddRpc(int, byte[], bool)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6608"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unused</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRpc(int player, byte[] data, bool command)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>player</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+    <dt><code>command</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_RingBufferInputProvider_CanSimulate_" data-uid="Quantum.RingBufferInputProvider.CanSimulate*"></a>
+
+  <h3 id="Quantum_RingBufferInputProvider_CanSimulate_System_Int32_" data-uid="Quantum.RingBufferInputProvider.CanSimulate(System.Int32)">
+  CanSimulate(int)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6514"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if for the given frame input is available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanSimulate(int frame)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Requested frame</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True when there is input for the requested frame</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_RingBufferInputProvider_Clear_" data-uid="Quantum.RingBufferInputProvider.Clear*"></a>
+
+  <h3 id="Quantum_RingBufferInputProvider_Clear_System_Int32_" data-uid="Quantum.RingBufferInputProvider.Clear(System.Int32)">
+  Clear(int)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6567"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clear all input sets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear(int startFrame)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startFrame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>New start frame</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_RingBufferInputProvider_GetInput_" data-uid="Quantum.RingBufferInputProvider.GetInput*"></a>
+
+  <h3 id="Quantum_RingBufferInputProvider_GetInput_System_Int32_System_Int32_" data-uid="Quantum.RingBufferInputProvider.GetInput(System.Int32,System.Int32)">
+  GetInput(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6635"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Read the input object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeterministicFrameInputTemp GetInput(int frame, int player)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Frame</p>
+</dd>
+    <dt><code>player</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Player</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">DeterministicFrameInputTemp</span></dt>
+    <dd><p>Input object</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_RingBufferInputProvider_GetRpc_" data-uid="Quantum.RingBufferInputProvider.GetRpc*"></a>
+
+  <h3 id="Quantum_RingBufferInputProvider_GetRpc_System_Int32_System_Int32_" data-uid="Quantum.RingBufferInputProvider.GetRpc(System.Int32,System.Int32)">
+  GetRpc(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6617"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Read the rpc from the input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QTuple&lt;byte[], bool&gt; GetRpc(int frame, int player)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Frame</p>
+</dd>
+    <dt><code>player</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Player</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">QTuple</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Rpc data</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_RingBufferInputProvider_InjectInput_" data-uid="Quantum.RingBufferInputProvider.InjectInput*"></a>
+
+  <h3 id="Quantum_RingBufferInputProvider_InjectInput_Photon_Deterministic_DeterministicTickInput_System_Boolean_" data-uid="Quantum.RingBufferInputProvider.InjectInput(Photon.Deterministic.DeterministicTickInput,System.Boolean)">
+  InjectInput(DeterministicTickInput, bool)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6593"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inject input into the buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InjectInput(DeterministicTickInput input, bool localReplay)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <span class="xref">DeterministicTickInput</span></dt>
+    <dd><p>Input to inject</p>
+</dd>
+    <dt><code>localReplay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If set to true the sent flag will be set</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_RingBufferInputProvider_OnInputConfirmed_" data-uid="Quantum.RingBufferInputProvider.OnInputConfirmed*"></a>
+
+  <h3 id="Quantum_RingBufferInputProvider_OnInputConfirmed_Quantum_QuantumGame_Photon_Deterministic_DeterministicFrameInputTemp_" data-uid="Quantum.RingBufferInputProvider.OnInputConfirmed(Quantum.QuantumGame,Photon.Deterministic.DeterministicFrameInputTemp)">
+  OnInputConfirmed(QuantumGame, DeterministicFrameInputTemp)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6580"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The callback is used to record inputs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnInputConfirmed(QuantumGame game, DeterministicFrameInputTemp input)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>game</code> <a class="xref" href="Quantum.QuantumGame.html">QuantumGame</a></dt>
+    <dd><p>Quantum game</p>
+</dd>
+    <dt><code>input</code> <span class="xref">DeterministicFrameInputTemp</span></dt>
+    <dd><p>The confirmed input</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6494" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

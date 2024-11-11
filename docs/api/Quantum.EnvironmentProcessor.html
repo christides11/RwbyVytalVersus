@@ -1,0 +1,727 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class EnvironmentProcessor | Rwby Vytal Versus Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class EnvironmentProcessor | Rwby Vytal Versus Documentation ">
+      
+      <meta name="description" content="Movement implementation for default environment.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Rwby Vytal Versus Documentation">
+            Rwby Vytal Versus Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Quantum.EnvironmentProcessor">
+
+
+
+  <h1 id="Quantum_EnvironmentProcessor" data-uid="Quantum.EnvironmentProcessor" class="text-break">
+Class EnvironmentProcessor  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Quantum.html">Quantum</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Quantum.Simulation.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Movement implementation for default environment.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EnvironmentProcessor : KCCProcessor, IBeforeMove, IAfterMoveStep</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
+      <div><span class="xref">AssetObject</span></div>
+      <div><a class="xref" href="Quantum.KCCProcessor.html">KCCProcessor</a></div>
+      <div><span class="xref">EnvironmentProcessor</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Quantum.IBeforeMove.html">IBeforeMove</a></div>
+      <div><a class="xref" href="Quantum.IAfterMoveStep.html">IAfterMoveStep</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnEnter_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapHit_">KCCProcessor.OnEnter(KCCContext, KCCProcessorInfo, KCCOverlapHit)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnExit_Quantum_KCCContext_Quantum_KCCProcessorInfo_">KCCProcessor.OnExit(KCCContext, KCCProcessorInfo)</a>
+    </div>
+    <div>
+      <span class="xref">AssetObject.Identifier</span>
+    </div>
+    <div>
+      <span class="xref">AssetObject.Loaded(IResourceManager, Native.Allocator)</span>
+    </div>
+    <div>
+      <span class="xref">AssetObject.Disposed(IResourceManager, Native.Allocator)</span>
+    </div>
+    <div>
+      <span class="xref">AssetObject.Create&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">AssetObject.Create(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">AssetObject.Create&lt;T&gt;(Action&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">AssetObject.Reset()</span>
+    </div>
+    <div>
+      <span class="xref">AssetObject.Guid</span>
+    </div>
+    <div>
+      <span class="xref">AssetObject.Path</span>
+    </div>
+    <div>
+      <span class="xref">AssetObject.Settings</span>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Quantum_EnvironmentProcessor_DynamicAirFriction" data-uid="Quantum.EnvironmentProcessor.DynamicAirFriction">
+  DynamicAirFriction
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[KCCHeader(&quot;Air&quot;)]
+[KCCTooltip(&quot;Dynamic velocity is decelerated by actual dynamic speed multiplied by this. The faster KCC moves, the more deceleration is applied.&quot;)]
+public FP DynamicAirFriction</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FP</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_EnvironmentProcessor_DynamicGroundFriction" data-uid="Quantum.EnvironmentProcessor.DynamicGroundFriction">
+  DynamicGroundFriction
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[KCCTooltip(&quot;Dynamic velocity is decelerated by actual dynamic speed multiplied by this. The faster KCC moves, the more deceleration is applied.&quot;)]
+public FP DynamicGroundFriction</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FP</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_EnvironmentProcessor_Gravity" data-uid="Quantum.EnvironmentProcessor.Gravity">
+  Gravity
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[KCCTooltip(&quot;Custom gravity vector.&quot;)]
+public FPVector3 Gravity</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FPVector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_EnvironmentProcessor_JumpMultiplier" data-uid="Quantum.EnvironmentProcessor.JumpMultiplier">
+  JumpMultiplier
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[KCCTooltip(&quot;Custom jump multiplier.&quot;)]
+public FP JumpMultiplier</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FP</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_EnvironmentProcessor_KinematicAirAcceleration" data-uid="Quantum.EnvironmentProcessor.KinematicAirAcceleration">
+  KinematicAirAcceleration
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[KCCTooltip(&quot;Kinematic velocity is accelerated by calculated kinematic speed multiplied by this.&quot;)]
+public FP KinematicAirAcceleration</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FP</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_EnvironmentProcessor_KinematicAirFriction" data-uid="Quantum.EnvironmentProcessor.KinematicAirFriction">
+  KinematicAirFriction
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[KCCTooltip(&quot;Kinematic velocity is decelerated by actual kinematic speed multiplied by this. The faster KCC moves, the more deceleration is applied.&quot;)]
+public FP KinematicAirFriction</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FP</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_EnvironmentProcessor_KinematicGroundAcceleration" data-uid="Quantum.EnvironmentProcessor.KinematicGroundAcceleration">
+  KinematicGroundAcceleration
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[KCCTooltip(&quot;Kinematic velocity is accelerated by calculated kinematic speed multiplied by this.&quot;)]
+public FP KinematicGroundAcceleration</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FP</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_EnvironmentProcessor_KinematicGroundFriction" data-uid="Quantum.EnvironmentProcessor.KinematicGroundFriction">
+  KinematicGroundFriction
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[KCCTooltip(&quot;Kinematic velocity is decelerated by actual kinematic speed multiplied by this. The faster KCC moves, the more deceleration is applied.&quot;)]
+public FP KinematicGroundFriction</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FP</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_EnvironmentProcessor_KinematicSpeed" data-uid="Quantum.EnvironmentProcessor.KinematicSpeed">
+  KinematicSpeed
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[KCCHeader(&quot;General&quot;)]
+[KCCTooltip(&quot;Maximum allowed speed the KCC can move with player input.&quot;)]
+public FP KinematicSpeed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FP</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_EnvironmentProcessor_MaxGroundAngle" data-uid="Quantum.EnvironmentProcessor.MaxGroundAngle">
+  MaxGroundAngle
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[KCCHeader(&quot;Ground&quot;)]
+[KCCTooltip(&quot;Maximum angle of walkable ground.&quot;)]
+public FP MaxGroundAngle</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FP</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quantum_EnvironmentProcessor_AfterMoveStep_" data-uid="Quantum.EnvironmentProcessor.AfterMoveStep*"></a>
+
+  <h3 id="Quantum_EnvironmentProcessor_AfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_" data-uid="Quantum.EnvironmentProcessor.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)">
+  AfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This callback is invoked after each KCC move step - this happens if the KCC
+moves too fast and the continuous collision detection (CCD) algorithm splits translation vector into multiple smaller steps.
+During CCD movement the KCCData.DeltaTime is scaled proportionally to size of the step.
+Not called if KCC.IsActive is set to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AfterMoveStep(KCCContext context, KCCProcessorInfo processorInfo, KCCOverlapInfo overlapInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quantum.KCCContext.html">KCCContext</a></dt>
+    <dd><p>Reference to KCC context.</p>
+</dd>
+    <dt><code>processorInfo</code> <a class="xref" href="Quantum.KCCProcessorInfo.html">KCCProcessorInfo</a></dt>
+    <dd><p>Contains information about the processor registration source and a collider/entity that is referencing the processor.</p>
+</dd>
+    <dt><code>overlapInfo</code> <a class="xref" href="Quantum.KCCOverlapInfo.html">KCCOverlapInfo</a></dt>
+    <dd><p>Reference to all physics overlap hits in current move step and other metadata.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_EnvironmentProcessor_BeforeMove_" data-uid="Quantum.EnvironmentProcessor.BeforeMove*"></a>
+
+  <h3 id="Quantum_EnvironmentProcessor_BeforeMove_Quantum_KCCContext_Quantum_KCCProcessorInfo_" data-uid="Quantum.EnvironmentProcessor.BeforeMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)">
+  BeforeMove(KCCContext, KCCProcessorInfo)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This callback is invoked before KCC movement - on the beginning of KCC.Update().
+Not called if KCC.IsActive is set to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeforeMove(KCCContext context, KCCProcessorInfo processorInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quantum.KCCContext.html">KCCContext</a></dt>
+    <dd><p>Reference to KCC context.</p>
+</dd>
+    <dt><code>processorInfo</code> <a class="xref" href="Quantum.KCCProcessorInfo.html">KCCProcessorInfo</a></dt>
+    <dd><p>Contains information about the processor registration source and a collider/entity that is referencing this processor.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_EnvironmentProcessor_ProcessAfterMoveStep_" data-uid="Quantum.EnvironmentProcessor.ProcessAfterMoveStep*"></a>
+
+  <h3 id="Quantum_EnvironmentProcessor_ProcessAfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_" data-uid="Quantum.EnvironmentProcessor.ProcessAfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)">
+  ProcessAfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This callback is invoked after each KCC move step - this happens if the KCC
+moves too fast and the continuous collision detection (CCD) algorithm splits translation vector into multiple smaller steps.
+During CCD movement the KCCData.DeltaTime is scaled proportionally to size of the step.
+Not called if KCC.IsActive is set to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ProcessAfterMoveStep(KCCContext context, KCCProcessorInfo processorInfo, KCCOverlapInfo overlapInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quantum.KCCContext.html">KCCContext</a></dt>
+    <dd><p>Reference to KCC context.</p>
+</dd>
+    <dt><code>processorInfo</code> <a class="xref" href="Quantum.KCCProcessorInfo.html">KCCProcessorInfo</a></dt>
+    <dd><p>Contains information about the processor registration source and a collider/entity that is referencing this processor.</p>
+</dd>
+    <dt><code>overlapInfo</code> <a class="xref" href="Quantum.KCCOverlapInfo.html">KCCOverlapInfo</a></dt>
+    <dd><p>Reference to all physics overlap hits in current move step and other metadata.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_EnvironmentProcessor_SetDynamicVelocity_" data-uid="Quantum.EnvironmentProcessor.SetDynamicVelocity*"></a>
+
+  <h3 id="Quantum_EnvironmentProcessor_SetDynamicVelocity_Quantum_KCCContext_Quantum_KCCData__Photon_Deterministic_FP_Photon_Deterministic_FP_Photon_Deterministic_FP_" data-uid="Quantum.EnvironmentProcessor.SetDynamicVelocity(Quantum.KCCContext,Quantum.KCCData@,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP)">
+  SetDynamicVelocity(KCCContext, ref KCCData, FP, FP, FP)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetDynamicVelocity(KCCContext context, ref KCCData data, FP jumpMultiplier, FP groundFriction, FP airFriction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quantum.KCCContext.html">KCCContext</a></dt>
+    <dd></dd>
+    <dt><code>data</code> <a class="xref" href="Quantum.KCCData.html">KCCData</a></dt>
+    <dd></dd>
+    <dt><code>jumpMultiplier</code> <span class="xref">FP</span></dt>
+    <dd></dd>
+    <dt><code>groundFriction</code> <span class="xref">FP</span></dt>
+    <dd></dd>
+    <dt><code>airFriction</code> <span class="xref">FP</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_EnvironmentProcessor_SetKinematicVelocity_" data-uid="Quantum.EnvironmentProcessor.SetKinematicVelocity*"></a>
+
+  <h3 id="Quantum_EnvironmentProcessor_SetKinematicVelocity_Quantum_KCCContext_Quantum_KCCData__Photon_Deterministic_FP_Photon_Deterministic_FP_Photon_Deterministic_FP_Photon_Deterministic_FP_Photon_Deterministic_FP_" data-uid="Quantum.EnvironmentProcessor.SetKinematicVelocity(Quantum.KCCContext,Quantum.KCCData@,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP)">
+  SetKinematicVelocity(KCCContext, ref KCCData, FP, FP, FP, FP, FP)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetKinematicVelocity(KCCContext context, ref KCCData data, FP speed, FP groundAcceleration, FP airAcceleration, FP groundFriction, FP airFriction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Quantum.KCCContext.html">KCCContext</a></dt>
+    <dd></dd>
+    <dt><code>data</code> <a class="xref" href="Quantum.KCCData.html">KCCData</a></dt>
+    <dd></dd>
+    <dt><code>speed</code> <span class="xref">FP</span></dt>
+    <dd></dd>
+    <dt><code>groundAcceleration</code> <span class="xref">FP</span></dt>
+    <dd></dd>
+    <dt><code>airAcceleration</code> <span class="xref">FP</span></dt>
+    <dd></dd>
+    <dt><code>groundFriction</code> <span class="xref">FP</span></dt>
+    <dd></dd>
+    <dt><code>airFriction</code> <span class="xref">FP</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs&amp;version=GBdev&amp;line=8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
