@@ -1,0 +1,600 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.EntitySoundManager
+  commentId: T:Global.EntitySoundManager
+  id: EntitySoundManager
+  parent: Global
+  children:
+  - Global.EntitySoundManager.OnUpdateView
+  - Global.EntitySoundManager.PlaySound(Quantum.SoundEntry,UnityEngine.GameObject,UnityEngine.Vector3,System.Single,System.Single,System.Single,Quantum.Tag,Quantum.AudioSourceConfig,Quantum.EventKey,System.Boolean)
+  - Global.EntitySoundManager.StopSound(UnityEngine.AudioSource)
+  - Global.EntitySoundManager.currentlyPlayingSounds
+  langs:
+  - csharp
+  - vb
+  name: EntitySoundManager
+  nameWithType: EntitySoundManager
+  fullName: EntitySoundManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/EntitySoundManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: EntitySoundManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/EntitySoundManager.cs
+    startLine: 4
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: 'public class EntitySoundManager : QuantumEntityViewComponent'
+    content.vb: Public Class EntitySoundManager Inherits QuantumEntityViewComponent
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - Quantum.QuantumMonoBehaviour
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  - Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  - Quantum.QuantumEntityViewComponent
+- uid: Global.EntitySoundManager.currentlyPlayingSounds
+  commentId: F:Global.EntitySoundManager.currentlyPlayingSounds
+  id: currentlyPlayingSounds
+  parent: Global.EntitySoundManager
+  langs:
+  - csharp
+  - vb
+  name: currentlyPlayingSounds
+  nameWithType: EntitySoundManager.currentlyPlayingSounds
+  fullName: EntitySoundManager.currentlyPlayingSounds
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/EntitySoundManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentlyPlayingSounds
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/EntitySoundManager.cs
+    startLine: 10
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Dictionary<Tag, List<AudioSource>> currentlyPlayingSounds
+    return:
+      type: System.Collections.Generic.Dictionary{Quantum.Tag,System.Collections.Generic.List{UnityEngine.AudioSource}}
+    content.vb: Public currentlyPlayingSounds As Dictionary(Of Tag, List(Of AudioSource))
+- uid: Global.EntitySoundManager.OnUpdateView
+  commentId: M:Global.EntitySoundManager.OnUpdateView
+  id: OnUpdateView
+  parent: Global.EntitySoundManager
+  langs:
+  - csharp
+  - vb
+  name: OnUpdateView()
+  nameWithType: EntitySoundManager.OnUpdateView()
+  fullName: EntitySoundManager.OnUpdateView()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/EntitySoundManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnUpdateView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/EntitySoundManager.cs
+    startLine: 12
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Is called from the <xref href="Quantum.QuantumEntityViewUpdater" data-throw-if-not-resolved="false"></xref> on a Unity update.
+  example: []
+  syntax:
+    content: public override void OnUpdateView()
+    content.vb: Public Overrides Sub OnUpdateView()
+  overridden: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnUpdateView
+  overload: Global.EntitySoundManager.OnUpdateView*
+- uid: Global.EntitySoundManager.PlaySound(Quantum.SoundEntry,UnityEngine.GameObject,UnityEngine.Vector3,System.Single,System.Single,System.Single,Quantum.Tag,Quantum.AudioSourceConfig,Quantum.EventKey,System.Boolean)
+  commentId: M:Global.EntitySoundManager.PlaySound(Quantum.SoundEntry,UnityEngine.GameObject,UnityEngine.Vector3,System.Single,System.Single,System.Single,Quantum.Tag,Quantum.AudioSourceConfig,Quantum.EventKey,System.Boolean)
+  id: PlaySound(Quantum.SoundEntry,UnityEngine.GameObject,UnityEngine.Vector3,System.Single,System.Single,System.Single,Quantum.Tag,Quantum.AudioSourceConfig,Quantum.EventKey,System.Boolean)
+  parent: Global.EntitySoundManager
+  langs:
+  - csharp
+  - vb
+  name: PlaySound(SoundEntry, GameObject, Vector3, float, float, float, Tag, AudioSourceConfig, EventKey, bool)
+  nameWithType: EntitySoundManager.PlaySound(SoundEntry, GameObject, Vector3, float, float, float, Tag, AudioSourceConfig, EventKey, bool)
+  fullName: EntitySoundManager.PlaySound(Quantum.SoundEntry, UnityEngine.GameObject, UnityEngine.Vector3, float, float, float, Quantum.Tag, Quantum.AudioSourceConfig, Quantum.EventKey, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/EntitySoundManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PlaySound
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/EntitySoundManager.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public AudioSource PlaySound(SoundEntry soundEntry, GameObject parent, Vector3 position, float time, float volume, float pitch, Tag tag, AudioSourceConfig audioSourceConfig, EventKey key, bool stopOtherInstances = false)
+    parameters:
+    - id: soundEntry
+      type: Quantum.SoundEntry
+    - id: parent
+      type: UnityEngine.GameObject
+    - id: position
+      type: UnityEngine.Vector3
+    - id: time
+      type: System.Single
+    - id: volume
+      type: System.Single
+    - id: pitch
+      type: System.Single
+    - id: tag
+      type: Quantum.Tag
+    - id: audioSourceConfig
+      type: Quantum.AudioSourceConfig
+    - id: key
+      type: Quantum.EventKey
+    - id: stopOtherInstances
+      type: System.Boolean
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: Public Function PlaySound(soundEntry As SoundEntry, parent As GameObject, position As Vector3, time As Single, volume As Single, pitch As Single, tag As Tag, audioSourceConfig As AudioSourceConfig, key As EventKey, stopOtherInstances As Boolean = False) As AudioSource
+  overload: Global.EntitySoundManager.PlaySound*
+  nameWithType.vb: EntitySoundManager.PlaySound(SoundEntry, GameObject, Vector3, Single, Single, Single, Tag, AudioSourceConfig, EventKey, Boolean)
+  fullName.vb: EntitySoundManager.PlaySound(Quantum.SoundEntry, UnityEngine.GameObject, UnityEngine.Vector3, Single, Single, Single, Quantum.Tag, Quantum.AudioSourceConfig, Quantum.EventKey, Boolean)
+  name.vb: PlaySound(SoundEntry, GameObject, Vector3, Single, Single, Single, Tag, AudioSourceConfig, EventKey, Boolean)
+- uid: Global.EntitySoundManager.StopSound(UnityEngine.AudioSource)
+  commentId: M:Global.EntitySoundManager.StopSound(UnityEngine.AudioSource)
+  id: StopSound(UnityEngine.AudioSource)
+  parent: Global.EntitySoundManager
+  langs:
+  - csharp
+  - vb
+  name: StopSound(AudioSource)
+  nameWithType: EntitySoundManager.StopSound(AudioSource)
+  fullName: EntitySoundManager.StopSound(UnityEngine.AudioSource)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/EntitySoundManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StopSound
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/EntitySoundManager.cs
+    startLine: 67
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void StopSound(AudioSource audioSource)
+    parameters:
+    - id: audioSource
+      type: UnityEngine.AudioSource
+    content.vb: Public Sub StopSound(audioSource As AudioSource)
+  overload: Global.EntitySoundManager.StopSound*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: Quantum.QuantumMonoBehaviour
+  commentId: T:Quantum.QuantumMonoBehaviour
+  parent: Quantum
+  name: QuantumMonoBehaviour
+  nameWithType: QuantumMonoBehaviour
+  fullName: Quantum.QuantumMonoBehaviour
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  commentId: T:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  parent: Quantum
+  definition: Quantum.QuantumViewComponent`1
+  name: QuantumViewComponent<IQuantumViewContext>
+  nameWithType: QuantumViewComponent<IQuantumViewContext>
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext)
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext)
+  name.vb: QuantumViewComponent(Of IQuantumViewContext)
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1
+    name: QuantumViewComponent
+  - name: <
+  - uid: Quantum.IQuantumViewContext
+    name: IQuantumViewContext
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1
+    name: QuantumViewComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.IQuantumViewContext
+    name: IQuantumViewContext
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  commentId: T:Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  parent: Quantum
+  definition: Quantum.QuantumEntityViewComponent`1
+  name: QuantumEntityViewComponent<IQuantumViewContext>
+  nameWithType: QuantumEntityViewComponent<IQuantumViewContext>
+  fullName: Quantum.QuantumEntityViewComponent<Quantum.IQuantumViewContext>
+  nameWithType.vb: QuantumEntityViewComponent(Of IQuantumViewContext)
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of Quantum.IQuantumViewContext)
+  name.vb: QuantumEntityViewComponent(Of IQuantumViewContext)
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent`1
+    name: QuantumEntityViewComponent
+  - name: <
+  - uid: Quantum.IQuantumViewContext
+    name: IQuantumViewContext
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent`1
+    name: QuantumEntityViewComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.IQuantumViewContext
+    name: IQuantumViewContext
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent
+  commentId: T:Quantum.QuantumEntityViewComponent
+  parent: Quantum
+  name: QuantumEntityViewComponent
+  nameWithType: QuantumEntityViewComponent
+  fullName: Quantum.QuantumEntityViewComponent
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Quantum
+  commentId: N:Quantum
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.QuantumViewComponent`1
+  commentId: T:Quantum.QuantumViewComponent`1
+  name: QuantumViewComponent<T>
+  nameWithType: QuantumViewComponent<T>
+  fullName: Quantum.QuantumViewComponent<T>
+  nameWithType.vb: QuantumViewComponent(Of T)
+  fullName.vb: Quantum.QuantumViewComponent(Of T)
+  name.vb: QuantumViewComponent(Of T)
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1
+    name: QuantumViewComponent
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1
+    name: QuantumViewComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent`1
+  commentId: T:Quantum.QuantumEntityViewComponent`1
+  name: QuantumEntityViewComponent<T>
+  nameWithType: QuantumEntityViewComponent<T>
+  fullName: Quantum.QuantumEntityViewComponent<T>
+  nameWithType.vb: QuantumEntityViewComponent(Of T)
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of T)
+  name.vb: QuantumEntityViewComponent(Of T)
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent`1
+    name: QuantumEntityViewComponent
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent`1
+    name: QuantumEntityViewComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.Dictionary{Quantum.Tag,System.Collections.Generic.List{UnityEngine.AudioSource}}
+  commentId: T:System.Collections.Generic.Dictionary{Quantum.Tag,System.Collections.Generic.List{UnityEngine.AudioSource}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Tag, List<AudioSource>>
+  nameWithType: Dictionary<Tag, List<AudioSource>>
+  fullName: System.Collections.Generic.Dictionary<Quantum.Tag, System.Collections.Generic.List<UnityEngine.AudioSource>>
+  nameWithType.vb: Dictionary(Of Tag, List(Of AudioSource))
+  fullName.vb: System.Collections.Generic.Dictionary(Of Quantum.Tag, System.Collections.Generic.List(Of UnityEngine.AudioSource))
+  name.vb: Dictionary(Of Tag, List(Of AudioSource))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Quantum.Tag
+    name: Tag
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.AudioSource
+    name: AudioSource
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.Tag
+    name: Tag
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.AudioSource
+    name: AudioSource
+    isExternal: true
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Quantum.QuantumEntityViewUpdater
+  commentId: T:Quantum.QuantumEntityViewUpdater
+  parent: Quantum
+  name: QuantumEntityViewUpdater
+  nameWithType: QuantumEntityViewUpdater
+  fullName: Quantum.QuantumEntityViewUpdater
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnUpdateView
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnUpdateView
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.OnUpdateView
+  name: OnUpdateView()
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.OnUpdateView()
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.OnUpdateView()
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).OnUpdateView()
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).OnUpdateView()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnUpdateView
+    name: OnUpdateView
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnUpdateView
+    name: OnUpdateView
+  - name: (
+  - name: )
+- uid: Global.EntitySoundManager.OnUpdateView*
+  commentId: Overload:Global.EntitySoundManager.OnUpdateView
+  href: Global.EntitySoundManager.html#EntitySoundManager_OnUpdateView
+  name: OnUpdateView
+  nameWithType: EntitySoundManager.OnUpdateView
+  fullName: EntitySoundManager.OnUpdateView
+- uid: Quantum.QuantumViewComponent`1.OnUpdateView
+  commentId: M:Quantum.QuantumViewComponent`1.OnUpdateView
+  name: OnUpdateView()
+  nameWithType: QuantumViewComponent<T>.OnUpdateView()
+  fullName: Quantum.QuantumViewComponent<T>.OnUpdateView()
+  nameWithType.vb: QuantumViewComponent(Of T).OnUpdateView()
+  fullName.vb: Quantum.QuantumViewComponent(Of T).OnUpdateView()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.OnUpdateView
+    name: OnUpdateView
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.OnUpdateView
+    name: OnUpdateView
+  - name: (
+  - name: )
+- uid: Global.EntitySoundManager.PlaySound*
+  commentId: Overload:Global.EntitySoundManager.PlaySound
+  href: Global.EntitySoundManager.html#EntitySoundManager_PlaySound_Quantum_SoundEntry_UnityEngine_GameObject_UnityEngine_Vector3_System_Single_System_Single_System_Single_Quantum_Tag_Quantum_AudioSourceConfig_Quantum_EventKey_System_Boolean_
+  name: PlaySound
+  nameWithType: EntitySoundManager.PlaySound
+  fullName: EntitySoundManager.PlaySound
+- uid: Quantum.SoundEntry
+  commentId: T:Quantum.SoundEntry
+  parent: Quantum
+  name: SoundEntry
+  nameWithType: SoundEntry
+  fullName: Quantum.SoundEntry
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Quantum.Tag
+  commentId: T:Quantum.Tag
+  parent: Quantum
+  name: Tag
+  nameWithType: Tag
+  fullName: Quantum.Tag
+- uid: Quantum.AudioSourceConfig
+  commentId: T:Quantum.AudioSourceConfig
+  parent: Quantum
+  name: AudioSourceConfig
+  nameWithType: AudioSourceConfig
+  fullName: Quantum.AudioSourceConfig
+- uid: Quantum.EventKey
+  commentId: T:Quantum.EventKey
+  parent: Quantum
+  isExternal: true
+  name: EventKey
+  nameWithType: EventKey
+  fullName: Quantum.EventKey
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: Global.EntitySoundManager.StopSound*
+  commentId: Overload:Global.EntitySoundManager.StopSound
+  href: Global.EntitySoundManager.html#EntitySoundManager_StopSound_UnityEngine_AudioSource_
+  name: StopSound
+  nameWithType: EntitySoundManager.StopSound
+  fullName: EntitySoundManager.StopSound

@@ -1,0 +1,629 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.VisualEffectBase
+  commentId: T:Global.VisualEffectBase
+  id: VisualEffectBase
+  parent: Global
+  children:
+  - Global.VisualEffectBase.CurrentTime
+  - Global.VisualEffectBase.DestroyEffect
+  - Global.VisualEffectBase.FixedUpdate
+  - Global.VisualEffectBase.Freeze
+  - Global.VisualEffectBase.Play
+  - Global.VisualEffectBase.Resume
+  - Global.VisualEffectBase.SeekTo(System.Single,System.Boolean)
+  - Global.VisualEffectBase.SetSeed(System.UInt32)
+  - Global.VisualEffectBase.Stop(System.Boolean)
+  - Global.VisualEffectBase.autoDestroy
+  - Global.VisualEffectBase.autoDestroyAfter
+  - Global.VisualEffectBase.entryAsset
+  - Global.VisualEffectBase.freezeDuringHitstop
+  - Global.VisualEffectBase.status
+  langs:
+  - csharp
+  - vb
+  name: VisualEffectBase
+  nameWithType: VisualEffectBase
+  fullName: VisualEffectBase
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: VisualEffectBase
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 4
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: 'public class VisualEffectBase : MonoBehaviour'
+    content.vb: Public Class VisualEffectBase Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  derivedClasses:
+  - Global.AnimancerVisualEffect
+  - Global.GroupVisualEffect
+  - Global.ParticleSystemVisualEffect
+  - Global.VFXGraphVisualEffect
+- uid: Global.VisualEffectBase.CurrentTime
+  commentId: P:Global.VisualEffectBase.CurrentTime
+  id: CurrentTime
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: CurrentTime
+  nameWithType: VisualEffectBase.CurrentTime
+  fullName: VisualEffectBase.CurrentTime
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CurrentTime
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 13
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual float CurrentTime { get; protected set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Overridable Property CurrentTime As Single
+  overload: Global.VisualEffectBase.CurrentTime*
+- uid: Global.VisualEffectBase.status
+  commentId: F:Global.VisualEffectBase.status
+  id: status
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: status
+  nameWithType: VisualEffectBase.status
+  fullName: VisualEffectBase.status
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: status
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 15
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public VisualEffectBase.VisualEffectPlayStatus status
+    return:
+      type: Global.VisualEffectBase.VisualEffectPlayStatus
+    content.vb: Public status As VisualEffectBase.VisualEffectPlayStatus
+- uid: Global.VisualEffectBase.autoDestroy
+  commentId: F:Global.VisualEffectBase.autoDestroy
+  id: autoDestroy
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: autoDestroy
+  nameWithType: VisualEffectBase.autoDestroy
+  fullName: VisualEffectBase.autoDestroy
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: autoDestroy
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool autoDestroy
+    return:
+      type: System.Boolean
+    content.vb: Public autoDestroy As Boolean
+- uid: Global.VisualEffectBase.autoDestroyAfter
+  commentId: F:Global.VisualEffectBase.autoDestroyAfter
+  id: autoDestroyAfter
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: autoDestroyAfter
+  nameWithType: VisualEffectBase.autoDestroyAfter
+  fullName: VisualEffectBase.autoDestroyAfter
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: autoDestroyAfter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 18
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public float autoDestroyAfter
+    return:
+      type: System.Single
+    content.vb: Public autoDestroyAfter As Single
+- uid: Global.VisualEffectBase.entryAsset
+  commentId: F:Global.VisualEffectBase.entryAsset
+  id: entryAsset
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: entryAsset
+  nameWithType: VisualEffectBase.entryAsset
+  fullName: VisualEffectBase.entryAsset
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: entryAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 21
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public VisualEffectEntry entryAsset
+    return:
+      type: Quantum.VisualEffectEntry
+    content.vb: >-
+      <NonSerialized>
+
+      Public entryAsset As VisualEffectEntry
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: Global.VisualEffectBase.freezeDuringHitstop
+  commentId: F:Global.VisualEffectBase.freezeDuringHitstop
+  id: freezeDuringHitstop
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: freezeDuringHitstop
+  nameWithType: VisualEffectBase.freezeDuringHitstop
+  fullName: VisualEffectBase.freezeDuringHitstop
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: freezeDuringHitstop
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 22
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool freezeDuringHitstop
+    return:
+      type: System.Boolean
+    content.vb: Public freezeDuringHitstop As Boolean
+- uid: Global.VisualEffectBase.FixedUpdate
+  commentId: M:Global.VisualEffectBase.FixedUpdate
+  id: FixedUpdate
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: FixedUpdate()
+  nameWithType: VisualEffectBase.FixedUpdate()
+  fullName: VisualEffectBase.FixedUpdate()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FixedUpdate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 24
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void FixedUpdate()
+    content.vb: Public Overridable Sub FixedUpdate()
+  overload: Global.VisualEffectBase.FixedUpdate*
+- uid: Global.VisualEffectBase.Play
+  commentId: M:Global.VisualEffectBase.Play
+  id: Play
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: Play()
+  nameWithType: VisualEffectBase.Play()
+  fullName: VisualEffectBase.Play()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Play
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 31
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void Play()
+    content.vb: Public Overridable Sub Play()
+  overload: Global.VisualEffectBase.Play*
+- uid: Global.VisualEffectBase.Freeze
+  commentId: M:Global.VisualEffectBase.Freeze
+  id: Freeze
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: Freeze()
+  nameWithType: VisualEffectBase.Freeze()
+  fullName: VisualEffectBase.Freeze()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Freeze
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 36
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void Freeze()
+    content.vb: Public Overridable Sub Freeze()
+  overload: Global.VisualEffectBase.Freeze*
+- uid: Global.VisualEffectBase.Resume
+  commentId: M:Global.VisualEffectBase.Resume
+  id: Resume
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: Resume()
+  nameWithType: VisualEffectBase.Resume()
+  fullName: VisualEffectBase.Resume()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Resume
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 41
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void Resume()
+    content.vb: Public Overridable Sub [Resume]()
+  overload: Global.VisualEffectBase.Resume*
+- uid: Global.VisualEffectBase.SeekTo(System.Single,System.Boolean)
+  commentId: M:Global.VisualEffectBase.SeekTo(System.Single,System.Boolean)
+  id: SeekTo(System.Single,System.Boolean)
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: SeekTo(float, bool)
+  nameWithType: VisualEffectBase.SeekTo(float, bool)
+  fullName: VisualEffectBase.SeekTo(float, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SeekTo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 46
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void SeekTo(float time, bool play = true)
+    parameters:
+    - id: time
+      type: System.Single
+    - id: play
+      type: System.Boolean
+    content.vb: Public Overridable Sub SeekTo(time As Single, play As Boolean = True)
+  overload: Global.VisualEffectBase.SeekTo*
+  nameWithType.vb: VisualEffectBase.SeekTo(Single, Boolean)
+  fullName.vb: VisualEffectBase.SeekTo(Single, Boolean)
+  name.vb: SeekTo(Single, Boolean)
+- uid: Global.VisualEffectBase.Stop(System.Boolean)
+  commentId: M:Global.VisualEffectBase.Stop(System.Boolean)
+  id: Stop(System.Boolean)
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: Stop(bool)
+  nameWithType: VisualEffectBase.Stop(bool)
+  fullName: VisualEffectBase.Stop(bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Stop
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 51
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void Stop(bool clearParticles = true)
+    parameters:
+    - id: clearParticles
+      type: System.Boolean
+    content.vb: Public Overridable Sub [Stop](clearParticles As Boolean = True)
+  overload: Global.VisualEffectBase.Stop*
+  nameWithType.vb: VisualEffectBase.Stop(Boolean)
+  fullName.vb: VisualEffectBase.Stop(Boolean)
+  name.vb: Stop(Boolean)
+- uid: Global.VisualEffectBase.DestroyEffect
+  commentId: M:Global.VisualEffectBase.DestroyEffect
+  id: DestroyEffect
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: DestroyEffect()
+  nameWithType: VisualEffectBase.DestroyEffect()
+  fullName: VisualEffectBase.DestroyEffect()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DestroyEffect
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 56
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void DestroyEffect()
+    content.vb: Public Overridable Sub DestroyEffect()
+  overload: Global.VisualEffectBase.DestroyEffect*
+- uid: Global.VisualEffectBase.SetSeed(System.UInt32)
+  commentId: M:Global.VisualEffectBase.SetSeed(System.UInt32)
+  id: SetSeed(System.UInt32)
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: SetSeed(uint)
+  nameWithType: VisualEffectBase.SetSeed(uint)
+  fullName: VisualEffectBase.SetSeed(uint)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetSeed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 61
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void SetSeed(uint seed)
+    parameters:
+    - id: seed
+      type: System.UInt32
+    content.vb: Public Overridable Sub SetSeed(seed As UInteger)
+  overload: Global.VisualEffectBase.SetSeed*
+  nameWithType.vb: VisualEffectBase.SetSeed(UInteger)
+  fullName.vb: VisualEffectBase.SetSeed(UInteger)
+  name.vb: SetSeed(UInteger)
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.VisualEffectBase.CurrentTime*
+  commentId: Overload:Global.VisualEffectBase.CurrentTime
+  href: Global.VisualEffectBase.html#VisualEffectBase_CurrentTime
+  name: CurrentTime
+  nameWithType: VisualEffectBase.CurrentTime
+  fullName: VisualEffectBase.CurrentTime
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Global.VisualEffectBase.VisualEffectPlayStatus
+  commentId: T:Global.VisualEffectBase.VisualEffectPlayStatus
+  href: VisualEffectBase.html
+  name: VisualEffectBase.VisualEffectPlayStatus
+  nameWithType: VisualEffectBase.VisualEffectPlayStatus
+  fullName: VisualEffectBase.VisualEffectPlayStatus
+  spec.csharp:
+  - uid: Global.VisualEffectBase
+    name: VisualEffectBase
+    href: VisualEffectBase.html
+  - name: .
+  - uid: Global.VisualEffectBase.VisualEffectPlayStatus
+    name: VisualEffectPlayStatus
+    href: VisualEffectBase.VisualEffectPlayStatus.html
+  spec.vb:
+  - uid: Global.VisualEffectBase
+    name: VisualEffectBase
+    href: VisualEffectBase.html
+  - name: .
+  - uid: Global.VisualEffectBase.VisualEffectPlayStatus
+    name: VisualEffectPlayStatus
+    href: VisualEffectBase.VisualEffectPlayStatus.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.VisualEffectEntry
+  commentId: T:Quantum.VisualEffectEntry
+  parent: Quantum
+  name: VisualEffectEntry
+  nameWithType: VisualEffectEntry
+  fullName: Quantum.VisualEffectEntry
+- uid: Quantum
+  commentId: N:Quantum
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Global.VisualEffectBase.FixedUpdate*
+  commentId: Overload:Global.VisualEffectBase.FixedUpdate
+  href: Global.VisualEffectBase.html#VisualEffectBase_FixedUpdate
+  name: FixedUpdate
+  nameWithType: VisualEffectBase.FixedUpdate
+  fullName: VisualEffectBase.FixedUpdate
+- uid: Global.VisualEffectBase.Play*
+  commentId: Overload:Global.VisualEffectBase.Play
+  href: Global.VisualEffectBase.html#VisualEffectBase_Play
+  name: Play
+  nameWithType: VisualEffectBase.Play
+  fullName: VisualEffectBase.Play
+- uid: Global.VisualEffectBase.Freeze*
+  commentId: Overload:Global.VisualEffectBase.Freeze
+  href: Global.VisualEffectBase.html#VisualEffectBase_Freeze
+  name: Freeze
+  nameWithType: VisualEffectBase.Freeze
+  fullName: VisualEffectBase.Freeze
+- uid: Global.VisualEffectBase.Resume*
+  commentId: Overload:Global.VisualEffectBase.Resume
+  href: Global.VisualEffectBase.html#VisualEffectBase_Resume
+  name: Resume
+  nameWithType: VisualEffectBase.Resume
+  fullName: VisualEffectBase.Resume
+- uid: Global.VisualEffectBase.SeekTo*
+  commentId: Overload:Global.VisualEffectBase.SeekTo
+  href: Global.VisualEffectBase.html#VisualEffectBase_SeekTo_System_Single_System_Boolean_
+  name: SeekTo
+  nameWithType: VisualEffectBase.SeekTo
+  fullName: VisualEffectBase.SeekTo
+- uid: Global.VisualEffectBase.Stop*
+  commentId: Overload:Global.VisualEffectBase.Stop
+  href: Global.VisualEffectBase.html#VisualEffectBase_Stop_System_Boolean_
+  name: Stop
+  nameWithType: VisualEffectBase.Stop
+  fullName: VisualEffectBase.Stop
+- uid: Global.VisualEffectBase.DestroyEffect*
+  commentId: Overload:Global.VisualEffectBase.DestroyEffect
+  href: Global.VisualEffectBase.html#VisualEffectBase_DestroyEffect
+  name: DestroyEffect
+  nameWithType: VisualEffectBase.DestroyEffect
+  fullName: VisualEffectBase.DestroyEffect
+- uid: Global.VisualEffectBase.SetSeed*
+  commentId: Overload:Global.VisualEffectBase.SetSeed
+  href: Global.VisualEffectBase.html#VisualEffectBase_SetSeed_System_UInt32_
+  name: SetSeed
+  nameWithType: VisualEffectBase.SetSeed
+  fullName: VisualEffectBase.SetSeed
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger

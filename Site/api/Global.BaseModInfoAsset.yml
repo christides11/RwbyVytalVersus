@@ -1,0 +1,1271 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.BaseModInfoAsset
+  commentId: T:Global.BaseModInfoAsset
+  id: BaseModInfoAsset
+  parent: Global
+  children:
+  - Global.BaseModInfoAsset.Build
+  - Global.BaseModInfoAsset.GetAssetByID(System.String,System.Boolean)
+  - Global.BaseModInfoAsset.GetAssetByID``1(System.String,System.Boolean)
+  - Global.BaseModInfoAsset.GetAssetInfo(System.String)
+  - Global.BaseModInfoAsset.GetAssetList
+  - Global.BaseModInfoAsset.GetAssetListPaginated(System.Int32,System.Int32)
+  - Global.BaseModInfoAsset.GetAssetsByType``1(System.Boolean)
+  - Global.BaseModInfoAsset.GetLoadedAssetList
+  - Global.BaseModInfoAsset.GetLoadedAssetListByType``1
+  - Global.BaseModInfoAsset.HasAsset(System.String)
+  - Global.BaseModInfoAsset.LoadAssetByID(System.String)
+  - Global.BaseModInfoAsset.LoadAssetByIDAsync(System.String)
+  - Global.BaseModInfoAsset.LoadAssetByIDAsync``1(System.String)
+  - Global.BaseModInfoAsset.ModDefinition
+  - Global.BaseModInfoAsset.ModID
+  - Global.BaseModInfoAsset.ModVersion
+  - Global.BaseModInfoAsset.OnLoad
+  - Global.BaseModInfoAsset.OnUnload
+  - Global.BaseModInfoAsset.OnlineRequirement
+  - Global.BaseModInfoAsset.RegisterQuantumAsset(System.String)
+  - Global.BaseModInfoAsset.UnloadAssetByID(System.String)
+  - Global.BaseModInfoAsset.UnloadAssetsByType``1(System.Boolean)
+  - Global.BaseModInfoAsset.UnregisterQuantumAsset(System.String)
+  langs:
+  - csharp
+  - vb
+  name: BaseModInfoAsset
+  nameWithType: BaseModInfoAsset
+  fullName: BaseModInfoAsset
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BaseModInfoAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 6
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class BaseModInfoAsset : ScriptableObject
+    content.vb: >-
+      <Serializable>
+
+      Public Class BaseModInfoAsset Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  derivedClasses:
+  - Global.AddressablesModInfoAsset
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Global.BaseModInfoAsset.ModDefinition
+  commentId: P:Global.BaseModInfoAsset.ModDefinition
+  id: ModDefinition
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: ModDefinition
+  nameWithType: BaseModInfoAsset.ModDefinition
+  fullName: BaseModInfoAsset.ModDefinition
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ModDefinition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 9
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual LoadedModDefinition ModDefinition { get; set; }
+    parameters: []
+    return:
+      type: Global.LoadedModDefinition
+    content.vb: Public Overridable Property ModDefinition As LoadedModDefinition
+  overload: Global.BaseModInfoAsset.ModDefinition*
+- uid: Global.BaseModInfoAsset.ModID
+  commentId: P:Global.BaseModInfoAsset.ModID
+  id: ModID
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: ModID
+  nameWithType: BaseModInfoAsset.ModID
+  fullName: BaseModInfoAsset.ModID
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ModID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 10
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual string ModID { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable ReadOnly Property ModID As String
+  overload: Global.BaseModInfoAsset.ModID*
+- uid: Global.BaseModInfoAsset.ModVersion
+  commentId: P:Global.BaseModInfoAsset.ModVersion
+  id: ModVersion
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: ModVersion
+  nameWithType: BaseModInfoAsset.ModVersion
+  fullName: BaseModInfoAsset.ModVersion
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ModVersion
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 11
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual string ModVersion { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable ReadOnly Property ModVersion As String
+  overload: Global.BaseModInfoAsset.ModVersion*
+- uid: Global.BaseModInfoAsset.OnlineRequirement
+  commentId: P:Global.BaseModInfoAsset.OnlineRequirement
+  id: OnlineRequirement
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: OnlineRequirement
+  nameWithType: BaseModInfoAsset.OnlineRequirement
+  fullName: BaseModInfoAsset.OnlineRequirement
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnlineRequirement
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 12
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual ModOnlineRequirement OnlineRequirement { get; }
+    parameters: []
+    return:
+      type: Global.ModOnlineRequirement
+    content.vb: Public Overridable ReadOnly Property OnlineRequirement As ModOnlineRequirement
+  overload: Global.BaseModInfoAsset.OnlineRequirement*
+- uid: Global.BaseModInfoAsset.Build
+  commentId: M:Global.BaseModInfoAsset.Build
+  id: Build
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: Build()
+  nameWithType: BaseModInfoAsset.Build()
+  fullName: BaseModInfoAsset.Build()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Build
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void Build()
+    content.vb: Public Overridable Sub Build()
+  overload: Global.BaseModInfoAsset.Build*
+- uid: Global.BaseModInfoAsset.OnLoad
+  commentId: M:Global.BaseModInfoAsset.OnLoad
+  id: OnLoad
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: OnLoad()
+  nameWithType: BaseModInfoAsset.OnLoad()
+  fullName: BaseModInfoAsset.OnLoad()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnLoad
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 22
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Called right when the mod this ModInfoAsset belongs to loads.
+  example: []
+  syntax:
+    content: public virtual void OnLoad()
+    content.vb: Public Overridable Sub OnLoad()
+  overload: Global.BaseModInfoAsset.OnLoad*
+- uid: Global.BaseModInfoAsset.OnUnload
+  commentId: M:Global.BaseModInfoAsset.OnUnload
+  id: OnUnload
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: OnUnload()
+  nameWithType: BaseModInfoAsset.OnUnload()
+  fullName: BaseModInfoAsset.OnUnload()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnUnload
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 30
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Called right before the mod this ModInfoAsset belongs to unloads.
+  example: []
+  syntax:
+    content: public virtual void OnUnload()
+    content.vb: Public Overridable Sub OnUnload()
+  overload: Global.BaseModInfoAsset.OnUnload*
+- uid: Global.BaseModInfoAsset.GetAssetList
+  commentId: M:Global.BaseModInfoAsset.GetAssetList
+  id: GetAssetList
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: GetAssetList()
+  nameWithType: BaseModInfoAsset.GetAssetList()
+  fullName: BaseModInfoAsset.GetAssetList()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetAssetList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 39
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Gets a list of all content (loaded or not) in this mod.
+  example: []
+  syntax:
+    content: public virtual List<string> GetAssetList()
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: A list of the IDs of content.
+    content.vb: Public Overridable Function GetAssetList() As List(Of String)
+  overload: Global.BaseModInfoAsset.GetAssetList*
+- uid: Global.BaseModInfoAsset.GetAssetListPaginated(System.Int32,System.Int32)
+  commentId: M:Global.BaseModInfoAsset.GetAssetListPaginated(System.Int32,System.Int32)
+  id: GetAssetListPaginated(System.Int32,System.Int32)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: GetAssetListPaginated(int, int)
+  nameWithType: BaseModInfoAsset.GetAssetListPaginated(int, int)
+  fullName: BaseModInfoAsset.GetAssetListPaginated(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetAssetListPaginated
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 50
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Gets a list of all content (loaded or not) in this mod pagniated.
+  example: []
+  syntax:
+    content: public virtual List<string> GetAssetListPaginated(int page = 0, int pageCount = 100)
+    parameters:
+    - id: page
+      type: System.Int32
+      description: The page wanted.
+    - id: pageCount
+      type: System.Int32
+      description: How many asset IDs per page.
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: The page's list of IDs.
+    content.vb: Public Overridable Function GetAssetListPaginated(page As Integer = 0, pageCount As Integer = 100) As List(Of String)
+  overload: Global.BaseModInfoAsset.GetAssetListPaginated*
+  nameWithType.vb: BaseModInfoAsset.GetAssetListPaginated(Integer, Integer)
+  fullName.vb: BaseModInfoAsset.GetAssetListPaginated(Integer, Integer)
+  name.vb: GetAssetListPaginated(Integer, Integer)
+- uid: Global.BaseModInfoAsset.GetLoadedAssetList
+  commentId: M:Global.BaseModInfoAsset.GetLoadedAssetList
+  id: GetLoadedAssetList
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: GetLoadedAssetList()
+  nameWithType: BaseModInfoAsset.GetLoadedAssetList()
+  fullName: BaseModInfoAsset.GetLoadedAssetList()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetLoadedAssetList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 59
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Gets a list of all loaded content in this mod.
+  example: []
+  syntax:
+    content: public virtual List<string> GetLoadedAssetList()
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: A list of the IDs of loaded content.
+    content.vb: Public Overridable Function GetLoadedAssetList() As List(Of String)
+  overload: Global.BaseModInfoAsset.GetLoadedAssetList*
+- uid: Global.BaseModInfoAsset.GetLoadedAssetListByType``1
+  commentId: M:Global.BaseModInfoAsset.GetLoadedAssetListByType``1
+  id: GetLoadedAssetListByType``1
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: GetLoadedAssetListByType<T>()
+  nameWithType: BaseModInfoAsset.GetLoadedAssetListByType<T>()
+  fullName: BaseModInfoAsset.GetLoadedAssetListByType<T>()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetLoadedAssetListByType
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 69
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Gets a list of all loaded content in the mod with the given type.
+  example: []
+  syntax:
+    content: 'public virtual List<string> GetLoadedAssetListByType<T>() where T : Object'
+    typeParameters:
+    - id: T
+      description: The type of the content.
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: A list of the IDs of the loaded content for the given type.
+    content.vb: Public Overridable Function GetLoadedAssetListByType(Of T As [Object])() As List(Of String)
+  overload: Global.BaseModInfoAsset.GetLoadedAssetListByType*
+  nameWithType.vb: BaseModInfoAsset.GetLoadedAssetListByType(Of T)()
+  fullName.vb: BaseModInfoAsset.GetLoadedAssetListByType(Of T)()
+  name.vb: GetLoadedAssetListByType(Of T)()
+- uid: Global.BaseModInfoAsset.HasAsset(System.String)
+  commentId: M:Global.BaseModInfoAsset.HasAsset(System.String)
+  id: HasAsset(System.String)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: HasAsset(string)
+  nameWithType: BaseModInfoAsset.HasAsset(string)
+  fullName: BaseModInfoAsset.HasAsset(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HasAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 74
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual bool HasAsset(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function HasAsset(id As String) As Boolean
+  overload: Global.BaseModInfoAsset.HasAsset*
+  nameWithType.vb: BaseModInfoAsset.HasAsset(String)
+  fullName.vb: BaseModInfoAsset.HasAsset(String)
+  name.vb: HasAsset(String)
+- uid: Global.BaseModInfoAsset.LoadAssetByID(System.String)
+  commentId: M:Global.BaseModInfoAsset.LoadAssetByID(System.String)
+  id: LoadAssetByID(System.String)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: LoadAssetByID(string)
+  nameWithType: BaseModInfoAsset.LoadAssetByID(string)
+  fullName: BaseModInfoAsset.LoadAssetByID(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadAssetByID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 84
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Loads an asset by the ID given.
+  example: []
+  syntax:
+    content: public virtual bool LoadAssetByID(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The ID of the asset.
+    return:
+      type: System.Boolean
+      description: True if the asset was loaded; otherwise false.
+    content.vb: Public Overridable Function LoadAssetByID(id As String) As Boolean
+  overload: Global.BaseModInfoAsset.LoadAssetByID*
+  nameWithType.vb: BaseModInfoAsset.LoadAssetByID(String)
+  fullName.vb: BaseModInfoAsset.LoadAssetByID(String)
+  name.vb: LoadAssetByID(String)
+- uid: Global.BaseModInfoAsset.LoadAssetByIDAsync(System.String)
+  commentId: M:Global.BaseModInfoAsset.LoadAssetByIDAsync(System.String)
+  id: LoadAssetByIDAsync(System.String)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: LoadAssetByIDAsync(string)
+  nameWithType: BaseModInfoAsset.LoadAssetByIDAsync(string)
+  fullName: BaseModInfoAsset.LoadAssetByIDAsync(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadAssetByIDAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 94
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Loads an asset by the ID given asynchronously.
+  example: []
+  syntax:
+    content: public virtual UniTask<bool> LoadAssetByIDAsync(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The ID of the asset.
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+      description: True if the asset was loaded; otherwise false.
+    content.vb: Public Overridable Function LoadAssetByIDAsync(id As String) As UniTask(Of Boolean)
+  overload: Global.BaseModInfoAsset.LoadAssetByIDAsync*
+  nameWithType.vb: BaseModInfoAsset.LoadAssetByIDAsync(String)
+  fullName.vb: BaseModInfoAsset.LoadAssetByIDAsync(String)
+  name.vb: LoadAssetByIDAsync(String)
+- uid: Global.BaseModInfoAsset.LoadAssetByIDAsync``1(System.String)
+  commentId: M:Global.BaseModInfoAsset.LoadAssetByIDAsync``1(System.String)
+  id: LoadAssetByIDAsync``1(System.String)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: LoadAssetByIDAsync<T>(string)
+  nameWithType: BaseModInfoAsset.LoadAssetByIDAsync<T>(string)
+  fullName: BaseModInfoAsset.LoadAssetByIDAsync<T>(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadAssetByIDAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 104
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Loads an asset by the ID given asynchronously.
+  example: []
+  syntax:
+    content: 'public virtual UniTask<bool> LoadAssetByIDAsync<T>(string id) where T : Object'
+    parameters:
+    - id: id
+      type: System.String
+      description: The ID of the asset.
+    typeParameters:
+    - id: T
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+      description: True if the asset was loaded; otherwise false.
+    content.vb: Public Overridable Function LoadAssetByIDAsync(Of T As [Object])(id As String) As UniTask(Of Boolean)
+  overload: Global.BaseModInfoAsset.LoadAssetByIDAsync*
+  nameWithType.vb: BaseModInfoAsset.LoadAssetByIDAsync(Of T)(String)
+  fullName.vb: BaseModInfoAsset.LoadAssetByIDAsync(Of T)(String)
+  name.vb: LoadAssetByIDAsync(Of T)(String)
+- uid: Global.BaseModInfoAsset.RegisterQuantumAsset(System.String)
+  commentId: M:Global.BaseModInfoAsset.RegisterQuantumAsset(System.String)
+  id: RegisterQuantumAsset(System.String)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: RegisterQuantumAsset(string)
+  nameWithType: BaseModInfoAsset.RegisterQuantumAsset(string)
+  fullName: BaseModInfoAsset.RegisterQuantumAsset(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RegisterQuantumAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 112
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Registers an asset to the quantum database.
+  example: []
+  syntax:
+    content: public virtual void RegisterQuantumAsset(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Public Overridable Sub RegisterQuantumAsset(id As String)
+  overload: Global.BaseModInfoAsset.RegisterQuantumAsset*
+  nameWithType.vb: BaseModInfoAsset.RegisterQuantumAsset(String)
+  fullName.vb: BaseModInfoAsset.RegisterQuantumAsset(String)
+  name.vb: RegisterQuantumAsset(String)
+- uid: Global.BaseModInfoAsset.UnregisterQuantumAsset(System.String)
+  commentId: M:Global.BaseModInfoAsset.UnregisterQuantumAsset(System.String)
+  id: UnregisterQuantumAsset(System.String)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: UnregisterQuantumAsset(string)
+  nameWithType: BaseModInfoAsset.UnregisterQuantumAsset(string)
+  fullName: BaseModInfoAsset.UnregisterQuantumAsset(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnregisterQuantumAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 120
+  assemblies:
+  - rwby
+  namespace: Global
+  summary: Deregisters an asset from the quantum database.
+  example: []
+  syntax:
+    content: public virtual void UnregisterQuantumAsset(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Public Overridable Sub UnregisterQuantumAsset(id As String)
+  overload: Global.BaseModInfoAsset.UnregisterQuantumAsset*
+  nameWithType.vb: BaseModInfoAsset.UnregisterQuantumAsset(String)
+  fullName.vb: BaseModInfoAsset.UnregisterQuantumAsset(String)
+  name.vb: UnregisterQuantumAsset(String)
+- uid: Global.BaseModInfoAsset.GetAssetByID(System.String,System.Boolean)
+  commentId: M:Global.BaseModInfoAsset.GetAssetByID(System.String,System.Boolean)
+  id: GetAssetByID(System.String,System.Boolean)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: GetAssetByID(string, bool)
+  nameWithType: BaseModInfoAsset.GetAssetByID(string, bool)
+  fullName: BaseModInfoAsset.GetAssetByID(string, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetAssetByID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 125
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual Object GetAssetByID(string id, bool autoLoad = false)
+    parameters:
+    - id: id
+      type: System.String
+    - id: autoLoad
+      type: System.Boolean
+    return:
+      type: UnityEngine.Object
+    content.vb: Public Overridable Function GetAssetByID(id As String, autoLoad As Boolean = False) As [Object]
+  overload: Global.BaseModInfoAsset.GetAssetByID*
+  nameWithType.vb: BaseModInfoAsset.GetAssetByID(String, Boolean)
+  fullName.vb: BaseModInfoAsset.GetAssetByID(String, Boolean)
+  name.vb: GetAssetByID(String, Boolean)
+- uid: Global.BaseModInfoAsset.GetAssetByID``1(System.String,System.Boolean)
+  commentId: M:Global.BaseModInfoAsset.GetAssetByID``1(System.String,System.Boolean)
+  id: GetAssetByID``1(System.String,System.Boolean)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: GetAssetByID<T>(string, bool)
+  nameWithType: BaseModInfoAsset.GetAssetByID<T>(string, bool)
+  fullName: BaseModInfoAsset.GetAssetByID<T>(string, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetAssetByID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 130
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: 'public virtual T GetAssetByID<T>(string id, bool autoLoad = false) where T : Object'
+    parameters:
+    - id: id
+      type: System.String
+    - id: autoLoad
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Overridable Function GetAssetByID(Of T As [Object])(id As String, autoLoad As Boolean = False) As T
+  overload: Global.BaseModInfoAsset.GetAssetByID*
+  nameWithType.vb: BaseModInfoAsset.GetAssetByID(Of T)(String, Boolean)
+  fullName.vb: BaseModInfoAsset.GetAssetByID(Of T)(String, Boolean)
+  name.vb: GetAssetByID(Of T)(String, Boolean)
+- uid: Global.BaseModInfoAsset.GetAssetsByType``1(System.Boolean)
+  commentId: M:Global.BaseModInfoAsset.GetAssetsByType``1(System.Boolean)
+  id: GetAssetsByType``1(System.Boolean)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: GetAssetsByType<T>(bool)
+  nameWithType: BaseModInfoAsset.GetAssetsByType<T>(bool)
+  fullName: BaseModInfoAsset.GetAssetsByType<T>(bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetAssetsByType
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 135
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: 'public virtual List<T> GetAssetsByType<T>(bool includeInheritors = true) where T : Object'
+    parameters:
+    - id: includeInheritors
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.List{{T}}
+    content.vb: Public Overridable Function GetAssetsByType(Of T As [Object])(includeInheritors As Boolean = True) As List(Of T)
+  overload: Global.BaseModInfoAsset.GetAssetsByType*
+  nameWithType.vb: BaseModInfoAsset.GetAssetsByType(Of T)(Boolean)
+  fullName.vb: BaseModInfoAsset.GetAssetsByType(Of T)(Boolean)
+  name.vb: GetAssetsByType(Of T)(Boolean)
+- uid: Global.BaseModInfoAsset.GetAssetInfo(System.String)
+  commentId: M:Global.BaseModInfoAsset.GetAssetInfo(System.String)
+  id: GetAssetInfo(System.String)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: GetAssetInfo(string)
+  nameWithType: BaseModInfoAsset.GetAssetInfo(string)
+  fullName: BaseModInfoAsset.GetAssetInfo(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetAssetInfo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 140
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual object GetAssetInfo(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: System.Object
+    content.vb: Public Overridable Function GetAssetInfo(id As String) As Object
+  overload: Global.BaseModInfoAsset.GetAssetInfo*
+  nameWithType.vb: BaseModInfoAsset.GetAssetInfo(String)
+  fullName.vb: BaseModInfoAsset.GetAssetInfo(String)
+  name.vb: GetAssetInfo(String)
+- uid: Global.BaseModInfoAsset.UnloadAssetByID(System.String)
+  commentId: M:Global.BaseModInfoAsset.UnloadAssetByID(System.String)
+  id: UnloadAssetByID(System.String)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: UnloadAssetByID(string)
+  nameWithType: BaseModInfoAsset.UnloadAssetByID(string)
+  fullName: BaseModInfoAsset.UnloadAssetByID(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadAssetByID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 145
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void UnloadAssetByID(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Public Overridable Sub UnloadAssetByID(id As String)
+  overload: Global.BaseModInfoAsset.UnloadAssetByID*
+  nameWithType.vb: BaseModInfoAsset.UnloadAssetByID(String)
+  fullName.vb: BaseModInfoAsset.UnloadAssetByID(String)
+  name.vb: UnloadAssetByID(String)
+- uid: Global.BaseModInfoAsset.UnloadAssetsByType``1(System.Boolean)
+  commentId: M:Global.BaseModInfoAsset.UnloadAssetsByType``1(System.Boolean)
+  id: UnloadAssetsByType``1(System.Boolean)
+  parent: Global.BaseModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: UnloadAssetsByType<T>(bool)
+  nameWithType: BaseModInfoAsset.UnloadAssetsByType<T>(bool)
+  fullName: BaseModInfoAsset.UnloadAssetsByType<T>(bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadAssetsByType
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModInfoAsset.cs
+    startLine: 150
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: 'public virtual void UnloadAssetsByType<T>(bool includeInheritors = true) where T : Object'
+    parameters:
+    - id: includeInheritors
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    content.vb: Public Overridable Sub UnloadAssetsByType(Of T As [Object])(includeInheritors As Boolean = True)
+  overload: Global.BaseModInfoAsset.UnloadAssetsByType*
+  nameWithType.vb: BaseModInfoAsset.UnloadAssetsByType(Of T)(Boolean)
+  fullName.vb: BaseModInfoAsset.UnloadAssetsByType(Of T)(Boolean)
+  name.vb: UnloadAssetsByType(Of T)(Boolean)
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.BaseModInfoAsset.ModDefinition*
+  commentId: Overload:Global.BaseModInfoAsset.ModDefinition
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_ModDefinition
+  name: ModDefinition
+  nameWithType: BaseModInfoAsset.ModDefinition
+  fullName: BaseModInfoAsset.ModDefinition
+- uid: Global.LoadedModDefinition
+  commentId: T:Global.LoadedModDefinition
+  href: LoadedModDefinition.html
+  name: LoadedModDefinition
+  nameWithType: LoadedModDefinition
+  fullName: LoadedModDefinition
+- uid: Global.BaseModInfoAsset.ModID*
+  commentId: Overload:Global.BaseModInfoAsset.ModID
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_ModID
+  name: ModID
+  nameWithType: BaseModInfoAsset.ModID
+  fullName: BaseModInfoAsset.ModID
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.BaseModInfoAsset.ModVersion*
+  commentId: Overload:Global.BaseModInfoAsset.ModVersion
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_ModVersion
+  name: ModVersion
+  nameWithType: BaseModInfoAsset.ModVersion
+  fullName: BaseModInfoAsset.ModVersion
+- uid: Global.BaseModInfoAsset.OnlineRequirement*
+  commentId: Overload:Global.BaseModInfoAsset.OnlineRequirement
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_OnlineRequirement
+  name: OnlineRequirement
+  nameWithType: BaseModInfoAsset.OnlineRequirement
+  fullName: BaseModInfoAsset.OnlineRequirement
+- uid: Global.ModOnlineRequirement
+  commentId: T:Global.ModOnlineRequirement
+  href: ModOnlineRequirement.html
+  name: ModOnlineRequirement
+  nameWithType: ModOnlineRequirement
+  fullName: ModOnlineRequirement
+- uid: Global.BaseModInfoAsset.Build*
+  commentId: Overload:Global.BaseModInfoAsset.Build
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_Build
+  name: Build
+  nameWithType: BaseModInfoAsset.Build
+  fullName: BaseModInfoAsset.Build
+- uid: Global.BaseModInfoAsset.OnLoad*
+  commentId: Overload:Global.BaseModInfoAsset.OnLoad
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_OnLoad
+  name: OnLoad
+  nameWithType: BaseModInfoAsset.OnLoad
+  fullName: BaseModInfoAsset.OnLoad
+- uid: Global.BaseModInfoAsset.OnUnload*
+  commentId: Overload:Global.BaseModInfoAsset.OnUnload
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_OnUnload
+  name: OnUnload
+  nameWithType: BaseModInfoAsset.OnUnload
+  fullName: BaseModInfoAsset.OnUnload
+- uid: Global.BaseModInfoAsset.GetAssetList*
+  commentId: Overload:Global.BaseModInfoAsset.GetAssetList
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_GetAssetList
+  name: GetAssetList
+  nameWithType: BaseModInfoAsset.GetAssetList
+  fullName: BaseModInfoAsset.GetAssetList
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Global.BaseModInfoAsset.GetAssetListPaginated*
+  commentId: Overload:Global.BaseModInfoAsset.GetAssetListPaginated
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_GetAssetListPaginated_System_Int32_System_Int32_
+  name: GetAssetListPaginated
+  nameWithType: BaseModInfoAsset.GetAssetListPaginated
+  fullName: BaseModInfoAsset.GetAssetListPaginated
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Global.BaseModInfoAsset.GetLoadedAssetList*
+  commentId: Overload:Global.BaseModInfoAsset.GetLoadedAssetList
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_GetLoadedAssetList
+  name: GetLoadedAssetList
+  nameWithType: BaseModInfoAsset.GetLoadedAssetList
+  fullName: BaseModInfoAsset.GetLoadedAssetList
+- uid: Global.BaseModInfoAsset.GetLoadedAssetListByType*
+  commentId: Overload:Global.BaseModInfoAsset.GetLoadedAssetListByType
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_GetLoadedAssetListByType__1
+  name: GetLoadedAssetListByType
+  nameWithType: BaseModInfoAsset.GetLoadedAssetListByType
+  fullName: BaseModInfoAsset.GetLoadedAssetListByType
+- uid: Global.BaseModInfoAsset.HasAsset*
+  commentId: Overload:Global.BaseModInfoAsset.HasAsset
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_HasAsset_System_String_
+  name: HasAsset
+  nameWithType: BaseModInfoAsset.HasAsset
+  fullName: BaseModInfoAsset.HasAsset
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Global.BaseModInfoAsset.LoadAssetByID*
+  commentId: Overload:Global.BaseModInfoAsset.LoadAssetByID
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_LoadAssetByID_System_String_
+  name: LoadAssetByID
+  nameWithType: BaseModInfoAsset.LoadAssetByID
+  fullName: BaseModInfoAsset.LoadAssetByID
+- uid: Global.BaseModInfoAsset.LoadAssetByIDAsync*
+  commentId: Overload:Global.BaseModInfoAsset.LoadAssetByIDAsync
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_LoadAssetByIDAsync_System_String_
+  name: LoadAssetByIDAsync
+  nameWithType: BaseModInfoAsset.LoadAssetByIDAsync
+  fullName: BaseModInfoAsset.LoadAssetByIDAsync
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Global.BaseModInfoAsset.RegisterQuantumAsset*
+  commentId: Overload:Global.BaseModInfoAsset.RegisterQuantumAsset
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_RegisterQuantumAsset_System_String_
+  name: RegisterQuantumAsset
+  nameWithType: BaseModInfoAsset.RegisterQuantumAsset
+  fullName: BaseModInfoAsset.RegisterQuantumAsset
+- uid: Global.BaseModInfoAsset.UnregisterQuantumAsset*
+  commentId: Overload:Global.BaseModInfoAsset.UnregisterQuantumAsset
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_UnregisterQuantumAsset_System_String_
+  name: UnregisterQuantumAsset
+  nameWithType: BaseModInfoAsset.UnregisterQuantumAsset
+  fullName: BaseModInfoAsset.UnregisterQuantumAsset
+- uid: Global.BaseModInfoAsset.GetAssetByID*
+  commentId: Overload:Global.BaseModInfoAsset.GetAssetByID
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_GetAssetByID_System_String_System_Boolean_
+  name: GetAssetByID
+  nameWithType: BaseModInfoAsset.GetAssetByID
+  fullName: BaseModInfoAsset.GetAssetByID
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Global.BaseModInfoAsset.GetAssetsByType*
+  commentId: Overload:Global.BaseModInfoAsset.GetAssetsByType
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_GetAssetsByType__1_System_Boolean_
+  name: GetAssetsByType
+  nameWithType: BaseModInfoAsset.GetAssetsByType
+  fullName: BaseModInfoAsset.GetAssetsByType
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Global.BaseModInfoAsset.GetAssetInfo*
+  commentId: Overload:Global.BaseModInfoAsset.GetAssetInfo
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_GetAssetInfo_System_String_
+  name: GetAssetInfo
+  nameWithType: BaseModInfoAsset.GetAssetInfo
+  fullName: BaseModInfoAsset.GetAssetInfo
+- uid: Global.BaseModInfoAsset.UnloadAssetByID*
+  commentId: Overload:Global.BaseModInfoAsset.UnloadAssetByID
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_UnloadAssetByID_System_String_
+  name: UnloadAssetByID
+  nameWithType: BaseModInfoAsset.UnloadAssetByID
+  fullName: BaseModInfoAsset.UnloadAssetByID
+- uid: Global.BaseModInfoAsset.UnloadAssetsByType*
+  commentId: Overload:Global.BaseModInfoAsset.UnloadAssetsByType
+  href: Global.BaseModInfoAsset.html#BaseModInfoAsset_UnloadAssetsByType__1_System_Boolean_
+  name: UnloadAssetsByType
+  nameWithType: BaseModInfoAsset.UnloadAssetsByType
+  fullName: BaseModInfoAsset.UnloadAssetsByType

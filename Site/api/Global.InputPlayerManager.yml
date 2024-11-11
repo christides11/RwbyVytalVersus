@@ -1,0 +1,1939 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.InputPlayerManager
+  commentId: T:Global.InputPlayerManager
+  id: InputPlayerManager
+  parent: Global
+  children:
+  - Global.InputPlayerManager.ActivateInput
+  - Global.InputPlayerManager.ActivateUIHandling
+  - Global.InputPlayerManager.ApplyBindingOverrides(System.String)
+  - Global.InputPlayerManager.ApplyProfile(System.String)
+  - Global.InputPlayerManager.AssignInputDevice(UnityEngine.InputSystem.InputDevice)
+  - Global.InputPlayerManager.AssignInputDevices(UnityEngine.InputSystem.Gamepad[])
+  - Global.InputPlayerManager.AssignInputDevices(UnityEngine.InputSystem.InputDevice[])
+  - Global.InputPlayerManager.AssignKeyboardAndMouse
+  - Global.InputPlayerManager.ClearAssignedDevices
+  - Global.InputPlayerManager.CurrentProfile
+  - Global.InputPlayerManager.DeactivateInput
+  - Global.InputPlayerManager.DeactivateUIHandling
+  - Global.InputPlayerManager.GetBindingOverridesAsJson
+  - Global.InputPlayerManager.GetCurrentDeviceType
+  - Global.InputPlayerManager.Id
+  - Global.InputPlayerManager.Initialize(System.Int32)
+  - Global.InputPlayerManager.RemoveAllDevices
+  - Global.InputPlayerManager.RemoveDevice(UnityEngine.InputSystem.InputDevice)
+  - Global.InputPlayerManager.RemoveDevices(UnityEngine.InputSystem.InputDevice[])
+  - Global.InputPlayerManager.ResetBindingOverrides
+  - Global.InputPlayerManager.SetID(System.Int32)
+  - Global.InputPlayerManager.SetUIRoot(UnityEngine.GameObject)
+  - Global.InputPlayerManager.SwitchToDevice(UnityEngine.InputSystem.InputDevice)
+  - Global.InputPlayerManager.SwitchToPlayerMap
+  - Global.InputPlayerManager.SwitchToUIMap
+  - Global.InputPlayerManager.Teardown
+  - Global.InputPlayerManager.UpdateDevices
+  - Global.InputPlayerManager.User
+  - Global.InputPlayerManager.Vibrate(System.Single)
+  - Global.InputPlayerManager.assignedDevices
+  - Global.InputPlayerManager.autoSwitchControlSchemes
+  - Global.InputPlayerManager.currentDevices
+  - Global.InputPlayerManager.inputActions
+  - Global.InputPlayerManager.lastNavigationType
+  - Global.InputPlayerManager.mpEventSystem
+  - Global.InputPlayerManager.navigationStyleUpdateRate
+  - Global.InputPlayerManager.onControlSchemeChanged
+  - Global.InputPlayerManager.onCurrentDeviceChanged
+  - Global.InputPlayerManager.onNavigationStyleChanged
+  - Global.InputPlayerManager.playerInput
+  - Global.InputPlayerManager.uiInputModule
+  langs:
+  - csharp
+  - vb
+  name: InputPlayerManager
+  nameWithType: InputPlayerManager
+  fullName: InputPlayerManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InputPlayerManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 10
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: 'public class InputPlayerManager : MonoBehaviour'
+    content.vb: Public Class InputPlayerManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: Global.InputPlayerManager.lastNavigationType
+  commentId: F:Global.InputPlayerManager.lastNavigationType
+  id: lastNavigationType
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: lastNavigationType
+  nameWithType: InputPlayerManager.lastNavigationType
+  fullName: InputPlayerManager.lastNavigationType
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: lastNavigationType
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 18
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public InputPlayerManager.NavigationType lastNavigationType
+    return:
+      type: Global.InputPlayerManager.NavigationType
+    content.vb: Public lastNavigationType As InputPlayerManager.NavigationType
+- uid: Global.InputPlayerManager.onNavigationStyleChanged
+  commentId: F:Global.InputPlayerManager.onNavigationStyleChanged
+  id: onNavigationStyleChanged
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: onNavigationStyleChanged
+  nameWithType: InputPlayerManager.onNavigationStyleChanged
+  fullName: InputPlayerManager.onNavigationStyleChanged
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onNavigationStyleChanged
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 20
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public InputPlayerManager.DelegateNavigationStyleChange onNavigationStyleChanged
+    return:
+      type: Global.InputPlayerManager.DelegateNavigationStyleChange
+    content.vb: Public onNavigationStyleChanged As InputPlayerManager.DelegateNavigationStyleChange
+- uid: Global.InputPlayerManager.onControlSchemeChanged
+  commentId: F:Global.InputPlayerManager.onControlSchemeChanged
+  id: onControlSchemeChanged
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: onControlSchemeChanged
+  nameWithType: InputPlayerManager.onControlSchemeChanged
+  fullName: InputPlayerManager.onControlSchemeChanged
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onControlSchemeChanged
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public InputPlayerManager.DelegateWhenControlSchemeChanged onControlSchemeChanged
+    return:
+      type: Global.InputPlayerManager.DelegateWhenControlSchemeChanged
+    content.vb: Public onControlSchemeChanged As InputPlayerManager.DelegateWhenControlSchemeChanged
+- uid: Global.InputPlayerManager.onCurrentDeviceChanged
+  commentId: F:Global.InputPlayerManager.onCurrentDeviceChanged
+  id: onCurrentDeviceChanged
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: onCurrentDeviceChanged
+  nameWithType: InputPlayerManager.onCurrentDeviceChanged
+  fullName: InputPlayerManager.onCurrentDeviceChanged
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onCurrentDeviceChanged
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 26
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public InputPlayerManager.DelegateDeviceChanged onCurrentDeviceChanged
+    return:
+      type: Global.InputPlayerManager.DelegateDeviceChanged
+    content.vb: Public onCurrentDeviceChanged As InputPlayerManager.DelegateDeviceChanged
+- uid: Global.InputPlayerManager.User
+  commentId: P:Global.InputPlayerManager.User
+  id: User
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: InputPlayerManager.User
+  fullName: InputPlayerManager.User
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: User
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 28
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public InputUser User { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.Users.InputUser
+    content.vb: Public ReadOnly Property User As InputUser
+  overload: Global.InputPlayerManager.User*
+- uid: Global.InputPlayerManager.Id
+  commentId: P:Global.InputPlayerManager.Id
+  id: Id
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: InputPlayerManager.Id
+  fullName: InputPlayerManager.Id
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Id
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 29
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public int Id { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Global.InputPlayerManager.Id*
+- uid: Global.InputPlayerManager.CurrentProfile
+  commentId: P:Global.InputPlayerManager.CurrentProfile
+  id: CurrentProfile
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: CurrentProfile
+  nameWithType: InputPlayerManager.CurrentProfile
+  fullName: InputPlayerManager.CurrentProfile
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CurrentProfile
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 30
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public string CurrentProfile { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CurrentProfile As String
+  overload: Global.InputPlayerManager.CurrentProfile*
+- uid: Global.InputPlayerManager.playerInput
+  commentId: F:Global.InputPlayerManager.playerInput
+  id: playerInput
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: playerInput
+  nameWithType: InputPlayerManager.playerInput
+  fullName: InputPlayerManager.playerInput
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playerInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 32
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public PlayerInput playerInput
+    return:
+      type: UnityEngine.InputSystem.PlayerInput
+    content.vb: Public playerInput As PlayerInput
+- uid: Global.InputPlayerManager.inputActions
+  commentId: F:Global.InputPlayerManager.inputActions
+  id: inputActions
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: inputActions
+  nameWithType: InputPlayerManager.inputActions
+  fullName: InputPlayerManager.inputActions
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: inputActions
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 33
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public InputActions inputActions
+    return:
+      type: rwby.InputActions
+    content.vb: Public inputActions As InputActions
+- uid: Global.InputPlayerManager.assignedDevices
+  commentId: F:Global.InputPlayerManager.assignedDevices
+  id: assignedDevices
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: assignedDevices
+  nameWithType: InputPlayerManager.assignedDevices
+  fullName: InputPlayerManager.assignedDevices
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: assignedDevices
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 35
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public HashSet<InputDevice> assignedDevices
+    return:
+      type: System.Collections.Generic.HashSet{UnityEngine.InputSystem.InputDevice}
+    content.vb: Public assignedDevices As HashSet(Of InputDevice)
+- uid: Global.InputPlayerManager.currentDevices
+  commentId: F:Global.InputPlayerManager.currentDevices
+  id: currentDevices
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: currentDevices
+  nameWithType: InputPlayerManager.currentDevices
+  fullName: InputPlayerManager.currentDevices
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentDevices
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 36
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public List<InputDevice> currentDevices
+    return:
+      type: System.Collections.Generic.List{UnityEngine.InputSystem.InputDevice}
+    content.vb: Public currentDevices As List(Of InputDevice)
+- uid: Global.InputPlayerManager.autoSwitchControlSchemes
+  commentId: F:Global.InputPlayerManager.autoSwitchControlSchemes
+  id: autoSwitchControlSchemes
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: autoSwitchControlSchemes
+  nameWithType: InputPlayerManager.autoSwitchControlSchemes
+  fullName: InputPlayerManager.autoSwitchControlSchemes
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: autoSwitchControlSchemes
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 38
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool autoSwitchControlSchemes
+    return:
+      type: System.Boolean
+    content.vb: Public autoSwitchControlSchemes As Boolean
+- uid: Global.InputPlayerManager.mpEventSystem
+  commentId: F:Global.InputPlayerManager.mpEventSystem
+  id: mpEventSystem
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: mpEventSystem
+  nameWithType: InputPlayerManager.mpEventSystem
+  fullName: InputPlayerManager.mpEventSystem
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: mpEventSystem
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 40
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public MultiplayerEventSystem mpEventSystem
+    return:
+      type: UnityEngine.InputSystem.UI.MultiplayerEventSystem
+    content.vb: Public mpEventSystem As MultiplayerEventSystem
+- uid: Global.InputPlayerManager.uiInputModule
+  commentId: F:Global.InputPlayerManager.uiInputModule
+  id: uiInputModule
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: uiInputModule
+  nameWithType: InputPlayerManager.uiInputModule
+  fullName: InputPlayerManager.uiInputModule
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: uiInputModule
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 41
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public InputSystemUIInputModule uiInputModule
+    return:
+      type: UnityEngine.InputSystem.UI.InputSystemUIInputModule
+    content.vb: Public uiInputModule As InputSystemUIInputModule
+- uid: Global.InputPlayerManager.navigationStyleUpdateRate
+  commentId: F:Global.InputPlayerManager.navigationStyleUpdateRate
+  id: navigationStyleUpdateRate
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: navigationStyleUpdateRate
+  nameWithType: InputPlayerManager.navigationStyleUpdateRate
+  fullName: InputPlayerManager.navigationStyleUpdateRate
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: navigationStyleUpdateRate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 43
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public int navigationStyleUpdateRate
+    return:
+      type: System.Int32
+    content.vb: Public navigationStyleUpdateRate As Integer
+- uid: Global.InputPlayerManager.Initialize(System.Int32)
+  commentId: M:Global.InputPlayerManager.Initialize(System.Int32)
+  id: Initialize(System.Int32)
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: Initialize(int)
+  nameWithType: InputPlayerManager.Initialize(int)
+  fullName: InputPlayerManager.Initialize(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 45
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void Initialize(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    content.vb: Public Sub Initialize(id As Integer)
+  overload: Global.InputPlayerManager.Initialize*
+  nameWithType.vb: InputPlayerManager.Initialize(Integer)
+  fullName.vb: InputPlayerManager.Initialize(Integer)
+  name.vb: Initialize(Integer)
+- uid: Global.InputPlayerManager.Teardown
+  commentId: M:Global.InputPlayerManager.Teardown
+  id: Teardown
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: InputPlayerManager.Teardown()
+  fullName: InputPlayerManager.Teardown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Teardown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 73
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void Teardown()
+    content.vb: Public Sub Teardown()
+  overload: Global.InputPlayerManager.Teardown*
+- uid: Global.InputPlayerManager.Vibrate(System.Single)
+  commentId: M:Global.InputPlayerManager.Vibrate(System.Single)
+  id: Vibrate(System.Single)
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: Vibrate(float)
+  nameWithType: InputPlayerManager.Vibrate(float)
+  fullName: InputPlayerManager.Vibrate(float)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Vibrate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 95
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void Vibrate(float vibrateTime)
+    parameters:
+    - id: vibrateTime
+      type: System.Single
+    content.vb: Public Sub Vibrate(vibrateTime As Single)
+  overload: Global.InputPlayerManager.Vibrate*
+  nameWithType.vb: InputPlayerManager.Vibrate(Single)
+  fullName.vb: InputPlayerManager.Vibrate(Single)
+  name.vb: Vibrate(Single)
+- uid: Global.InputPlayerManager.ActivateUIHandling
+  commentId: M:Global.InputPlayerManager.ActivateUIHandling
+  id: ActivateUIHandling
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: ActivateUIHandling()
+  nameWithType: InputPlayerManager.ActivateUIHandling()
+  fullName: InputPlayerManager.ActivateUIHandling()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ActivateUIHandling
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 103
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void ActivateUIHandling()
+    content.vb: Public Sub ActivateUIHandling()
+  overload: Global.InputPlayerManager.ActivateUIHandling*
+- uid: Global.InputPlayerManager.DeactivateUIHandling
+  commentId: M:Global.InputPlayerManager.DeactivateUIHandling
+  id: DeactivateUIHandling
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: DeactivateUIHandling()
+  nameWithType: InputPlayerManager.DeactivateUIHandling()
+  fullName: InputPlayerManager.DeactivateUIHandling()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeactivateUIHandling
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 108
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void DeactivateUIHandling()
+    content.vb: Public Sub DeactivateUIHandling()
+  overload: Global.InputPlayerManager.DeactivateUIHandling*
+- uid: Global.InputPlayerManager.SetUIRoot(UnityEngine.GameObject)
+  commentId: M:Global.InputPlayerManager.SetUIRoot(UnityEngine.GameObject)
+  id: SetUIRoot(UnityEngine.GameObject)
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: SetUIRoot(GameObject)
+  nameWithType: InputPlayerManager.SetUIRoot(GameObject)
+  fullName: InputPlayerManager.SetUIRoot(UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetUIRoot
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 113
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void SetUIRoot(GameObject uiRoot)
+    parameters:
+    - id: uiRoot
+      type: UnityEngine.GameObject
+    content.vb: Public Sub SetUIRoot(uiRoot As GameObject)
+  overload: Global.InputPlayerManager.SetUIRoot*
+- uid: Global.InputPlayerManager.SwitchToDevice(UnityEngine.InputSystem.InputDevice)
+  commentId: M:Global.InputPlayerManager.SwitchToDevice(UnityEngine.InputSystem.InputDevice)
+  id: SwitchToDevice(UnityEngine.InputSystem.InputDevice)
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: SwitchToDevice(InputDevice)
+  nameWithType: InputPlayerManager.SwitchToDevice(InputDevice)
+  fullName: InputPlayerManager.SwitchToDevice(UnityEngine.InputSystem.InputDevice)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SwitchToDevice
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 131
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void SwitchToDevice(InputDevice device)
+    parameters:
+    - id: device
+      type: UnityEngine.InputSystem.InputDevice
+    content.vb: Public Sub SwitchToDevice(device As InputDevice)
+  overload: Global.InputPlayerManager.SwitchToDevice*
+- uid: Global.InputPlayerManager.ClearAssignedDevices
+  commentId: M:Global.InputPlayerManager.ClearAssignedDevices
+  id: ClearAssignedDevices
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: ClearAssignedDevices()
+  nameWithType: InputPlayerManager.ClearAssignedDevices()
+  fullName: InputPlayerManager.ClearAssignedDevices()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ClearAssignedDevices
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 152
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void ClearAssignedDevices()
+    content.vb: Public Sub ClearAssignedDevices()
+  overload: Global.InputPlayerManager.ClearAssignedDevices*
+- uid: Global.InputPlayerManager.RemoveDevice(UnityEngine.InputSystem.InputDevice)
+  commentId: M:Global.InputPlayerManager.RemoveDevice(UnityEngine.InputSystem.InputDevice)
+  id: RemoveDevice(UnityEngine.InputSystem.InputDevice)
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: RemoveDevice(InputDevice)
+  nameWithType: InputPlayerManager.RemoveDevice(InputDevice)
+  fullName: InputPlayerManager.RemoveDevice(UnityEngine.InputSystem.InputDevice)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemoveDevice
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 158
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void RemoveDevice(InputDevice inputDevice)
+    parameters:
+    - id: inputDevice
+      type: UnityEngine.InputSystem.InputDevice
+    content.vb: Public Sub RemoveDevice(inputDevice As InputDevice)
+  overload: Global.InputPlayerManager.RemoveDevice*
+- uid: Global.InputPlayerManager.RemoveDevices(UnityEngine.InputSystem.InputDevice[])
+  commentId: M:Global.InputPlayerManager.RemoveDevices(UnityEngine.InputSystem.InputDevice[])
+  id: RemoveDevices(UnityEngine.InputSystem.InputDevice[])
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: RemoveDevices(InputDevice[])
+  nameWithType: InputPlayerManager.RemoveDevices(InputDevice[])
+  fullName: InputPlayerManager.RemoveDevices(UnityEngine.InputSystem.InputDevice[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemoveDevices
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 165
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void RemoveDevices(InputDevice[] inputDevices)
+    parameters:
+    - id: inputDevices
+      type: UnityEngine.InputSystem.InputDevice[]
+    content.vb: Public Sub RemoveDevices(inputDevices As InputDevice())
+  overload: Global.InputPlayerManager.RemoveDevices*
+  nameWithType.vb: InputPlayerManager.RemoveDevices(InputDevice())
+  fullName.vb: InputPlayerManager.RemoveDevices(UnityEngine.InputSystem.InputDevice())
+  name.vb: RemoveDevices(InputDevice())
+- uid: Global.InputPlayerManager.RemoveAllDevices
+  commentId: M:Global.InputPlayerManager.RemoveAllDevices
+  id: RemoveAllDevices
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: RemoveAllDevices()
+  nameWithType: InputPlayerManager.RemoveAllDevices()
+  fullName: InputPlayerManager.RemoveAllDevices()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemoveAllDevices
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 183
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void RemoveAllDevices()
+    content.vb: Public Sub RemoveAllDevices()
+  overload: Global.InputPlayerManager.RemoveAllDevices*
+- uid: Global.InputPlayerManager.AssignKeyboardAndMouse
+  commentId: M:Global.InputPlayerManager.AssignKeyboardAndMouse
+  id: AssignKeyboardAndMouse
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: AssignKeyboardAndMouse()
+  nameWithType: InputPlayerManager.AssignKeyboardAndMouse()
+  fullName: InputPlayerManager.AssignKeyboardAndMouse()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AssignKeyboardAndMouse
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 189
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void AssignKeyboardAndMouse()
+    content.vb: Public Sub AssignKeyboardAndMouse()
+  overload: Global.InputPlayerManager.AssignKeyboardAndMouse*
+- uid: Global.InputPlayerManager.AssignInputDevice(UnityEngine.InputSystem.InputDevice)
+  commentId: M:Global.InputPlayerManager.AssignInputDevice(UnityEngine.InputSystem.InputDevice)
+  id: AssignInputDevice(UnityEngine.InputSystem.InputDevice)
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: AssignInputDevice(InputDevice)
+  nameWithType: InputPlayerManager.AssignInputDevice(InputDevice)
+  fullName: InputPlayerManager.AssignInputDevice(UnityEngine.InputSystem.InputDevice)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AssignInputDevice
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 196
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void AssignInputDevice(InputDevice inputDevice)
+    parameters:
+    - id: inputDevice
+      type: UnityEngine.InputSystem.InputDevice
+    content.vb: Public Sub AssignInputDevice(inputDevice As InputDevice)
+  overload: Global.InputPlayerManager.AssignInputDevice*
+- uid: Global.InputPlayerManager.AssignInputDevices(UnityEngine.InputSystem.InputDevice[])
+  commentId: M:Global.InputPlayerManager.AssignInputDevices(UnityEngine.InputSystem.InputDevice[])
+  id: AssignInputDevices(UnityEngine.InputSystem.InputDevice[])
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: AssignInputDevices(InputDevice[])
+  nameWithType: InputPlayerManager.AssignInputDevices(InputDevice[])
+  fullName: InputPlayerManager.AssignInputDevices(UnityEngine.InputSystem.InputDevice[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AssignInputDevices
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 202
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void AssignInputDevices(InputDevice[] inputDeviceList)
+    parameters:
+    - id: inputDeviceList
+      type: UnityEngine.InputSystem.InputDevice[]
+    content.vb: Public Sub AssignInputDevices(inputDeviceList As InputDevice())
+  overload: Global.InputPlayerManager.AssignInputDevices*
+  nameWithType.vb: InputPlayerManager.AssignInputDevices(InputDevice())
+  fullName.vb: InputPlayerManager.AssignInputDevices(UnityEngine.InputSystem.InputDevice())
+  name.vb: AssignInputDevices(InputDevice())
+- uid: Global.InputPlayerManager.AssignInputDevices(UnityEngine.InputSystem.Gamepad[])
+  commentId: M:Global.InputPlayerManager.AssignInputDevices(UnityEngine.InputSystem.Gamepad[])
+  id: AssignInputDevices(UnityEngine.InputSystem.Gamepad[])
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: AssignInputDevices(Gamepad[])
+  nameWithType: InputPlayerManager.AssignInputDevices(Gamepad[])
+  fullName: InputPlayerManager.AssignInputDevices(UnityEngine.InputSystem.Gamepad[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AssignInputDevices
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 211
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void AssignInputDevices(Gamepad[] gamepadList)
+    parameters:
+    - id: gamepadList
+      type: UnityEngine.InputSystem.Gamepad[]
+    content.vb: Public Sub AssignInputDevices(gamepadList As Gamepad())
+  overload: Global.InputPlayerManager.AssignInputDevices*
+  nameWithType.vb: InputPlayerManager.AssignInputDevices(Gamepad())
+  fullName.vb: InputPlayerManager.AssignInputDevices(UnityEngine.InputSystem.Gamepad())
+  name.vb: AssignInputDevices(Gamepad())
+- uid: Global.InputPlayerManager.UpdateDevices
+  commentId: M:Global.InputPlayerManager.UpdateDevices
+  id: UpdateDevices
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateDevices()
+  nameWithType: InputPlayerManager.UpdateDevices()
+  fullName: InputPlayerManager.UpdateDevices()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateDevices
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 220
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void UpdateDevices()
+    content.vb: Public Sub UpdateDevices()
+  overload: Global.InputPlayerManager.UpdateDevices*
+- uid: Global.InputPlayerManager.ActivateInput
+  commentId: M:Global.InputPlayerManager.ActivateInput
+  id: ActivateInput
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: ActivateInput()
+  nameWithType: InputPlayerManager.ActivateInput()
+  fullName: InputPlayerManager.ActivateInput()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ActivateInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 234
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void ActivateInput()
+    content.vb: Public Sub ActivateInput()
+  overload: Global.InputPlayerManager.ActivateInput*
+- uid: Global.InputPlayerManager.DeactivateInput
+  commentId: M:Global.InputPlayerManager.DeactivateInput
+  id: DeactivateInput
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: DeactivateInput()
+  nameWithType: InputPlayerManager.DeactivateInput()
+  fullName: InputPlayerManager.DeactivateInput()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeactivateInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 239
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void DeactivateInput()
+    content.vb: Public Sub DeactivateInput()
+  overload: Global.InputPlayerManager.DeactivateInput*
+- uid: Global.InputPlayerManager.SwitchToUIMap
+  commentId: M:Global.InputPlayerManager.SwitchToUIMap
+  id: SwitchToUIMap
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: SwitchToUIMap()
+  nameWithType: InputPlayerManager.SwitchToUIMap()
+  fullName: InputPlayerManager.SwitchToUIMap()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SwitchToUIMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 244
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void SwitchToUIMap()
+    content.vb: Public Sub SwitchToUIMap()
+  overload: Global.InputPlayerManager.SwitchToUIMap*
+- uid: Global.InputPlayerManager.SwitchToPlayerMap
+  commentId: M:Global.InputPlayerManager.SwitchToPlayerMap
+  id: SwitchToPlayerMap
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: SwitchToPlayerMap()
+  nameWithType: InputPlayerManager.SwitchToPlayerMap()
+  fullName: InputPlayerManager.SwitchToPlayerMap()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SwitchToPlayerMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 251
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void SwitchToPlayerMap()
+    content.vb: Public Sub SwitchToPlayerMap()
+  overload: Global.InputPlayerManager.SwitchToPlayerMap*
+- uid: Global.InputPlayerManager.SetID(System.Int32)
+  commentId: M:Global.InputPlayerManager.SetID(System.Int32)
+  id: SetID(System.Int32)
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: SetID(int)
+  nameWithType: InputPlayerManager.SetID(int)
+  fullName: InputPlayerManager.SetID(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 258
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void SetID(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    content.vb: Public Sub SetID(id As Integer)
+  overload: Global.InputPlayerManager.SetID*
+  nameWithType.vb: InputPlayerManager.SetID(Integer)
+  fullName.vb: InputPlayerManager.SetID(Integer)
+  name.vb: SetID(Integer)
+- uid: Global.InputPlayerManager.GetBindingOverridesAsJson
+  commentId: M:Global.InputPlayerManager.GetBindingOverridesAsJson
+  id: GetBindingOverridesAsJson
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: GetBindingOverridesAsJson()
+  nameWithType: InputPlayerManager.GetBindingOverridesAsJson()
+  fullName: InputPlayerManager.GetBindingOverridesAsJson()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetBindingOverridesAsJson
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 263
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public string GetBindingOverridesAsJson()
+    return:
+      type: System.String
+    content.vb: Public Function GetBindingOverridesAsJson() As String
+  overload: Global.InputPlayerManager.GetBindingOverridesAsJson*
+- uid: Global.InputPlayerManager.ApplyBindingOverrides(System.String)
+  commentId: M:Global.InputPlayerManager.ApplyBindingOverrides(System.String)
+  id: ApplyBindingOverrides(System.String)
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: ApplyBindingOverrides(string)
+  nameWithType: InputPlayerManager.ApplyBindingOverrides(string)
+  fullName: InputPlayerManager.ApplyBindingOverrides(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ApplyBindingOverrides
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 268
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void ApplyBindingOverrides(string overrides)
+    parameters:
+    - id: overrides
+      type: System.String
+    content.vb: Public Sub ApplyBindingOverrides([overrides] As String)
+  overload: Global.InputPlayerManager.ApplyBindingOverrides*
+  nameWithType.vb: InputPlayerManager.ApplyBindingOverrides(String)
+  fullName.vb: InputPlayerManager.ApplyBindingOverrides(String)
+  name.vb: ApplyBindingOverrides(String)
+- uid: Global.InputPlayerManager.ResetBindingOverrides
+  commentId: M:Global.InputPlayerManager.ResetBindingOverrides
+  id: ResetBindingOverrides
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: ResetBindingOverrides()
+  nameWithType: InputPlayerManager.ResetBindingOverrides()
+  fullName: InputPlayerManager.ResetBindingOverrides()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ResetBindingOverrides
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 273
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void ResetBindingOverrides()
+    content.vb: Public Sub ResetBindingOverrides()
+  overload: Global.InputPlayerManager.ResetBindingOverrides*
+- uid: Global.InputPlayerManager.ApplyProfile(System.String)
+  commentId: M:Global.InputPlayerManager.ApplyProfile(System.String)
+  id: ApplyProfile(System.String)
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: ApplyProfile(string)
+  nameWithType: InputPlayerManager.ApplyProfile(string)
+  fullName: InputPlayerManager.ApplyProfile(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ApplyProfile
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 278
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void ApplyProfile(string profileName)
+    parameters:
+    - id: profileName
+      type: System.String
+    content.vb: Public Sub ApplyProfile(profileName As String)
+  overload: Global.InputPlayerManager.ApplyProfile*
+  nameWithType.vb: InputPlayerManager.ApplyProfile(String)
+  fullName.vb: InputPlayerManager.ApplyProfile(String)
+  name.vb: ApplyProfile(String)
+- uid: Global.InputPlayerManager.GetCurrentDeviceType
+  commentId: M:Global.InputPlayerManager.GetCurrentDeviceType
+  id: GetCurrentDeviceType
+  parent: Global.InputPlayerManager
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentDeviceType()
+  nameWithType: InputPlayerManager.GetCurrentDeviceType()
+  fullName: InputPlayerManager.GetCurrentDeviceType()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetCurrentDeviceType
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputPlayerManager.cs
+    startLine: 291
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public InputManager.ControlSchemeType GetCurrentDeviceType()
+    return:
+      type: rwby.InputManager.ControlSchemeType
+    content.vb: Public Function GetCurrentDeviceType() As InputManager.ControlSchemeType
+  overload: Global.InputPlayerManager.GetCurrentDeviceType*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.InputPlayerManager.NavigationType
+  commentId: T:Global.InputPlayerManager.NavigationType
+  href: InputPlayerManager.html
+  name: InputPlayerManager.NavigationType
+  nameWithType: InputPlayerManager.NavigationType
+  fullName: InputPlayerManager.NavigationType
+  spec.csharp:
+  - uid: Global.InputPlayerManager
+    name: InputPlayerManager
+    href: InputPlayerManager.html
+  - name: .
+  - uid: Global.InputPlayerManager.NavigationType
+    name: NavigationType
+    href: InputPlayerManager.NavigationType.html
+  spec.vb:
+  - uid: Global.InputPlayerManager
+    name: InputPlayerManager
+    href: InputPlayerManager.html
+  - name: .
+  - uid: Global.InputPlayerManager.NavigationType
+    name: NavigationType
+    href: InputPlayerManager.NavigationType.html
+- uid: Global.InputPlayerManager.DelegateNavigationStyleChange
+  commentId: T:Global.InputPlayerManager.DelegateNavigationStyleChange
+  href: InputPlayerManager.html
+  name: InputPlayerManager.DelegateNavigationStyleChange
+  nameWithType: InputPlayerManager.DelegateNavigationStyleChange
+  fullName: InputPlayerManager.DelegateNavigationStyleChange
+  spec.csharp:
+  - uid: Global.InputPlayerManager
+    name: InputPlayerManager
+    href: InputPlayerManager.html
+  - name: .
+  - uid: Global.InputPlayerManager.DelegateNavigationStyleChange
+    name: DelegateNavigationStyleChange
+    href: InputPlayerManager.DelegateNavigationStyleChange.html
+  spec.vb:
+  - uid: Global.InputPlayerManager
+    name: InputPlayerManager
+    href: InputPlayerManager.html
+  - name: .
+  - uid: Global.InputPlayerManager.DelegateNavigationStyleChange
+    name: DelegateNavigationStyleChange
+    href: InputPlayerManager.DelegateNavigationStyleChange.html
+- uid: Global.InputPlayerManager.DelegateWhenControlSchemeChanged
+  commentId: T:Global.InputPlayerManager.DelegateWhenControlSchemeChanged
+  href: InputPlayerManager.html
+  name: InputPlayerManager.DelegateWhenControlSchemeChanged
+  nameWithType: InputPlayerManager.DelegateWhenControlSchemeChanged
+  fullName: InputPlayerManager.DelegateWhenControlSchemeChanged
+  spec.csharp:
+  - uid: Global.InputPlayerManager
+    name: InputPlayerManager
+    href: InputPlayerManager.html
+  - name: .
+  - uid: Global.InputPlayerManager.DelegateWhenControlSchemeChanged
+    name: DelegateWhenControlSchemeChanged
+    href: InputPlayerManager.DelegateWhenControlSchemeChanged.html
+  spec.vb:
+  - uid: Global.InputPlayerManager
+    name: InputPlayerManager
+    href: InputPlayerManager.html
+  - name: .
+  - uid: Global.InputPlayerManager.DelegateWhenControlSchemeChanged
+    name: DelegateWhenControlSchemeChanged
+    href: InputPlayerManager.DelegateWhenControlSchemeChanged.html
+- uid: Global.InputPlayerManager.DelegateDeviceChanged
+  commentId: T:Global.InputPlayerManager.DelegateDeviceChanged
+  href: InputPlayerManager.html
+  name: InputPlayerManager.DelegateDeviceChanged
+  nameWithType: InputPlayerManager.DelegateDeviceChanged
+  fullName: InputPlayerManager.DelegateDeviceChanged
+  spec.csharp:
+  - uid: Global.InputPlayerManager
+    name: InputPlayerManager
+    href: InputPlayerManager.html
+  - name: .
+  - uid: Global.InputPlayerManager.DelegateDeviceChanged
+    name: DelegateDeviceChanged
+    href: InputPlayerManager.DelegateDeviceChanged.html
+  spec.vb:
+  - uid: Global.InputPlayerManager
+    name: InputPlayerManager
+    href: InputPlayerManager.html
+  - name: .
+  - uid: Global.InputPlayerManager.DelegateDeviceChanged
+    name: DelegateDeviceChanged
+    href: InputPlayerManager.DelegateDeviceChanged.html
+- uid: Global.InputPlayerManager.User*
+  commentId: Overload:Global.InputPlayerManager.User
+  href: Global.InputPlayerManager.html#InputPlayerManager_User
+  name: User
+  nameWithType: InputPlayerManager.User
+  fullName: InputPlayerManager.User
+- uid: UnityEngine.InputSystem.Users.InputUser
+  commentId: T:UnityEngine.InputSystem.Users.InputUser
+  parent: UnityEngine.InputSystem.Users
+  isExternal: true
+  name: InputUser
+  nameWithType: InputUser
+  fullName: UnityEngine.InputSystem.Users.InputUser
+- uid: UnityEngine.InputSystem.Users
+  commentId: N:UnityEngine.InputSystem.Users
+  isExternal: true
+  name: UnityEngine.InputSystem.Users
+  nameWithType: UnityEngine.InputSystem.Users
+  fullName: UnityEngine.InputSystem.Users
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem
+    name: InputSystem
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem.Users
+    name: Users
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem
+    name: InputSystem
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem.Users
+    name: Users
+    isExternal: true
+- uid: Global.InputPlayerManager.Id*
+  commentId: Overload:Global.InputPlayerManager.Id
+  href: Global.InputPlayerManager.html#InputPlayerManager_Id
+  name: Id
+  nameWithType: InputPlayerManager.Id
+  fullName: InputPlayerManager.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Global.InputPlayerManager.CurrentProfile*
+  commentId: Overload:Global.InputPlayerManager.CurrentProfile
+  href: Global.InputPlayerManager.html#InputPlayerManager_CurrentProfile
+  name: CurrentProfile
+  nameWithType: InputPlayerManager.CurrentProfile
+  fullName: InputPlayerManager.CurrentProfile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UnityEngine.InputSystem.PlayerInput
+  commentId: T:UnityEngine.InputSystem.PlayerInput
+  parent: UnityEngine.InputSystem
+  isExternal: true
+  name: PlayerInput
+  nameWithType: PlayerInput
+  fullName: UnityEngine.InputSystem.PlayerInput
+- uid: UnityEngine.InputSystem
+  commentId: N:UnityEngine.InputSystem
+  isExternal: true
+  name: UnityEngine.InputSystem
+  nameWithType: UnityEngine.InputSystem
+  fullName: UnityEngine.InputSystem
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem
+    name: InputSystem
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem
+    name: InputSystem
+    isExternal: true
+- uid: rwby.InputActions
+  commentId: T:rwby.InputActions
+  parent: rwby
+  href: rwby.InputActions.html
+  name: InputActions
+  nameWithType: InputActions
+  fullName: rwby.InputActions
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Collections.Generic.HashSet{UnityEngine.InputSystem.InputDevice}
+  commentId: T:System.Collections.Generic.HashSet{UnityEngine.InputSystem.InputDevice}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<InputDevice>
+  nameWithType: HashSet<InputDevice>
+  fullName: System.Collections.Generic.HashSet<UnityEngine.InputSystem.InputDevice>
+  nameWithType.vb: HashSet(Of InputDevice)
+  fullName.vb: System.Collections.Generic.HashSet(Of UnityEngine.InputSystem.InputDevice)
+  name.vb: HashSet(Of InputDevice)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - uid: UnityEngine.InputSystem.InputDevice
+    name: InputDevice
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.InputSystem.InputDevice
+    name: InputDevice
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{UnityEngine.InputSystem.InputDevice}
+  commentId: T:System.Collections.Generic.List{UnityEngine.InputSystem.InputDevice}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<InputDevice>
+  nameWithType: List<InputDevice>
+  fullName: System.Collections.Generic.List<UnityEngine.InputSystem.InputDevice>
+  nameWithType.vb: List(Of InputDevice)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.InputSystem.InputDevice)
+  name.vb: List(Of InputDevice)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.InputSystem.InputDevice
+    name: InputDevice
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.InputSystem.InputDevice
+    name: InputDevice
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.InputSystem.UI.MultiplayerEventSystem
+  commentId: T:UnityEngine.InputSystem.UI.MultiplayerEventSystem
+  parent: UnityEngine.InputSystem.UI
+  isExternal: true
+  name: MultiplayerEventSystem
+  nameWithType: MultiplayerEventSystem
+  fullName: UnityEngine.InputSystem.UI.MultiplayerEventSystem
+- uid: UnityEngine.InputSystem.UI
+  commentId: N:UnityEngine.InputSystem.UI
+  isExternal: true
+  name: UnityEngine.InputSystem.UI
+  nameWithType: UnityEngine.InputSystem.UI
+  fullName: UnityEngine.InputSystem.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem
+    name: InputSystem
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem.UI
+    name: UI
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem
+    name: InputSystem
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem.UI
+    name: UI
+    isExternal: true
+- uid: UnityEngine.InputSystem.UI.InputSystemUIInputModule
+  commentId: T:UnityEngine.InputSystem.UI.InputSystemUIInputModule
+  parent: UnityEngine.InputSystem.UI
+  isExternal: true
+  name: InputSystemUIInputModule
+  nameWithType: InputSystemUIInputModule
+  fullName: UnityEngine.InputSystem.UI.InputSystemUIInputModule
+- uid: Global.InputPlayerManager.Initialize*
+  commentId: Overload:Global.InputPlayerManager.Initialize
+  href: Global.InputPlayerManager.html#InputPlayerManager_Initialize_System_Int32_
+  name: Initialize
+  nameWithType: InputPlayerManager.Initialize
+  fullName: InputPlayerManager.Initialize
+- uid: Global.InputPlayerManager.Teardown*
+  commentId: Overload:Global.InputPlayerManager.Teardown
+  href: Global.InputPlayerManager.html#InputPlayerManager_Teardown
+  name: Teardown
+  nameWithType: InputPlayerManager.Teardown
+  fullName: InputPlayerManager.Teardown
+- uid: Global.InputPlayerManager.Vibrate*
+  commentId: Overload:Global.InputPlayerManager.Vibrate
+  href: Global.InputPlayerManager.html#InputPlayerManager_Vibrate_System_Single_
+  name: Vibrate
+  nameWithType: InputPlayerManager.Vibrate
+  fullName: InputPlayerManager.Vibrate
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Global.InputPlayerManager.ActivateUIHandling*
+  commentId: Overload:Global.InputPlayerManager.ActivateUIHandling
+  href: Global.InputPlayerManager.html#InputPlayerManager_ActivateUIHandling
+  name: ActivateUIHandling
+  nameWithType: InputPlayerManager.ActivateUIHandling
+  fullName: InputPlayerManager.ActivateUIHandling
+- uid: Global.InputPlayerManager.DeactivateUIHandling*
+  commentId: Overload:Global.InputPlayerManager.DeactivateUIHandling
+  href: Global.InputPlayerManager.html#InputPlayerManager_DeactivateUIHandling
+  name: DeactivateUIHandling
+  nameWithType: InputPlayerManager.DeactivateUIHandling
+  fullName: InputPlayerManager.DeactivateUIHandling
+- uid: Global.InputPlayerManager.SetUIRoot*
+  commentId: Overload:Global.InputPlayerManager.SetUIRoot
+  href: Global.InputPlayerManager.html#InputPlayerManager_SetUIRoot_UnityEngine_GameObject_
+  name: SetUIRoot
+  nameWithType: InputPlayerManager.SetUIRoot
+  fullName: InputPlayerManager.SetUIRoot
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: Global.InputPlayerManager.SwitchToDevice*
+  commentId: Overload:Global.InputPlayerManager.SwitchToDevice
+  href: Global.InputPlayerManager.html#InputPlayerManager_SwitchToDevice_UnityEngine_InputSystem_InputDevice_
+  name: SwitchToDevice
+  nameWithType: InputPlayerManager.SwitchToDevice
+  fullName: InputPlayerManager.SwitchToDevice
+- uid: UnityEngine.InputSystem.InputDevice
+  commentId: T:UnityEngine.InputSystem.InputDevice
+  parent: UnityEngine.InputSystem
+  isExternal: true
+  name: InputDevice
+  nameWithType: InputDevice
+  fullName: UnityEngine.InputSystem.InputDevice
+- uid: Global.InputPlayerManager.ClearAssignedDevices*
+  commentId: Overload:Global.InputPlayerManager.ClearAssignedDevices
+  href: Global.InputPlayerManager.html#InputPlayerManager_ClearAssignedDevices
+  name: ClearAssignedDevices
+  nameWithType: InputPlayerManager.ClearAssignedDevices
+  fullName: InputPlayerManager.ClearAssignedDevices
+- uid: Global.InputPlayerManager.RemoveDevice*
+  commentId: Overload:Global.InputPlayerManager.RemoveDevice
+  href: Global.InputPlayerManager.html#InputPlayerManager_RemoveDevice_UnityEngine_InputSystem_InputDevice_
+  name: RemoveDevice
+  nameWithType: InputPlayerManager.RemoveDevice
+  fullName: InputPlayerManager.RemoveDevice
+- uid: Global.InputPlayerManager.RemoveDevices*
+  commentId: Overload:Global.InputPlayerManager.RemoveDevices
+  href: Global.InputPlayerManager.html#InputPlayerManager_RemoveDevices_UnityEngine_InputSystem_InputDevice___
+  name: RemoveDevices
+  nameWithType: InputPlayerManager.RemoveDevices
+  fullName: InputPlayerManager.RemoveDevices
+- uid: UnityEngine.InputSystem.InputDevice[]
+  isExternal: true
+  name: InputDevice[]
+  nameWithType: InputDevice[]
+  fullName: UnityEngine.InputSystem.InputDevice[]
+  nameWithType.vb: InputDevice()
+  fullName.vb: UnityEngine.InputSystem.InputDevice()
+  name.vb: InputDevice()
+  spec.csharp:
+  - uid: UnityEngine.InputSystem.InputDevice
+    name: InputDevice
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.InputSystem.InputDevice
+    name: InputDevice
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Global.InputPlayerManager.RemoveAllDevices*
+  commentId: Overload:Global.InputPlayerManager.RemoveAllDevices
+  href: Global.InputPlayerManager.html#InputPlayerManager_RemoveAllDevices
+  name: RemoveAllDevices
+  nameWithType: InputPlayerManager.RemoveAllDevices
+  fullName: InputPlayerManager.RemoveAllDevices
+- uid: Global.InputPlayerManager.AssignKeyboardAndMouse*
+  commentId: Overload:Global.InputPlayerManager.AssignKeyboardAndMouse
+  href: Global.InputPlayerManager.html#InputPlayerManager_AssignKeyboardAndMouse
+  name: AssignKeyboardAndMouse
+  nameWithType: InputPlayerManager.AssignKeyboardAndMouse
+  fullName: InputPlayerManager.AssignKeyboardAndMouse
+- uid: Global.InputPlayerManager.AssignInputDevice*
+  commentId: Overload:Global.InputPlayerManager.AssignInputDevice
+  href: Global.InputPlayerManager.html#InputPlayerManager_AssignInputDevice_UnityEngine_InputSystem_InputDevice_
+  name: AssignInputDevice
+  nameWithType: InputPlayerManager.AssignInputDevice
+  fullName: InputPlayerManager.AssignInputDevice
+- uid: Global.InputPlayerManager.AssignInputDevices*
+  commentId: Overload:Global.InputPlayerManager.AssignInputDevices
+  href: Global.InputPlayerManager.html#InputPlayerManager_AssignInputDevices_UnityEngine_InputSystem_InputDevice___
+  name: AssignInputDevices
+  nameWithType: InputPlayerManager.AssignInputDevices
+  fullName: InputPlayerManager.AssignInputDevices
+- uid: UnityEngine.InputSystem.Gamepad[]
+  isExternal: true
+  name: Gamepad[]
+  nameWithType: Gamepad[]
+  fullName: UnityEngine.InputSystem.Gamepad[]
+  nameWithType.vb: Gamepad()
+  fullName.vb: UnityEngine.InputSystem.Gamepad()
+  name.vb: Gamepad()
+  spec.csharp:
+  - uid: UnityEngine.InputSystem.Gamepad
+    name: Gamepad
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.InputSystem.Gamepad
+    name: Gamepad
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Global.InputPlayerManager.UpdateDevices*
+  commentId: Overload:Global.InputPlayerManager.UpdateDevices
+  href: Global.InputPlayerManager.html#InputPlayerManager_UpdateDevices
+  name: UpdateDevices
+  nameWithType: InputPlayerManager.UpdateDevices
+  fullName: InputPlayerManager.UpdateDevices
+- uid: Global.InputPlayerManager.ActivateInput*
+  commentId: Overload:Global.InputPlayerManager.ActivateInput
+  href: Global.InputPlayerManager.html#InputPlayerManager_ActivateInput
+  name: ActivateInput
+  nameWithType: InputPlayerManager.ActivateInput
+  fullName: InputPlayerManager.ActivateInput
+- uid: Global.InputPlayerManager.DeactivateInput*
+  commentId: Overload:Global.InputPlayerManager.DeactivateInput
+  href: Global.InputPlayerManager.html#InputPlayerManager_DeactivateInput
+  name: DeactivateInput
+  nameWithType: InputPlayerManager.DeactivateInput
+  fullName: InputPlayerManager.DeactivateInput
+- uid: Global.InputPlayerManager.SwitchToUIMap*
+  commentId: Overload:Global.InputPlayerManager.SwitchToUIMap
+  href: Global.InputPlayerManager.html#InputPlayerManager_SwitchToUIMap
+  name: SwitchToUIMap
+  nameWithType: InputPlayerManager.SwitchToUIMap
+  fullName: InputPlayerManager.SwitchToUIMap
+- uid: Global.InputPlayerManager.SwitchToPlayerMap*
+  commentId: Overload:Global.InputPlayerManager.SwitchToPlayerMap
+  href: Global.InputPlayerManager.html#InputPlayerManager_SwitchToPlayerMap
+  name: SwitchToPlayerMap
+  nameWithType: InputPlayerManager.SwitchToPlayerMap
+  fullName: InputPlayerManager.SwitchToPlayerMap
+- uid: Global.InputPlayerManager.SetID*
+  commentId: Overload:Global.InputPlayerManager.SetID
+  href: Global.InputPlayerManager.html#InputPlayerManager_SetID_System_Int32_
+  name: SetID
+  nameWithType: InputPlayerManager.SetID
+  fullName: InputPlayerManager.SetID
+- uid: Global.InputPlayerManager.GetBindingOverridesAsJson*
+  commentId: Overload:Global.InputPlayerManager.GetBindingOverridesAsJson
+  href: Global.InputPlayerManager.html#InputPlayerManager_GetBindingOverridesAsJson
+  name: GetBindingOverridesAsJson
+  nameWithType: InputPlayerManager.GetBindingOverridesAsJson
+  fullName: InputPlayerManager.GetBindingOverridesAsJson
+- uid: Global.InputPlayerManager.ApplyBindingOverrides*
+  commentId: Overload:Global.InputPlayerManager.ApplyBindingOverrides
+  href: Global.InputPlayerManager.html#InputPlayerManager_ApplyBindingOverrides_System_String_
+  name: ApplyBindingOverrides
+  nameWithType: InputPlayerManager.ApplyBindingOverrides
+  fullName: InputPlayerManager.ApplyBindingOverrides
+- uid: Global.InputPlayerManager.ResetBindingOverrides*
+  commentId: Overload:Global.InputPlayerManager.ResetBindingOverrides
+  href: Global.InputPlayerManager.html#InputPlayerManager_ResetBindingOverrides
+  name: ResetBindingOverrides
+  nameWithType: InputPlayerManager.ResetBindingOverrides
+  fullName: InputPlayerManager.ResetBindingOverrides
+- uid: Global.InputPlayerManager.ApplyProfile*
+  commentId: Overload:Global.InputPlayerManager.ApplyProfile
+  href: Global.InputPlayerManager.html#InputPlayerManager_ApplyProfile_System_String_
+  name: ApplyProfile
+  nameWithType: InputPlayerManager.ApplyProfile
+  fullName: InputPlayerManager.ApplyProfile
+- uid: Global.InputPlayerManager.GetCurrentDeviceType*
+  commentId: Overload:Global.InputPlayerManager.GetCurrentDeviceType
+  href: Global.InputPlayerManager.html#InputPlayerManager_GetCurrentDeviceType
+  name: GetCurrentDeviceType
+  nameWithType: InputPlayerManager.GetCurrentDeviceType
+  fullName: InputPlayerManager.GetCurrentDeviceType
+- uid: rwby.InputManager.ControlSchemeType
+  commentId: T:rwby.InputManager.ControlSchemeType
+  parent: rwby
+  href: rwby.InputManager.html
+  name: InputManager.ControlSchemeType
+  nameWithType: InputManager.ControlSchemeType
+  fullName: rwby.InputManager.ControlSchemeType
+  spec.csharp:
+  - uid: rwby.InputManager
+    name: InputManager
+    href: rwby.InputManager.html
+  - name: .
+  - uid: rwby.InputManager.ControlSchemeType
+    name: ControlSchemeType
+    href: rwby.InputManager.ControlSchemeType.html
+  spec.vb:
+  - uid: rwby.InputManager
+    name: InputManager
+    href: rwby.InputManager.html
+  - name: .
+  - uid: rwby.InputManager.ControlSchemeType
+    name: ControlSchemeType
+    href: rwby.InputManager.ControlSchemeType.html

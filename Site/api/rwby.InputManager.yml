@@ -1,0 +1,1096 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.InputManager
+  commentId: T:rwby.InputManager
+  id: InputManager
+  parent: rwby
+  children:
+  - rwby.InputManager.AddPlayer
+  - rwby.InputManager.AssignDevicesToPlayer(UnityEngine.InputSystem.InputDevice[],System.Int32)
+  - rwby.InputManager.GetPlayer(System.Int32)
+  - rwby.InputManager.GetPlayerCount
+  - rwby.InputManager.GetSystemPlayer
+  - rwby.InputManager.Initialize
+  - rwby.InputManager.InitializeSystemPlayer
+  - rwby.InputManager.RemoveDeviceFromPlayers(UnityEngine.InputSystem.InputDevice)
+  - rwby.InputManager.RemovePlayer(System.Int32)
+  - rwby.InputManager.ReturnAllDevicesToSystem
+  - rwby.InputManager.ReturnPlayerDevicesToSystem(System.Int32)
+  - rwby.InputManager.SetGlobalUIControllingPlayer(System.Int32)
+  - rwby.InputManager.SetPlayerCount(System.Int32)
+  - rwby.InputManager.SwitchAllToPlayerActionMap
+  - rwby.InputManager.SwitchAllToUIActionMap
+  - rwby.InputManager.SwitchToPlayerActionMap(System.Int32)
+  - rwby.InputManager.SwitchToUIActionMap(System.Int32)
+  - rwby.InputManager.TransferAllDevicesFromSystemTo(System.Int32)
+  - rwby.InputManager.inputUserIndex
+  - rwby.InputManager.onInputDeviceChange(UnityEngine.InputSystem.InputDevice,UnityEngine.InputSystem.InputDeviceChange)
+  - rwby.InputManager.playerInputManagers
+  langs:
+  - csharp
+  - vb
+  name: InputManager
+  nameWithType: InputManager
+  fullName: rwby.InputManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InputManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 9
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: 'public class InputManager : MonoBehaviour'
+    content.vb: Public Class InputManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: rwby.InputManager.inputUserIndex
+  commentId: F:rwby.InputManager.inputUserIndex
+  id: inputUserIndex
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: inputUserIndex
+  nameWithType: InputManager.inputUserIndex
+  fullName: rwby.InputManager.inputUserIndex
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: inputUserIndex
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public Dictionary<InputUser, int> inputUserIndex
+    return:
+      type: System.Collections.Generic.Dictionary{UnityEngine.InputSystem.Users.InputUser,System.Int32}
+    content.vb: Public inputUserIndex As Dictionary(Of InputUser, Integer)
+- uid: rwby.InputManager.playerInputManagers
+  commentId: F:rwby.InputManager.playerInputManagers
+  id: playerInputManagers
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: playerInputManagers
+  nameWithType: InputManager.playerInputManagers
+  fullName: rwby.InputManager.playerInputManagers
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playerInputManagers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 20
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public List<InputPlayerManager> playerInputManagers
+    return:
+      type: System.Collections.Generic.List{InputPlayerManager}
+    content.vb: Public playerInputManagers As List(Of InputPlayerManager)
+- uid: rwby.InputManager.Initialize
+  commentId: M:rwby.InputManager.Initialize
+  id: Initialize
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: InputManager.Initialize()
+  fullName: rwby.InputManager.Initialize()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void Initialize()
+    content.vb: Public Sub Initialize()
+  overload: rwby.InputManager.Initialize*
+- uid: rwby.InputManager.SetGlobalUIControllingPlayer(System.Int32)
+  commentId: M:rwby.InputManager.SetGlobalUIControllingPlayer(System.Int32)
+  id: SetGlobalUIControllingPlayer(System.Int32)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: SetGlobalUIControllingPlayer(int)
+  nameWithType: InputManager.SetGlobalUIControllingPlayer(int)
+  fullName: rwby.InputManager.SetGlobalUIControllingPlayer(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetGlobalUIControllingPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 41
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void SetGlobalUIControllingPlayer(int playerId)
+    parameters:
+    - id: playerId
+      type: System.Int32
+    content.vb: Public Sub SetGlobalUIControllingPlayer(playerId As Integer)
+  overload: rwby.InputManager.SetGlobalUIControllingPlayer*
+  nameWithType.vb: InputManager.SetGlobalUIControllingPlayer(Integer)
+  fullName.vb: rwby.InputManager.SetGlobalUIControllingPlayer(Integer)
+  name.vb: SetGlobalUIControllingPlayer(Integer)
+- uid: rwby.InputManager.InitializeSystemPlayer
+  commentId: M:rwby.InputManager.InitializeSystemPlayer
+  id: InitializeSystemPlayer
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: InitializeSystemPlayer()
+  nameWithType: InputManager.InitializeSystemPlayer()
+  fullName: rwby.InputManager.InitializeSystemPlayer()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InitializeSystemPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 46
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void InitializeSystemPlayer()
+    content.vb: Public Sub InitializeSystemPlayer()
+  overload: rwby.InputManager.InitializeSystemPlayer*
+- uid: rwby.InputManager.AddPlayer
+  commentId: M:rwby.InputManager.AddPlayer
+  id: AddPlayer
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: AddPlayer()
+  nameWithType: InputManager.AddPlayer()
+  fullName: rwby.InputManager.AddPlayer()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 60
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void AddPlayer()
+    content.vb: Public Sub AddPlayer()
+  overload: rwby.InputManager.AddPlayer*
+- uid: rwby.InputManager.RemovePlayer(System.Int32)
+  commentId: M:rwby.InputManager.RemovePlayer(System.Int32)
+  id: RemovePlayer(System.Int32)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: RemovePlayer(int)
+  nameWithType: InputManager.RemovePlayer(int)
+  fullName: rwby.InputManager.RemovePlayer(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemovePlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 71
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void RemovePlayer(int player)
+    parameters:
+    - id: player
+      type: System.Int32
+    content.vb: Public Sub RemovePlayer(player As Integer)
+  overload: rwby.InputManager.RemovePlayer*
+  nameWithType.vb: InputManager.RemovePlayer(Integer)
+  fullName.vb: rwby.InputManager.RemovePlayer(Integer)
+  name.vb: RemovePlayer(Integer)
+- uid: rwby.InputManager.SetPlayerCount(System.Int32)
+  commentId: M:rwby.InputManager.SetPlayerCount(System.Int32)
+  id: SetPlayerCount(System.Int32)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerCount(int)
+  nameWithType: InputManager.SetPlayerCount(int)
+  fullName: rwby.InputManager.SetPlayerCount(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetPlayerCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 79
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void SetPlayerCount(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+    content.vb: Public Sub SetPlayerCount(count As Integer)
+  overload: rwby.InputManager.SetPlayerCount*
+  nameWithType.vb: InputManager.SetPlayerCount(Integer)
+  fullName.vb: rwby.InputManager.SetPlayerCount(Integer)
+  name.vb: SetPlayerCount(Integer)
+- uid: rwby.InputManager.GetPlayerCount
+  commentId: M:rwby.InputManager.GetPlayerCount
+  id: GetPlayerCount
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: GetPlayerCount()
+  nameWithType: InputManager.GetPlayerCount()
+  fullName: rwby.InputManager.GetPlayerCount()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetPlayerCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 94
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public int GetPlayerCount()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetPlayerCount() As Integer
+  overload: rwby.InputManager.GetPlayerCount*
+- uid: rwby.InputManager.GetSystemPlayer
+  commentId: M:rwby.InputManager.GetSystemPlayer
+  id: GetSystemPlayer
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: GetSystemPlayer()
+  nameWithType: InputManager.GetSystemPlayer()
+  fullName: rwby.InputManager.GetSystemPlayer()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetSystemPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 108
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public InputPlayerManager GetSystemPlayer()
+    return:
+      type: Global.InputPlayerManager
+    content.vb: Public Function GetSystemPlayer() As InputPlayerManager
+  overload: rwby.InputManager.GetSystemPlayer*
+- uid: rwby.InputManager.GetPlayer(System.Int32)
+  commentId: M:rwby.InputManager.GetPlayer(System.Int32)
+  id: GetPlayer(System.Int32)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: GetPlayer(int)
+  nameWithType: InputManager.GetPlayer(int)
+  fullName: rwby.InputManager.GetPlayer(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 113
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public InputPlayerManager GetPlayer(int playerId)
+    parameters:
+    - id: playerId
+      type: System.Int32
+    return:
+      type: Global.InputPlayerManager
+    content.vb: Public Function GetPlayer(playerId As Integer) As InputPlayerManager
+  overload: rwby.InputManager.GetPlayer*
+  nameWithType.vb: InputManager.GetPlayer(Integer)
+  fullName.vb: rwby.InputManager.GetPlayer(Integer)
+  name.vb: GetPlayer(Integer)
+- uid: rwby.InputManager.SwitchToUIActionMap(System.Int32)
+  commentId: M:rwby.InputManager.SwitchToUIActionMap(System.Int32)
+  id: SwitchToUIActionMap(System.Int32)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: SwitchToUIActionMap(int)
+  nameWithType: InputManager.SwitchToUIActionMap(int)
+  fullName: rwby.InputManager.SwitchToUIActionMap(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SwitchToUIActionMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 119
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void SwitchToUIActionMap(int playerId = 0)
+    parameters:
+    - id: playerId
+      type: System.Int32
+    content.vb: Public Sub SwitchToUIActionMap(playerId As Integer = 0)
+  overload: rwby.InputManager.SwitchToUIActionMap*
+  nameWithType.vb: InputManager.SwitchToUIActionMap(Integer)
+  fullName.vb: rwby.InputManager.SwitchToUIActionMap(Integer)
+  name.vb: SwitchToUIActionMap(Integer)
+- uid: rwby.InputManager.SwitchToPlayerActionMap(System.Int32)
+  commentId: M:rwby.InputManager.SwitchToPlayerActionMap(System.Int32)
+  id: SwitchToPlayerActionMap(System.Int32)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: SwitchToPlayerActionMap(int)
+  nameWithType: InputManager.SwitchToPlayerActionMap(int)
+  fullName: rwby.InputManager.SwitchToPlayerActionMap(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SwitchToPlayerActionMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 124
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void SwitchToPlayerActionMap(int playerId = 0)
+    parameters:
+    - id: playerId
+      type: System.Int32
+    content.vb: Public Sub SwitchToPlayerActionMap(playerId As Integer = 0)
+  overload: rwby.InputManager.SwitchToPlayerActionMap*
+  nameWithType.vb: InputManager.SwitchToPlayerActionMap(Integer)
+  fullName.vb: rwby.InputManager.SwitchToPlayerActionMap(Integer)
+  name.vb: SwitchToPlayerActionMap(Integer)
+- uid: rwby.InputManager.SwitchAllToUIActionMap
+  commentId: M:rwby.InputManager.SwitchAllToUIActionMap
+  id: SwitchAllToUIActionMap
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: SwitchAllToUIActionMap()
+  nameWithType: InputManager.SwitchAllToUIActionMap()
+  fullName: rwby.InputManager.SwitchAllToUIActionMap()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SwitchAllToUIActionMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 129
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void SwitchAllToUIActionMap()
+    content.vb: Public Sub SwitchAllToUIActionMap()
+  overload: rwby.InputManager.SwitchAllToUIActionMap*
+- uid: rwby.InputManager.SwitchAllToPlayerActionMap
+  commentId: M:rwby.InputManager.SwitchAllToPlayerActionMap
+  id: SwitchAllToPlayerActionMap
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: SwitchAllToPlayerActionMap()
+  nameWithType: InputManager.SwitchAllToPlayerActionMap()
+  fullName: rwby.InputManager.SwitchAllToPlayerActionMap()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SwitchAllToPlayerActionMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 138
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void SwitchAllToPlayerActionMap()
+    content.vb: Public Sub SwitchAllToPlayerActionMap()
+  overload: rwby.InputManager.SwitchAllToPlayerActionMap*
+- uid: rwby.InputManager.ReturnAllDevicesToSystem
+  commentId: M:rwby.InputManager.ReturnAllDevicesToSystem
+  id: ReturnAllDevicesToSystem
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: ReturnAllDevicesToSystem()
+  nameWithType: InputManager.ReturnAllDevicesToSystem()
+  fullName: rwby.InputManager.ReturnAllDevicesToSystem()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ReturnAllDevicesToSystem
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 147
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void ReturnAllDevicesToSystem()
+    content.vb: Public Sub ReturnAllDevicesToSystem()
+  overload: rwby.InputManager.ReturnAllDevicesToSystem*
+- uid: rwby.InputManager.ReturnPlayerDevicesToSystem(System.Int32)
+  commentId: M:rwby.InputManager.ReturnPlayerDevicesToSystem(System.Int32)
+  id: ReturnPlayerDevicesToSystem(System.Int32)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: ReturnPlayerDevicesToSystem(int)
+  nameWithType: InputManager.ReturnPlayerDevicesToSystem(int)
+  fullName: rwby.InputManager.ReturnPlayerDevicesToSystem(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ReturnPlayerDevicesToSystem
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 158
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void ReturnPlayerDevicesToSystem(int player)
+    parameters:
+    - id: player
+      type: System.Int32
+    content.vb: Public Sub ReturnPlayerDevicesToSystem(player As Integer)
+  overload: rwby.InputManager.ReturnPlayerDevicesToSystem*
+  nameWithType.vb: InputManager.ReturnPlayerDevicesToSystem(Integer)
+  fullName.vb: rwby.InputManager.ReturnPlayerDevicesToSystem(Integer)
+  name.vb: ReturnPlayerDevicesToSystem(Integer)
+- uid: rwby.InputManager.RemoveDeviceFromPlayers(UnityEngine.InputSystem.InputDevice)
+  commentId: M:rwby.InputManager.RemoveDeviceFromPlayers(UnityEngine.InputSystem.InputDevice)
+  id: RemoveDeviceFromPlayers(UnityEngine.InputSystem.InputDevice)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: RemoveDeviceFromPlayers(InputDevice)
+  nameWithType: InputManager.RemoveDeviceFromPlayers(InputDevice)
+  fullName: rwby.InputManager.RemoveDeviceFromPlayers(UnityEngine.InputSystem.InputDevice)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemoveDeviceFromPlayers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 166
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void RemoveDeviceFromPlayers(InputDevice device)
+    parameters:
+    - id: device
+      type: UnityEngine.InputSystem.InputDevice
+    content.vb: Public Sub RemoveDeviceFromPlayers(device As InputDevice)
+  overload: rwby.InputManager.RemoveDeviceFromPlayers*
+- uid: rwby.InputManager.AssignDevicesToPlayer(UnityEngine.InputSystem.InputDevice[],System.Int32)
+  commentId: M:rwby.InputManager.AssignDevicesToPlayer(UnityEngine.InputSystem.InputDevice[],System.Int32)
+  id: AssignDevicesToPlayer(UnityEngine.InputSystem.InputDevice[],System.Int32)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: AssignDevicesToPlayer(InputDevice[], int)
+  nameWithType: InputManager.AssignDevicesToPlayer(InputDevice[], int)
+  fullName: rwby.InputManager.AssignDevicesToPlayer(UnityEngine.InputSystem.InputDevice[], int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AssignDevicesToPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 175
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void AssignDevicesToPlayer(InputDevice[] devices, int player)
+    parameters:
+    - id: devices
+      type: UnityEngine.InputSystem.InputDevice[]
+    - id: player
+      type: System.Int32
+    content.vb: Public Sub AssignDevicesToPlayer(devices As InputDevice(), player As Integer)
+  overload: rwby.InputManager.AssignDevicesToPlayer*
+  nameWithType.vb: InputManager.AssignDevicesToPlayer(InputDevice(), Integer)
+  fullName.vb: rwby.InputManager.AssignDevicesToPlayer(UnityEngine.InputSystem.InputDevice(), Integer)
+  name.vb: AssignDevicesToPlayer(InputDevice(), Integer)
+- uid: rwby.InputManager.TransferAllDevicesFromSystemTo(System.Int32)
+  commentId: M:rwby.InputManager.TransferAllDevicesFromSystemTo(System.Int32)
+  id: TransferAllDevicesFromSystemTo(System.Int32)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: TransferAllDevicesFromSystemTo(int)
+  nameWithType: InputManager.TransferAllDevicesFromSystemTo(int)
+  fullName: rwby.InputManager.TransferAllDevicesFromSystemTo(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TransferAllDevicesFromSystemTo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 182
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void TransferAllDevicesFromSystemTo(int player)
+    parameters:
+    - id: player
+      type: System.Int32
+    content.vb: Public Sub TransferAllDevicesFromSystemTo(player As Integer)
+  overload: rwby.InputManager.TransferAllDevicesFromSystemTo*
+  nameWithType.vb: InputManager.TransferAllDevicesFromSystemTo(Integer)
+  fullName.vb: rwby.InputManager.TransferAllDevicesFromSystemTo(Integer)
+  name.vb: TransferAllDevicesFromSystemTo(Integer)
+- uid: rwby.InputManager.onInputDeviceChange(UnityEngine.InputSystem.InputDevice,UnityEngine.InputSystem.InputDeviceChange)
+  commentId: M:rwby.InputManager.onInputDeviceChange(UnityEngine.InputSystem.InputDevice,UnityEngine.InputSystem.InputDeviceChange)
+  id: onInputDeviceChange(UnityEngine.InputSystem.InputDevice,UnityEngine.InputSystem.InputDeviceChange)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: onInputDeviceChange(InputDevice, InputDeviceChange)
+  nameWithType: InputManager.onInputDeviceChange(InputDevice, InputDeviceChange)
+  fullName: rwby.InputManager.onInputDeviceChange(UnityEngine.InputSystem.InputDevice, UnityEngine.InputSystem.InputDeviceChange)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onInputDeviceChange
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 190
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void onInputDeviceChange(InputDevice device, InputDeviceChange change)
+    parameters:
+    - id: device
+      type: UnityEngine.InputSystem.InputDevice
+    - id: change
+      type: UnityEngine.InputSystem.InputDeviceChange
+    content.vb: Public Sub onInputDeviceChange(device As InputDevice, change As InputDeviceChange)
+  overload: rwby.InputManager.onInputDeviceChange*
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Collections.Generic.Dictionary{UnityEngine.InputSystem.Users.InputUser,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{UnityEngine.InputSystem.Users.InputUser,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<InputUser, int>
+  nameWithType: Dictionary<InputUser, int>
+  fullName: System.Collections.Generic.Dictionary<UnityEngine.InputSystem.Users.InputUser, int>
+  nameWithType.vb: Dictionary(Of InputUser, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of UnityEngine.InputSystem.Users.InputUser, Integer)
+  name.vb: Dictionary(Of InputUser, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: UnityEngine.InputSystem.Users.InputUser
+    name: InputUser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.InputSystem.Users.InputUser
+    name: InputUser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{InputPlayerManager}
+  commentId: T:System.Collections.Generic.List{InputPlayerManager}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<InputPlayerManager>
+  nameWithType: List<InputPlayerManager>
+  fullName: System.Collections.Generic.List<InputPlayerManager>
+  nameWithType.vb: List(Of InputPlayerManager)
+  fullName.vb: System.Collections.Generic.List(Of InputPlayerManager)
+  name.vb: List(Of InputPlayerManager)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Global.InputPlayerManager
+    name: InputPlayerManager
+    href: InputPlayerManager.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.InputPlayerManager
+    name: InputPlayerManager
+    href: InputPlayerManager.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: rwby.InputManager.Initialize*
+  commentId: Overload:rwby.InputManager.Initialize
+  href: rwby.InputManager.html#rwby_InputManager_Initialize
+  name: Initialize
+  nameWithType: InputManager.Initialize
+  fullName: rwby.InputManager.Initialize
+- uid: rwby.InputManager.SetGlobalUIControllingPlayer*
+  commentId: Overload:rwby.InputManager.SetGlobalUIControllingPlayer
+  href: rwby.InputManager.html#rwby_InputManager_SetGlobalUIControllingPlayer_System_Int32_
+  name: SetGlobalUIControllingPlayer
+  nameWithType: InputManager.SetGlobalUIControllingPlayer
+  fullName: rwby.InputManager.SetGlobalUIControllingPlayer
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: rwby.InputManager.InitializeSystemPlayer*
+  commentId: Overload:rwby.InputManager.InitializeSystemPlayer
+  href: rwby.InputManager.html#rwby_InputManager_InitializeSystemPlayer
+  name: InitializeSystemPlayer
+  nameWithType: InputManager.InitializeSystemPlayer
+  fullName: rwby.InputManager.InitializeSystemPlayer
+- uid: rwby.InputManager.AddPlayer*
+  commentId: Overload:rwby.InputManager.AddPlayer
+  href: rwby.InputManager.html#rwby_InputManager_AddPlayer
+  name: AddPlayer
+  nameWithType: InputManager.AddPlayer
+  fullName: rwby.InputManager.AddPlayer
+- uid: rwby.InputManager.RemovePlayer*
+  commentId: Overload:rwby.InputManager.RemovePlayer
+  href: rwby.InputManager.html#rwby_InputManager_RemovePlayer_System_Int32_
+  name: RemovePlayer
+  nameWithType: InputManager.RemovePlayer
+  fullName: rwby.InputManager.RemovePlayer
+- uid: rwby.InputManager.SetPlayerCount*
+  commentId: Overload:rwby.InputManager.SetPlayerCount
+  href: rwby.InputManager.html#rwby_InputManager_SetPlayerCount_System_Int32_
+  name: SetPlayerCount
+  nameWithType: InputManager.SetPlayerCount
+  fullName: rwby.InputManager.SetPlayerCount
+- uid: rwby.InputManager.GetPlayerCount*
+  commentId: Overload:rwby.InputManager.GetPlayerCount
+  href: rwby.InputManager.html#rwby_InputManager_GetPlayerCount
+  name: GetPlayerCount
+  nameWithType: InputManager.GetPlayerCount
+  fullName: rwby.InputManager.GetPlayerCount
+- uid: rwby.InputManager.GetSystemPlayer*
+  commentId: Overload:rwby.InputManager.GetSystemPlayer
+  href: rwby.InputManager.html#rwby_InputManager_GetSystemPlayer
+  name: GetSystemPlayer
+  nameWithType: InputManager.GetSystemPlayer
+  fullName: rwby.InputManager.GetSystemPlayer
+- uid: Global.InputPlayerManager
+  commentId: T:Global.InputPlayerManager
+  href: InputPlayerManager.html
+  name: InputPlayerManager
+  nameWithType: InputPlayerManager
+  fullName: InputPlayerManager
+- uid: rwby.InputManager.GetPlayer*
+  commentId: Overload:rwby.InputManager.GetPlayer
+  href: rwby.InputManager.html#rwby_InputManager_GetPlayer_System_Int32_
+  name: GetPlayer
+  nameWithType: InputManager.GetPlayer
+  fullName: rwby.InputManager.GetPlayer
+- uid: rwby.InputManager.SwitchToUIActionMap*
+  commentId: Overload:rwby.InputManager.SwitchToUIActionMap
+  href: rwby.InputManager.html#rwby_InputManager_SwitchToUIActionMap_System_Int32_
+  name: SwitchToUIActionMap
+  nameWithType: InputManager.SwitchToUIActionMap
+  fullName: rwby.InputManager.SwitchToUIActionMap
+- uid: rwby.InputManager.SwitchToPlayerActionMap*
+  commentId: Overload:rwby.InputManager.SwitchToPlayerActionMap
+  href: rwby.InputManager.html#rwby_InputManager_SwitchToPlayerActionMap_System_Int32_
+  name: SwitchToPlayerActionMap
+  nameWithType: InputManager.SwitchToPlayerActionMap
+  fullName: rwby.InputManager.SwitchToPlayerActionMap
+- uid: rwby.InputManager.SwitchAllToUIActionMap*
+  commentId: Overload:rwby.InputManager.SwitchAllToUIActionMap
+  href: rwby.InputManager.html#rwby_InputManager_SwitchAllToUIActionMap
+  name: SwitchAllToUIActionMap
+  nameWithType: InputManager.SwitchAllToUIActionMap
+  fullName: rwby.InputManager.SwitchAllToUIActionMap
+- uid: rwby.InputManager.SwitchAllToPlayerActionMap*
+  commentId: Overload:rwby.InputManager.SwitchAllToPlayerActionMap
+  href: rwby.InputManager.html#rwby_InputManager_SwitchAllToPlayerActionMap
+  name: SwitchAllToPlayerActionMap
+  nameWithType: InputManager.SwitchAllToPlayerActionMap
+  fullName: rwby.InputManager.SwitchAllToPlayerActionMap
+- uid: rwby.InputManager.ReturnAllDevicesToSystem*
+  commentId: Overload:rwby.InputManager.ReturnAllDevicesToSystem
+  href: rwby.InputManager.html#rwby_InputManager_ReturnAllDevicesToSystem
+  name: ReturnAllDevicesToSystem
+  nameWithType: InputManager.ReturnAllDevicesToSystem
+  fullName: rwby.InputManager.ReturnAllDevicesToSystem
+- uid: rwby.InputManager.ReturnPlayerDevicesToSystem*
+  commentId: Overload:rwby.InputManager.ReturnPlayerDevicesToSystem
+  href: rwby.InputManager.html#rwby_InputManager_ReturnPlayerDevicesToSystem_System_Int32_
+  name: ReturnPlayerDevicesToSystem
+  nameWithType: InputManager.ReturnPlayerDevicesToSystem
+  fullName: rwby.InputManager.ReturnPlayerDevicesToSystem
+- uid: rwby.InputManager.RemoveDeviceFromPlayers*
+  commentId: Overload:rwby.InputManager.RemoveDeviceFromPlayers
+  href: rwby.InputManager.html#rwby_InputManager_RemoveDeviceFromPlayers_UnityEngine_InputSystem_InputDevice_
+  name: RemoveDeviceFromPlayers
+  nameWithType: InputManager.RemoveDeviceFromPlayers
+  fullName: rwby.InputManager.RemoveDeviceFromPlayers
+- uid: UnityEngine.InputSystem.InputDevice
+  commentId: T:UnityEngine.InputSystem.InputDevice
+  parent: UnityEngine.InputSystem
+  isExternal: true
+  name: InputDevice
+  nameWithType: InputDevice
+  fullName: UnityEngine.InputSystem.InputDevice
+- uid: UnityEngine.InputSystem
+  commentId: N:UnityEngine.InputSystem
+  isExternal: true
+  name: UnityEngine.InputSystem
+  nameWithType: UnityEngine.InputSystem
+  fullName: UnityEngine.InputSystem
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem
+    name: InputSystem
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.InputSystem
+    name: InputSystem
+    isExternal: true
+- uid: rwby.InputManager.AssignDevicesToPlayer*
+  commentId: Overload:rwby.InputManager.AssignDevicesToPlayer
+  href: rwby.InputManager.html#rwby_InputManager_AssignDevicesToPlayer_UnityEngine_InputSystem_InputDevice___System_Int32_
+  name: AssignDevicesToPlayer
+  nameWithType: InputManager.AssignDevicesToPlayer
+  fullName: rwby.InputManager.AssignDevicesToPlayer
+- uid: UnityEngine.InputSystem.InputDevice[]
+  isExternal: true
+  name: InputDevice[]
+  nameWithType: InputDevice[]
+  fullName: UnityEngine.InputSystem.InputDevice[]
+  nameWithType.vb: InputDevice()
+  fullName.vb: UnityEngine.InputSystem.InputDevice()
+  name.vb: InputDevice()
+  spec.csharp:
+  - uid: UnityEngine.InputSystem.InputDevice
+    name: InputDevice
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.InputSystem.InputDevice
+    name: InputDevice
+    isExternal: true
+  - name: (
+  - name: )
+- uid: rwby.InputManager.TransferAllDevicesFromSystemTo*
+  commentId: Overload:rwby.InputManager.TransferAllDevicesFromSystemTo
+  href: rwby.InputManager.html#rwby_InputManager_TransferAllDevicesFromSystemTo_System_Int32_
+  name: TransferAllDevicesFromSystemTo
+  nameWithType: InputManager.TransferAllDevicesFromSystemTo
+  fullName: rwby.InputManager.TransferAllDevicesFromSystemTo
+- uid: rwby.InputManager.onInputDeviceChange*
+  commentId: Overload:rwby.InputManager.onInputDeviceChange
+  href: rwby.InputManager.html#rwby_InputManager_onInputDeviceChange_UnityEngine_InputSystem_InputDevice_UnityEngine_InputSystem_InputDeviceChange_
+  name: onInputDeviceChange
+  nameWithType: InputManager.onInputDeviceChange
+  fullName: rwby.InputManager.onInputDeviceChange
+- uid: UnityEngine.InputSystem.InputDeviceChange
+  commentId: T:UnityEngine.InputSystem.InputDeviceChange
+  parent: UnityEngine.InputSystem
+  isExternal: true
+  name: InputDeviceChange
+  nameWithType: InputDeviceChange
+  fullName: UnityEngine.InputSystem.InputDeviceChange

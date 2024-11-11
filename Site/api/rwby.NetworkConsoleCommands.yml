@@ -1,0 +1,355 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.NetworkConsoleCommands
+  commentId: T:rwby.NetworkConsoleCommands
+  id: NetworkConsoleCommands
+  parent: rwby
+  children:
+  - rwby.NetworkConsoleCommands.CreateLobby(System.String,System.UInt32,System.String,System.String)
+  - rwby.NetworkConsoleCommands.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
+  - rwby.NetworkConsoleCommands.StartLocalTrainingMode
+  - rwby.NetworkConsoleCommands.StartLocalVersusMode
+  langs:
+  - csharp
+  - vb
+  name: NetworkConsoleCommands
+  nameWithType: NetworkConsoleCommands
+  fullName: rwby.NetworkConsoleCommands
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Console/Commands/NetworkConsoleCommands.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: NetworkConsoleCommands
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Console/Commands/NetworkConsoleCommands.cs
+    startLine: 8
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public class NetworkConsoleCommands
+    content.vb: Public Class NetworkConsoleCommands
+  inheritance:
+  - System.Object
+- uid: rwby.NetworkConsoleCommands.CreateLobby(System.String,System.UInt32,System.String,System.String)
+  commentId: M:rwby.NetworkConsoleCommands.CreateLobby(System.String,System.UInt32,System.String,System.String)
+  id: CreateLobby(System.String,System.UInt32,System.String,System.String)
+  parent: rwby.NetworkConsoleCommands
+  langs:
+  - csharp
+  - vb
+  name: CreateLobby(string, uint, string, string)
+  nameWithType: NetworkConsoleCommands.CreateLobby(string, uint, string, string)
+  fullName: rwby.NetworkConsoleCommands.CreateLobby(string, uint, string, string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Console/Commands/NetworkConsoleCommands.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateLobby
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Console/Commands/NetworkConsoleCommands.cs
+    startLine: 11
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [ConsoleMethod("create-lobby", "Creates a multiplayer lobby.", new string[] { })]
+
+      public static UniTask<bool> CreateLobby(string lobbyName, uint maxClients, string password, string modGuid)
+    parameters:
+    - id: lobbyName
+      type: System.String
+    - id: maxClients
+      type: System.UInt32
+    - id: password
+      type: System.String
+    - id: modGuid
+      type: System.String
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: >-
+      <ConsoleMethod("create-lobby", "Creates a multiplayer lobby.", New String() { })>
+
+      Public Shared Function CreateLobby(lobbyName As String, maxClients As UInteger, password As String, modGuid As String) As UniTask(Of Boolean)
+  overload: rwby.NetworkConsoleCommands.CreateLobby*
+  nameWithType.vb: NetworkConsoleCommands.CreateLobby(String, UInteger, String, String)
+  fullName.vb: rwby.NetworkConsoleCommands.CreateLobby(String, UInteger, String, String)
+  name.vb: CreateLobby(String, UInteger, String, String)
+- uid: rwby.NetworkConsoleCommands.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
+  commentId: M:rwby.NetworkConsoleCommands.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
+  id: JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
+  parent: rwby.NetworkConsoleCommands
+  langs:
+  - csharp
+  - vb
+  name: JoinLobby(LobbyDetails)
+  nameWithType: NetworkConsoleCommands.JoinLobby(LobbyDetails)
+  fullName: rwby.NetworkConsoleCommands.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Console/Commands/NetworkConsoleCommands.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: JoinLobby
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Console/Commands/NetworkConsoleCommands.cs
+    startLine: 29
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public static UniTask<bool> JoinLobby(LobbyDetails lobbyDetails)
+    parameters:
+    - id: lobbyDetails
+      type: Epic.OnlineServices.Lobby.LobbyDetails
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Shared Function JoinLobby(lobbyDetails As LobbyDetails) As UniTask(Of Boolean)
+  overload: rwby.NetworkConsoleCommands.JoinLobby*
+- uid: rwby.NetworkConsoleCommands.StartLocalTrainingMode
+  commentId: M:rwby.NetworkConsoleCommands.StartLocalTrainingMode
+  id: StartLocalTrainingMode
+  parent: rwby.NetworkConsoleCommands
+  langs:
+  - csharp
+  - vb
+  name: StartLocalTrainingMode()
+  nameWithType: NetworkConsoleCommands.StartLocalTrainingMode()
+  fullName: rwby.NetworkConsoleCommands.StartLocalTrainingMode()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Console/Commands/NetworkConsoleCommands.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StartLocalTrainingMode
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Console/Commands/NetworkConsoleCommands.cs
+    startLine: 46
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public static UniTask<bool> StartLocalTrainingMode()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Shared Function StartLocalTrainingMode() As UniTask(Of Boolean)
+  overload: rwby.NetworkConsoleCommands.StartLocalTrainingMode*
+- uid: rwby.NetworkConsoleCommands.StartLocalVersusMode
+  commentId: M:rwby.NetworkConsoleCommands.StartLocalVersusMode
+  id: StartLocalVersusMode
+  parent: rwby.NetworkConsoleCommands
+  langs:
+  - csharp
+  - vb
+  name: StartLocalVersusMode()
+  nameWithType: NetworkConsoleCommands.StartLocalVersusMode()
+  fullName: rwby.NetworkConsoleCommands.StartLocalVersusMode()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Console/Commands/NetworkConsoleCommands.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StartLocalVersusMode
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Console/Commands/NetworkConsoleCommands.cs
+    startLine: 64
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public static UniTask<bool> StartLocalVersusMode()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Shared Function StartLocalVersusMode() As UniTask(Of Boolean)
+  overload: rwby.NetworkConsoleCommands.StartLocalVersusMode*
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: rwby.NetworkConsoleCommands.CreateLobby*
+  commentId: Overload:rwby.NetworkConsoleCommands.CreateLobby
+  href: rwby.NetworkConsoleCommands.html#rwby_NetworkConsoleCommands_CreateLobby_System_String_System_UInt32_System_String_System_String_
+  name: CreateLobby
+  nameWithType: NetworkConsoleCommands.CreateLobby
+  fullName: rwby.NetworkConsoleCommands.CreateLobby
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: rwby.NetworkConsoleCommands.JoinLobby*
+  commentId: Overload:rwby.NetworkConsoleCommands.JoinLobby
+  href: rwby.NetworkConsoleCommands.html#rwby_NetworkConsoleCommands_JoinLobby_Epic_OnlineServices_Lobby_LobbyDetails_
+  name: JoinLobby
+  nameWithType: NetworkConsoleCommands.JoinLobby
+  fullName: rwby.NetworkConsoleCommands.JoinLobby
+- uid: Epic.OnlineServices.Lobby.LobbyDetails
+  commentId: T:Epic.OnlineServices.Lobby.LobbyDetails
+  parent: Epic.OnlineServices.Lobby
+  name: LobbyDetails
+  nameWithType: LobbyDetails
+  fullName: Epic.OnlineServices.Lobby.LobbyDetails
+- uid: Epic.OnlineServices.Lobby
+  commentId: N:Epic.OnlineServices.Lobby
+  name: Epic.OnlineServices.Lobby
+  nameWithType: Epic.OnlineServices.Lobby
+  fullName: Epic.OnlineServices.Lobby
+  spec.csharp:
+  - uid: Epic
+    name: Epic
+  - name: .
+  - uid: Epic.OnlineServices
+    name: OnlineServices
+  - name: .
+  - uid: Epic.OnlineServices.Lobby
+    name: Lobby
+  spec.vb:
+  - uid: Epic
+    name: Epic
+  - name: .
+  - uid: Epic.OnlineServices
+    name: OnlineServices
+  - name: .
+  - uid: Epic.OnlineServices.Lobby
+    name: Lobby
+- uid: rwby.NetworkConsoleCommands.StartLocalTrainingMode*
+  commentId: Overload:rwby.NetworkConsoleCommands.StartLocalTrainingMode
+  href: rwby.NetworkConsoleCommands.html#rwby_NetworkConsoleCommands_StartLocalTrainingMode
+  name: StartLocalTrainingMode
+  nameWithType: NetworkConsoleCommands.StartLocalTrainingMode
+  fullName: rwby.NetworkConsoleCommands.StartLocalTrainingMode
+- uid: rwby.NetworkConsoleCommands.StartLocalVersusMode*
+  commentId: Overload:rwby.NetworkConsoleCommands.StartLocalVersusMode
+  href: rwby.NetworkConsoleCommands.html#rwby_NetworkConsoleCommands_StartLocalVersusMode
+  name: StartLocalVersusMode
+  nameWithType: NetworkConsoleCommands.StartLocalVersusMode
+  fullName: rwby.NetworkConsoleCommands.StartLocalVersusMode

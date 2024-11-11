@@ -1,0 +1,515 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.GlobalCutsceneManager
+  commentId: T:rwby.GlobalCutsceneManager
+  id: GlobalCutsceneManager
+  parent: rwby
+  children:
+  - rwby.GlobalCutsceneManager.Breakdown
+  - rwby.GlobalCutsceneManager.Initialize(rwby.MatchHandlerBase,rwby.CutsceneBindingSource)
+  - rwby.GlobalCutsceneManager.UpdateMapBindings
+  - rwby.GlobalCutsceneManager.cutsceneGroupingPool
+  - rwby.GlobalCutsceneManager.entityToCutscenePlayers
+  - rwby.GlobalCutsceneManager.globalBindingSource
+  - rwby.GlobalCutsceneManager.matchHandler
+  - rwby.GlobalCutsceneManager.viewUpdater
+  langs:
+  - csharp
+  - vb
+  name: GlobalCutsceneManager
+  nameWithType: GlobalCutsceneManager
+  fullName: rwby.GlobalCutsceneManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GlobalCutsceneManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+    startLine: 7
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class GlobalCutsceneManager
+    content.vb: >-
+      <Serializable>
+
+      Public Class GlobalCutsceneManager
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: rwby.GlobalCutsceneManager.viewUpdater
+  commentId: F:rwby.GlobalCutsceneManager.viewUpdater
+  id: viewUpdater
+  parent: rwby.GlobalCutsceneManager
+  langs:
+  - csharp
+  - vb
+  name: viewUpdater
+  nameWithType: GlobalCutsceneManager.viewUpdater
+  fullName: rwby.GlobalCutsceneManager.viewUpdater
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: viewUpdater
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public QuantumEntityViewUpdater viewUpdater
+    return:
+      type: Quantum.QuantumEntityViewUpdater
+    content.vb: Public viewUpdater As QuantumEntityViewUpdater
+- uid: rwby.GlobalCutsceneManager.entityToCutscenePlayers
+  commentId: F:rwby.GlobalCutsceneManager.entityToCutscenePlayers
+  id: entityToCutscenePlayers
+  parent: rwby.GlobalCutsceneManager
+  langs:
+  - csharp
+  - vb
+  name: entityToCutscenePlayers
+  nameWithType: GlobalCutsceneManager.entityToCutscenePlayers
+  fullName: rwby.GlobalCutsceneManager.entityToCutscenePlayers
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: entityToCutscenePlayers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public Dictionary<EntityRef, CutsceneGrouping> entityToCutscenePlayers
+    return:
+      type: System.Collections.Generic.Dictionary{Quantum.EntityRef,rwby.CutsceneGrouping}
+    content.vb: Public entityToCutscenePlayers As Dictionary(Of EntityRef, CutsceneGrouping)
+- uid: rwby.GlobalCutsceneManager.cutsceneGroupingPool
+  commentId: F:rwby.GlobalCutsceneManager.cutsceneGroupingPool
+  id: cutsceneGroupingPool
+  parent: rwby.GlobalCutsceneManager
+  langs:
+  - csharp
+  - vb
+  name: cutsceneGroupingPool
+  nameWithType: GlobalCutsceneManager.cutsceneGroupingPool
+  fullName: rwby.GlobalCutsceneManager.cutsceneGroupingPool
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: cutsceneGroupingPool
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+    startLine: 21
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public Dictionary<AssetRef<CharaDefinitionAsset>, List<CutsceneGrouping>> cutsceneGroupingPool
+    return:
+      type: System.Collections.Generic.Dictionary{Quantum.AssetRef{Quantum.CharaDefinitionAsset},System.Collections.Generic.List{rwby.CutsceneGrouping}}
+    content.vb: Public cutsceneGroupingPool As Dictionary(Of AssetRef(Of CharaDefinitionAsset), List(Of CutsceneGrouping))
+- uid: rwby.GlobalCutsceneManager.globalBindingSource
+  commentId: F:rwby.GlobalCutsceneManager.globalBindingSource
+  id: globalBindingSource
+  parent: rwby.GlobalCutsceneManager
+  langs:
+  - csharp
+  - vb
+  name: globalBindingSource
+  nameWithType: GlobalCutsceneManager.globalBindingSource
+  fullName: rwby.GlobalCutsceneManager.globalBindingSource
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: globalBindingSource
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public CutsceneBindingSource globalBindingSource
+    return:
+      type: rwby.CutsceneBindingSource
+    content.vb: Public globalBindingSource As CutsceneBindingSource
+- uid: rwby.GlobalCutsceneManager.matchHandler
+  commentId: F:rwby.GlobalCutsceneManager.matchHandler
+  id: matchHandler
+  parent: rwby.GlobalCutsceneManager
+  langs:
+  - csharp
+  - vb
+  name: matchHandler
+  nameWithType: GlobalCutsceneManager.matchHandler
+  fullName: rwby.GlobalCutsceneManager.matchHandler
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: matchHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+    startLine: 25
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public MatchHandlerBase matchHandler
+    return:
+      type: rwby.MatchHandlerBase
+    content.vb: Public matchHandler As MatchHandlerBase
+- uid: rwby.GlobalCutsceneManager.Initialize(rwby.MatchHandlerBase,rwby.CutsceneBindingSource)
+  commentId: M:rwby.GlobalCutsceneManager.Initialize(rwby.MatchHandlerBase,rwby.CutsceneBindingSource)
+  id: Initialize(rwby.MatchHandlerBase,rwby.CutsceneBindingSource)
+  parent: rwby.GlobalCutsceneManager
+  langs:
+  - csharp
+  - vb
+  name: Initialize(MatchHandlerBase, CutsceneBindingSource)
+  nameWithType: GlobalCutsceneManager.Initialize(MatchHandlerBase, CutsceneBindingSource)
+  fullName: rwby.GlobalCutsceneManager.Initialize(rwby.MatchHandlerBase, rwby.CutsceneBindingSource)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+    startLine: 27
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void Initialize(MatchHandlerBase mHandler, CutsceneBindingSource bindingSource = null)
+    parameters:
+    - id: mHandler
+      type: rwby.MatchHandlerBase
+    - id: bindingSource
+      type: rwby.CutsceneBindingSource
+    content.vb: Public Sub Initialize(mHandler As MatchHandlerBase, bindingSource As CutsceneBindingSource = Nothing)
+  overload: rwby.GlobalCutsceneManager.Initialize*
+- uid: rwby.GlobalCutsceneManager.UpdateMapBindings
+  commentId: M:rwby.GlobalCutsceneManager.UpdateMapBindings
+  id: UpdateMapBindings
+  parent: rwby.GlobalCutsceneManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateMapBindings()
+  nameWithType: GlobalCutsceneManager.UpdateMapBindings()
+  fullName: rwby.GlobalCutsceneManager.UpdateMapBindings()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateMapBindings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+    startLine: 47
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void UpdateMapBindings()
+    content.vb: Public Sub UpdateMapBindings()
+  overload: rwby.GlobalCutsceneManager.UpdateMapBindings*
+- uid: rwby.GlobalCutsceneManager.Breakdown
+  commentId: M:rwby.GlobalCutsceneManager.Breakdown
+  id: Breakdown
+  parent: rwby.GlobalCutsceneManager
+  langs:
+  - csharp
+  - vb
+  name: Breakdown()
+  nameWithType: GlobalCutsceneManager.Breakdown()
+  fullName: rwby.GlobalCutsceneManager.Breakdown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Breakdown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+    startLine: 131
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void Breakdown()
+    content.vb: Public Sub Breakdown()
+  overload: rwby.GlobalCutsceneManager.Breakdown*
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.QuantumEntityViewUpdater
+  commentId: T:Quantum.QuantumEntityViewUpdater
+  parent: Quantum
+  name: QuantumEntityViewUpdater
+  nameWithType: QuantumEntityViewUpdater
+  fullName: Quantum.QuantumEntityViewUpdater
+- uid: Quantum
+  commentId: N:Quantum
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Collections.Generic.Dictionary{Quantum.EntityRef,rwby.CutsceneGrouping}
+  commentId: T:System.Collections.Generic.Dictionary{Quantum.EntityRef,rwby.CutsceneGrouping}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<EntityRef, CutsceneGrouping>
+  nameWithType: Dictionary<EntityRef, CutsceneGrouping>
+  fullName: System.Collections.Generic.Dictionary<Quantum.EntityRef, rwby.CutsceneGrouping>
+  nameWithType.vb: Dictionary(Of EntityRef, CutsceneGrouping)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Quantum.EntityRef, rwby.CutsceneGrouping)
+  name.vb: Dictionary(Of EntityRef, CutsceneGrouping)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: rwby.CutsceneGrouping
+    name: CutsceneGrouping
+    href: rwby.CutsceneGrouping.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: rwby.CutsceneGrouping
+    name: CutsceneGrouping
+    href: rwby.CutsceneGrouping.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.Dictionary{Quantum.AssetRef{Quantum.CharaDefinitionAsset},System.Collections.Generic.List{rwby.CutsceneGrouping}}
+  commentId: T:System.Collections.Generic.Dictionary{Quantum.AssetRef{Quantum.CharaDefinitionAsset},System.Collections.Generic.List{rwby.CutsceneGrouping}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<AssetRef<CharaDefinitionAsset>, List<CutsceneGrouping>>
+  nameWithType: Dictionary<AssetRef<CharaDefinitionAsset>, List<CutsceneGrouping>>
+  fullName: System.Collections.Generic.Dictionary<Quantum.AssetRef<Quantum.CharaDefinitionAsset>, System.Collections.Generic.List<rwby.CutsceneGrouping>>
+  nameWithType.vb: Dictionary(Of AssetRef(Of CharaDefinitionAsset), List(Of CutsceneGrouping))
+  fullName.vb: System.Collections.Generic.Dictionary(Of Quantum.AssetRef(Of Quantum.CharaDefinitionAsset), System.Collections.Generic.List(Of rwby.CutsceneGrouping))
+  name.vb: Dictionary(Of AssetRef(Of CharaDefinitionAsset), List(Of CutsceneGrouping))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.CharaDefinitionAsset
+    name: CharaDefinitionAsset
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: rwby.CutsceneGrouping
+    name: CutsceneGrouping
+    href: rwby.CutsceneGrouping.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.CharaDefinitionAsset
+    name: CharaDefinitionAsset
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.CutsceneGrouping
+    name: CutsceneGrouping
+    href: rwby.CutsceneGrouping.html
+  - name: )
+  - name: )
+- uid: rwby.CutsceneBindingSource
+  commentId: T:rwby.CutsceneBindingSource
+  parent: rwby
+  href: rwby.CutsceneBindingSource.html
+  name: CutsceneBindingSource
+  nameWithType: CutsceneBindingSource
+  fullName: rwby.CutsceneBindingSource
+- uid: rwby.MatchHandlerBase
+  commentId: T:rwby.MatchHandlerBase
+  parent: rwby
+  href: rwby.MatchHandlerBase.html
+  name: MatchHandlerBase
+  nameWithType: MatchHandlerBase
+  fullName: rwby.MatchHandlerBase
+- uid: rwby.GlobalCutsceneManager.Initialize*
+  commentId: Overload:rwby.GlobalCutsceneManager.Initialize
+  href: rwby.GlobalCutsceneManager.html#rwby_GlobalCutsceneManager_Initialize_rwby_MatchHandlerBase_rwby_CutsceneBindingSource_
+  name: Initialize
+  nameWithType: GlobalCutsceneManager.Initialize
+  fullName: rwby.GlobalCutsceneManager.Initialize
+- uid: rwby.GlobalCutsceneManager.UpdateMapBindings*
+  commentId: Overload:rwby.GlobalCutsceneManager.UpdateMapBindings
+  href: rwby.GlobalCutsceneManager.html#rwby_GlobalCutsceneManager_UpdateMapBindings
+  name: UpdateMapBindings
+  nameWithType: GlobalCutsceneManager.UpdateMapBindings
+  fullName: rwby.GlobalCutsceneManager.UpdateMapBindings
+- uid: rwby.GlobalCutsceneManager.Breakdown*
+  commentId: Overload:rwby.GlobalCutsceneManager.Breakdown
+  href: rwby.GlobalCutsceneManager.html#rwby_GlobalCutsceneManager_Breakdown
+  name: Breakdown
+  nameWithType: GlobalCutsceneManager.Breakdown
+  fullName: rwby.GlobalCutsceneManager.Breakdown

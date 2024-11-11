@@ -1,0 +1,966 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  id: LobbySessionNetworkMessageHandler
+  parent: rwby.sessionhandlers.lobby
+  children:
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(System.Int32)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(System.Int32,System.Int32,System.Int32,System.Int32)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference,System.Int32)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready(System.Int32)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnClientReportHasAsset
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnClientSetCharacterResponse
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnJoinMatchGetResponse
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchCreationOrUpdateResult
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchListUpdated
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.RegisterNetworkMessages
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerOnPlayerReadyStateChanged
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerStartMatch(System.Int32)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.lobbySessionHandler
+  langs:
+  - csharp
+  - vb
+  name: LobbySessionNetworkMessageHandler
+  nameWithType: LobbySessionNetworkMessageHandler
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerReadyCheck.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LobbySessionNetworkMessageHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerReadyCheck.cs
+    startLine: 10
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public class LobbySessionNetworkMessageHandler
+    content.vb: Public Class LobbySessionNetworkMessageHandler
+  inheritance:
+  - System.Object
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerStartMatch(System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerStartMatch(System.Int32)
+  id: ServerStartMatch(System.Int32)
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: ServerStartMatch(int)
+  nameWithType: LobbySessionNetworkMessageHandler.ServerStartMatch(int)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerStartMatch(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatchStart.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ServerStartMatch
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatchStart.cs
+    startLine: 11
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void ServerStartMatch(int matchId)
+    parameters:
+    - id: matchId
+      type: System.Int32
+    content.vb: Public Sub ServerStartMatch(matchId As Integer)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerStartMatch*
+  nameWithType.vb: LobbySessionNetworkMessageHandler.ServerStartMatch(Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerStartMatch(Integer)
+  name.vb: ServerStartMatch(Integer)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.lobbySessionHandler
+  commentId: F:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.lobbySessionHandler
+  id: lobbySessionHandler
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: lobbySessionHandler
+  nameWithType: LobbySessionNetworkMessageHandler.lobbySessionHandler
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.lobbySessionHandler
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: lobbySessionHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+    startLine: 9
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public NetworkLobbySessionHandler lobbySessionHandler
+    return:
+      type: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
+    content.vb: Public lobbySessionHandler As NetworkLobbySessionHandler
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchListUpdated
+  commentId: F:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchListUpdated
+  id: OnMatchListUpdated
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: OnMatchListUpdated
+  nameWithType: LobbySessionNetworkMessageHandler.OnMatchListUpdated
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchListUpdated
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnMatchListUpdated
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public LobbySessionNetworkMessageHandler.EmptyEvent OnMatchListUpdated
+    return:
+      type: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
+    content.vb: Public OnMatchListUpdated As LobbySessionNetworkMessageHandler.EmptyEvent
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchCreationOrUpdateResult
+  commentId: F:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchCreationOrUpdateResult
+  id: OnMatchCreationOrUpdateResult
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: OnMatchCreationOrUpdateResult
+  nameWithType: LobbySessionNetworkMessageHandler.OnMatchCreationOrUpdateResult
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchCreationOrUpdateResult
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnMatchCreationOrUpdateResult
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+    startLine: 18
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent OnMatchCreationOrUpdateResult
+    return:
+      type: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
+    content.vb: Public OnMatchCreationOrUpdateResult As LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnJoinMatchGetResponse
+  commentId: F:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnJoinMatchGetResponse
+  id: OnJoinMatchGetResponse
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: OnJoinMatchGetResponse
+  nameWithType: LobbySessionNetworkMessageHandler.OnJoinMatchGetResponse
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnJoinMatchGetResponse
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnJoinMatchGetResponse
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public LobbySessionNetworkMessageHandler.JoinMatchResponseEvent OnJoinMatchGetResponse
+    return:
+      type: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.JoinMatchResponseEvent
+    content.vb: Public OnJoinMatchGetResponse As LobbySessionNetworkMessageHandler.JoinMatchResponseEvent
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnClientReportHasAsset
+  commentId: F:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnClientReportHasAsset
+  id: OnClientReportHasAsset
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: OnClientReportHasAsset
+  nameWithType: LobbySessionNetworkMessageHandler.OnClientReportHasAsset
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnClientReportHasAsset
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnClientReportHasAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+    startLine: 20
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public LobbySessionNetworkMessageHandler.ClientAssetEvent OnClientReportHasAsset
+    return:
+      type: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAssetEvent
+    content.vb: Public OnClientReportHasAsset As LobbySessionNetworkMessageHandler.ClientAssetEvent
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnClientSetCharacterResponse
+  commentId: F:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnClientSetCharacterResponse
+  id: OnClientSetCharacterResponse
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: OnClientSetCharacterResponse
+  nameWithType: LobbySessionNetworkMessageHandler.OnClientSetCharacterResponse
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnClientSetCharacterResponse
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnClientSetCharacterResponse
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+    startLine: 21
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent OnClientSetCharacterResponse
+    return:
+      type: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent
+    content.vb: Public OnClientSetCharacterResponse As LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerOnPlayerReadyStateChanged
+  commentId: F:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerOnPlayerReadyStateChanged
+  id: ServerOnPlayerReadyStateChanged
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: ServerOnPlayerReadyStateChanged
+  nameWithType: LobbySessionNetworkMessageHandler.ServerOnPlayerReadyStateChanged
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerOnPlayerReadyStateChanged
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ServerOnPlayerReadyStateChanged
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+    startLine: 22
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public LobbySessionNetworkMessageHandler.ClientReadyStateEvent ServerOnPlayerReadyStateChanged
+    return:
+      type: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientReadyStateEvent
+    content.vb: Public ServerOnPlayerReadyStateChanged As LobbySessionNetworkMessageHandler.ClientReadyStateEvent
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.RegisterNetworkMessages
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.RegisterNetworkMessages
+  id: RegisterNetworkMessages
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: RegisterNetworkMessages()
+  nameWithType: LobbySessionNetworkMessageHandler.RegisterNetworkMessages()
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.RegisterNetworkMessages()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RegisterNetworkMessages
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
+    startLine: 24
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void RegisterNetworkMessages()
+    content.vb: Public Sub RegisterNetworkMessages()
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.RegisterNetworkMessages*
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference,System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference,System.Int32)
+  id: ClientTrySetCharacterAsync(ModAssetSoftReference,System.Int32)
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: ClientTrySetCharacterAsync(ModAssetSoftReference, int)
+  nameWithType: LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference, int)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerClientInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ClientTrySetCharacterAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerClientInfo.cs
+    startLine: 84
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public UniTask<bool> ClientTrySetCharacterAsync(ModAssetSoftReference characterRef, int localPlayerID)
+    parameters:
+    - id: characterRef
+      type: Global.ModAssetSoftReference
+    - id: localPlayerID
+      type: System.Int32
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Function ClientTrySetCharacterAsync(characterRef As ModAssetSoftReference, localPlayerID As Integer) As UniTask(Of Boolean)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync*
+  nameWithType.vb: LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference, Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference, Integer)
+  name.vb: ClientTrySetCharacterAsync(ModAssetSoftReference, Integer)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
+  id: ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: ServerUpdateClientMatchList(NetworkConnectionToClient, RequestMatchListMessage)
+  nameWithType: LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(NetworkConnectionToClient, NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient, rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ServerUpdateClientMatchList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+    startLine: 11
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void ServerUpdateClientMatchList(NetworkConnectionToClient requester, NetworkLobbySessionHandlerMessages.RequestMatchListMessage msg)
+    parameters:
+    - id: requester
+      type: Mirror.NetworkConnectionToClient
+    - id: msg
+      type: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+    content.vb: Public Sub ServerUpdateClientMatchList(requester As NetworkConnectionToClient, msg As NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList*
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
+  id: ClientTryAddNewMatchAsync(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: ClientTryAddNewMatchAsync(NetworkLobbySessionMatchInfo)
+  nameWithType: LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync(NetworkLobbySessionMatchInfo)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ClientTryAddNewMatchAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+    startLine: 125
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public UniTask<(bool, int)> ClientTryAddNewMatchAsync(NetworkLobbySessionMatchInfo matchInfo)
+    parameters:
+    - id: matchInfo
+      type: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.ValueTuple{System.Boolean,System.Int32}}
+    content.vb: Public Function ClientTryAddNewMatchAsync(matchInfo As NetworkLobbySessionMatchInfo) As UniTask(Of (Boolean, Integer))
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync*
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: ClientTryJoinMatchAsync(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: ClientTryJoinMatchAsync(int, int, int, int)
+  nameWithType: LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(int, int, int, int)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ClientTryJoinMatchAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+    startLine: 155
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public UniTask<bool> ClientTryJoinMatchAsync(int matchID, int team, int slot, int localPlayerID)
+    parameters:
+    - id: matchID
+      type: System.Int32
+    - id: team
+      type: System.Int32
+    - id: slot
+      type: System.Int32
+    - id: localPlayerID
+      type: System.Int32
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Function ClientTryJoinMatchAsync(matchID As Integer, team As Integer, slot As Integer, localPlayerID As Integer) As UniTask(Of Boolean)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync*
+  nameWithType.vb: LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(Integer, Integer, Integer, Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(Integer, Integer, Integer, Integer)
+  name.vb: ClientTryJoinMatchAsync(Integer, Integer, Integer, Integer)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList
+  id: ClientRequestMatchList
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: ClientRequestMatchList()
+  nameWithType: LobbySessionNetworkMessageHandler.ClientRequestMatchList()
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ClientRequestMatchList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+    startLine: 184
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void ClientRequestMatchList()
+    content.vb: Public Sub ClientRequestMatchList()
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList*
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(System.Int32)
+  id: ClientAttemptReadyUpAsync(System.Int32)
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: ClientAttemptReadyUpAsync(int)
+  nameWithType: LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(int)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerReadyCheck.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ClientAttemptReadyUpAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerReadyCheck.cs
+    startLine: 134
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public UniTask<bool> ClientAttemptReadyUpAsync(int localPlayerID)
+    parameters:
+    - id: localPlayerID
+      type: System.Int32
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Function ClientAttemptReadyUpAsync(localPlayerID As Integer) As UniTask(Of Boolean)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync*
+  nameWithType.vb: LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(Integer)
+  name.vb: ClientAttemptReadyUpAsync(Integer)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready(System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready(System.Int32)
+  id: ClientUnready(System.Int32)
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: ClientUnready(int)
+  nameWithType: LobbySessionNetworkMessageHandler.ClientUnready(int)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerReadyCheck.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ClientUnready
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerReadyCheck.cs
+    startLine: 144
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void ClientUnready(int localPlayerID)
+    parameters:
+    - id: localPlayerID
+      type: System.Int32
+    content.vb: Public Sub ClientUnready(localPlayerID As Integer)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready*
+  nameWithType.vb: LobbySessionNetworkMessageHandler.ClientUnready(Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready(Integer)
+  name.vb: ClientUnready(Integer)
+references:
+- uid: rwby.sessionhandlers.lobby
+  commentId: N:rwby.sessionhandlers.lobby
+  href: rwby.html
+  name: rwby.sessionhandlers.lobby
+  nameWithType: rwby.sessionhandlers.lobby
+  fullName: rwby.sessionhandlers.lobby
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.sessionhandlers
+    name: sessionhandlers
+    href: rwby.sessionhandlers.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby
+    name: lobby
+    href: rwby.sessionhandlers.lobby.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.sessionhandlers
+    name: sessionhandlers
+    href: rwby.sessionhandlers.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby
+    name: lobby
+    href: rwby.sessionhandlers.lobby.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerStartMatch*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerStartMatch
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ServerStartMatch_System_Int32_
+  name: ServerStartMatch
+  nameWithType: LobbySessionNetworkMessageHandler.ServerStartMatch
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerStartMatch
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.html
+  name: NetworkLobbySessionHandler
+  nameWithType: NetworkLobbySessionHandler
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
+  commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  name: LobbySessionNetworkMessageHandler.EmptyEvent
+  nameWithType: LobbySessionNetworkMessageHandler.EmptyEvent
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
+    name: EmptyEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
+    name: EmptyEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent.html
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
+  commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  name: LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
+  nameWithType: LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
+    name: MatchCreationOrUpdateEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
+    name: MatchCreationOrUpdateEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent.html
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.JoinMatchResponseEvent
+  commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.JoinMatchResponseEvent
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  name: LobbySessionNetworkMessageHandler.JoinMatchResponseEvent
+  nameWithType: LobbySessionNetworkMessageHandler.JoinMatchResponseEvent
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.JoinMatchResponseEvent
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.JoinMatchResponseEvent
+    name: JoinMatchResponseEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.JoinMatchResponseEvent.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.JoinMatchResponseEvent
+    name: JoinMatchResponseEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.JoinMatchResponseEvent.html
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAssetEvent
+  commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAssetEvent
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  name: LobbySessionNetworkMessageHandler.ClientAssetEvent
+  nameWithType: LobbySessionNetworkMessageHandler.ClientAssetEvent
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAssetEvent
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAssetEvent
+    name: ClientAssetEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAssetEvent.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAssetEvent
+    name: ClientAssetEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAssetEvent.html
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent
+  commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  name: LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent
+  nameWithType: LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent
+    name: ClientCharacterAssetEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent
+    name: ClientCharacterAssetEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent.html
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientReadyStateEvent
+  commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientReadyStateEvent
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  name: LobbySessionNetworkMessageHandler.ClientReadyStateEvent
+  nameWithType: LobbySessionNetworkMessageHandler.ClientReadyStateEvent
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientReadyStateEvent
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientReadyStateEvent
+    name: ClientReadyStateEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientReadyStateEvent.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+    name: LobbySessionNetworkMessageHandler
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientReadyStateEvent
+    name: ClientReadyStateEvent
+    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientReadyStateEvent.html
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.RegisterNetworkMessages*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.RegisterNetworkMessages
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_RegisterNetworkMessages
+  name: RegisterNetworkMessages
+  nameWithType: LobbySessionNetworkMessageHandler.RegisterNetworkMessages
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.RegisterNetworkMessages
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientTrySetCharacterAsync_ModAssetSoftReference_System_Int32_
+  name: ClientTrySetCharacterAsync
+  nameWithType: LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync
+- uid: Global.ModAssetSoftReference
+  commentId: T:Global.ModAssetSoftReference
+  href: ModAssetSoftReference.html
+  name: ModAssetSoftReference
+  nameWithType: ModAssetSoftReference
+  fullName: ModAssetSoftReference
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ServerUpdateClientMatchList_Mirror_NetworkConnectionToClient_rwby_sessionhandlers_lobby_NetworkLobbySessionHandlerMessages_RequestMatchListMessage_
+  name: ServerUpdateClientMatchList
+  nameWithType: LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList
+- uid: Mirror.NetworkConnectionToClient
+  commentId: T:Mirror.NetworkConnectionToClient
+  parent: Mirror
+  name: NetworkConnectionToClient
+  nameWithType: NetworkConnectionToClient
+  fullName: Mirror.NetworkConnectionToClient
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  name: NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+  nameWithType: NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+    name: RequestMatchListMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+    name: RequestMatchListMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage.html
+- uid: Mirror
+  commentId: N:Mirror
+  name: Mirror
+  nameWithType: Mirror
+  fullName: Mirror
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientTryAddNewMatchAsync_rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_
+  name: ClientTryAddNewMatchAsync
+  nameWithType: LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html
+  name: NetworkLobbySessionMatchInfo
+  nameWithType: NetworkLobbySessionMatchInfo
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+- uid: Cysharp.Threading.Tasks.UniTask{System.ValueTuple{System.Boolean,System.Int32}}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.ValueTuple{System.Boolean,System.Int32}}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<(bool, int)>
+  nameWithType: UniTask<(bool, int)>
+  fullName: Cysharp.Threading.Tasks.UniTask<(bool, int)>
+  nameWithType.vb: UniTask(Of (Boolean, Integer))
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of (Boolean, Integer))
+  name.vb: UniTask(Of (Boolean, Integer))
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: )
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientTryJoinMatchAsync_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: ClientTryJoinMatchAsync
+  nameWithType: LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientRequestMatchList
+  name: ClientRequestMatchList
+  nameWithType: LobbySessionNetworkMessageHandler.ClientRequestMatchList
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientAttemptReadyUpAsync_System_Int32_
+  name: ClientAttemptReadyUpAsync
+  nameWithType: LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientUnready_System_Int32_
+  name: ClientUnready
+  nameWithType: LobbySessionNetworkMessageHandler.ClientUnready
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready

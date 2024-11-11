@@ -1,0 +1,554 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.IMapDefinition
+  commentId: T:Global.IMapDefinition
+  id: IMapDefinition
+  parent: Global
+  children:
+  - Global.IMapDefinition.GetMapAsset
+  - Global.IMapDefinition.GetSceneName
+  - Global.IMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  - Global.IMapDefinition.UnloadMap
+  langs:
+  - csharp
+  - vb
+  name: IMapDefinition
+  nameWithType: IMapDefinition
+  fullName: IMapDefinition
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Maps/IMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IMapDefinition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Maps/IMapDefinition.cs
+    startLine: 2
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: >-
+      [Serializable]
+
+      public abstract class IMapDefinition : IContentDefinition
+    content.vb: >-
+      <Serializable>
+
+      Public MustInherit Class IMapDefinition Inherits IContentDefinition
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Global.IContentDefinition
+  derivedClasses:
+  - Global.AddressablesMapDefinition
+  inheritedMembers:
+  - Global.IContentDefinition.modDefinition
+  - Global.IContentDefinition.ID
+  - Global.IContentDefinition.Name
+  - Global.IContentDefinition.Description
+  - Global.IContentDefinition.Tags
+  - Global.IContentDefinition.Load(System.String)
+  - Global.IContentDefinition.LoadAssets
+  - Global.IContentDefinition.RegisterQuantumAsset
+  - Global.IContentDefinition.UnregisterQuantumAsset
+  - Global.IContentDefinition.UnloadAssets
+  - Global.IContentDefinition.Unload
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Global.IMapDefinition.GetMapAsset
+  commentId: M:Global.IMapDefinition.GetMapAsset
+  id: GetMapAsset
+  parent: Global.IMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetMapAsset()
+  nameWithType: IMapDefinition.GetMapAsset()
+  fullName: IMapDefinition.GetMapAsset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Maps/IMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetMapAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Maps/IMapDefinition.cs
+    startLine: 5
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public abstract Map GetMapAsset()
+    return:
+      type: Quantum.Map
+    content.vb: Public MustOverride Function GetMapAsset() As Map
+  overload: Global.IMapDefinition.GetMapAsset*
+- uid: Global.IMapDefinition.GetSceneName
+  commentId: M:Global.IMapDefinition.GetSceneName
+  id: GetSceneName
+  parent: Global.IMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetSceneName()
+  nameWithType: IMapDefinition.GetSceneName()
+  fullName: IMapDefinition.GetSceneName()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Maps/IMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetSceneName
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Maps/IMapDefinition.cs
+    startLine: 6
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public abstract string GetSceneName()
+    return:
+      type: System.String
+    content.vb: Public MustOverride Function GetSceneName() As String
+  overload: Global.IMapDefinition.GetSceneName*
+- uid: Global.IMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  commentId: M:Global.IMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  id: LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  parent: Global.IMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: LoadMap(LoadSceneMode)
+  nameWithType: IMapDefinition.LoadMap(LoadSceneMode)
+  fullName: IMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Maps/IMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Maps/IMapDefinition.cs
+    startLine: 7
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public abstract UniTask<bool> LoadMap(LoadSceneMode loadMode)
+    parameters:
+    - id: loadMode
+      type: UnityEngine.SceneManagement.LoadSceneMode
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public MustOverride Function LoadMap(loadMode As LoadSceneMode) As UniTask(Of Boolean)
+  overload: Global.IMapDefinition.LoadMap*
+- uid: Global.IMapDefinition.UnloadMap
+  commentId: M:Global.IMapDefinition.UnloadMap
+  id: UnloadMap
+  parent: Global.IMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: UnloadMap()
+  nameWithType: IMapDefinition.UnloadMap()
+  fullName: IMapDefinition.UnloadMap()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Maps/IMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Maps/IMapDefinition.cs
+    startLine: 8
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public abstract UniTask UnloadMap()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public MustOverride Function UnloadMap() As UniTask
+  overload: Global.IMapDefinition.UnloadMap*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Global.IContentDefinition
+  commentId: T:Global.IContentDefinition
+  href: IContentDefinition.html
+  name: IContentDefinition
+  nameWithType: IContentDefinition
+  fullName: IContentDefinition
+- uid: Global.IContentDefinition.modDefinition
+  commentId: P:Global.IContentDefinition.modDefinition
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_modDefinition
+  name: modDefinition
+  nameWithType: IContentDefinition.modDefinition
+  fullName: IContentDefinition.modDefinition
+- uid: Global.IContentDefinition.ID
+  commentId: P:Global.IContentDefinition.ID
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_ID
+  name: ID
+  nameWithType: IContentDefinition.ID
+  fullName: IContentDefinition.ID
+- uid: Global.IContentDefinition.Name
+  commentId: P:Global.IContentDefinition.Name
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Name
+  name: Name
+  nameWithType: IContentDefinition.Name
+  fullName: IContentDefinition.Name
+- uid: Global.IContentDefinition.Description
+  commentId: P:Global.IContentDefinition.Description
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Description
+  name: Description
+  nameWithType: IContentDefinition.Description
+  fullName: IContentDefinition.Description
+- uid: Global.IContentDefinition.Tags
+  commentId: P:Global.IContentDefinition.Tags
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Tags
+  name: Tags
+  nameWithType: IContentDefinition.Tags
+  fullName: IContentDefinition.Tags
+- uid: Global.IContentDefinition.Load(System.String)
+  commentId: M:Global.IContentDefinition.Load(System.String)
+  parent: Global.IContentDefinition
+  isExternal: true
+  href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  name: Load(string)
+  nameWithType: IContentDefinition.Load(string)
+  fullName: IContentDefinition.Load(string)
+  nameWithType.vb: IContentDefinition.Load(String)
+  fullName.vb: IContentDefinition.Load(String)
+  name.vb: Load(String)
+  spec.csharp:
+  - uid: Global.IContentDefinition.Load(System.String)
+    name: Load
+    href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.Load(System.String)
+    name: Load
+    href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Global.IContentDefinition.LoadAssets
+  commentId: M:Global.IContentDefinition.LoadAssets
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  name: LoadAssets()
+  nameWithType: IContentDefinition.LoadAssets()
+  fullName: IContentDefinition.LoadAssets()
+  spec.csharp:
+  - uid: Global.IContentDefinition.LoadAssets
+    name: LoadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.LoadAssets
+    name: LoadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  - name: (
+  - name: )
+- uid: Global.IContentDefinition.RegisterQuantumAsset
+  commentId: M:Global.IContentDefinition.RegisterQuantumAsset
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  name: RegisterQuantumAsset()
+  nameWithType: IContentDefinition.RegisterQuantumAsset()
+  fullName: IContentDefinition.RegisterQuantumAsset()
+  spec.csharp:
+  - uid: Global.IContentDefinition.RegisterQuantumAsset
+    name: RegisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.RegisterQuantumAsset
+    name: RegisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  - name: (
+  - name: )
+- uid: Global.IContentDefinition.UnregisterQuantumAsset
+  commentId: M:Global.IContentDefinition.UnregisterQuantumAsset
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  name: UnregisterQuantumAsset()
+  nameWithType: IContentDefinition.UnregisterQuantumAsset()
+  fullName: IContentDefinition.UnregisterQuantumAsset()
+  spec.csharp:
+  - uid: Global.IContentDefinition.UnregisterQuantumAsset
+    name: UnregisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.UnregisterQuantumAsset
+    name: UnregisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  - name: (
+  - name: )
+- uid: Global.IContentDefinition.UnloadAssets
+  commentId: M:Global.IContentDefinition.UnloadAssets
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  name: UnloadAssets()
+  nameWithType: IContentDefinition.UnloadAssets()
+  fullName: IContentDefinition.UnloadAssets()
+  spec.csharp:
+  - uid: Global.IContentDefinition.UnloadAssets
+    name: UnloadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.UnloadAssets
+    name: UnloadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  - name: (
+  - name: )
+- uid: Global.IContentDefinition.Unload
+  commentId: M:Global.IContentDefinition.Unload
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Unload
+  name: Unload()
+  nameWithType: IContentDefinition.Unload()
+  fullName: IContentDefinition.Unload()
+  spec.csharp:
+  - uid: Global.IContentDefinition.Unload
+    name: Unload
+    href: Global.IContentDefinition.html#IContentDefinition_Unload
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.Unload
+    name: Unload
+    href: Global.IContentDefinition.html#IContentDefinition_Unload
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.IMapDefinition.GetMapAsset*
+  commentId: Overload:Global.IMapDefinition.GetMapAsset
+  href: Global.IMapDefinition.html#IMapDefinition_GetMapAsset
+  name: GetMapAsset
+  nameWithType: IMapDefinition.GetMapAsset
+  fullName: IMapDefinition.GetMapAsset
+- uid: Quantum.Map
+  commentId: T:Quantum.Map
+  parent: Quantum
+  isExternal: true
+  name: Map
+  nameWithType: Map
+  fullName: Quantum.Map
+- uid: Quantum
+  commentId: N:Quantum
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Global.IMapDefinition.GetSceneName*
+  commentId: Overload:Global.IMapDefinition.GetSceneName
+  href: Global.IMapDefinition.html#IMapDefinition_GetSceneName
+  name: GetSceneName
+  nameWithType: IMapDefinition.GetSceneName
+  fullName: IMapDefinition.GetSceneName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.IMapDefinition.LoadMap*
+  commentId: Overload:Global.IMapDefinition.LoadMap
+  href: Global.IMapDefinition.html#IMapDefinition_LoadMap_UnityEngine_SceneManagement_LoadSceneMode_
+  name: LoadMap
+  nameWithType: IMapDefinition.LoadMap
+  fullName: IMapDefinition.LoadMap
+- uid: UnityEngine.SceneManagement.LoadSceneMode
+  commentId: T:UnityEngine.SceneManagement.LoadSceneMode
+  parent: UnityEngine.SceneManagement
+  isExternal: true
+  name: LoadSceneMode
+  nameWithType: LoadSceneMode
+  fullName: UnityEngine.SceneManagement.LoadSceneMode
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UnityEngine.SceneManagement
+  commentId: N:UnityEngine.SceneManagement
+  isExternal: true
+  name: UnityEngine.SceneManagement
+  nameWithType: UnityEngine.SceneManagement
+  fullName: UnityEngine.SceneManagement
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.SceneManagement
+    name: SceneManagement
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.SceneManagement
+    name: SceneManagement
+    isExternal: true
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Global.IMapDefinition.UnloadMap*
+  commentId: Overload:Global.IMapDefinition.UnloadMap
+  href: Global.IMapDefinition.html#IMapDefinition_UnloadMap
+  name: UnloadMap
+  nameWithType: IMapDefinition.UnloadMap
+  fullName: IMapDefinition.UnloadMap
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask

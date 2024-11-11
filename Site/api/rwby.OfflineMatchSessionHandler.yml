@@ -1,0 +1,689 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.OfflineMatchSessionHandler
+  commentId: T:rwby.OfflineMatchSessionHandler
+  id: OfflineMatchSessionHandler
+  parent: rwby
+  children:
+  - rwby.OfflineMatchSessionHandler.BeginMatch(ModAssetSoftReference)
+  - rwby.OfflineMatchSessionHandler.Initialize
+  - rwby.OfflineMatchSessionHandler.StartQuantumGame(Quantum.AssetGuid,System.Int32)
+  - rwby.OfflineMatchSessionHandler.Teardown
+  - rwby.OfflineMatchSessionHandler.bgmIndex
+  - rwby.OfflineMatchSessionHandler.currentMatchHandler
+  - rwby.OfflineMatchSessionHandler.currentRunner
+  - rwby.OfflineMatchSessionHandler.defaultRuntimeConfig
+  - rwby.OfflineMatchSessionHandler.gameManager
+  - rwby.OfflineMatchSessionHandler.localBGM
+  - rwby.OfflineMatchSessionHandler.mapIndex
+  - rwby.OfflineMatchSessionHandler.profiling
+  langs:
+  - csharp
+  - vb
+  name: OfflineMatchSessionHandler
+  nameWithType: OfflineMatchSessionHandler
+  fullName: rwby.OfflineMatchSessionHandler
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OfflineMatchSessionHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 12
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: 'public class OfflineMatchSessionHandler : SessionHandlerBase'
+    content.vb: Public Class OfflineMatchSessionHandler Inherits SessionHandlerBase
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - rwby.SessionHandlerBase
+  inheritedMembers:
+  - rwby.SessionHandlerBase.ID
+- uid: rwby.OfflineMatchSessionHandler.gameManager
+  commentId: F:rwby.OfflineMatchSessionHandler.gameManager
+  id: gameManager
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: gameManager
+  nameWithType: OfflineMatchSessionHandler.gameManager
+  fullName: rwby.OfflineMatchSessionHandler.gameManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: gameManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public GameManager gameManager
+    return:
+      type: rwby.GameManager
+    content.vb: >-
+      <HideInInspector>
+
+      Public gameManager As GameManager
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+- uid: rwby.OfflineMatchSessionHandler.currentMatchHandler
+  commentId: F:rwby.OfflineMatchSessionHandler.currentMatchHandler
+  id: currentMatchHandler
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: currentMatchHandler
+  nameWithType: OfflineMatchSessionHandler.currentMatchHandler
+  fullName: rwby.OfflineMatchSessionHandler.currentMatchHandler
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentMatchHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 15
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public MatchHandlerBase currentMatchHandler
+    return:
+      type: rwby.MatchHandlerBase
+    content.vb: >-
+      <HideInInspector>
+
+      Public currentMatchHandler As MatchHandlerBase
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+- uid: rwby.OfflineMatchSessionHandler.defaultRuntimeConfig
+  commentId: F:rwby.OfflineMatchSessionHandler.defaultRuntimeConfig
+  id: defaultRuntimeConfig
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: defaultRuntimeConfig
+  nameWithType: OfflineMatchSessionHandler.defaultRuntimeConfig
+  fullName: rwby.OfflineMatchSessionHandler.defaultRuntimeConfig
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: defaultRuntimeConfig
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public RuntimeConfig defaultRuntimeConfig
+    return:
+      type: Quantum.RuntimeConfig
+    content.vb: Public defaultRuntimeConfig As RuntimeConfig
+- uid: rwby.OfflineMatchSessionHandler.currentRunner
+  commentId: F:rwby.OfflineMatchSessionHandler.currentRunner
+  id: currentRunner
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: currentRunner
+  nameWithType: OfflineMatchSessionHandler.currentRunner
+  fullName: rwby.OfflineMatchSessionHandler.currentRunner
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentRunner
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 18
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public QuantumRunner currentRunner
+    return:
+      type: Quantum.QuantumRunner
+    content.vb: >-
+      <HideInInspector>
+
+      Public currentRunner As QuantumRunner
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+- uid: rwby.OfflineMatchSessionHandler.mapIndex
+  commentId: F:rwby.OfflineMatchSessionHandler.mapIndex
+  id: mapIndex
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: mapIndex
+  nameWithType: OfflineMatchSessionHandler.mapIndex
+  fullName: rwby.OfflineMatchSessionHandler.mapIndex
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: mapIndex
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 25
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [Header("Match Info")]
+
+      public int mapIndex
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Header("Match Info")>
+
+      Public mapIndex As Integer
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Match Info
+- uid: rwby.OfflineMatchSessionHandler.localBGM
+  commentId: F:rwby.OfflineMatchSessionHandler.localBGM
+  id: localBGM
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: localBGM
+  nameWithType: OfflineMatchSessionHandler.localBGM
+  fullName: rwby.OfflineMatchSessionHandler.localBGM
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localBGM
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 26
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public BaseSongDefinition localBGM
+    return:
+      type: rwby.BaseSongDefinition
+    content.vb: >-
+      <NonSerialized>
+
+      Public localBGM As BaseSongDefinition
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.OfflineMatchSessionHandler.bgmIndex
+  commentId: F:rwby.OfflineMatchSessionHandler.bgmIndex
+  id: bgmIndex
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: bgmIndex
+  nameWithType: OfflineMatchSessionHandler.bgmIndex
+  fullName: rwby.OfflineMatchSessionHandler.bgmIndex
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: bgmIndex
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 27
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public int bgmIndex
+    return:
+      type: System.Int32
+    content.vb: Public bgmIndex As Integer
+- uid: rwby.OfflineMatchSessionHandler.Initialize
+  commentId: M:rwby.OfflineMatchSessionHandler.Initialize
+  id: Initialize
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: OfflineMatchSessionHandler.Initialize()
+  fullName: rwby.OfflineMatchSessionHandler.Initialize()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 29
+  assemblies:
+  - rwby
+  namespace: rwby
+  example: []
+  syntax:
+    content: public override bool Initialize()
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Initialize() As Boolean
+  overridden: rwby.SessionHandlerBase.Initialize
+  overload: rwby.OfflineMatchSessionHandler.Initialize*
+- uid: rwby.OfflineMatchSessionHandler.Teardown
+  commentId: M:rwby.OfflineMatchSessionHandler.Teardown
+  id: Teardown
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: OfflineMatchSessionHandler.Teardown()
+  fullName: rwby.OfflineMatchSessionHandler.Teardown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Teardown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 35
+  assemblies:
+  - rwby
+  namespace: rwby
+  example: []
+  syntax:
+    content: public override UniTask Teardown()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Overrides Function Teardown() As UniTask
+  overridden: rwby.SessionHandlerBase.Teardown
+  overload: rwby.OfflineMatchSessionHandler.Teardown*
+- uid: rwby.OfflineMatchSessionHandler.BeginMatch(ModAssetSoftReference)
+  commentId: M:rwby.OfflineMatchSessionHandler.BeginMatch(ModAssetSoftReference)
+  id: BeginMatch(ModAssetSoftReference)
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: BeginMatch(ModAssetSoftReference)
+  nameWithType: OfflineMatchSessionHandler.BeginMatch(ModAssetSoftReference)
+  fullName: rwby.OfflineMatchSessionHandler.BeginMatch(ModAssetSoftReference)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BeginMatch
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 40
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public virtual UniTask BeginMatch(ModAssetSoftReference gamemodeReference)
+    parameters:
+    - id: gamemodeReference
+      type: Global.ModAssetSoftReference
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Overridable Function BeginMatch(gamemodeReference As ModAssetSoftReference) As UniTask
+  overload: rwby.OfflineMatchSessionHandler.BeginMatch*
+- uid: rwby.OfflineMatchSessionHandler.profiling
+  commentId: F:rwby.OfflineMatchSessionHandler.profiling
+  id: profiling
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: profiling
+  nameWithType: OfflineMatchSessionHandler.profiling
+  fullName: rwby.OfflineMatchSessionHandler.profiling
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: profiling
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 170
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public bool profiling
+    return:
+      type: System.Boolean
+    content.vb: Public profiling As Boolean
+- uid: rwby.OfflineMatchSessionHandler.StartQuantumGame(Quantum.AssetGuid,System.Int32)
+  commentId: M:rwby.OfflineMatchSessionHandler.StartQuantumGame(Quantum.AssetGuid,System.Int32)
+  id: StartQuantumGame(Quantum.AssetGuid,System.Int32)
+  parent: rwby.OfflineMatchSessionHandler
+  langs:
+  - csharp
+  - vb
+  name: StartQuantumGame(AssetGuid, int)
+  nameWithType: OfflineMatchSessionHandler.StartQuantumGame(AssetGuid, int)
+  fullName: rwby.OfflineMatchSessionHandler.StartQuantumGame(Quantum.AssetGuid, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StartQuantumGame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs
+    startLine: 171
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public virtual UniTask StartQuantumGame(AssetGuid mapGuid, int playerCount)
+    parameters:
+    - id: mapGuid
+      type: Quantum.AssetGuid
+    - id: playerCount
+      type: System.Int32
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Overridable Function StartQuantumGame(mapGuid As AssetGuid, playerCount As Integer) As UniTask
+  overload: rwby.OfflineMatchSessionHandler.StartQuantumGame*
+  nameWithType.vb: OfflineMatchSessionHandler.StartQuantumGame(AssetGuid, Integer)
+  fullName.vb: rwby.OfflineMatchSessionHandler.StartQuantumGame(Quantum.AssetGuid, Integer)
+  name.vb: StartQuantumGame(AssetGuid, Integer)
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: rwby.SessionHandlerBase
+  commentId: T:rwby.SessionHandlerBase
+  parent: rwby
+  href: rwby.SessionHandlerBase.html
+  name: SessionHandlerBase
+  nameWithType: SessionHandlerBase
+  fullName: rwby.SessionHandlerBase
+- uid: rwby.SessionHandlerBase.ID
+  commentId: F:rwby.SessionHandlerBase.ID
+  parent: rwby.SessionHandlerBase
+  href: rwby.SessionHandlerBase.html#rwby_SessionHandlerBase_ID
+  name: ID
+  nameWithType: SessionHandlerBase.ID
+  fullName: rwby.SessionHandlerBase.ID
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby.GameManager
+  commentId: T:rwby.GameManager
+  parent: rwby
+  href: rwby.GameManager.html
+  name: GameManager
+  nameWithType: GameManager
+  fullName: rwby.GameManager
+- uid: rwby.MatchHandlerBase
+  commentId: T:rwby.MatchHandlerBase
+  parent: rwby
+  href: rwby.MatchHandlerBase.html
+  name: MatchHandlerBase
+  nameWithType: MatchHandlerBase
+  fullName: rwby.MatchHandlerBase
+- uid: Quantum.RuntimeConfig
+  commentId: T:Quantum.RuntimeConfig
+  parent: Quantum
+  name: RuntimeConfig
+  nameWithType: RuntimeConfig
+  fullName: Quantum.RuntimeConfig
+- uid: Quantum
+  commentId: N:Quantum
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.QuantumRunner
+  commentId: T:Quantum.QuantumRunner
+  parent: Quantum
+  name: QuantumRunner
+  nameWithType: QuantumRunner
+  fullName: Quantum.QuantumRunner
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: rwby.BaseSongDefinition
+  commentId: T:rwby.BaseSongDefinition
+  parent: rwby
+  href: rwby.BaseSongDefinition.html
+  name: BaseSongDefinition
+  nameWithType: BaseSongDefinition
+  fullName: rwby.BaseSongDefinition
+- uid: rwby.SessionHandlerBase.Initialize
+  commentId: M:rwby.SessionHandlerBase.Initialize
+  parent: rwby.SessionHandlerBase
+  href: rwby.SessionHandlerBase.html#rwby_SessionHandlerBase_Initialize
+  name: Initialize()
+  nameWithType: SessionHandlerBase.Initialize()
+  fullName: rwby.SessionHandlerBase.Initialize()
+  spec.csharp:
+  - uid: rwby.SessionHandlerBase.Initialize
+    name: Initialize
+    href: rwby.SessionHandlerBase.html#rwby_SessionHandlerBase_Initialize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.SessionHandlerBase.Initialize
+    name: Initialize
+    href: rwby.SessionHandlerBase.html#rwby_SessionHandlerBase_Initialize
+  - name: (
+  - name: )
+- uid: rwby.OfflineMatchSessionHandler.Initialize*
+  commentId: Overload:rwby.OfflineMatchSessionHandler.Initialize
+  href: rwby.OfflineMatchSessionHandler.html#rwby_OfflineMatchSessionHandler_Initialize
+  name: Initialize
+  nameWithType: OfflineMatchSessionHandler.Initialize
+  fullName: rwby.OfflineMatchSessionHandler.Initialize
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: rwby.SessionHandlerBase.Teardown
+  commentId: M:rwby.SessionHandlerBase.Teardown
+  parent: rwby.SessionHandlerBase
+  href: rwby.SessionHandlerBase.html#rwby_SessionHandlerBase_Teardown
+  name: Teardown()
+  nameWithType: SessionHandlerBase.Teardown()
+  fullName: rwby.SessionHandlerBase.Teardown()
+  spec.csharp:
+  - uid: rwby.SessionHandlerBase.Teardown
+    name: Teardown
+    href: rwby.SessionHandlerBase.html#rwby_SessionHandlerBase_Teardown
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.SessionHandlerBase.Teardown
+    name: Teardown
+    href: rwby.SessionHandlerBase.html#rwby_SessionHandlerBase_Teardown
+  - name: (
+  - name: )
+- uid: rwby.OfflineMatchSessionHandler.Teardown*
+  commentId: Overload:rwby.OfflineMatchSessionHandler.Teardown
+  href: rwby.OfflineMatchSessionHandler.html#rwby_OfflineMatchSessionHandler_Teardown
+  name: Teardown
+  nameWithType: OfflineMatchSessionHandler.Teardown
+  fullName: rwby.OfflineMatchSessionHandler.Teardown
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: rwby.OfflineMatchSessionHandler.BeginMatch*
+  commentId: Overload:rwby.OfflineMatchSessionHandler.BeginMatch
+  href: rwby.OfflineMatchSessionHandler.html#rwby_OfflineMatchSessionHandler_BeginMatch_ModAssetSoftReference_
+  name: BeginMatch
+  nameWithType: OfflineMatchSessionHandler.BeginMatch
+  fullName: rwby.OfflineMatchSessionHandler.BeginMatch
+- uid: Global.ModAssetSoftReference
+  commentId: T:Global.ModAssetSoftReference
+  href: ModAssetSoftReference.html
+  name: ModAssetSoftReference
+  nameWithType: ModAssetSoftReference
+  fullName: ModAssetSoftReference
+- uid: rwby.OfflineMatchSessionHandler.StartQuantumGame*
+  commentId: Overload:rwby.OfflineMatchSessionHandler.StartQuantumGame
+  href: rwby.OfflineMatchSessionHandler.html#rwby_OfflineMatchSessionHandler_StartQuantumGame_Quantum_AssetGuid_System_Int32_
+  name: StartQuantumGame
+  nameWithType: OfflineMatchSessionHandler.StartQuantumGame
+  fullName: rwby.OfflineMatchSessionHandler.StartQuantumGame
+- uid: Quantum.AssetGuid
+  commentId: T:Quantum.AssetGuid
+  parent: Quantum
+  isExternal: true
+  name: AssetGuid
+  nameWithType: AssetGuid
+  fullName: Quantum.AssetGuid

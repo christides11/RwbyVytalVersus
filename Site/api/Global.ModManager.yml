@@ -1,0 +1,1628 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ModManager
+  commentId: T:Global.ModManager
+  id: ModManager
+  parent: Global
+  children:
+  - Global.ModManager.ApplyModProfile(ModProfile)
+  - Global.ModManager.GenerateModGuid(System.Boolean,System.Boolean)
+  - Global.ModManager.GetCurrentModProfile
+  - Global.ModManager.GetMod(System.String)
+  - Global.ModManager.GetModListByGuid(System.Boolean,System.Boolean)
+  - Global.ModManager.GetModListByGuidAsStrings(System.Boolean,System.Boolean)
+  - Global.ModManager.GetModsByIdentifiers(System.String[])
+  - Global.ModManager.IdentifierToAvailableMod
+  - Global.ModManager.Init
+  - Global.ModManager.IsModLoaded(System.String)
+  - Global.ModManager.LoadAllMods
+  - Global.ModManager.LoadMod(AvailableModDefinition)
+  - Global.ModManager.LoadModByPath(System.String)
+  - Global.ModManager.LoadModProfiles
+  - Global.ModManager.LoadMods(AvailableModDefinition[])
+  - Global.ModManager.LoadMods(System.String[])
+  - Global.ModManager.ModDirectory
+  - Global.ModManager.ModProfilesFilename
+  - Global.ModManager.PathToAvailableMod
+  - Global.ModManager.SaveModProfiles
+  - Global.ModManager.TryGetCurrentModProfile(ModProfile@)
+  - Global.ModManager.UnloadAllMods(System.String[])
+  - Global.ModManager.UnloadMod(LoadedModDefinition)
+  - Global.ModManager.UnloadMods(System.String[])
+  - Global.ModManager.availableMods
+  - Global.ModManager.currentModProfileIndex
+  - Global.ModManager.currentlyLoadedMods
+  - Global.ModManager.modLoaders
+  - Global.ModManager.modProfiles
+  langs:
+  - csharp
+  - vb
+  name: ModManager
+  nameWithType: ModManager
+  fullName: ModManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ModManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 12
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: 'public class ModManager : MonoBehaviour'
+    content.vb: Public Class ModManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: Global.ModManager.ModProfilesFilename
+  commentId: F:Global.ModManager.ModProfilesFilename
+  id: ModProfilesFilename
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: ModProfilesFilename
+  nameWithType: ModManager.ModProfilesFilename
+  fullName: ModManager.ModProfilesFilename
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ModProfilesFilename
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public static readonly string ModProfilesFilename
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly ModProfilesFilename As String
+- uid: Global.ModManager.ModDirectory
+  commentId: P:Global.ModManager.ModDirectory
+  id: ModDirectory
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: ModDirectory
+  nameWithType: ModManager.ModDirectory
+  fullName: ModManager.ModDirectory
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ModDirectory
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 15
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public string ModDirectory { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ModDirectory As String
+  overload: Global.ModManager.ModDirectory*
+- uid: Global.ModManager.PathToAvailableMod
+  commentId: F:Global.ModManager.PathToAvailableMod
+  id: PathToAvailableMod
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: PathToAvailableMod
+  nameWithType: ModManager.PathToAvailableMod
+  fullName: ModManager.PathToAvailableMod
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PathToAvailableMod
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Dictionary<string, AvailableModDefinition> PathToAvailableMod
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,AvailableModDefinition}
+    content.vb: Public PathToAvailableMod As Dictionary(Of String, AvailableModDefinition)
+- uid: Global.ModManager.IdentifierToAvailableMod
+  commentId: F:Global.ModManager.IdentifierToAvailableMod
+  id: IdentifierToAvailableMod
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: IdentifierToAvailableMod
+  nameWithType: ModManager.IdentifierToAvailableMod
+  fullName: ModManager.IdentifierToAvailableMod
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IdentifierToAvailableMod
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 18
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Dictionary<string, AvailableModDefinition> IdentifierToAvailableMod
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,AvailableModDefinition}
+    content.vb: Public IdentifierToAvailableMod As Dictionary(Of String, AvailableModDefinition)
+- uid: Global.ModManager.modLoaders
+  commentId: F:Global.ModManager.modLoaders
+  id: modLoaders
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: modLoaders
+  nameWithType: ModManager.modLoaders
+  fullName: ModManager.modLoaders
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: modLoaders
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Dictionary<ModLoaderType, BaseModLoader> modLoaders
+    return:
+      type: System.Collections.Generic.Dictionary{ModLoaderType,BaseModLoader}
+    content.vb: Public modLoaders As Dictionary(Of ModLoaderType, BaseModLoader)
+- uid: Global.ModManager.availableMods
+  commentId: F:Global.ModManager.availableMods
+  id: availableMods
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: availableMods
+  nameWithType: ModManager.availableMods
+  fullName: ModManager.availableMods
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: availableMods
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 21
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public List<AvailableModDefinition> availableMods
+    return:
+      type: System.Collections.Generic.List{AvailableModDefinition}
+    content.vb: Public availableMods As List(Of AvailableModDefinition)
+- uid: Global.ModManager.currentlyLoadedMods
+  commentId: F:Global.ModManager.currentlyLoadedMods
+  id: currentlyLoadedMods
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: currentlyLoadedMods
+  nameWithType: ModManager.currentlyLoadedMods
+  fullName: ModManager.currentlyLoadedMods
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentlyLoadedMods
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 22
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public List<LoadedModDefinition> currentlyLoadedMods
+    return:
+      type: System.Collections.Generic.List{LoadedModDefinition}
+    content.vb: Public currentlyLoadedMods As List(Of LoadedModDefinition)
+- uid: Global.ModManager.modProfiles
+  commentId: F:Global.ModManager.modProfiles
+  id: modProfiles
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: modProfiles
+  nameWithType: ModManager.modProfiles
+  fullName: ModManager.modProfiles
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: modProfiles
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 24
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public List<ModProfile> modProfiles
+    return:
+      type: System.Collections.Generic.List{ModProfile}
+    content.vb: Public modProfiles As List(Of ModProfile)
+- uid: Global.ModManager.currentModProfileIndex
+  commentId: F:Global.ModManager.currentModProfileIndex
+  id: currentModProfileIndex
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: currentModProfileIndex
+  nameWithType: ModManager.currentModProfileIndex
+  fullName: ModManager.currentModProfileIndex
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentModProfileIndex
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 25
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public int currentModProfileIndex
+    return:
+      type: System.Int32
+    content.vb: Public currentModProfileIndex As Integer
+- uid: Global.ModManager.Init
+  commentId: M:Global.ModManager.Init
+  id: Init
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: Init()
+  nameWithType: ModManager.Init()
+  fullName: ModManager.Init()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Init
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 27
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public UniTask Init()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function Init() As UniTask
+  overload: Global.ModManager.Init*
+- uid: Global.ModManager.LoadMod(AvailableModDefinition)
+  commentId: M:Global.ModManager.LoadMod(AvailableModDefinition)
+  id: LoadMod(AvailableModDefinition)
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: LoadMod(AvailableModDefinition)
+  nameWithType: ModManager.LoadMod(AvailableModDefinition)
+  fullName: ModManager.LoadMod(AvailableModDefinition)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadMod
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 111
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public UniTask<bool> LoadMod(AvailableModDefinition modDefinition)
+    parameters:
+    - id: modDefinition
+      type: Global.AvailableModDefinition
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Function LoadMod(modDefinition As AvailableModDefinition) As UniTask(Of Boolean)
+  overload: Global.ModManager.LoadMod*
+- uid: Global.ModManager.LoadModByPath(System.String)
+  commentId: M:Global.ModManager.LoadModByPath(System.String)
+  id: LoadModByPath(System.String)
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: LoadModByPath(string)
+  nameWithType: ModManager.LoadModByPath(string)
+  fullName: ModManager.LoadModByPath(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadModByPath
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 125
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public UniTask<bool> LoadModByPath(string path)
+    parameters:
+    - id: path
+      type: System.String
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Function LoadModByPath(path As String) As UniTask(Of Boolean)
+  overload: Global.ModManager.LoadModByPath*
+  nameWithType.vb: ModManager.LoadModByPath(String)
+  fullName.vb: ModManager.LoadModByPath(String)
+  name.vb: LoadModByPath(String)
+- uid: Global.ModManager.LoadMods(AvailableModDefinition[])
+  commentId: M:Global.ModManager.LoadMods(AvailableModDefinition[])
+  id: LoadMods(AvailableModDefinition[])
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: LoadMods(AvailableModDefinition[])
+  nameWithType: ModManager.LoadMods(AvailableModDefinition[])
+  fullName: ModManager.LoadMods(AvailableModDefinition[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadMods
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 131
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public UniTask LoadMods(AvailableModDefinition[] modDefinitions)
+    parameters:
+    - id: modDefinitions
+      type: Global.AvailableModDefinition[]
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function LoadMods(modDefinitions As AvailableModDefinition()) As UniTask
+  overload: Global.ModManager.LoadMods*
+  nameWithType.vb: ModManager.LoadMods(AvailableModDefinition())
+  fullName.vb: ModManager.LoadMods(AvailableModDefinition())
+  name.vb: LoadMods(AvailableModDefinition())
+- uid: Global.ModManager.LoadMods(System.String[])
+  commentId: M:Global.ModManager.LoadMods(System.String[])
+  id: LoadMods(System.String[])
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: LoadMods(string[])
+  nameWithType: ModManager.LoadMods(string[])
+  fullName: ModManager.LoadMods(string[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadMods
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 139
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public UniTask LoadMods(string[] modIdentifiers)
+    parameters:
+    - id: modIdentifiers
+      type: System.String[]
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function LoadMods(modIdentifiers As String()) As UniTask
+  overload: Global.ModManager.LoadMods*
+  nameWithType.vb: ModManager.LoadMods(String())
+  fullName.vb: ModManager.LoadMods(String())
+  name.vb: LoadMods(String())
+- uid: Global.ModManager.UnloadMod(LoadedModDefinition)
+  commentId: M:Global.ModManager.UnloadMod(LoadedModDefinition)
+  id: UnloadMod(LoadedModDefinition)
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: UnloadMod(LoadedModDefinition)
+  nameWithType: ModManager.UnloadMod(LoadedModDefinition)
+  fullName: ModManager.UnloadMod(LoadedModDefinition)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadMod
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 148
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool UnloadMod(LoadedModDefinition loadedModDefinition)
+    parameters:
+    - id: loadedModDefinition
+      type: Global.LoadedModDefinition
+    return:
+      type: System.Boolean
+    content.vb: Public Function UnloadMod(loadedModDefinition As LoadedModDefinition) As Boolean
+  overload: Global.ModManager.UnloadMod*
+- uid: Global.ModManager.UnloadMods(System.String[])
+  commentId: M:Global.ModManager.UnloadMods(System.String[])
+  id: UnloadMods(System.String[])
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: UnloadMods(string[])
+  nameWithType: ModManager.UnloadMods(string[])
+  fullName: ModManager.UnloadMods(string[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadMods
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 155
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void UnloadMods(string[] modIdentifiers)
+    parameters:
+    - id: modIdentifiers
+      type: System.String[]
+    content.vb: Public Sub UnloadMods(modIdentifiers As String())
+  overload: Global.ModManager.UnloadMods*
+  nameWithType.vb: ModManager.UnloadMods(String())
+  fullName.vb: ModManager.UnloadMods(String())
+  name.vb: UnloadMods(String())
+- uid: Global.ModManager.LoadAllMods
+  commentId: M:Global.ModManager.LoadAllMods
+  id: LoadAllMods
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: LoadAllMods()
+  nameWithType: ModManager.LoadAllMods()
+  fullName: ModManager.LoadAllMods()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadAllMods
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 166
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public UniTask LoadAllMods()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function LoadAllMods() As UniTask
+  overload: Global.ModManager.LoadAllMods*
+- uid: Global.ModManager.UnloadAllMods(System.String[])
+  commentId: M:Global.ModManager.UnloadAllMods(System.String[])
+  id: UnloadAllMods(System.String[])
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: UnloadAllMods(string[])
+  nameWithType: ModManager.UnloadAllMods(string[])
+  fullName: ModManager.UnloadAllMods(string[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadAllMods
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 174
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void UnloadAllMods(string[] modsToExcludeByIdentifier = null)
+    parameters:
+    - id: modsToExcludeByIdentifier
+      type: System.String[]
+    content.vb: Public Sub UnloadAllMods(modsToExcludeByIdentifier As String() = Nothing)
+  overload: Global.ModManager.UnloadAllMods*
+  nameWithType.vb: ModManager.UnloadAllMods(String())
+  fullName.vb: ModManager.UnloadAllMods(String())
+  name.vb: UnloadAllMods(String())
+- uid: Global.ModManager.GetModsByIdentifiers(System.String[])
+  commentId: M:Global.ModManager.GetModsByIdentifiers(System.String[])
+  id: GetModsByIdentifiers(System.String[])
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: GetModsByIdentifiers(string[])
+  nameWithType: ModManager.GetModsByIdentifiers(string[])
+  fullName: ModManager.GetModsByIdentifiers(string[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetModsByIdentifiers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 185
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public List<AvailableModDefinition> GetModsByIdentifiers(string[] modIdentifiers)
+    parameters:
+    - id: modIdentifiers
+      type: System.String[]
+    return:
+      type: System.Collections.Generic.List{AvailableModDefinition}
+    content.vb: Public Function GetModsByIdentifiers(modIdentifiers As String()) As List(Of AvailableModDefinition)
+  overload: Global.ModManager.GetModsByIdentifiers*
+  nameWithType.vb: ModManager.GetModsByIdentifiers(String())
+  fullName.vb: ModManager.GetModsByIdentifiers(String())
+  name.vb: GetModsByIdentifiers(String())
+- uid: Global.ModManager.GetMod(System.String)
+  commentId: M:Global.ModManager.GetMod(System.String)
+  id: GetMod(System.String)
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: GetMod(string)
+  nameWithType: ModManager.GetMod(string)
+  fullName: ModManager.GetMod(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetMod
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 197
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public AvailableModDefinition GetMod(string modIdentifier)
+    parameters:
+    - id: modIdentifier
+      type: System.String
+    return:
+      type: Global.AvailableModDefinition
+    content.vb: Public Function GetMod(modIdentifier As String) As AvailableModDefinition
+  overload: Global.ModManager.GetMod*
+  nameWithType.vb: ModManager.GetMod(String)
+  fullName.vb: ModManager.GetMod(String)
+  name.vb: GetMod(String)
+- uid: Global.ModManager.ApplyModProfile(ModProfile)
+  commentId: M:Global.ModManager.ApplyModProfile(ModProfile)
+  id: ApplyModProfile(ModProfile)
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: ApplyModProfile(ModProfile)
+  nameWithType: ModManager.ApplyModProfile(ModProfile)
+  fullName: ModManager.ApplyModProfile(ModProfile)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ApplyModProfile
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 202
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public UniTask ApplyModProfile(ModProfile modProfile)
+    parameters:
+    - id: modProfile
+      type: Global.ModProfile
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function ApplyModProfile(modProfile As ModProfile) As UniTask
+  overload: Global.ModManager.ApplyModProfile*
+- uid: Global.ModManager.LoadModProfiles
+  commentId: M:Global.ModManager.LoadModProfiles
+  id: LoadModProfiles
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: LoadModProfiles()
+  nameWithType: ModManager.LoadModProfiles()
+  fullName: ModManager.LoadModProfiles()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadModProfiles
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 209
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void LoadModProfiles()
+    content.vb: Public Sub LoadModProfiles()
+  overload: Global.ModManager.LoadModProfiles*
+- uid: Global.ModManager.IsModLoaded(System.String)
+  commentId: M:Global.ModManager.IsModLoaded(System.String)
+  id: IsModLoaded(System.String)
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: IsModLoaded(string)
+  nameWithType: ModManager.IsModLoaded(string)
+  fullName: ModManager.IsModLoaded(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IsModLoaded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 219
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool IsModLoaded(string modID)
+    parameters:
+    - id: modID
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsModLoaded(modID As String) As Boolean
+  overload: Global.ModManager.IsModLoaded*
+  nameWithType.vb: ModManager.IsModLoaded(String)
+  fullName.vb: ModManager.IsModLoaded(String)
+  name.vb: IsModLoaded(String)
+- uid: Global.ModManager.GetCurrentModProfile
+  commentId: M:Global.ModManager.GetCurrentModProfile
+  id: GetCurrentModProfile
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentModProfile()
+  nameWithType: ModManager.GetCurrentModProfile()
+  fullName: ModManager.GetCurrentModProfile()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetCurrentModProfile
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 224
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public ModProfile GetCurrentModProfile()
+    return:
+      type: Global.ModProfile
+    content.vb: Public Function GetCurrentModProfile() As ModProfile
+  overload: Global.ModManager.GetCurrentModProfile*
+- uid: Global.ModManager.TryGetCurrentModProfile(ModProfile@)
+  commentId: M:Global.ModManager.TryGetCurrentModProfile(ModProfile@)
+  id: TryGetCurrentModProfile(ModProfile@)
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: TryGetCurrentModProfile(out ModProfile)
+  nameWithType: ModManager.TryGetCurrentModProfile(out ModProfile)
+  fullName: ModManager.TryGetCurrentModProfile(out ModProfile)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryGetCurrentModProfile
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 230
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool TryGetCurrentModProfile(out ModProfile currentProfile)
+    parameters:
+    - id: currentProfile
+      type: Global.ModProfile
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetCurrentModProfile(currentProfile As ModProfile) As Boolean
+  overload: Global.ModManager.TryGetCurrentModProfile*
+  nameWithType.vb: ModManager.TryGetCurrentModProfile(ModProfile)
+  fullName.vb: ModManager.TryGetCurrentModProfile(ModProfile)
+  name.vb: TryGetCurrentModProfile(ModProfile)
+- uid: Global.ModManager.SaveModProfiles
+  commentId: M:Global.ModManager.SaveModProfiles
+  id: SaveModProfiles
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: SaveModProfiles()
+  nameWithType: ModManager.SaveModProfiles()
+  fullName: ModManager.SaveModProfiles()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SaveModProfiles
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 236
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void SaveModProfiles()
+    content.vb: Public Sub SaveModProfiles()
+  overload: Global.ModManager.SaveModProfiles*
+- uid: Global.ModManager.GenerateModGuid(System.Boolean,System.Boolean)
+  commentId: M:Global.ModManager.GenerateModGuid(System.Boolean,System.Boolean)
+  id: GenerateModGuid(System.Boolean,System.Boolean)
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: GenerateModGuid(bool, bool)
+  nameWithType: ModManager.GenerateModGuid(bool, bool)
+  fullName: ModManager.GenerateModGuid(bool, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GenerateModGuid
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 241
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Guid GenerateModGuid(bool loadedOnly = true, bool onlyRequiredMods = true)
+    parameters:
+    - id: loadedOnly
+      type: System.Boolean
+    - id: onlyRequiredMods
+      type: System.Boolean
+    return:
+      type: System.Guid
+    content.vb: Public Function GenerateModGuid(loadedOnly As Boolean = True, onlyRequiredMods As Boolean = True) As Guid
+  overload: Global.ModManager.GenerateModGuid*
+  nameWithType.vb: ModManager.GenerateModGuid(Boolean, Boolean)
+  fullName.vb: ModManager.GenerateModGuid(Boolean, Boolean)
+  name.vb: GenerateModGuid(Boolean, Boolean)
+- uid: Global.ModManager.GetModListByGuid(System.Boolean,System.Boolean)
+  commentId: M:Global.ModManager.GetModListByGuid(System.Boolean,System.Boolean)
+  id: GetModListByGuid(System.Boolean,System.Boolean)
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: GetModListByGuid(bool, bool)
+  nameWithType: ModManager.GetModListByGuid(bool, bool)
+  fullName: ModManager.GetModListByGuid(bool, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetModListByGuid
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 263
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Guid[] GetModListByGuid(bool loadedOnly = true, bool onlineOnly = true)
+    parameters:
+    - id: loadedOnly
+      type: System.Boolean
+    - id: onlineOnly
+      type: System.Boolean
+    return:
+      type: System.Guid[]
+    content.vb: Public Function GetModListByGuid(loadedOnly As Boolean = True, onlineOnly As Boolean = True) As Guid()
+  overload: Global.ModManager.GetModListByGuid*
+  nameWithType.vb: ModManager.GetModListByGuid(Boolean, Boolean)
+  fullName.vb: ModManager.GetModListByGuid(Boolean, Boolean)
+  name.vb: GetModListByGuid(Boolean, Boolean)
+- uid: Global.ModManager.GetModListByGuidAsStrings(System.Boolean,System.Boolean)
+  commentId: M:Global.ModManager.GetModListByGuidAsStrings(System.Boolean,System.Boolean)
+  id: GetModListByGuidAsStrings(System.Boolean,System.Boolean)
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: GetModListByGuidAsStrings(bool, bool)
+  nameWithType: ModManager.GetModListByGuidAsStrings(bool, bool)
+  fullName: ModManager.GetModListByGuidAsStrings(bool, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetModListByGuidAsStrings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 276
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public string[] GetModListByGuidAsStrings(bool loadedOnly = true, bool onlineOnly = true)
+    parameters:
+    - id: loadedOnly
+      type: System.Boolean
+    - id: onlineOnly
+      type: System.Boolean
+    return:
+      type: System.String[]
+    content.vb: Public Function GetModListByGuidAsStrings(loadedOnly As Boolean = True, onlineOnly As Boolean = True) As String()
+  overload: Global.ModManager.GetModListByGuidAsStrings*
+  nameWithType.vb: ModManager.GetModListByGuidAsStrings(Boolean, Boolean)
+  fullName.vb: ModManager.GetModListByGuidAsStrings(Boolean, Boolean)
+  name.vb: GetModListByGuidAsStrings(Boolean, Boolean)
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.ModManager.ModDirectory*
+  commentId: Overload:Global.ModManager.ModDirectory
+  href: Global.ModManager.html#ModManager_ModDirectory
+  name: ModDirectory
+  nameWithType: ModManager.ModDirectory
+  fullName: ModManager.ModDirectory
+- uid: System.Collections.Generic.Dictionary{System.String,AvailableModDefinition}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,AvailableModDefinition}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, AvailableModDefinition>
+  nameWithType: Dictionary<string, AvailableModDefinition>
+  fullName: System.Collections.Generic.Dictionary<string, AvailableModDefinition>
+  nameWithType.vb: Dictionary(Of String, AvailableModDefinition)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, AvailableModDefinition)
+  name.vb: Dictionary(Of String, AvailableModDefinition)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Global.AvailableModDefinition
+    name: AvailableModDefinition
+    href: AvailableModDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Global.AvailableModDefinition
+    name: AvailableModDefinition
+    href: AvailableModDefinition.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.Dictionary{ModLoaderType,BaseModLoader}
+  commentId: T:System.Collections.Generic.Dictionary{ModLoaderType,BaseModLoader}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<ModLoaderType, BaseModLoader>
+  nameWithType: Dictionary<ModLoaderType, BaseModLoader>
+  fullName: System.Collections.Generic.Dictionary<ModLoaderType, BaseModLoader>
+  nameWithType.vb: Dictionary(Of ModLoaderType, BaseModLoader)
+  fullName.vb: System.Collections.Generic.Dictionary(Of ModLoaderType, BaseModLoader)
+  name.vb: Dictionary(Of ModLoaderType, BaseModLoader)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Global.ModLoaderType
+    name: ModLoaderType
+    href: ModLoaderType.html
+  - name: ','
+  - name: " "
+  - uid: Global.BaseModLoader
+    name: BaseModLoader
+    href: BaseModLoader.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.ModLoaderType
+    name: ModLoaderType
+    href: ModLoaderType.html
+  - name: ','
+  - name: " "
+  - uid: Global.BaseModLoader
+    name: BaseModLoader
+    href: BaseModLoader.html
+  - name: )
+- uid: System.Collections.Generic.List{AvailableModDefinition}
+  commentId: T:System.Collections.Generic.List{AvailableModDefinition}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<AvailableModDefinition>
+  nameWithType: List<AvailableModDefinition>
+  fullName: System.Collections.Generic.List<AvailableModDefinition>
+  nameWithType.vb: List(Of AvailableModDefinition)
+  fullName.vb: System.Collections.Generic.List(Of AvailableModDefinition)
+  name.vb: List(Of AvailableModDefinition)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Global.AvailableModDefinition
+    name: AvailableModDefinition
+    href: AvailableModDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.AvailableModDefinition
+    name: AvailableModDefinition
+    href: AvailableModDefinition.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.List{LoadedModDefinition}
+  commentId: T:System.Collections.Generic.List{LoadedModDefinition}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<LoadedModDefinition>
+  nameWithType: List<LoadedModDefinition>
+  fullName: System.Collections.Generic.List<LoadedModDefinition>
+  nameWithType.vb: List(Of LoadedModDefinition)
+  fullName.vb: System.Collections.Generic.List(Of LoadedModDefinition)
+  name.vb: List(Of LoadedModDefinition)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Global.LoadedModDefinition
+    name: LoadedModDefinition
+    href: LoadedModDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.LoadedModDefinition
+    name: LoadedModDefinition
+    href: LoadedModDefinition.html
+  - name: )
+- uid: System.Collections.Generic.List{ModProfile}
+  commentId: T:System.Collections.Generic.List{ModProfile}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ModProfile>
+  nameWithType: List<ModProfile>
+  fullName: System.Collections.Generic.List<ModProfile>
+  nameWithType.vb: List(Of ModProfile)
+  fullName.vb: System.Collections.Generic.List(Of ModProfile)
+  name.vb: List(Of ModProfile)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Global.ModProfile
+    name: ModProfile
+    href: ModProfile.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.ModProfile
+    name: ModProfile
+    href: ModProfile.html
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Global.ModManager.Init*
+  commentId: Overload:Global.ModManager.Init
+  href: Global.ModManager.html#ModManager_Init
+  name: Init
+  nameWithType: ModManager.Init
+  fullName: ModManager.Init
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Global.ModManager.LoadMod*
+  commentId: Overload:Global.ModManager.LoadMod
+  href: Global.ModManager.html#ModManager_LoadMod_AvailableModDefinition_
+  name: LoadMod
+  nameWithType: ModManager.LoadMod
+  fullName: ModManager.LoadMod
+- uid: Global.AvailableModDefinition
+  commentId: T:Global.AvailableModDefinition
+  href: AvailableModDefinition.html
+  name: AvailableModDefinition
+  nameWithType: AvailableModDefinition
+  fullName: AvailableModDefinition
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Global.ModManager.LoadModByPath*
+  commentId: Overload:Global.ModManager.LoadModByPath
+  href: Global.ModManager.html#ModManager_LoadModByPath_System_String_
+  name: LoadModByPath
+  nameWithType: ModManager.LoadModByPath
+  fullName: ModManager.LoadModByPath
+- uid: Global.ModManager.LoadMods*
+  commentId: Overload:Global.ModManager.LoadMods
+  href: Global.ModManager.html#ModManager_LoadMods_AvailableModDefinition___
+  name: LoadMods
+  nameWithType: ModManager.LoadMods
+  fullName: ModManager.LoadMods
+- uid: Global.AvailableModDefinition[]
+  isExternal: true
+  href: AvailableModDefinition.html
+  name: AvailableModDefinition[]
+  nameWithType: AvailableModDefinition[]
+  fullName: AvailableModDefinition[]
+  nameWithType.vb: AvailableModDefinition()
+  fullName.vb: AvailableModDefinition()
+  name.vb: AvailableModDefinition()
+  spec.csharp:
+  - uid: Global.AvailableModDefinition
+    name: AvailableModDefinition
+    href: AvailableModDefinition.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.AvailableModDefinition
+    name: AvailableModDefinition
+    href: AvailableModDefinition.html
+  - name: (
+  - name: )
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: Global.ModManager.UnloadMod*
+  commentId: Overload:Global.ModManager.UnloadMod
+  href: Global.ModManager.html#ModManager_UnloadMod_LoadedModDefinition_
+  name: UnloadMod
+  nameWithType: ModManager.UnloadMod
+  fullName: ModManager.UnloadMod
+- uid: Global.LoadedModDefinition
+  commentId: T:Global.LoadedModDefinition
+  href: LoadedModDefinition.html
+  name: LoadedModDefinition
+  nameWithType: LoadedModDefinition
+  fullName: LoadedModDefinition
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Global.ModManager.UnloadMods*
+  commentId: Overload:Global.ModManager.UnloadMods
+  href: Global.ModManager.html#ModManager_UnloadMods_System_String___
+  name: UnloadMods
+  nameWithType: ModManager.UnloadMods
+  fullName: ModManager.UnloadMods
+- uid: Global.ModManager.LoadAllMods*
+  commentId: Overload:Global.ModManager.LoadAllMods
+  href: Global.ModManager.html#ModManager_LoadAllMods
+  name: LoadAllMods
+  nameWithType: ModManager.LoadAllMods
+  fullName: ModManager.LoadAllMods
+- uid: Global.ModManager.UnloadAllMods*
+  commentId: Overload:Global.ModManager.UnloadAllMods
+  href: Global.ModManager.html#ModManager_UnloadAllMods_System_String___
+  name: UnloadAllMods
+  nameWithType: ModManager.UnloadAllMods
+  fullName: ModManager.UnloadAllMods
+- uid: Global.ModManager.GetModsByIdentifiers*
+  commentId: Overload:Global.ModManager.GetModsByIdentifiers
+  href: Global.ModManager.html#ModManager_GetModsByIdentifiers_System_String___
+  name: GetModsByIdentifiers
+  nameWithType: ModManager.GetModsByIdentifiers
+  fullName: ModManager.GetModsByIdentifiers
+- uid: Global.ModManager.GetMod*
+  commentId: Overload:Global.ModManager.GetMod
+  href: Global.ModManager.html#ModManager_GetMod_System_String_
+  name: GetMod
+  nameWithType: ModManager.GetMod
+  fullName: ModManager.GetMod
+- uid: Global.ModManager.ApplyModProfile*
+  commentId: Overload:Global.ModManager.ApplyModProfile
+  href: Global.ModManager.html#ModManager_ApplyModProfile_ModProfile_
+  name: ApplyModProfile
+  nameWithType: ModManager.ApplyModProfile
+  fullName: ModManager.ApplyModProfile
+- uid: Global.ModProfile
+  commentId: T:Global.ModProfile
+  href: ModProfile.html
+  name: ModProfile
+  nameWithType: ModProfile
+  fullName: ModProfile
+- uid: Global.ModManager.LoadModProfiles*
+  commentId: Overload:Global.ModManager.LoadModProfiles
+  href: Global.ModManager.html#ModManager_LoadModProfiles
+  name: LoadModProfiles
+  nameWithType: ModManager.LoadModProfiles
+  fullName: ModManager.LoadModProfiles
+- uid: Global.ModManager.IsModLoaded*
+  commentId: Overload:Global.ModManager.IsModLoaded
+  href: Global.ModManager.html#ModManager_IsModLoaded_System_String_
+  name: IsModLoaded
+  nameWithType: ModManager.IsModLoaded
+  fullName: ModManager.IsModLoaded
+- uid: Global.ModManager.GetCurrentModProfile*
+  commentId: Overload:Global.ModManager.GetCurrentModProfile
+  href: Global.ModManager.html#ModManager_GetCurrentModProfile
+  name: GetCurrentModProfile
+  nameWithType: ModManager.GetCurrentModProfile
+  fullName: ModManager.GetCurrentModProfile
+- uid: Global.ModManager.TryGetCurrentModProfile*
+  commentId: Overload:Global.ModManager.TryGetCurrentModProfile
+  href: Global.ModManager.html#ModManager_TryGetCurrentModProfile_ModProfile__
+  name: TryGetCurrentModProfile
+  nameWithType: ModManager.TryGetCurrentModProfile
+  fullName: ModManager.TryGetCurrentModProfile
+- uid: Global.ModManager.SaveModProfiles*
+  commentId: Overload:Global.ModManager.SaveModProfiles
+  href: Global.ModManager.html#ModManager_SaveModProfiles
+  name: SaveModProfiles
+  nameWithType: ModManager.SaveModProfiles
+  fullName: ModManager.SaveModProfiles
+- uid: Global.ModManager.GenerateModGuid*
+  commentId: Overload:Global.ModManager.GenerateModGuid
+  href: Global.ModManager.html#ModManager_GenerateModGuid_System_Boolean_System_Boolean_
+  name: GenerateModGuid
+  nameWithType: ModManager.GenerateModGuid
+  fullName: ModManager.GenerateModGuid
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Global.ModManager.GetModListByGuid*
+  commentId: Overload:Global.ModManager.GetModListByGuid
+  href: Global.ModManager.html#ModManager_GetModListByGuid_System_Boolean_System_Boolean_
+  name: GetModListByGuid
+  nameWithType: ModManager.GetModListByGuid
+  fullName: ModManager.GetModListByGuid
+- uid: System.Guid[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid[]
+  nameWithType: Guid[]
+  fullName: System.Guid[]
+  nameWithType.vb: Guid()
+  fullName.vb: System.Guid()
+  name.vb: Guid()
+  spec.csharp:
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: (
+  - name: )
+- uid: Global.ModManager.GetModListByGuidAsStrings*
+  commentId: Overload:Global.ModManager.GetModListByGuidAsStrings
+  href: Global.ModManager.html#ModManager_GetModListByGuidAsStrings_System_Boolean_System_Boolean_
+  name: GetModListByGuidAsStrings
+  nameWithType: ModManager.GetModListByGuidAsStrings
+  fullName: ModManager.GetModListByGuidAsStrings

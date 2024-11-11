@@ -1,0 +1,688 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.IContentDefinition
+  commentId: T:Global.IContentDefinition
+  id: IContentDefinition
+  parent: Global
+  children:
+  - Global.IContentDefinition.Description
+  - Global.IContentDefinition.ID
+  - Global.IContentDefinition.Load(System.String)
+  - Global.IContentDefinition.LoadAssets
+  - Global.IContentDefinition.Name
+  - Global.IContentDefinition.RegisterQuantumAsset
+  - Global.IContentDefinition.Tags
+  - Global.IContentDefinition.Unload
+  - Global.IContentDefinition.UnloadAssets
+  - Global.IContentDefinition.UnregisterQuantumAsset
+  - Global.IContentDefinition.modDefinition
+  langs:
+  - csharp
+  - vb
+  name: IContentDefinition
+  nameWithType: IContentDefinition
+  fullName: IContentDefinition
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IContentDefinition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 4
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: >-
+      [Serializable]
+
+      public abstract class IContentDefinition : ScriptableObject
+    content.vb: >-
+      <Serializable>
+
+      Public MustInherit Class IContentDefinition Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  derivedClasses:
+  - Global.BaseContentDefinitionContainer`1
+  - Global.BaseFighterDefinitionContainer
+  - Global.BaseGamemodeDefinition
+  - Global.BaseGamemodeDefinitionContainer
+  - Global.BaseHudElementDefinition
+  - Global.BaseMapDefinitionContainer
+  - Global.IFighterDefinition
+  - Global.IMapDefinition
+  - rwby.BaseCommandListDefinition
+  - rwby.BaseCommandListEntry
+  - rwby.BaseCommandListMovesetDefinition
+  - rwby.BaseSongDefinition
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Global.IContentDefinition.modDefinition
+  commentId: P:Global.IContentDefinition.modDefinition
+  id: modDefinition
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: modDefinition
+  nameWithType: IContentDefinition.modDefinition
+  fullName: IContentDefinition.modDefinition
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: modDefinition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 7
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual LoadedModDefinition modDefinition { get; set; }
+    parameters: []
+    return:
+      type: Global.LoadedModDefinition
+    content.vb: Public Overridable Property modDefinition As LoadedModDefinition
+  overload: Global.IContentDefinition.modDefinition*
+- uid: Global.IContentDefinition.ID
+  commentId: P:Global.IContentDefinition.ID
+  id: ID
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: ID
+  nameWithType: IContentDefinition.ID
+  fullName: IContentDefinition.ID
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 13
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual string ID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable Property ID As String
+  overload: Global.IContentDefinition.ID*
+- uid: Global.IContentDefinition.Name
+  commentId: P:Global.IContentDefinition.Name
+  id: Name
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: IContentDefinition.Name
+  fullName: IContentDefinition.Name
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Name
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable ReadOnly Property Name As String
+  overload: Global.IContentDefinition.Name*
+- uid: Global.IContentDefinition.Description
+  commentId: P:Global.IContentDefinition.Description
+  id: Description
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: IContentDefinition.Description
+  fullName: IContentDefinition.Description
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Description
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 20
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual string Description { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable ReadOnly Property Description As String
+  overload: Global.IContentDefinition.Description*
+- uid: Global.IContentDefinition.Tags
+  commentId: P:Global.IContentDefinition.Tags
+  id: Tags
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: Tags
+  nameWithType: IContentDefinition.Tags
+  fullName: IContentDefinition.Tags
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Tags
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 21
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual List<string> Tags { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Overridable ReadOnly Property Tags As List(Of String)
+  overload: Global.IContentDefinition.Tags*
+- uid: Global.IContentDefinition.Load(System.String)
+  commentId: M:Global.IContentDefinition.Load(System.String)
+  id: Load(System.String)
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: Load(string)
+  nameWithType: IContentDefinition.Load(string)
+  fullName: IContentDefinition.Load(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Load
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 26
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual UniTask<bool> Load(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Overridable Function Load(id As String) As UniTask(Of Boolean)
+  overload: Global.IContentDefinition.Load*
+  nameWithType.vb: IContentDefinition.Load(String)
+  fullName.vb: IContentDefinition.Load(String)
+  name.vb: Load(String)
+- uid: Global.IContentDefinition.LoadAssets
+  commentId: M:Global.IContentDefinition.LoadAssets
+  id: LoadAssets
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: LoadAssets()
+  nameWithType: IContentDefinition.LoadAssets()
+  fullName: IContentDefinition.LoadAssets()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadAssets
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 32
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual UniTask<bool> LoadAssets()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Overridable Function LoadAssets() As UniTask(Of Boolean)
+  overload: Global.IContentDefinition.LoadAssets*
+- uid: Global.IContentDefinition.RegisterQuantumAsset
+  commentId: M:Global.IContentDefinition.RegisterQuantumAsset
+  id: RegisterQuantumAsset
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: RegisterQuantumAsset()
+  nameWithType: IContentDefinition.RegisterQuantumAsset()
+  fullName: IContentDefinition.RegisterQuantumAsset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RegisterQuantumAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 37
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void RegisterQuantumAsset()
+    content.vb: Public Overridable Sub RegisterQuantumAsset()
+  overload: Global.IContentDefinition.RegisterQuantumAsset*
+- uid: Global.IContentDefinition.UnregisterQuantumAsset
+  commentId: M:Global.IContentDefinition.UnregisterQuantumAsset
+  id: UnregisterQuantumAsset
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: UnregisterQuantumAsset()
+  nameWithType: IContentDefinition.UnregisterQuantumAsset()
+  fullName: IContentDefinition.UnregisterQuantumAsset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnregisterQuantumAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 42
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void UnregisterQuantumAsset()
+    content.vb: Public Overridable Sub UnregisterQuantumAsset()
+  overload: Global.IContentDefinition.UnregisterQuantumAsset*
+- uid: Global.IContentDefinition.UnloadAssets
+  commentId: M:Global.IContentDefinition.UnloadAssets
+  id: UnloadAssets
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: UnloadAssets()
+  nameWithType: IContentDefinition.UnloadAssets()
+  fullName: IContentDefinition.UnloadAssets()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadAssets
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 47
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void UnloadAssets()
+    content.vb: Public Overridable Sub UnloadAssets()
+  overload: Global.IContentDefinition.UnloadAssets*
+- uid: Global.IContentDefinition.Unload
+  commentId: M:Global.IContentDefinition.Unload
+  id: Unload
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: Unload()
+  nameWithType: IContentDefinition.Unload()
+  fullName: IContentDefinition.Unload()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Unload
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 52
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void Unload()
+    content.vb: Public Overridable Sub Unload()
+  overload: Global.IContentDefinition.Unload*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.IContentDefinition.modDefinition*
+  commentId: Overload:Global.IContentDefinition.modDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_modDefinition
+  name: modDefinition
+  nameWithType: IContentDefinition.modDefinition
+  fullName: IContentDefinition.modDefinition
+- uid: Global.LoadedModDefinition
+  commentId: T:Global.LoadedModDefinition
+  href: LoadedModDefinition.html
+  name: LoadedModDefinition
+  nameWithType: LoadedModDefinition
+  fullName: LoadedModDefinition
+- uid: Global.IContentDefinition.ID*
+  commentId: Overload:Global.IContentDefinition.ID
+  href: Global.IContentDefinition.html#IContentDefinition_ID
+  name: ID
+  nameWithType: IContentDefinition.ID
+  fullName: IContentDefinition.ID
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.IContentDefinition.Name*
+  commentId: Overload:Global.IContentDefinition.Name
+  href: Global.IContentDefinition.html#IContentDefinition_Name
+  name: Name
+  nameWithType: IContentDefinition.Name
+  fullName: IContentDefinition.Name
+- uid: Global.IContentDefinition.Description*
+  commentId: Overload:Global.IContentDefinition.Description
+  href: Global.IContentDefinition.html#IContentDefinition_Description
+  name: Description
+  nameWithType: IContentDefinition.Description
+  fullName: IContentDefinition.Description
+- uid: Global.IContentDefinition.Tags*
+  commentId: Overload:Global.IContentDefinition.Tags
+  href: Global.IContentDefinition.html#IContentDefinition_Tags
+  name: Tags
+  nameWithType: IContentDefinition.Tags
+  fullName: IContentDefinition.Tags
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Global.IContentDefinition.Load*
+  commentId: Overload:Global.IContentDefinition.Load
+  href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  name: Load
+  nameWithType: IContentDefinition.Load
+  fullName: IContentDefinition.Load
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Global.IContentDefinition.LoadAssets*
+  commentId: Overload:Global.IContentDefinition.LoadAssets
+  href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  name: LoadAssets
+  nameWithType: IContentDefinition.LoadAssets
+  fullName: IContentDefinition.LoadAssets
+- uid: Global.IContentDefinition.RegisterQuantumAsset*
+  commentId: Overload:Global.IContentDefinition.RegisterQuantumAsset
+  href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  name: RegisterQuantumAsset
+  nameWithType: IContentDefinition.RegisterQuantumAsset
+  fullName: IContentDefinition.RegisterQuantumAsset
+- uid: Global.IContentDefinition.UnregisterQuantumAsset*
+  commentId: Overload:Global.IContentDefinition.UnregisterQuantumAsset
+  href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  name: UnregisterQuantumAsset
+  nameWithType: IContentDefinition.UnregisterQuantumAsset
+  fullName: IContentDefinition.UnregisterQuantumAsset
+- uid: Global.IContentDefinition.UnloadAssets*
+  commentId: Overload:Global.IContentDefinition.UnloadAssets
+  href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  name: UnloadAssets
+  nameWithType: IContentDefinition.UnloadAssets
+  fullName: IContentDefinition.UnloadAssets
+- uid: Global.IContentDefinition.Unload*
+  commentId: Overload:Global.IContentDefinition.Unload
+  href: Global.IContentDefinition.html#IContentDefinition_Unload
+  name: Unload
+  nameWithType: IContentDefinition.Unload
+  fullName: IContentDefinition.Unload

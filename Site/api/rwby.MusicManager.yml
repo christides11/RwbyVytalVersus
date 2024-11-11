@@ -1,0 +1,561 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.MusicManager
+  commentId: T:rwby.MusicManager
+  id: MusicManager
+  parent: rwby
+  children:
+  - rwby.MusicManager.Fade(System.Int32,System.Single)
+  - rwby.MusicManager.FadeAll(System.Single)
+  - rwby.MusicManager.GetLooperForSong(rwby.SongAudio)
+  - rwby.MusicManager.Play(rwby.SongAudio,System.Single)
+  - rwby.MusicManager.StopCurrentlyFading(System.Boolean)
+  - rwby.MusicManager.StopCurrentlyPlaying(System.Boolean)
+  - rwby.MusicManager.currentlyFading
+  - rwby.MusicManager.currentlyPlaying
+  - rwby.MusicManager.musicLooperPrefab
+  langs:
+  - csharp
+  - vb
+  name: MusicManager
+  nameWithType: MusicManager
+  fullName: rwby.MusicManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: MusicManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+    startLine: 7
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: 'public class MusicManager : MonoBehaviour'
+    content.vb: Public Class MusicManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: rwby.MusicManager.musicLooperPrefab
+  commentId: F:rwby.MusicManager.musicLooperPrefab
+  id: musicLooperPrefab
+  parent: rwby.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: musicLooperPrefab
+  nameWithType: MusicManager.musicLooperPrefab
+  fullName: rwby.MusicManager.musicLooperPrefab
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: musicLooperPrefab
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+    startLine: 9
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public MusicLooper musicLooperPrefab
+    return:
+      type: rwby.MusicLooper
+    content.vb: Public musicLooperPrefab As MusicLooper
+- uid: rwby.MusicManager.currentlyPlaying
+  commentId: F:rwby.MusicManager.currentlyPlaying
+  id: currentlyPlaying
+  parent: rwby.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: currentlyPlaying
+  nameWithType: MusicManager.currentlyPlaying
+  fullName: rwby.MusicManager.currentlyPlaying
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentlyPlaying
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+    startLine: 11
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public List<MusicLooper> currentlyPlaying
+    return:
+      type: System.Collections.Generic.List{rwby.MusicLooper}
+    content.vb: Public currentlyPlaying As List(Of MusicLooper)
+- uid: rwby.MusicManager.currentlyFading
+  commentId: F:rwby.MusicManager.currentlyFading
+  id: currentlyFading
+  parent: rwby.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: currentlyFading
+  nameWithType: MusicManager.currentlyFading
+  fullName: rwby.MusicManager.currentlyFading
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentlyFading
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+    startLine: 13
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public List<MusicLooper> currentlyFading
+    return:
+      type: System.Collections.Generic.List{rwby.MusicLooper}
+    content.vb: Public currentlyFading As List(Of MusicLooper)
+- uid: rwby.MusicManager.Play(rwby.SongAudio,System.Single)
+  commentId: M:rwby.MusicManager.Play(rwby.SongAudio,System.Single)
+  id: Play(rwby.SongAudio,System.Single)
+  parent: rwby.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: Play(SongAudio, float)
+  nameWithType: MusicManager.Play(SongAudio, float)
+  fullName: rwby.MusicManager.Play(rwby.SongAudio, float)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Play
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+    startLine: 15
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public MusicLooper Play(SongAudio song, float volume = 1)
+    parameters:
+    - id: song
+      type: rwby.SongAudio
+    - id: volume
+      type: System.Single
+    return:
+      type: rwby.MusicLooper
+    content.vb: Public Function Play(song As SongAudio, volume As Single = 1) As MusicLooper
+  overload: rwby.MusicManager.Play*
+  nameWithType.vb: MusicManager.Play(SongAudio, Single)
+  fullName.vb: rwby.MusicManager.Play(rwby.SongAudio, Single)
+  name.vb: Play(SongAudio, Single)
+- uid: rwby.MusicManager.GetLooperForSong(rwby.SongAudio)
+  commentId: M:rwby.MusicManager.GetLooperForSong(rwby.SongAudio)
+  id: GetLooperForSong(rwby.SongAudio)
+  parent: rwby.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: GetLooperForSong(SongAudio)
+  nameWithType: MusicManager.GetLooperForSong(SongAudio)
+  fullName: rwby.MusicManager.GetLooperForSong(rwby.SongAudio)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetLooperForSong
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+    startLine: 24
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public MusicLooper GetLooperForSong(SongAudio song)
+    parameters:
+    - id: song
+      type: rwby.SongAudio
+    return:
+      type: rwby.MusicLooper
+    content.vb: Public Function GetLooperForSong(song As SongAudio) As MusicLooper
+  overload: rwby.MusicManager.GetLooperForSong*
+- uid: rwby.MusicManager.FadeAll(System.Single)
+  commentId: M:rwby.MusicManager.FadeAll(System.Single)
+  id: FadeAll(System.Single)
+  parent: rwby.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: FadeAll(float)
+  nameWithType: MusicManager.FadeAll(float)
+  fullName: rwby.MusicManager.FadeAll(float)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FadeAll
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+    startLine: 34
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void FadeAll(float timeToFade = 0.5)
+    parameters:
+    - id: timeToFade
+      type: System.Single
+    content.vb: Public Sub FadeAll(timeToFade As Single = 0.5)
+  overload: rwby.MusicManager.FadeAll*
+  nameWithType.vb: MusicManager.FadeAll(Single)
+  fullName.vb: rwby.MusicManager.FadeAll(Single)
+  name.vb: FadeAll(Single)
+- uid: rwby.MusicManager.Fade(System.Int32,System.Single)
+  commentId: M:rwby.MusicManager.Fade(System.Int32,System.Single)
+  id: Fade(System.Int32,System.Single)
+  parent: rwby.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: Fade(int, float)
+  nameWithType: MusicManager.Fade(int, float)
+  fullName: rwby.MusicManager.Fade(int, float)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Fade
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+    startLine: 42
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void Fade(int index, float timeToFade = 0.5)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: timeToFade
+      type: System.Single
+    content.vb: Public Sub Fade(index As Integer, timeToFade As Single = 0.5)
+  overload: rwby.MusicManager.Fade*
+  nameWithType.vb: MusicManager.Fade(Integer, Single)
+  fullName.vb: rwby.MusicManager.Fade(Integer, Single)
+  name.vb: Fade(Integer, Single)
+- uid: rwby.MusicManager.StopCurrentlyPlaying(System.Boolean)
+  commentId: M:rwby.MusicManager.StopCurrentlyPlaying(System.Boolean)
+  id: StopCurrentlyPlaying(System.Boolean)
+  parent: rwby.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: StopCurrentlyPlaying(bool)
+  nameWithType: MusicManager.StopCurrentlyPlaying(bool)
+  fullName: rwby.MusicManager.StopCurrentlyPlaying(bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StopCurrentlyPlaying
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+    startLine: 49
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void StopCurrentlyPlaying(bool destroyPlayers = false)
+    parameters:
+    - id: destroyPlayers
+      type: System.Boolean
+    content.vb: Public Sub StopCurrentlyPlaying(destroyPlayers As Boolean = False)
+  overload: rwby.MusicManager.StopCurrentlyPlaying*
+  nameWithType.vb: MusicManager.StopCurrentlyPlaying(Boolean)
+  fullName.vb: rwby.MusicManager.StopCurrentlyPlaying(Boolean)
+  name.vb: StopCurrentlyPlaying(Boolean)
+- uid: rwby.MusicManager.StopCurrentlyFading(System.Boolean)
+  commentId: M:rwby.MusicManager.StopCurrentlyFading(System.Boolean)
+  id: StopCurrentlyFading(System.Boolean)
+  parent: rwby.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: StopCurrentlyFading(bool)
+  nameWithType: MusicManager.StopCurrentlyFading(bool)
+  fullName: rwby.MusicManager.StopCurrentlyFading(bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StopCurrentlyFading
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Sound/MusicManager.cs
+    startLine: 62
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void StopCurrentlyFading(bool destroyPlayers = false)
+    parameters:
+    - id: destroyPlayers
+      type: System.Boolean
+    content.vb: Public Sub StopCurrentlyFading(destroyPlayers As Boolean = False)
+  overload: rwby.MusicManager.StopCurrentlyFading*
+  nameWithType.vb: MusicManager.StopCurrentlyFading(Boolean)
+  fullName.vb: rwby.MusicManager.StopCurrentlyFading(Boolean)
+  name.vb: StopCurrentlyFading(Boolean)
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby.MusicLooper
+  commentId: T:rwby.MusicLooper
+  parent: rwby
+  href: rwby.MusicLooper.html
+  name: MusicLooper
+  nameWithType: MusicLooper
+  fullName: rwby.MusicLooper
+- uid: System.Collections.Generic.List{rwby.MusicLooper}
+  commentId: T:System.Collections.Generic.List{rwby.MusicLooper}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<MusicLooper>
+  nameWithType: List<MusicLooper>
+  fullName: System.Collections.Generic.List<rwby.MusicLooper>
+  nameWithType.vb: List(Of MusicLooper)
+  fullName.vb: System.Collections.Generic.List(Of rwby.MusicLooper)
+  name.vb: List(Of MusicLooper)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: rwby.MusicLooper
+    name: MusicLooper
+    href: rwby.MusicLooper.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.MusicLooper
+    name: MusicLooper
+    href: rwby.MusicLooper.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: rwby.MusicManager.Play*
+  commentId: Overload:rwby.MusicManager.Play
+  href: rwby.MusicManager.html#rwby_MusicManager_Play_rwby_SongAudio_System_Single_
+  name: Play
+  nameWithType: MusicManager.Play
+  fullName: rwby.MusicManager.Play
+- uid: rwby.SongAudio
+  commentId: T:rwby.SongAudio
+  parent: rwby
+  href: rwby.SongAudio.html
+  name: SongAudio
+  nameWithType: SongAudio
+  fullName: rwby.SongAudio
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: rwby.MusicManager.GetLooperForSong*
+  commentId: Overload:rwby.MusicManager.GetLooperForSong
+  href: rwby.MusicManager.html#rwby_MusicManager_GetLooperForSong_rwby_SongAudio_
+  name: GetLooperForSong
+  nameWithType: MusicManager.GetLooperForSong
+  fullName: rwby.MusicManager.GetLooperForSong
+- uid: rwby.MusicManager.FadeAll*
+  commentId: Overload:rwby.MusicManager.FadeAll
+  href: rwby.MusicManager.html#rwby_MusicManager_FadeAll_System_Single_
+  name: FadeAll
+  nameWithType: MusicManager.FadeAll
+  fullName: rwby.MusicManager.FadeAll
+- uid: rwby.MusicManager.Fade*
+  commentId: Overload:rwby.MusicManager.Fade
+  href: rwby.MusicManager.html#rwby_MusicManager_Fade_System_Int32_System_Single_
+  name: Fade
+  nameWithType: MusicManager.Fade
+  fullName: rwby.MusicManager.Fade
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: rwby.MusicManager.StopCurrentlyPlaying*
+  commentId: Overload:rwby.MusicManager.StopCurrentlyPlaying
+  href: rwby.MusicManager.html#rwby_MusicManager_StopCurrentlyPlaying_System_Boolean_
+  name: StopCurrentlyPlaying
+  nameWithType: MusicManager.StopCurrentlyPlaying
+  fullName: rwby.MusicManager.StopCurrentlyPlaying
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: rwby.MusicManager.StopCurrentlyFading*
+  commentId: Overload:rwby.MusicManager.StopCurrentlyFading
+  href: rwby.MusicManager.html#rwby_MusicManager_StopCurrentlyFading_System_Boolean_
+  name: StopCurrentlyFading
+  nameWithType: MusicManager.StopCurrentlyFading
+  fullName: rwby.MusicManager.StopCurrentlyFading

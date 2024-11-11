@@ -1,0 +1,1019 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ProfilesManager
+  commentId: T:Global.ProfilesManager
+  id: ProfilesManager
+  parent: Global
+  children:
+  - Global.ProfilesManager.ApplyProfile(ProfileDefinition,System.String)
+  - Global.ProfilesManager.DeleteProfile(System.String)
+  - Global.ProfilesManager.Init
+  - Global.ProfilesManager.LoadProfiles
+  - Global.ProfilesManager.ProfileNameToIndex
+  - Global.ProfilesManager.Profiles
+  - Global.ProfilesManager.SaveProfiles
+  - Global.ProfilesManager.TryCreateProfile(System.String)
+  - Global.ProfilesManager.TryGetProfile(System.String,ProfileDefinition@)
+  - Global.ProfilesManager.UpdateProfileBindingOverrides(System.String,System.String)
+  - Global.ProfilesManager._inputManager
+  - Global.ProfilesManager.defaultProfiles
+  - Global.ProfilesManager.onProfileAdded
+  - Global.ProfilesManager.onProfileRemoved
+  - Global.ProfilesManager.onProfileUpdated
+  - Global.ProfilesManager.profiles
+  langs:
+  - csharp
+  - vb
+  name: ProfilesManager
+  nameWithType: ProfilesManager
+  fullName: ProfilesManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ProfilesManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 8
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: 'public class ProfilesManager : MonoBehaviour'
+    content.vb: Public Class ProfilesManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: Global.ProfilesManager.onProfileAdded
+  commentId: E:Global.ProfilesManager.onProfileAdded
+  id: onProfileAdded
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: onProfileAdded
+  nameWithType: ProfilesManager.onProfileAdded
+  fullName: ProfilesManager.onProfileAdded
+  type: Event
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onProfileAdded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 12
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public event ProfilesManager.ProfileAction onProfileAdded
+    return:
+      type: Global.ProfilesManager.ProfileAction
+    content.vb: Public Event onProfileAdded As ProfilesManager.ProfileAction
+- uid: Global.ProfilesManager.onProfileRemoved
+  commentId: E:Global.ProfilesManager.onProfileRemoved
+  id: onProfileRemoved
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: onProfileRemoved
+  nameWithType: ProfilesManager.onProfileRemoved
+  fullName: ProfilesManager.onProfileRemoved
+  type: Event
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onProfileRemoved
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 13
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public event ProfilesManager.ProfileAction onProfileRemoved
+    return:
+      type: Global.ProfilesManager.ProfileAction
+    content.vb: Public Event onProfileRemoved As ProfilesManager.ProfileAction
+- uid: Global.ProfilesManager.onProfileUpdated
+  commentId: E:Global.ProfilesManager.onProfileUpdated
+  id: onProfileUpdated
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: onProfileUpdated
+  nameWithType: ProfilesManager.onProfileUpdated
+  fullName: ProfilesManager.onProfileUpdated
+  type: Event
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onProfileUpdated
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public event ProfilesManager.ProfileChangeAction onProfileUpdated
+    return:
+      type: Global.ProfilesManager.ProfileChangeAction
+    content.vb: Public Event onProfileUpdated As ProfilesManager.ProfileChangeAction
+- uid: Global.ProfilesManager.profiles
+  commentId: F:Global.ProfilesManager.profiles
+  id: profiles
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: profiles
+  nameWithType: ProfilesManager.profiles
+  fullName: ProfilesManager.profiles
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: profiles
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 16
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: >-
+      [SerializeField]
+
+      protected List<ProfileDefinition> profiles
+    return:
+      type: System.Collections.Generic.List{ProfileDefinition}
+    content.vb: >-
+      <SerializeField>
+
+      Protected profiles As List(Of ProfileDefinition)
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: Global.ProfilesManager.Profiles
+  commentId: P:Global.ProfilesManager.Profiles
+  id: Profiles
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: Profiles
+  nameWithType: ProfilesManager.Profiles
+  fullName: ProfilesManager.Profiles
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Profiles
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public ReadOnlyCollection<ProfileDefinition> Profiles { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{ProfileDefinition}
+    content.vb: Public ReadOnly Property Profiles As ReadOnlyCollection(Of ProfileDefinition)
+  overload: Global.ProfilesManager.Profiles*
+- uid: Global.ProfilesManager.ProfileNameToIndex
+  commentId: F:Global.ProfilesManager.ProfileNameToIndex
+  id: ProfileNameToIndex
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: ProfileNameToIndex
+  nameWithType: ProfilesManager.ProfileNameToIndex
+  fullName: ProfilesManager.ProfileNameToIndex
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ProfileNameToIndex
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Dictionary<string, int> ProfileNameToIndex
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Int32}
+    content.vb: Public ProfileNameToIndex As Dictionary(Of String, Integer)
+- uid: Global.ProfilesManager.defaultProfiles
+  commentId: F:Global.ProfilesManager.defaultProfiles
+  id: defaultProfiles
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: defaultProfiles
+  nameWithType: ProfilesManager.defaultProfiles
+  fullName: ProfilesManager.defaultProfiles
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: defaultProfiles
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 21
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public ProfileDefinition[] defaultProfiles
+    return:
+      type: Global.ProfileDefinition[]
+    content.vb: Public defaultProfiles As ProfileDefinition()
+- uid: Global.ProfilesManager._inputManager
+  commentId: F:Global.ProfilesManager._inputManager
+  id: _inputManager
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: _inputManager
+  nameWithType: ProfilesManager._inputManager
+  fullName: ProfilesManager._inputManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: _inputManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public InputManager _inputManager
+    return:
+      type: rwby.InputManager
+    content.vb: Public _inputManager As InputManager
+- uid: Global.ProfilesManager.Init
+  commentId: M:Global.ProfilesManager.Init
+  id: Init
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: Init()
+  nameWithType: ProfilesManager.Init()
+  fullName: ProfilesManager.Init()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Init
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 25
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void Init()
+    content.vb: Public Sub Init()
+  overload: Global.ProfilesManager.Init*
+- uid: Global.ProfilesManager.SaveProfiles
+  commentId: M:Global.ProfilesManager.SaveProfiles
+  id: SaveProfiles
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: SaveProfiles()
+  nameWithType: ProfilesManager.SaveProfiles()
+  fullName: ProfilesManager.SaveProfiles()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SaveProfiles
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 34
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void SaveProfiles()
+    content.vb: Public Sub SaveProfiles()
+  overload: Global.ProfilesManager.SaveProfiles*
+- uid: Global.ProfilesManager.LoadProfiles
+  commentId: M:Global.ProfilesManager.LoadProfiles
+  id: LoadProfiles
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: LoadProfiles()
+  nameWithType: ProfilesManager.LoadProfiles()
+  fullName: ProfilesManager.LoadProfiles()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadProfiles
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 39
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool LoadProfiles()
+    return:
+      type: System.Boolean
+    content.vb: Public Function LoadProfiles() As Boolean
+  overload: Global.ProfilesManager.LoadProfiles*
+- uid: Global.ProfilesManager.TryCreateProfile(System.String)
+  commentId: M:Global.ProfilesManager.TryCreateProfile(System.String)
+  id: TryCreateProfile(System.String)
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: TryCreateProfile(string)
+  nameWithType: ProfilesManager.TryCreateProfile(string)
+  fullName: ProfilesManager.TryCreateProfile(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryCreateProfile
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 56
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool TryCreateProfile(string profileName)
+    parameters:
+    - id: profileName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryCreateProfile(profileName As String) As Boolean
+  overload: Global.ProfilesManager.TryCreateProfile*
+  nameWithType.vb: ProfilesManager.TryCreateProfile(String)
+  fullName.vb: ProfilesManager.TryCreateProfile(String)
+  name.vb: TryCreateProfile(String)
+- uid: Global.ProfilesManager.DeleteProfile(System.String)
+  commentId: M:Global.ProfilesManager.DeleteProfile(System.String)
+  id: DeleteProfile(System.String)
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: DeleteProfile(string)
+  nameWithType: ProfilesManager.DeleteProfile(string)
+  fullName: ProfilesManager.DeleteProfile(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeleteProfile
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 68
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void DeleteProfile(string profileName)
+    parameters:
+    - id: profileName
+      type: System.String
+    content.vb: Public Sub DeleteProfile(profileName As String)
+  overload: Global.ProfilesManager.DeleteProfile*
+  nameWithType.vb: ProfilesManager.DeleteProfile(String)
+  fullName.vb: ProfilesManager.DeleteProfile(String)
+  name.vb: DeleteProfile(String)
+- uid: Global.ProfilesManager.TryGetProfile(System.String,ProfileDefinition@)
+  commentId: M:Global.ProfilesManager.TryGetProfile(System.String,ProfileDefinition@)
+  id: TryGetProfile(System.String,ProfileDefinition@)
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: TryGetProfile(string, out ProfileDefinition)
+  nameWithType: ProfilesManager.TryGetProfile(string, out ProfileDefinition)
+  fullName: ProfilesManager.TryGetProfile(string, out ProfileDefinition)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryGetProfile
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 76
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool TryGetProfile(string name, out ProfileDefinition profileDefinition)
+    parameters:
+    - id: name
+      type: System.String
+    - id: profileDefinition
+      type: Global.ProfileDefinition
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetProfile(name As String, profileDefinition As ProfileDefinition) As Boolean
+  overload: Global.ProfilesManager.TryGetProfile*
+  nameWithType.vb: ProfilesManager.TryGetProfile(String, ProfileDefinition)
+  fullName.vb: ProfilesManager.TryGetProfile(String, ProfileDefinition)
+  name.vb: TryGetProfile(String, ProfileDefinition)
+- uid: Global.ProfilesManager.ApplyProfile(ProfileDefinition,System.String)
+  commentId: M:Global.ProfilesManager.ApplyProfile(ProfileDefinition,System.String)
+  id: ApplyProfile(ProfileDefinition,System.String)
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: ApplyProfile(ProfileDefinition, string)
+  nameWithType: ProfilesManager.ApplyProfile(ProfileDefinition, string)
+  fullName: ProfilesManager.ApplyProfile(ProfileDefinition, string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ApplyProfile
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 91
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void ApplyProfile(ProfileDefinition profileDefinition, string profileName)
+    parameters:
+    - id: profileDefinition
+      type: Global.ProfileDefinition
+    - id: profileName
+      type: System.String
+    content.vb: Public Sub ApplyProfile(profileDefinition As ProfileDefinition, profileName As String)
+  overload: Global.ProfilesManager.ApplyProfile*
+  nameWithType.vb: ProfilesManager.ApplyProfile(ProfileDefinition, String)
+  fullName.vb: ProfilesManager.ApplyProfile(ProfileDefinition, String)
+  name.vb: ApplyProfile(ProfileDefinition, String)
+- uid: Global.ProfilesManager.UpdateProfileBindingOverrides(System.String,System.String)
+  commentId: M:Global.ProfilesManager.UpdateProfileBindingOverrides(System.String,System.String)
+  id: UpdateProfileBindingOverrides(System.String,System.String)
+  parent: Global.ProfilesManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateProfileBindingOverrides(string, string)
+  nameWithType: ProfilesManager.UpdateProfileBindingOverrides(string, string)
+  fullName: ProfilesManager.UpdateProfileBindingOverrides(string, string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateProfileBindingOverrides
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/ProfilesManager.cs
+    startLine: 99
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void UpdateProfileBindingOverrides(string bindingOverrides, string profileName)
+    parameters:
+    - id: bindingOverrides
+      type: System.String
+    - id: profileName
+      type: System.String
+    content.vb: Public Sub UpdateProfileBindingOverrides(bindingOverrides As String, profileName As String)
+  overload: Global.ProfilesManager.UpdateProfileBindingOverrides*
+  nameWithType.vb: ProfilesManager.UpdateProfileBindingOverrides(String, String)
+  fullName.vb: ProfilesManager.UpdateProfileBindingOverrides(String, String)
+  name.vb: UpdateProfileBindingOverrides(String, String)
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.ProfilesManager.ProfileAction
+  commentId: T:Global.ProfilesManager.ProfileAction
+  href: ProfilesManager.html
+  name: ProfilesManager.ProfileAction
+  nameWithType: ProfilesManager.ProfileAction
+  fullName: ProfilesManager.ProfileAction
+  spec.csharp:
+  - uid: Global.ProfilesManager
+    name: ProfilesManager
+    href: ProfilesManager.html
+  - name: .
+  - uid: Global.ProfilesManager.ProfileAction
+    name: ProfileAction
+    href: ProfilesManager.ProfileAction.html
+  spec.vb:
+  - uid: Global.ProfilesManager
+    name: ProfilesManager
+    href: ProfilesManager.html
+  - name: .
+  - uid: Global.ProfilesManager.ProfileAction
+    name: ProfileAction
+    href: ProfilesManager.ProfileAction.html
+- uid: Global.ProfilesManager.ProfileChangeAction
+  commentId: T:Global.ProfilesManager.ProfileChangeAction
+  href: ProfilesManager.html
+  name: ProfilesManager.ProfileChangeAction
+  nameWithType: ProfilesManager.ProfileChangeAction
+  fullName: ProfilesManager.ProfileChangeAction
+  spec.csharp:
+  - uid: Global.ProfilesManager
+    name: ProfilesManager
+    href: ProfilesManager.html
+  - name: .
+  - uid: Global.ProfilesManager.ProfileChangeAction
+    name: ProfileChangeAction
+    href: ProfilesManager.ProfileChangeAction.html
+  spec.vb:
+  - uid: Global.ProfilesManager
+    name: ProfilesManager
+    href: ProfilesManager.html
+  - name: .
+  - uid: Global.ProfilesManager.ProfileChangeAction
+    name: ProfileChangeAction
+    href: ProfilesManager.ProfileChangeAction.html
+- uid: System.Collections.Generic.List{ProfileDefinition}
+  commentId: T:System.Collections.Generic.List{ProfileDefinition}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ProfileDefinition>
+  nameWithType: List<ProfileDefinition>
+  fullName: System.Collections.Generic.List<ProfileDefinition>
+  nameWithType.vb: List(Of ProfileDefinition)
+  fullName.vb: System.Collections.Generic.List(Of ProfileDefinition)
+  name.vb: List(Of ProfileDefinition)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Global.ProfileDefinition
+    name: ProfileDefinition
+    href: ProfileDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.ProfileDefinition
+    name: ProfileDefinition
+    href: ProfileDefinition.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Global.ProfilesManager.Profiles*
+  commentId: Overload:Global.ProfilesManager.Profiles
+  href: Global.ProfilesManager.html#ProfilesManager_Profiles
+  name: Profiles
+  nameWithType: ProfilesManager.Profiles
+  fullName: ProfilesManager.Profiles
+- uid: System.Collections.ObjectModel.ReadOnlyCollection{ProfileDefinition}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{ProfileDefinition}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<ProfileDefinition>
+  nameWithType: ReadOnlyCollection<ProfileDefinition>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<ProfileDefinition>
+  nameWithType.vb: ReadOnlyCollection(Of ProfileDefinition)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of ProfileDefinition)
+  name.vb: ReadOnlyCollection(Of ProfileDefinition)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - uid: Global.ProfileDefinition
+    name: ProfileDefinition
+    href: ProfileDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.ProfileDefinition
+    name: ProfileDefinition
+    href: ProfileDefinition.html
+  - name: )
+- uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<T>
+  nameWithType: ReadOnlyCollection<T>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
+  nameWithType.vb: ReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of T)
+  name.vb: ReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: System.Collections.Generic.Dictionary{System.String,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, int>
+  nameWithType: Dictionary<string, int>
+  fullName: System.Collections.Generic.Dictionary<string, int>
+  nameWithType.vb: Dictionary(Of String, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Integer)
+  name.vb: Dictionary(Of String, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Global.ProfileDefinition[]
+  isExternal: true
+  href: ProfileDefinition.html
+  name: ProfileDefinition[]
+  nameWithType: ProfileDefinition[]
+  fullName: ProfileDefinition[]
+  nameWithType.vb: ProfileDefinition()
+  fullName.vb: ProfileDefinition()
+  name.vb: ProfileDefinition()
+  spec.csharp:
+  - uid: Global.ProfileDefinition
+    name: ProfileDefinition
+    href: ProfileDefinition.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.ProfileDefinition
+    name: ProfileDefinition
+    href: ProfileDefinition.html
+  - name: (
+  - name: )
+- uid: rwby.InputManager
+  commentId: T:rwby.InputManager
+  parent: rwby
+  href: rwby.InputManager.html
+  name: InputManager
+  nameWithType: InputManager
+  fullName: rwby.InputManager
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: Global.ProfilesManager.Init*
+  commentId: Overload:Global.ProfilesManager.Init
+  href: Global.ProfilesManager.html#ProfilesManager_Init
+  name: Init
+  nameWithType: ProfilesManager.Init
+  fullName: ProfilesManager.Init
+- uid: Global.ProfilesManager.SaveProfiles*
+  commentId: Overload:Global.ProfilesManager.SaveProfiles
+  href: Global.ProfilesManager.html#ProfilesManager_SaveProfiles
+  name: SaveProfiles
+  nameWithType: ProfilesManager.SaveProfiles
+  fullName: ProfilesManager.SaveProfiles
+- uid: Global.ProfilesManager.LoadProfiles*
+  commentId: Overload:Global.ProfilesManager.LoadProfiles
+  href: Global.ProfilesManager.html#ProfilesManager_LoadProfiles
+  name: LoadProfiles
+  nameWithType: ProfilesManager.LoadProfiles
+  fullName: ProfilesManager.LoadProfiles
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Global.ProfilesManager.TryCreateProfile*
+  commentId: Overload:Global.ProfilesManager.TryCreateProfile
+  href: Global.ProfilesManager.html#ProfilesManager_TryCreateProfile_System_String_
+  name: TryCreateProfile
+  nameWithType: ProfilesManager.TryCreateProfile
+  fullName: ProfilesManager.TryCreateProfile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.ProfilesManager.DeleteProfile*
+  commentId: Overload:Global.ProfilesManager.DeleteProfile
+  href: Global.ProfilesManager.html#ProfilesManager_DeleteProfile_System_String_
+  name: DeleteProfile
+  nameWithType: ProfilesManager.DeleteProfile
+  fullName: ProfilesManager.DeleteProfile
+- uid: Global.ProfilesManager.TryGetProfile*
+  commentId: Overload:Global.ProfilesManager.TryGetProfile
+  href: Global.ProfilesManager.html#ProfilesManager_TryGetProfile_System_String_ProfileDefinition__
+  name: TryGetProfile
+  nameWithType: ProfilesManager.TryGetProfile
+  fullName: ProfilesManager.TryGetProfile
+- uid: Global.ProfileDefinition
+  commentId: T:Global.ProfileDefinition
+  href: ProfileDefinition.html
+  name: ProfileDefinition
+  nameWithType: ProfileDefinition
+  fullName: ProfileDefinition
+- uid: Global.ProfilesManager.ApplyProfile*
+  commentId: Overload:Global.ProfilesManager.ApplyProfile
+  href: Global.ProfilesManager.html#ProfilesManager_ApplyProfile_ProfileDefinition_System_String_
+  name: ApplyProfile
+  nameWithType: ProfilesManager.ApplyProfile
+  fullName: ProfilesManager.ApplyProfile
+- uid: Global.ProfilesManager.UpdateProfileBindingOverrides*
+  commentId: Overload:Global.ProfilesManager.UpdateProfileBindingOverrides
+  href: Global.ProfilesManager.html#ProfilesManager_UpdateProfileBindingOverrides_System_String_System_String_
+  name: UpdateProfileBindingOverrides
+  nameWithType: ProfilesManager.UpdateProfileBindingOverrides
+  fullName: ProfilesManager.UpdateProfileBindingOverrides

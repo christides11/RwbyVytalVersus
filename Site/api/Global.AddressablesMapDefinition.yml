@@ -1,0 +1,915 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.AddressablesMapDefinition
+  commentId: T:Global.AddressablesMapDefinition
+  id: AddressablesMapDefinition
+  parent: Global
+  children:
+  - Global.AddressablesMapDefinition.Description
+  - Global.AddressablesMapDefinition.GetMapAsset
+  - Global.AddressablesMapDefinition.GetSceneName
+  - Global.AddressablesMapDefinition.Load(System.String)
+  - Global.AddressablesMapDefinition.LoadAssets
+  - Global.AddressablesMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  - Global.AddressablesMapDefinition.Name
+  - Global.AddressablesMapDefinition.RegisterQuantumAsset
+  - Global.AddressablesMapDefinition.Unload
+  - Global.AddressablesMapDefinition.UnloadMap
+  - Global.AddressablesMapDefinition.UnregisterQuantumAsset
+  langs:
+  - csharp
+  - vb
+  name: AddressablesMapDefinition
+  nameWithType: AddressablesMapDefinition
+  fullName: AddressablesMapDefinition
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddressablesMapDefinition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 9
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: >-
+      [Serializable]
+
+      [CreateAssetMenu(menuName = "rwby/Addressables/Content/Map Definition")]
+
+      public class AddressablesMapDefinition : IMapDefinition
+    content.vb: >-
+      <Serializable>
+
+      <CreateAssetMenu(menuName:="rwby/Addressables/Content/Map Definition")>
+
+      Public Class AddressablesMapDefinition Inherits IMapDefinition
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Global.IContentDefinition
+  - Global.IMapDefinition
+  inheritedMembers:
+  - Global.IContentDefinition.modDefinition
+  - Global.IContentDefinition.ID
+  - Global.IContentDefinition.Tags
+  - Global.IContentDefinition.UnloadAssets
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: menuName
+      type: System.String
+      value: rwby/Addressables/Content/Map Definition
+- uid: Global.AddressablesMapDefinition.Name
+  commentId: P:Global.AddressablesMapDefinition.Name
+  id: Name
+  parent: Global.AddressablesMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: AddressablesMapDefinition.Name
+  fullName: AddressablesMapDefinition.Name
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Name
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 13
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property Name As String
+  overridden: Global.IContentDefinition.Name
+  overload: Global.AddressablesMapDefinition.Name*
+- uid: Global.AddressablesMapDefinition.Description
+  commentId: P:Global.AddressablesMapDefinition.Description
+  id: Description
+  parent: Global.AddressablesMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: AddressablesMapDefinition.Description
+  fullName: AddressablesMapDefinition.Description
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Description
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override string Description { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property Description As String
+  overridden: Global.IContentDefinition.Description
+  overload: Global.AddressablesMapDefinition.Description*
+- uid: Global.AddressablesMapDefinition.Load(System.String)
+  commentId: M:Global.AddressablesMapDefinition.Load(System.String)
+  id: Load(System.String)
+  parent: Global.AddressablesMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: Load(string)
+  nameWithType: AddressablesMapDefinition.Load(string)
+  fullName: AddressablesMapDefinition.Load(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Load
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override UniTask<bool> Load(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Overrides Function Load(id As String) As UniTask(Of Boolean)
+  overridden: Global.IContentDefinition.Load(System.String)
+  overload: Global.AddressablesMapDefinition.Load*
+  nameWithType.vb: AddressablesMapDefinition.Load(String)
+  fullName.vb: AddressablesMapDefinition.Load(String)
+  name.vb: Load(String)
+- uid: Global.AddressablesMapDefinition.LoadAssets
+  commentId: M:Global.AddressablesMapDefinition.LoadAssets
+  id: LoadAssets
+  parent: Global.AddressablesMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: LoadAssets()
+  nameWithType: AddressablesMapDefinition.LoadAssets()
+  fullName: AddressablesMapDefinition.LoadAssets()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadAssets
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 30
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override UniTask<bool> LoadAssets()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Overrides Function LoadAssets() As UniTask(Of Boolean)
+  overridden: Global.IContentDefinition.LoadAssets
+  overload: Global.AddressablesMapDefinition.LoadAssets*
+- uid: Global.AddressablesMapDefinition.RegisterQuantumAsset
+  commentId: M:Global.AddressablesMapDefinition.RegisterQuantumAsset
+  id: RegisterQuantumAsset
+  parent: Global.AddressablesMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: RegisterQuantumAsset()
+  nameWithType: AddressablesMapDefinition.RegisterQuantumAsset()
+  fullName: AddressablesMapDefinition.RegisterQuantumAsset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RegisterQuantumAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 35
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void RegisterQuantumAsset()
+    content.vb: Public Overrides Sub RegisterQuantumAsset()
+  overridden: Global.IContentDefinition.RegisterQuantumAsset
+  overload: Global.AddressablesMapDefinition.RegisterQuantumAsset*
+- uid: Global.AddressablesMapDefinition.GetMapAsset
+  commentId: M:Global.AddressablesMapDefinition.GetMapAsset
+  id: GetMapAsset
+  parent: Global.AddressablesMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetMapAsset()
+  nameWithType: AddressablesMapDefinition.GetMapAsset()
+  fullName: AddressablesMapDefinition.GetMapAsset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetMapAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 49
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override Map GetMapAsset()
+    return:
+      type: Quantum.Map
+    content.vb: Public Overrides Function GetMapAsset() As Map
+  overridden: Global.IMapDefinition.GetMapAsset
+  overload: Global.AddressablesMapDefinition.GetMapAsset*
+- uid: Global.AddressablesMapDefinition.GetSceneName
+  commentId: M:Global.AddressablesMapDefinition.GetSceneName
+  id: GetSceneName
+  parent: Global.AddressablesMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetSceneName()
+  nameWithType: AddressablesMapDefinition.GetSceneName()
+  fullName: AddressablesMapDefinition.GetSceneName()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetSceneName
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 54
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override string GetSceneName()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function GetSceneName() As String
+  overridden: Global.IMapDefinition.GetSceneName
+  overload: Global.AddressablesMapDefinition.GetSceneName*
+- uid: Global.AddressablesMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  commentId: M:Global.AddressablesMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  id: LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  parent: Global.AddressablesMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: LoadMap(LoadSceneMode)
+  nameWithType: AddressablesMapDefinition.LoadMap(LoadSceneMode)
+  fullName: AddressablesMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 60
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override UniTask<bool> LoadMap(LoadSceneMode loadMode)
+    parameters:
+    - id: loadMode
+      type: UnityEngine.SceneManagement.LoadSceneMode
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Overrides Function LoadMap(loadMode As LoadSceneMode) As UniTask(Of Boolean)
+  overridden: Global.IMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  overload: Global.AddressablesMapDefinition.LoadMap*
+- uid: Global.AddressablesMapDefinition.UnregisterQuantumAsset
+  commentId: M:Global.AddressablesMapDefinition.UnregisterQuantumAsset
+  id: UnregisterQuantumAsset
+  parent: Global.AddressablesMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: UnregisterQuantumAsset()
+  nameWithType: AddressablesMapDefinition.UnregisterQuantumAsset()
+  fullName: AddressablesMapDefinition.UnregisterQuantumAsset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnregisterQuantumAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 67
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void UnregisterQuantumAsset()
+    content.vb: Public Overrides Sub UnregisterQuantumAsset()
+  overridden: Global.IContentDefinition.UnregisterQuantumAsset
+  overload: Global.AddressablesMapDefinition.UnregisterQuantumAsset*
+- uid: Global.AddressablesMapDefinition.UnloadMap
+  commentId: M:Global.AddressablesMapDefinition.UnloadMap
+  id: UnloadMap
+  parent: Global.AddressablesMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: UnloadMap()
+  nameWithType: AddressablesMapDefinition.UnloadMap()
+  fullName: AddressablesMapDefinition.UnloadMap()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 73
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override UniTask UnloadMap()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Overrides Function UnloadMap() As UniTask
+  overridden: Global.IMapDefinition.UnloadMap
+  overload: Global.AddressablesMapDefinition.UnloadMap*
+- uid: Global.AddressablesMapDefinition.Unload
+  commentId: M:Global.AddressablesMapDefinition.Unload
+  id: Unload
+  parent: Global.AddressablesMapDefinition
+  langs:
+  - csharp
+  - vb
+  name: Unload()
+  nameWithType: AddressablesMapDefinition.Unload()
+  fullName: AddressablesMapDefinition.Unload()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Unload
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesMapDefinition.cs
+    startLine: 79
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void Unload()
+    content.vb: Public Overrides Sub Unload()
+  overridden: Global.IContentDefinition.Unload
+  overload: Global.AddressablesMapDefinition.Unload*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Global.IContentDefinition
+  commentId: T:Global.IContentDefinition
+  href: IContentDefinition.html
+  name: IContentDefinition
+  nameWithType: IContentDefinition
+  fullName: IContentDefinition
+- uid: Global.IMapDefinition
+  commentId: T:Global.IMapDefinition
+  href: IMapDefinition.html
+  name: IMapDefinition
+  nameWithType: IMapDefinition
+  fullName: IMapDefinition
+- uid: Global.IContentDefinition.modDefinition
+  commentId: P:Global.IContentDefinition.modDefinition
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_modDefinition
+  name: modDefinition
+  nameWithType: IContentDefinition.modDefinition
+  fullName: IContentDefinition.modDefinition
+- uid: Global.IContentDefinition.ID
+  commentId: P:Global.IContentDefinition.ID
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_ID
+  name: ID
+  nameWithType: IContentDefinition.ID
+  fullName: IContentDefinition.ID
+- uid: Global.IContentDefinition.Tags
+  commentId: P:Global.IContentDefinition.Tags
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Tags
+  name: Tags
+  nameWithType: IContentDefinition.Tags
+  fullName: IContentDefinition.Tags
+- uid: Global.IContentDefinition.UnloadAssets
+  commentId: M:Global.IContentDefinition.UnloadAssets
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  name: UnloadAssets()
+  nameWithType: IContentDefinition.UnloadAssets()
+  fullName: IContentDefinition.UnloadAssets()
+  spec.csharp:
+  - uid: Global.IContentDefinition.UnloadAssets
+    name: UnloadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.UnloadAssets
+    name: UnloadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.IContentDefinition.Name
+  commentId: P:Global.IContentDefinition.Name
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Name
+  name: Name
+  nameWithType: IContentDefinition.Name
+  fullName: IContentDefinition.Name
+- uid: Global.AddressablesMapDefinition.Name*
+  commentId: Overload:Global.AddressablesMapDefinition.Name
+  href: Global.AddressablesMapDefinition.html#AddressablesMapDefinition_Name
+  name: Name
+  nameWithType: AddressablesMapDefinition.Name
+  fullName: AddressablesMapDefinition.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.IContentDefinition.Description
+  commentId: P:Global.IContentDefinition.Description
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Description
+  name: Description
+  nameWithType: IContentDefinition.Description
+  fullName: IContentDefinition.Description
+- uid: Global.AddressablesMapDefinition.Description*
+  commentId: Overload:Global.AddressablesMapDefinition.Description
+  href: Global.AddressablesMapDefinition.html#AddressablesMapDefinition_Description
+  name: Description
+  nameWithType: AddressablesMapDefinition.Description
+  fullName: AddressablesMapDefinition.Description
+- uid: Global.IContentDefinition.Load(System.String)
+  commentId: M:Global.IContentDefinition.Load(System.String)
+  parent: Global.IContentDefinition
+  isExternal: true
+  href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  name: Load(string)
+  nameWithType: IContentDefinition.Load(string)
+  fullName: IContentDefinition.Load(string)
+  nameWithType.vb: IContentDefinition.Load(String)
+  fullName.vb: IContentDefinition.Load(String)
+  name.vb: Load(String)
+  spec.csharp:
+  - uid: Global.IContentDefinition.Load(System.String)
+    name: Load
+    href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.Load(System.String)
+    name: Load
+    href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Global.AddressablesMapDefinition.Load*
+  commentId: Overload:Global.AddressablesMapDefinition.Load
+  href: Global.AddressablesMapDefinition.html#AddressablesMapDefinition_Load_System_String_
+  name: Load
+  nameWithType: AddressablesMapDefinition.Load
+  fullName: AddressablesMapDefinition.Load
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Global.IContentDefinition.LoadAssets
+  commentId: M:Global.IContentDefinition.LoadAssets
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  name: LoadAssets()
+  nameWithType: IContentDefinition.LoadAssets()
+  fullName: IContentDefinition.LoadAssets()
+  spec.csharp:
+  - uid: Global.IContentDefinition.LoadAssets
+    name: LoadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.LoadAssets
+    name: LoadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  - name: (
+  - name: )
+- uid: Global.AddressablesMapDefinition.LoadAssets*
+  commentId: Overload:Global.AddressablesMapDefinition.LoadAssets
+  href: Global.AddressablesMapDefinition.html#AddressablesMapDefinition_LoadAssets
+  name: LoadAssets
+  nameWithType: AddressablesMapDefinition.LoadAssets
+  fullName: AddressablesMapDefinition.LoadAssets
+- uid: Global.IContentDefinition.RegisterQuantumAsset
+  commentId: M:Global.IContentDefinition.RegisterQuantumAsset
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  name: RegisterQuantumAsset()
+  nameWithType: IContentDefinition.RegisterQuantumAsset()
+  fullName: IContentDefinition.RegisterQuantumAsset()
+  spec.csharp:
+  - uid: Global.IContentDefinition.RegisterQuantumAsset
+    name: RegisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.RegisterQuantumAsset
+    name: RegisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  - name: (
+  - name: )
+- uid: Global.AddressablesMapDefinition.RegisterQuantumAsset*
+  commentId: Overload:Global.AddressablesMapDefinition.RegisterQuantumAsset
+  href: Global.AddressablesMapDefinition.html#AddressablesMapDefinition_RegisterQuantumAsset
+  name: RegisterQuantumAsset
+  nameWithType: AddressablesMapDefinition.RegisterQuantumAsset
+  fullName: AddressablesMapDefinition.RegisterQuantumAsset
+- uid: Global.IMapDefinition.GetMapAsset
+  commentId: M:Global.IMapDefinition.GetMapAsset
+  parent: Global.IMapDefinition
+  href: Global.IMapDefinition.html#IMapDefinition_GetMapAsset
+  name: GetMapAsset()
+  nameWithType: IMapDefinition.GetMapAsset()
+  fullName: IMapDefinition.GetMapAsset()
+  spec.csharp:
+  - uid: Global.IMapDefinition.GetMapAsset
+    name: GetMapAsset
+    href: Global.IMapDefinition.html#IMapDefinition_GetMapAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IMapDefinition.GetMapAsset
+    name: GetMapAsset
+    href: Global.IMapDefinition.html#IMapDefinition_GetMapAsset
+  - name: (
+  - name: )
+- uid: Global.AddressablesMapDefinition.GetMapAsset*
+  commentId: Overload:Global.AddressablesMapDefinition.GetMapAsset
+  href: Global.AddressablesMapDefinition.html#AddressablesMapDefinition_GetMapAsset
+  name: GetMapAsset
+  nameWithType: AddressablesMapDefinition.GetMapAsset
+  fullName: AddressablesMapDefinition.GetMapAsset
+- uid: Quantum.Map
+  commentId: T:Quantum.Map
+  parent: Quantum
+  isExternal: true
+  name: Map
+  nameWithType: Map
+  fullName: Quantum.Map
+- uid: Quantum
+  commentId: N:Quantum
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Global.IMapDefinition.GetSceneName
+  commentId: M:Global.IMapDefinition.GetSceneName
+  parent: Global.IMapDefinition
+  href: Global.IMapDefinition.html#IMapDefinition_GetSceneName
+  name: GetSceneName()
+  nameWithType: IMapDefinition.GetSceneName()
+  fullName: IMapDefinition.GetSceneName()
+  spec.csharp:
+  - uid: Global.IMapDefinition.GetSceneName
+    name: GetSceneName
+    href: Global.IMapDefinition.html#IMapDefinition_GetSceneName
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IMapDefinition.GetSceneName
+    name: GetSceneName
+    href: Global.IMapDefinition.html#IMapDefinition_GetSceneName
+  - name: (
+  - name: )
+- uid: Global.AddressablesMapDefinition.GetSceneName*
+  commentId: Overload:Global.AddressablesMapDefinition.GetSceneName
+  href: Global.AddressablesMapDefinition.html#AddressablesMapDefinition_GetSceneName
+  name: GetSceneName
+  nameWithType: AddressablesMapDefinition.GetSceneName
+  fullName: AddressablesMapDefinition.GetSceneName
+- uid: Global.IMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  commentId: M:Global.IMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  parent: Global.IMapDefinition
+  isExternal: true
+  href: Global.IMapDefinition.html#IMapDefinition_LoadMap_UnityEngine_SceneManagement_LoadSceneMode_
+  name: LoadMap(LoadSceneMode)
+  nameWithType: IMapDefinition.LoadMap(LoadSceneMode)
+  fullName: IMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+  spec.csharp:
+  - uid: Global.IMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+    name: LoadMap
+    href: Global.IMapDefinition.html#IMapDefinition_LoadMap_UnityEngine_SceneManagement_LoadSceneMode_
+  - name: (
+  - uid: UnityEngine.SceneManagement.LoadSceneMode
+    name: LoadSceneMode
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Global.IMapDefinition.LoadMap(UnityEngine.SceneManagement.LoadSceneMode)
+    name: LoadMap
+    href: Global.IMapDefinition.html#IMapDefinition_LoadMap_UnityEngine_SceneManagement_LoadSceneMode_
+  - name: (
+  - uid: UnityEngine.SceneManagement.LoadSceneMode
+    name: LoadSceneMode
+    isExternal: true
+  - name: )
+- uid: Global.AddressablesMapDefinition.LoadMap*
+  commentId: Overload:Global.AddressablesMapDefinition.LoadMap
+  href: Global.AddressablesMapDefinition.html#AddressablesMapDefinition_LoadMap_UnityEngine_SceneManagement_LoadSceneMode_
+  name: LoadMap
+  nameWithType: AddressablesMapDefinition.LoadMap
+  fullName: AddressablesMapDefinition.LoadMap
+- uid: UnityEngine.SceneManagement.LoadSceneMode
+  commentId: T:UnityEngine.SceneManagement.LoadSceneMode
+  parent: UnityEngine.SceneManagement
+  isExternal: true
+  name: LoadSceneMode
+  nameWithType: LoadSceneMode
+  fullName: UnityEngine.SceneManagement.LoadSceneMode
+- uid: UnityEngine.SceneManagement
+  commentId: N:UnityEngine.SceneManagement
+  isExternal: true
+  name: UnityEngine.SceneManagement
+  nameWithType: UnityEngine.SceneManagement
+  fullName: UnityEngine.SceneManagement
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.SceneManagement
+    name: SceneManagement
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.SceneManagement
+    name: SceneManagement
+    isExternal: true
+- uid: Global.IContentDefinition.UnregisterQuantumAsset
+  commentId: M:Global.IContentDefinition.UnregisterQuantumAsset
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  name: UnregisterQuantumAsset()
+  nameWithType: IContentDefinition.UnregisterQuantumAsset()
+  fullName: IContentDefinition.UnregisterQuantumAsset()
+  spec.csharp:
+  - uid: Global.IContentDefinition.UnregisterQuantumAsset
+    name: UnregisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.UnregisterQuantumAsset
+    name: UnregisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  - name: (
+  - name: )
+- uid: Global.AddressablesMapDefinition.UnregisterQuantumAsset*
+  commentId: Overload:Global.AddressablesMapDefinition.UnregisterQuantumAsset
+  href: Global.AddressablesMapDefinition.html#AddressablesMapDefinition_UnregisterQuantumAsset
+  name: UnregisterQuantumAsset
+  nameWithType: AddressablesMapDefinition.UnregisterQuantumAsset
+  fullName: AddressablesMapDefinition.UnregisterQuantumAsset
+- uid: Global.IMapDefinition.UnloadMap
+  commentId: M:Global.IMapDefinition.UnloadMap
+  parent: Global.IMapDefinition
+  href: Global.IMapDefinition.html#IMapDefinition_UnloadMap
+  name: UnloadMap()
+  nameWithType: IMapDefinition.UnloadMap()
+  fullName: IMapDefinition.UnloadMap()
+  spec.csharp:
+  - uid: Global.IMapDefinition.UnloadMap
+    name: UnloadMap
+    href: Global.IMapDefinition.html#IMapDefinition_UnloadMap
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IMapDefinition.UnloadMap
+    name: UnloadMap
+    href: Global.IMapDefinition.html#IMapDefinition_UnloadMap
+  - name: (
+  - name: )
+- uid: Global.AddressablesMapDefinition.UnloadMap*
+  commentId: Overload:Global.AddressablesMapDefinition.UnloadMap
+  href: Global.AddressablesMapDefinition.html#AddressablesMapDefinition_UnloadMap
+  name: UnloadMap
+  nameWithType: AddressablesMapDefinition.UnloadMap
+  fullName: AddressablesMapDefinition.UnloadMap
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Global.IContentDefinition.Unload
+  commentId: M:Global.IContentDefinition.Unload
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Unload
+  name: Unload()
+  nameWithType: IContentDefinition.Unload()
+  fullName: IContentDefinition.Unload()
+  spec.csharp:
+  - uid: Global.IContentDefinition.Unload
+    name: Unload
+    href: Global.IContentDefinition.html#IContentDefinition_Unload
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.Unload
+    name: Unload
+    href: Global.IContentDefinition.html#IContentDefinition_Unload
+  - name: (
+  - name: )
+- uid: Global.AddressablesMapDefinition.Unload*
+  commentId: Overload:Global.AddressablesMapDefinition.Unload
+  href: Global.AddressablesMapDefinition.html#AddressablesMapDefinition_Unload
+  name: Unload
+  nameWithType: AddressablesMapDefinition.Unload
+  fullName: AddressablesMapDefinition.Unload

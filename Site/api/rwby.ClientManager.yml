@@ -1,0 +1,1033 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.ClientManager
+  commentId: T:rwby.ClientManager
+  id: ClientManager
+  parent: rwby
+  children:
+  - rwby.ClientManager.CmdSetModGUID(System.Guid)
+  - rwby.ClientManager.CmdSetPing(System.Int32)
+  - rwby.ClientManager.CmdSetPlayerCount(System.Int32)
+  - rwby.ClientManager.CmnRequestModListFromClient(Mirror.NetworkIdentity)
+  - rwby.ClientManager.CmnSendModListToTarget(Mirror.NetworkIdentity,System.Guid[])
+  - rwby.ClientManager.OnPlayerCountChangedEvent
+  - rwby.ClientManager.OnStartAuthority
+  - rwby.ClientManager.OnStartClient
+  - rwby.ClientManager.OnStartServer
+  - rwby.ClientManager.OnStopClient
+  - rwby.ClientManager.TargetReceiveModListFromTarget(System.Guid[])
+  - rwby.ClientManager.TargetRequestModList(Mirror.NetworkConnectionToClient,Mirror.NetworkIdentity)
+  - rwby.ClientManager.Username
+  - rwby.ClientManager.clientManagers
+  - rwby.ClientManager.clientModGUID
+  - rwby.ClientManager.clientState
+  - rwby.ClientManager.currentMatchCode
+  - rwby.ClientManager.local
+  - rwby.ClientManager.ping
+  - rwby.ClientManager.playerCount
+  langs:
+  - csharp
+  - vb
+  name: ClientManager
+  nameWithType: ClientManager
+  fullName: rwby.ClientManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ClientManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 7
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: 'public class ClientManager : NetworkBehaviour'
+    content.vb: Public Class ClientManager Inherits NetworkBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - Mirror.NetworkBehaviour
+- uid: rwby.ClientManager.OnPlayerCountChangedEvent
+  commentId: F:rwby.ClientManager.OnPlayerCountChangedEvent
+  id: OnPlayerCountChangedEvent
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: OnPlayerCountChangedEvent
+  nameWithType: ClientManager.OnPlayerCountChangedEvent
+  fullName: rwby.ClientManager.OnPlayerCountChangedEvent
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnPlayerCountChangedEvent
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 12
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public ClientManager.ClientManagerPlayerCountEvent OnPlayerCountChangedEvent
+    return:
+      type: rwby.ClientManager.ClientManagerPlayerCountEvent
+    content.vb: Public OnPlayerCountChangedEvent As ClientManager.ClientManagerPlayerCountEvent
+- uid: rwby.ClientManager.local
+  commentId: F:rwby.ClientManager.local
+  id: local
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: local
+  nameWithType: ClientManager.local
+  fullName: rwby.ClientManager.local
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: local
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public static ClientManager local
+    return:
+      type: rwby.ClientManager
+    content.vb: Public Shared local As ClientManager
+- uid: rwby.ClientManager.clientManagers
+  commentId: F:rwby.ClientManager.clientManagers
+  id: clientManagers
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: clientManagers
+  nameWithType: ClientManager.clientManagers
+  fullName: rwby.ClientManager.clientManagers
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: clientManagers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 16
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public static List<ClientManager> clientManagers
+    return:
+      type: System.Collections.Generic.List{rwby.ClientManager}
+    content.vb: Public Shared clientManagers As List(Of ClientManager)
+- uid: rwby.ClientManager.clientState
+  commentId: F:rwby.ClientManager.clientState
+  id: clientState
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: clientState
+  nameWithType: ClientManager.clientState
+  fullName: rwby.ClientManager.clientState
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: clientState
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 18
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public LobbyClientState clientState
+    return:
+      type: rwby.LobbyClientState
+    content.vb: Public clientState As LobbyClientState
+- uid: rwby.ClientManager.Username
+  commentId: F:rwby.ClientManager.Username
+  id: Username
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: Username
+  nameWithType: ClientManager.Username
+  fullName: rwby.ClientManager.Username
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Username
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public string Username
+    return:
+      type: System.String
+    content.vb: Public Username As String
+- uid: rwby.ClientManager.currentMatchCode
+  commentId: F:rwby.ClientManager.currentMatchCode
+  id: currentMatchCode
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: currentMatchCode
+  nameWithType: ClientManager.currentMatchCode
+  fullName: rwby.ClientManager.currentMatchCode
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentMatchCode
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 20
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public string currentMatchCode
+    return:
+      type: System.String
+    content.vb: Public currentMatchCode As String
+- uid: rwby.ClientManager.clientModGUID
+  commentId: F:rwby.ClientManager.clientModGUID
+  id: clientModGUID
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: clientModGUID
+  nameWithType: ClientManager.clientModGUID
+  fullName: rwby.ClientManager.clientModGUID
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: clientModGUID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 21
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public Guid clientModGUID
+    return:
+      type: System.Guid
+    content.vb: Public clientModGUID As Guid
+- uid: rwby.ClientManager.playerCount
+  commentId: F:rwby.ClientManager.playerCount
+  id: playerCount
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: playerCount
+  nameWithType: ClientManager.playerCount
+  fullName: rwby.ClientManager.playerCount
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playerCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 22
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public int playerCount
+    return:
+      type: System.Int32
+    content.vb: Public playerCount As Integer
+- uid: rwby.ClientManager.ping
+  commentId: F:rwby.ClientManager.ping
+  id: ping
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: ping
+  nameWithType: ClientManager.ping
+  fullName: rwby.ClientManager.ping
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ping
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public int ping
+    return:
+      type: System.Int32
+    content.vb: Public ping As Integer
+- uid: rwby.ClientManager.OnStartServer
+  commentId: M:rwby.ClientManager.OnStartServer
+  id: OnStartServer
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: OnStartServer()
+  nameWithType: ClientManager.OnStartServer()
+  fullName: rwby.ClientManager.OnStartServer()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnStartServer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 30
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Like Start(), but only called on server and host.
+  example: []
+  syntax:
+    content: public override void OnStartServer()
+    content.vb: Public Overrides Sub OnStartServer()
+  overridden: Mirror.NetworkBehaviour.OnStartServer
+  overload: rwby.ClientManager.OnStartServer*
+- uid: rwby.ClientManager.OnStartClient
+  commentId: M:rwby.ClientManager.OnStartClient
+  id: OnStartClient
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: OnStartClient()
+  nameWithType: ClientManager.OnStartClient()
+  fullName: rwby.ClientManager.OnStartClient()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnStartClient
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 36
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Like Start(), but only called on client and host.
+  example: []
+  syntax:
+    content: public override void OnStartClient()
+    content.vb: Public Overrides Sub OnStartClient()
+  overridden: Mirror.NetworkBehaviour.OnStartClient
+  overload: rwby.ClientManager.OnStartClient*
+- uid: rwby.ClientManager.OnStopClient
+  commentId: M:rwby.ClientManager.OnStopClient
+  id: OnStopClient
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: OnStopClient()
+  nameWithType: ClientManager.OnStopClient()
+  fullName: rwby.ClientManager.OnStopClient()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnStopClient
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 44
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Stop event, only called on client and host.
+  example: []
+  syntax:
+    content: public override void OnStopClient()
+    content.vb: Public Overrides Sub OnStopClient()
+  overridden: Mirror.NetworkBehaviour.OnStopClient
+  overload: rwby.ClientManager.OnStopClient*
+- uid: rwby.ClientManager.OnStartAuthority
+  commentId: M:rwby.ClientManager.OnStartAuthority
+  id: OnStartAuthority
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: OnStartAuthority()
+  nameWithType: ClientManager.OnStartAuthority()
+  fullName: rwby.ClientManager.OnStartAuthority()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnStartAuthority
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 50
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Like Start(), but only called for objects the client has authority over.
+  example: []
+  syntax:
+    content: public override void OnStartAuthority()
+    content.vb: Public Overrides Sub OnStartAuthority()
+  overridden: Mirror.NetworkBehaviour.OnStartAuthority
+  overload: rwby.ClientManager.OnStartAuthority*
+- uid: rwby.ClientManager.CmdSetPing(System.Int32)
+  commentId: M:rwby.ClientManager.CmdSetPing(System.Int32)
+  id: CmdSetPing(System.Int32)
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: CmdSetPing(int)
+  nameWithType: ClientManager.CmdSetPing(int)
+  fullName: rwby.ClientManager.CmdSetPing(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CmdSetPing
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 61
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void CmdSetPing(int newPing)
+    parameters:
+    - id: newPing
+      type: System.Int32
+    content.vb: Public Sub CmdSetPing(newPing As Integer)
+  overload: rwby.ClientManager.CmdSetPing*
+  nameWithType.vb: ClientManager.CmdSetPing(Integer)
+  fullName.vb: rwby.ClientManager.CmdSetPing(Integer)
+  name.vb: CmdSetPing(Integer)
+- uid: rwby.ClientManager.CmdSetModGUID(System.Guid)
+  commentId: M:rwby.ClientManager.CmdSetModGUID(System.Guid)
+  id: CmdSetModGUID(System.Guid)
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: CmdSetModGUID(Guid)
+  nameWithType: ClientManager.CmdSetModGUID(Guid)
+  fullName: rwby.ClientManager.CmdSetModGUID(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CmdSetModGUID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 67
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void CmdSetModGUID(Guid guid)
+    parameters:
+    - id: guid
+      type: System.Guid
+    content.vb: Public Sub CmdSetModGUID(guid As Guid)
+  overload: rwby.ClientManager.CmdSetModGUID*
+- uid: rwby.ClientManager.CmnRequestModListFromClient(Mirror.NetworkIdentity)
+  commentId: M:rwby.ClientManager.CmnRequestModListFromClient(Mirror.NetworkIdentity)
+  id: CmnRequestModListFromClient(Mirror.NetworkIdentity)
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: CmnRequestModListFromClient(NetworkIdentity)
+  nameWithType: ClientManager.CmnRequestModListFromClient(NetworkIdentity)
+  fullName: rwby.ClientManager.CmnRequestModListFromClient(Mirror.NetworkIdentity)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CmnRequestModListFromClient
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 74
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void CmnRequestModListFromClient(NetworkIdentity requestedClient)
+    parameters:
+    - id: requestedClient
+      type: Mirror.NetworkIdentity
+    content.vb: Public Sub CmnRequestModListFromClient(requestedClient As NetworkIdentity)
+  overload: rwby.ClientManager.CmnRequestModListFromClient*
+- uid: rwby.ClientManager.TargetRequestModList(Mirror.NetworkConnectionToClient,Mirror.NetworkIdentity)
+  commentId: M:rwby.ClientManager.TargetRequestModList(Mirror.NetworkConnectionToClient,Mirror.NetworkIdentity)
+  id: TargetRequestModList(Mirror.NetworkConnectionToClient,Mirror.NetworkIdentity)
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: TargetRequestModList(NetworkConnectionToClient, NetworkIdentity)
+  nameWithType: ClientManager.TargetRequestModList(NetworkConnectionToClient, NetworkIdentity)
+  fullName: rwby.ClientManager.TargetRequestModList(Mirror.NetworkConnectionToClient, Mirror.NetworkIdentity)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TargetRequestModList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 80
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void TargetRequestModList(NetworkConnectionToClient target, NetworkIdentity requesterClient)
+    parameters:
+    - id: target
+      type: Mirror.NetworkConnectionToClient
+    - id: requesterClient
+      type: Mirror.NetworkIdentity
+    content.vb: Public Sub TargetRequestModList(target As NetworkConnectionToClient, requesterClient As NetworkIdentity)
+  overload: rwby.ClientManager.TargetRequestModList*
+- uid: rwby.ClientManager.CmnSendModListToTarget(Mirror.NetworkIdentity,System.Guid[])
+  commentId: M:rwby.ClientManager.CmnSendModListToTarget(Mirror.NetworkIdentity,System.Guid[])
+  id: CmnSendModListToTarget(Mirror.NetworkIdentity,System.Guid[])
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: CmnSendModListToTarget(NetworkIdentity, Guid[])
+  nameWithType: ClientManager.CmnSendModListToTarget(NetworkIdentity, Guid[])
+  fullName: rwby.ClientManager.CmnSendModListToTarget(Mirror.NetworkIdentity, System.Guid[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CmnSendModListToTarget
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 88
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void CmnSendModListToTarget(NetworkIdentity requesterClient, Guid[] modList)
+    parameters:
+    - id: requesterClient
+      type: Mirror.NetworkIdentity
+    - id: modList
+      type: System.Guid[]
+    content.vb: Public Sub CmnSendModListToTarget(requesterClient As NetworkIdentity, modList As Guid())
+  overload: rwby.ClientManager.CmnSendModListToTarget*
+  nameWithType.vb: ClientManager.CmnSendModListToTarget(NetworkIdentity, Guid())
+  fullName.vb: rwby.ClientManager.CmnSendModListToTarget(Mirror.NetworkIdentity, System.Guid())
+  name.vb: CmnSendModListToTarget(NetworkIdentity, Guid())
+- uid: rwby.ClientManager.CmdSetPlayerCount(System.Int32)
+  commentId: M:rwby.ClientManager.CmdSetPlayerCount(System.Int32)
+  id: CmdSetPlayerCount(System.Int32)
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: CmdSetPlayerCount(int)
+  nameWithType: ClientManager.CmdSetPlayerCount(int)
+  fullName: rwby.ClientManager.CmdSetPlayerCount(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CmdSetPlayerCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 94
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void CmdSetPlayerCount(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+    content.vb: Public Sub CmdSetPlayerCount(count As Integer)
+  overload: rwby.ClientManager.CmdSetPlayerCount*
+  nameWithType.vb: ClientManager.CmdSetPlayerCount(Integer)
+  fullName.vb: rwby.ClientManager.CmdSetPlayerCount(Integer)
+  name.vb: CmdSetPlayerCount(Integer)
+- uid: rwby.ClientManager.TargetReceiveModListFromTarget(System.Guid[])
+  commentId: M:rwby.ClientManager.TargetReceiveModListFromTarget(System.Guid[])
+  id: TargetReceiveModListFromTarget(System.Guid[])
+  parent: rwby.ClientManager
+  langs:
+  - csharp
+  - vb
+  name: TargetReceiveModListFromTarget(Guid[])
+  nameWithType: ClientManager.TargetReceiveModListFromTarget(Guid[])
+  fullName: rwby.ClientManager.TargetReceiveModListFromTarget(System.Guid[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TargetReceiveModListFromTarget
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/ClientManager.cs
+    startLine: 102
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void TargetReceiveModListFromTarget(Guid[] modList)
+    parameters:
+    - id: modList
+      type: System.Guid[]
+    content.vb: Public Sub TargetReceiveModListFromTarget(modList As Guid())
+  overload: rwby.ClientManager.TargetReceiveModListFromTarget*
+  nameWithType.vb: ClientManager.TargetReceiveModListFromTarget(Guid())
+  fullName.vb: rwby.ClientManager.TargetReceiveModListFromTarget(System.Guid())
+  name.vb: TargetReceiveModListFromTarget(Guid())
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: Mirror.NetworkBehaviour
+  commentId: T:Mirror.NetworkBehaviour
+  parent: Mirror
+  name: NetworkBehaviour
+  nameWithType: NetworkBehaviour
+  fullName: Mirror.NetworkBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Mirror
+  commentId: N:Mirror
+  name: Mirror
+  nameWithType: Mirror
+  fullName: Mirror
+- uid: rwby.ClientManager.ClientManagerPlayerCountEvent
+  commentId: T:rwby.ClientManager.ClientManagerPlayerCountEvent
+  parent: rwby
+  href: rwby.ClientManager.html
+  name: ClientManager.ClientManagerPlayerCountEvent
+  nameWithType: ClientManager.ClientManagerPlayerCountEvent
+  fullName: rwby.ClientManager.ClientManagerPlayerCountEvent
+  spec.csharp:
+  - uid: rwby.ClientManager
+    name: ClientManager
+    href: rwby.ClientManager.html
+  - name: .
+  - uid: rwby.ClientManager.ClientManagerPlayerCountEvent
+    name: ClientManagerPlayerCountEvent
+    href: rwby.ClientManager.ClientManagerPlayerCountEvent.html
+  spec.vb:
+  - uid: rwby.ClientManager
+    name: ClientManager
+    href: rwby.ClientManager.html
+  - name: .
+  - uid: rwby.ClientManager.ClientManagerPlayerCountEvent
+    name: ClientManagerPlayerCountEvent
+    href: rwby.ClientManager.ClientManagerPlayerCountEvent.html
+- uid: rwby.ClientManager
+  commentId: T:rwby.ClientManager
+  parent: rwby
+  href: rwby.ClientManager.html
+  name: ClientManager
+  nameWithType: ClientManager
+  fullName: rwby.ClientManager
+- uid: System.Collections.Generic.List{rwby.ClientManager}
+  commentId: T:System.Collections.Generic.List{rwby.ClientManager}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ClientManager>
+  nameWithType: List<ClientManager>
+  fullName: System.Collections.Generic.List<rwby.ClientManager>
+  nameWithType.vb: List(Of ClientManager)
+  fullName.vb: System.Collections.Generic.List(Of rwby.ClientManager)
+  name.vb: List(Of ClientManager)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: rwby.ClientManager
+    name: ClientManager
+    href: rwby.ClientManager.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.ClientManager
+    name: ClientManager
+    href: rwby.ClientManager.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: rwby.LobbyClientState
+  commentId: T:rwby.LobbyClientState
+  parent: rwby
+  href: rwby.LobbyClientState.html
+  name: LobbyClientState
+  nameWithType: LobbyClientState
+  fullName: rwby.LobbyClientState
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Mirror.NetworkBehaviour.OnStartServer
+  commentId: M:Mirror.NetworkBehaviour.OnStartServer
+  parent: Mirror.NetworkBehaviour
+  name: OnStartServer()
+  nameWithType: NetworkBehaviour.OnStartServer()
+  fullName: Mirror.NetworkBehaviour.OnStartServer()
+  spec.csharp:
+  - uid: Mirror.NetworkBehaviour.OnStartServer
+    name: OnStartServer
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Mirror.NetworkBehaviour.OnStartServer
+    name: OnStartServer
+  - name: (
+  - name: )
+- uid: rwby.ClientManager.OnStartServer*
+  commentId: Overload:rwby.ClientManager.OnStartServer
+  href: rwby.ClientManager.html#rwby_ClientManager_OnStartServer
+  name: OnStartServer
+  nameWithType: ClientManager.OnStartServer
+  fullName: rwby.ClientManager.OnStartServer
+- uid: Mirror.NetworkBehaviour.OnStartClient
+  commentId: M:Mirror.NetworkBehaviour.OnStartClient
+  parent: Mirror.NetworkBehaviour
+  name: OnStartClient()
+  nameWithType: NetworkBehaviour.OnStartClient()
+  fullName: Mirror.NetworkBehaviour.OnStartClient()
+  spec.csharp:
+  - uid: Mirror.NetworkBehaviour.OnStartClient
+    name: OnStartClient
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Mirror.NetworkBehaviour.OnStartClient
+    name: OnStartClient
+  - name: (
+  - name: )
+- uid: rwby.ClientManager.OnStartClient*
+  commentId: Overload:rwby.ClientManager.OnStartClient
+  href: rwby.ClientManager.html#rwby_ClientManager_OnStartClient
+  name: OnStartClient
+  nameWithType: ClientManager.OnStartClient
+  fullName: rwby.ClientManager.OnStartClient
+- uid: Mirror.NetworkBehaviour.OnStopClient
+  commentId: M:Mirror.NetworkBehaviour.OnStopClient
+  parent: Mirror.NetworkBehaviour
+  name: OnStopClient()
+  nameWithType: NetworkBehaviour.OnStopClient()
+  fullName: Mirror.NetworkBehaviour.OnStopClient()
+  spec.csharp:
+  - uid: Mirror.NetworkBehaviour.OnStopClient
+    name: OnStopClient
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Mirror.NetworkBehaviour.OnStopClient
+    name: OnStopClient
+  - name: (
+  - name: )
+- uid: rwby.ClientManager.OnStopClient*
+  commentId: Overload:rwby.ClientManager.OnStopClient
+  href: rwby.ClientManager.html#rwby_ClientManager_OnStopClient
+  name: OnStopClient
+  nameWithType: ClientManager.OnStopClient
+  fullName: rwby.ClientManager.OnStopClient
+- uid: Mirror.NetworkBehaviour.OnStartAuthority
+  commentId: M:Mirror.NetworkBehaviour.OnStartAuthority
+  parent: Mirror.NetworkBehaviour
+  name: OnStartAuthority()
+  nameWithType: NetworkBehaviour.OnStartAuthority()
+  fullName: Mirror.NetworkBehaviour.OnStartAuthority()
+  spec.csharp:
+  - uid: Mirror.NetworkBehaviour.OnStartAuthority
+    name: OnStartAuthority
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Mirror.NetworkBehaviour.OnStartAuthority
+    name: OnStartAuthority
+  - name: (
+  - name: )
+- uid: rwby.ClientManager.OnStartAuthority*
+  commentId: Overload:rwby.ClientManager.OnStartAuthority
+  href: rwby.ClientManager.html#rwby_ClientManager_OnStartAuthority
+  name: OnStartAuthority
+  nameWithType: ClientManager.OnStartAuthority
+  fullName: rwby.ClientManager.OnStartAuthority
+- uid: rwby.ClientManager.CmdSetPing*
+  commentId: Overload:rwby.ClientManager.CmdSetPing
+  href: rwby.ClientManager.html#rwby_ClientManager_CmdSetPing_System_Int32_
+  name: CmdSetPing
+  nameWithType: ClientManager.CmdSetPing
+  fullName: rwby.ClientManager.CmdSetPing
+- uid: rwby.ClientManager.CmdSetModGUID*
+  commentId: Overload:rwby.ClientManager.CmdSetModGUID
+  href: rwby.ClientManager.html#rwby_ClientManager_CmdSetModGUID_System_Guid_
+  name: CmdSetModGUID
+  nameWithType: ClientManager.CmdSetModGUID
+  fullName: rwby.ClientManager.CmdSetModGUID
+- uid: rwby.ClientManager.CmnRequestModListFromClient*
+  commentId: Overload:rwby.ClientManager.CmnRequestModListFromClient
+  href: rwby.ClientManager.html#rwby_ClientManager_CmnRequestModListFromClient_Mirror_NetworkIdentity_
+  name: CmnRequestModListFromClient
+  nameWithType: ClientManager.CmnRequestModListFromClient
+  fullName: rwby.ClientManager.CmnRequestModListFromClient
+- uid: Mirror.NetworkIdentity
+  commentId: T:Mirror.NetworkIdentity
+  parent: Mirror
+  name: NetworkIdentity
+  nameWithType: NetworkIdentity
+  fullName: Mirror.NetworkIdentity
+- uid: rwby.ClientManager.TargetRequestModList*
+  commentId: Overload:rwby.ClientManager.TargetRequestModList
+  href: rwby.ClientManager.html#rwby_ClientManager_TargetRequestModList_Mirror_NetworkConnectionToClient_Mirror_NetworkIdentity_
+  name: TargetRequestModList
+  nameWithType: ClientManager.TargetRequestModList
+  fullName: rwby.ClientManager.TargetRequestModList
+- uid: Mirror.NetworkConnectionToClient
+  commentId: T:Mirror.NetworkConnectionToClient
+  parent: Mirror
+  name: NetworkConnectionToClient
+  nameWithType: NetworkConnectionToClient
+  fullName: Mirror.NetworkConnectionToClient
+- uid: rwby.ClientManager.CmnSendModListToTarget*
+  commentId: Overload:rwby.ClientManager.CmnSendModListToTarget
+  href: rwby.ClientManager.html#rwby_ClientManager_CmnSendModListToTarget_Mirror_NetworkIdentity_System_Guid___
+  name: CmnSendModListToTarget
+  nameWithType: ClientManager.CmnSendModListToTarget
+  fullName: rwby.ClientManager.CmnSendModListToTarget
+- uid: System.Guid[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid[]
+  nameWithType: Guid[]
+  fullName: System.Guid[]
+  nameWithType.vb: Guid()
+  fullName.vb: System.Guid()
+  name.vb: Guid()
+  spec.csharp:
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: (
+  - name: )
+- uid: rwby.ClientManager.CmdSetPlayerCount*
+  commentId: Overload:rwby.ClientManager.CmdSetPlayerCount
+  href: rwby.ClientManager.html#rwby_ClientManager_CmdSetPlayerCount_System_Int32_
+  name: CmdSetPlayerCount
+  nameWithType: ClientManager.CmdSetPlayerCount
+  fullName: rwby.ClientManager.CmdSetPlayerCount
+- uid: rwby.ClientManager.TargetReceiveModListFromTarget*
+  commentId: Overload:rwby.ClientManager.TargetReceiveModListFromTarget
+  href: rwby.ClientManager.html#rwby_ClientManager_TargetReceiveModListFromTarget_System_Guid___
+  name: TargetReceiveModListFromTarget
+  nameWithType: ClientManager.TargetReceiveModListFromTarget
+  fullName: rwby.ClientManager.TargetReceiveModListFromTarget

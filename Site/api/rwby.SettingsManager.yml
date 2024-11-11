@@ -1,0 +1,455 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.SettingsManager
+  commentId: T:rwby.SettingsManager
+  id: SettingsManager
+  parent: rwby
+  children:
+  - rwby.SettingsManager.ApplyVideoSettings
+  - rwby.SettingsManager.CurrentVideoSettings
+  - rwby.SettingsManager.Initialize
+  - rwby.SettingsManager.LoadAllSettings
+  - rwby.SettingsManager.LoadVideoSettings
+  - rwby.SettingsManager.OnVideoSettingsChanged
+  - rwby.SettingsManager.SaveVideoSettings
+  - rwby.SettingsManager.SetVideoSettings(rwby.VideoSettings)
+  - rwby.SettingsManager.VideoSettingsFile
+  - rwby.SettingsManager.defaultVideoSettings
+  langs:
+  - csharp
+  - vb
+  name: SettingsManager
+  nameWithType: SettingsManager
+  fullName: rwby.SettingsManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SettingsManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+    startLine: 4
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: 'public class SettingsManager : MonoBehaviour'
+    content.vb: Public Class SettingsManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: rwby.SettingsManager.VideoSettingsFile
+  commentId: F:rwby.SettingsManager.VideoSettingsFile
+  id: VideoSettingsFile
+  parent: rwby.SettingsManager
+  langs:
+  - csharp
+  - vb
+  name: VideoSettingsFile
+  nameWithType: SettingsManager.VideoSettingsFile
+  fullName: rwby.SettingsManager.VideoSettingsFile
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: VideoSettingsFile
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+    startLine: 9
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public const string VideoSettingsFile = "VideoSettings.json"
+    return:
+      type: System.String
+    content.vb: Public Const VideoSettingsFile As String = "VideoSettings.json"
+- uid: rwby.SettingsManager.OnVideoSettingsChanged
+  commentId: F:rwby.SettingsManager.OnVideoSettingsChanged
+  id: OnVideoSettingsChanged
+  parent: rwby.SettingsManager
+  langs:
+  - csharp
+  - vb
+  name: OnVideoSettingsChanged
+  nameWithType: SettingsManager.OnVideoSettingsChanged
+  fullName: rwby.SettingsManager.OnVideoSettingsChanged
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnVideoSettingsChanged
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+    startLine: 13
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public static SettingsManager.SettingsChangedEvent OnVideoSettingsChanged
+    return:
+      type: rwby.SettingsManager.SettingsChangedEvent
+    content.vb: Public Shared OnVideoSettingsChanged As SettingsManager.SettingsChangedEvent
+- uid: rwby.SettingsManager.CurrentVideoSettings
+  commentId: P:rwby.SettingsManager.CurrentVideoSettings
+  id: CurrentVideoSettings
+  parent: rwby.SettingsManager
+  langs:
+  - csharp
+  - vb
+  name: CurrentVideoSettings
+  nameWithType: SettingsManager.CurrentVideoSettings
+  fullName: rwby.SettingsManager.CurrentVideoSettings
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CurrentVideoSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+    startLine: 15
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public VideoSettings CurrentVideoSettings { get; protected set; }
+    parameters: []
+    return:
+      type: rwby.VideoSettings
+    content.vb: Public Property CurrentVideoSettings As VideoSettings
+  overload: rwby.SettingsManager.CurrentVideoSettings*
+- uid: rwby.SettingsManager.defaultVideoSettings
+  commentId: F:rwby.SettingsManager.defaultVideoSettings
+  id: defaultVideoSettings
+  parent: rwby.SettingsManager
+  langs:
+  - csharp
+  - vb
+  name: defaultVideoSettings
+  nameWithType: SettingsManager.defaultVideoSettings
+  fullName: rwby.SettingsManager.defaultVideoSettings
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: defaultVideoSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public VideoSettings defaultVideoSettings
+    return:
+      type: rwby.VideoSettings
+    content.vb: Public defaultVideoSettings As VideoSettings
+- uid: rwby.SettingsManager.Initialize
+  commentId: M:rwby.SettingsManager.Initialize
+  id: Initialize
+  parent: rwby.SettingsManager
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: SettingsManager.Initialize()
+  fullName: rwby.SettingsManager.Initialize()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void Initialize()
+    content.vb: Public Sub Initialize()
+  overload: rwby.SettingsManager.Initialize*
+- uid: rwby.SettingsManager.LoadAllSettings
+  commentId: M:rwby.SettingsManager.LoadAllSettings
+  id: LoadAllSettings
+  parent: rwby.SettingsManager
+  langs:
+  - csharp
+  - vb
+  name: LoadAllSettings()
+  nameWithType: SettingsManager.LoadAllSettings()
+  fullName: rwby.SettingsManager.LoadAllSettings()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadAllSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+    startLine: 27
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void LoadAllSettings()
+    content.vb: Public Sub LoadAllSettings()
+  overload: rwby.SettingsManager.LoadAllSettings*
+- uid: rwby.SettingsManager.LoadVideoSettings
+  commentId: M:rwby.SettingsManager.LoadVideoSettings
+  id: LoadVideoSettings
+  parent: rwby.SettingsManager
+  langs:
+  - csharp
+  - vb
+  name: LoadVideoSettings()
+  nameWithType: SettingsManager.LoadVideoSettings()
+  fullName: rwby.SettingsManager.LoadVideoSettings()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadVideoSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+    startLine: 32
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void LoadVideoSettings()
+    content.vb: Public Sub LoadVideoSettings()
+  overload: rwby.SettingsManager.LoadVideoSettings*
+- uid: rwby.SettingsManager.SaveVideoSettings
+  commentId: M:rwby.SettingsManager.SaveVideoSettings
+  id: SaveVideoSettings
+  parent: rwby.SettingsManager
+  langs:
+  - csharp
+  - vb
+  name: SaveVideoSettings()
+  nameWithType: SettingsManager.SaveVideoSettings()
+  fullName: rwby.SettingsManager.SaveVideoSettings()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SaveVideoSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+    startLine: 42
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void SaveVideoSettings()
+    content.vb: Public Sub SaveVideoSettings()
+  overload: rwby.SettingsManager.SaveVideoSettings*
+- uid: rwby.SettingsManager.SetVideoSettings(rwby.VideoSettings)
+  commentId: M:rwby.SettingsManager.SetVideoSettings(rwby.VideoSettings)
+  id: SetVideoSettings(rwby.VideoSettings)
+  parent: rwby.SettingsManager
+  langs:
+  - csharp
+  - vb
+  name: SetVideoSettings(VideoSettings)
+  nameWithType: SettingsManager.SetVideoSettings(VideoSettings)
+  fullName: rwby.SettingsManager.SetVideoSettings(rwby.VideoSettings)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetVideoSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+    startLine: 47
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void SetVideoSettings(VideoSettings settings)
+    parameters:
+    - id: settings
+      type: rwby.VideoSettings
+    content.vb: Public Sub SetVideoSettings(settings As VideoSettings)
+  overload: rwby.SettingsManager.SetVideoSettings*
+- uid: rwby.SettingsManager.ApplyVideoSettings
+  commentId: M:rwby.SettingsManager.ApplyVideoSettings
+  id: ApplyVideoSettings
+  parent: rwby.SettingsManager
+  langs:
+  - csharp
+  - vb
+  name: ApplyVideoSettings()
+  nameWithType: SettingsManager.ApplyVideoSettings()
+  fullName: rwby.SettingsManager.ApplyVideoSettings()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ApplyVideoSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SettingsManager.cs
+    startLine: 53
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void ApplyVideoSettings()
+    content.vb: Public Sub ApplyVideoSettings()
+  overload: rwby.SettingsManager.ApplyVideoSettings*
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: rwby.SettingsManager.SettingsChangedEvent
+  commentId: T:rwby.SettingsManager.SettingsChangedEvent
+  parent: rwby
+  href: rwby.SettingsManager.html
+  name: SettingsManager.SettingsChangedEvent
+  nameWithType: SettingsManager.SettingsChangedEvent
+  fullName: rwby.SettingsManager.SettingsChangedEvent
+  spec.csharp:
+  - uid: rwby.SettingsManager
+    name: SettingsManager
+    href: rwby.SettingsManager.html
+  - name: .
+  - uid: rwby.SettingsManager.SettingsChangedEvent
+    name: SettingsChangedEvent
+    href: rwby.SettingsManager.SettingsChangedEvent.html
+  spec.vb:
+  - uid: rwby.SettingsManager
+    name: SettingsManager
+    href: rwby.SettingsManager.html
+  - name: .
+  - uid: rwby.SettingsManager.SettingsChangedEvent
+    name: SettingsChangedEvent
+    href: rwby.SettingsManager.SettingsChangedEvent.html
+- uid: rwby.SettingsManager.CurrentVideoSettings*
+  commentId: Overload:rwby.SettingsManager.CurrentVideoSettings
+  href: rwby.SettingsManager.html#rwby_SettingsManager_CurrentVideoSettings
+  name: CurrentVideoSettings
+  nameWithType: SettingsManager.CurrentVideoSettings
+  fullName: rwby.SettingsManager.CurrentVideoSettings
+- uid: rwby.VideoSettings
+  commentId: T:rwby.VideoSettings
+  parent: rwby
+  href: rwby.VideoSettings.html
+  name: VideoSettings
+  nameWithType: VideoSettings
+  fullName: rwby.VideoSettings
+- uid: rwby.SettingsManager.Initialize*
+  commentId: Overload:rwby.SettingsManager.Initialize
+  href: rwby.SettingsManager.html#rwby_SettingsManager_Initialize
+  name: Initialize
+  nameWithType: SettingsManager.Initialize
+  fullName: rwby.SettingsManager.Initialize
+- uid: rwby.SettingsManager.LoadAllSettings*
+  commentId: Overload:rwby.SettingsManager.LoadAllSettings
+  href: rwby.SettingsManager.html#rwby_SettingsManager_LoadAllSettings
+  name: LoadAllSettings
+  nameWithType: SettingsManager.LoadAllSettings
+  fullName: rwby.SettingsManager.LoadAllSettings
+- uid: rwby.SettingsManager.LoadVideoSettings*
+  commentId: Overload:rwby.SettingsManager.LoadVideoSettings
+  href: rwby.SettingsManager.html#rwby_SettingsManager_LoadVideoSettings
+  name: LoadVideoSettings
+  nameWithType: SettingsManager.LoadVideoSettings
+  fullName: rwby.SettingsManager.LoadVideoSettings
+- uid: rwby.SettingsManager.SaveVideoSettings*
+  commentId: Overload:rwby.SettingsManager.SaveVideoSettings
+  href: rwby.SettingsManager.html#rwby_SettingsManager_SaveVideoSettings
+  name: SaveVideoSettings
+  nameWithType: SettingsManager.SaveVideoSettings
+  fullName: rwby.SettingsManager.SaveVideoSettings
+- uid: rwby.SettingsManager.SetVideoSettings*
+  commentId: Overload:rwby.SettingsManager.SetVideoSettings
+  href: rwby.SettingsManager.html#rwby_SettingsManager_SetVideoSettings_rwby_VideoSettings_
+  name: SetVideoSettings
+  nameWithType: SettingsManager.SetVideoSettings
+  fullName: rwby.SettingsManager.SetVideoSettings
+- uid: rwby.SettingsManager.ApplyVideoSettings*
+  commentId: Overload:rwby.SettingsManager.ApplyVideoSettings
+  href: rwby.SettingsManager.html#rwby_SettingsManager_ApplyVideoSettings
+  name: ApplyVideoSettings
+  nameWithType: SettingsManager.ApplyVideoSettings
+  fullName: rwby.SettingsManager.ApplyVideoSettings
