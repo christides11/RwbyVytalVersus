@@ -1,0 +1,165 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.ISignalOnNavMeshMoveAgent
+  commentId: T:Quantum.ISignalOnNavMeshMoveAgent
+  id: ISignalOnNavMeshMoveAgent
+  parent: Quantum
+  children:
+  - Quantum.ISignalOnNavMeshMoveAgent.OnNavMeshMoveAgent(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FPVector2)
+  langs:
+  - csharp
+  - vb
+  name: ISignalOnNavMeshMoveAgent
+  nameWithType: ISignalOnNavMeshMoveAgent
+  fullName: Quantum.ISignalOnNavMeshMoveAgent
+  type: Interface
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ISignalOnNavMeshMoveAgent
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2145
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Signal is called when the agent should move. The desired direction is influence by avoidance.
+
+    <p>The agent velocity should be set in the callback.</p><p>Requires enabled <xref href="Quantum.NavMeshAgentConfig.MovementType" data-throw-if-not-resolved="false"></xref> to be set to Callback.</p><p>Requires enabled <xref href="Quantum.Navigation.Config.EnableNavigationCallbacks" data-throw-if-not-resolved="false"></xref> in <xref href="Quantum.SimulationConfig.Navigation" data-throw-if-not-resolved="false"></xref>.</p>
+  example: []
+  syntax:
+    content: 'public interface ISignalOnNavMeshMoveAgent : ISignal'
+    content.vb: Public Interface ISignalOnNavMeshMoveAgent Inherits ISignal
+  inheritedMembers:
+  - Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignalOnNavMeshMoveAgent.OnNavMeshMoveAgent(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FPVector2)
+  commentId: M:Quantum.ISignalOnNavMeshMoveAgent.OnNavMeshMoveAgent(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FPVector2)
+  id: OnNavMeshMoveAgent(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FPVector2)
+  parent: Quantum.ISignalOnNavMeshMoveAgent
+  langs:
+  - csharp
+  - vb
+  name: OnNavMeshMoveAgent(Frame, EntityRef, FPVector2)
+  nameWithType: ISignalOnNavMeshMoveAgent.OnNavMeshMoveAgent(Frame, EntityRef, FPVector2)
+  fullName: Quantum.ISignalOnNavMeshMoveAgent.OnNavMeshMoveAgent(Quantum.Frame, Quantum.EntityRef, Photon.Deterministic.FPVector2)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnNavMeshMoveAgent
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2155
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Signal is called when the agent should move. The desired direction is influence by avoidance.
+
+    <p>The agent velocity should be set in the callback.</p><p>Requires enabled <xref href="Quantum.NavMeshAgentConfig.MovementType" data-throw-if-not-resolved="false"></xref> to be set to Callback.</p><p>Requires enabled <xref href="Quantum.Navigation.Config.EnableNavigationCallbacks" data-throw-if-not-resolved="false"></xref> in <xref href="Quantum.SimulationConfig.Navigation" data-throw-if-not-resolved="false"></xref>.</p>
+  example: []
+  syntax:
+    content: void OnNavMeshMoveAgent(Frame f, EntityRef entity, FPVector2 desiredDirection)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity the navmesh agent component belongs to.
+    - id: desiredDirection
+      type: Photon.Deterministic.FPVector2
+      description: The normalized direction that the internal steering and avoidance thinks the agent movement vector should be.
+    content.vb: Sub OnNavMeshMoveAgent(f As Frame, entity As EntityRef, desiredDirection As FPVector2)
+  overload: Quantum.ISignalOnNavMeshMoveAgent.OnNavMeshMoveAgent*
+references:
+- uid: Quantum.NavMeshAgentConfig.MovementType
+  commentId: F:Quantum.NavMeshAgentConfig.MovementType
+  isExternal: true
+  name: MovementType
+  nameWithType: NavMeshAgentConfig.MovementType
+  fullName: Quantum.NavMeshAgentConfig.MovementType
+- uid: Quantum.Navigation.Config.EnableNavigationCallbacks
+  commentId: F:Quantum.Navigation.Config.EnableNavigationCallbacks
+  isExternal: true
+  name: EnableNavigationCallbacks
+  nameWithType: Navigation.Config.EnableNavigationCallbacks
+  fullName: Quantum.Navigation.Config.EnableNavigationCallbacks
+- uid: Quantum.SimulationConfig.Navigation
+  commentId: F:Quantum.SimulationConfig.Navigation
+  href: Quantum.SimulationConfig.html#Quantum_SimulationConfig_Navigation
+  name: Navigation
+  nameWithType: SimulationConfig.Navigation
+  fullName: Quantum.SimulationConfig.Navigation
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ISignal.RuntimeIndex
+  commentId: P:Quantum.ISignal.RuntimeIndex
+  parent: Quantum.ISignal
+  isExternal: true
+  name: RuntimeIndex
+  nameWithType: ISignal.RuntimeIndex
+  fullName: Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.ISignalOnNavMeshMoveAgent.OnNavMeshMoveAgent*
+  commentId: Overload:Quantum.ISignalOnNavMeshMoveAgent.OnNavMeshMoveAgent
+  href: Quantum.ISignalOnNavMeshMoveAgent.html#Quantum_ISignalOnNavMeshMoveAgent_OnNavMeshMoveAgent_Quantum_Frame_Quantum_EntityRef_Photon_Deterministic_FPVector2_
+  name: OnNavMeshMoveAgent
+  nameWithType: ISignalOnNavMeshMoveAgent.OnNavMeshMoveAgent
+  fullName: Quantum.ISignalOnNavMeshMoveAgent.OnNavMeshMoveAgent
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Photon.Deterministic.FPVector2
+  commentId: T:Photon.Deterministic.FPVector2
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FPVector2
+  nameWithType: FPVector2
+  fullName: Photon.Deterministic.FPVector2
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true

@@ -1,0 +1,770 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.RuntimeConfig
+  commentId: T:Quantum.RuntimeConfig
+  id: RuntimeConfig
+  parent: Quantum
+  children:
+  - Quantum.RuntimeConfig.Dump
+  - Quantum.RuntimeConfig.FromByteArray(System.Byte[])
+  - Quantum.RuntimeConfig.Map
+  - Quantum.RuntimeConfig.Seed
+  - Quantum.RuntimeConfig.Serialize(Photon.Deterministic.BitStream)
+  - Quantum.RuntimeConfig.SimulationConfig
+  - Quantum.RuntimeConfig.SystemsConfig
+  - Quantum.RuntimeConfig.ToByteArray(Quantum.RuntimeConfig)
+  - Quantum.RuntimeConfig.gamemodeConfigAsset
+  langs:
+  - csharp
+  - vb
+  name: RuntimeConfig
+  nameWithType: RuntimeConfig
+  fullName: Quantum.RuntimeConfig
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RuntimeConfig
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2176
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: In contrast to the <xref href="Quantum.RuntimeConfig.SimulationConfig" data-throw-if-not-resolved="false"></xref>, which has only static configuration data, the RuntimeConfig holds information that can be different from game to game.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class RuntimeConfig : IRuntimeConfig
+    content.vb: >-
+      <Serializable>
+
+      Public Class RuntimeConfig Implements IRuntimeConfig
+  inheritance:
+  - System.Object
+  implements:
+  - Quantum.IRuntimeConfig
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Quantum.RuntimeConfig.gamemodeConfigAsset
+  commentId: F:Quantum.RuntimeConfig.gamemodeConfigAsset
+  id: gamemodeConfigAsset
+  parent: Quantum.RuntimeConfig
+  langs:
+  - csharp
+  - vb
+  name: gamemodeConfigAsset
+  nameWithType: RuntimeConfig.gamemodeConfigAsset
+  fullName: Quantum.RuntimeConfig.gamemodeConfigAsset
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/RuntimeConfig.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: gamemodeConfigAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/RuntimeConfig.User.cs
+    startLine: 6
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef gamemodeConfigAsset
+    return:
+      type: Quantum.AssetRef
+    content.vb: Public gamemodeConfigAsset As AssetRef
+- uid: Quantum.RuntimeConfig.Seed
+  commentId: F:Quantum.RuntimeConfig.Seed
+  id: Seed
+  parent: Quantum.RuntimeConfig
+  langs:
+  - csharp
+  - vb
+  name: Seed
+  nameWithType: RuntimeConfig.Seed
+  fullName: Quantum.RuntimeConfig.Seed
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Seed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2181
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Seed to initialize the randomization session under <xref href="Quantum.Frame.RNG" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public int Seed
+    return:
+      type: System.Int32
+    content.vb: Public Seed As Integer
+- uid: Quantum.RuntimeConfig.Map
+  commentId: F:Quantum.RuntimeConfig.Map
+  id: Map
+  parent: Quantum.RuntimeConfig
+  langs:
+  - csharp
+  - vb
+  name: Map
+  nameWithType: RuntimeConfig.Map
+  fullName: Quantum.RuntimeConfig.Map
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Map
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2185
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Asset reference of the Quantum map used with the upcoming game session.
+  example: []
+  syntax:
+    content: public AssetRef<Map> Map
+    return:
+      type: Quantum.AssetRef{Quantum.Map}
+    content.vb: Public Map As AssetRef(Of Map)
+- uid: Quantum.RuntimeConfig.SimulationConfig
+  commentId: F:Quantum.RuntimeConfig.SimulationConfig
+  id: SimulationConfig
+  parent: Quantum.RuntimeConfig
+  langs:
+  - csharp
+  - vb
+  name: SimulationConfig
+  nameWithType: RuntimeConfig.SimulationConfig
+  fullName: Quantum.RuntimeConfig.SimulationConfig
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SimulationConfig
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2189
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Asset reference to the SimulationConfig used with the upcoming game session.
+  example: []
+  syntax:
+    content: public AssetRef<SimulationConfig> SimulationConfig
+    return:
+      type: Quantum.AssetRef{Quantum.SimulationConfig}
+    content.vb: Public SimulationConfig As AssetRef(Of SimulationConfig)
+- uid: Quantum.RuntimeConfig.SystemsConfig
+  commentId: F:Quantum.RuntimeConfig.SystemsConfig
+  id: SystemsConfig
+  parent: Quantum.RuntimeConfig
+  langs:
+  - csharp
+  - vb
+  name: SystemsConfig
+  nameWithType: RuntimeConfig.SystemsConfig
+  fullName: Quantum.RuntimeConfig.SystemsConfig
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SystemsConfig
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2195
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Asset reference to the Quantum systems configuration.
+
+    If no config is assigned then a default selection of build-in systems is used (<xref href="Quantum.DeterministicSystemSetup.CreateSystems(Quantum.RuntimeConfig%2cQuantum.SimulationConfig%2cQuantum.SystemsConfig)" data-throw-if-not-resolved="false"></xref>.
+
+    The systems to be used can always be changed by code inside <xref href="Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection%7bQuantum.SystemBase%7d%2cQuantum.RuntimeConfig%2cQuantum.SimulationConfig%2cQuantum.SystemsConfig)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public AssetRef<SystemsConfig> SystemsConfig
+    return:
+      type: Quantum.AssetRef{Quantum.SystemsConfig}
+    content.vb: Public SystemsConfig As AssetRef(Of SystemsConfig)
+- uid: Quantum.RuntimeConfig.Dump
+  commentId: M:Quantum.RuntimeConfig.Dump
+  id: Dump
+  parent: Quantum.RuntimeConfig
+  langs:
+  - csharp
+  - vb
+  name: Dump()
+  nameWithType: RuntimeConfig.Dump()
+  fullName: Quantum.RuntimeConfig.Dump()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Dump
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2201
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Dump the content into a human readable form.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("No longer used. Convert to string using JsonUtility or IAssetSerializer.")]
+
+      public string Dump()
+    return:
+      type: System.String
+      description: String representation
+    content.vb: >-
+      <Obsolete("No longer used. Convert to string using JsonUtility or IAssetSerializer.")>
+
+      Public Function Dump() As String
+  overload: Quantum.RuntimeConfig.Dump*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: No longer used. Convert to string using JsonUtility or IAssetSerializer.
+- uid: Quantum.RuntimeConfig.Serialize(Photon.Deterministic.BitStream)
+  commentId: M:Quantum.RuntimeConfig.Serialize(Photon.Deterministic.BitStream)
+  id: Serialize(Photon.Deterministic.BitStream)
+  parent: Quantum.RuntimeConfig
+  langs:
+  - csharp
+  - vb
+  name: Serialize(BitStream)
+  nameWithType: RuntimeConfig.Serialize(BitStream)
+  fullName: Quantum.RuntimeConfig.Serialize(Photon.Deterministic.BitStream)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Serialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2221
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Use IAssetSerializer instead")]
+
+      public void Serialize(BitStream stream)
+    parameters:
+    - id: stream
+      type: Photon.Deterministic.BitStream
+    content.vb: >-
+      <Obsolete("Use IAssetSerializer instead")>
+
+      Public Sub Serialize(stream As BitStream)
+  overload: Quantum.RuntimeConfig.Serialize*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use IAssetSerializer instead
+- uid: Quantum.RuntimeConfig.ToByteArray(Quantum.RuntimeConfig)
+  commentId: M:Quantum.RuntimeConfig.ToByteArray(Quantum.RuntimeConfig)
+  id: ToByteArray(Quantum.RuntimeConfig)
+  parent: Quantum.RuntimeConfig
+  langs:
+  - csharp
+  - vb
+  name: ToByteArray(RuntimeConfig)
+  nameWithType: RuntimeConfig.ToByteArray(RuntimeConfig)
+  fullName: Quantum.RuntimeConfig.ToByteArray(Quantum.RuntimeConfig)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ToByteArray
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2228
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Use IAssetSerializer instead")]
+
+      public static byte[] ToByteArray(RuntimeConfig config)
+    parameters:
+    - id: config
+      type: Quantum.RuntimeConfig
+    return:
+      type: System.Byte[]
+    content.vb: >-
+      <Obsolete("Use IAssetSerializer instead")>
+
+      Public Shared Function ToByteArray(config As RuntimeConfig) As Byte()
+  overload: Quantum.RuntimeConfig.ToByteArray*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use IAssetSerializer instead
+- uid: Quantum.RuntimeConfig.FromByteArray(System.Byte[])
+  commentId: M:Quantum.RuntimeConfig.FromByteArray(System.Byte[])
+  id: FromByteArray(System.Byte[])
+  parent: Quantum.RuntimeConfig
+  langs:
+  - csharp
+  - vb
+  name: FromByteArray(byte[])
+  nameWithType: RuntimeConfig.FromByteArray(byte[])
+  fullName: Quantum.RuntimeConfig.FromByteArray(byte[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FromByteArray
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2233
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Use IAssetSerializer instead")]
+
+      public static RuntimeConfig FromByteArray(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: Quantum.RuntimeConfig
+    content.vb: >-
+      <Obsolete("Use IAssetSerializer instead")>
+
+      Public Shared Function FromByteArray(data As Byte()) As RuntimeConfig
+  overload: Quantum.RuntimeConfig.FromByteArray*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use IAssetSerializer instead
+  nameWithType.vb: RuntimeConfig.FromByteArray(Byte())
+  fullName.vb: Quantum.RuntimeConfig.FromByteArray(Byte())
+  name.vb: FromByteArray(Byte())
+references:
+- uid: Quantum.RuntimeConfig.SimulationConfig
+  commentId: F:Quantum.RuntimeConfig.SimulationConfig
+  href: Quantum.RuntimeConfig.html#Quantum_RuntimeConfig_SimulationConfig
+  name: SimulationConfig
+  nameWithType: RuntimeConfig.SimulationConfig
+  fullName: Quantum.RuntimeConfig.SimulationConfig
+- uid: Photon.Deterministic.DeterministicSessionConfig
+  commentId: T:Photon.Deterministic.DeterministicSessionConfig
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicSessionConfig
+  nameWithType: DeterministicSessionConfig
+  fullName: Photon.Deterministic.DeterministicSessionConfig
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.IRuntimeConfig
+  commentId: T:Quantum.IRuntimeConfig
+  parent: Quantum
+  isExternal: true
+  name: IRuntimeConfig
+  nameWithType: IRuntimeConfig
+  fullName: Quantum.IRuntimeConfig
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.AssetRef
+  commentId: T:Quantum.AssetRef
+  parent: Quantum
+  isExternal: true
+  name: AssetRef
+  nameWithType: AssetRef
+  fullName: Quantum.AssetRef
+- uid: Quantum.Frame.RNG
+  commentId: P:Quantum.Frame.RNG
+  href: Quantum.Frame.html#Quantum_Frame_RNG
+  name: RNG
+  nameWithType: Frame.RNG
+  fullName: Quantum.Frame.RNG
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.AssetRef{Quantum.Map}
+  commentId: T:Quantum.AssetRef{Quantum.Map}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  name: AssetRef<Map>
+  nameWithType: AssetRef<Map>
+  fullName: Quantum.AssetRef<Quantum.Map>
+  nameWithType.vb: AssetRef(Of Map)
+  fullName.vb: Quantum.AssetRef(Of Quantum.Map)
+  name.vb: AssetRef(Of Map)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.Map
+    name: Map
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.Map
+    name: Map
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetRef`1
+  commentId: T:Quantum.AssetRef`1
+  isExternal: true
+  name: AssetRef<T>
+  nameWithType: AssetRef<T>
+  fullName: Quantum.AssetRef<T>
+  nameWithType.vb: AssetRef(Of T)
+  fullName.vb: Quantum.AssetRef(Of T)
+  name.vb: AssetRef(Of T)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.AssetRef{Quantum.SimulationConfig}
+  commentId: T:Quantum.AssetRef{Quantum.SimulationConfig}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.SimulationConfig.html
+  name: AssetRef<SimulationConfig>
+  nameWithType: AssetRef<SimulationConfig>
+  fullName: Quantum.AssetRef<Quantum.SimulationConfig>
+  nameWithType.vb: AssetRef(Of SimulationConfig)
+  fullName.vb: Quantum.AssetRef(Of Quantum.SimulationConfig)
+  name.vb: AssetRef(Of SimulationConfig)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: )
+- uid: Quantum.DeterministicSystemSetup.CreateSystems(Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+  commentId: M:Quantum.DeterministicSystemSetup.CreateSystems(Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+  href: Quantum.DeterministicSystemSetup.html#Quantum_DeterministicSystemSetup_CreateSystems_Quantum_RuntimeConfig_Quantum_SimulationConfig_Quantum_SystemsConfig_
+  name: CreateSystems(RuntimeConfig, SimulationConfig, SystemsConfig)
+  nameWithType: DeterministicSystemSetup.CreateSystems(RuntimeConfig, SimulationConfig, SystemsConfig)
+  fullName: Quantum.DeterministicSystemSetup.CreateSystems(Quantum.RuntimeConfig, Quantum.SimulationConfig, Quantum.SystemsConfig)
+  spec.csharp:
+  - uid: Quantum.DeterministicSystemSetup.CreateSystems(Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+    name: CreateSystems
+    href: Quantum.DeterministicSystemSetup.html#Quantum_DeterministicSystemSetup_CreateSystems_Quantum_RuntimeConfig_Quantum_SimulationConfig_Quantum_SystemsConfig_
+  - name: (
+  - uid: Quantum.RuntimeConfig
+    name: RuntimeConfig
+    href: Quantum.RuntimeConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.DeterministicSystemSetup.CreateSystems(Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+    name: CreateSystems
+    href: Quantum.DeterministicSystemSetup.html#Quantum_DeterministicSystemSetup_CreateSystems_Quantum_RuntimeConfig_Quantum_SimulationConfig_Quantum_SystemsConfig_
+  - name: (
+  - uid: Quantum.RuntimeConfig
+    name: RuntimeConfig
+    href: Quantum.RuntimeConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: )
+- uid: Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection{Quantum.SystemBase},Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+  commentId: M:Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection{Quantum.SystemBase},Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+  isExternal: true
+  href: Quantum.DeterministicSystemSetup.html#Quantum_DeterministicSystemSetup_AddSystemsUser_System_Collections_Generic_ICollection_Quantum_SystemBase__Quantum_RuntimeConfig_Quantum_SimulationConfig_Quantum_SystemsConfig_
+  name: AddSystemsUser(ICollection<SystemBase>, RuntimeConfig, SimulationConfig, SystemsConfig)
+  nameWithType: DeterministicSystemSetup.AddSystemsUser(ICollection<SystemBase>, RuntimeConfig, SimulationConfig, SystemsConfig)
+  fullName: Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection<Quantum.SystemBase>, Quantum.RuntimeConfig, Quantum.SimulationConfig, Quantum.SystemsConfig)
+  nameWithType.vb: DeterministicSystemSetup.AddSystemsUser(ICollection(Of SystemBase), RuntimeConfig, SimulationConfig, SystemsConfig)
+  fullName.vb: Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection(Of Quantum.SystemBase), Quantum.RuntimeConfig, Quantum.SimulationConfig, Quantum.SystemsConfig)
+  name.vb: AddSystemsUser(ICollection(Of SystemBase), RuntimeConfig, SimulationConfig, SystemsConfig)
+  spec.csharp:
+  - uid: Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection{Quantum.SystemBase},Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+    name: AddSystemsUser
+    href: Quantum.DeterministicSystemSetup.html#Quantum_DeterministicSystemSetup_AddSystemsUser_System_Collections_Generic_ICollection_Quantum_SystemBase__Quantum_RuntimeConfig_Quantum_SimulationConfig_Quantum_SystemsConfig_
+  - name: (
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Quantum.SystemBase
+    name: SystemBase
+    href: Quantum.SystemBase.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Quantum.RuntimeConfig
+    name: RuntimeConfig
+    href: Quantum.RuntimeConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection{Quantum.SystemBase},Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+    name: AddSystemsUser
+    href: Quantum.DeterministicSystemSetup.html#Quantum_DeterministicSystemSetup_AddSystemsUser_System_Collections_Generic_ICollection_Quantum_SystemBase__Quantum_RuntimeConfig_Quantum_SimulationConfig_Quantum_SystemsConfig_
+  - name: (
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.SystemBase
+    name: SystemBase
+    href: Quantum.SystemBase.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Quantum.RuntimeConfig
+    name: RuntimeConfig
+    href: Quantum.RuntimeConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: )
+- uid: Quantum.AssetRef{Quantum.SystemsConfig}
+  commentId: T:Quantum.AssetRef{Quantum.SystemsConfig}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.SystemsConfig.html
+  name: AssetRef<SystemsConfig>
+  nameWithType: AssetRef<SystemsConfig>
+  fullName: Quantum.AssetRef<Quantum.SystemsConfig>
+  nameWithType.vb: AssetRef(Of SystemsConfig)
+  fullName.vb: Quantum.AssetRef(Of Quantum.SystemsConfig)
+  name.vb: AssetRef(Of SystemsConfig)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: )
+- uid: Quantum.RuntimeConfig.Dump*
+  commentId: Overload:Quantum.RuntimeConfig.Dump
+  href: Quantum.RuntimeConfig.html#Quantum_RuntimeConfig_Dump
+  name: Dump
+  nameWithType: RuntimeConfig.Dump
+  fullName: Quantum.RuntimeConfig.Dump
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Quantum.RuntimeConfig.Serialize*
+  commentId: Overload:Quantum.RuntimeConfig.Serialize
+  href: Quantum.RuntimeConfig.html#Quantum_RuntimeConfig_Serialize_Photon_Deterministic_BitStream_
+  name: Serialize
+  nameWithType: RuntimeConfig.Serialize
+  fullName: Quantum.RuntimeConfig.Serialize
+- uid: Photon.Deterministic.BitStream
+  commentId: T:Photon.Deterministic.BitStream
+  parent: Photon.Deterministic
+  isExternal: true
+  name: BitStream
+  nameWithType: BitStream
+  fullName: Photon.Deterministic.BitStream
+- uid: Quantum.RuntimeConfig.ToByteArray*
+  commentId: Overload:Quantum.RuntimeConfig.ToByteArray
+  href: Quantum.RuntimeConfig.html#Quantum_RuntimeConfig_ToByteArray_Quantum_RuntimeConfig_
+  name: ToByteArray
+  nameWithType: RuntimeConfig.ToByteArray
+  fullName: Quantum.RuntimeConfig.ToByteArray
+- uid: Quantum.RuntimeConfig
+  commentId: T:Quantum.RuntimeConfig
+  parent: Quantum
+  href: Quantum.RuntimeConfig.html
+  name: RuntimeConfig
+  nameWithType: RuntimeConfig
+  fullName: Quantum.RuntimeConfig
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: Quantum.RuntimeConfig.FromByteArray*
+  commentId: Overload:Quantum.RuntimeConfig.FromByteArray
+  href: Quantum.RuntimeConfig.html#Quantum_RuntimeConfig_FromByteArray_System_Byte___
+  name: FromByteArray
+  nameWithType: RuntimeConfig.FromByteArray
+  fullName: Quantum.RuntimeConfig.FromByteArray

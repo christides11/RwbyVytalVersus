@@ -1,0 +1,295 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.IAssetSerializerLegacyExtensions
+  commentId: T:Quantum.IAssetSerializerLegacyExtensions
+  id: IAssetSerializerLegacyExtensions
+  parent: Quantum
+  children:
+  - Quantum.IAssetSerializerLegacyExtensions.DeserializeAssets(Quantum.IAssetSerializer,System.Byte[])
+  - Quantum.IAssetSerializerLegacyExtensions.SerializeAssets(Quantum.IAssetSerializer,System.Collections.Generic.IEnumerable{Quantum.AssetObject})
+  langs:
+  - csharp
+  - vb
+  name: IAssetSerializerLegacyExtensions
+  nameWithType: IAssetSerializerLegacyExtensions
+  fullName: Quantum.IAssetSerializerLegacyExtensions
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IAssetSerializerLegacyExtensions
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2021
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static class IAssetSerializerLegacyExtensions
+    content.vb: Public Module IAssetSerializerLegacyExtensions
+  inheritance:
+  - System.Object
+- uid: Quantum.IAssetSerializerLegacyExtensions.DeserializeAssets(Quantum.IAssetSerializer,System.Byte[])
+  commentId: M:Quantum.IAssetSerializerLegacyExtensions.DeserializeAssets(Quantum.IAssetSerializer,System.Byte[])
+  id: DeserializeAssets(Quantum.IAssetSerializer,System.Byte[])
+  isExtensionMethod: true
+  parent: Quantum.IAssetSerializerLegacyExtensions
+  langs:
+  - csharp
+  - vb
+  name: DeserializeAssets(IAssetSerializer, byte[])
+  nameWithType: IAssetSerializerLegacyExtensions.DeserializeAssets(IAssetSerializer, byte[])
+  fullName: Quantum.IAssetSerializerLegacyExtensions.DeserializeAssets(Quantum.IAssetSerializer, byte[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeserializeAssets
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2022
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Use AssetsFromByteArray instead")]
+
+      public static IEnumerable<AssetObject> DeserializeAssets(this IAssetSerializer serializer, byte[] data)
+    parameters:
+    - id: serializer
+      type: Quantum.IAssetSerializer
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Collections.Generic.IEnumerable{Quantum.AssetObject}
+    content.vb: >-
+      <Obsolete("Use AssetsFromByteArray instead")>
+
+      Public Shared Function DeserializeAssets(serializer As IAssetSerializer, data As Byte()) As IEnumerable(Of AssetObject)
+  overload: Quantum.IAssetSerializerLegacyExtensions.DeserializeAssets*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use AssetsFromByteArray instead
+  nameWithType.vb: IAssetSerializerLegacyExtensions.DeserializeAssets(IAssetSerializer, Byte())
+  fullName.vb: Quantum.IAssetSerializerLegacyExtensions.DeserializeAssets(Quantum.IAssetSerializer, Byte())
+  name.vb: DeserializeAssets(IAssetSerializer, Byte())
+- uid: Quantum.IAssetSerializerLegacyExtensions.SerializeAssets(Quantum.IAssetSerializer,System.Collections.Generic.IEnumerable{Quantum.AssetObject})
+  commentId: M:Quantum.IAssetSerializerLegacyExtensions.SerializeAssets(Quantum.IAssetSerializer,System.Collections.Generic.IEnumerable{Quantum.AssetObject})
+  id: SerializeAssets(Quantum.IAssetSerializer,System.Collections.Generic.IEnumerable{Quantum.AssetObject})
+  isExtensionMethod: true
+  parent: Quantum.IAssetSerializerLegacyExtensions
+  langs:
+  - csharp
+  - vb
+  name: SerializeAssets(IAssetSerializer, IEnumerable<AssetObject>)
+  nameWithType: IAssetSerializerLegacyExtensions.SerializeAssets(IAssetSerializer, IEnumerable<AssetObject>)
+  fullName: Quantum.IAssetSerializerLegacyExtensions.SerializeAssets(Quantum.IAssetSerializer, System.Collections.Generic.IEnumerable<Quantum.AssetObject>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SerializeAssets
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2025
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Use AssetsToByteArray instead")]
+
+      public static byte[] SerializeAssets(this IAssetSerializer serializer, IEnumerable<AssetObject> assets)
+    parameters:
+    - id: serializer
+      type: Quantum.IAssetSerializer
+    - id: assets
+      type: System.Collections.Generic.IEnumerable{Quantum.AssetObject}
+    return:
+      type: System.Byte[]
+    content.vb: >-
+      <Obsolete("Use AssetsToByteArray instead")>
+
+      Public Shared Function SerializeAssets(serializer As IAssetSerializer, assets As IEnumerable(Of AssetObject)) As Byte()
+  overload: Quantum.IAssetSerializerLegacyExtensions.SerializeAssets*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use AssetsToByteArray instead
+  nameWithType.vb: IAssetSerializerLegacyExtensions.SerializeAssets(IAssetSerializer, IEnumerable(Of AssetObject))
+  fullName.vb: Quantum.IAssetSerializerLegacyExtensions.SerializeAssets(Quantum.IAssetSerializer, System.Collections.Generic.IEnumerable(Of Quantum.AssetObject))
+  name.vb: SerializeAssets(IAssetSerializer, IEnumerable(Of AssetObject))
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.IAssetSerializerLegacyExtensions.DeserializeAssets*
+  commentId: Overload:Quantum.IAssetSerializerLegacyExtensions.DeserializeAssets
+  href: Quantum.IAssetSerializerLegacyExtensions.html#Quantum_IAssetSerializerLegacyExtensions_DeserializeAssets_Quantum_IAssetSerializer_System_Byte___
+  name: DeserializeAssets
+  nameWithType: IAssetSerializerLegacyExtensions.DeserializeAssets
+  fullName: Quantum.IAssetSerializerLegacyExtensions.DeserializeAssets
+- uid: Quantum.IAssetSerializer
+  commentId: T:Quantum.IAssetSerializer
+  parent: Quantum
+  isExternal: true
+  name: IAssetSerializer
+  nameWithType: IAssetSerializer
+  fullName: Quantum.IAssetSerializer
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{Quantum.AssetObject}
+  commentId: T:System.Collections.Generic.IEnumerable{Quantum.AssetObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<AssetObject>
+  nameWithType: IEnumerable<AssetObject>
+  fullName: System.Collections.Generic.IEnumerable<Quantum.AssetObject>
+  nameWithType.vb: IEnumerable(Of AssetObject)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Quantum.AssetObject)
+  name.vb: IEnumerable(Of AssetObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Quantum.AssetObject
+    name: AssetObject
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.AssetObject
+    name: AssetObject
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Quantum.IAssetSerializerLegacyExtensions.SerializeAssets*
+  commentId: Overload:Quantum.IAssetSerializerLegacyExtensions.SerializeAssets
+  href: Quantum.IAssetSerializerLegacyExtensions.html#Quantum_IAssetSerializerLegacyExtensions_SerializeAssets_Quantum_IAssetSerializer_System_Collections_Generic_IEnumerable_Quantum_AssetObject__
+  name: SerializeAssets
+  nameWithType: IAssetSerializerLegacyExtensions.SerializeAssets
+  fullName: Quantum.IAssetSerializerLegacyExtensions.SerializeAssets

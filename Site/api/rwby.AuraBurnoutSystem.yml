@@ -1,0 +1,911 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.AuraBurnoutSystem
+  commentId: T:rwby.AuraBurnoutSystem
+  id: AuraBurnoutSystem
+  parent: rwby
+  children:
+  - rwby.AuraBurnoutSystem.AuraDecreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  - rwby.AuraBurnoutSystem.AuraIncreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  - rwby.AuraBurnoutSystem.Update(Quantum.Frame,rwby.AuraBurnoutSystem.Filter@)
+  langs:
+  - csharp
+  - vb
+  name: AuraBurnoutSystem
+  nameWithType: AuraBurnoutSystem
+  fullName: rwby.AuraBurnoutSystem
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/AuraBurnoutSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AuraBurnoutSystem
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/AuraBurnoutSystem.cs
+    startLine: 6
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby
+  syntax:
+    content: >-
+      [Preserve]
+
+      public class AuraBurnoutSystem : SystemMainThreadFilter<AuraBurnoutSystem.Filter>, ISignalAuraIncreased, ISignalAuraDecreased, ISignal
+    content.vb: >-
+      <Preserve>
+
+      Public Class AuraBurnoutSystem Inherits SystemMainThreadFilter(Of AuraBurnoutSystem.Filter) Implements ISignalAuraIncreased, ISignalAuraDecreased, ISignal
+  inheritance:
+  - System.Object
+  - Quantum.SystemBase
+  - Quantum.SystemMainThread
+  - Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}
+  implements:
+  - Quantum.ISignalAuraIncreased
+  - Quantum.ISignalAuraDecreased
+  - Quantum.ISignal
+  inheritedMembers:
+  - Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.UseCulling
+  - Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Without
+  - Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Any
+  - Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Update(Quantum.Frame)
+  - Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  - Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  - Quantum.SystemBase.RuntimeIndex
+  - Quantum.SystemBase.ParentSystem
+  - Quantum.SystemBase.ChildSystems
+  - Quantum.SystemBase.Hierarchy
+  - Quantum.SystemBase.StartEnabled
+  - Quantum.SystemBase.OnInit(Quantum.Frame)
+  - Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  - Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  attributes:
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
+- uid: rwby.AuraBurnoutSystem.Update(Quantum.Frame,rwby.AuraBurnoutSystem.Filter@)
+  commentId: M:rwby.AuraBurnoutSystem.Update(Quantum.Frame,rwby.AuraBurnoutSystem.Filter@)
+  id: Update(Quantum.Frame,rwby.AuraBurnoutSystem.Filter@)
+  parent: rwby.AuraBurnoutSystem
+  langs:
+  - csharp
+  - vb
+  name: Update(Frame, ref Filter)
+  nameWithType: AuraBurnoutSystem.Update(Frame, ref AuraBurnoutSystem.Filter)
+  fullName: rwby.AuraBurnoutSystem.Update(Quantum.Frame, ref rwby.AuraBurnoutSystem.Filter)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/AuraBurnoutSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Update
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/AuraBurnoutSystem.cs
+    startLine: 17
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby
+  summary: Override to add workload.
+  example: []
+  syntax:
+    content: public override void Update(Frame f, ref AuraBurnoutSystem.Filter filter)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The current frame.
+    - id: filter
+      type: rwby.AuraBurnoutSystem.Filter
+      description: The frame object.
+    content.vb: Public Overrides Sub Update(f As Frame, filter As AuraBurnoutSystem.Filter)
+  overridden: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Update(Quantum.Frame,rwby.AuraBurnoutSystem.Filter@)
+  overload: rwby.AuraBurnoutSystem.Update*
+  nameWithType.vb: AuraBurnoutSystem.Update(Frame, AuraBurnoutSystem.Filter)
+  fullName.vb: rwby.AuraBurnoutSystem.Update(Quantum.Frame, rwby.AuraBurnoutSystem.Filter)
+  name.vb: Update(Frame, Filter)
+- uid: rwby.AuraBurnoutSystem.AuraIncreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  commentId: M:rwby.AuraBurnoutSystem.AuraIncreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  id: AuraIncreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  parent: rwby.AuraBurnoutSystem
+  langs:
+  - csharp
+  - vb
+  name: AuraIncreased(Frame, EntityRef, int, int)
+  nameWithType: AuraBurnoutSystem.AuraIncreased(Frame, EntityRef, int, int)
+  fullName: rwby.AuraBurnoutSystem.AuraIncreased(Quantum.Frame, Quantum.EntityRef, int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/AuraBurnoutSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AuraIncreased
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/AuraBurnoutSystem.cs
+    startLine: 24
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby
+  example: []
+  syntax:
+    content: public void AuraIncreased(Frame f, EntityRef entity, int oldAura, int newAura)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+    - id: entity
+      type: Quantum.EntityRef
+    - id: oldAura
+      type: System.Int32
+    - id: newAura
+      type: System.Int32
+    content.vb: Public Sub AuraIncreased(f As Frame, entity As EntityRef, oldAura As Integer, newAura As Integer)
+  overload: rwby.AuraBurnoutSystem.AuraIncreased*
+  implements:
+  - Quantum.ISignalAuraIncreased.AuraIncreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  nameWithType.vb: AuraBurnoutSystem.AuraIncreased(Frame, EntityRef, Integer, Integer)
+  fullName.vb: rwby.AuraBurnoutSystem.AuraIncreased(Quantum.Frame, Quantum.EntityRef, Integer, Integer)
+  name.vb: AuraIncreased(Frame, EntityRef, Integer, Integer)
+- uid: rwby.AuraBurnoutSystem.AuraDecreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  commentId: M:rwby.AuraBurnoutSystem.AuraDecreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  id: AuraDecreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  parent: rwby.AuraBurnoutSystem
+  langs:
+  - csharp
+  - vb
+  name: AuraDecreased(Frame, EntityRef, int, int)
+  nameWithType: AuraBurnoutSystem.AuraDecreased(Frame, EntityRef, int, int)
+  fullName: rwby.AuraBurnoutSystem.AuraDecreased(Quantum.Frame, Quantum.EntityRef, int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/AuraBurnoutSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AuraDecreased
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/AuraBurnoutSystem.cs
+    startLine: 29
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby
+  example: []
+  syntax:
+    content: public void AuraDecreased(Frame f, EntityRef entity, int oldAura, int newAura)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+    - id: entity
+      type: Quantum.EntityRef
+    - id: oldAura
+      type: System.Int32
+    - id: newAura
+      type: System.Int32
+    content.vb: Public Sub AuraDecreased(f As Frame, entity As EntityRef, oldAura As Integer, newAura As Integer)
+  overload: rwby.AuraBurnoutSystem.AuraDecreased*
+  implements:
+  - Quantum.ISignalAuraDecreased.AuraDecreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  nameWithType.vb: AuraBurnoutSystem.AuraDecreased(Frame, EntityRef, Integer, Integer)
+  fullName.vb: rwby.AuraBurnoutSystem.AuraDecreased(Quantum.Frame, Quantum.EntityRef, Integer, Integer)
+  name.vb: AuraDecreased(Frame, EntityRef, Integer, Integer)
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.SystemBase
+  commentId: T:Quantum.SystemBase
+  parent: Quantum
+  href: Quantum.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: Quantum.SystemBase
+- uid: Quantum.SystemMainThread
+  commentId: T:Quantum.SystemMainThread
+  parent: Quantum
+  href: Quantum.SystemMainThread.html
+  name: SystemMainThread
+  nameWithType: SystemMainThread
+  fullName: Quantum.SystemMainThread
+- uid: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}
+  commentId: T:Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}
+  parent: Quantum
+  definition: Quantum.SystemMainThreadFilter`1
+  href: Quantum.SystemMainThreadFilter-1.html
+  name: SystemMainThreadFilter<AuraBurnoutSystem.Filter>
+  nameWithType: SystemMainThreadFilter<AuraBurnoutSystem.Filter>
+  fullName: Quantum.SystemMainThreadFilter<rwby.AuraBurnoutSystem.Filter>
+  nameWithType.vb: SystemMainThreadFilter(Of AuraBurnoutSystem.Filter)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of rwby.AuraBurnoutSystem.Filter)
+  name.vb: SystemMainThreadFilter(Of AuraBurnoutSystem.Filter)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter`1
+    name: SystemMainThreadFilter
+    href: Quantum.SystemMainThreadFilter-1.html
+  - name: <
+  - uid: rwby.AuraBurnoutSystem
+    name: AuraBurnoutSystem
+    href: rwby.AuraBurnoutSystem.html
+  - name: .
+  - uid: rwby.AuraBurnoutSystem.Filter
+    name: Filter
+    href: rwby.AuraBurnoutSystem.Filter.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter`1
+    name: SystemMainThreadFilter
+    href: Quantum.SystemMainThreadFilter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.AuraBurnoutSystem
+    name: AuraBurnoutSystem
+    href: rwby.AuraBurnoutSystem.html
+  - name: .
+  - uid: rwby.AuraBurnoutSystem.Filter
+    name: Filter
+    href: rwby.AuraBurnoutSystem.Filter.html
+  - name: )
+- uid: Quantum.ISignalAuraIncreased
+  commentId: T:Quantum.ISignalAuraIncreased
+  parent: Quantum
+  href: Quantum.ISignalAuraIncreased.html
+  name: ISignalAuraIncreased
+  nameWithType: ISignalAuraIncreased
+  fullName: Quantum.ISignalAuraIncreased
+- uid: Quantum.ISignalAuraDecreased
+  commentId: T:Quantum.ISignalAuraDecreased
+  parent: Quantum
+  href: Quantum.ISignalAuraDecreased.html
+  name: ISignalAuraDecreased
+  nameWithType: ISignalAuraDecreased
+  fullName: Quantum.ISignalAuraDecreased
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.UseCulling
+  commentId: P:Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.UseCulling
+  parent: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}
+  definition: Quantum.SystemMainThreadFilter`1.UseCulling
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_UseCulling
+  name: UseCulling
+  nameWithType: SystemMainThreadFilter<AuraBurnoutSystem.Filter>.UseCulling
+  fullName: Quantum.SystemMainThreadFilter<rwby.AuraBurnoutSystem.Filter>.UseCulling
+  nameWithType.vb: SystemMainThreadFilter(Of AuraBurnoutSystem.Filter).UseCulling
+  fullName.vb: Quantum.SystemMainThreadFilter(Of rwby.AuraBurnoutSystem.Filter).UseCulling
+- uid: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Without
+  commentId: P:Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Without
+  parent: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}
+  definition: Quantum.SystemMainThreadFilter`1.Without
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Without
+  name: Without
+  nameWithType: SystemMainThreadFilter<AuraBurnoutSystem.Filter>.Without
+  fullName: Quantum.SystemMainThreadFilter<rwby.AuraBurnoutSystem.Filter>.Without
+  nameWithType.vb: SystemMainThreadFilter(Of AuraBurnoutSystem.Filter).Without
+  fullName.vb: Quantum.SystemMainThreadFilter(Of rwby.AuraBurnoutSystem.Filter).Without
+- uid: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Any
+  commentId: P:Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Any
+  parent: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}
+  definition: Quantum.SystemMainThreadFilter`1.Any
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Any
+  name: Any
+  nameWithType: SystemMainThreadFilter<AuraBurnoutSystem.Filter>.Any
+  fullName: Quantum.SystemMainThreadFilter<rwby.AuraBurnoutSystem.Filter>.Any
+  nameWithType.vb: SystemMainThreadFilter(Of AuraBurnoutSystem.Filter).Any
+  fullName.vb: Quantum.SystemMainThreadFilter(Of rwby.AuraBurnoutSystem.Filter).Any
+- uid: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Update(Quantum.Frame)
+  commentId: M:Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Update(Quantum.Frame)
+  parent: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}
+  definition: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame)
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  name: Update(Frame)
+  nameWithType: SystemMainThreadFilter<AuraBurnoutSystem.Filter>.Update(Frame)
+  fullName: Quantum.SystemMainThreadFilter<rwby.AuraBurnoutSystem.Filter>.Update(Quantum.Frame)
+  nameWithType.vb: SystemMainThreadFilter(Of AuraBurnoutSystem.Filter).Update(Frame)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of rwby.AuraBurnoutSystem.Filter).Update(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Update(Quantum.Frame)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Update(Quantum.Frame)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemMainThread
+  isExternal: true
+  href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_ScheduleUpdate_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: ScheduleUpdate(Frame, TaskHandle)
+  nameWithType: SystemMainThread.ScheduleUpdate(Frame, TaskHandle)
+  fullName: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: ScheduleUpdate
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_ScheduleUpdate_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: ScheduleUpdate
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_ScheduleUpdate_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemMainThread
+  isExternal: true
+  href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: SystemMainThread.Schedule(Frame, TaskHandle)
+  fullName: Quantum.SystemMainThread.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemBase.RuntimeIndex
+  commentId: P:Quantum.SystemBase.RuntimeIndex
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_RuntimeIndex
+  name: RuntimeIndex
+  nameWithType: SystemBase.RuntimeIndex
+  fullName: Quantum.SystemBase.RuntimeIndex
+- uid: Quantum.SystemBase.ParentSystem
+  commentId: P:Quantum.SystemBase.ParentSystem
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ParentSystem
+  name: ParentSystem
+  nameWithType: SystemBase.ParentSystem
+  fullName: Quantum.SystemBase.ParentSystem
+- uid: Quantum.SystemBase.ChildSystems
+  commentId: P:Quantum.SystemBase.ChildSystems
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ChildSystems
+  name: ChildSystems
+  nameWithType: SystemBase.ChildSystems
+  fullName: Quantum.SystemBase.ChildSystems
+- uid: Quantum.SystemBase.Hierarchy
+  commentId: P:Quantum.SystemBase.Hierarchy
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Hierarchy
+  name: Hierarchy
+  nameWithType: SystemBase.Hierarchy
+  fullName: Quantum.SystemBase.Hierarchy
+- uid: Quantum.SystemBase.StartEnabled
+  commentId: P:Quantum.SystemBase.StartEnabled
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_StartEnabled
+  name: StartEnabled
+  nameWithType: SystemBase.StartEnabled
+  fullName: Quantum.SystemBase.StartEnabled
+- uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnInit(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  name: OnInit(Frame)
+  nameWithType: SystemBase.OnInit(Frame)
+  fullName: Quantum.SystemBase.OnInit(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  name: OnEnabled(Frame)
+  nameWithType: SystemBase.OnEnabled(Frame)
+  fullName: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  name: OnDisabled(Frame)
+  nameWithType: SystemBase.OnDisabled(Frame)
+  fullName: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: OnSchedule(Frame, TaskHandle)
+  nameWithType: SystemBase.OnSchedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.OnSchedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.SystemMainThreadFilter`1
+  commentId: T:Quantum.SystemMainThreadFilter`1
+  href: Quantum.SystemMainThreadFilter-1.html
+  name: SystemMainThreadFilter<T>
+  nameWithType: SystemMainThreadFilter<T>
+  fullName: Quantum.SystemMainThreadFilter<T>
+  nameWithType.vb: SystemMainThreadFilter(Of T)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T)
+  name.vb: SystemMainThreadFilter(Of T)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter`1
+    name: SystemMainThreadFilter
+    href: Quantum.SystemMainThreadFilter-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter`1
+    name: SystemMainThreadFilter
+    href: Quantum.SystemMainThreadFilter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.SystemMainThreadFilter`1.UseCulling
+  commentId: P:Quantum.SystemMainThreadFilter`1.UseCulling
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_UseCulling
+  name: UseCulling
+  nameWithType: SystemMainThreadFilter<T>.UseCulling
+  fullName: Quantum.SystemMainThreadFilter<T>.UseCulling
+  nameWithType.vb: SystemMainThreadFilter(Of T).UseCulling
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T).UseCulling
+- uid: Quantum.SystemMainThreadFilter`1.Without
+  commentId: P:Quantum.SystemMainThreadFilter`1.Without
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Without
+  name: Without
+  nameWithType: SystemMainThreadFilter<T>.Without
+  fullName: Quantum.SystemMainThreadFilter<T>.Without
+  nameWithType.vb: SystemMainThreadFilter(Of T).Without
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T).Without
+- uid: Quantum.SystemMainThreadFilter`1.Any
+  commentId: P:Quantum.SystemMainThreadFilter`1.Any
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Any
+  name: Any
+  nameWithType: SystemMainThreadFilter<T>.Any
+  fullName: Quantum.SystemMainThreadFilter<T>.Any
+  nameWithType.vb: SystemMainThreadFilter(Of T).Any
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T).Any
+- uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame)
+  commentId: M:Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame)
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  name: Update(Frame)
+  nameWithType: SystemMainThreadFilter<T>.Update(Frame)
+  fullName: Quantum.SystemMainThreadFilter<T>.Update(Quantum.Frame)
+  nameWithType.vb: SystemMainThreadFilter(Of T).Update(Frame)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T).Update(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Update(Quantum.Frame,rwby.AuraBurnoutSystem.Filter@)
+  commentId: M:Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Update(Quantum.Frame,rwby.AuraBurnoutSystem.Filter@)
+  parent: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}
+  definition: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame,`0@)
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  name: Update(Frame, ref Filter)
+  nameWithType: SystemMainThreadFilter<AuraBurnoutSystem.Filter>.Update(Frame, ref AuraBurnoutSystem.Filter)
+  fullName: Quantum.SystemMainThreadFilter<rwby.AuraBurnoutSystem.Filter>.Update(Quantum.Frame, ref rwby.AuraBurnoutSystem.Filter)
+  nameWithType.vb: SystemMainThreadFilter(Of AuraBurnoutSystem.Filter).Update(Frame, AuraBurnoutSystem.Filter)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of rwby.AuraBurnoutSystem.Filter).Update(Quantum.Frame, rwby.AuraBurnoutSystem.Filter)
+  name.vb: Update(Frame, Filter)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Update(Quantum.Frame,rwby.AuraBurnoutSystem.Filter@)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: rwby.AuraBurnoutSystem.Filter
+    name: Filter
+    href: rwby.AuraBurnoutSystem.Filter.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter{rwby.AuraBurnoutSystem.Filter}.Update(Quantum.Frame,rwby.AuraBurnoutSystem.Filter@)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: rwby.AuraBurnoutSystem.Filter
+    name: Filter
+    href: rwby.AuraBurnoutSystem.Filter.html
+  - name: )
+- uid: rwby.AuraBurnoutSystem.Update*
+  commentId: Overload:rwby.AuraBurnoutSystem.Update
+  href: rwby.AuraBurnoutSystem.html#rwby_AuraBurnoutSystem_Update_Quantum_Frame_rwby_AuraBurnoutSystem_Filter__
+  name: Update
+  nameWithType: AuraBurnoutSystem.Update
+  fullName: rwby.AuraBurnoutSystem.Update
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: rwby.AuraBurnoutSystem.Filter
+  commentId: T:rwby.AuraBurnoutSystem.Filter
+  parent: rwby
+  href: rwby.AuraBurnoutSystem.html
+  name: AuraBurnoutSystem.Filter
+  nameWithType: AuraBurnoutSystem.Filter
+  fullName: rwby.AuraBurnoutSystem.Filter
+  spec.csharp:
+  - uid: rwby.AuraBurnoutSystem
+    name: AuraBurnoutSystem
+    href: rwby.AuraBurnoutSystem.html
+  - name: .
+  - uid: rwby.AuraBurnoutSystem.Filter
+    name: Filter
+    href: rwby.AuraBurnoutSystem.Filter.html
+  spec.vb:
+  - uid: rwby.AuraBurnoutSystem
+    name: AuraBurnoutSystem
+    href: rwby.AuraBurnoutSystem.html
+  - name: .
+  - uid: rwby.AuraBurnoutSystem.Filter
+    name: Filter
+    href: rwby.AuraBurnoutSystem.Filter.html
+- uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame,`0@)
+  commentId: M:Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame,`0@)
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  name: Update(Frame, ref T)
+  nameWithType: SystemMainThreadFilter<T>.Update(Frame, ref T)
+  fullName: Quantum.SystemMainThreadFilter<T>.Update(Quantum.Frame, ref T)
+  nameWithType.vb: SystemMainThreadFilter(Of T).Update(Frame, T)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T).Update(Quantum.Frame, T)
+  name.vb: Update(Frame, T)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame,`0@)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame,`0@)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: rwby.AuraBurnoutSystem.AuraIncreased*
+  commentId: Overload:rwby.AuraBurnoutSystem.AuraIncreased
+  href: rwby.AuraBurnoutSystem.html#rwby_AuraBurnoutSystem_AuraIncreased_Quantum_Frame_Quantum_EntityRef_System_Int32_System_Int32_
+  name: AuraIncreased
+  nameWithType: AuraBurnoutSystem.AuraIncreased
+  fullName: rwby.AuraBurnoutSystem.AuraIncreased
+- uid: Quantum.ISignalAuraIncreased.AuraIncreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  commentId: M:Quantum.ISignalAuraIncreased.AuraIncreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  parent: Quantum.ISignalAuraIncreased
+  isExternal: true
+  href: Quantum.ISignalAuraIncreased.html#Quantum_ISignalAuraIncreased_AuraIncreased_Quantum_Frame_Quantum_EntityRef_System_Int32_System_Int32_
+  name: AuraIncreased(Frame, EntityRef, int, int)
+  nameWithType: ISignalAuraIncreased.AuraIncreased(Frame, EntityRef, int, int)
+  fullName: Quantum.ISignalAuraIncreased.AuraIncreased(Quantum.Frame, Quantum.EntityRef, int, int)
+  nameWithType.vb: ISignalAuraIncreased.AuraIncreased(Frame, EntityRef, Integer, Integer)
+  fullName.vb: Quantum.ISignalAuraIncreased.AuraIncreased(Quantum.Frame, Quantum.EntityRef, Integer, Integer)
+  name.vb: AuraIncreased(Frame, EntityRef, Integer, Integer)
+  spec.csharp:
+  - uid: Quantum.ISignalAuraIncreased.AuraIncreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+    name: AuraIncreased
+    href: Quantum.ISignalAuraIncreased.html#Quantum_ISignalAuraIncreased_AuraIncreased_Quantum_Frame_Quantum_EntityRef_System_Int32_System_Int32_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalAuraIncreased.AuraIncreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+    name: AuraIncreased
+    href: Quantum.ISignalAuraIncreased.html#Quantum_ISignalAuraIncreased_AuraIncreased_Quantum_Frame_Quantum_EntityRef_System_Int32_System_Int32_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: rwby.AuraBurnoutSystem.AuraDecreased*
+  commentId: Overload:rwby.AuraBurnoutSystem.AuraDecreased
+  href: rwby.AuraBurnoutSystem.html#rwby_AuraBurnoutSystem_AuraDecreased_Quantum_Frame_Quantum_EntityRef_System_Int32_System_Int32_
+  name: AuraDecreased
+  nameWithType: AuraBurnoutSystem.AuraDecreased
+  fullName: rwby.AuraBurnoutSystem.AuraDecreased
+- uid: Quantum.ISignalAuraDecreased.AuraDecreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  commentId: M:Quantum.ISignalAuraDecreased.AuraDecreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+  parent: Quantum.ISignalAuraDecreased
+  isExternal: true
+  href: Quantum.ISignalAuraDecreased.html#Quantum_ISignalAuraDecreased_AuraDecreased_Quantum_Frame_Quantum_EntityRef_System_Int32_System_Int32_
+  name: AuraDecreased(Frame, EntityRef, int, int)
+  nameWithType: ISignalAuraDecreased.AuraDecreased(Frame, EntityRef, int, int)
+  fullName: Quantum.ISignalAuraDecreased.AuraDecreased(Quantum.Frame, Quantum.EntityRef, int, int)
+  nameWithType.vb: ISignalAuraDecreased.AuraDecreased(Frame, EntityRef, Integer, Integer)
+  fullName.vb: Quantum.ISignalAuraDecreased.AuraDecreased(Quantum.Frame, Quantum.EntityRef, Integer, Integer)
+  name.vb: AuraDecreased(Frame, EntityRef, Integer, Integer)
+  spec.csharp:
+  - uid: Quantum.ISignalAuraDecreased.AuraDecreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+    name: AuraDecreased
+    href: Quantum.ISignalAuraDecreased.html#Quantum_ISignalAuraDecreased_AuraDecreased_Quantum_Frame_Quantum_EntityRef_System_Int32_System_Int32_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalAuraDecreased.AuraDecreased(Quantum.Frame,Quantum.EntityRef,System.Int32,System.Int32)
+    name: AuraDecreased
+    href: Quantum.ISignalAuraDecreased.html#Quantum_ISignalAuraDecreased_AuraDecreased_Quantum_Frame_Quantum_EntityRef_System_Int32_System_Int32_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )

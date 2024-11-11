@@ -1,0 +1,512 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.QuantumReplayFile
+  commentId: T:Quantum.QuantumReplayFile
+  id: QuantumReplayFile
+  parent: Quantum
+  children:
+  - Quantum.QuantumReplayFile.AssetDatabaseData
+  - Quantum.QuantumReplayFile.Checksums
+  - Quantum.QuantumReplayFile.CreateInputProvider
+  - Quantum.QuantumReplayFile.DeterministicConfig
+  - Quantum.QuantumReplayFile.InitialFrameData
+  - Quantum.QuantumReplayFile.InitialTick
+  - Quantum.QuantumReplayFile.InputHistoryDeltaCompressed
+  - Quantum.QuantumReplayFile.InputHistoryLegacy
+  - Quantum.QuantumReplayFile.LastTick
+  - Quantum.QuantumReplayFile.RuntimeConfigData
+  langs:
+  - csharp
+  - vb
+  name: QuantumReplayFile
+  nameWithType: QuantumReplayFile
+  fullName: Quantum.QuantumReplayFile
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: QuantumReplayFile
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6347
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    A class that holds all relevant data to run a Quantum replay and can serialized in JSON.
+
+    A replay may contain an asset db for convenience, that should be omitted in production environments where files sizes are a concern.
+
+    A replay may contain recorded checksums, that can be verified during runtime as a development feature.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class QuantumReplayFile
+    content.vb: >-
+      <Serializable>
+
+      Public Class QuantumReplayFile
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Quantum.ReplayFile
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Quantum.QuantumReplayFile.InputHistoryDeltaCompressed
+  commentId: F:Quantum.QuantumReplayFile.InputHistoryDeltaCompressed
+  id: InputHistoryDeltaCompressed
+  parent: Quantum.QuantumReplayFile
+  langs:
+  - csharp
+  - vb
+  name: InputHistoryDeltaCompressed
+  nameWithType: QuantumReplayFile.InputHistoryDeltaCompressed
+  fullName: Quantum.QuantumReplayFile.InputHistoryDeltaCompressed
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InputHistoryDeltaCompressed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6352
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Delta compressed binary input history, this is the same that is send over replay webhooks for example.
+  example: []
+  syntax:
+    content: public QuantumJsonFriendlyDataBlob InputHistoryDeltaCompressed
+    return:
+      type: Quantum.QuantumJsonFriendlyDataBlob
+    content.vb: Public InputHistoryDeltaCompressed As QuantumJsonFriendlyDataBlob
+- uid: Quantum.QuantumReplayFile.InputHistoryLegacy
+  commentId: F:Quantum.QuantumReplayFile.InputHistoryLegacy
+  id: InputHistoryLegacy
+  parent: Quantum.QuantumReplayFile
+  langs:
+  - csharp
+  - vb
+  name: InputHistoryLegacy
+  nameWithType: QuantumReplayFile.InputHistoryLegacy
+  fullName: Quantum.QuantumReplayFile.InputHistoryLegacy
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InputHistoryLegacy
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6356
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Full verbose input used in Quantum 2.1, which is still functional, but has only fringe use cases.
+  example: []
+  syntax:
+    content: public DeterministicTickInputSet[] InputHistoryLegacy
+    return:
+      type: Photon.Deterministic.DeterministicTickInputSet[]
+    content.vb: Public InputHistoryLegacy As DeterministicTickInputSet()
+- uid: Quantum.QuantumReplayFile.RuntimeConfigData
+  commentId: F:Quantum.QuantumReplayFile.RuntimeConfigData
+  id: RuntimeConfigData
+  parent: Quantum.QuantumReplayFile
+  langs:
+  - csharp
+  - vb
+  name: RuntimeConfigData
+  nameWithType: QuantumReplayFile.RuntimeConfigData
+  fullName: Quantum.QuantumReplayFile.RuntimeConfigData
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RuntimeConfigData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6361
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Binary serialized RuntimeConfig.
+
+    Use AssetSerializer.ConfigToByteArray(runtimeConfig, compress: true)
+  example: []
+  syntax:
+    content: public QuantumJsonFriendlyDataBlob RuntimeConfigData
+    return:
+      type: Quantum.QuantumJsonFriendlyDataBlob
+    content.vb: Public RuntimeConfigData As QuantumJsonFriendlyDataBlob
+- uid: Quantum.QuantumReplayFile.DeterministicConfig
+  commentId: F:Quantum.QuantumReplayFile.DeterministicConfig
+  id: DeterministicConfig
+  parent: Quantum.QuantumReplayFile
+  langs:
+  - csharp
+  - vb
+  name: DeterministicConfig
+  nameWithType: QuantumReplayFile.DeterministicConfig
+  fullName: Quantum.QuantumReplayFile.DeterministicConfig
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeterministicConfig
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6365
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The session config.
+  example: []
+  syntax:
+    content: public DeterministicSessionConfig DeterministicConfig
+    return:
+      type: Photon.Deterministic.DeterministicSessionConfig
+    content.vb: Public DeterministicConfig As DeterministicSessionConfig
+- uid: Quantum.QuantumReplayFile.LastTick
+  commentId: F:Quantum.QuantumReplayFile.LastTick
+  id: LastTick
+  parent: Quantum.QuantumReplayFile
+  langs:
+  - csharp
+  - vb
+  name: LastTick
+  nameWithType: QuantumReplayFile.LastTick
+  fullName: Quantum.QuantumReplayFile.LastTick
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LastTick
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6369
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The last tick of the input.
+  example: []
+  syntax:
+    content: public int LastTick
+    return:
+      type: System.Int32
+    content.vb: Public LastTick As Integer
+- uid: Quantum.QuantumReplayFile.InitialTick
+  commentId: F:Quantum.QuantumReplayFile.InitialTick
+  id: InitialTick
+  parent: Quantum.QuantumReplayFile
+  langs:
+  - csharp
+  - vb
+  name: InitialTick
+  nameWithType: QuantumReplayFile.InitialTick
+  fullName: Quantum.QuantumReplayFile.InitialTick
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InitialTick
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6376
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The initial tick to start from, requires <xref href="Quantum.QuantumReplayFile.InitialFrameData" data-throw-if-not-resolved="false"></xref> to be set.
+  example: []
+  syntax:
+    content: public int InitialTick
+    return:
+      type: System.Int32
+    content.vb: Public InitialTick As Integer
+- uid: Quantum.QuantumReplayFile.InitialFrameData
+  commentId: F:Quantum.QuantumReplayFile.InitialFrameData
+  id: InitialFrameData
+  parent: Quantum.QuantumReplayFile
+  langs:
+  - csharp
+  - vb
+  name: InitialFrameData
+  nameWithType: QuantumReplayFile.InitialFrameData
+  fullName: Quantum.QuantumReplayFile.InitialFrameData
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InitialFrameData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6380
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Optional frame data to start the replay with. This is used for save games for example.
+  example: []
+  syntax:
+    content: public byte[] InitialFrameData
+    return:
+      type: System.Byte[]
+    content.vb: Public InitialFrameData As Byte()
+- uid: Quantum.QuantumReplayFile.Checksums
+  commentId: F:Quantum.QuantumReplayFile.Checksums
+  id: Checksums
+  parent: Quantum.QuantumReplayFile
+  langs:
+  - csharp
+  - vb
+  name: Checksums
+  nameWithType: QuantumReplayFile.Checksums
+  fullName: Quantum.QuantumReplayFile.Checksums
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Checksums
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6384
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Optional checksums. Omit this for replays in production environments.
+  example: []
+  syntax:
+    content: public ChecksumFile Checksums
+    return:
+      type: Quantum.ChecksumFile
+    content.vb: Public Checksums As ChecksumFile
+- uid: Quantum.QuantumReplayFile.AssetDatabaseData
+  commentId: F:Quantum.QuantumReplayFile.AssetDatabaseData
+  id: AssetDatabaseData
+  parent: Quantum.QuantumReplayFile
+  langs:
+  - csharp
+  - vb
+  name: AssetDatabaseData
+  nameWithType: QuantumReplayFile.AssetDatabaseData
+  fullName: Quantum.QuantumReplayFile.AssetDatabaseData
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AssetDatabaseData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6389
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Optional serialized asset database. Omit this for replays in production environments.
+
+    Use AssetSerializer.SerializeAssets(stream, ResourceManager.LoadAllAssets().ToArray()
+  example: []
+  syntax:
+    content: public QuantumJsonFriendlyDataBlob AssetDatabaseData
+    return:
+      type: Quantum.QuantumJsonFriendlyDataBlob
+    content.vb: Public AssetDatabaseData As QuantumJsonFriendlyDataBlob
+- uid: Quantum.QuantumReplayFile.CreateInputProvider
+  commentId: M:Quantum.QuantumReplayFile.CreateInputProvider
+  id: CreateInputProvider
+  parent: Quantum.QuantumReplayFile
+  langs:
+  - csharp
+  - vb
+  name: CreateInputProvider()
+  nameWithType: QuantumReplayFile.CreateInputProvider()
+  fullName: Quantum.QuantumReplayFile.CreateInputProvider()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateInputProvider
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6395
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Helper method to create an input provider based on the combination of the saved input history configurations.
+  example: []
+  syntax:
+    content: public IDeterministicReplayProvider CreateInputProvider()
+    return:
+      type: Photon.Deterministic.IDeterministicReplayProvider
+      description: Replay input provider to play back the input. Use this in <xref href="Quantum.SessionRunner.Arguments.ReplayProvider" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function CreateInputProvider() As IDeterministicReplayProvider
+  overload: Quantum.QuantumReplayFile.CreateInputProvider*
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.QuantumJsonFriendlyDataBlob
+  commentId: T:Quantum.QuantumJsonFriendlyDataBlob
+  parent: Quantum
+  href: Quantum.QuantumJsonFriendlyDataBlob.html
+  name: QuantumJsonFriendlyDataBlob
+  nameWithType: QuantumJsonFriendlyDataBlob
+  fullName: Quantum.QuantumJsonFriendlyDataBlob
+- uid: Photon.Deterministic.DeterministicTickInputSet[]
+  isExternal: true
+  name: DeterministicTickInputSet[]
+  nameWithType: DeterministicTickInputSet[]
+  fullName: Photon.Deterministic.DeterministicTickInputSet[]
+  nameWithType.vb: DeterministicTickInputSet()
+  fullName.vb: Photon.Deterministic.DeterministicTickInputSet()
+  name.vb: DeterministicTickInputSet()
+  spec.csharp:
+  - uid: Photon.Deterministic.DeterministicTickInputSet
+    name: DeterministicTickInputSet
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Photon.Deterministic.DeterministicTickInputSet
+    name: DeterministicTickInputSet
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Photon.Deterministic.DeterministicSessionConfig
+  commentId: T:Photon.Deterministic.DeterministicSessionConfig
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicSessionConfig
+  nameWithType: DeterministicSessionConfig
+  fullName: Photon.Deterministic.DeterministicSessionConfig
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.QuantumReplayFile.InitialFrameData
+  commentId: F:Quantum.QuantumReplayFile.InitialFrameData
+  parent: Quantum.QuantumReplayFile
+  href: Quantum.QuantumReplayFile.html#Quantum_QuantumReplayFile_InitialFrameData
+  name: InitialFrameData
+  nameWithType: QuantumReplayFile.InitialFrameData
+  fullName: Quantum.QuantumReplayFile.InitialFrameData
+- uid: Quantum.QuantumReplayFile
+  commentId: T:Quantum.QuantumReplayFile
+  parent: Quantum
+  href: Quantum.QuantumReplayFile.html
+  name: QuantumReplayFile
+  nameWithType: QuantumReplayFile
+  fullName: Quantum.QuantumReplayFile
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: Quantum.ChecksumFile
+  commentId: T:Quantum.ChecksumFile
+  parent: Quantum
+  href: Quantum.ChecksumFile.html
+  name: ChecksumFile
+  nameWithType: ChecksumFile
+  fullName: Quantum.ChecksumFile
+- uid: Quantum.SessionRunner.Arguments.ReplayProvider
+  commentId: F:Quantum.SessionRunner.Arguments.ReplayProvider
+  href: Quantum.SessionRunner.Arguments.html#Quantum_SessionRunner_Arguments_ReplayProvider
+  name: ReplayProvider
+  nameWithType: SessionRunner.Arguments.ReplayProvider
+  fullName: Quantum.SessionRunner.Arguments.ReplayProvider
+- uid: Quantum.QuantumReplayFile.CreateInputProvider*
+  commentId: Overload:Quantum.QuantumReplayFile.CreateInputProvider
+  href: Quantum.QuantumReplayFile.html#Quantum_QuantumReplayFile_CreateInputProvider
+  name: CreateInputProvider
+  nameWithType: QuantumReplayFile.CreateInputProvider
+  fullName: Quantum.QuantumReplayFile.CreateInputProvider
+- uid: Photon.Deterministic.IDeterministicReplayProvider
+  commentId: T:Photon.Deterministic.IDeterministicReplayProvider
+  parent: Photon.Deterministic
+  isExternal: true
+  name: IDeterministicReplayProvider
+  nameWithType: IDeterministicReplayProvider
+  fullName: Photon.Deterministic.IDeterministicReplayProvider

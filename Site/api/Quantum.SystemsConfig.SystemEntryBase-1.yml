@@ -1,0 +1,457 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.SystemsConfig.SystemEntryBase`1
+  commentId: T:Quantum.SystemsConfig.SystemEntryBase`1
+  id: SystemsConfig.SystemEntryBase`1
+  parent: Quantum
+  children:
+  - Quantum.SystemsConfig.SystemEntryBase`1.AddSystem``1(System.String,System.Boolean)
+  - Quantum.SystemsConfig.SystemEntryBase`1.Children
+  - Quantum.SystemsConfig.SystemEntryBase`1.GetChildren
+  langs:
+  - csharp
+  - vb
+  name: SystemsConfig.SystemEntryBase<T>
+  nameWithType: SystemsConfig.SystemEntryBase<T>
+  fullName: Quantum.SystemsConfig.SystemEntryBase<T>
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SystemsConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SystemEntryBase
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SystemsConfig.cs
+    startLine: 47
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: To prevent indefinite recursion in Unity serialization system hierarchies are limited to 3 levels.
+  example: []
+  syntax:
+    content: 'public abstract class SystemsConfig.SystemEntryBase<T> : SystemsConfig.SystemEntryBase where T : SystemsConfig.SystemEntryBase, new()'
+    typeParameters:
+    - id: T
+      description: Type of the children
+    content.vb: Public MustInherit Class SystemsConfig.SystemEntryBase(Of T As {SystemsConfig.SystemEntryBase, New}) Inherits SystemsConfig.SystemEntryBase
+  inheritance:
+  - System.Object
+  - Quantum.SystemsConfig.SystemEntryBase
+  derivedClasses:
+  - Quantum.SystemsConfig.SubSystemEntry
+  - Quantum.SystemsConfig.SystemEntry
+  inheritedMembers:
+  - Quantum.SystemsConfig.SystemEntryBase.SystemType
+  - Quantum.SystemsConfig.SystemEntryBase.SystemName
+  - Quantum.SystemsConfig.SystemEntryBase.StartDisabled
+  nameWithType.vb: SystemsConfig.SystemEntryBase(Of T)
+  fullName.vb: Quantum.SystemsConfig.SystemEntryBase(Of T)
+  name.vb: SystemsConfig.SystemEntryBase(Of T)
+- uid: Quantum.SystemsConfig.SystemEntryBase`1.Children
+  commentId: F:Quantum.SystemsConfig.SystemEntryBase`1.Children
+  id: Children
+  parent: Quantum.SystemsConfig.SystemEntryBase`1
+  langs:
+  - csharp
+  - vb
+  name: Children
+  nameWithType: SystemsConfig.SystemEntryBase<T>.Children
+  fullName: Quantum.SystemsConfig.SystemEntryBase<T>.Children
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SystemsConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Children
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SystemsConfig.cs
+    startLine: 51
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Child systems.
+  example: []
+  syntax:
+    content: public List<T> Children
+    return:
+      type: System.Collections.Generic.List{{T}}
+    content.vb: Public Children As List(Of T)
+  nameWithType.vb: SystemsConfig.SystemEntryBase(Of T).Children
+  fullName.vb: Quantum.SystemsConfig.SystemEntryBase(Of T).Children
+- uid: Quantum.SystemsConfig.SystemEntryBase`1.GetChildren
+  commentId: M:Quantum.SystemsConfig.SystemEntryBase`1.GetChildren
+  id: GetChildren
+  parent: Quantum.SystemsConfig.SystemEntryBase`1
+  langs:
+  - csharp
+  - vb
+  name: GetChildren()
+  nameWithType: SystemsConfig.SystemEntryBase<T>.GetChildren()
+  fullName: Quantum.SystemsConfig.SystemEntryBase<T>.GetChildren()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SystemsConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetChildren
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SystemsConfig.cs
+    startLine: 56
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Return child systems.
+  example: []
+  syntax:
+    content: public override IReadOnlyList<SystemsConfig.SystemEntryBase> GetChildren()
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Quantum.SystemsConfig.SystemEntryBase}
+      description: List of child systems
+    content.vb: Public Overrides Function GetChildren() As IReadOnlyList(Of SystemsConfig.SystemEntryBase)
+  overridden: Quantum.SystemsConfig.SystemEntryBase.GetChildren
+  overload: Quantum.SystemsConfig.SystemEntryBase`1.GetChildren*
+  nameWithType.vb: SystemsConfig.SystemEntryBase(Of T).GetChildren()
+  fullName.vb: Quantum.SystemsConfig.SystemEntryBase(Of T).GetChildren()
+- uid: Quantum.SystemsConfig.SystemEntryBase`1.AddSystem``1(System.String,System.Boolean)
+  commentId: M:Quantum.SystemsConfig.SystemEntryBase`1.AddSystem``1(System.String,System.Boolean)
+  id: AddSystem``1(System.String,System.Boolean)
+  parent: Quantum.SystemsConfig.SystemEntryBase`1
+  langs:
+  - csharp
+  - vb
+  name: AddSystem<TSystem>(string, bool)
+  nameWithType: SystemsConfig.SystemEntryBase<T>.AddSystem<TSystem>(string, bool)
+  fullName: Quantum.SystemsConfig.SystemEntryBase<T>.AddSystem<TSystem>(string, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SystemsConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddSystem
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SystemsConfig.cs
+    startLine: 65
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Add a child system.
+  example: []
+  syntax:
+    content: 'public T AddSystem<TSystem>(string name = null, bool enabled = true) where TSystem : SystemBase'
+    parameters:
+    - id: name
+      type: System.String
+      description: System name
+    - id: enabled
+      type: System.Boolean
+      description: Start enabled
+    typeParameters:
+    - id: TSystem
+      description: System type
+    return:
+      type: '{T}'
+      description: The created child system entry
+    content.vb: Public Function AddSystem(Of TSystem As SystemBase)(name As String = Nothing, enabled As Boolean = True) As T
+  overload: Quantum.SystemsConfig.SystemEntryBase`1.AddSystem*
+  nameWithType.vb: SystemsConfig.SystemEntryBase(Of T).AddSystem(Of TSystem)(String, Boolean)
+  fullName.vb: Quantum.SystemsConfig.SystemEntryBase(Of T).AddSystem(Of TSystem)(String, Boolean)
+  name.vb: AddSystem(Of TSystem)(String, Boolean)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.SystemsConfig.SystemEntryBase
+  commentId: T:Quantum.SystemsConfig.SystemEntryBase
+  parent: Quantum
+  href: Quantum.SystemsConfig.html
+  name: SystemsConfig.SystemEntryBase
+  nameWithType: SystemsConfig.SystemEntryBase
+  fullName: Quantum.SystemsConfig.SystemEntryBase
+  spec.csharp:
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: .
+  - uid: Quantum.SystemsConfig.SystemEntryBase
+    name: SystemEntryBase
+    href: Quantum.SystemsConfig.SystemEntryBase.html
+  spec.vb:
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: .
+  - uid: Quantum.SystemsConfig.SystemEntryBase
+    name: SystemEntryBase
+    href: Quantum.SystemsConfig.SystemEntryBase.html
+- uid: Quantum.SystemsConfig.SystemEntryBase.SystemType
+  commentId: F:Quantum.SystemsConfig.SystemEntryBase.SystemType
+  parent: Quantum.SystemsConfig.SystemEntryBase
+  href: Quantum.SystemsConfig.SystemEntryBase.html#Quantum_SystemsConfig_SystemEntryBase_SystemType
+  name: SystemType
+  nameWithType: SystemsConfig.SystemEntryBase.SystemType
+  fullName: Quantum.SystemsConfig.SystemEntryBase.SystemType
+- uid: Quantum.SystemsConfig.SystemEntryBase.SystemName
+  commentId: F:Quantum.SystemsConfig.SystemEntryBase.SystemName
+  parent: Quantum.SystemsConfig.SystemEntryBase
+  href: Quantum.SystemsConfig.SystemEntryBase.html#Quantum_SystemsConfig_SystemEntryBase_SystemName
+  name: SystemName
+  nameWithType: SystemsConfig.SystemEntryBase.SystemName
+  fullName: Quantum.SystemsConfig.SystemEntryBase.SystemName
+- uid: Quantum.SystemsConfig.SystemEntryBase.StartDisabled
+  commentId: F:Quantum.SystemsConfig.SystemEntryBase.StartDisabled
+  parent: Quantum.SystemsConfig.SystemEntryBase
+  href: Quantum.SystemsConfig.SystemEntryBase.html#Quantum_SystemsConfig_SystemEntryBase_StartDisabled
+  name: StartDisabled
+  nameWithType: SystemsConfig.SystemEntryBase.StartDisabled
+  fullName: Quantum.SystemsConfig.SystemEntryBase.StartDisabled
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Quantum.SystemsConfig.SystemEntryBase.GetChildren
+  commentId: M:Quantum.SystemsConfig.SystemEntryBase.GetChildren
+  parent: Quantum.SystemsConfig.SystemEntryBase
+  href: Quantum.SystemsConfig.SystemEntryBase.html#Quantum_SystemsConfig_SystemEntryBase_GetChildren
+  name: GetChildren()
+  nameWithType: SystemsConfig.SystemEntryBase.GetChildren()
+  fullName: Quantum.SystemsConfig.SystemEntryBase.GetChildren()
+  spec.csharp:
+  - uid: Quantum.SystemsConfig.SystemEntryBase.GetChildren
+    name: GetChildren
+    href: Quantum.SystemsConfig.SystemEntryBase.html#Quantum_SystemsConfig_SystemEntryBase_GetChildren
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemsConfig.SystemEntryBase.GetChildren
+    name: GetChildren
+    href: Quantum.SystemsConfig.SystemEntryBase.html#Quantum_SystemsConfig_SystemEntryBase_GetChildren
+  - name: (
+  - name: )
+- uid: Quantum.SystemsConfig.SystemEntryBase`1.GetChildren*
+  commentId: Overload:Quantum.SystemsConfig.SystemEntryBase`1.GetChildren
+  href: Quantum.SystemsConfig.SystemEntryBase-1.html#Quantum_SystemsConfig_SystemEntryBase_1_GetChildren
+  name: GetChildren
+  nameWithType: SystemsConfig.SystemEntryBase<T>.GetChildren
+  fullName: Quantum.SystemsConfig.SystemEntryBase<T>.GetChildren
+  nameWithType.vb: SystemsConfig.SystemEntryBase(Of T).GetChildren
+  fullName.vb: Quantum.SystemsConfig.SystemEntryBase(Of T).GetChildren
+- uid: System.Collections.Generic.IReadOnlyList{Quantum.SystemsConfig.SystemEntryBase}
+  commentId: T:System.Collections.Generic.IReadOnlyList{Quantum.SystemsConfig.SystemEntryBase}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<SystemsConfig.SystemEntryBase>
+  nameWithType: IReadOnlyList<SystemsConfig.SystemEntryBase>
+  fullName: System.Collections.Generic.IReadOnlyList<Quantum.SystemsConfig.SystemEntryBase>
+  nameWithType.vb: IReadOnlyList(Of SystemsConfig.SystemEntryBase)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of Quantum.SystemsConfig.SystemEntryBase)
+  name.vb: IReadOnlyList(Of SystemsConfig.SystemEntryBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: .
+  - uid: Quantum.SystemsConfig.SystemEntryBase
+    name: SystemEntryBase
+    href: Quantum.SystemsConfig.SystemEntryBase.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: .
+  - uid: Quantum.SystemsConfig.SystemEntryBase
+    name: SystemEntryBase
+    href: Quantum.SystemsConfig.SystemEntryBase.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.SystemsConfig.SystemEntryBase`1.AddSystem*
+  commentId: Overload:Quantum.SystemsConfig.SystemEntryBase`1.AddSystem
+  href: Quantum.SystemsConfig.SystemEntryBase-1.html#Quantum_SystemsConfig_SystemEntryBase_1_AddSystem__1_System_String_System_Boolean_
+  name: AddSystem
+  nameWithType: SystemsConfig.SystemEntryBase<T>.AddSystem
+  fullName: Quantum.SystemsConfig.SystemEntryBase<T>.AddSystem
+  nameWithType.vb: SystemsConfig.SystemEntryBase(Of T).AddSystem
+  fullName.vb: Quantum.SystemsConfig.SystemEntryBase(Of T).AddSystem
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

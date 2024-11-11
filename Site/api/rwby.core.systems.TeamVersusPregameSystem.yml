@@ -1,0 +1,600 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.core.systems.TeamVersusPregameSystem
+  commentId: T:rwby.core.systems.TeamVersusPregameSystem
+  id: TeamVersusPregameSystem
+  parent: rwby.core.systems
+  children:
+  - rwby.core.systems.TeamVersusPregameSystem.OnEnabled(Quantum.Frame)
+  - rwby.core.systems.TeamVersusPregameSystem.OnPlayerAdded(Quantum.Frame,Quantum.PlayerRef,System.Boolean)
+  - rwby.core.systems.TeamVersusPregameSystem.StartEnabled
+  langs:
+  - csharp
+  - vb
+  name: TeamVersusPregameSystem
+  nameWithType: TeamVersusPregameSystem
+  fullName: rwby.core.systems.TeamVersusPregameSystem
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/TeamVersus/TeamVersusPregameSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TeamVersusPregameSystem
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/TeamVersus/TeamVersusPregameSystem.cs
+    startLine: 6
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems
+  syntax:
+    content: >-
+      [Preserve]
+
+      public class TeamVersusPregameSystem : SystemSignalsOnly, IGameStateGroupPregame, IGameStateGroup, ISignalOnPlayerAdded, ISignal
+    content.vb: >-
+      <Preserve>
+
+      Public Class TeamVersusPregameSystem Inherits SystemSignalsOnly Implements IGameStateGroupPregame, IGameStateGroup, ISignalOnPlayerAdded, ISignal
+  inheritance:
+  - System.Object
+  - Quantum.SystemBase
+  - Quantum.SystemSignalsOnly
+  implements:
+  - Quantum.IGameStateGroupPregame
+  - Quantum.IGameStateGroup
+  - Quantum.ISignalOnPlayerAdded
+  - Quantum.ISignal
+  inheritedMembers:
+  - Quantum.SystemSignalsOnly.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  - Quantum.SystemBase.RuntimeIndex
+  - Quantum.SystemBase.ParentSystem
+  - Quantum.SystemBase.ChildSystems
+  - Quantum.SystemBase.Hierarchy
+  - Quantum.SystemBase.OnInit(Quantum.Frame)
+  - Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  attributes:
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
+- uid: rwby.core.systems.TeamVersusPregameSystem.StartEnabled
+  commentId: P:rwby.core.systems.TeamVersusPregameSystem.StartEnabled
+  id: StartEnabled
+  parent: rwby.core.systems.TeamVersusPregameSystem
+  langs:
+  - csharp
+  - vb
+  name: StartEnabled
+  nameWithType: TeamVersusPregameSystem.StartEnabled
+  fullName: rwby.core.systems.TeamVersusPregameSystem.StartEnabled
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/TeamVersus/TeamVersusPregameSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StartEnabled
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/TeamVersus/TeamVersusPregameSystem.cs
+    startLine: 9
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems
+  summary: Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the simulation should start with this system enabled.
+  example: []
+  syntax:
+    content: public override bool StartEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Property StartEnabled As Boolean
+  overridden: Quantum.SystemBase.StartEnabled
+  overload: rwby.core.systems.TeamVersusPregameSystem.StartEnabled*
+- uid: rwby.core.systems.TeamVersusPregameSystem.OnEnabled(Quantum.Frame)
+  commentId: M:rwby.core.systems.TeamVersusPregameSystem.OnEnabled(Quantum.Frame)
+  id: OnEnabled(Quantum.Frame)
+  parent: rwby.core.systems.TeamVersusPregameSystem
+  langs:
+  - csharp
+  - vb
+  name: OnEnabled(Frame)
+  nameWithType: TeamVersusPregameSystem.OnEnabled(Frame)
+  fullName: rwby.core.systems.TeamVersusPregameSystem.OnEnabled(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/TeamVersus/TeamVersusPregameSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnEnabled
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/TeamVersus/TeamVersusPregameSystem.cs
+    startLine: 11
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems
+  summary: >-
+    Is called when the system was enabled for example after calling <xref href="Quantum.Frame.SystemEnable%60%601" data-throw-if-not-resolved="false"></xref> 
+
+    or during <xref href="Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public override void OnEnabled(Frame f)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The referenced frame.
+    content.vb: Public Overrides Sub OnEnabled(f As Frame)
+  overridden: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  overload: rwby.core.systems.TeamVersusPregameSystem.OnEnabled*
+- uid: rwby.core.systems.TeamVersusPregameSystem.OnPlayerAdded(Quantum.Frame,Quantum.PlayerRef,System.Boolean)
+  commentId: M:rwby.core.systems.TeamVersusPregameSystem.OnPlayerAdded(Quantum.Frame,Quantum.PlayerRef,System.Boolean)
+  id: OnPlayerAdded(Quantum.Frame,Quantum.PlayerRef,System.Boolean)
+  parent: rwby.core.systems.TeamVersusPregameSystem
+  langs:
+  - csharp
+  - vb
+  name: OnPlayerAdded(Frame, PlayerRef, bool)
+  nameWithType: TeamVersusPregameSystem.OnPlayerAdded(Frame, PlayerRef, bool)
+  fullName: rwby.core.systems.TeamVersusPregameSystem.OnPlayerAdded(Quantum.Frame, Quantum.PlayerRef, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/TeamVersus/TeamVersusPregameSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnPlayerAdded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/TeamVersus/TeamVersusPregameSystem.cs
+    startLine: 17
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems
+  summary: >-
+    This signal is called when a player was successfully added to the simulation 
+
+    and the server accepted the RuntimePlayer data.
+  example: []
+  syntax:
+    content: public void OnPlayerAdded(Frame f, PlayerRef player, bool firstTime)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: player
+      type: Quantum.PlayerRef
+      description: The player that was added.
+    - id: firstTime
+      type: System.Boolean
+      description: The first time that this player ref was assigned to a player at all. When firstTime is false the player ref is being reused by a different player. See documentation.
+    content.vb: Public Sub OnPlayerAdded(f As Frame, player As PlayerRef, firstTime As Boolean)
+  overload: rwby.core.systems.TeamVersusPregameSystem.OnPlayerAdded*
+  implements:
+  - Quantum.ISignalOnPlayerAdded.OnPlayerAdded(Quantum.Frame,Quantum.PlayerRef,System.Boolean)
+  nameWithType.vb: TeamVersusPregameSystem.OnPlayerAdded(Frame, PlayerRef, Boolean)
+  fullName.vb: rwby.core.systems.TeamVersusPregameSystem.OnPlayerAdded(Quantum.Frame, Quantum.PlayerRef, Boolean)
+  name.vb: OnPlayerAdded(Frame, PlayerRef, Boolean)
+references:
+- uid: rwby.core.systems
+  commentId: N:rwby.core.systems
+  href: rwby.html
+  name: rwby.core.systems
+  nameWithType: rwby.core.systems
+  fullName: rwby.core.systems
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.systems
+    name: systems
+    href: rwby.core.systems.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.systems
+    name: systems
+    href: rwby.core.systems.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.SystemBase
+  commentId: T:Quantum.SystemBase
+  parent: Quantum
+  href: Quantum.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: Quantum.SystemBase
+- uid: Quantum.SystemSignalsOnly
+  commentId: T:Quantum.SystemSignalsOnly
+  parent: Quantum
+  href: Quantum.SystemSignalsOnly.html
+  name: SystemSignalsOnly
+  nameWithType: SystemSignalsOnly
+  fullName: Quantum.SystemSignalsOnly
+- uid: Quantum.IGameStateGroupPregame
+  commentId: T:Quantum.IGameStateGroupPregame
+  parent: Quantum
+  href: Quantum.IGameStateGroupPregame.html
+  name: IGameStateGroupPregame
+  nameWithType: IGameStateGroupPregame
+  fullName: Quantum.IGameStateGroupPregame
+- uid: Quantum.IGameStateGroup
+  commentId: T:Quantum.IGameStateGroup
+  parent: Quantum
+  href: Quantum.IGameStateGroup.html
+  name: IGameStateGroup
+  nameWithType: IGameStateGroup
+  fullName: Quantum.IGameStateGroup
+- uid: Quantum.ISignalOnPlayerAdded
+  commentId: T:Quantum.ISignalOnPlayerAdded
+  parent: Quantum
+  href: Quantum.ISignalOnPlayerAdded.html
+  name: ISignalOnPlayerAdded
+  nameWithType: ISignalOnPlayerAdded
+  fullName: Quantum.ISignalOnPlayerAdded
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.SystemSignalsOnly.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemSignalsOnly.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemSignalsOnly
+  isExternal: true
+  href: Quantum.SystemSignalsOnly.html#Quantum_SystemSignalsOnly_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: SystemSignalsOnly.Schedule(Frame, TaskHandle)
+  fullName: Quantum.SystemSignalsOnly.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemSignalsOnly.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemSignalsOnly.html#Quantum_SystemSignalsOnly_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemSignalsOnly.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemSignalsOnly.html#Quantum_SystemSignalsOnly_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemBase.RuntimeIndex
+  commentId: P:Quantum.SystemBase.RuntimeIndex
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_RuntimeIndex
+  name: RuntimeIndex
+  nameWithType: SystemBase.RuntimeIndex
+  fullName: Quantum.SystemBase.RuntimeIndex
+- uid: Quantum.SystemBase.ParentSystem
+  commentId: P:Quantum.SystemBase.ParentSystem
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ParentSystem
+  name: ParentSystem
+  nameWithType: SystemBase.ParentSystem
+  fullName: Quantum.SystemBase.ParentSystem
+- uid: Quantum.SystemBase.ChildSystems
+  commentId: P:Quantum.SystemBase.ChildSystems
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ChildSystems
+  name: ChildSystems
+  nameWithType: SystemBase.ChildSystems
+  fullName: Quantum.SystemBase.ChildSystems
+- uid: Quantum.SystemBase.Hierarchy
+  commentId: P:Quantum.SystemBase.Hierarchy
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Hierarchy
+  name: Hierarchy
+  nameWithType: SystemBase.Hierarchy
+  fullName: Quantum.SystemBase.Hierarchy
+- uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnInit(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  name: OnInit(Frame)
+  nameWithType: SystemBase.OnInit(Frame)
+  fullName: Quantum.SystemBase.OnInit(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  name: OnDisabled(Frame)
+  nameWithType: SystemBase.OnDisabled(Frame)
+  fullName: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: OnSchedule(Frame, TaskHandle)
+  nameWithType: SystemBase.OnSchedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.OnSchedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.SystemBase.StartEnabled
+  commentId: P:Quantum.SystemBase.StartEnabled
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_StartEnabled
+  name: StartEnabled
+  nameWithType: SystemBase.StartEnabled
+  fullName: Quantum.SystemBase.StartEnabled
+- uid: rwby.core.systems.TeamVersusPregameSystem.StartEnabled*
+  commentId: Overload:rwby.core.systems.TeamVersusPregameSystem.StartEnabled
+  href: rwby.core.systems.TeamVersusPregameSystem.html#rwby_core_systems_TeamVersusPregameSystem_StartEnabled
+  name: StartEnabled
+  nameWithType: TeamVersusPregameSystem.StartEnabled
+  fullName: rwby.core.systems.TeamVersusPregameSystem.StartEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.Frame.SystemEnable``1
+  commentId: M:Quantum.Frame.SystemEnable``1
+  href: Quantum.Frame.html#Quantum_Frame_SystemEnable__1
+  name: SystemEnable<T>()
+  nameWithType: Frame.SystemEnable<T>()
+  fullName: Quantum.Frame.SystemEnable<T>()
+  nameWithType.vb: Frame.SystemEnable(Of T)()
+  fullName.vb: Quantum.Frame.SystemEnable(Of T)()
+  name.vb: SystemEnable(Of T)()
+  spec.csharp:
+  - uid: Quantum.Frame.SystemEnable``1
+    name: SystemEnable
+    href: Quantum.Frame.html#Quantum_Frame_SystemEnable__1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.Frame.SystemEnable``1
+    name: SystemEnable
+    href: Quantum.Frame.html#Quantum_Frame_SystemEnable__1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)
+  commentId: M:Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)
+  isExternal: true
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_InitSystems_Photon_Deterministic_DeterministicFrame_
+  name: InitSystems(DeterministicFrame)
+  nameWithType: QuantumGame.InitSystems(DeterministicFrame)
+  fullName: Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)
+  spec.csharp:
+  - uid: Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)
+    name: InitSystems
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_InitSystems_Photon_Deterministic_DeterministicFrame_
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)
+    name: InitSystems
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_InitSystems_Photon_Deterministic_DeterministicFrame_
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  name: OnEnabled(Frame)
+  nameWithType: SystemBase.OnEnabled(Frame)
+  fullName: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: rwby.core.systems.TeamVersusPregameSystem.OnEnabled*
+  commentId: Overload:rwby.core.systems.TeamVersusPregameSystem.OnEnabled
+  href: rwby.core.systems.TeamVersusPregameSystem.html#rwby_core_systems_TeamVersusPregameSystem_OnEnabled_Quantum_Frame_
+  name: OnEnabled
+  nameWithType: TeamVersusPregameSystem.OnEnabled
+  fullName: rwby.core.systems.TeamVersusPregameSystem.OnEnabled
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: rwby.core.systems.TeamVersusPregameSystem.OnPlayerAdded*
+  commentId: Overload:rwby.core.systems.TeamVersusPregameSystem.OnPlayerAdded
+  href: rwby.core.systems.TeamVersusPregameSystem.html#rwby_core_systems_TeamVersusPregameSystem_OnPlayerAdded_Quantum_Frame_Quantum_PlayerRef_System_Boolean_
+  name: OnPlayerAdded
+  nameWithType: TeamVersusPregameSystem.OnPlayerAdded
+  fullName: rwby.core.systems.TeamVersusPregameSystem.OnPlayerAdded
+- uid: Quantum.ISignalOnPlayerAdded.OnPlayerAdded(Quantum.Frame,Quantum.PlayerRef,System.Boolean)
+  commentId: M:Quantum.ISignalOnPlayerAdded.OnPlayerAdded(Quantum.Frame,Quantum.PlayerRef,System.Boolean)
+  parent: Quantum.ISignalOnPlayerAdded
+  isExternal: true
+  href: Quantum.ISignalOnPlayerAdded.html#Quantum_ISignalOnPlayerAdded_OnPlayerAdded_Quantum_Frame_Quantum_PlayerRef_System_Boolean_
+  name: OnPlayerAdded(Frame, PlayerRef, bool)
+  nameWithType: ISignalOnPlayerAdded.OnPlayerAdded(Frame, PlayerRef, bool)
+  fullName: Quantum.ISignalOnPlayerAdded.OnPlayerAdded(Quantum.Frame, Quantum.PlayerRef, bool)
+  nameWithType.vb: ISignalOnPlayerAdded.OnPlayerAdded(Frame, PlayerRef, Boolean)
+  fullName.vb: Quantum.ISignalOnPlayerAdded.OnPlayerAdded(Quantum.Frame, Quantum.PlayerRef, Boolean)
+  name.vb: OnPlayerAdded(Frame, PlayerRef, Boolean)
+  spec.csharp:
+  - uid: Quantum.ISignalOnPlayerAdded.OnPlayerAdded(Quantum.Frame,Quantum.PlayerRef,System.Boolean)
+    name: OnPlayerAdded
+    href: Quantum.ISignalOnPlayerAdded.html#Quantum_ISignalOnPlayerAdded_OnPlayerAdded_Quantum_Frame_Quantum_PlayerRef_System_Boolean_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnPlayerAdded.OnPlayerAdded(Quantum.Frame,Quantum.PlayerRef,System.Boolean)
+    name: OnPlayerAdded
+    href: Quantum.ISignalOnPlayerAdded.html#Quantum_ISignalOnPlayerAdded_OnPlayerAdded_Quantum_Frame_Quantum_PlayerRef_System_Boolean_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
+  parent: Quantum
+  isExternal: true
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef

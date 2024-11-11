@@ -13,6 +13,8 @@ items:
   - rwby.AddressablesSongDefinition
   - rwby.AddressablesSongDefinitionContainer
   - rwby.AudioListenerManager
+  - rwby.AuraBurnoutSystem
+  - rwby.AuraBurnoutSystem.Filter
   - rwby.BaseCommandListDefinition
   - rwby.BaseCommandListEntry
   - rwby.BaseCommandListEntryGrouping
@@ -103,8 +105,37 @@ items:
   fullName: rwby
   type: Namespace
   assemblies:
-  - rwby
+  - Quantum.Simulation
 references:
+- uid: rwby.AuraBurnoutSystem
+  commentId: T:rwby.AuraBurnoutSystem
+  href: rwby.AuraBurnoutSystem.html
+  name: AuraBurnoutSystem
+  nameWithType: AuraBurnoutSystem
+  fullName: rwby.AuraBurnoutSystem
+- uid: rwby.AuraBurnoutSystem.Filter
+  commentId: T:rwby.AuraBurnoutSystem.Filter
+  parent: rwby
+  href: rwby.AuraBurnoutSystem.html
+  name: AuraBurnoutSystem.Filter
+  nameWithType: AuraBurnoutSystem.Filter
+  fullName: rwby.AuraBurnoutSystem.Filter
+  spec.csharp:
+  - uid: rwby.AuraBurnoutSystem
+    name: AuraBurnoutSystem
+    href: rwby.AuraBurnoutSystem.html
+  - name: .
+  - uid: rwby.AuraBurnoutSystem.Filter
+    name: Filter
+    href: rwby.AuraBurnoutSystem.Filter.html
+  spec.vb:
+  - uid: rwby.AuraBurnoutSystem
+    name: AuraBurnoutSystem
+    href: rwby.AuraBurnoutSystem.html
+  - name: .
+  - uid: rwby.AuraBurnoutSystem.Filter
+    name: Filter
+    href: rwby.AuraBurnoutSystem.Filter.html
 - uid: rwby.NetworkMatchSessionHandler
   commentId: T:rwby.NetworkMatchSessionHandler
   parent: rwby
@@ -316,6 +347,7 @@ references:
   fullName: rwby.IClosableMenu
 - uid: rwby.IHUDElement
   commentId: T:rwby.IHUDElement
+  parent: rwby
   href: rwby.IHUDElement.html
   name: IHUDElement
   nameWithType: IHUDElement
@@ -808,6 +840,7 @@ references:
   fullName: rwby.AudioListenerManager
 - uid: rwby.IFighterDefinitionUser
   commentId: T:rwby.IFighterDefinitionUser
+  parent: rwby
   href: rwby.IFighterDefinitionUser.html
   name: IFighterDefinitionUser
   nameWithType: IFighterDefinitionUser

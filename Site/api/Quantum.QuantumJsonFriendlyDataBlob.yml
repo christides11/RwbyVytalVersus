@@ -1,0 +1,317 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.QuantumJsonFriendlyDataBlob
+  commentId: T:Quantum.QuantumJsonFriendlyDataBlob
+  id: QuantumJsonFriendlyDataBlob
+  parent: Quantum
+  children:
+  - Quantum.QuantumJsonFriendlyDataBlob.Base64
+  - Quantum.QuantumJsonFriendlyDataBlob.Binary
+  - Quantum.QuantumJsonFriendlyDataBlob.Decode
+  - Quantum.QuantumJsonFriendlyDataBlob.Encode(System.Byte[],System.Boolean,System.Boolean)
+  - Quantum.QuantumJsonFriendlyDataBlob.IsCompressed
+  langs:
+  - csharp
+  - vb
+  name: QuantumJsonFriendlyDataBlob
+  nameWithType: QuantumJsonFriendlyDataBlob
+  fullName: Quantum.QuantumJsonFriendlyDataBlob
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: QuantumJsonFriendlyDataBlob
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6262
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Wrapper around storing binary data in JSON to work around the problem that Unity JSON tools only serialize byte arrays verbosely.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class QuantumJsonFriendlyDataBlob
+    content.vb: >-
+      <Serializable>
+
+      Public Class QuantumJsonFriendlyDataBlob
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Quantum.QuantumInputHistoryData
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Binary
+  commentId: F:Quantum.QuantumJsonFriendlyDataBlob.Binary
+  id: Binary
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  langs:
+  - csharp
+  - vb
+  name: Binary
+  nameWithType: QuantumJsonFriendlyDataBlob.Binary
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Binary
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Binary
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6267
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The byte array is saved as is.
+  example: []
+  syntax:
+    content: public byte[] Binary
+    return:
+      type: System.Byte[]
+    content.vb: Public Binary As Byte()
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Base64
+  commentId: F:Quantum.QuantumJsonFriendlyDataBlob.Base64
+  id: Base64
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  langs:
+  - csharp
+  - vb
+  name: Base64
+  nameWithType: QuantumJsonFriendlyDataBlob.Base64
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Base64
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Base64
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6271
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The byte array is saved as Base64 text.
+  example: []
+  syntax:
+    content: public string Base64
+    return:
+      type: System.String
+    content.vb: Public Base64 As String
+- uid: Quantum.QuantumJsonFriendlyDataBlob.IsCompressed
+  commentId: F:Quantum.QuantumJsonFriendlyDataBlob.IsCompressed
+  id: IsCompressed
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  langs:
+  - csharp
+  - vb
+  name: IsCompressed
+  nameWithType: QuantumJsonFriendlyDataBlob.IsCompressed
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.IsCompressed
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IsCompressed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6275
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Both <xref href="Quantum.QuantumJsonFriendlyDataBlob.Binary" data-throw-if-not-resolved="false"></xref> and <xref href="Quantum.QuantumJsonFriendlyDataBlob.Base64" data-throw-if-not-resolved="false"></xref> can be GZip compressed.
+  example: []
+  syntax:
+    content: public bool IsCompressed
+    return:
+      type: System.Boolean
+    content.vb: Public IsCompressed As Boolean
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Decode
+  commentId: M:Quantum.QuantumJsonFriendlyDataBlob.Decode
+  id: Decode
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  langs:
+  - csharp
+  - vb
+  name: Decode()
+  nameWithType: QuantumJsonFriendlyDataBlob.Decode()
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Decode()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Decode
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6289
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Decode the byte[] array.
+
+    Based on the configuration will return the <xref href="Quantum.QuantumJsonFriendlyDataBlob.Binary" data-throw-if-not-resolved="false"></xref> (unzipped) or the <xref href="Quantum.QuantumJsonFriendlyDataBlob.Base64" data-throw-if-not-resolved="false"></xref> (decoded and unzipped).
+  example: []
+  syntax:
+    content: public byte[] Decode()
+    return:
+      type: System.Byte[]
+      description: Decoded data
+    content.vb: Public Function Decode() As Byte()
+  overload: Quantum.QuantumJsonFriendlyDataBlob.Decode*
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Encode(System.Byte[],System.Boolean,System.Boolean)
+  commentId: M:Quantum.QuantumJsonFriendlyDataBlob.Encode(System.Byte[],System.Boolean,System.Boolean)
+  id: Encode(System.Byte[],System.Boolean,System.Boolean)
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  langs:
+  - csharp
+  - vb
+  name: Encode(byte[], bool, bool)
+  nameWithType: QuantumJsonFriendlyDataBlob.Encode(byte[], bool, bool)
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Encode(byte[], bool, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Encode
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6310
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Encode a byte[].
+  example: []
+  syntax:
+    content: public static QuantumJsonFriendlyDataBlob Encode(byte[] data, bool isCompressed, bool asBase64String)
+    parameters:
+    - id: data
+      type: System.Byte[]
+      description: The data to encode
+    - id: isCompressed
+      type: System.Boolean
+      description: Is the data GZip compressed
+    - id: asBase64String
+      type: System.Boolean
+      description: Is the data converted to base64
+    return:
+      type: Quantum.QuantumJsonFriendlyDataBlob
+      description: Encoded data object
+    content.vb: Public Shared Function Encode(data As Byte(), isCompressed As Boolean, asBase64String As Boolean) As QuantumJsonFriendlyDataBlob
+  overload: Quantum.QuantumJsonFriendlyDataBlob.Encode*
+  nameWithType.vb: QuantumJsonFriendlyDataBlob.Encode(Byte(), Boolean, Boolean)
+  fullName.vb: Quantum.QuantumJsonFriendlyDataBlob.Encode(Byte(), Boolean, Boolean)
+  name.vb: Encode(Byte(), Boolean, Boolean)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Binary
+  commentId: F:Quantum.QuantumJsonFriendlyDataBlob.Binary
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Binary
+  name: Binary
+  nameWithType: QuantumJsonFriendlyDataBlob.Binary
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Binary
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Base64
+  commentId: F:Quantum.QuantumJsonFriendlyDataBlob.Base64
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Base64
+  name: Base64
+  nameWithType: QuantumJsonFriendlyDataBlob.Base64
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Base64
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.QuantumJsonFriendlyDataBlob
+  commentId: T:Quantum.QuantumJsonFriendlyDataBlob
+  parent: Quantum
+  href: Quantum.QuantumJsonFriendlyDataBlob.html
+  name: QuantumJsonFriendlyDataBlob
+  nameWithType: QuantumJsonFriendlyDataBlob
+  fullName: Quantum.QuantumJsonFriendlyDataBlob
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Decode*
+  commentId: Overload:Quantum.QuantumJsonFriendlyDataBlob.Decode
+  href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Decode
+  name: Decode
+  nameWithType: QuantumJsonFriendlyDataBlob.Decode
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Decode
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Encode*
+  commentId: Overload:Quantum.QuantumJsonFriendlyDataBlob.Encode
+  href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Encode_System_Byte___System_Boolean_System_Boolean_
+  name: Encode
+  nameWithType: QuantumJsonFriendlyDataBlob.Encode
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Encode

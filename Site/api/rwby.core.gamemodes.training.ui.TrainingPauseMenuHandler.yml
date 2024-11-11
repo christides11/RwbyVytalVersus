@@ -1,0 +1,625 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  commentId: T:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  id: TrainingPauseMenuHandler
+  parent: rwby.core.gamemodes.training.ui
+  children:
+  - rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.Open
+  - rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SwapSubmenu(rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType)
+  - rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.TryClose
+  - rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.basicSettingsHandler
+  - rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.currentSubmenu
+  - rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.dummySettingsHandler
+  - rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.environmentSettingsHandler
+  - rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.submenus
+  - rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.trainingHudHandler
+  langs:
+  - csharp
+  - vb
+  name: TrainingPauseMenuHandler
+  nameWithType: TrainingPauseMenuHandler
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TrainingPauseMenuHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training.ui
+  syntax:
+    content: 'public class TrainingPauseMenuHandler : MonoBehaviour'
+    content.vb: Public Class TrainingPauseMenuHandler Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.submenus
+  commentId: F:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.submenus
+  id: submenus
+  parent: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  langs:
+  - csharp
+  - vb
+  name: submenus
+  nameWithType: TrainingPauseMenuHandler.submenus
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.submenus
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: submenus
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training.ui
+  syntax:
+    content: public Dictionary<TrainingPauseMenuHandler.SubmenuType, MenuBase> submenus
+    return:
+      type: System.Collections.Generic.Dictionary{rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType,rwby.ui.MenuBase}
+    content.vb: Public submenus As Dictionary(Of TrainingPauseMenuHandler.SubmenuType, MenuBase)
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.trainingHudHandler
+  commentId: F:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.trainingHudHandler
+  id: trainingHudHandler
+  parent: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  langs:
+  - csharp
+  - vb
+  name: trainingHudHandler
+  nameWithType: TrainingPauseMenuHandler.trainingHudHandler
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.trainingHudHandler
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: trainingHudHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training.ui
+  syntax:
+    content: public TrainingHUDHandler trainingHudHandler
+    return:
+      type: rwby.core.gamemodes.training.TrainingHUDHandler
+    content.vb: Public trainingHudHandler As TrainingHUDHandler
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.currentSubmenu
+  commentId: F:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.currentSubmenu
+  id: currentSubmenu
+  parent: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  langs:
+  - csharp
+  - vb
+  name: currentSubmenu
+  nameWithType: TrainingPauseMenuHandler.currentSubmenu
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.currentSubmenu
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentSubmenu
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training.ui
+  syntax:
+    content: public TrainingPauseMenuHandler.SubmenuType currentSubmenu
+    return:
+      type: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType
+    content.vb: Public currentSubmenu As TrainingPauseMenuHandler.SubmenuType
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.basicSettingsHandler
+  commentId: F:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.basicSettingsHandler
+  id: basicSettingsHandler
+  parent: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  langs:
+  - csharp
+  - vb
+  name: basicSettingsHandler
+  nameWithType: TrainingPauseMenuHandler.basicSettingsHandler
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.basicSettingsHandler
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: basicSettingsHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training.ui
+  syntax:
+    content: public PauseMenuBasicSettingsHandler basicSettingsHandler
+    return:
+      type: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler
+    content.vb: Public basicSettingsHandler As PauseMenuBasicSettingsHandler
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.environmentSettingsHandler
+  commentId: F:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.environmentSettingsHandler
+  id: environmentSettingsHandler
+  parent: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  langs:
+  - csharp
+  - vb
+  name: environmentSettingsHandler
+  nameWithType: TrainingPauseMenuHandler.environmentSettingsHandler
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.environmentSettingsHandler
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: environmentSettingsHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training.ui
+  syntax:
+    content: public PauseMenuEnvironmentSettingsHandler environmentSettingsHandler
+    return:
+      type: rwby.core.gamemodes.training.ui.PauseMenuEnvironmentSettingsHandler
+    content.vb: Public environmentSettingsHandler As PauseMenuEnvironmentSettingsHandler
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.dummySettingsHandler
+  commentId: F:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.dummySettingsHandler
+  id: dummySettingsHandler
+  parent: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  langs:
+  - csharp
+  - vb
+  name: dummySettingsHandler
+  nameWithType: TrainingPauseMenuHandler.dummySettingsHandler
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.dummySettingsHandler
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: dummySettingsHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training.ui
+  syntax:
+    content: public PauseMenuDummySettingsHandler dummySettingsHandler
+    return:
+      type: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
+    content.vb: Public dummySettingsHandler As PauseMenuDummySettingsHandler
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.Open
+  commentId: M:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.Open
+  id: Open
+  parent: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  langs:
+  - csharp
+  - vb
+  name: Open()
+  nameWithType: TrainingPauseMenuHandler.Open()
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.Open()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Open
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+    startLine: 30
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training.ui
+  syntax:
+    content: public void Open()
+    content.vb: Public Sub Open()
+  overload: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.Open*
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.TryClose
+  commentId: M:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.TryClose
+  id: TryClose
+  parent: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  langs:
+  - csharp
+  - vb
+  name: TryClose()
+  nameWithType: TrainingPauseMenuHandler.TryClose()
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.TryClose()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryClose
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+    startLine: 36
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training.ui
+  syntax:
+    content: public bool TryClose()
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryClose() As Boolean
+  overload: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.TryClose*
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SwapSubmenu(rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType)
+  commentId: M:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SwapSubmenu(rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType)
+  id: SwapSubmenu(rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType)
+  parent: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+  langs:
+  - csharp
+  - vb
+  name: SwapSubmenu(SubmenuType)
+  nameWithType: TrainingPauseMenuHandler.SwapSubmenu(TrainingPauseMenuHandler.SubmenuType)
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SwapSubmenu(rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SwapSubmenu
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingPauseMenuHandler.cs
+    startLine: 43
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training.ui
+  syntax:
+    content: public void SwapSubmenu(TrainingPauseMenuHandler.SubmenuType submenu)
+    parameters:
+    - id: submenu
+      type: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType
+    content.vb: Public Sub SwapSubmenu(submenu As TrainingPauseMenuHandler.SubmenuType)
+  overload: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SwapSubmenu*
+references:
+- uid: rwby.core.gamemodes.training.ui
+  commentId: N:rwby.core.gamemodes.training.ui
+  href: rwby.html
+  name: rwby.core.gamemodes.training.ui
+  nameWithType: rwby.core.gamemodes.training.ui
+  fullName: rwby.core.gamemodes.training.ui
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.gamemodes
+    name: gamemodes
+    href: rwby.core.gamemodes.html
+  - name: .
+  - uid: rwby.core.gamemodes.training
+    name: training
+    href: rwby.core.gamemodes.training.html
+  - name: .
+  - uid: rwby.core.gamemodes.training.ui
+    name: ui
+    href: rwby.core.gamemodes.training.ui.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.gamemodes
+    name: gamemodes
+    href: rwby.core.gamemodes.html
+  - name: .
+  - uid: rwby.core.gamemodes.training
+    name: training
+    href: rwby.core.gamemodes.training.html
+  - name: .
+  - uid: rwby.core.gamemodes.training.ui
+    name: ui
+    href: rwby.core.gamemodes.training.ui.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Collections.Generic.Dictionary{rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType,rwby.ui.MenuBase}
+  commentId: T:System.Collections.Generic.Dictionary{rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType,rwby.ui.MenuBase}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TrainingPauseMenuHandler.SubmenuType, MenuBase>
+  nameWithType: Dictionary<TrainingPauseMenuHandler.SubmenuType, MenuBase>
+  fullName: System.Collections.Generic.Dictionary<rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType, rwby.ui.MenuBase>
+  nameWithType.vb: Dictionary(Of TrainingPauseMenuHandler.SubmenuType, MenuBase)
+  fullName.vb: System.Collections.Generic.Dictionary(Of rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType, rwby.ui.MenuBase)
+  name.vb: Dictionary(Of TrainingPauseMenuHandler.SubmenuType, MenuBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+    name: TrainingPauseMenuHandler
+    href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.html
+  - name: .
+  - uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType
+    name: SubmenuType
+    href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType.html
+  - name: ','
+  - name: " "
+  - uid: rwby.ui.MenuBase
+    name: MenuBase
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+    name: TrainingPauseMenuHandler
+    href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.html
+  - name: .
+  - uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType
+    name: SubmenuType
+    href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType.html
+  - name: ','
+  - name: " "
+  - uid: rwby.ui.MenuBase
+    name: MenuBase
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler
+  commentId: T:rwby.core.gamemodes.training.TrainingHUDHandler
+  parent: rwby.core.gamemodes.training
+  href: rwby.core.gamemodes.training.TrainingHUDHandler.html
+  name: TrainingHUDHandler
+  nameWithType: TrainingHUDHandler
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler
+- uid: rwby.core.gamemodes.training
+  commentId: N:rwby.core.gamemodes.training
+  href: rwby.html
+  name: rwby.core.gamemodes.training
+  nameWithType: rwby.core.gamemodes.training
+  fullName: rwby.core.gamemodes.training
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.gamemodes
+    name: gamemodes
+    href: rwby.core.gamemodes.html
+  - name: .
+  - uid: rwby.core.gamemodes.training
+    name: training
+    href: rwby.core.gamemodes.training.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.gamemodes
+    name: gamemodes
+    href: rwby.core.gamemodes.html
+  - name: .
+  - uid: rwby.core.gamemodes.training
+    name: training
+    href: rwby.core.gamemodes.training.html
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType
+  commentId: T:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType
+  parent: rwby.core.gamemodes.training.ui
+  href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.html
+  name: TrainingPauseMenuHandler.SubmenuType
+  nameWithType: TrainingPauseMenuHandler.SubmenuType
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType
+  spec.csharp:
+  - uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+    name: TrainingPauseMenuHandler
+    href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.html
+  - name: .
+  - uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType
+    name: SubmenuType
+    href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType.html
+  spec.vb:
+  - uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
+    name: TrainingPauseMenuHandler
+    href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.html
+  - name: .
+  - uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType
+    name: SubmenuType
+    href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType.html
+- uid: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler
+  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler
+  parent: rwby.core.gamemodes.training.ui
+  href: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.html
+  name: PauseMenuBasicSettingsHandler
+  nameWithType: PauseMenuBasicSettingsHandler
+  fullName: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler
+- uid: rwby.core.gamemodes.training.ui.PauseMenuEnvironmentSettingsHandler
+  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuEnvironmentSettingsHandler
+  parent: rwby.core.gamemodes.training.ui
+  href: rwby.core.gamemodes.training.ui.PauseMenuEnvironmentSettingsHandler.html
+  name: PauseMenuEnvironmentSettingsHandler
+  nameWithType: PauseMenuEnvironmentSettingsHandler
+  fullName: rwby.core.gamemodes.training.ui.PauseMenuEnvironmentSettingsHandler
+- uid: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
+  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
+  parent: rwby.core.gamemodes.training.ui
+  href: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.html
+  name: PauseMenuDummySettingsHandler
+  nameWithType: PauseMenuDummySettingsHandler
+  fullName: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.Open*
+  commentId: Overload:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.Open
+  href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.html#rwby_core_gamemodes_training_ui_TrainingPauseMenuHandler_Open
+  name: Open
+  nameWithType: TrainingPauseMenuHandler.Open
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.Open
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.TryClose*
+  commentId: Overload:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.TryClose
+  href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.html#rwby_core_gamemodes_training_ui_TrainingPauseMenuHandler_TryClose
+  name: TryClose
+  nameWithType: TrainingPauseMenuHandler.TryClose
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.TryClose
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SwapSubmenu*
+  commentId: Overload:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SwapSubmenu
+  href: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.html#rwby_core_gamemodes_training_ui_TrainingPauseMenuHandler_SwapSubmenu_rwby_core_gamemodes_training_ui_TrainingPauseMenuHandler_SubmenuType_
+  name: SwapSubmenu
+  nameWithType: TrainingPauseMenuHandler.SwapSubmenu
+  fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SwapSubmenu

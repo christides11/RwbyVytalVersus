@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.QuantumGame.FramesContainer
+  commentId: T:Quantum.QuantumGame.FramesContainer
+  id: QuantumGame.FramesContainer
+  parent: Quantum
+  children:
+  - Quantum.QuantumGame.FramesContainer.Predicted
+  - Quantum.QuantumGame.FramesContainer.PredictedPrevious
+  - Quantum.QuantumGame.FramesContainer.PreviousUpdatePredicted
+  - Quantum.QuantumGame.FramesContainer.Verified
+  langs:
+  - csharp
+  - vb
+  name: QuantumGame.FramesContainer
+  nameWithType: QuantumGame.FramesContainer
+  fullName: Quantum.QuantumGame.FramesContainer
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FramesContainer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2798
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Stores the different frames the simulation uses during one tick.
+  example: []
+  syntax:
+    content: public class QuantumGame.FramesContainer
+    content.vb: Public Class QuantumGame.FramesContainer
+  inheritance:
+  - System.Object
+- uid: Quantum.QuantumGame.FramesContainer.Verified
+  commentId: F:Quantum.QuantumGame.FramesContainer.Verified
+  id: Verified
+  parent: Quantum.QuantumGame.FramesContainer
+  langs:
+  - csharp
+  - vb
+  name: Verified
+  nameWithType: QuantumGame.FramesContainer.Verified
+  fullName: Quantum.QuantumGame.FramesContainer.Verified
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Verified
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2803
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Quick accessor to the forward-only verified data (simulated with confirmed inputs from server in online games). 
+
+    Can be used as source of truth, as this does not include predicted data.
+  example: []
+  syntax:
+    content: public Frame Verified
+    return:
+      type: Quantum.Frame
+    content.vb: Public Verified As Frame
+- uid: Quantum.QuantumGame.FramesContainer.Predicted
+  commentId: F:Quantum.QuantumGame.FramesContainer.Predicted
+  id: Predicted
+  parent: Quantum.QuantumGame.FramesContainer
+  langs:
+  - csharp
+  - vb
+  name: Predicted
+  nameWithType: QuantumGame.FramesContainer.Predicted
+  fullName: Quantum.QuantumGame.FramesContainer.Predicted
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Predicted
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2807
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Quick accessor to the latest locally predicted copy of the game state.
+  example: []
+  syntax:
+    content: public Frame Predicted
+    return:
+      type: Quantum.Frame
+    content.vb: Public Predicted As Frame
+- uid: Quantum.QuantumGame.FramesContainer.PredictedPrevious
+  commentId: F:Quantum.QuantumGame.FramesContainer.PredictedPrevious
+  id: PredictedPrevious
+  parent: Quantum.QuantumGame.FramesContainer
+  langs:
+  - csharp
+  - vb
+  name: PredictedPrevious
+  nameWithType: QuantumGame.FramesContainer.PredictedPrevious
+  fullName: Quantum.QuantumGame.FramesContainer.PredictedPrevious
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PredictedPrevious
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2812
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Quick accessor to the second latest locally predicted copy of the game state.
+
+    Used for accurate visual interpolation of transforms (or any other data) between this and the Predicted frame.
+  example: []
+  syntax:
+    content: public Frame PredictedPrevious
+    return:
+      type: Quantum.Frame
+    content.vb: Public PredictedPrevious As Frame
+- uid: Quantum.QuantumGame.FramesContainer.PreviousUpdatePredicted
+  commentId: F:Quantum.QuantumGame.FramesContainer.PreviousUpdatePredicted
+  id: PreviousUpdatePredicted
+  parent: Quantum.QuantumGame.FramesContainer
+  langs:
+  - csharp
+  - vb
+  name: PreviousUpdatePredicted
+  nameWithType: QuantumGame.FramesContainer.PreviousUpdatePredicted
+  fullName: Quantum.QuantumGame.FramesContainer.PreviousUpdatePredicted
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PreviousUpdatePredicted
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2817
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Quick accessor to the latest simulated copy of the Frame that was last-Predicted during the previous main session update. 
+
+    Used to calculate transform view error for smoothed correction.
+  example: []
+  syntax:
+    content: public Frame PreviousUpdatePredicted
+    return:
+      type: Quantum.Frame
+    content.vb: Public PreviousUpdatePredicted As Frame
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame

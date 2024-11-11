@@ -28,8 +28,8 @@ items:
   - rwby
   namespace: Global
   syntax:
-    content: 'public class EntitySoundManager : QuantumEntityViewComponent'
-    content.vb: Public Class EntitySoundManager Inherits QuantumEntityViewComponent
+    content: 'public class EntitySoundManager : QuantumEntityViewComponent, IQuantumViewComponent'
+    content.vb: Public Class EntitySoundManager Inherits QuantumEntityViewComponent Implements IQuantumViewComponent
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -40,6 +40,37 @@ items:
   - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
   - Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
   - Quantum.QuantumEntityViewComponent
+  implements:
+  - Quantum.IQuantumViewComponent
+  inheritedMembers:
+  - Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.Game
+  - Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.EntityRef
+  - Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.EntityView
+  - Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.HasPredictedQuantumComponent``1
+  - Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.HasVerifiedQuantumComponent``1
+  - Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.GetPredictedQuantumComponent``1
+  - Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.GetVerifiedQuantumComponent``1
+  - Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.TryGetPredictedQuantumComponent``1({TComponent}@)
+  - Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.TryGetVerifiedQuantumComponent``1({TComponent}@)
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.PredictedFrame
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.VerifiedFrame
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.PredictedPreviousFrame
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.ViewContext
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.IsActive
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.IsInitialized
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}._game
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}._entityView
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnInitialize
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnActivate(Quantum.Frame)
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnDeactivate
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnLateUpdateView
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnGameChanged
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Initialize(System.Collections.Generic.Dictionary{System.Type,Quantum.IQuantumViewContext})
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Activate(Quantum.Frame,Quantum.QuantumGame,Quantum.QuantumEntityView)
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Deactivate
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.UpdateView
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.LateUpdateView
+  - Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.GameChanged(Quantum.QuantumGame)
 - uid: Global.EntitySoundManager.currentlyPlayingSounds
   commentId: F:Global.EntitySoundManager.currentlyPlayingSounds
   id: currentlyPlayingSounds
@@ -282,6 +313,556 @@ references:
   name: QuantumEntityViewComponent
   nameWithType: QuantumEntityViewComponent
   fullName: Quantum.QuantumEntityViewComponent
+- uid: Quantum.IQuantumViewComponent
+  commentId: T:Quantum.IQuantumViewComponent
+  parent: Quantum
+  name: IQuantumViewComponent
+  nameWithType: IQuantumViewComponent
+  fullName: Quantum.IQuantumViewComponent
+- uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.Game
+  commentId: P:Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.Game
+  parent: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumEntityViewComponent`1.Game
+  name: Game
+  nameWithType: QuantumEntityViewComponent<IQuantumViewContext>.Game
+  fullName: Quantum.QuantumEntityViewComponent<Quantum.IQuantumViewContext>.Game
+  nameWithType.vb: QuantumEntityViewComponent(Of IQuantumViewContext).Game
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of Quantum.IQuantumViewContext).Game
+- uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.EntityRef
+  commentId: P:Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.EntityRef
+  parent: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumEntityViewComponent`1.EntityRef
+  name: EntityRef
+  nameWithType: QuantumEntityViewComponent<IQuantumViewContext>.EntityRef
+  fullName: Quantum.QuantumEntityViewComponent<Quantum.IQuantumViewContext>.EntityRef
+  nameWithType.vb: QuantumEntityViewComponent(Of IQuantumViewContext).EntityRef
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of Quantum.IQuantumViewContext).EntityRef
+- uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.EntityView
+  commentId: P:Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.EntityView
+  parent: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumEntityViewComponent`1.EntityView
+  name: EntityView
+  nameWithType: QuantumEntityViewComponent<IQuantumViewContext>.EntityView
+  fullName: Quantum.QuantumEntityViewComponent<Quantum.IQuantumViewContext>.EntityView
+  nameWithType.vb: QuantumEntityViewComponent(Of IQuantumViewContext).EntityView
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of Quantum.IQuantumViewContext).EntityView
+- uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.HasPredictedQuantumComponent``1
+  commentId: M:Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.HasPredictedQuantumComponent``1
+  parent: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumEntityViewComponent`1.HasPredictedQuantumComponent``1
+  name: HasPredictedQuantumComponent<TComponent>()
+  nameWithType: QuantumEntityViewComponent<IQuantumViewContext>.HasPredictedQuantumComponent<TComponent>()
+  fullName: Quantum.QuantumEntityViewComponent<Quantum.IQuantumViewContext>.HasPredictedQuantumComponent<TComponent>()
+  nameWithType.vb: QuantumEntityViewComponent(Of IQuantumViewContext).HasPredictedQuantumComponent(Of TComponent)()
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of Quantum.IQuantumViewContext).HasPredictedQuantumComponent(Of TComponent)()
+  name.vb: HasPredictedQuantumComponent(Of TComponent)()
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.HasPredictedQuantumComponent``1
+    name: HasPredictedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.HasPredictedQuantumComponent``1
+    name: HasPredictedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.HasVerifiedQuantumComponent``1
+  commentId: M:Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.HasVerifiedQuantumComponent``1
+  parent: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumEntityViewComponent`1.HasVerifiedQuantumComponent``1
+  name: HasVerifiedQuantumComponent<TComponent>()
+  nameWithType: QuantumEntityViewComponent<IQuantumViewContext>.HasVerifiedQuantumComponent<TComponent>()
+  fullName: Quantum.QuantumEntityViewComponent<Quantum.IQuantumViewContext>.HasVerifiedQuantumComponent<TComponent>()
+  nameWithType.vb: QuantumEntityViewComponent(Of IQuantumViewContext).HasVerifiedQuantumComponent(Of TComponent)()
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of Quantum.IQuantumViewContext).HasVerifiedQuantumComponent(Of TComponent)()
+  name.vb: HasVerifiedQuantumComponent(Of TComponent)()
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.HasVerifiedQuantumComponent``1
+    name: HasVerifiedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.HasVerifiedQuantumComponent``1
+    name: HasVerifiedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.GetPredictedQuantumComponent``1
+  commentId: M:Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.GetPredictedQuantumComponent``1
+  parent: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumEntityViewComponent`1.GetPredictedQuantumComponent``1
+  name: GetPredictedQuantumComponent<TComponent>()
+  nameWithType: QuantumEntityViewComponent<IQuantumViewContext>.GetPredictedQuantumComponent<TComponent>()
+  fullName: Quantum.QuantumEntityViewComponent<Quantum.IQuantumViewContext>.GetPredictedQuantumComponent<TComponent>()
+  nameWithType.vb: QuantumEntityViewComponent(Of IQuantumViewContext).GetPredictedQuantumComponent(Of TComponent)()
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of Quantum.IQuantumViewContext).GetPredictedQuantumComponent(Of TComponent)()
+  name.vb: GetPredictedQuantumComponent(Of TComponent)()
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.GetPredictedQuantumComponent``1
+    name: GetPredictedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.GetPredictedQuantumComponent``1
+    name: GetPredictedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.GetVerifiedQuantumComponent``1
+  commentId: M:Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.GetVerifiedQuantumComponent``1
+  parent: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumEntityViewComponent`1.GetVerifiedQuantumComponent``1
+  name: GetVerifiedQuantumComponent<TComponent>()
+  nameWithType: QuantumEntityViewComponent<IQuantumViewContext>.GetVerifiedQuantumComponent<TComponent>()
+  fullName: Quantum.QuantumEntityViewComponent<Quantum.IQuantumViewContext>.GetVerifiedQuantumComponent<TComponent>()
+  nameWithType.vb: QuantumEntityViewComponent(Of IQuantumViewContext).GetVerifiedQuantumComponent(Of TComponent)()
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of Quantum.IQuantumViewContext).GetVerifiedQuantumComponent(Of TComponent)()
+  name.vb: GetVerifiedQuantumComponent(Of TComponent)()
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.GetVerifiedQuantumComponent``1
+    name: GetVerifiedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.GetVerifiedQuantumComponent``1
+    name: GetVerifiedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.TryGetPredictedQuantumComponent``1({TComponent}@)
+  commentId: M:Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.TryGetPredictedQuantumComponent``1(``0@)
+  parent: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumEntityViewComponent`1.TryGetPredictedQuantumComponent``1(``0@)
+  name: TryGetPredictedQuantumComponent<TComponent>(out TComponent)
+  nameWithType: QuantumEntityViewComponent<IQuantumViewContext>.TryGetPredictedQuantumComponent<TComponent>(out TComponent)
+  fullName: Quantum.QuantumEntityViewComponent<Quantum.IQuantumViewContext>.TryGetPredictedQuantumComponent<TComponent>(out TComponent)
+  nameWithType.vb: QuantumEntityViewComponent(Of IQuantumViewContext).TryGetPredictedQuantumComponent(Of TComponent)(TComponent)
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of Quantum.IQuantumViewContext).TryGetPredictedQuantumComponent(Of TComponent)(TComponent)
+  name.vb: TryGetPredictedQuantumComponent(Of TComponent)(TComponent)
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.TryGetPredictedQuantumComponent``1(``0@)
+    name: TryGetPredictedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: TComponent
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.TryGetPredictedQuantumComponent``1(``0@)
+    name: TryGetPredictedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: TComponent
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.TryGetVerifiedQuantumComponent``1({TComponent}@)
+  commentId: M:Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.TryGetVerifiedQuantumComponent``1(``0@)
+  parent: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumEntityViewComponent`1.TryGetVerifiedQuantumComponent``1(``0@)
+  name: TryGetVerifiedQuantumComponent<TComponent>(out TComponent)
+  nameWithType: QuantumEntityViewComponent<IQuantumViewContext>.TryGetVerifiedQuantumComponent<TComponent>(out TComponent)
+  fullName: Quantum.QuantumEntityViewComponent<Quantum.IQuantumViewContext>.TryGetVerifiedQuantumComponent<TComponent>(out TComponent)
+  nameWithType.vb: QuantumEntityViewComponent(Of IQuantumViewContext).TryGetVerifiedQuantumComponent(Of TComponent)(TComponent)
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of Quantum.IQuantumViewContext).TryGetVerifiedQuantumComponent(Of TComponent)(TComponent)
+  name.vb: TryGetVerifiedQuantumComponent(Of TComponent)(TComponent)
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.TryGetVerifiedQuantumComponent``1(``0@)
+    name: TryGetVerifiedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: TComponent
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent{Quantum.IQuantumViewContext}.TryGetVerifiedQuantumComponent``1(``0@)
+    name: TryGetVerifiedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: TComponent
+  - name: )
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.PredictedFrame
+  commentId: P:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.PredictedFrame
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.PredictedFrame
+  name: PredictedFrame
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.PredictedFrame
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.PredictedFrame
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).PredictedFrame
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).PredictedFrame
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.VerifiedFrame
+  commentId: P:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.VerifiedFrame
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.VerifiedFrame
+  name: VerifiedFrame
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.VerifiedFrame
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.VerifiedFrame
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).VerifiedFrame
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).VerifiedFrame
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.PredictedPreviousFrame
+  commentId: P:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.PredictedPreviousFrame
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.PredictedPreviousFrame
+  name: PredictedPreviousFrame
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.PredictedPreviousFrame
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.PredictedPreviousFrame
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).PredictedPreviousFrame
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).PredictedPreviousFrame
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.ViewContext
+  commentId: P:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.ViewContext
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.ViewContext
+  name: ViewContext
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.ViewContext
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.ViewContext
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).ViewContext
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).ViewContext
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.IsActive
+  commentId: P:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.IsActive
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.IsActive
+  name: IsActive
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.IsActive
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.IsActive
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).IsActive
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).IsActive
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.IsInitialized
+  commentId: P:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.IsInitialized
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.IsInitialized
+  name: IsInitialized
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.IsInitialized
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.IsInitialized
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).IsInitialized
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).IsInitialized
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}._game
+  commentId: F:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}._game
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1._game
+  name: _game
+  nameWithType: QuantumViewComponent<IQuantumViewContext>._game
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>._game
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext)._game
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext)._game
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}._entityView
+  commentId: F:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}._entityView
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1._entityView
+  name: _entityView
+  nameWithType: QuantumViewComponent<IQuantumViewContext>._entityView
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>._entityView
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext)._entityView
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext)._entityView
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnInitialize
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnInitialize
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.OnInitialize
+  name: OnInitialize()
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.OnInitialize()
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.OnInitialize()
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).OnInitialize()
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).OnInitialize()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnInitialize
+    name: OnInitialize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnInitialize
+    name: OnInitialize
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnActivate(Quantum.Frame)
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnActivate(Quantum.Frame)
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.OnActivate(Quantum.Frame)
+  name: OnActivate(Frame)
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.OnActivate(Frame)
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.OnActivate(Quantum.Frame)
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).OnActivate(Frame)
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).OnActivate(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnActivate(Quantum.Frame)
+    name: OnActivate
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnActivate(Quantum.Frame)
+    name: OnActivate
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+  - name: )
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnDeactivate
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnDeactivate
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.OnDeactivate
+  name: OnDeactivate()
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.OnDeactivate()
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.OnDeactivate()
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).OnDeactivate()
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).OnDeactivate()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnDeactivate
+    name: OnDeactivate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnDeactivate
+    name: OnDeactivate
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnLateUpdateView
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnLateUpdateView
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.OnLateUpdateView
+  name: OnLateUpdateView()
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.OnLateUpdateView()
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.OnLateUpdateView()
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).OnLateUpdateView()
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).OnLateUpdateView()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnLateUpdateView
+    name: OnLateUpdateView
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnLateUpdateView
+    name: OnLateUpdateView
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnGameChanged
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnGameChanged
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.OnGameChanged
+  name: OnGameChanged()
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.OnGameChanged()
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.OnGameChanged()
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).OnGameChanged()
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).OnGameChanged()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnGameChanged
+    name: OnGameChanged
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.OnGameChanged
+    name: OnGameChanged
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Initialize(System.Collections.Generic.Dictionary{System.Type,Quantum.IQuantumViewContext})
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Initialize(System.Collections.Generic.Dictionary{System.Type,Quantum.IQuantumViewContext})
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.Initialize(System.Collections.Generic.Dictionary{System.Type,Quantum.IQuantumViewContext})
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Initialize(Dictionary<Type, IQuantumViewContext>)
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.Initialize(Dictionary<Type, IQuantumViewContext>)
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.Initialize(System.Collections.Generic.Dictionary<System.Type, Quantum.IQuantumViewContext>)
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).Initialize(Dictionary(Of Type, IQuantumViewContext))
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).Initialize(System.Collections.Generic.Dictionary(Of System.Type, Quantum.IQuantumViewContext))
+  name.vb: Initialize(Dictionary(Of Type, IQuantumViewContext))
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Initialize(System.Collections.Generic.Dictionary{System.Type,Quantum.IQuantumViewContext})
+    name: Initialize
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: Quantum.IQuantumViewContext
+    name: IQuantumViewContext
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Initialize(System.Collections.Generic.Dictionary{System.Type,Quantum.IQuantumViewContext})
+    name: Initialize
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: Quantum.IQuantumViewContext
+    name: IQuantumViewContext
+  - name: )
+  - name: )
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Activate(Quantum.Frame,Quantum.QuantumGame,Quantum.QuantumEntityView)
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Activate(Quantum.Frame,Quantum.QuantumGame,Quantum.QuantumEntityView)
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.Activate(Quantum.Frame,Quantum.QuantumGame,Quantum.QuantumEntityView)
+  name: Activate(Frame, QuantumGame, QuantumEntityView)
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.Activate(Frame, QuantumGame, QuantumEntityView)
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.Activate(Quantum.Frame, Quantum.QuantumGame, Quantum.QuantumEntityView)
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).Activate(Frame, QuantumGame, QuantumEntityView)
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).Activate(Quantum.Frame, Quantum.QuantumGame, Quantum.QuantumEntityView)
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Activate(Quantum.Frame,Quantum.QuantumGame,Quantum.QuantumEntityView)
+    name: Activate
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+  - name: ','
+  - name: " "
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+  - name: ','
+  - name: " "
+  - uid: Quantum.QuantumEntityView
+    name: QuantumEntityView
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Activate(Quantum.Frame,Quantum.QuantumGame,Quantum.QuantumEntityView)
+    name: Activate
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+  - name: ','
+  - name: " "
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+  - name: ','
+  - name: " "
+  - uid: Quantum.QuantumEntityView
+    name: QuantumEntityView
+  - name: )
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Deactivate
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Deactivate
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.Deactivate
+  name: Deactivate()
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.Deactivate()
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.Deactivate()
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).Deactivate()
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).Deactivate()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Deactivate
+    name: Deactivate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.Deactivate
+    name: Deactivate
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.UpdateView
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.UpdateView
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.UpdateView
+  name: UpdateView()
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.UpdateView()
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.UpdateView()
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).UpdateView()
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).UpdateView()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.UpdateView
+    name: UpdateView
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.UpdateView
+    name: UpdateView
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.LateUpdateView
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.LateUpdateView
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.LateUpdateView
+  name: LateUpdateView()
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.LateUpdateView()
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.LateUpdateView()
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).LateUpdateView()
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).LateUpdateView()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.LateUpdateView
+    name: LateUpdateView
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.LateUpdateView
+    name: LateUpdateView
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.GameChanged(Quantum.QuantumGame)
+  commentId: M:Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.GameChanged(Quantum.QuantumGame)
+  parent: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}
+  definition: Quantum.QuantumViewComponent`1.GameChanged(Quantum.QuantumGame)
+  name: GameChanged(QuantumGame)
+  nameWithType: QuantumViewComponent<IQuantumViewContext>.GameChanged(QuantumGame)
+  fullName: Quantum.QuantumViewComponent<Quantum.IQuantumViewContext>.GameChanged(Quantum.QuantumGame)
+  nameWithType.vb: QuantumViewComponent(Of IQuantumViewContext).GameChanged(QuantumGame)
+  fullName.vb: Quantum.QuantumViewComponent(Of Quantum.IQuantumViewContext).GameChanged(Quantum.QuantumGame)
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.GameChanged(Quantum.QuantumGame)
+    name: GameChanged
+  - name: (
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent{Quantum.IQuantumViewContext}.GameChanged(Quantum.QuantumGame)
+    name: GameChanged
+  - name: (
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -297,6 +878,7 @@ references:
   fullName: UnityEngine
 - uid: Quantum
   commentId: N:Quantum
+  href: Quantum.html
   name: Quantum
   nameWithType: Quantum
   fullName: Quantum
@@ -343,6 +925,495 @@ references:
   - name: Of
   - name: " "
   - name: T
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent`1.Game
+  commentId: P:Quantum.QuantumEntityViewComponent`1.Game
+  name: Game
+  nameWithType: QuantumEntityViewComponent<T>.Game
+  fullName: Quantum.QuantumEntityViewComponent<T>.Game
+  nameWithType.vb: QuantumEntityViewComponent(Of T).Game
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of T).Game
+- uid: Quantum.QuantumEntityViewComponent`1.EntityRef
+  commentId: P:Quantum.QuantumEntityViewComponent`1.EntityRef
+  name: EntityRef
+  nameWithType: QuantumEntityViewComponent<T>.EntityRef
+  fullName: Quantum.QuantumEntityViewComponent<T>.EntityRef
+  nameWithType.vb: QuantumEntityViewComponent(Of T).EntityRef
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of T).EntityRef
+- uid: Quantum.QuantumEntityViewComponent`1.EntityView
+  commentId: P:Quantum.QuantumEntityViewComponent`1.EntityView
+  name: EntityView
+  nameWithType: QuantumEntityViewComponent<T>.EntityView
+  fullName: Quantum.QuantumEntityViewComponent<T>.EntityView
+  nameWithType.vb: QuantumEntityViewComponent(Of T).EntityView
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of T).EntityView
+- uid: Quantum.QuantumEntityViewComponent`1.HasPredictedQuantumComponent``1
+  commentId: M:Quantum.QuantumEntityViewComponent`1.HasPredictedQuantumComponent``1
+  name: HasPredictedQuantumComponent<TComponent>()
+  nameWithType: QuantumEntityViewComponent<T>.HasPredictedQuantumComponent<TComponent>()
+  fullName: Quantum.QuantumEntityViewComponent<T>.HasPredictedQuantumComponent<TComponent>()
+  nameWithType.vb: QuantumEntityViewComponent(Of T).HasPredictedQuantumComponent(Of TComponent)()
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of T).HasPredictedQuantumComponent(Of TComponent)()
+  name.vb: HasPredictedQuantumComponent(Of TComponent)()
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent`1.HasPredictedQuantumComponent``1
+    name: HasPredictedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent`1.HasPredictedQuantumComponent``1
+    name: HasPredictedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent`1.HasVerifiedQuantumComponent``1
+  commentId: M:Quantum.QuantumEntityViewComponent`1.HasVerifiedQuantumComponent``1
+  name: HasVerifiedQuantumComponent<TComponent>()
+  nameWithType: QuantumEntityViewComponent<T>.HasVerifiedQuantumComponent<TComponent>()
+  fullName: Quantum.QuantumEntityViewComponent<T>.HasVerifiedQuantumComponent<TComponent>()
+  nameWithType.vb: QuantumEntityViewComponent(Of T).HasVerifiedQuantumComponent(Of TComponent)()
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of T).HasVerifiedQuantumComponent(Of TComponent)()
+  name.vb: HasVerifiedQuantumComponent(Of TComponent)()
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent`1.HasVerifiedQuantumComponent``1
+    name: HasVerifiedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent`1.HasVerifiedQuantumComponent``1
+    name: HasVerifiedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent`1.GetPredictedQuantumComponent``1
+  commentId: M:Quantum.QuantumEntityViewComponent`1.GetPredictedQuantumComponent``1
+  name: GetPredictedQuantumComponent<TComponent>()
+  nameWithType: QuantumEntityViewComponent<T>.GetPredictedQuantumComponent<TComponent>()
+  fullName: Quantum.QuantumEntityViewComponent<T>.GetPredictedQuantumComponent<TComponent>()
+  nameWithType.vb: QuantumEntityViewComponent(Of T).GetPredictedQuantumComponent(Of TComponent)()
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of T).GetPredictedQuantumComponent(Of TComponent)()
+  name.vb: GetPredictedQuantumComponent(Of TComponent)()
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent`1.GetPredictedQuantumComponent``1
+    name: GetPredictedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent`1.GetPredictedQuantumComponent``1
+    name: GetPredictedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent`1.GetVerifiedQuantumComponent``1
+  commentId: M:Quantum.QuantumEntityViewComponent`1.GetVerifiedQuantumComponent``1
+  name: GetVerifiedQuantumComponent<TComponent>()
+  nameWithType: QuantumEntityViewComponent<T>.GetVerifiedQuantumComponent<TComponent>()
+  fullName: Quantum.QuantumEntityViewComponent<T>.GetVerifiedQuantumComponent<TComponent>()
+  nameWithType.vb: QuantumEntityViewComponent(Of T).GetVerifiedQuantumComponent(Of TComponent)()
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of T).GetVerifiedQuantumComponent(Of TComponent)()
+  name.vb: GetVerifiedQuantumComponent(Of TComponent)()
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent`1.GetVerifiedQuantumComponent``1
+    name: GetVerifiedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent`1.GetVerifiedQuantumComponent``1
+    name: GetVerifiedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent`1.TryGetPredictedQuantumComponent``1(``0@)
+  commentId: M:Quantum.QuantumEntityViewComponent`1.TryGetPredictedQuantumComponent``1(``0@)
+  name: TryGetPredictedQuantumComponent<TComponent>(out TComponent)
+  nameWithType: QuantumEntityViewComponent<T>.TryGetPredictedQuantumComponent<TComponent>(out TComponent)
+  fullName: Quantum.QuantumEntityViewComponent<T>.TryGetPredictedQuantumComponent<TComponent>(out TComponent)
+  nameWithType.vb: QuantumEntityViewComponent(Of T).TryGetPredictedQuantumComponent(Of TComponent)(TComponent)
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of T).TryGetPredictedQuantumComponent(Of TComponent)(TComponent)
+  name.vb: TryGetPredictedQuantumComponent(Of TComponent)(TComponent)
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent`1.TryGetPredictedQuantumComponent``1(``0@)
+    name: TryGetPredictedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: TComponent
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent`1.TryGetPredictedQuantumComponent``1(``0@)
+    name: TryGetPredictedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: TComponent
+  - name: )
+- uid: Quantum.QuantumEntityViewComponent`1.TryGetVerifiedQuantumComponent``1(``0@)
+  commentId: M:Quantum.QuantumEntityViewComponent`1.TryGetVerifiedQuantumComponent``1(``0@)
+  name: TryGetVerifiedQuantumComponent<TComponent>(out TComponent)
+  nameWithType: QuantumEntityViewComponent<T>.TryGetVerifiedQuantumComponent<TComponent>(out TComponent)
+  fullName: Quantum.QuantumEntityViewComponent<T>.TryGetVerifiedQuantumComponent<TComponent>(out TComponent)
+  nameWithType.vb: QuantumEntityViewComponent(Of T).TryGetVerifiedQuantumComponent(Of TComponent)(TComponent)
+  fullName.vb: Quantum.QuantumEntityViewComponent(Of T).TryGetVerifiedQuantumComponent(Of TComponent)(TComponent)
+  name.vb: TryGetVerifiedQuantumComponent(Of TComponent)(TComponent)
+  spec.csharp:
+  - uid: Quantum.QuantumEntityViewComponent`1.TryGetVerifiedQuantumComponent``1(``0@)
+    name: TryGetVerifiedQuantumComponent
+  - name: <
+  - name: TComponent
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: TComponent
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumEntityViewComponent`1.TryGetVerifiedQuantumComponent``1(``0@)
+    name: TryGetVerifiedQuantumComponent
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TComponent
+  - name: )
+  - name: (
+  - name: TComponent
+  - name: )
+- uid: Quantum.QuantumViewComponent`1.PredictedFrame
+  commentId: P:Quantum.QuantumViewComponent`1.PredictedFrame
+  name: PredictedFrame
+  nameWithType: QuantumViewComponent<T>.PredictedFrame
+  fullName: Quantum.QuantumViewComponent<T>.PredictedFrame
+  nameWithType.vb: QuantumViewComponent(Of T).PredictedFrame
+  fullName.vb: Quantum.QuantumViewComponent(Of T).PredictedFrame
+- uid: Quantum.QuantumViewComponent`1.VerifiedFrame
+  commentId: P:Quantum.QuantumViewComponent`1.VerifiedFrame
+  name: VerifiedFrame
+  nameWithType: QuantumViewComponent<T>.VerifiedFrame
+  fullName: Quantum.QuantumViewComponent<T>.VerifiedFrame
+  nameWithType.vb: QuantumViewComponent(Of T).VerifiedFrame
+  fullName.vb: Quantum.QuantumViewComponent(Of T).VerifiedFrame
+- uid: Quantum.QuantumViewComponent`1.PredictedPreviousFrame
+  commentId: P:Quantum.QuantumViewComponent`1.PredictedPreviousFrame
+  name: PredictedPreviousFrame
+  nameWithType: QuantumViewComponent<T>.PredictedPreviousFrame
+  fullName: Quantum.QuantumViewComponent<T>.PredictedPreviousFrame
+  nameWithType.vb: QuantumViewComponent(Of T).PredictedPreviousFrame
+  fullName.vb: Quantum.QuantumViewComponent(Of T).PredictedPreviousFrame
+- uid: Quantum.QuantumViewComponent`1.ViewContext
+  commentId: P:Quantum.QuantumViewComponent`1.ViewContext
+  name: ViewContext
+  nameWithType: QuantumViewComponent<T>.ViewContext
+  fullName: Quantum.QuantumViewComponent<T>.ViewContext
+  nameWithType.vb: QuantumViewComponent(Of T).ViewContext
+  fullName.vb: Quantum.QuantumViewComponent(Of T).ViewContext
+- uid: Quantum.QuantumViewComponent`1.IsActive
+  commentId: P:Quantum.QuantumViewComponent`1.IsActive
+  name: IsActive
+  nameWithType: QuantumViewComponent<T>.IsActive
+  fullName: Quantum.QuantumViewComponent<T>.IsActive
+  nameWithType.vb: QuantumViewComponent(Of T).IsActive
+  fullName.vb: Quantum.QuantumViewComponent(Of T).IsActive
+- uid: Quantum.QuantumViewComponent`1.IsInitialized
+  commentId: P:Quantum.QuantumViewComponent`1.IsInitialized
+  name: IsInitialized
+  nameWithType: QuantumViewComponent<T>.IsInitialized
+  fullName: Quantum.QuantumViewComponent<T>.IsInitialized
+  nameWithType.vb: QuantumViewComponent(Of T).IsInitialized
+  fullName.vb: Quantum.QuantumViewComponent(Of T).IsInitialized
+- uid: Quantum.QuantumViewComponent`1._game
+  commentId: F:Quantum.QuantumViewComponent`1._game
+  name: _game
+  nameWithType: QuantumViewComponent<T>._game
+  fullName: Quantum.QuantumViewComponent<T>._game
+  nameWithType.vb: QuantumViewComponent(Of T)._game
+  fullName.vb: Quantum.QuantumViewComponent(Of T)._game
+- uid: Quantum.QuantumViewComponent`1._entityView
+  commentId: F:Quantum.QuantumViewComponent`1._entityView
+  name: _entityView
+  nameWithType: QuantumViewComponent<T>._entityView
+  fullName: Quantum.QuantumViewComponent<T>._entityView
+  nameWithType.vb: QuantumViewComponent(Of T)._entityView
+  fullName.vb: Quantum.QuantumViewComponent(Of T)._entityView
+- uid: Quantum.QuantumViewComponent`1.OnInitialize
+  commentId: M:Quantum.QuantumViewComponent`1.OnInitialize
+  name: OnInitialize()
+  nameWithType: QuantumViewComponent<T>.OnInitialize()
+  fullName: Quantum.QuantumViewComponent<T>.OnInitialize()
+  nameWithType.vb: QuantumViewComponent(Of T).OnInitialize()
+  fullName.vb: Quantum.QuantumViewComponent(Of T).OnInitialize()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.OnInitialize
+    name: OnInitialize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.OnInitialize
+    name: OnInitialize
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent`1.OnActivate(Quantum.Frame)
+  commentId: M:Quantum.QuantumViewComponent`1.OnActivate(Quantum.Frame)
+  name: OnActivate(Frame)
+  nameWithType: QuantumViewComponent<T>.OnActivate(Frame)
+  fullName: Quantum.QuantumViewComponent<T>.OnActivate(Quantum.Frame)
+  nameWithType.vb: QuantumViewComponent(Of T).OnActivate(Frame)
+  fullName.vb: Quantum.QuantumViewComponent(Of T).OnActivate(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.OnActivate(Quantum.Frame)
+    name: OnActivate
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.OnActivate(Quantum.Frame)
+    name: OnActivate
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+  - name: )
+- uid: Quantum.QuantumViewComponent`1.OnDeactivate
+  commentId: M:Quantum.QuantumViewComponent`1.OnDeactivate
+  name: OnDeactivate()
+  nameWithType: QuantumViewComponent<T>.OnDeactivate()
+  fullName: Quantum.QuantumViewComponent<T>.OnDeactivate()
+  nameWithType.vb: QuantumViewComponent(Of T).OnDeactivate()
+  fullName.vb: Quantum.QuantumViewComponent(Of T).OnDeactivate()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.OnDeactivate
+    name: OnDeactivate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.OnDeactivate
+    name: OnDeactivate
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent`1.OnLateUpdateView
+  commentId: M:Quantum.QuantumViewComponent`1.OnLateUpdateView
+  name: OnLateUpdateView()
+  nameWithType: QuantumViewComponent<T>.OnLateUpdateView()
+  fullName: Quantum.QuantumViewComponent<T>.OnLateUpdateView()
+  nameWithType.vb: QuantumViewComponent(Of T).OnLateUpdateView()
+  fullName.vb: Quantum.QuantumViewComponent(Of T).OnLateUpdateView()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.OnLateUpdateView
+    name: OnLateUpdateView
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.OnLateUpdateView
+    name: OnLateUpdateView
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent`1.OnGameChanged
+  commentId: M:Quantum.QuantumViewComponent`1.OnGameChanged
+  name: OnGameChanged()
+  nameWithType: QuantumViewComponent<T>.OnGameChanged()
+  fullName: Quantum.QuantumViewComponent<T>.OnGameChanged()
+  nameWithType.vb: QuantumViewComponent(Of T).OnGameChanged()
+  fullName.vb: Quantum.QuantumViewComponent(Of T).OnGameChanged()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.OnGameChanged
+    name: OnGameChanged
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.OnGameChanged
+    name: OnGameChanged
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent`1.Initialize(System.Collections.Generic.Dictionary{System.Type,Quantum.IQuantumViewContext})
+  commentId: M:Quantum.QuantumViewComponent`1.Initialize(System.Collections.Generic.Dictionary{System.Type,Quantum.IQuantumViewContext})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Initialize(Dictionary<Type, IQuantumViewContext>)
+  nameWithType: QuantumViewComponent<T>.Initialize(Dictionary<Type, IQuantumViewContext>)
+  fullName: Quantum.QuantumViewComponent<T>.Initialize(System.Collections.Generic.Dictionary<System.Type, Quantum.IQuantumViewContext>)
+  nameWithType.vb: QuantumViewComponent(Of T).Initialize(Dictionary(Of Type, IQuantumViewContext))
+  fullName.vb: Quantum.QuantumViewComponent(Of T).Initialize(System.Collections.Generic.Dictionary(Of System.Type, Quantum.IQuantumViewContext))
+  name.vb: Initialize(Dictionary(Of Type, IQuantumViewContext))
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.Initialize(System.Collections.Generic.Dictionary{System.Type,Quantum.IQuantumViewContext})
+    name: Initialize
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: Quantum.IQuantumViewContext
+    name: IQuantumViewContext
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.Initialize(System.Collections.Generic.Dictionary{System.Type,Quantum.IQuantumViewContext})
+    name: Initialize
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: Quantum.IQuantumViewContext
+    name: IQuantumViewContext
+  - name: )
+  - name: )
+- uid: Quantum.QuantumViewComponent`1.Activate(Quantum.Frame,Quantum.QuantumGame,Quantum.QuantumEntityView)
+  commentId: M:Quantum.QuantumViewComponent`1.Activate(Quantum.Frame,Quantum.QuantumGame,Quantum.QuantumEntityView)
+  name: Activate(Frame, QuantumGame, QuantumEntityView)
+  nameWithType: QuantumViewComponent<T>.Activate(Frame, QuantumGame, QuantumEntityView)
+  fullName: Quantum.QuantumViewComponent<T>.Activate(Quantum.Frame, Quantum.QuantumGame, Quantum.QuantumEntityView)
+  nameWithType.vb: QuantumViewComponent(Of T).Activate(Frame, QuantumGame, QuantumEntityView)
+  fullName.vb: Quantum.QuantumViewComponent(Of T).Activate(Quantum.Frame, Quantum.QuantumGame, Quantum.QuantumEntityView)
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.Activate(Quantum.Frame,Quantum.QuantumGame,Quantum.QuantumEntityView)
+    name: Activate
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+  - name: ','
+  - name: " "
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+  - name: ','
+  - name: " "
+  - uid: Quantum.QuantumEntityView
+    name: QuantumEntityView
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.Activate(Quantum.Frame,Quantum.QuantumGame,Quantum.QuantumEntityView)
+    name: Activate
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+  - name: ','
+  - name: " "
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+  - name: ','
+  - name: " "
+  - uid: Quantum.QuantumEntityView
+    name: QuantumEntityView
+  - name: )
+- uid: Quantum.QuantumViewComponent`1.Deactivate
+  commentId: M:Quantum.QuantumViewComponent`1.Deactivate
+  name: Deactivate()
+  nameWithType: QuantumViewComponent<T>.Deactivate()
+  fullName: Quantum.QuantumViewComponent<T>.Deactivate()
+  nameWithType.vb: QuantumViewComponent(Of T).Deactivate()
+  fullName.vb: Quantum.QuantumViewComponent(Of T).Deactivate()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.Deactivate
+    name: Deactivate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.Deactivate
+    name: Deactivate
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent`1.UpdateView
+  commentId: M:Quantum.QuantumViewComponent`1.UpdateView
+  name: UpdateView()
+  nameWithType: QuantumViewComponent<T>.UpdateView()
+  fullName: Quantum.QuantumViewComponent<T>.UpdateView()
+  nameWithType.vb: QuantumViewComponent(Of T).UpdateView()
+  fullName.vb: Quantum.QuantumViewComponent(Of T).UpdateView()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.UpdateView
+    name: UpdateView
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.UpdateView
+    name: UpdateView
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent`1.LateUpdateView
+  commentId: M:Quantum.QuantumViewComponent`1.LateUpdateView
+  name: LateUpdateView()
+  nameWithType: QuantumViewComponent<T>.LateUpdateView()
+  fullName: Quantum.QuantumViewComponent<T>.LateUpdateView()
+  nameWithType.vb: QuantumViewComponent(Of T).LateUpdateView()
+  fullName.vb: Quantum.QuantumViewComponent(Of T).LateUpdateView()
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.LateUpdateView
+    name: LateUpdateView
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.LateUpdateView
+    name: LateUpdateView
+  - name: (
+  - name: )
+- uid: Quantum.QuantumViewComponent`1.GameChanged(Quantum.QuantumGame)
+  commentId: M:Quantum.QuantumViewComponent`1.GameChanged(Quantum.QuantumGame)
+  name: GameChanged(QuantumGame)
+  nameWithType: QuantumViewComponent<T>.GameChanged(QuantumGame)
+  fullName: Quantum.QuantumViewComponent<T>.GameChanged(Quantum.QuantumGame)
+  nameWithType.vb: QuantumViewComponent(Of T).GameChanged(QuantumGame)
+  fullName.vb: Quantum.QuantumViewComponent(Of T).GameChanged(Quantum.QuantumGame)
+  spec.csharp:
+  - uid: Quantum.QuantumViewComponent`1.GameChanged(Quantum.QuantumGame)
+    name: GameChanged
+  - name: (
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumViewComponent`1.GameChanged(Quantum.QuantumGame)
+    name: GameChanged
+  - name: (
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
   - name: )
 - uid: System.Collections.Generic.Dictionary{Quantum.Tag,System.Collections.Generic.List{UnityEngine.AudioSource}}
   commentId: T:System.Collections.Generic.Dictionary{Quantum.Tag,System.Collections.Generic.List{UnityEngine.AudioSource}}
@@ -527,6 +1598,7 @@ references:
 - uid: Quantum.SoundEntry
   commentId: T:Quantum.SoundEntry
   parent: Quantum
+  href: Quantum.SoundEntry.html
   name: SoundEntry
   nameWithType: SoundEntry
   fullName: Quantum.SoundEntry
@@ -558,12 +1630,14 @@ references:
 - uid: Quantum.Tag
   commentId: T:Quantum.Tag
   parent: Quantum
+  href: Quantum.Tag.html
   name: Tag
   nameWithType: Tag
   fullName: Quantum.Tag
 - uid: Quantum.AudioSourceConfig
   commentId: T:Quantum.AudioSourceConfig
   parent: Quantum
+  href: Quantum.AudioSourceConfig.html
   name: AudioSourceConfig
   nameWithType: AudioSourceConfig
   fullName: Quantum.AudioSourceConfig

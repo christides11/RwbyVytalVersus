@@ -1,0 +1,646 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.RuntimePlayer
+  commentId: T:Quantum.RuntimePlayer
+  id: RuntimePlayer
+  parent: Quantum
+  children:
+  - Quantum.RuntimePlayer.CharacterDefinition
+  - Quantum.RuntimePlayer.FromByteArray(System.Byte[])
+  - Quantum.RuntimePlayer.PlayerAvatar
+  - Quantum.RuntimePlayer.PlayerNickname
+  - Quantum.RuntimePlayer.Serialize(Photon.Deterministic.BitStream)
+  - Quantum.RuntimePlayer.ToByteArray(Quantum.RuntimePlayer)
+  - Quantum.RuntimePlayer.specials
+  - Quantum.RuntimePlayer.team
+  langs:
+  - csharp
+  - vb
+  name: RuntimePlayer
+  nameWithType: RuntimePlayer
+  fullName: Quantum.RuntimePlayer
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RuntimePlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2252
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class RuntimePlayer : IRuntimePlayer
+    content.vb: >-
+      <Serializable>
+
+      Public Class RuntimePlayer Implements IRuntimePlayer
+  inheritance:
+  - System.Object
+  implements:
+  - Quantum.IRuntimePlayer
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Quantum.RuntimePlayer.CharacterDefinition
+  commentId: F:Quantum.RuntimePlayer.CharacterDefinition
+  id: CharacterDefinition
+  parent: Quantum.RuntimePlayer
+  langs:
+  - csharp
+  - vb
+  name: CharacterDefinition
+  nameWithType: RuntimePlayer.CharacterDefinition
+  fullName: Quantum.RuntimePlayer.CharacterDefinition
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/RuntimePlayer.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CharacterDefinition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/RuntimePlayer.User.cs
+    startLine: 6
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<CharaDefinitionAsset> CharacterDefinition
+    return:
+      type: Quantum.AssetRef{Quantum.CharaDefinitionAsset}
+    content.vb: Public CharacterDefinition As AssetRef(Of CharaDefinitionAsset)
+- uid: Quantum.RuntimePlayer.team
+  commentId: F:Quantum.RuntimePlayer.team
+  id: team
+  parent: Quantum.RuntimePlayer
+  langs:
+  - csharp
+  - vb
+  name: team
+  nameWithType: RuntimePlayer.team
+  fullName: Quantum.RuntimePlayer.team
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/RuntimePlayer.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: team
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/RuntimePlayer.User.cs
+    startLine: 7
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int team
+    return:
+      type: System.Int32
+    content.vb: Public team As Integer
+- uid: Quantum.RuntimePlayer.specials
+  commentId: F:Quantum.RuntimePlayer.specials
+  id: specials
+  parent: Quantum.RuntimePlayer
+  langs:
+  - csharp
+  - vb
+  name: specials
+  nameWithType: RuntimePlayer.specials
+  fullName: Quantum.RuntimePlayer.specials
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/RuntimePlayer.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: specials
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/RuntimePlayer.User.cs
+    startLine: 8
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public List<AssetRef<HNSFSpecialSet>> specials
+    return:
+      type: System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}
+    content.vb: Public specials As List(Of AssetRef(Of HNSFSpecialSet))
+- uid: Quantum.RuntimePlayer.PlayerAvatar
+  commentId: F:Quantum.RuntimePlayer.PlayerAvatar
+  id: PlayerAvatar
+  parent: Quantum.RuntimePlayer
+  langs:
+  - csharp
+  - vb
+  name: PlayerAvatar
+  nameWithType: RuntimePlayer.PlayerAvatar
+  fullName: Quantum.RuntimePlayer.PlayerAvatar
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PlayerAvatar
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2257
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Optionally let players select an avatar prototype using RuntimePlayer. This field can be removed from RuntimePlayer if not needed.
+  example: []
+  syntax:
+    content: public AssetRef<EntityPrototype> PlayerAvatar
+    return:
+      type: Quantum.AssetRef{Quantum.EntityPrototype}
+    content.vb: Public PlayerAvatar As AssetRef(Of EntityPrototype)
+- uid: Quantum.RuntimePlayer.PlayerNickname
+  commentId: F:Quantum.RuntimePlayer.PlayerNickname
+  id: PlayerNickname
+  parent: Quantum.RuntimePlayer
+  langs:
+  - csharp
+  - vb
+  name: PlayerNickname
+  nameWithType: RuntimePlayer.PlayerNickname
+  fullName: Quantum.RuntimePlayer.PlayerNickname
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PlayerNickname
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2261
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Optionally assign a nickname to players using RuntimePlayer. This field can be removed from RuntimePlayer if not needed.
+  example: []
+  syntax:
+    content: public string PlayerNickname
+    return:
+      type: System.String
+    content.vb: Public PlayerNickname As String
+- uid: Quantum.RuntimePlayer.Serialize(Photon.Deterministic.BitStream)
+  commentId: M:Quantum.RuntimePlayer.Serialize(Photon.Deterministic.BitStream)
+  id: Serialize(Photon.Deterministic.BitStream)
+  parent: Quantum.RuntimePlayer
+  langs:
+  - csharp
+  - vb
+  name: Serialize(BitStream)
+  nameWithType: RuntimePlayer.Serialize(BitStream)
+  fullName: Quantum.RuntimePlayer.Serialize(Photon.Deterministic.BitStream)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Serialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2265
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Use IAssetSerializer instead")]
+
+      public void Serialize(BitStream stream)
+    parameters:
+    - id: stream
+      type: Photon.Deterministic.BitStream
+    content.vb: >-
+      <Obsolete("Use IAssetSerializer instead")>
+
+      Public Sub Serialize(stream As BitStream)
+  overload: Quantum.RuntimePlayer.Serialize*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use IAssetSerializer instead
+- uid: Quantum.RuntimePlayer.ToByteArray(Quantum.RuntimePlayer)
+  commentId: M:Quantum.RuntimePlayer.ToByteArray(Quantum.RuntimePlayer)
+  id: ToByteArray(Quantum.RuntimePlayer)
+  parent: Quantum.RuntimePlayer
+  langs:
+  - csharp
+  - vb
+  name: ToByteArray(RuntimePlayer)
+  nameWithType: RuntimePlayer.ToByteArray(RuntimePlayer)
+  fullName: Quantum.RuntimePlayer.ToByteArray(Quantum.RuntimePlayer)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ToByteArray
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2272
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Use IAssetSerializer instead")]
+
+      public static byte[] ToByteArray(RuntimePlayer config)
+    parameters:
+    - id: config
+      type: Quantum.RuntimePlayer
+    return:
+      type: System.Byte[]
+    content.vb: >-
+      <Obsolete("Use IAssetSerializer instead")>
+
+      Public Shared Function ToByteArray(config As RuntimePlayer) As Byte()
+  overload: Quantum.RuntimePlayer.ToByteArray*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use IAssetSerializer instead
+- uid: Quantum.RuntimePlayer.FromByteArray(System.Byte[])
+  commentId: M:Quantum.RuntimePlayer.FromByteArray(System.Byte[])
+  id: FromByteArray(System.Byte[])
+  parent: Quantum.RuntimePlayer
+  langs:
+  - csharp
+  - vb
+  name: FromByteArray(byte[])
+  nameWithType: RuntimePlayer.FromByteArray(byte[])
+  fullName: Quantum.RuntimePlayer.FromByteArray(byte[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FromByteArray
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2277
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Use IAssetSerializer instead")]
+
+      public static RuntimePlayer FromByteArray(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: Quantum.RuntimePlayer
+    content.vb: >-
+      <Obsolete("Use IAssetSerializer instead")>
+
+      Public Shared Function FromByteArray(data As Byte()) As RuntimePlayer
+  overload: Quantum.RuntimePlayer.FromByteArray*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use IAssetSerializer instead
+  nameWithType.vb: RuntimePlayer.FromByteArray(Byte())
+  fullName.vb: Quantum.RuntimePlayer.FromByteArray(Byte())
+  name.vb: FromByteArray(Byte())
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.IRuntimePlayer
+  commentId: T:Quantum.IRuntimePlayer
+  parent: Quantum
+  isExternal: true
+  name: IRuntimePlayer
+  nameWithType: IRuntimePlayer
+  fullName: Quantum.IRuntimePlayer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.AssetRef{Quantum.CharaDefinitionAsset}
+  commentId: T:Quantum.AssetRef{Quantum.CharaDefinitionAsset}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.CharaDefinitionAsset.html
+  name: AssetRef<CharaDefinitionAsset>
+  nameWithType: AssetRef<CharaDefinitionAsset>
+  fullName: Quantum.AssetRef<Quantum.CharaDefinitionAsset>
+  nameWithType.vb: AssetRef(Of CharaDefinitionAsset)
+  fullName.vb: Quantum.AssetRef(Of Quantum.CharaDefinitionAsset)
+  name.vb: AssetRef(Of CharaDefinitionAsset)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.CharaDefinitionAsset
+    name: CharaDefinitionAsset
+    href: Quantum.CharaDefinitionAsset.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.CharaDefinitionAsset
+    name: CharaDefinitionAsset
+    href: Quantum.CharaDefinitionAsset.html
+  - name: )
+- uid: Quantum.AssetRef`1
+  commentId: T:Quantum.AssetRef`1
+  isExternal: true
+  name: AssetRef<T>
+  nameWithType: AssetRef<T>
+  fullName: Quantum.AssetRef<T>
+  nameWithType.vb: AssetRef(Of T)
+  fullName.vb: Quantum.AssetRef(Of T)
+  name.vb: AssetRef(Of T)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}
+  commentId: T:System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<AssetRef<HNSFSpecialSet>>
+  nameWithType: List<AssetRef<HNSFSpecialSet>>
+  fullName: System.Collections.Generic.List<Quantum.AssetRef<Quantum.HNSFSpecialSet>>
+  nameWithType.vb: List(Of AssetRef(Of HNSFSpecialSet))
+  fullName.vb: System.Collections.Generic.List(Of Quantum.AssetRef(Of Quantum.HNSFSpecialSet))
+  name.vb: List(Of AssetRef(Of HNSFSpecialSet))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.HNSFSpecialSet
+    name: HNSFSpecialSet
+    href: Quantum.HNSFSpecialSet.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HNSFSpecialSet
+    name: HNSFSpecialSet
+    href: Quantum.HNSFSpecialSet.html
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Quantum.AssetRef{Quantum.EntityPrototype}
+  commentId: T:Quantum.AssetRef{Quantum.EntityPrototype}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  name: AssetRef<EntityPrototype>
+  nameWithType: AssetRef<EntityPrototype>
+  fullName: Quantum.AssetRef<Quantum.EntityPrototype>
+  nameWithType.vb: AssetRef(Of EntityPrototype)
+  fullName.vb: Quantum.AssetRef(Of Quantum.EntityPrototype)
+  name.vb: AssetRef(Of EntityPrototype)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.EntityPrototype
+    name: EntityPrototype
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.EntityPrototype
+    name: EntityPrototype
+    isExternal: true
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Quantum.RuntimePlayer.Serialize*
+  commentId: Overload:Quantum.RuntimePlayer.Serialize
+  href: Quantum.RuntimePlayer.html#Quantum_RuntimePlayer_Serialize_Photon_Deterministic_BitStream_
+  name: Serialize
+  nameWithType: RuntimePlayer.Serialize
+  fullName: Quantum.RuntimePlayer.Serialize
+- uid: Photon.Deterministic.BitStream
+  commentId: T:Photon.Deterministic.BitStream
+  parent: Photon.Deterministic
+  isExternal: true
+  name: BitStream
+  nameWithType: BitStream
+  fullName: Photon.Deterministic.BitStream
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.RuntimePlayer.ToByteArray*
+  commentId: Overload:Quantum.RuntimePlayer.ToByteArray
+  href: Quantum.RuntimePlayer.html#Quantum_RuntimePlayer_ToByteArray_Quantum_RuntimePlayer_
+  name: ToByteArray
+  nameWithType: RuntimePlayer.ToByteArray
+  fullName: Quantum.RuntimePlayer.ToByteArray
+- uid: Quantum.RuntimePlayer
+  commentId: T:Quantum.RuntimePlayer
+  parent: Quantum
+  href: Quantum.RuntimePlayer.html
+  name: RuntimePlayer
+  nameWithType: RuntimePlayer
+  fullName: Quantum.RuntimePlayer
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: Quantum.RuntimePlayer.FromByteArray*
+  commentId: Overload:Quantum.RuntimePlayer.FromByteArray
+  href: Quantum.RuntimePlayer.html#Quantum_RuntimePlayer_FromByteArray_System_Byte___
+  name: FromByteArray
+  nameWithType: RuntimePlayer.FromByteArray
+  fullName: Quantum.RuntimePlayer.FromByteArray

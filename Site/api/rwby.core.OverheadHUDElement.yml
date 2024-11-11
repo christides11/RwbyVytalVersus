@@ -1,0 +1,860 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.core.OverheadHUDElement
+  commentId: T:rwby.core.OverheadHUDElement
+  id: OverheadHUDElement
+  parent: rwby.core
+  children:
+  - rwby.core.OverheadHUDElement.FighterDef
+  - rwby.core.OverheadHUDElement.Initialize(System.Int32,System.Int32)
+  - rwby.core.OverheadHUDElement.RootCanvas
+  - rwby.core.OverheadHUDElement.Teardown
+  - rwby.core.OverheadHUDElement.UpdatePos
+  - rwby.core.OverheadHUDElement.UpdateView(Quantum.CallbackUpdateView)
+  - rwby.core.OverheadHUDElement.aurabarHudElement
+  - rwby.core.OverheadHUDElement.container
+  - rwby.core.OverheadHUDElement.entityRef
+  - rwby.core.OverheadHUDElement.fighterEntityView
+  - rwby.core.OverheadHUDElement.healthbarHudElement
+  - rwby.core.OverheadHUDElement.hitstunbarHudElement
+  - rwby.core.OverheadHUDElement.hudHandler
+  - rwby.core.OverheadHUDElement.maxDistance
+  - rwby.core.OverheadHUDElement.maxScale
+  - rwby.core.OverheadHUDElement.minDistance
+  - rwby.core.OverheadHUDElement.minScale
+  - rwby.core.OverheadHUDElement.updateRate
+  langs:
+  - csharp
+  - vb
+  name: OverheadHUDElement
+  nameWithType: OverheadHUDElement
+  fullName: rwby.core.OverheadHUDElement
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OverheadHUDElement
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: 'public class OverheadHUDElement : MonoBehaviour, IHUDElement, IFighterDefinitionUser'
+    content.vb: Public Class OverheadHUDElement Inherits MonoBehaviour Implements IHUDElement, IFighterDefinitionUser
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  implements:
+  - rwby.IHUDElement
+  - rwby.IFighterDefinitionUser
+- uid: rwby.core.OverheadHUDElement.FighterDef
+  commentId: P:rwby.core.OverheadHUDElement.FighterDef
+  id: FighterDef
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: FighterDef
+  nameWithType: OverheadHUDElement.FighterDef
+  fullName: rwby.core.OverheadHUDElement.FighterDef
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FighterDef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public IFighterDefinition FighterDef { get; set; }
+    parameters: []
+    return:
+      type: Global.IFighterDefinition
+    content.vb: Public Property FighterDef As IFighterDefinition
+  overload: rwby.core.OverheadHUDElement.FighterDef*
+  implements:
+  - rwby.IFighterDefinitionUser.FighterDef
+- uid: rwby.core.OverheadHUDElement.entityRef
+  commentId: F:rwby.core.OverheadHUDElement.entityRef
+  id: entityRef
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: entityRef
+  nameWithType: OverheadHUDElement.entityRef
+  fullName: rwby.core.OverheadHUDElement.entityRef
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: entityRef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public EntityRef entityRef
+    return:
+      type: Quantum.EntityRef
+    content.vb: Public entityRef As EntityRef
+- uid: rwby.core.OverheadHUDElement.fighterEntityView
+  commentId: F:rwby.core.OverheadHUDElement.fighterEntityView
+  id: fighterEntityView
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: fighterEntityView
+  nameWithType: OverheadHUDElement.fighterEntityView
+  fullName: rwby.core.OverheadHUDElement.fighterEntityView
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: fighterEntityView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public QuantumEntityView fighterEntityView
+    return:
+      type: Quantum.QuantumEntityView
+    content.vb: Public fighterEntityView As QuantumEntityView
+- uid: rwby.core.OverheadHUDElement.hudHandler
+  commentId: F:rwby.core.OverheadHUDElement.hudHandler
+  id: hudHandler
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: hudHandler
+  nameWithType: OverheadHUDElement.hudHandler
+  fullName: rwby.core.OverheadHUDElement.hudHandler
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hudHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public OverheadHUDHandler hudHandler
+    return:
+      type: rwby.core.OverheadHUDHandler
+    content.vb: Public hudHandler As OverheadHUDHandler
+- uid: rwby.core.OverheadHUDElement.healthbarHudElement
+  commentId: F:rwby.core.OverheadHUDElement.healthbarHudElement
+  id: healthbarHudElement
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: healthbarHudElement
+  nameWithType: OverheadHUDElement.healthbarHudElement
+  fullName: rwby.core.OverheadHUDElement.healthbarHudElement
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: healthbarHudElement
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public HudElementGenericHealthbar healthbarHudElement
+    return:
+      type: rwby.core.HudElementGenericHealthbar
+    content.vb: Public healthbarHudElement As HudElementGenericHealthbar
+- uid: rwby.core.OverheadHUDElement.aurabarHudElement
+  commentId: F:rwby.core.OverheadHUDElement.aurabarHudElement
+  id: aurabarHudElement
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: aurabarHudElement
+  nameWithType: OverheadHUDElement.aurabarHudElement
+  fullName: rwby.core.OverheadHUDElement.aurabarHudElement
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: aurabarHudElement
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public HudElementGenericAurabar aurabarHudElement
+    return:
+      type: rwby.core.HudElementGenericAurabar
+    content.vb: Public aurabarHudElement As HudElementGenericAurabar
+- uid: rwby.core.OverheadHUDElement.hitstunbarHudElement
+  commentId: F:rwby.core.OverheadHUDElement.hitstunbarHudElement
+  id: hitstunbarHudElement
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: hitstunbarHudElement
+  nameWithType: OverheadHUDElement.hitstunbarHudElement
+  fullName: rwby.core.OverheadHUDElement.hitstunbarHudElement
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitstunbarHudElement
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public HudElementGenericHitstunbar hitstunbarHudElement
+    return:
+      type: rwby.core.HudElementGenericHitstunbar
+    content.vb: Public hitstunbarHudElement As HudElementGenericHitstunbar
+- uid: rwby.core.OverheadHUDElement.minDistance
+  commentId: F:rwby.core.OverheadHUDElement.minDistance
+  id: minDistance
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: minDistance
+  nameWithType: OverheadHUDElement.minDistance
+  fullName: rwby.core.OverheadHUDElement.minDistance
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: minDistance
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public float minDistance
+    return:
+      type: System.Single
+    content.vb: Public minDistance As Single
+- uid: rwby.core.OverheadHUDElement.maxDistance
+  commentId: F:rwby.core.OverheadHUDElement.maxDistance
+  id: maxDistance
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: maxDistance
+  nameWithType: OverheadHUDElement.maxDistance
+  fullName: rwby.core.OverheadHUDElement.maxDistance
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: maxDistance
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public float maxDistance
+    return:
+      type: System.Single
+    content.vb: Public maxDistance As Single
+- uid: rwby.core.OverheadHUDElement.minScale
+  commentId: F:rwby.core.OverheadHUDElement.minScale
+  id: minScale
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: minScale
+  nameWithType: OverheadHUDElement.minScale
+  fullName: rwby.core.OverheadHUDElement.minScale
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: minScale
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public float minScale
+    return:
+      type: System.Single
+    content.vb: Public minScale As Single
+- uid: rwby.core.OverheadHUDElement.maxScale
+  commentId: F:rwby.core.OverheadHUDElement.maxScale
+  id: maxScale
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: maxScale
+  nameWithType: OverheadHUDElement.maxScale
+  fullName: rwby.core.OverheadHUDElement.maxScale
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: maxScale
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public float maxScale
+    return:
+      type: System.Single
+    content.vb: Public maxScale As Single
+- uid: rwby.core.OverheadHUDElement.RootCanvas
+  commentId: P:rwby.core.OverheadHUDElement.RootCanvas
+  id: RootCanvas
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: RootCanvas
+  nameWithType: OverheadHUDElement.RootCanvas
+  fullName: rwby.core.OverheadHUDElement.RootCanvas
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RootCanvas
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public Canvas RootCanvas { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Canvas
+    content.vb: Public Property RootCanvas As Canvas
+  overload: rwby.core.OverheadHUDElement.RootCanvas*
+  implements:
+  - rwby.IHUDElement.RootCanvas
+- uid: rwby.core.OverheadHUDElement.updateRate
+  commentId: F:rwby.core.OverheadHUDElement.updateRate
+  id: updateRate
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: updateRate
+  nameWithType: OverheadHUDElement.updateRate
+  fullName: rwby.core.OverheadHUDElement.updateRate
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: updateRate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public int updateRate
+    return:
+      type: System.Int32
+    content.vb: Public updateRate As Integer
+- uid: rwby.core.OverheadHUDElement.container
+  commentId: F:rwby.core.OverheadHUDElement.container
+  id: container
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: container
+  nameWithType: OverheadHUDElement.container
+  fullName: rwby.core.OverheadHUDElement.container
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: container
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 30
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public GameObject container
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public container As GameObject
+- uid: rwby.core.OverheadHUDElement.Initialize(System.Int32,System.Int32)
+  commentId: M:rwby.core.OverheadHUDElement.Initialize(System.Int32,System.Int32)
+  id: Initialize(System.Int32,System.Int32)
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: Initialize(int, int)
+  nameWithType: OverheadHUDElement.Initialize(int, int)
+  fullName: rwby.core.OverheadHUDElement.Initialize(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 34
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Initialize(int localPlayerID, int networkPlayerID)
+    parameters:
+    - id: localPlayerID
+      type: System.Int32
+    - id: networkPlayerID
+      type: System.Int32
+    content.vb: Public Sub Initialize(localPlayerID As Integer, networkPlayerID As Integer)
+  overload: rwby.core.OverheadHUDElement.Initialize*
+  implements:
+  - rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  nameWithType.vb: OverheadHUDElement.Initialize(Integer, Integer)
+  fullName.vb: rwby.core.OverheadHUDElement.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+- uid: rwby.core.OverheadHUDElement.UpdatePos
+  commentId: M:rwby.core.OverheadHUDElement.UpdatePos
+  id: UpdatePos
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: UpdatePos()
+  nameWithType: OverheadHUDElement.UpdatePos()
+  fullName: rwby.core.OverheadHUDElement.UpdatePos()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdatePos
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 47
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public void UpdatePos()
+    content.vb: Public Sub UpdatePos()
+  overload: rwby.core.OverheadHUDElement.UpdatePos*
+- uid: rwby.core.OverheadHUDElement.UpdateView(Quantum.CallbackUpdateView)
+  commentId: M:rwby.core.OverheadHUDElement.UpdateView(Quantum.CallbackUpdateView)
+  id: UpdateView(Quantum.CallbackUpdateView)
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: UpdateView(CallbackUpdateView)
+  nameWithType: OverheadHUDElement.UpdateView(CallbackUpdateView)
+  fullName: rwby.core.OverheadHUDElement.UpdateView(Quantum.CallbackUpdateView)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 90
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public void UpdateView(CallbackUpdateView callback)
+    parameters:
+    - id: callback
+      type: Quantum.CallbackUpdateView
+    content.vb: Public Sub UpdateView(callback As CallbackUpdateView)
+  overload: rwby.core.OverheadHUDElement.UpdateView*
+- uid: rwby.core.OverheadHUDElement.Teardown
+  commentId: M:rwby.core.OverheadHUDElement.Teardown
+  id: Teardown
+  parent: rwby.core.OverheadHUDElement
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: OverheadHUDElement.Teardown()
+  fullName: rwby.core.OverheadHUDElement.Teardown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Teardown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDElement.cs
+    startLine: 96
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Teardown()
+    content.vb: Public Sub Teardown()
+  overload: rwby.core.OverheadHUDElement.Teardown*
+  implements:
+  - rwby.IHUDElement.Teardown
+references:
+- uid: rwby.core
+  commentId: N:rwby.core
+  href: rwby.html
+  name: rwby.core
+  nameWithType: rwby.core
+  fullName: rwby.core
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: rwby.IHUDElement
+  commentId: T:rwby.IHUDElement
+  parent: rwby
+  href: rwby.IHUDElement.html
+  name: IHUDElement
+  nameWithType: IHUDElement
+  fullName: rwby.IHUDElement
+- uid: rwby.IFighterDefinitionUser
+  commentId: T:rwby.IFighterDefinitionUser
+  parent: rwby
+  href: rwby.IFighterDefinitionUser.html
+  name: IFighterDefinitionUser
+  nameWithType: IFighterDefinitionUser
+  fullName: rwby.IFighterDefinitionUser
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: rwby.core.OverheadHUDElement.FighterDef*
+  commentId: Overload:rwby.core.OverheadHUDElement.FighterDef
+  href: rwby.core.OverheadHUDElement.html#rwby_core_OverheadHUDElement_FighterDef
+  name: FighterDef
+  nameWithType: OverheadHUDElement.FighterDef
+  fullName: rwby.core.OverheadHUDElement.FighterDef
+- uid: rwby.IFighterDefinitionUser.FighterDef
+  commentId: P:rwby.IFighterDefinitionUser.FighterDef
+  parent: rwby.IFighterDefinitionUser
+  name: FighterDef
+  nameWithType: IFighterDefinitionUser.FighterDef
+  fullName: rwby.IFighterDefinitionUser.FighterDef
+- uid: Global.IFighterDefinition
+  commentId: T:Global.IFighterDefinition
+  href: IFighterDefinition.html
+  name: IFighterDefinition
+  nameWithType: IFighterDefinition
+  fullName: IFighterDefinition
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.QuantumEntityView
+  commentId: T:Quantum.QuantumEntityView
+  parent: Quantum
+  name: QuantumEntityView
+  nameWithType: QuantumEntityView
+  fullName: Quantum.QuantumEntityView
+- uid: rwby.core.OverheadHUDHandler
+  commentId: T:rwby.core.OverheadHUDHandler
+  parent: rwby.core
+  href: rwby.core.OverheadHUDHandler.html
+  name: OverheadHUDHandler
+  nameWithType: OverheadHUDHandler
+  fullName: rwby.core.OverheadHUDHandler
+- uid: rwby.core.HudElementGenericHealthbar
+  commentId: T:rwby.core.HudElementGenericHealthbar
+  parent: rwby.core
+  href: rwby.core.HudElementGenericHealthbar.html
+  name: HudElementGenericHealthbar
+  nameWithType: HudElementGenericHealthbar
+  fullName: rwby.core.HudElementGenericHealthbar
+- uid: rwby.core.HudElementGenericAurabar
+  commentId: T:rwby.core.HudElementGenericAurabar
+  parent: rwby.core
+  href: rwby.core.HudElementGenericAurabar.html
+  name: HudElementGenericAurabar
+  nameWithType: HudElementGenericAurabar
+  fullName: rwby.core.HudElementGenericAurabar
+- uid: rwby.core.HudElementGenericHitstunbar
+  commentId: T:rwby.core.HudElementGenericHitstunbar
+  parent: rwby.core
+  href: rwby.core.HudElementGenericHitstunbar.html
+  name: HudElementGenericHitstunbar
+  nameWithType: HudElementGenericHitstunbar
+  fullName: rwby.core.HudElementGenericHitstunbar
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: rwby.core.OverheadHUDElement.RootCanvas*
+  commentId: Overload:rwby.core.OverheadHUDElement.RootCanvas
+  href: rwby.core.OverheadHUDElement.html#rwby_core_OverheadHUDElement_RootCanvas
+  name: RootCanvas
+  nameWithType: OverheadHUDElement.RootCanvas
+  fullName: rwby.core.OverheadHUDElement.RootCanvas
+- uid: rwby.IHUDElement.RootCanvas
+  commentId: P:rwby.IHUDElement.RootCanvas
+  parent: rwby.IHUDElement
+  name: RootCanvas
+  nameWithType: IHUDElement.RootCanvas
+  fullName: rwby.IHUDElement.RootCanvas
+- uid: UnityEngine.Canvas
+  commentId: T:UnityEngine.Canvas
+  parent: UnityEngine
+  isExternal: true
+  name: Canvas
+  nameWithType: Canvas
+  fullName: UnityEngine.Canvas
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: rwby.core.OverheadHUDElement.Initialize*
+  commentId: Overload:rwby.core.OverheadHUDElement.Initialize
+  href: rwby.core.OverheadHUDElement.html#rwby_core_OverheadHUDElement_Initialize_System_Int32_System_Int32_
+  name: Initialize
+  nameWithType: OverheadHUDElement.Initialize
+  fullName: rwby.core.OverheadHUDElement.Initialize
+- uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  commentId: M:rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  parent: rwby.IHUDElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Initialize(int, int)
+  nameWithType: IHUDElement.Initialize(int, int)
+  fullName: rwby.IHUDElement.Initialize(int, int)
+  nameWithType.vb: IHUDElement.Initialize(Integer, Integer)
+  fullName.vb: rwby.IHUDElement.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+  spec.csharp:
+  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+    name: Initialize
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+    name: Initialize
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: rwby.core.OverheadHUDElement.UpdatePos*
+  commentId: Overload:rwby.core.OverheadHUDElement.UpdatePos
+  href: rwby.core.OverheadHUDElement.html#rwby_core_OverheadHUDElement_UpdatePos
+  name: UpdatePos
+  nameWithType: OverheadHUDElement.UpdatePos
+  fullName: rwby.core.OverheadHUDElement.UpdatePos
+- uid: rwby.core.OverheadHUDElement.UpdateView*
+  commentId: Overload:rwby.core.OverheadHUDElement.UpdateView
+  href: rwby.core.OverheadHUDElement.html#rwby_core_OverheadHUDElement_UpdateView_Quantum_CallbackUpdateView_
+  name: UpdateView
+  nameWithType: OverheadHUDElement.UpdateView
+  fullName: rwby.core.OverheadHUDElement.UpdateView
+- uid: Quantum.CallbackUpdateView
+  commentId: T:Quantum.CallbackUpdateView
+  parent: Quantum
+  href: Quantum.CallbackUpdateView.html
+  name: CallbackUpdateView
+  nameWithType: CallbackUpdateView
+  fullName: Quantum.CallbackUpdateView
+- uid: rwby.core.OverheadHUDElement.Teardown*
+  commentId: Overload:rwby.core.OverheadHUDElement.Teardown
+  href: rwby.core.OverheadHUDElement.html#rwby_core_OverheadHUDElement_Teardown
+  name: Teardown
+  nameWithType: OverheadHUDElement.Teardown
+  fullName: rwby.core.OverheadHUDElement.Teardown
+- uid: rwby.IHUDElement.Teardown
+  commentId: M:rwby.IHUDElement.Teardown
+  parent: rwby.IHUDElement
+  name: Teardown()
+  nameWithType: IHUDElement.Teardown()
+  fullName: rwby.IHUDElement.Teardown()
+  spec.csharp:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )

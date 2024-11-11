@@ -1,0 +1,715 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.StreamReplayInputProvider
+  commentId: T:Quantum.StreamReplayInputProvider
+  id: StreamReplayInputProvider
+  parent: Quantum
+  children:
+  - Quantum.StreamReplayInputProvider.#ctor(System.IO.Stream,System.Int32)
+  - Quantum.StreamReplayInputProvider.AddRpc(System.Int32,System.Byte[],System.Boolean)
+  - Quantum.StreamReplayInputProvider.BeginReadFrame(System.Int32)
+  - Quantum.StreamReplayInputProvider.CanSimulate(System.Int32)
+  - Quantum.StreamReplayInputProvider.CompleteReadFrame(System.Int32,System.Int32,System.Byte[]@)
+  - Quantum.StreamReplayInputProvider.ForwardToFrame(System.IO.Stream,System.Int32)
+  - Quantum.StreamReplayInputProvider.GetInput(System.Int32,System.Int32)
+  - Quantum.StreamReplayInputProvider.GetRpc(System.Int32,System.Int32)
+  - Quantum.StreamReplayInputProvider.MaxFrame
+  - Quantum.StreamReplayInputProvider.Reset
+  langs:
+  - csharp
+  - vb
+  name: StreamReplayInputProvider
+  nameWithType: StreamReplayInputProvider
+  fullName: Quantum.StreamReplayInputProvider
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StreamReplayInputProvider
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6686
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The stream replay input provider is used to play back input from a stream.
+  example: []
+  syntax:
+    content: public class StreamReplayInputProvider
+    content.vb: Public Class StreamReplayInputProvider
+  inheritance:
+  - System.Object
+- uid: Quantum.StreamReplayInputProvider.MaxFrame
+  commentId: P:Quantum.StreamReplayInputProvider.MaxFrame
+  id: MaxFrame
+  parent: Quantum.StreamReplayInputProvider
+  langs:
+  - csharp
+  - vb
+  name: MaxFrame
+  nameWithType: StreamReplayInputProvider.MaxFrame
+  fullName: Quantum.StreamReplayInputProvider.MaxFrame
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: MaxFrame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6694
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The max frame that the stream has input for.
+  example: []
+  syntax:
+    content: public int MaxFrame { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxFrame As Integer
+  overload: Quantum.StreamReplayInputProvider.MaxFrame*
+- uid: Quantum.StreamReplayInputProvider.#ctor(System.IO.Stream,System.Int32)
+  commentId: M:Quantum.StreamReplayInputProvider.#ctor(System.IO.Stream,System.Int32)
+  id: '#ctor(System.IO.Stream,System.Int32)'
+  parent: Quantum.StreamReplayInputProvider
+  langs:
+  - csharp
+  - vb
+  name: StreamReplayInputProvider(Stream, int)
+  nameWithType: StreamReplayInputProvider.StreamReplayInputProvider(Stream, int)
+  fullName: Quantum.StreamReplayInputProvider.StreamReplayInputProvider(System.IO.Stream, int)
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6701
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Create a stream replay input provider.
+  example: []
+  syntax:
+    content: public StreamReplayInputProvider(Stream inputStream, int maxFrame)
+    parameters:
+    - id: inputStream
+      type: System.IO.Stream
+      description: Stream to read from
+    - id: maxFrame
+      type: System.Int32
+      description: Max frame that input is available for
+    content.vb: Public Sub New(inputStream As Stream, maxFrame As Integer)
+  overload: Quantum.StreamReplayInputProvider.#ctor*
+  nameWithType.vb: StreamReplayInputProvider.New(Stream, Integer)
+  fullName.vb: Quantum.StreamReplayInputProvider.New(System.IO.Stream, Integer)
+  name.vb: New(Stream, Integer)
+- uid: Quantum.StreamReplayInputProvider.Reset
+  commentId: M:Quantum.StreamReplayInputProvider.Reset
+  id: Reset
+  parent: Quantum.StreamReplayInputProvider
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: StreamReplayInputProvider.Reset()
+  fullName: Quantum.StreamReplayInputProvider.Reset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Reset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6709
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Resets the input provider when restarting a replay for example. The stream should be reset to the beginning.
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: Quantum.StreamReplayInputProvider.Reset*
+- uid: Quantum.StreamReplayInputProvider.CanSimulate(System.Int32)
+  commentId: M:Quantum.StreamReplayInputProvider.CanSimulate(System.Int32)
+  id: CanSimulate(System.Int32)
+  parent: Quantum.StreamReplayInputProvider
+  langs:
+  - csharp
+  - vb
+  name: CanSimulate(int)
+  nameWithType: StreamReplayInputProvider.CanSimulate(int)
+  fullName: Quantum.StreamReplayInputProvider.CanSimulate(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CanSimulate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6718
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Is all input for this frame available.
+  example: []
+  syntax:
+    content: public bool CanSimulate(int frame)
+    parameters:
+    - id: frame
+      type: System.Int32
+      description: Frame number
+    return:
+      type: System.Boolean
+      description: True if all input is available and the simulation can progress
+    content.vb: Public Function CanSimulate(frame As Integer) As Boolean
+  overload: Quantum.StreamReplayInputProvider.CanSimulate*
+  nameWithType.vb: StreamReplayInputProvider.CanSimulate(Integer)
+  fullName.vb: Quantum.StreamReplayInputProvider.CanSimulate(Integer)
+  name.vb: CanSimulate(Integer)
+- uid: Quantum.StreamReplayInputProvider.BeginReadFrame(System.Int32)
+  commentId: M:Quantum.StreamReplayInputProvider.BeginReadFrame(System.Int32)
+  id: BeginReadFrame(System.Int32)
+  parent: Quantum.StreamReplayInputProvider
+  langs:
+  - csharp
+  - vb
+  name: BeginReadFrame(int)
+  nameWithType: StreamReplayInputProvider.BeginReadFrame(int)
+  fullName: Quantum.StreamReplayInputProvider.BeginReadFrame(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BeginReadFrame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6727
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Request input for a certain frame.
+  example: []
+  syntax:
+    content: public int BeginReadFrame(int frame)
+    parameters:
+    - id: frame
+      type: System.Int32
+      description: The frame for the requested input
+    return:
+      type: System.Int32
+      description: The size of the input to be read
+    content.vb: Public Function BeginReadFrame(frame As Integer) As Integer
+  overload: Quantum.StreamReplayInputProvider.BeginReadFrame*
+  nameWithType.vb: StreamReplayInputProvider.BeginReadFrame(Integer)
+  fullName.vb: Quantum.StreamReplayInputProvider.BeginReadFrame(Integer)
+  name.vb: BeginReadFrame(Integer)
+- uid: Quantum.StreamReplayInputProvider.CompleteReadFrame(System.Int32,System.Int32,System.Byte[]@)
+  commentId: M:Quantum.StreamReplayInputProvider.CompleteReadFrame(System.Int32,System.Int32,System.Byte[]@)
+  id: CompleteReadFrame(System.Int32,System.Int32,System.Byte[]@)
+  parent: Quantum.StreamReplayInputProvider
+  langs:
+  - csharp
+  - vb
+  name: CompleteReadFrame(int, int, ref byte[])
+  nameWithType: StreamReplayInputProvider.CompleteReadFrame(int, int, ref byte[])
+  fullName: Quantum.StreamReplayInputProvider.CompleteReadFrame(int, int, ref byte[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CompleteReadFrame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6739
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Read the input data for the frame.
+  example: []
+  syntax:
+    content: public void CompleteReadFrame(int frame, int length, ref byte[] data)
+    parameters:
+    - id: frame
+      type: System.Int32
+      description: The frame to read the input for
+    - id: length
+      type: System.Int32
+      description: The input length requested in <xref href="Quantum.StreamReplayInputProvider.BeginReadFrame(System.Int32)" data-throw-if-not-resolved="false"></xref>
+    - id: data
+      type: System.Byte[]
+      description: The array to copy input data to
+    content.vb: Public Sub CompleteReadFrame(frame As Integer, length As Integer, data As Byte())
+  overload: Quantum.StreamReplayInputProvider.CompleteReadFrame*
+  nameWithType.vb: StreamReplayInputProvider.CompleteReadFrame(Integer, Integer, Byte())
+  fullName.vb: Quantum.StreamReplayInputProvider.CompleteReadFrame(Integer, Integer, Byte())
+  name.vb: CompleteReadFrame(Integer, Integer, Byte())
+- uid: Quantum.StreamReplayInputProvider.GetInput(System.Int32,System.Int32)
+  commentId: M:Quantum.StreamReplayInputProvider.GetInput(System.Int32,System.Int32)
+  id: GetInput(System.Int32,System.Int32)
+  parent: Quantum.StreamReplayInputProvider
+  langs:
+  - csharp
+  - vb
+  name: GetInput(int, int)
+  nameWithType: StreamReplayInputProvider.GetInput(int, int)
+  fullName: Quantum.StreamReplayInputProvider.GetInput(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6747
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Unused.
+  example: []
+  syntax:
+    content: public DeterministicFrameInputTemp GetInput(int frame, int player)
+    parameters:
+    - id: frame
+      type: System.Int32
+    - id: player
+      type: System.Int32
+    return:
+      type: Photon.Deterministic.DeterministicFrameInputTemp
+    content.vb: Public Function GetInput(frame As Integer, player As Integer) As DeterministicFrameInputTemp
+  overload: Quantum.StreamReplayInputProvider.GetInput*
+  nameWithType.vb: StreamReplayInputProvider.GetInput(Integer, Integer)
+  fullName.vb: Quantum.StreamReplayInputProvider.GetInput(Integer, Integer)
+  name.vb: GetInput(Integer, Integer)
+- uid: Quantum.StreamReplayInputProvider.AddRpc(System.Int32,System.Byte[],System.Boolean)
+  commentId: M:Quantum.StreamReplayInputProvider.AddRpc(System.Int32,System.Byte[],System.Boolean)
+  id: AddRpc(System.Int32,System.Byte[],System.Boolean)
+  parent: Quantum.StreamReplayInputProvider
+  langs:
+  - csharp
+  - vb
+  name: AddRpc(int, byte[], bool)
+  nameWithType: StreamReplayInputProvider.AddRpc(int, byte[], bool)
+  fullName: Quantum.StreamReplayInputProvider.AddRpc(int, byte[], bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddRpc
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6755
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Unused.
+  example: []
+  syntax:
+    content: public void AddRpc(int player, byte[] data, bool command)
+    parameters:
+    - id: player
+      type: System.Int32
+    - id: data
+      type: System.Byte[]
+    - id: command
+      type: System.Boolean
+    content.vb: Public Sub AddRpc(player As Integer, data As Byte(), command As Boolean)
+  overload: Quantum.StreamReplayInputProvider.AddRpc*
+  nameWithType.vb: StreamReplayInputProvider.AddRpc(Integer, Byte(), Boolean)
+  fullName.vb: Quantum.StreamReplayInputProvider.AddRpc(Integer, Byte(), Boolean)
+  name.vb: AddRpc(Integer, Byte(), Boolean)
+- uid: Quantum.StreamReplayInputProvider.GetRpc(System.Int32,System.Int32)
+  commentId: M:Quantum.StreamReplayInputProvider.GetRpc(System.Int32,System.Int32)
+  id: GetRpc(System.Int32,System.Int32)
+  parent: Quantum.StreamReplayInputProvider
+  langs:
+  - csharp
+  - vb
+  name: GetRpc(int, int)
+  nameWithType: StreamReplayInputProvider.GetRpc(int, int)
+  fullName: Quantum.StreamReplayInputProvider.GetRpc(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetRpc
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6762
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Unused.
+  example: []
+  syntax:
+    content: public QTuple<byte[], bool> GetRpc(int frame, int player)
+    parameters:
+    - id: frame
+      type: System.Int32
+    - id: player
+      type: System.Int32
+    return:
+      type: Photon.Deterministic.QTuple{System.Byte[],System.Boolean}
+    content.vb: Public Function GetRpc(frame As Integer, player As Integer) As QTuple(Of Byte(), Boolean)
+  overload: Quantum.StreamReplayInputProvider.GetRpc*
+  nameWithType.vb: StreamReplayInputProvider.GetRpc(Integer, Integer)
+  fullName.vb: Quantum.StreamReplayInputProvider.GetRpc(Integer, Integer)
+  name.vb: GetRpc(Integer, Integer)
+- uid: Quantum.StreamReplayInputProvider.ForwardToFrame(System.IO.Stream,System.Int32)
+  commentId: M:Quantum.StreamReplayInputProvider.ForwardToFrame(System.IO.Stream,System.Int32)
+  id: ForwardToFrame(System.IO.Stream,System.Int32)
+  parent: Quantum.StreamReplayInputProvider
+  langs:
+  - csharp
+  - vb
+  name: ForwardToFrame(Stream, int)
+  nameWithType: StreamReplayInputProvider.ForwardToFrame(Stream, int)
+  fullName: Quantum.StreamReplayInputProvider.ForwardToFrame(System.IO.Stream, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ForwardToFrame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6772
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Skip to a selected frame in the stream.
+  example: []
+  syntax:
+    content: public static void ForwardToFrame(Stream stream, int frame)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: Stream
+    - id: frame
+      type: System.Int32
+      description: Frame to fast forward to
+    content.vb: Public Shared Sub ForwardToFrame(stream As Stream, frame As Integer)
+  overload: Quantum.StreamReplayInputProvider.ForwardToFrame*
+  nameWithType.vb: StreamReplayInputProvider.ForwardToFrame(Stream, Integer)
+  fullName.vb: Quantum.StreamReplayInputProvider.ForwardToFrame(System.IO.Stream, Integer)
+  name.vb: ForwardToFrame(Stream, Integer)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.StreamReplayInputProvider.MaxFrame*
+  commentId: Overload:Quantum.StreamReplayInputProvider.MaxFrame
+  href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_MaxFrame
+  name: MaxFrame
+  nameWithType: StreamReplayInputProvider.MaxFrame
+  fullName: Quantum.StreamReplayInputProvider.MaxFrame
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.StreamReplayInputProvider.#ctor*
+  commentId: Overload:Quantum.StreamReplayInputProvider.#ctor
+  href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider__ctor_System_IO_Stream_System_Int32_
+  name: StreamReplayInputProvider
+  nameWithType: StreamReplayInputProvider.StreamReplayInputProvider
+  fullName: Quantum.StreamReplayInputProvider.StreamReplayInputProvider
+  nameWithType.vb: StreamReplayInputProvider.New
+  fullName.vb: Quantum.StreamReplayInputProvider.New
+  name.vb: New
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: Quantum.StreamReplayInputProvider.Reset*
+  commentId: Overload:Quantum.StreamReplayInputProvider.Reset
+  href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_Reset
+  name: Reset
+  nameWithType: StreamReplayInputProvider.Reset
+  fullName: Quantum.StreamReplayInputProvider.Reset
+- uid: Quantum.StreamReplayInputProvider.CanSimulate*
+  commentId: Overload:Quantum.StreamReplayInputProvider.CanSimulate
+  href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_CanSimulate_System_Int32_
+  name: CanSimulate
+  nameWithType: StreamReplayInputProvider.CanSimulate
+  fullName: Quantum.StreamReplayInputProvider.CanSimulate
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.StreamReplayInputProvider.BeginReadFrame*
+  commentId: Overload:Quantum.StreamReplayInputProvider.BeginReadFrame
+  href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_BeginReadFrame_System_Int32_
+  name: BeginReadFrame
+  nameWithType: StreamReplayInputProvider.BeginReadFrame
+  fullName: Quantum.StreamReplayInputProvider.BeginReadFrame
+- uid: Quantum.StreamReplayInputProvider.BeginReadFrame(System.Int32)
+  commentId: M:Quantum.StreamReplayInputProvider.BeginReadFrame(System.Int32)
+  isExternal: true
+  href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_BeginReadFrame_System_Int32_
+  name: BeginReadFrame(int)
+  nameWithType: StreamReplayInputProvider.BeginReadFrame(int)
+  fullName: Quantum.StreamReplayInputProvider.BeginReadFrame(int)
+  nameWithType.vb: StreamReplayInputProvider.BeginReadFrame(Integer)
+  fullName.vb: Quantum.StreamReplayInputProvider.BeginReadFrame(Integer)
+  name.vb: BeginReadFrame(Integer)
+  spec.csharp:
+  - uid: Quantum.StreamReplayInputProvider.BeginReadFrame(System.Int32)
+    name: BeginReadFrame
+    href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_BeginReadFrame_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Quantum.StreamReplayInputProvider.BeginReadFrame(System.Int32)
+    name: BeginReadFrame
+    href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_BeginReadFrame_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Quantum.StreamReplayInputProvider.CompleteReadFrame*
+  commentId: Overload:Quantum.StreamReplayInputProvider.CompleteReadFrame
+  href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_CompleteReadFrame_System_Int32_System_Int32_System_Byte____
+  name: CompleteReadFrame
+  nameWithType: StreamReplayInputProvider.CompleteReadFrame
+  fullName: Quantum.StreamReplayInputProvider.CompleteReadFrame
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: Quantum.StreamReplayInputProvider.GetInput*
+  commentId: Overload:Quantum.StreamReplayInputProvider.GetInput
+  href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_GetInput_System_Int32_System_Int32_
+  name: GetInput
+  nameWithType: StreamReplayInputProvider.GetInput
+  fullName: Quantum.StreamReplayInputProvider.GetInput
+- uid: Photon.Deterministic.DeterministicFrameInputTemp
+  commentId: T:Photon.Deterministic.DeterministicFrameInputTemp
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicFrameInputTemp
+  nameWithType: DeterministicFrameInputTemp
+  fullName: Photon.Deterministic.DeterministicFrameInputTemp
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.StreamReplayInputProvider.AddRpc*
+  commentId: Overload:Quantum.StreamReplayInputProvider.AddRpc
+  href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_AddRpc_System_Int32_System_Byte___System_Boolean_
+  name: AddRpc
+  nameWithType: StreamReplayInputProvider.AddRpc
+  fullName: Quantum.StreamReplayInputProvider.AddRpc
+- uid: Quantum.StreamReplayInputProvider.GetRpc*
+  commentId: Overload:Quantum.StreamReplayInputProvider.GetRpc
+  href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_GetRpc_System_Int32_System_Int32_
+  name: GetRpc
+  nameWithType: StreamReplayInputProvider.GetRpc
+  fullName: Quantum.StreamReplayInputProvider.GetRpc
+- uid: Photon.Deterministic.QTuple{System.Byte[],System.Boolean}
+  commentId: T:Photon.Deterministic.QTuple{System.Byte[],System.Boolean}
+  parent: Photon.Deterministic
+  definition: Photon.Deterministic.QTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: QTuple<byte[], bool>
+  nameWithType: QTuple<byte[], bool>
+  fullName: Photon.Deterministic.QTuple<byte[], bool>
+  nameWithType.vb: QTuple(Of Byte(), Boolean)
+  fullName.vb: Photon.Deterministic.QTuple(Of Byte(), Boolean)
+  name.vb: QTuple(Of Byte(), Boolean)
+  spec.csharp:
+  - uid: Photon.Deterministic.QTuple`2
+    name: QTuple
+    isExternal: true
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Photon.Deterministic.QTuple`2
+    name: QTuple
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Photon.Deterministic.QTuple`2
+  commentId: T:Photon.Deterministic.QTuple`2
+  isExternal: true
+  name: QTuple<T0, T1>
+  nameWithType: QTuple<T0, T1>
+  fullName: Photon.Deterministic.QTuple<T0, T1>
+  nameWithType.vb: QTuple(Of T0, T1)
+  fullName.vb: Photon.Deterministic.QTuple(Of T0, T1)
+  name.vb: QTuple(Of T0, T1)
+  spec.csharp:
+  - uid: Photon.Deterministic.QTuple`2
+    name: QTuple
+    isExternal: true
+  - name: <
+  - name: T0
+  - name: ','
+  - name: " "
+  - name: T1
+  - name: '>'
+  spec.vb:
+  - uid: Photon.Deterministic.QTuple`2
+    name: QTuple
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T0
+  - name: ','
+  - name: " "
+  - name: T1
+  - name: )
+- uid: Quantum.StreamReplayInputProvider.ForwardToFrame*
+  commentId: Overload:Quantum.StreamReplayInputProvider.ForwardToFrame
+  href: Quantum.StreamReplayInputProvider.html#Quantum_StreamReplayInputProvider_ForwardToFrame_System_IO_Stream_System_Int32_
+  name: ForwardToFrame
+  nameWithType: StreamReplayInputProvider.ForwardToFrame
+  fullName: Quantum.StreamReplayInputProvider.ForwardToFrame

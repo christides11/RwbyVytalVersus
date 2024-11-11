@@ -1,0 +1,1295 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.EnvironmentProcessor
+  commentId: T:Quantum.EnvironmentProcessor
+  id: EnvironmentProcessor
+  parent: Quantum
+  children:
+  - Quantum.EnvironmentProcessor.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  - Quantum.EnvironmentProcessor.BeforeMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  - Quantum.EnvironmentProcessor.DynamicAirFriction
+  - Quantum.EnvironmentProcessor.DynamicGroundFriction
+  - Quantum.EnvironmentProcessor.Gravity
+  - Quantum.EnvironmentProcessor.JumpMultiplier
+  - Quantum.EnvironmentProcessor.KinematicAirAcceleration
+  - Quantum.EnvironmentProcessor.KinematicAirFriction
+  - Quantum.EnvironmentProcessor.KinematicGroundAcceleration
+  - Quantum.EnvironmentProcessor.KinematicGroundFriction
+  - Quantum.EnvironmentProcessor.KinematicSpeed
+  - Quantum.EnvironmentProcessor.MaxGroundAngle
+  - Quantum.EnvironmentProcessor.ProcessAfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  - Quantum.EnvironmentProcessor.SetDynamicVelocity(Quantum.KCCContext,Quantum.KCCData@,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP)
+  - Quantum.EnvironmentProcessor.SetKinematicVelocity(Quantum.KCCContext,Quantum.KCCData@,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP)
+  langs:
+  - csharp
+  - vb
+  name: EnvironmentProcessor
+  nameWithType: EnvironmentProcessor
+  fullName: Quantum.EnvironmentProcessor
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: EnvironmentProcessor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 7
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Movement implementation for default environment.
+  example: []
+  syntax:
+    content: 'public class EnvironmentProcessor : KCCProcessor, IBeforeMove, IAfterMoveStep'
+    content.vb: Public Class EnvironmentProcessor Inherits KCCProcessor Implements IBeforeMove, IAfterMoveStep
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Quantum.AssetObject
+  - Quantum.KCCProcessor
+  implements:
+  - Quantum.IBeforeMove
+  - Quantum.IAfterMoveStep
+  inheritedMembers:
+  - Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+  - Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  - Quantum.AssetObject.Identifier
+  - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Create``1
+  - Quantum.AssetObject.Create(System.Type)
+  - Quantum.AssetObject.Create``1(System.Action{{T}})
+  - Quantum.AssetObject.Reset
+  - Quantum.AssetObject.Guid
+  - Quantum.AssetObject.Path
+  - Quantum.AssetObject.Settings
+- uid: Quantum.EnvironmentProcessor.KinematicSpeed
+  commentId: F:Quantum.EnvironmentProcessor.KinematicSpeed
+  id: KinematicSpeed
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: KinematicSpeed
+  nameWithType: EnvironmentProcessor.KinematicSpeed
+  fullName: Quantum.EnvironmentProcessor.KinematicSpeed
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: KinematicSpeed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 11
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCHeader("General")]
+
+      [KCCTooltip("Maximum allowed speed the KCC can move with player input.")]
+
+      public FP KinematicSpeed
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <KCCHeader("General")>
+
+      <KCCTooltip("Maximum allowed speed the KCC can move with player input.")>
+
+      Public KinematicSpeed As FP
+  attributes:
+  - type: Quantum.KCCHeaderAttribute
+    ctor: Quantum.KCCHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: General
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Maximum allowed speed the KCC can move with player input.
+- uid: Quantum.EnvironmentProcessor.JumpMultiplier
+  commentId: F:Quantum.EnvironmentProcessor.JumpMultiplier
+  id: JumpMultiplier
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: JumpMultiplier
+  nameWithType: EnvironmentProcessor.JumpMultiplier
+  fullName: Quantum.EnvironmentProcessor.JumpMultiplier
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: JumpMultiplier
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 13
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCTooltip("Custom jump multiplier.")]
+
+      public FP JumpMultiplier
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <KCCTooltip("Custom jump multiplier.")>
+
+      Public JumpMultiplier As FP
+  attributes:
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Custom jump multiplier.
+- uid: Quantum.EnvironmentProcessor.Gravity
+  commentId: F:Quantum.EnvironmentProcessor.Gravity
+  id: Gravity
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: Gravity
+  nameWithType: EnvironmentProcessor.Gravity
+  fullName: Quantum.EnvironmentProcessor.Gravity
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Gravity
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 15
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCTooltip("Custom gravity vector.")]
+
+      public FPVector3 Gravity
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: >-
+      <KCCTooltip("Custom gravity vector.")>
+
+      Public Gravity As FPVector3
+  attributes:
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Custom gravity vector.
+- uid: Quantum.EnvironmentProcessor.MaxGroundAngle
+  commentId: F:Quantum.EnvironmentProcessor.MaxGroundAngle
+  id: MaxGroundAngle
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: MaxGroundAngle
+  nameWithType: EnvironmentProcessor.MaxGroundAngle
+  fullName: Quantum.EnvironmentProcessor.MaxGroundAngle
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: MaxGroundAngle
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 19
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCHeader("Ground")]
+
+      [KCCTooltip("Maximum angle of walkable ground.")]
+
+      public FP MaxGroundAngle
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <KCCHeader("Ground")>
+
+      <KCCTooltip("Maximum angle of walkable ground.")>
+
+      Public MaxGroundAngle As FP
+  attributes:
+  - type: Quantum.KCCHeaderAttribute
+    ctor: Quantum.KCCHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Ground
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Maximum angle of walkable ground.
+- uid: Quantum.EnvironmentProcessor.DynamicGroundFriction
+  commentId: F:Quantum.EnvironmentProcessor.DynamicGroundFriction
+  id: DynamicGroundFriction
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: DynamicGroundFriction
+  nameWithType: EnvironmentProcessor.DynamicGroundFriction
+  fullName: Quantum.EnvironmentProcessor.DynamicGroundFriction
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DynamicGroundFriction
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 21
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCTooltip("Dynamic velocity is decelerated by actual dynamic speed multiplied by this. The faster KCC moves, the more deceleration is applied.")]
+
+      public FP DynamicGroundFriction
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <KCCTooltip("Dynamic velocity is decelerated by actual dynamic speed multiplied by this. The faster KCC moves, the more deceleration is applied.")>
+
+      Public DynamicGroundFriction As FP
+  attributes:
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Dynamic velocity is decelerated by actual dynamic speed multiplied by this. The faster KCC moves, the more deceleration is applied.
+- uid: Quantum.EnvironmentProcessor.KinematicGroundAcceleration
+  commentId: F:Quantum.EnvironmentProcessor.KinematicGroundAcceleration
+  id: KinematicGroundAcceleration
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: KinematicGroundAcceleration
+  nameWithType: EnvironmentProcessor.KinematicGroundAcceleration
+  fullName: Quantum.EnvironmentProcessor.KinematicGroundAcceleration
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: KinematicGroundAcceleration
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 23
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCTooltip("Kinematic velocity is accelerated by calculated kinematic speed multiplied by this.")]
+
+      public FP KinematicGroundAcceleration
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <KCCTooltip("Kinematic velocity is accelerated by calculated kinematic speed multiplied by this.")>
+
+      Public KinematicGroundAcceleration As FP
+  attributes:
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Kinematic velocity is accelerated by calculated kinematic speed multiplied by this.
+- uid: Quantum.EnvironmentProcessor.KinematicGroundFriction
+  commentId: F:Quantum.EnvironmentProcessor.KinematicGroundFriction
+  id: KinematicGroundFriction
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: KinematicGroundFriction
+  nameWithType: EnvironmentProcessor.KinematicGroundFriction
+  fullName: Quantum.EnvironmentProcessor.KinematicGroundFriction
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: KinematicGroundFriction
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 25
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCTooltip("Kinematic velocity is decelerated by actual kinematic speed multiplied by this. The faster KCC moves, the more deceleration is applied.")]
+
+      public FP KinematicGroundFriction
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <KCCTooltip("Kinematic velocity is decelerated by actual kinematic speed multiplied by this. The faster KCC moves, the more deceleration is applied.")>
+
+      Public KinematicGroundFriction As FP
+  attributes:
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Kinematic velocity is decelerated by actual kinematic speed multiplied by this. The faster KCC moves, the more deceleration is applied.
+- uid: Quantum.EnvironmentProcessor.DynamicAirFriction
+  commentId: F:Quantum.EnvironmentProcessor.DynamicAirFriction
+  id: DynamicAirFriction
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: DynamicAirFriction
+  nameWithType: EnvironmentProcessor.DynamicAirFriction
+  fullName: Quantum.EnvironmentProcessor.DynamicAirFriction
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DynamicAirFriction
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 29
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCHeader("Air")]
+
+      [KCCTooltip("Dynamic velocity is decelerated by actual dynamic speed multiplied by this. The faster KCC moves, the more deceleration is applied.")]
+
+      public FP DynamicAirFriction
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <KCCHeader("Air")>
+
+      <KCCTooltip("Dynamic velocity is decelerated by actual dynamic speed multiplied by this. The faster KCC moves, the more deceleration is applied.")>
+
+      Public DynamicAirFriction As FP
+  attributes:
+  - type: Quantum.KCCHeaderAttribute
+    ctor: Quantum.KCCHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Air
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Dynamic velocity is decelerated by actual dynamic speed multiplied by this. The faster KCC moves, the more deceleration is applied.
+- uid: Quantum.EnvironmentProcessor.KinematicAirAcceleration
+  commentId: F:Quantum.EnvironmentProcessor.KinematicAirAcceleration
+  id: KinematicAirAcceleration
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: KinematicAirAcceleration
+  nameWithType: EnvironmentProcessor.KinematicAirAcceleration
+  fullName: Quantum.EnvironmentProcessor.KinematicAirAcceleration
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: KinematicAirAcceleration
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 31
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCTooltip("Kinematic velocity is accelerated by calculated kinematic speed multiplied by this.")]
+
+      public FP KinematicAirAcceleration
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <KCCTooltip("Kinematic velocity is accelerated by calculated kinematic speed multiplied by this.")>
+
+      Public KinematicAirAcceleration As FP
+  attributes:
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Kinematic velocity is accelerated by calculated kinematic speed multiplied by this.
+- uid: Quantum.EnvironmentProcessor.KinematicAirFriction
+  commentId: F:Quantum.EnvironmentProcessor.KinematicAirFriction
+  id: KinematicAirFriction
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: KinematicAirFriction
+  nameWithType: EnvironmentProcessor.KinematicAirFriction
+  fullName: Quantum.EnvironmentProcessor.KinematicAirFriction
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: KinematicAirFriction
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 33
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCTooltip("Kinematic velocity is decelerated by actual kinematic speed multiplied by this. The faster KCC moves, the more deceleration is applied.")]
+
+      public FP KinematicAirFriction
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <KCCTooltip("Kinematic velocity is decelerated by actual kinematic speed multiplied by this. The faster KCC moves, the more deceleration is applied.")>
+
+      Public KinematicAirFriction As FP
+  attributes:
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Kinematic velocity is decelerated by actual kinematic speed multiplied by this. The faster KCC moves, the more deceleration is applied.
+- uid: Quantum.EnvironmentProcessor.BeforeMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  commentId: M:Quantum.EnvironmentProcessor.BeforeMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  id: BeforeMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: BeforeMove(KCCContext, KCCProcessorInfo)
+  nameWithType: EnvironmentProcessor.BeforeMove(KCCContext, KCCProcessorInfo)
+  fullName: Quantum.EnvironmentProcessor.BeforeMove(Quantum.KCCContext, Quantum.KCCProcessorInfo)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BeforeMove
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 41
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    This callback is invoked before KCC movement - on the beginning of KCC.Update().
+
+    Not called if KCC.IsActive is set to false.
+  example: []
+  syntax:
+    content: public void BeforeMove(KCCContext context, KCCProcessorInfo processorInfo)
+    parameters:
+    - id: context
+      type: Quantum.KCCContext
+      description: Reference to KCC context.
+    - id: processorInfo
+      type: Quantum.KCCProcessorInfo
+      description: Contains information about the processor registration source and a collider/entity that is referencing this processor.
+    content.vb: Public Sub BeforeMove(context As KCCContext, processorInfo As KCCProcessorInfo)
+  overload: Quantum.EnvironmentProcessor.BeforeMove*
+  implements:
+  - Quantum.IBeforeMove.BeforeMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+- uid: Quantum.EnvironmentProcessor.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  commentId: M:Quantum.EnvironmentProcessor.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  id: AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: AfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  nameWithType: EnvironmentProcessor.AfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  fullName: Quantum.EnvironmentProcessor.AfterMoveStep(Quantum.KCCContext, Quantum.KCCProcessorInfo, Quantum.KCCOverlapInfo)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AfterMoveStep
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 56
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    This callback is invoked after each KCC move step - this happens if the KCC
+
+    moves too fast and the continuous collision detection (CCD) algorithm splits translation vector into multiple smaller steps.
+
+    During CCD movement the KCCData.DeltaTime is scaled proportionally to size of the step.
+
+    Not called if KCC.IsActive is set to false.
+  example: []
+  syntax:
+    content: public void AfterMoveStep(KCCContext context, KCCProcessorInfo processorInfo, KCCOverlapInfo overlapInfo)
+    parameters:
+    - id: context
+      type: Quantum.KCCContext
+      description: Reference to KCC context.
+    - id: processorInfo
+      type: Quantum.KCCProcessorInfo
+      description: Contains information about the processor registration source and a collider/entity that is referencing the processor.
+    - id: overlapInfo
+      type: Quantum.KCCOverlapInfo
+      description: Reference to all physics overlap hits in current move step and other metadata.
+    content.vb: Public Sub AfterMoveStep(context As KCCContext, processorInfo As KCCProcessorInfo, overlapInfo As KCCOverlapInfo)
+  overload: Quantum.EnvironmentProcessor.AfterMoveStep*
+  implements:
+  - Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+- uid: Quantum.EnvironmentProcessor.ProcessAfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  commentId: M:Quantum.EnvironmentProcessor.ProcessAfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  id: ProcessAfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessAfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  nameWithType: EnvironmentProcessor.ProcessAfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  fullName: Quantum.EnvironmentProcessor.ProcessAfterMoveStep(Quantum.KCCContext, Quantum.KCCProcessorInfo, Quantum.KCCOverlapInfo)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ProcessAfterMoveStep
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 70
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    This callback is invoked after each KCC move step - this happens if the KCC
+
+    moves too fast and the continuous collision detection (CCD) algorithm splits translation vector into multiple smaller steps.
+
+    During CCD movement the KCCData.DeltaTime is scaled proportionally to size of the step.
+
+    Not called if KCC.IsActive is set to false.
+  example: []
+  syntax:
+    content: public static void ProcessAfterMoveStep(KCCContext context, KCCProcessorInfo processorInfo, KCCOverlapInfo overlapInfo)
+    parameters:
+    - id: context
+      type: Quantum.KCCContext
+      description: Reference to KCC context.
+    - id: processorInfo
+      type: Quantum.KCCProcessorInfo
+      description: Contains information about the processor registration source and a collider/entity that is referencing this processor.
+    - id: overlapInfo
+      type: Quantum.KCCOverlapInfo
+      description: Reference to all physics overlap hits in current move step and other metadata.
+    content.vb: Public Shared Sub ProcessAfterMoveStep(context As KCCContext, processorInfo As KCCProcessorInfo, overlapInfo As KCCOverlapInfo)
+  overload: Quantum.EnvironmentProcessor.ProcessAfterMoveStep*
+- uid: Quantum.EnvironmentProcessor.SetDynamicVelocity(Quantum.KCCContext,Quantum.KCCData@,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP)
+  commentId: M:Quantum.EnvironmentProcessor.SetDynamicVelocity(Quantum.KCCContext,Quantum.KCCData@,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP)
+  id: SetDynamicVelocity(Quantum.KCCContext,Quantum.KCCData@,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP)
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: SetDynamicVelocity(KCCContext, ref KCCData, FP, FP, FP)
+  nameWithType: EnvironmentProcessor.SetDynamicVelocity(KCCContext, ref KCCData, FP, FP, FP)
+  fullName: Quantum.EnvironmentProcessor.SetDynamicVelocity(Quantum.KCCContext, ref Quantum.KCCData, Photon.Deterministic.FP, Photon.Deterministic.FP, Photon.Deterministic.FP)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetDynamicVelocity
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 117
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static void SetDynamicVelocity(KCCContext context, ref KCCData data, FP jumpMultiplier, FP groundFriction, FP airFriction)
+    parameters:
+    - id: context
+      type: Quantum.KCCContext
+    - id: data
+      type: Quantum.KCCData
+    - id: jumpMultiplier
+      type: Photon.Deterministic.FP
+    - id: groundFriction
+      type: Photon.Deterministic.FP
+    - id: airFriction
+      type: Photon.Deterministic.FP
+    content.vb: Public Shared Sub SetDynamicVelocity(context As KCCContext, data As KCCData, jumpMultiplier As FP, groundFriction As FP, airFriction As FP)
+  overload: Quantum.EnvironmentProcessor.SetDynamicVelocity*
+  nameWithType.vb: EnvironmentProcessor.SetDynamicVelocity(KCCContext, KCCData, FP, FP, FP)
+  fullName.vb: Quantum.EnvironmentProcessor.SetDynamicVelocity(Quantum.KCCContext, Quantum.KCCData, Photon.Deterministic.FP, Photon.Deterministic.FP, Photon.Deterministic.FP)
+  name.vb: SetDynamicVelocity(KCCContext, KCCData, FP, FP, FP)
+- uid: Quantum.EnvironmentProcessor.SetKinematicVelocity(Quantum.KCCContext,Quantum.KCCData@,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP)
+  commentId: M:Quantum.EnvironmentProcessor.SetKinematicVelocity(Quantum.KCCContext,Quantum.KCCData@,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP)
+  id: SetKinematicVelocity(Quantum.KCCContext,Quantum.KCCData@,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP)
+  parent: Quantum.EnvironmentProcessor
+  langs:
+  - csharp
+  - vb
+  name: SetKinematicVelocity(KCCContext, ref KCCData, FP, FP, FP, FP, FP)
+  nameWithType: EnvironmentProcessor.SetKinematicVelocity(KCCContext, ref KCCData, FP, FP, FP, FP, FP)
+  fullName: Quantum.EnvironmentProcessor.SetKinematicVelocity(Quantum.KCCContext, ref Quantum.KCCData, Photon.Deterministic.FP, Photon.Deterministic.FP, Photon.Deterministic.FP, Photon.Deterministic.FP, Photon.Deterministic.FP)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetKinematicVelocity
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/EnvironmentProcessor.cs
+    startLine: 179
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static void SetKinematicVelocity(KCCContext context, ref KCCData data, FP speed, FP groundAcceleration, FP airAcceleration, FP groundFriction, FP airFriction)
+    parameters:
+    - id: context
+      type: Quantum.KCCContext
+    - id: data
+      type: Quantum.KCCData
+    - id: speed
+      type: Photon.Deterministic.FP
+    - id: groundAcceleration
+      type: Photon.Deterministic.FP
+    - id: airAcceleration
+      type: Photon.Deterministic.FP
+    - id: groundFriction
+      type: Photon.Deterministic.FP
+    - id: airFriction
+      type: Photon.Deterministic.FP
+    content.vb: Public Shared Sub SetKinematicVelocity(context As KCCContext, data As KCCData, speed As FP, groundAcceleration As FP, airAcceleration As FP, groundFriction As FP, airFriction As FP)
+  overload: Quantum.EnvironmentProcessor.SetKinematicVelocity*
+  nameWithType.vb: EnvironmentProcessor.SetKinematicVelocity(KCCContext, KCCData, FP, FP, FP, FP, FP)
+  fullName.vb: Quantum.EnvironmentProcessor.SetKinematicVelocity(Quantum.KCCContext, Quantum.KCCData, Photon.Deterministic.FP, Photon.Deterministic.FP, Photon.Deterministic.FP, Photon.Deterministic.FP, Photon.Deterministic.FP)
+  name.vb: SetKinematicVelocity(KCCContext, KCCData, FP, FP, FP, FP, FP)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Quantum.AssetObject
+  commentId: T:Quantum.AssetObject
+  parent: Quantum
+  isExternal: true
+  name: AssetObject
+  nameWithType: AssetObject
+  fullName: Quantum.AssetObject
+- uid: Quantum.KCCProcessor
+  commentId: T:Quantum.KCCProcessor
+  parent: Quantum
+  href: Quantum.KCCProcessor.html
+  name: KCCProcessor
+  nameWithType: KCCProcessor
+  fullName: Quantum.KCCProcessor
+- uid: Quantum.IBeforeMove
+  commentId: T:Quantum.IBeforeMove
+  parent: Quantum
+  href: Quantum.IBeforeMove.html
+  name: IBeforeMove
+  nameWithType: IBeforeMove
+  fullName: Quantum.IBeforeMove
+- uid: Quantum.IAfterMoveStep
+  commentId: T:Quantum.IAfterMoveStep
+  parent: Quantum
+  href: Quantum.IAfterMoveStep.html
+  name: IAfterMoveStep
+  nameWithType: IAfterMoveStep
+  fullName: Quantum.IAfterMoveStep
+- uid: Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+  commentId: M:Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+  parent: Quantum.KCCProcessor
+  href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnEnter_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapHit_
+  name: OnEnter(KCCContext, KCCProcessorInfo, KCCOverlapHit)
+  nameWithType: KCCProcessor.OnEnter(KCCContext, KCCProcessorInfo, KCCOverlapHit)
+  fullName: Quantum.KCCProcessor.OnEnter(Quantum.KCCContext, Quantum.KCCProcessorInfo, Quantum.KCCOverlapHit)
+  spec.csharp:
+  - uid: Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+    name: OnEnter
+    href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnEnter_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapHit_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCOverlapHit
+    name: KCCOverlapHit
+    href: Quantum.KCCOverlapHit.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+    name: OnEnter
+    href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnEnter_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapHit_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCOverlapHit
+    name: KCCOverlapHit
+    href: Quantum.KCCOverlapHit.html
+  - name: )
+- uid: Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  commentId: M:Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  parent: Quantum.KCCProcessor
+  href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnExit_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  name: OnExit(KCCContext, KCCProcessorInfo)
+  nameWithType: KCCProcessor.OnExit(KCCContext, KCCProcessorInfo)
+  fullName: Quantum.KCCProcessor.OnExit(Quantum.KCCContext, Quantum.KCCProcessorInfo)
+  spec.csharp:
+  - uid: Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+    name: OnExit
+    href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnExit_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+    name: OnExit
+    href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnExit_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: )
+- uid: Quantum.AssetObject.Identifier
+  commentId: F:Quantum.AssetObject.Identifier
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Identifier
+  nameWithType: AssetObject.Identifier
+  fullName: Quantum.AssetObject.Identifier
+- uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Loaded(IResourceManager, Allocator)
+  nameWithType: AssetObject.Loaded(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Loaded(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Disposed(IResourceManager, Allocator)
+  nameWithType: AssetObject.Disposed(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Disposed(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Create``1
+  commentId: M:Quantum.AssetObject.Create``1
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Create<T>()
+  nameWithType: AssetObject.Create<T>()
+  fullName: Quantum.AssetObject.Create<T>()
+  nameWithType.vb: AssetObject.Create(Of T)()
+  fullName.vb: Quantum.AssetObject.Create(Of T)()
+  name.vb: Create(Of T)()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Create(System.Type)
+  commentId: M:Quantum.AssetObject.Create(System.Type)
+  parent: Quantum.AssetObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Create(Type)
+  nameWithType: AssetObject.Create(Type)
+  fullName: Quantum.AssetObject.Create(System.Type)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.AssetObject.Create``1(System.Action{{T}})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  parent: Quantum.AssetObject
+  definition: Quantum.AssetObject.Create``1(System.Action{``0})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.AssetObject.Reset
+  commentId: M:Quantum.AssetObject.Reset
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Reset()
+  nameWithType: AssetObject.Reset()
+  fullName: Quantum.AssetObject.Reset()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Guid
+  commentId: P:Quantum.AssetObject.Guid
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Guid
+  nameWithType: AssetObject.Guid
+  fullName: Quantum.AssetObject.Guid
+- uid: Quantum.AssetObject.Path
+  commentId: P:Quantum.AssetObject.Path
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Path
+  nameWithType: AssetObject.Path
+  fullName: Quantum.AssetObject.Path
+- uid: Quantum.AssetObject.Settings
+  commentId: P:Quantum.AssetObject.Settings
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Settings
+  nameWithType: AssetObject.Settings
+  fullName: Quantum.AssetObject.Settings
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Quantum.AssetObject.Create``1(System.Action{``0})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Photon.Deterministic.FP
+  commentId: T:Photon.Deterministic.FP
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FP
+  nameWithType: FP
+  fullName: Photon.Deterministic.FP
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Photon.Deterministic.FPVector3
+  commentId: T:Photon.Deterministic.FPVector3
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FPVector3
+  nameWithType: FPVector3
+  fullName: Photon.Deterministic.FPVector3
+- uid: Quantum.EnvironmentProcessor.BeforeMove*
+  commentId: Overload:Quantum.EnvironmentProcessor.BeforeMove
+  href: Quantum.EnvironmentProcessor.html#Quantum_EnvironmentProcessor_BeforeMove_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  name: BeforeMove
+  nameWithType: EnvironmentProcessor.BeforeMove
+  fullName: Quantum.EnvironmentProcessor.BeforeMove
+- uid: Quantum.IBeforeMove.BeforeMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  commentId: M:Quantum.IBeforeMove.BeforeMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  parent: Quantum.IBeforeMove
+  href: Quantum.IBeforeMove.html#Quantum_IBeforeMove_BeforeMove_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  name: BeforeMove(KCCContext, KCCProcessorInfo)
+  nameWithType: IBeforeMove.BeforeMove(KCCContext, KCCProcessorInfo)
+  fullName: Quantum.IBeforeMove.BeforeMove(Quantum.KCCContext, Quantum.KCCProcessorInfo)
+  spec.csharp:
+  - uid: Quantum.IBeforeMove.BeforeMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+    name: BeforeMove
+    href: Quantum.IBeforeMove.html#Quantum_IBeforeMove_BeforeMove_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.IBeforeMove.BeforeMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+    name: BeforeMove
+    href: Quantum.IBeforeMove.html#Quantum_IBeforeMove_BeforeMove_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: )
+- uid: Quantum.KCCContext
+  commentId: T:Quantum.KCCContext
+  parent: Quantum
+  href: Quantum.KCCContext.html
+  name: KCCContext
+  nameWithType: KCCContext
+  fullName: Quantum.KCCContext
+- uid: Quantum.KCCProcessorInfo
+  commentId: T:Quantum.KCCProcessorInfo
+  parent: Quantum
+  href: Quantum.KCCProcessorInfo.html
+  name: KCCProcessorInfo
+  nameWithType: KCCProcessorInfo
+  fullName: Quantum.KCCProcessorInfo
+- uid: Quantum.EnvironmentProcessor.AfterMoveStep*
+  commentId: Overload:Quantum.EnvironmentProcessor.AfterMoveStep
+  href: Quantum.EnvironmentProcessor.html#Quantum_EnvironmentProcessor_AfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_
+  name: AfterMoveStep
+  nameWithType: EnvironmentProcessor.AfterMoveStep
+  fullName: Quantum.EnvironmentProcessor.AfterMoveStep
+- uid: Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  commentId: M:Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  parent: Quantum.IAfterMoveStep
+  href: Quantum.IAfterMoveStep.html#Quantum_IAfterMoveStep_AfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_
+  name: AfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  nameWithType: IAfterMoveStep.AfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  fullName: Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext, Quantum.KCCProcessorInfo, Quantum.KCCOverlapInfo)
+  spec.csharp:
+  - uid: Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+    name: AfterMoveStep
+    href: Quantum.IAfterMoveStep.html#Quantum_IAfterMoveStep_AfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCOverlapInfo
+    name: KCCOverlapInfo
+    href: Quantum.KCCOverlapInfo.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+    name: AfterMoveStep
+    href: Quantum.IAfterMoveStep.html#Quantum_IAfterMoveStep_AfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCOverlapInfo
+    name: KCCOverlapInfo
+    href: Quantum.KCCOverlapInfo.html
+  - name: )
+- uid: Quantum.KCCOverlapInfo
+  commentId: T:Quantum.KCCOverlapInfo
+  parent: Quantum
+  href: Quantum.KCCOverlapInfo.html
+  name: KCCOverlapInfo
+  nameWithType: KCCOverlapInfo
+  fullName: Quantum.KCCOverlapInfo
+- uid: Quantum.EnvironmentProcessor.ProcessAfterMoveStep*
+  commentId: Overload:Quantum.EnvironmentProcessor.ProcessAfterMoveStep
+  href: Quantum.EnvironmentProcessor.html#Quantum_EnvironmentProcessor_ProcessAfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_
+  name: ProcessAfterMoveStep
+  nameWithType: EnvironmentProcessor.ProcessAfterMoveStep
+  fullName: Quantum.EnvironmentProcessor.ProcessAfterMoveStep
+- uid: Quantum.EnvironmentProcessor.SetDynamicVelocity*
+  commentId: Overload:Quantum.EnvironmentProcessor.SetDynamicVelocity
+  href: Quantum.EnvironmentProcessor.html#Quantum_EnvironmentProcessor_SetDynamicVelocity_Quantum_KCCContext_Quantum_KCCData__Photon_Deterministic_FP_Photon_Deterministic_FP_Photon_Deterministic_FP_
+  name: SetDynamicVelocity
+  nameWithType: EnvironmentProcessor.SetDynamicVelocity
+  fullName: Quantum.EnvironmentProcessor.SetDynamicVelocity
+- uid: Quantum.KCCData
+  commentId: T:Quantum.KCCData
+  parent: Quantum
+  href: Quantum.KCCData.html
+  name: KCCData
+  nameWithType: KCCData
+  fullName: Quantum.KCCData
+- uid: Quantum.EnvironmentProcessor.SetKinematicVelocity*
+  commentId: Overload:Quantum.EnvironmentProcessor.SetKinematicVelocity
+  href: Quantum.EnvironmentProcessor.html#Quantum_EnvironmentProcessor_SetKinematicVelocity_Quantum_KCCContext_Quantum_KCCData__Photon_Deterministic_FP_Photon_Deterministic_FP_Photon_Deterministic_FP_Photon_Deterministic_FP_Photon_Deterministic_FP_
+  name: SetKinematicVelocity
+  nameWithType: EnvironmentProcessor.SetKinematicVelocity
+  fullName: Quantum.EnvironmentProcessor.SetKinematicVelocity

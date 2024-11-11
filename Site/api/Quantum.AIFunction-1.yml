@@ -1,0 +1,654 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.AIFunction`1
+  commentId: T:Quantum.AIFunction`1
+  id: AIFunction`1
+  parent: Quantum
+  children:
+  - Quantum.AIFunction`1.Execute(Quantum.Frame,Quantum.EntityRef,Quantum.AIContext@)
+  - Quantum.AIFunction`1.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  langs:
+  - csharp
+  - vb
+  name: AIFunction<T>
+  nameWithType: AIFunction<T>
+  fullName: Quantum.AIFunction<T>
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIFunction.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AIFunction
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIFunction.cs
+    startLine: 6
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: 'public abstract class AIFunction<T> : AIFunctionBase<T>'
+    typeParameters:
+    - id: T
+    content.vb: Public MustInherit Class AIFunction(Of T) Inherits AIFunctionBase(Of T)
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Quantum.AssetObject
+  - Quantum.AIFunctionBase
+  - Quantum.AIFunctionBase{{T}}
+  inheritedMembers:
+  - Quantum.AssetObject.Identifier
+  - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Create``1
+  - Quantum.AssetObject.Create(System.Type)
+  - Quantum.AssetObject.Create``1(System.Action{{T}})
+  - Quantum.AssetObject.Reset
+  - Quantum.AssetObject.Guid
+  - Quantum.AssetObject.Path
+  - Quantum.AssetObject.Settings
+  nameWithType.vb: AIFunction(Of T)
+  fullName.vb: Quantum.AIFunction(Of T)
+  name.vb: AIFunction(Of T)
+- uid: Quantum.AIFunction`1.Execute(Quantum.Frame,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIFunction`1.Execute(Quantum.Frame,Quantum.EntityRef,Quantum.AIContext@)
+  id: Execute(Quantum.Frame,Quantum.EntityRef,Quantum.AIContext@)
+  parent: Quantum.AIFunction`1
+  langs:
+  - csharp
+  - vb
+  name: Execute(Frame, EntityRef, ref AIContext)
+  nameWithType: AIFunction<T>.Execute(Frame, EntityRef, ref AIContext)
+  fullName: Quantum.AIFunction<T>.Execute(Quantum.Frame, Quantum.EntityRef, ref Quantum.AIContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIFunction.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Execute
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIFunction.cs
+    startLine: 8
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public virtual T Execute(Frame frame, EntityRef entity, ref AIContext aiContext)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: entity
+      type: Quantum.EntityRef
+    - id: aiContext
+      type: Quantum.AIContext
+    return:
+      type: '{T}'
+    content.vb: Public Overridable Function Execute(frame As Frame, entity As EntityRef, aiContext As AIContext) As T
+  overload: Quantum.AIFunction`1.Execute*
+  nameWithType.vb: AIFunction(Of T).Execute(Frame, EntityRef, AIContext)
+  fullName.vb: Quantum.AIFunction(Of T).Execute(Quantum.Frame, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: Execute(Frame, EntityRef, AIContext)
+- uid: Quantum.AIFunction`1.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIFunction`1.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  id: Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  parent: Quantum.AIFunction`1
+  langs:
+  - csharp
+  - vb
+  name: Execute(FrameThreadSafe, EntityRef, ref AIContext)
+  nameWithType: AIFunction<T>.Execute(FrameThreadSafe, EntityRef, ref AIContext)
+  fullName: Quantum.AIFunction<T>.Execute(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.AIContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIFunction.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Execute
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIFunction.cs
+    startLine: 10
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: public override T Execute(FrameThreadSafe frame, EntityRef entity, ref AIContext aiContext)
+    parameters:
+    - id: frame
+      type: Quantum.FrameThreadSafe
+    - id: entity
+      type: Quantum.EntityRef
+    - id: aiContext
+      type: Quantum.AIContext
+    return:
+      type: '{T}'
+    content.vb: Public Overrides Function Execute(frame As FrameThreadSafe, entity As EntityRef, aiContext As AIContext) As T
+  overridden: Quantum.AIFunctionBase{{T}}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  overload: Quantum.AIFunction`1.Execute*
+  nameWithType.vb: AIFunction(Of T).Execute(FrameThreadSafe, EntityRef, AIContext)
+  fullName.vb: Quantum.AIFunction(Of T).Execute(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: Execute(FrameThreadSafe, EntityRef, AIContext)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Quantum.AssetObject
+  commentId: T:Quantum.AssetObject
+  parent: Quantum
+  isExternal: true
+  name: AssetObject
+  nameWithType: AssetObject
+  fullName: Quantum.AssetObject
+- uid: Quantum.AIFunctionBase
+  commentId: T:Quantum.AIFunctionBase
+  parent: Quantum
+  isExternal: true
+  name: AIFunctionBase
+  nameWithType: AIFunctionBase
+  fullName: Quantum.AIFunctionBase
+- uid: Quantum.AIFunctionBase{{T}}
+  commentId: T:Quantum.AIFunctionBase{`0}
+  parent: Quantum
+  definition: Quantum.AIFunctionBase`1
+  name: AIFunctionBase<T>
+  nameWithType: AIFunctionBase<T>
+  fullName: Quantum.AIFunctionBase<T>
+  nameWithType.vb: AIFunctionBase(Of T)
+  fullName.vb: Quantum.AIFunctionBase(Of T)
+  name.vb: AIFunctionBase(Of T)
+  spec.csharp:
+  - uid: Quantum.AIFunctionBase`1
+    name: AIFunctionBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AIFunctionBase`1
+    name: AIFunctionBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.AssetObject.Identifier
+  commentId: F:Quantum.AssetObject.Identifier
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Identifier
+  nameWithType: AssetObject.Identifier
+  fullName: Quantum.AssetObject.Identifier
+- uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Loaded(IResourceManager, Allocator)
+  nameWithType: AssetObject.Loaded(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Loaded(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Disposed(IResourceManager, Allocator)
+  nameWithType: AssetObject.Disposed(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Disposed(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Create``1
+  commentId: M:Quantum.AssetObject.Create``1
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Create<T>()
+  nameWithType: AssetObject.Create<T>()
+  fullName: Quantum.AssetObject.Create<T>()
+  nameWithType.vb: AssetObject.Create(Of T)()
+  fullName.vb: Quantum.AssetObject.Create(Of T)()
+  name.vb: Create(Of T)()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Create(System.Type)
+  commentId: M:Quantum.AssetObject.Create(System.Type)
+  parent: Quantum.AssetObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Create(Type)
+  nameWithType: AssetObject.Create(Type)
+  fullName: Quantum.AssetObject.Create(System.Type)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.AssetObject.Create``1(System.Action{{T}})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  parent: Quantum.AssetObject
+  definition: Quantum.AssetObject.Create``1(System.Action{``0})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.AssetObject.Reset
+  commentId: M:Quantum.AssetObject.Reset
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Reset()
+  nameWithType: AssetObject.Reset()
+  fullName: Quantum.AssetObject.Reset()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Guid
+  commentId: P:Quantum.AssetObject.Guid
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Guid
+  nameWithType: AssetObject.Guid
+  fullName: Quantum.AssetObject.Guid
+- uid: Quantum.AssetObject.Path
+  commentId: P:Quantum.AssetObject.Path
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Path
+  nameWithType: AssetObject.Path
+  fullName: Quantum.AssetObject.Path
+- uid: Quantum.AssetObject.Settings
+  commentId: P:Quantum.AssetObject.Settings
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Settings
+  nameWithType: AssetObject.Settings
+  fullName: Quantum.AssetObject.Settings
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Quantum.AIFunctionBase`1
+  commentId: T:Quantum.AIFunctionBase`1
+  isExternal: true
+  name: AIFunctionBase<T>
+  nameWithType: AIFunctionBase<T>
+  fullName: Quantum.AIFunctionBase<T>
+  nameWithType.vb: AIFunctionBase(Of T)
+  fullName.vb: Quantum.AIFunctionBase(Of T)
+  name.vb: AIFunctionBase(Of T)
+  spec.csharp:
+  - uid: Quantum.AIFunctionBase`1
+    name: AIFunctionBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AIFunctionBase`1
+    name: AIFunctionBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.AssetObject.Create``1(System.Action{``0})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.AIFunction`1.Execute*
+  commentId: Overload:Quantum.AIFunction`1.Execute
+  href: Quantum.AIFunction-1.html#Quantum_AIFunction_1_Execute_Quantum_Frame_Quantum_EntityRef_Quantum_AIContext__
+  name: Execute
+  nameWithType: AIFunction<T>.Execute
+  fullName: Quantum.AIFunction<T>.Execute
+  nameWithType.vb: AIFunction(Of T).Execute
+  fullName.vb: Quantum.AIFunction(Of T).Execute
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.AIContext
+  commentId: T:Quantum.AIContext
+  parent: Quantum
+  isExternal: true
+  name: AIContext
+  nameWithType: AIContext
+  fullName: Quantum.AIContext
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Quantum.AIFunctionBase{{T}}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIFunctionBase{`0}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  parent: Quantum.AIFunctionBase{{T}}
+  definition: Quantum.AIFunctionBase`1.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  name: Execute(FrameThreadSafe, EntityRef, ref AIContext)
+  nameWithType: AIFunctionBase<T>.Execute(FrameThreadSafe, EntityRef, ref AIContext)
+  fullName: Quantum.AIFunctionBase<T>.Execute(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.AIContext)
+  nameWithType.vb: AIFunctionBase(Of T).Execute(FrameThreadSafe, EntityRef, AIContext)
+  fullName.vb: Quantum.AIFunctionBase(Of T).Execute(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: Execute(FrameThreadSafe, EntityRef, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIFunctionBase{`0}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: Execute
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIFunctionBase{`0}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: Execute
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.FrameThreadSafe
+  commentId: T:Quantum.FrameThreadSafe
+  parent: Quantum
+  isExternal: true
+  name: FrameThreadSafe
+  nameWithType: FrameThreadSafe
+  fullName: Quantum.FrameThreadSafe
+- uid: Quantum.AIFunctionBase`1.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIFunctionBase`1.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  isExternal: true
+  name: Execute(FrameThreadSafe, EntityRef, ref AIContext)
+  nameWithType: AIFunctionBase<T>.Execute(FrameThreadSafe, EntityRef, ref AIContext)
+  fullName: Quantum.AIFunctionBase<T>.Execute(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.AIContext)
+  nameWithType.vb: AIFunctionBase(Of T).Execute(FrameThreadSafe, EntityRef, AIContext)
+  fullName.vb: Quantum.AIFunctionBase(Of T).Execute(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: Execute(FrameThreadSafe, EntityRef, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIFunctionBase`1.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: Execute
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIFunctionBase`1.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: Execute
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )

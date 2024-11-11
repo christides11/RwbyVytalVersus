@@ -1,0 +1,254 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.BoxDefinition
+  commentId: T:Quantum.BoxDefinition
+  id: BoxDefinition
+  parent: Quantum
+  children:
+  - Quantum.BoxDefinition.boxExtents
+  - Quantum.BoxDefinition.infoIndex
+  - Quantum.BoxDefinition.radius
+  - Quantum.BoxDefinition.shapeType
+  langs:
+  - csharp
+  - vb
+  name: BoxDefinition
+  nameWithType: BoxDefinition
+  fullName: Quantum.BoxDefinition
+  type: Struct
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BoxDefinition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxDefinition.cs
+    startLine: 4
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Serializable]
+
+      public struct BoxDefinition
+    content.vb: >-
+      <Serializable>
+
+      Public Structure BoxDefinition
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Quantum.BoxDefinition.shapeType
+  commentId: F:Quantum.BoxDefinition.shapeType
+  id: shapeType
+  parent: Quantum.BoxDefinition
+  langs:
+  - csharp
+  - vb
+  name: shapeType
+  nameWithType: BoxDefinition.shapeType
+  fullName: Quantum.BoxDefinition.shapeType
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: shapeType
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxDefinition.cs
+    startLine: 7
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public Shape3DType shapeType
+    return:
+      type: Quantum.Shape3DType
+    content.vb: Public shapeType As Shape3DType
+- uid: Quantum.BoxDefinition.boxExtents
+  commentId: F:Quantum.BoxDefinition.boxExtents
+  id: boxExtents
+  parent: Quantum.BoxDefinition
+  langs:
+  - csharp
+  - vb
+  name: boxExtents
+  nameWithType: BoxDefinition.boxExtents
+  fullName: Quantum.BoxDefinition.boxExtents
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: boxExtents
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxDefinition.cs
+    startLine: 8
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [DrawIf("shapeType", 2, CompareOperator.Equal, DrawIfMode.Hide)]
+
+      public FPVector3 boxExtents
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: >-
+      <DrawIf("shapeType", 2, CompareOperator.Equal, DrawIfMode.Hide)>
+
+      Public boxExtents As FPVector3
+  attributes:
+  - type: Quantum.DrawIfAttribute
+    ctor: Quantum.DrawIfAttribute.#ctor(System.String,System.Int64,Quantum.CompareOperator,Quantum.DrawIfMode)
+    arguments:
+    - type: System.String
+      value: shapeType
+    - type: System.Int64
+      value: "2"
+    - type: Quantum.CompareOperator
+      value: 0
+    - type: Quantum.DrawIfMode
+      value: 1
+- uid: Quantum.BoxDefinition.radius
+  commentId: F:Quantum.BoxDefinition.radius
+  id: radius
+  parent: Quantum.BoxDefinition
+  langs:
+  - csharp
+  - vb
+  name: radius
+  nameWithType: BoxDefinition.radius
+  fullName: Quantum.BoxDefinition.radius
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: radius
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxDefinition.cs
+    startLine: 9
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [DrawIf("shapeType", 1, CompareOperator.Equal, DrawIfMode.Hide)]
+
+      public FP radius
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <DrawIf("shapeType", 1, CompareOperator.Equal, DrawIfMode.Hide)>
+
+      Public radius As FP
+  attributes:
+  - type: Quantum.DrawIfAttribute
+    ctor: Quantum.DrawIfAttribute.#ctor(System.String,System.Int64,Quantum.CompareOperator,Quantum.DrawIfMode)
+    arguments:
+    - type: System.String
+      value: shapeType
+    - type: System.Int64
+      value: "1"
+    - type: Quantum.CompareOperator
+      value: 0
+    - type: Quantum.DrawIfMode
+      value: 1
+- uid: Quantum.BoxDefinition.infoIndex
+  commentId: F:Quantum.BoxDefinition.infoIndex
+  id: infoIndex
+  parent: Quantum.BoxDefinition
+  langs:
+  - csharp
+  - vb
+  name: infoIndex
+  nameWithType: BoxDefinition.infoIndex
+  fullName: Quantum.BoxDefinition.infoIndex
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: infoIndex
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxDefinition.cs
+    startLine: 10
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int infoIndex
+    return:
+      type: System.Int32
+    content.vb: Public infoIndex As Integer
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.Shape3DType
+  commentId: T:Quantum.Shape3DType
+  parent: Quantum
+  isExternal: true
+  name: Shape3DType
+  nameWithType: Shape3DType
+  fullName: Quantum.Shape3DType
+- uid: Photon.Deterministic.FPVector3
+  commentId: T:Photon.Deterministic.FPVector3
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FPVector3
+  nameWithType: FPVector3
+  fullName: Photon.Deterministic.FPVector3
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Photon.Deterministic.FP
+  commentId: T:Photon.Deterministic.FP
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FP
+  nameWithType: FP
+  fullName: Photon.Deterministic.FP
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

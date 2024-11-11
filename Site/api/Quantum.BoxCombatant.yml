@@ -1,0 +1,2290 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.BoxCombatant
+  commentId: T:Quantum.BoxCombatant
+  id: BoxCombatant
+  parent: Quantum
+  children:
+  - Quantum.BoxCombatant.ALIGNMENT
+  - Quantum.BoxCombatant.CleanupAllBoxes(Quantum.Frame)
+  - Quantum.BoxCombatant.CleanupCollisionboxes(Quantum.Frame)
+  - Quantum.BoxCombatant.CleanupHitboxes(Quantum.Frame)
+  - Quantum.BoxCombatant.CleanupHurtboxes(Quantum.Frame)
+  - Quantum.BoxCombatant.ClearHitList(Quantum.Frame)
+  - Quantum.BoxCombatant.ClearPointers(Quantum.Core.FrameBase,Quantum.EntityRef)
+  - Quantum.BoxCombatant.DeleteCollisionboxByID(Quantum.Frame,System.Int32)
+  - Quantum.BoxCombatant.DeleteHitboxByID(Quantum.Frame,System.Int32)
+  - Quantum.BoxCombatant.DeleteHurtboxByID(Quantum.Frame,System.Int32)
+  - Quantum.BoxCombatant.GetCurrentEntityHitCount(Quantum.Frame)
+  - Quantum.BoxCombatant.GetCurrentEntityHitCount(Quantum.Frame,System.Int32)
+  - Quantum.BoxCombatant.GetHashCode
+  - Quantum.BoxCombatant.GetTotalBlockCount(Quantum.Frame)
+  - Quantum.BoxCombatant.GetTotalHitCount(Quantum.Frame)
+  - Quantum.BoxCombatant.GetTotalHitOrBlockCount(Quantum.Frame)
+  - Quantum.BoxCombatant.GrabEntity(Quantum.Frame,Quantum.EntityRef,Quantum.EntityRef)
+  - Quantum.BoxCombatant.HasHitEntity(Quantum.Frame,Quantum.EntityRef)
+  - Quantum.BoxCombatant.MarkEntityAsHit(Quantum.Frame,Quantum.EntityRef,System.Int32)
+  - Quantum.BoxCombatant.OnRemoved(Quantum.Core.FrameBase,Quantum.EntityRef,System.Void*)
+  - Quantum.BoxCombatant.SIZE
+  - Quantum.BoxCombatant.Serialize(System.Void*,Quantum.FrameSerializer)
+  - Quantum.BoxCombatant.TryGetCollisionbox(Quantum.Frame,System.Int32,System.Int32@)
+  - Quantum.BoxCombatant.TryGetHitbox(Quantum.Frame,System.Int32,System.Int32@)
+  - Quantum.BoxCombatant.TryGetHurtbox(Quantum.Frame,System.Int32,Quantum.EntityRef@)
+  - Quantum.BoxCombatant.TryGetHurtbox(Quantum.Frame,System.Int32,System.Int32@)
+  - Quantum.BoxCombatant.collisionboxList
+  - Quantum.BoxCombatant.collisionboxesDisabled
+  - Quantum.BoxCombatant.entitiesHit
+  - Quantum.BoxCombatant.hasClashed
+  - Quantum.BoxCombatant.hitByEntity
+  - Quantum.BoxCombatant.hitByHurtboxWasHit
+  - Quantum.BoxCombatant.hitByInfo
+  - Quantum.BoxCombatant.hitByNewState
+  - Quantum.BoxCombatant.hitByPosition
+  - Quantum.BoxCombatant.hitByState
+  - Quantum.BoxCombatant.hitByStates
+  - Quantum.BoxCombatant.hitByTeam
+  - Quantum.BoxCombatant.hitWithInfo
+  - Quantum.BoxCombatant.hitboxList
+  - Quantum.BoxCombatant.hitboxesDisabled
+  - Quantum.BoxCombatant.hurtboxList
+  - Quantum.BoxCombatant.hurtboxesDisabled
+  - Quantum.BoxCombatant.lastHitEntity
+  - Quantum.BoxCombatant.lastHitOnFrame
+  - Quantum.BoxCombatant.lastReceivedClashLevel
+  - Quantum.BoxCombatant.lastReceivedHitReaction
+  - Quantum.BoxCombatant.onClashAction
+  - Quantum.BoxCombatant.onHitAction
+  - Quantum.BoxCombatant.stateHitCounters
+  - Quantum.BoxCombatant.whenHitAction
+  langs:
+  - csharp
+  - vb
+  name: BoxCombatant
+  nameWithType: BoxCombatant
+  fullName: Quantum.BoxCombatant
+  type: Struct
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BoxCombatant
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 2
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: 'public struct BoxCombatant : IComponent'
+    content.vb: Public Structure BoxCombatant Implements IComponent
+  implements:
+  - Quantum.IComponent
+- uid: Quantum.BoxCombatant.SIZE
+  commentId: F:Quantum.BoxCombatant.SIZE
+  id: SIZE
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: SIZE
+  nameWithType: BoxCombatant.SIZE
+  fullName: Quantum.BoxCombatant.SIZE
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SIZE
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1383
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public const int SIZE = 160
+    return:
+      type: System.Int32
+    content.vb: Public Const SIZE As Integer = 160
+- uid: Quantum.BoxCombatant.ALIGNMENT
+  commentId: F:Quantum.BoxCombatant.ALIGNMENT
+  id: ALIGNMENT
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: ALIGNMENT
+  nameWithType: BoxCombatant.ALIGNMENT
+  fullName: Quantum.BoxCombatant.ALIGNMENT
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ALIGNMENT
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1384
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public const int ALIGNMENT = 8
+    return:
+      type: System.Int32
+    content.vb: Public Const ALIGNMENT As Integer = 8
+- uid: Quantum.BoxCombatant.collisionboxesDisabled
+  commentId: F:Quantum.BoxCombatant.collisionboxesDisabled
+  id: collisionboxesDisabled
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: collisionboxesDisabled
+  nameWithType: BoxCombatant.collisionboxesDisabled
+  fullName: Quantum.BoxCombatant.collisionboxesDisabled
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: collisionboxesDisabled
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1386
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QBoolean collisionboxesDisabled
+    return:
+      type: Quantum.QBoolean
+    content.vb: Public collisionboxesDisabled As QBoolean
+- uid: Quantum.BoxCombatant.hitboxesDisabled
+  commentId: F:Quantum.BoxCombatant.hitboxesDisabled
+  id: hitboxesDisabled
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hitboxesDisabled
+  nameWithType: BoxCombatant.hitboxesDisabled
+  fullName: Quantum.BoxCombatant.hitboxesDisabled
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitboxesDisabled
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1388
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QBoolean hitboxesDisabled
+    return:
+      type: Quantum.QBoolean
+    content.vb: Public hitboxesDisabled As QBoolean
+- uid: Quantum.BoxCombatant.hurtboxesDisabled
+  commentId: F:Quantum.BoxCombatant.hurtboxesDisabled
+  id: hurtboxesDisabled
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hurtboxesDisabled
+  nameWithType: BoxCombatant.hurtboxesDisabled
+  fullName: Quantum.BoxCombatant.hurtboxesDisabled
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hurtboxesDisabled
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1390
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QBoolean hurtboxesDisabled
+    return:
+      type: Quantum.QBoolean
+    content.vb: Public hurtboxesDisabled As QBoolean
+- uid: Quantum.BoxCombatant.collisionboxList
+  commentId: F:Quantum.BoxCombatant.collisionboxList
+  id: collisionboxList
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: collisionboxList
+  nameWithType: BoxCombatant.collisionboxList
+  fullName: Quantum.BoxCombatant.collisionboxList
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: collisionboxList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1392
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QListPtr<EntityRef> collisionboxList
+    return:
+      type: Quantum.Collections.QListPtr{Quantum.EntityRef}
+    content.vb: Public collisionboxList As QListPtr(Of EntityRef)
+- uid: Quantum.BoxCombatant.hitboxList
+  commentId: F:Quantum.BoxCombatant.hitboxList
+  id: hitboxList
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hitboxList
+  nameWithType: BoxCombatant.hitboxList
+  fullName: Quantum.BoxCombatant.hitboxList
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitboxList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1394
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QListPtr<EntityRef> hitboxList
+    return:
+      type: Quantum.Collections.QListPtr{Quantum.EntityRef}
+    content.vb: Public hitboxList As QListPtr(Of EntityRef)
+- uid: Quantum.BoxCombatant.hurtboxList
+  commentId: F:Quantum.BoxCombatant.hurtboxList
+  id: hurtboxList
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hurtboxList
+  nameWithType: BoxCombatant.hurtboxList
+  fullName: Quantum.BoxCombatant.hurtboxList
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hurtboxList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1396
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QListPtr<EntityRef> hurtboxList
+    return:
+      type: Quantum.Collections.QListPtr{Quantum.EntityRef}
+    content.vb: Public hurtboxList As QListPtr(Of EntityRef)
+- uid: Quantum.BoxCombatant.entitiesHit
+  commentId: F:Quantum.BoxCombatant.entitiesHit
+  id: entitiesHit
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: entitiesHit
+  nameWithType: BoxCombatant.entitiesHit
+  fullName: Quantum.BoxCombatant.entitiesHit
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: entitiesHit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1398
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QListPtr<EntityHitDefinition> entitiesHit
+    return:
+      type: Quantum.Collections.QListPtr{Quantum.EntityHitDefinition}
+    content.vb: Public entitiesHit As QListPtr(Of EntityHitDefinition)
+- uid: Quantum.BoxCombatant.stateHitCounters
+  commentId: F:Quantum.BoxCombatant.stateHitCounters
+  id: stateHitCounters
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: stateHitCounters
+  nameWithType: BoxCombatant.stateHitCounters
+  fullName: Quantum.BoxCombatant.stateHitCounters
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: stateHitCounters
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1400
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QDictionaryPtr<int, int> stateHitCounters
+    return:
+      type: Quantum.Collections.QDictionaryPtr{System.Int32,System.Int32}
+    content.vb: Public stateHitCounters As QDictionaryPtr(Of Integer, Integer)
+- uid: Quantum.BoxCombatant.lastHitOnFrame
+  commentId: F:Quantum.BoxCombatant.lastHitOnFrame
+  id: lastHitOnFrame
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: lastHitOnFrame
+  nameWithType: BoxCombatant.lastHitOnFrame
+  fullName: Quantum.BoxCombatant.lastHitOnFrame
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: lastHitOnFrame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1402
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int lastHitOnFrame
+    return:
+      type: System.Int32
+    content.vb: Public lastHitOnFrame As Integer
+- uid: Quantum.BoxCombatant.hitByPosition
+  commentId: F:Quantum.BoxCombatant.hitByPosition
+  id: hitByPosition
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hitByPosition
+  nameWithType: BoxCombatant.hitByPosition
+  fullName: Quantum.BoxCombatant.hitByPosition
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitByPosition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1404
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public FPVector3 hitByPosition
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: Public hitByPosition As FPVector3
+- uid: Quantum.BoxCombatant.hitByHurtboxWasHit
+  commentId: F:Quantum.BoxCombatant.hitByHurtboxWasHit
+  id: hitByHurtboxWasHit
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hitByHurtboxWasHit
+  nameWithType: BoxCombatant.hitByHurtboxWasHit
+  fullName: Quantum.BoxCombatant.hitByHurtboxWasHit
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitByHurtboxWasHit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1406
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int hitByHurtboxWasHit
+    return:
+      type: System.Int32
+    content.vb: Public hitByHurtboxWasHit As Integer
+- uid: Quantum.BoxCombatant.hitByEntity
+  commentId: F:Quantum.BoxCombatant.hitByEntity
+  id: hitByEntity
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hitByEntity
+  nameWithType: BoxCombatant.hitByEntity
+  fullName: Quantum.BoxCombatant.hitByEntity
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitByEntity
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1408
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public EntityRef hitByEntity
+    return:
+      type: Quantum.EntityRef
+    content.vb: Public hitByEntity As EntityRef
+- uid: Quantum.BoxCombatant.hitByTeam
+  commentId: F:Quantum.BoxCombatant.hitByTeam
+  id: hitByTeam
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hitByTeam
+  nameWithType: BoxCombatant.hitByTeam
+  fullName: Quantum.BoxCombatant.hitByTeam
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitByTeam
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1410
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int hitByTeam
+    return:
+      type: System.Int32
+    content.vb: Public hitByTeam As Integer
+- uid: Quantum.BoxCombatant.hitByInfo
+  commentId: F:Quantum.BoxCombatant.hitByInfo
+  id: hitByInfo
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hitByInfo
+  nameWithType: BoxCombatant.hitByInfo
+  fullName: Quantum.BoxCombatant.hitByInfo
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitByInfo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1412
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<HitInfo> hitByInfo
+    return:
+      type: Quantum.AssetRef{Quantum.HitInfo}
+    content.vb: Public hitByInfo As AssetRef(Of HitInfo)
+- uid: Quantum.BoxCombatant.hitByNewState
+  commentId: F:Quantum.BoxCombatant.hitByNewState
+  id: hitByNewState
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hitByNewState
+  nameWithType: BoxCombatant.hitByNewState
+  fullName: Quantum.BoxCombatant.hitByNewState
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitByNewState
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1414
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QBoolean hitByNewState
+    return:
+      type: Quantum.QBoolean
+    content.vb: Public hitByNewState As QBoolean
+- uid: Quantum.BoxCombatant.hitByState
+  commentId: F:Quantum.BoxCombatant.hitByState
+  id: hitByState
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hitByState
+  nameWithType: BoxCombatant.hitByState
+  fullName: Quantum.BoxCombatant.hitByState
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitByState
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1416
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<HNSFState> hitByState
+    return:
+      type: Quantum.AssetRef{Quantum.HNSFState}
+    content.vb: Public hitByState As AssetRef(Of HNSFState)
+- uid: Quantum.BoxCombatant.onHitAction
+  commentId: F:Quantum.BoxCombatant.onHitAction
+  id: onHitAction
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: onHitAction
+  nameWithType: BoxCombatant.onHitAction
+  fullName: Quantum.BoxCombatant.onHitAction
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onHitAction
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1418
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<StateFunctionInt> onHitAction
+    return:
+      type: Quantum.AssetRef{Quantum.StateFunctionInt}
+    content.vb: Public onHitAction As AssetRef(Of StateFunctionInt)
+- uid: Quantum.BoxCombatant.hitByStates
+  commentId: F:Quantum.BoxCombatant.hitByStates
+  id: hitByStates
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hitByStates
+  nameWithType: BoxCombatant.hitByStates
+  fullName: Quantum.BoxCombatant.hitByStates
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitByStates
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1420
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QListPtr<AssetRef<HNSFState>> hitByStates
+    return:
+      type: Quantum.Collections.QListPtr{Quantum.AssetRef{Quantum.HNSFState}}
+    content.vb: Public hitByStates As QListPtr(Of AssetRef(Of HNSFState))
+- uid: Quantum.BoxCombatant.hitWithInfo
+  commentId: F:Quantum.BoxCombatant.hitWithInfo
+  id: hitWithInfo
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hitWithInfo
+  nameWithType: BoxCombatant.hitWithInfo
+  fullName: Quantum.BoxCombatant.hitWithInfo
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hitWithInfo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1422
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<HitInfo> hitWithInfo
+    return:
+      type: Quantum.AssetRef{Quantum.HitInfo}
+    content.vb: Public hitWithInfo As AssetRef(Of HitInfo)
+- uid: Quantum.BoxCombatant.lastReceivedHitReaction
+  commentId: F:Quantum.BoxCombatant.lastReceivedHitReaction
+  id: lastReceivedHitReaction
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: lastReceivedHitReaction
+  nameWithType: BoxCombatant.lastReceivedHitReaction
+  fullName: Quantum.BoxCombatant.lastReceivedHitReaction
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: lastReceivedHitReaction
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1424
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int lastReceivedHitReaction
+    return:
+      type: System.Int32
+    content.vb: Public lastReceivedHitReaction As Integer
+- uid: Quantum.BoxCombatant.whenHitAction
+  commentId: F:Quantum.BoxCombatant.whenHitAction
+  id: whenHitAction
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: whenHitAction
+  nameWithType: BoxCombatant.whenHitAction
+  fullName: Quantum.BoxCombatant.whenHitAction
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: whenHitAction
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1426
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<HNSFStateAction> whenHitAction
+    return:
+      type: Quantum.AssetRef{Quantum.HNSFStateAction}
+    content.vb: Public whenHitAction As AssetRef(Of HNSFStateAction)
+- uid: Quantum.BoxCombatant.lastHitEntity
+  commentId: F:Quantum.BoxCombatant.lastHitEntity
+  id: lastHitEntity
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: lastHitEntity
+  nameWithType: BoxCombatant.lastHitEntity
+  fullName: Quantum.BoxCombatant.lastHitEntity
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: lastHitEntity
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1428
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public EntityRef lastHitEntity
+    return:
+      type: Quantum.EntityRef
+    content.vb: Public lastHitEntity As EntityRef
+- uid: Quantum.BoxCombatant.hasClashed
+  commentId: F:Quantum.BoxCombatant.hasClashed
+  id: hasClashed
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: hasClashed
+  nameWithType: BoxCombatant.hasClashed
+  fullName: Quantum.BoxCombatant.hasClashed
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hasClashed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1430
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QBoolean hasClashed
+    return:
+      type: Quantum.QBoolean
+    content.vb: Public hasClashed As QBoolean
+- uid: Quantum.BoxCombatant.lastReceivedClashLevel
+  commentId: F:Quantum.BoxCombatant.lastReceivedClashLevel
+  id: lastReceivedClashLevel
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: lastReceivedClashLevel
+  nameWithType: BoxCombatant.lastReceivedClashLevel
+  fullName: Quantum.BoxCombatant.lastReceivedClashLevel
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: lastReceivedClashLevel
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1432
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int lastReceivedClashLevel
+    return:
+      type: System.Int32
+    content.vb: Public lastReceivedClashLevel As Integer
+- uid: Quantum.BoxCombatant.onClashAction
+  commentId: F:Quantum.BoxCombatant.onClashAction
+  id: onClashAction
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: onClashAction
+  nameWithType: BoxCombatant.onClashAction
+  fullName: Quantum.BoxCombatant.onClashAction
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onClashAction
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1434
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<HNSFStateAction> onClashAction
+    return:
+      type: Quantum.AssetRef{Quantum.HNSFStateAction}
+    content.vb: Public onClashAction As AssetRef(Of HNSFStateAction)
+- uid: Quantum.BoxCombatant.GetHashCode
+  commentId: M:Quantum.BoxCombatant.GetHashCode
+  id: GetHashCode
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: BoxCombatant.GetHashCode()
+  fullName: Quantum.BoxCombatant.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetHashCode
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1435
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Quantum.BoxCombatant.GetHashCode*
+- uid: Quantum.BoxCombatant.ClearPointers(Quantum.Core.FrameBase,Quantum.EntityRef)
+  commentId: M:Quantum.BoxCombatant.ClearPointers(Quantum.Core.FrameBase,Quantum.EntityRef)
+  id: ClearPointers(Quantum.Core.FrameBase,Quantum.EntityRef)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: ClearPointers(FrameBase, EntityRef)
+  nameWithType: BoxCombatant.ClearPointers(FrameBase, EntityRef)
+  fullName: Quantum.BoxCombatant.ClearPointers(Quantum.Core.FrameBase, Quantum.EntityRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ClearPointers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1466
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void ClearPointers(FrameBase f, EntityRef entity)
+    parameters:
+    - id: f
+      type: Quantum.Core.FrameBase
+    - id: entity
+      type: Quantum.EntityRef
+    content.vb: Public Sub ClearPointers(f As FrameBase, entity As EntityRef)
+  overload: Quantum.BoxCombatant.ClearPointers*
+- uid: Quantum.BoxCombatant.OnRemoved(Quantum.Core.FrameBase,Quantum.EntityRef,System.Void*)
+  commentId: M:Quantum.BoxCombatant.OnRemoved(Quantum.Core.FrameBase,Quantum.EntityRef,System.Void*)
+  id: OnRemoved(Quantum.Core.FrameBase,Quantum.EntityRef,System.Void*)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: OnRemoved(FrameBase, EntityRef, void*)
+  nameWithType: BoxCombatant.OnRemoved(FrameBase, EntityRef, void*)
+  fullName: Quantum.BoxCombatant.OnRemoved(Quantum.Core.FrameBase, Quantum.EntityRef, void*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnRemoved
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1474
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static void OnRemoved(FrameBase frame, EntityRef entity, void* ptr)
+    parameters:
+    - id: frame
+      type: Quantum.Core.FrameBase
+    - id: entity
+      type: Quantum.EntityRef
+    - id: ptr
+      type: System.Void*
+    content.vb: Public Shared Sub OnRemoved(frame As FrameBase, entity As EntityRef, ptr As Void*)
+  overload: Quantum.BoxCombatant.OnRemoved*
+  nameWithType.vb: BoxCombatant.OnRemoved(FrameBase, EntityRef, Void*)
+  fullName.vb: Quantum.BoxCombatant.OnRemoved(Quantum.Core.FrameBase, Quantum.EntityRef, Void*)
+  name.vb: OnRemoved(FrameBase, EntityRef, Void*)
+- uid: Quantum.BoxCombatant.Serialize(System.Void*,Quantum.FrameSerializer)
+  commentId: M:Quantum.BoxCombatant.Serialize(System.Void*,Quantum.FrameSerializer)
+  id: Serialize(System.Void*,Quantum.FrameSerializer)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: Serialize(void*, FrameSerializer)
+  nameWithType: BoxCombatant.Serialize(void*, FrameSerializer)
+  fullName: Quantum.BoxCombatant.Serialize(void*, Quantum.FrameSerializer)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Serialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1478
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static void Serialize(void* ptr, FrameSerializer serializer)
+    parameters:
+    - id: ptr
+      type: System.Void*
+    - id: serializer
+      type: Quantum.FrameSerializer
+    content.vb: Public Shared Sub Serialize(ptr As Void*, serializer As FrameSerializer)
+  overload: Quantum.BoxCombatant.Serialize*
+  nameWithType.vb: BoxCombatant.Serialize(Void*, FrameSerializer)
+  fullName.vb: Quantum.BoxCombatant.Serialize(Void*, Quantum.FrameSerializer)
+  name.vb: Serialize(Void*, FrameSerializer)
+- uid: Quantum.BoxCombatant.HasHitEntity(Quantum.Frame,Quantum.EntityRef)
+  commentId: M:Quantum.BoxCombatant.HasHitEntity(Quantum.Frame,Quantum.EntityRef)
+  id: HasHitEntity(Quantum.Frame,Quantum.EntityRef)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: HasHitEntity(Frame, EntityRef)
+  nameWithType: BoxCombatant.HasHitEntity(Frame, EntityRef)
+  fullName: Quantum.BoxCombatant.HasHitEntity(Quantum.Frame, Quantum.EntityRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HasHitEntity
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 4
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public bool HasHitEntity(Frame frame, EntityRef entityToCheck)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: entityToCheck
+      type: Quantum.EntityRef
+    return:
+      type: System.Boolean
+    content.vb: Public Function HasHitEntity(frame As Frame, entityToCheck As EntityRef) As Boolean
+  overload: Quantum.BoxCombatant.HasHitEntity*
+- uid: Quantum.BoxCombatant.GetCurrentEntityHitCount(Quantum.Frame)
+  commentId: M:Quantum.BoxCombatant.GetCurrentEntityHitCount(Quantum.Frame)
+  id: GetCurrentEntityHitCount(Quantum.Frame)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentEntityHitCount(Frame)
+  nameWithType: BoxCombatant.GetCurrentEntityHitCount(Frame)
+  fullName: Quantum.BoxCombatant.GetCurrentEntityHitCount(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetCurrentEntityHitCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 15
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int GetCurrentEntityHitCount(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    return:
+      type: System.Int32
+    content.vb: Public Function GetCurrentEntityHitCount(frame As Frame) As Integer
+  overload: Quantum.BoxCombatant.GetCurrentEntityHitCount*
+- uid: Quantum.BoxCombatant.GetCurrentEntityHitCount(Quantum.Frame,System.Int32)
+  commentId: M:Quantum.BoxCombatant.GetCurrentEntityHitCount(Quantum.Frame,System.Int32)
+  id: GetCurrentEntityHitCount(Quantum.Frame,System.Int32)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentEntityHitCount(Frame, int)
+  nameWithType: BoxCombatant.GetCurrentEntityHitCount(Frame, int)
+  fullName: Quantum.BoxCombatant.GetCurrentEntityHitCount(Quantum.Frame, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetCurrentEntityHitCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 21
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int GetCurrentEntityHitCount(Frame frame, int hitboxID)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: hitboxID
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function GetCurrentEntityHitCount(frame As Frame, hitboxID As Integer) As Integer
+  overload: Quantum.BoxCombatant.GetCurrentEntityHitCount*
+  nameWithType.vb: BoxCombatant.GetCurrentEntityHitCount(Frame, Integer)
+  fullName.vb: Quantum.BoxCombatant.GetCurrentEntityHitCount(Quantum.Frame, Integer)
+  name.vb: GetCurrentEntityHitCount(Frame, Integer)
+- uid: Quantum.BoxCombatant.GetTotalHitCount(Quantum.Frame)
+  commentId: M:Quantum.BoxCombatant.GetTotalHitCount(Quantum.Frame)
+  id: GetTotalHitCount(Quantum.Frame)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: GetTotalHitCount(Frame)
+  nameWithType: BoxCombatant.GetTotalHitCount(Frame)
+  fullName: Quantum.BoxCombatant.GetTotalHitCount(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetTotalHitCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 32
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int GetTotalHitCount(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    return:
+      type: System.Int32
+    content.vb: Public Function GetTotalHitCount(frame As Frame) As Integer
+  overload: Quantum.BoxCombatant.GetTotalHitCount*
+- uid: Quantum.BoxCombatant.GetTotalBlockCount(Quantum.Frame)
+  commentId: M:Quantum.BoxCombatant.GetTotalBlockCount(Quantum.Frame)
+  id: GetTotalBlockCount(Quantum.Frame)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: GetTotalBlockCount(Frame)
+  nameWithType: BoxCombatant.GetTotalBlockCount(Frame)
+  fullName: Quantum.BoxCombatant.GetTotalBlockCount(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetTotalBlockCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 38
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int GetTotalBlockCount(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    return:
+      type: System.Int32
+    content.vb: Public Function GetTotalBlockCount(frame As Frame) As Integer
+  overload: Quantum.BoxCombatant.GetTotalBlockCount*
+- uid: Quantum.BoxCombatant.GetTotalHitOrBlockCount(Quantum.Frame)
+  commentId: M:Quantum.BoxCombatant.GetTotalHitOrBlockCount(Quantum.Frame)
+  id: GetTotalHitOrBlockCount(Quantum.Frame)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: GetTotalHitOrBlockCount(Frame)
+  nameWithType: BoxCombatant.GetTotalHitOrBlockCount(Frame)
+  fullName: Quantum.BoxCombatant.GetTotalHitOrBlockCount(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetTotalHitOrBlockCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 44
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int GetTotalHitOrBlockCount(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    return:
+      type: System.Int32
+    content.vb: Public Function GetTotalHitOrBlockCount(frame As Frame) As Integer
+  overload: Quantum.BoxCombatant.GetTotalHitOrBlockCount*
+- uid: Quantum.BoxCombatant.MarkEntityAsHit(Quantum.Frame,Quantum.EntityRef,System.Int32)
+  commentId: M:Quantum.BoxCombatant.MarkEntityAsHit(Quantum.Frame,Quantum.EntityRef,System.Int32)
+  id: MarkEntityAsHit(Quantum.Frame,Quantum.EntityRef,System.Int32)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: MarkEntityAsHit(Frame, EntityRef, int)
+  nameWithType: BoxCombatant.MarkEntityAsHit(Frame, EntityRef, int)
+  fullName: Quantum.BoxCombatant.MarkEntityAsHit(Quantum.Frame, Quantum.EntityRef, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: MarkEntityAsHit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 56
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void MarkEntityAsHit(Frame frame, EntityRef entityHit, int hitboxID)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: entityHit
+      type: Quantum.EntityRef
+    - id: hitboxID
+      type: System.Int32
+    content.vb: Public Sub MarkEntityAsHit(frame As Frame, entityHit As EntityRef, hitboxID As Integer)
+  overload: Quantum.BoxCombatant.MarkEntityAsHit*
+  nameWithType.vb: BoxCombatant.MarkEntityAsHit(Frame, EntityRef, Integer)
+  fullName.vb: Quantum.BoxCombatant.MarkEntityAsHit(Quantum.Frame, Quantum.EntityRef, Integer)
+  name.vb: MarkEntityAsHit(Frame, EntityRef, Integer)
+- uid: Quantum.BoxCombatant.GrabEntity(Quantum.Frame,Quantum.EntityRef,Quantum.EntityRef)
+  commentId: M:Quantum.BoxCombatant.GrabEntity(Quantum.Frame,Quantum.EntityRef,Quantum.EntityRef)
+  id: GrabEntity(Quantum.Frame,Quantum.EntityRef,Quantum.EntityRef)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: GrabEntity(Frame, EntityRef, EntityRef)
+  nameWithType: BoxCombatant.GrabEntity(Frame, EntityRef, EntityRef)
+  fullName: Quantum.BoxCombatant.GrabEntity(Quantum.Frame, Quantum.EntityRef, Quantum.EntityRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GrabEntity
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 62
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void GrabEntity(Frame frame, EntityRef self, EntityRef entityToGrab)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: self
+      type: Quantum.EntityRef
+    - id: entityToGrab
+      type: Quantum.EntityRef
+    content.vb: Public Sub GrabEntity(frame As Frame, self As EntityRef, entityToGrab As EntityRef)
+  overload: Quantum.BoxCombatant.GrabEntity*
+- uid: Quantum.BoxCombatant.ClearHitList(Quantum.Frame)
+  commentId: M:Quantum.BoxCombatant.ClearHitList(Quantum.Frame)
+  id: ClearHitList(Quantum.Frame)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: ClearHitList(Frame)
+  nameWithType: BoxCombatant.ClearHitList(Frame)
+  fullName: Quantum.BoxCombatant.ClearHitList(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ClearHitList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 72
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void ClearHitList(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    content.vb: Public Sub ClearHitList(frame As Frame)
+  overload: Quantum.BoxCombatant.ClearHitList*
+- uid: Quantum.BoxCombatant.TryGetHurtbox(Quantum.Frame,System.Int32,System.Int32@)
+  commentId: M:Quantum.BoxCombatant.TryGetHurtbox(Quantum.Frame,System.Int32,System.Int32@)
+  id: TryGetHurtbox(Quantum.Frame,System.Int32,System.Int32@)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: TryGetHurtbox(Frame, int, out int)
+  nameWithType: BoxCombatant.TryGetHurtbox(Frame, int, out int)
+  fullName: Quantum.BoxCombatant.TryGetHurtbox(Quantum.Frame, int, out int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryGetHurtbox
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 78
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public bool TryGetHurtbox(Frame frame, int hurtboxID, out int hurtboxIndex)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: hurtboxID
+      type: System.Int32
+    - id: hurtboxIndex
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetHurtbox(frame As Frame, hurtboxID As Integer, hurtboxIndex As Integer) As Boolean
+  overload: Quantum.BoxCombatant.TryGetHurtbox*
+  nameWithType.vb: BoxCombatant.TryGetHurtbox(Frame, Integer, Integer)
+  fullName.vb: Quantum.BoxCombatant.TryGetHurtbox(Quantum.Frame, Integer, Integer)
+  name.vb: TryGetHurtbox(Frame, Integer, Integer)
+- uid: Quantum.BoxCombatant.TryGetHurtbox(Quantum.Frame,System.Int32,Quantum.EntityRef@)
+  commentId: M:Quantum.BoxCombatant.TryGetHurtbox(Quantum.Frame,System.Int32,Quantum.EntityRef@)
+  id: TryGetHurtbox(Quantum.Frame,System.Int32,Quantum.EntityRef@)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: TryGetHurtbox(Frame, int, out EntityRef)
+  nameWithType: BoxCombatant.TryGetHurtbox(Frame, int, out EntityRef)
+  fullName: Quantum.BoxCombatant.TryGetHurtbox(Quantum.Frame, int, out Quantum.EntityRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryGetHurtbox
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 94
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public bool TryGetHurtbox(Frame frame, int hurtboxID, out EntityRef hurtbox)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: hurtboxID
+      type: System.Int32
+    - id: hurtbox
+      type: Quantum.EntityRef
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetHurtbox(frame As Frame, hurtboxID As Integer, hurtbox As EntityRef) As Boolean
+  overload: Quantum.BoxCombatant.TryGetHurtbox*
+  nameWithType.vb: BoxCombatant.TryGetHurtbox(Frame, Integer, EntityRef)
+  fullName.vb: Quantum.BoxCombatant.TryGetHurtbox(Quantum.Frame, Integer, Quantum.EntityRef)
+  name.vb: TryGetHurtbox(Frame, Integer, EntityRef)
+- uid: Quantum.BoxCombatant.DeleteHurtboxByID(Quantum.Frame,System.Int32)
+  commentId: M:Quantum.BoxCombatant.DeleteHurtboxByID(Quantum.Frame,System.Int32)
+  id: DeleteHurtboxByID(Quantum.Frame,System.Int32)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: DeleteHurtboxByID(Frame, int)
+  nameWithType: BoxCombatant.DeleteHurtboxByID(Frame, int)
+  fullName: Quantum.BoxCombatant.DeleteHurtboxByID(Quantum.Frame, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeleteHurtboxByID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 109
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void DeleteHurtboxByID(Frame frame, int hurtboxID)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: hurtboxID
+      type: System.Int32
+    content.vb: Public Sub DeleteHurtboxByID(frame As Frame, hurtboxID As Integer)
+  overload: Quantum.BoxCombatant.DeleteHurtboxByID*
+  nameWithType.vb: BoxCombatant.DeleteHurtboxByID(Frame, Integer)
+  fullName.vb: Quantum.BoxCombatant.DeleteHurtboxByID(Quantum.Frame, Integer)
+  name.vb: DeleteHurtboxByID(Frame, Integer)
+- uid: Quantum.BoxCombatant.CleanupAllBoxes(Quantum.Frame)
+  commentId: M:Quantum.BoxCombatant.CleanupAllBoxes(Quantum.Frame)
+  id: CleanupAllBoxes(Quantum.Frame)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: CleanupAllBoxes(Frame)
+  nameWithType: BoxCombatant.CleanupAllBoxes(Frame)
+  fullName: Quantum.BoxCombatant.CleanupAllBoxes(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CleanupAllBoxes
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 123
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void CleanupAllBoxes(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    content.vb: Public Sub CleanupAllBoxes(frame As Frame)
+  overload: Quantum.BoxCombatant.CleanupAllBoxes*
+- uid: Quantum.BoxCombatant.CleanupHurtboxes(Quantum.Frame)
+  commentId: M:Quantum.BoxCombatant.CleanupHurtboxes(Quantum.Frame)
+  id: CleanupHurtboxes(Quantum.Frame)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: CleanupHurtboxes(Frame)
+  nameWithType: BoxCombatant.CleanupHurtboxes(Frame)
+  fullName: Quantum.BoxCombatant.CleanupHurtboxes(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CleanupHurtboxes
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 130
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void CleanupHurtboxes(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    content.vb: Public Sub CleanupHurtboxes(frame As Frame)
+  overload: Quantum.BoxCombatant.CleanupHurtboxes*
+- uid: Quantum.BoxCombatant.TryGetHitbox(Quantum.Frame,System.Int32,System.Int32@)
+  commentId: M:Quantum.BoxCombatant.TryGetHitbox(Quantum.Frame,System.Int32,System.Int32@)
+  id: TryGetHitbox(Quantum.Frame,System.Int32,System.Int32@)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: TryGetHitbox(Frame, int, out int)
+  nameWithType: BoxCombatant.TryGetHitbox(Frame, int, out int)
+  fullName: Quantum.BoxCombatant.TryGetHitbox(Quantum.Frame, int, out int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryGetHitbox
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 141
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public bool TryGetHitbox(Frame frame, int hitboxID, out int hitboxIndex)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: hitboxID
+      type: System.Int32
+    - id: hitboxIndex
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetHitbox(frame As Frame, hitboxID As Integer, hitboxIndex As Integer) As Boolean
+  overload: Quantum.BoxCombatant.TryGetHitbox*
+  nameWithType.vb: BoxCombatant.TryGetHitbox(Frame, Integer, Integer)
+  fullName.vb: Quantum.BoxCombatant.TryGetHitbox(Quantum.Frame, Integer, Integer)
+  name.vb: TryGetHitbox(Frame, Integer, Integer)
+- uid: Quantum.BoxCombatant.DeleteHitboxByID(Quantum.Frame,System.Int32)
+  commentId: M:Quantum.BoxCombatant.DeleteHitboxByID(Quantum.Frame,System.Int32)
+  id: DeleteHitboxByID(Quantum.Frame,System.Int32)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: DeleteHitboxByID(Frame, int)
+  nameWithType: BoxCombatant.DeleteHitboxByID(Frame, int)
+  fullName: Quantum.BoxCombatant.DeleteHitboxByID(Quantum.Frame, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeleteHitboxByID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 157
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void DeleteHitboxByID(Frame frame, int hitboxID)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: hitboxID
+      type: System.Int32
+    content.vb: Public Sub DeleteHitboxByID(frame As Frame, hitboxID As Integer)
+  overload: Quantum.BoxCombatant.DeleteHitboxByID*
+  nameWithType.vb: BoxCombatant.DeleteHitboxByID(Frame, Integer)
+  fullName.vb: Quantum.BoxCombatant.DeleteHitboxByID(Quantum.Frame, Integer)
+  name.vb: DeleteHitboxByID(Frame, Integer)
+- uid: Quantum.BoxCombatant.CleanupHitboxes(Quantum.Frame)
+  commentId: M:Quantum.BoxCombatant.CleanupHitboxes(Quantum.Frame)
+  id: CleanupHitboxes(Quantum.Frame)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: CleanupHitboxes(Frame)
+  nameWithType: BoxCombatant.CleanupHitboxes(Frame)
+  fullName: Quantum.BoxCombatant.CleanupHitboxes(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CleanupHitboxes
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 171
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void CleanupHitboxes(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    content.vb: Public Sub CleanupHitboxes(frame As Frame)
+  overload: Quantum.BoxCombatant.CleanupHitboxes*
+- uid: Quantum.BoxCombatant.TryGetCollisionbox(Quantum.Frame,System.Int32,System.Int32@)
+  commentId: M:Quantum.BoxCombatant.TryGetCollisionbox(Quantum.Frame,System.Int32,System.Int32@)
+  id: TryGetCollisionbox(Quantum.Frame,System.Int32,System.Int32@)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: TryGetCollisionbox(Frame, int, out int)
+  nameWithType: BoxCombatant.TryGetCollisionbox(Frame, int, out int)
+  fullName: Quantum.BoxCombatant.TryGetCollisionbox(Quantum.Frame, int, out int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryGetCollisionbox
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 182
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public bool TryGetCollisionbox(Frame frame, int collisionboxID, out int collisionboxIndex)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: collisionboxID
+      type: System.Int32
+    - id: collisionboxIndex
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetCollisionbox(frame As Frame, collisionboxID As Integer, collisionboxIndex As Integer) As Boolean
+  overload: Quantum.BoxCombatant.TryGetCollisionbox*
+  nameWithType.vb: BoxCombatant.TryGetCollisionbox(Frame, Integer, Integer)
+  fullName.vb: Quantum.BoxCombatant.TryGetCollisionbox(Quantum.Frame, Integer, Integer)
+  name.vb: TryGetCollisionbox(Frame, Integer, Integer)
+- uid: Quantum.BoxCombatant.DeleteCollisionboxByID(Quantum.Frame,System.Int32)
+  commentId: M:Quantum.BoxCombatant.DeleteCollisionboxByID(Quantum.Frame,System.Int32)
+  id: DeleteCollisionboxByID(Quantum.Frame,System.Int32)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: DeleteCollisionboxByID(Frame, int)
+  nameWithType: BoxCombatant.DeleteCollisionboxByID(Frame, int)
+  fullName: Quantum.BoxCombatant.DeleteCollisionboxByID(Quantum.Frame, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeleteCollisionboxByID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 198
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void DeleteCollisionboxByID(Frame frame, int hitboxID)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: hitboxID
+      type: System.Int32
+    content.vb: Public Sub DeleteCollisionboxByID(frame As Frame, hitboxID As Integer)
+  overload: Quantum.BoxCombatant.DeleteCollisionboxByID*
+  nameWithType.vb: BoxCombatant.DeleteCollisionboxByID(Frame, Integer)
+  fullName.vb: Quantum.BoxCombatant.DeleteCollisionboxByID(Quantum.Frame, Integer)
+  name.vb: DeleteCollisionboxByID(Frame, Integer)
+- uid: Quantum.BoxCombatant.CleanupCollisionboxes(Quantum.Frame)
+  commentId: M:Quantum.BoxCombatant.CleanupCollisionboxes(Quantum.Frame)
+  id: CleanupCollisionboxes(Quantum.Frame)
+  parent: Quantum.BoxCombatant
+  langs:
+  - csharp
+  - vb
+  name: CleanupCollisionboxes(Frame)
+  nameWithType: BoxCombatant.CleanupCollisionboxes(Frame)
+  fullName: Quantum.BoxCombatant.CleanupCollisionboxes(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CleanupCollisionboxes
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/BoxCombatant.cs
+    startLine: 212
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void CleanupCollisionboxes(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    content.vb: Public Sub CleanupCollisionboxes(frame As Frame)
+  overload: Quantum.BoxCombatant.CleanupCollisionboxes*
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.IComponent
+  commentId: T:Quantum.IComponent
+  parent: Quantum
+  isExternal: true
+  name: IComponent
+  nameWithType: IComponent
+  fullName: Quantum.IComponent
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.QBoolean
+  commentId: T:Quantum.QBoolean
+  parent: Quantum
+  isExternal: true
+  name: QBoolean
+  nameWithType: QBoolean
+  fullName: Quantum.QBoolean
+- uid: Quantum.Collections.QListPtr{Quantum.EntityRef}
+  commentId: T:Quantum.Collections.QListPtr{Quantum.EntityRef}
+  parent: Quantum.Collections
+  definition: Quantum.Collections.QListPtr`1
+  name: QListPtr<EntityRef>
+  nameWithType: QListPtr<EntityRef>
+  fullName: Quantum.Collections.QListPtr<Quantum.EntityRef>
+  nameWithType.vb: QListPtr(Of EntityRef)
+  fullName.vb: Quantum.Collections.QListPtr(Of Quantum.EntityRef)
+  name.vb: QListPtr(Of EntityRef)
+  spec.csharp:
+  - uid: Quantum.Collections.QListPtr`1
+    name: QListPtr
+    isExternal: true
+  - name: <
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.Collections.QListPtr`1
+    name: QListPtr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: )
+- uid: Quantum.Collections.QListPtr`1
+  commentId: T:Quantum.Collections.QListPtr`1
+  isExternal: true
+  name: QListPtr<T>
+  nameWithType: QListPtr<T>
+  fullName: Quantum.Collections.QListPtr<T>
+  nameWithType.vb: QListPtr(Of T)
+  fullName.vb: Quantum.Collections.QListPtr(Of T)
+  name.vb: QListPtr(Of T)
+  spec.csharp:
+  - uid: Quantum.Collections.QListPtr`1
+    name: QListPtr
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.Collections.QListPtr`1
+    name: QListPtr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.Collections
+  commentId: N:Quantum.Collections
+  isExternal: true
+  name: Quantum.Collections
+  nameWithType: Quantum.Collections
+  fullName: Quantum.Collections
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    isExternal: true
+  - name: .
+  - uid: Quantum.Collections
+    name: Collections
+    isExternal: true
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    isExternal: true
+  - name: .
+  - uid: Quantum.Collections
+    name: Collections
+    isExternal: true
+- uid: Quantum.Collections.QListPtr{Quantum.EntityHitDefinition}
+  commentId: T:Quantum.Collections.QListPtr{Quantum.EntityHitDefinition}
+  parent: Quantum.Collections
+  definition: Quantum.Collections.QListPtr`1
+  href: Quantum.EntityHitDefinition.html
+  name: QListPtr<EntityHitDefinition>
+  nameWithType: QListPtr<EntityHitDefinition>
+  fullName: Quantum.Collections.QListPtr<Quantum.EntityHitDefinition>
+  nameWithType.vb: QListPtr(Of EntityHitDefinition)
+  fullName.vb: Quantum.Collections.QListPtr(Of Quantum.EntityHitDefinition)
+  name.vb: QListPtr(Of EntityHitDefinition)
+  spec.csharp:
+  - uid: Quantum.Collections.QListPtr`1
+    name: QListPtr
+    isExternal: true
+  - name: <
+  - uid: Quantum.EntityHitDefinition
+    name: EntityHitDefinition
+    href: Quantum.EntityHitDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.Collections.QListPtr`1
+    name: QListPtr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.EntityHitDefinition
+    name: EntityHitDefinition
+    href: Quantum.EntityHitDefinition.html
+  - name: )
+- uid: Quantum.Collections.QDictionaryPtr{System.Int32,System.Int32}
+  commentId: T:Quantum.Collections.QDictionaryPtr{System.Int32,System.Int32}
+  parent: Quantum.Collections
+  definition: Quantum.Collections.QDictionaryPtr`2
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: QDictionaryPtr<int, int>
+  nameWithType: QDictionaryPtr<int, int>
+  fullName: Quantum.Collections.QDictionaryPtr<int, int>
+  nameWithType.vb: QDictionaryPtr(Of Integer, Integer)
+  fullName.vb: Quantum.Collections.QDictionaryPtr(Of Integer, Integer)
+  name.vb: QDictionaryPtr(Of Integer, Integer)
+  spec.csharp:
+  - uid: Quantum.Collections.QDictionaryPtr`2
+    name: QDictionaryPtr
+    isExternal: true
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.Collections.QDictionaryPtr`2
+    name: QDictionaryPtr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Quantum.Collections.QDictionaryPtr`2
+  commentId: T:Quantum.Collections.QDictionaryPtr`2
+  isExternal: true
+  name: QDictionaryPtr<K, V>
+  nameWithType: QDictionaryPtr<K, V>
+  fullName: Quantum.Collections.QDictionaryPtr<K, V>
+  nameWithType.vb: QDictionaryPtr(Of K, V)
+  fullName.vb: Quantum.Collections.QDictionaryPtr(Of K, V)
+  name.vb: QDictionaryPtr(Of K, V)
+  spec.csharp:
+  - uid: Quantum.Collections.QDictionaryPtr`2
+    name: QDictionaryPtr
+    isExternal: true
+  - name: <
+  - name: K
+  - name: ','
+  - name: " "
+  - name: V
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.Collections.QDictionaryPtr`2
+    name: QDictionaryPtr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: K
+  - name: ','
+  - name: " "
+  - name: V
+  - name: )
+- uid: Photon.Deterministic.FPVector3
+  commentId: T:Photon.Deterministic.FPVector3
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FPVector3
+  nameWithType: FPVector3
+  fullName: Photon.Deterministic.FPVector3
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.AssetRef{Quantum.HitInfo}
+  commentId: T:Quantum.AssetRef{Quantum.HitInfo}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.HitInfo.html
+  name: AssetRef<HitInfo>
+  nameWithType: AssetRef<HitInfo>
+  fullName: Quantum.AssetRef<Quantum.HitInfo>
+  nameWithType.vb: AssetRef(Of HitInfo)
+  fullName.vb: Quantum.AssetRef(Of Quantum.HitInfo)
+  name.vb: AssetRef(Of HitInfo)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.HitInfo
+    name: HitInfo
+    href: Quantum.HitInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HitInfo
+    name: HitInfo
+    href: Quantum.HitInfo.html
+  - name: )
+- uid: Quantum.AssetRef`1
+  commentId: T:Quantum.AssetRef`1
+  isExternal: true
+  name: AssetRef<T>
+  nameWithType: AssetRef<T>
+  fullName: Quantum.AssetRef<T>
+  nameWithType.vb: AssetRef(Of T)
+  fullName.vb: Quantum.AssetRef(Of T)
+  name.vb: AssetRef(Of T)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.AssetRef{Quantum.HNSFState}
+  commentId: T:Quantum.AssetRef{Quantum.HNSFState}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.HNSFState.html
+  name: AssetRef<HNSFState>
+  nameWithType: AssetRef<HNSFState>
+  fullName: Quantum.AssetRef<Quantum.HNSFState>
+  nameWithType.vb: AssetRef(Of HNSFState)
+  fullName.vb: Quantum.AssetRef(Of Quantum.HNSFState)
+  name.vb: AssetRef(Of HNSFState)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.HNSFState
+    name: HNSFState
+    href: Quantum.HNSFState.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HNSFState
+    name: HNSFState
+    href: Quantum.HNSFState.html
+  - name: )
+- uid: Quantum.AssetRef{Quantum.StateFunctionInt}
+  commentId: T:Quantum.AssetRef{Quantum.StateFunctionInt}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.StateFunctionInt.html
+  name: AssetRef<StateFunctionInt>
+  nameWithType: AssetRef<StateFunctionInt>
+  fullName: Quantum.AssetRef<Quantum.StateFunctionInt>
+  nameWithType.vb: AssetRef(Of StateFunctionInt)
+  fullName.vb: Quantum.AssetRef(Of Quantum.StateFunctionInt)
+  name.vb: AssetRef(Of StateFunctionInt)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.StateFunctionInt
+    name: StateFunctionInt
+    href: Quantum.StateFunctionInt.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.StateFunctionInt
+    name: StateFunctionInt
+    href: Quantum.StateFunctionInt.html
+  - name: )
+- uid: Quantum.Collections.QListPtr{Quantum.AssetRef{Quantum.HNSFState}}
+  commentId: T:Quantum.Collections.QListPtr{Quantum.AssetRef{Quantum.HNSFState}}
+  parent: Quantum.Collections
+  definition: Quantum.Collections.QListPtr`1
+  href: Quantum.HNSFState.html
+  name: QListPtr<AssetRef<HNSFState>>
+  nameWithType: QListPtr<AssetRef<HNSFState>>
+  fullName: Quantum.Collections.QListPtr<Quantum.AssetRef<Quantum.HNSFState>>
+  nameWithType.vb: QListPtr(Of AssetRef(Of HNSFState))
+  fullName.vb: Quantum.Collections.QListPtr(Of Quantum.AssetRef(Of Quantum.HNSFState))
+  name.vb: QListPtr(Of AssetRef(Of HNSFState))
+  spec.csharp:
+  - uid: Quantum.Collections.QListPtr`1
+    name: QListPtr
+    isExternal: true
+  - name: <
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.HNSFState
+    name: HNSFState
+    href: Quantum.HNSFState.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.Collections.QListPtr`1
+    name: QListPtr
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HNSFState
+    name: HNSFState
+    href: Quantum.HNSFState.html
+  - name: )
+  - name: )
+- uid: Quantum.AssetRef{Quantum.HNSFStateAction}
+  commentId: T:Quantum.AssetRef{Quantum.HNSFStateAction}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.HNSFStateAction.html
+  name: AssetRef<HNSFStateAction>
+  nameWithType: AssetRef<HNSFStateAction>
+  fullName: Quantum.AssetRef<Quantum.HNSFStateAction>
+  nameWithType.vb: AssetRef(Of HNSFStateAction)
+  fullName.vb: Quantum.AssetRef(Of Quantum.HNSFStateAction)
+  name.vb: AssetRef(Of HNSFStateAction)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.HNSFStateAction
+    name: HNSFStateAction
+    href: Quantum.HNSFStateAction.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HNSFStateAction
+    name: HNSFStateAction
+    href: Quantum.HNSFStateAction.html
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Quantum.BoxCombatant.GetHashCode*
+  commentId: Overload:Quantum.BoxCombatant.GetHashCode
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_GetHashCode
+  name: GetHashCode
+  nameWithType: BoxCombatant.GetHashCode
+  fullName: Quantum.BoxCombatant.GetHashCode
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: Quantum.BoxCombatant.ClearPointers*
+  commentId: Overload:Quantum.BoxCombatant.ClearPointers
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_ClearPointers_Quantum_Core_FrameBase_Quantum_EntityRef_
+  name: ClearPointers
+  nameWithType: BoxCombatant.ClearPointers
+  fullName: Quantum.BoxCombatant.ClearPointers
+- uid: Quantum.Core.FrameBase
+  commentId: T:Quantum.Core.FrameBase
+  parent: Quantum.Core
+  isExternal: true
+  name: FrameBase
+  nameWithType: FrameBase
+  fullName: Quantum.Core.FrameBase
+- uid: Quantum.Core
+  commentId: N:Quantum.Core
+  href: Quantum.html
+  name: Quantum.Core
+  nameWithType: Quantum.Core
+  fullName: Quantum.Core
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+- uid: Quantum.BoxCombatant.OnRemoved*
+  commentId: Overload:Quantum.BoxCombatant.OnRemoved
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_OnRemoved_Quantum_Core_FrameBase_Quantum_EntityRef_System_Void__
+  name: OnRemoved
+  nameWithType: BoxCombatant.OnRemoved
+  fullName: Quantum.BoxCombatant.OnRemoved
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: Quantum.BoxCombatant.Serialize*
+  commentId: Overload:Quantum.BoxCombatant.Serialize
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_Serialize_System_Void__Quantum_FrameSerializer_
+  name: Serialize
+  nameWithType: BoxCombatant.Serialize
+  fullName: Quantum.BoxCombatant.Serialize
+- uid: Quantum.FrameSerializer
+  commentId: T:Quantum.FrameSerializer
+  parent: Quantum
+  isExternal: true
+  name: FrameSerializer
+  nameWithType: FrameSerializer
+  fullName: Quantum.FrameSerializer
+- uid: Quantum.BoxCombatant.HasHitEntity*
+  commentId: Overload:Quantum.BoxCombatant.HasHitEntity
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_HasHitEntity_Quantum_Frame_Quantum_EntityRef_
+  name: HasHitEntity
+  nameWithType: BoxCombatant.HasHitEntity
+  fullName: Quantum.BoxCombatant.HasHitEntity
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.BoxCombatant.GetCurrentEntityHitCount*
+  commentId: Overload:Quantum.BoxCombatant.GetCurrentEntityHitCount
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_GetCurrentEntityHitCount_Quantum_Frame_
+  name: GetCurrentEntityHitCount
+  nameWithType: BoxCombatant.GetCurrentEntityHitCount
+  fullName: Quantum.BoxCombatant.GetCurrentEntityHitCount
+- uid: Quantum.BoxCombatant.GetTotalHitCount*
+  commentId: Overload:Quantum.BoxCombatant.GetTotalHitCount
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_GetTotalHitCount_Quantum_Frame_
+  name: GetTotalHitCount
+  nameWithType: BoxCombatant.GetTotalHitCount
+  fullName: Quantum.BoxCombatant.GetTotalHitCount
+- uid: Quantum.BoxCombatant.GetTotalBlockCount*
+  commentId: Overload:Quantum.BoxCombatant.GetTotalBlockCount
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_GetTotalBlockCount_Quantum_Frame_
+  name: GetTotalBlockCount
+  nameWithType: BoxCombatant.GetTotalBlockCount
+  fullName: Quantum.BoxCombatant.GetTotalBlockCount
+- uid: Quantum.BoxCombatant.GetTotalHitOrBlockCount*
+  commentId: Overload:Quantum.BoxCombatant.GetTotalHitOrBlockCount
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_GetTotalHitOrBlockCount_Quantum_Frame_
+  name: GetTotalHitOrBlockCount
+  nameWithType: BoxCombatant.GetTotalHitOrBlockCount
+  fullName: Quantum.BoxCombatant.GetTotalHitOrBlockCount
+- uid: Quantum.BoxCombatant.MarkEntityAsHit*
+  commentId: Overload:Quantum.BoxCombatant.MarkEntityAsHit
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_MarkEntityAsHit_Quantum_Frame_Quantum_EntityRef_System_Int32_
+  name: MarkEntityAsHit
+  nameWithType: BoxCombatant.MarkEntityAsHit
+  fullName: Quantum.BoxCombatant.MarkEntityAsHit
+- uid: Quantum.BoxCombatant.GrabEntity*
+  commentId: Overload:Quantum.BoxCombatant.GrabEntity
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_GrabEntity_Quantum_Frame_Quantum_EntityRef_Quantum_EntityRef_
+  name: GrabEntity
+  nameWithType: BoxCombatant.GrabEntity
+  fullName: Quantum.BoxCombatant.GrabEntity
+- uid: Quantum.BoxCombatant.ClearHitList*
+  commentId: Overload:Quantum.BoxCombatant.ClearHitList
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_ClearHitList_Quantum_Frame_
+  name: ClearHitList
+  nameWithType: BoxCombatant.ClearHitList
+  fullName: Quantum.BoxCombatant.ClearHitList
+- uid: Quantum.BoxCombatant.TryGetHurtbox*
+  commentId: Overload:Quantum.BoxCombatant.TryGetHurtbox
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_TryGetHurtbox_Quantum_Frame_System_Int32_System_Int32__
+  name: TryGetHurtbox
+  nameWithType: BoxCombatant.TryGetHurtbox
+  fullName: Quantum.BoxCombatant.TryGetHurtbox
+- uid: Quantum.BoxCombatant.DeleteHurtboxByID*
+  commentId: Overload:Quantum.BoxCombatant.DeleteHurtboxByID
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_DeleteHurtboxByID_Quantum_Frame_System_Int32_
+  name: DeleteHurtboxByID
+  nameWithType: BoxCombatant.DeleteHurtboxByID
+  fullName: Quantum.BoxCombatant.DeleteHurtboxByID
+- uid: Quantum.BoxCombatant.CleanupAllBoxes*
+  commentId: Overload:Quantum.BoxCombatant.CleanupAllBoxes
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_CleanupAllBoxes_Quantum_Frame_
+  name: CleanupAllBoxes
+  nameWithType: BoxCombatant.CleanupAllBoxes
+  fullName: Quantum.BoxCombatant.CleanupAllBoxes
+- uid: Quantum.BoxCombatant.CleanupHurtboxes*
+  commentId: Overload:Quantum.BoxCombatant.CleanupHurtboxes
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_CleanupHurtboxes_Quantum_Frame_
+  name: CleanupHurtboxes
+  nameWithType: BoxCombatant.CleanupHurtboxes
+  fullName: Quantum.BoxCombatant.CleanupHurtboxes
+- uid: Quantum.BoxCombatant.TryGetHitbox*
+  commentId: Overload:Quantum.BoxCombatant.TryGetHitbox
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_TryGetHitbox_Quantum_Frame_System_Int32_System_Int32__
+  name: TryGetHitbox
+  nameWithType: BoxCombatant.TryGetHitbox
+  fullName: Quantum.BoxCombatant.TryGetHitbox
+- uid: Quantum.BoxCombatant.DeleteHitboxByID*
+  commentId: Overload:Quantum.BoxCombatant.DeleteHitboxByID
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_DeleteHitboxByID_Quantum_Frame_System_Int32_
+  name: DeleteHitboxByID
+  nameWithType: BoxCombatant.DeleteHitboxByID
+  fullName: Quantum.BoxCombatant.DeleteHitboxByID
+- uid: Quantum.BoxCombatant.CleanupHitboxes*
+  commentId: Overload:Quantum.BoxCombatant.CleanupHitboxes
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_CleanupHitboxes_Quantum_Frame_
+  name: CleanupHitboxes
+  nameWithType: BoxCombatant.CleanupHitboxes
+  fullName: Quantum.BoxCombatant.CleanupHitboxes
+- uid: Quantum.BoxCombatant.TryGetCollisionbox*
+  commentId: Overload:Quantum.BoxCombatant.TryGetCollisionbox
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_TryGetCollisionbox_Quantum_Frame_System_Int32_System_Int32__
+  name: TryGetCollisionbox
+  nameWithType: BoxCombatant.TryGetCollisionbox
+  fullName: Quantum.BoxCombatant.TryGetCollisionbox
+- uid: Quantum.BoxCombatant.DeleteCollisionboxByID*
+  commentId: Overload:Quantum.BoxCombatant.DeleteCollisionboxByID
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_DeleteCollisionboxByID_Quantum_Frame_System_Int32_
+  name: DeleteCollisionboxByID
+  nameWithType: BoxCombatant.DeleteCollisionboxByID
+  fullName: Quantum.BoxCombatant.DeleteCollisionboxByID
+- uid: Quantum.BoxCombatant.CleanupCollisionboxes*
+  commentId: Overload:Quantum.BoxCombatant.CleanupCollisionboxes
+  href: Quantum.BoxCombatant.html#Quantum_BoxCombatant_CleanupCollisionboxes_Quantum_Frame_
+  name: CleanupCollisionboxes
+  nameWithType: BoxCombatant.CleanupCollisionboxes
+  fullName: Quantum.BoxCombatant.CleanupCollisionboxes

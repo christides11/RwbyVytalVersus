@@ -1,0 +1,694 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.GroundSnapProcessor
+  commentId: T:Quantum.GroundSnapProcessor
+  id: GroundSnapProcessor
+  parent: Quantum
+  children:
+  - Quantum.GroundSnapProcessor.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  - Quantum.GroundSnapProcessor.SnapDistance
+  - Quantum.GroundSnapProcessor.SnapSpeed
+  langs:
+  - csharp
+  - vb
+  name: GroundSnapProcessor
+  nameWithType: GroundSnapProcessor
+  fullName: Quantum.GroundSnapProcessor
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/GroundSnapProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GroundSnapProcessor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/GroundSnapProcessor.cs
+    startLine: 7
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: This processor snaps character down after losing grounded state.
+  example: []
+  syntax:
+    content: 'public class GroundSnapProcessor : KCCProcessor, IAfterMoveStep'
+    content.vb: Public Class GroundSnapProcessor Inherits KCCProcessor Implements IAfterMoveStep
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Quantum.AssetObject
+  - Quantum.KCCProcessor
+  implements:
+  - Quantum.IAfterMoveStep
+  inheritedMembers:
+  - Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+  - Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  - Quantum.AssetObject.Identifier
+  - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Create``1
+  - Quantum.AssetObject.Create(System.Type)
+  - Quantum.AssetObject.Create``1(System.Action{{T}})
+  - Quantum.AssetObject.Reset
+  - Quantum.AssetObject.Guid
+  - Quantum.AssetObject.Path
+  - Quantum.AssetObject.Settings
+- uid: Quantum.GroundSnapProcessor.SnapDistance
+  commentId: F:Quantum.GroundSnapProcessor.SnapDistance
+  id: SnapDistance
+  parent: Quantum.GroundSnapProcessor
+  langs:
+  - csharp
+  - vb
+  name: SnapDistance
+  nameWithType: GroundSnapProcessor.SnapDistance
+  fullName: Quantum.GroundSnapProcessor.SnapDistance
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/GroundSnapProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SnapDistance
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/GroundSnapProcessor.cs
+    startLine: 10
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCTooltip("Maximum ground check distance for snapping.")]
+
+      public FP SnapDistance
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <KCCTooltip("Maximum ground check distance for snapping.")>
+
+      Public SnapDistance As FP
+  attributes:
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Maximum ground check distance for snapping.
+- uid: Quantum.GroundSnapProcessor.SnapSpeed
+  commentId: F:Quantum.GroundSnapProcessor.SnapSpeed
+  id: SnapSpeed
+  parent: Quantum.GroundSnapProcessor
+  langs:
+  - csharp
+  - vb
+  name: SnapSpeed
+  nameWithType: GroundSnapProcessor.SnapSpeed
+  fullName: Quantum.GroundSnapProcessor.SnapSpeed
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/GroundSnapProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SnapSpeed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/GroundSnapProcessor.cs
+    startLine: 12
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [KCCTooltip("Ground snapping speed per second.")]
+
+      public FP SnapSpeed
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <KCCTooltip("Ground snapping speed per second.")>
+
+      Public SnapSpeed As FP
+  attributes:
+  - type: Quantum.KCCTooltipAttribute
+    ctor: Quantum.KCCTooltipAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Ground snapping speed per second.
+- uid: Quantum.GroundSnapProcessor.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  commentId: M:Quantum.GroundSnapProcessor.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  id: AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  parent: Quantum.GroundSnapProcessor
+  langs:
+  - csharp
+  - vb
+  name: AfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  nameWithType: GroundSnapProcessor.AfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  fullName: Quantum.GroundSnapProcessor.AfterMoveStep(Quantum.KCCContext, Quantum.KCCProcessorInfo, Quantum.KCCOverlapInfo)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/GroundSnapProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AfterMoveStep
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/GroundSnapProcessor.cs
+    startLine: 23
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    This callback is invoked after each KCC move step - this happens if the KCC
+
+    moves too fast and the continuous collision detection (CCD) algorithm splits translation vector into multiple smaller steps.
+
+    During CCD movement the KCCData.DeltaTime is scaled proportionally to size of the step.
+
+    Not called if KCC.IsActive is set to false.
+  example: []
+  syntax:
+    content: public void AfterMoveStep(KCCContext context, KCCProcessorInfo processorInfo, KCCOverlapInfo overlapInfo)
+    parameters:
+    - id: context
+      type: Quantum.KCCContext
+      description: Reference to KCC context.
+    - id: processorInfo
+      type: Quantum.KCCProcessorInfo
+      description: Contains information about the processor registration source and a collider/entity that is referencing this processor.
+    - id: overlapInfo
+      type: Quantum.KCCOverlapInfo
+      description: Reference to all physics overlap hits in current move step and other metadata.
+    content.vb: Public Sub AfterMoveStep(context As KCCContext, processorInfo As KCCProcessorInfo, overlapInfo As KCCOverlapInfo)
+  overload: Quantum.GroundSnapProcessor.AfterMoveStep*
+  implements:
+  - Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Quantum.AssetObject
+  commentId: T:Quantum.AssetObject
+  parent: Quantum
+  isExternal: true
+  name: AssetObject
+  nameWithType: AssetObject
+  fullName: Quantum.AssetObject
+- uid: Quantum.KCCProcessor
+  commentId: T:Quantum.KCCProcessor
+  parent: Quantum
+  href: Quantum.KCCProcessor.html
+  name: KCCProcessor
+  nameWithType: KCCProcessor
+  fullName: Quantum.KCCProcessor
+- uid: Quantum.IAfterMoveStep
+  commentId: T:Quantum.IAfterMoveStep
+  parent: Quantum
+  href: Quantum.IAfterMoveStep.html
+  name: IAfterMoveStep
+  nameWithType: IAfterMoveStep
+  fullName: Quantum.IAfterMoveStep
+- uid: Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+  commentId: M:Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+  parent: Quantum.KCCProcessor
+  href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnEnter_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapHit_
+  name: OnEnter(KCCContext, KCCProcessorInfo, KCCOverlapHit)
+  nameWithType: KCCProcessor.OnEnter(KCCContext, KCCProcessorInfo, KCCOverlapHit)
+  fullName: Quantum.KCCProcessor.OnEnter(Quantum.KCCContext, Quantum.KCCProcessorInfo, Quantum.KCCOverlapHit)
+  spec.csharp:
+  - uid: Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+    name: OnEnter
+    href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnEnter_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapHit_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCOverlapHit
+    name: KCCOverlapHit
+    href: Quantum.KCCOverlapHit.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+    name: OnEnter
+    href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnEnter_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapHit_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCOverlapHit
+    name: KCCOverlapHit
+    href: Quantum.KCCOverlapHit.html
+  - name: )
+- uid: Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  commentId: M:Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  parent: Quantum.KCCProcessor
+  href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnExit_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  name: OnExit(KCCContext, KCCProcessorInfo)
+  nameWithType: KCCProcessor.OnExit(KCCContext, KCCProcessorInfo)
+  fullName: Quantum.KCCProcessor.OnExit(Quantum.KCCContext, Quantum.KCCProcessorInfo)
+  spec.csharp:
+  - uid: Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+    name: OnExit
+    href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnExit_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+    name: OnExit
+    href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnExit_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: )
+- uid: Quantum.AssetObject.Identifier
+  commentId: F:Quantum.AssetObject.Identifier
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Identifier
+  nameWithType: AssetObject.Identifier
+  fullName: Quantum.AssetObject.Identifier
+- uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Loaded(IResourceManager, Allocator)
+  nameWithType: AssetObject.Loaded(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Loaded(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Disposed(IResourceManager, Allocator)
+  nameWithType: AssetObject.Disposed(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Disposed(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Create``1
+  commentId: M:Quantum.AssetObject.Create``1
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Create<T>()
+  nameWithType: AssetObject.Create<T>()
+  fullName: Quantum.AssetObject.Create<T>()
+  nameWithType.vb: AssetObject.Create(Of T)()
+  fullName.vb: Quantum.AssetObject.Create(Of T)()
+  name.vb: Create(Of T)()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Create(System.Type)
+  commentId: M:Quantum.AssetObject.Create(System.Type)
+  parent: Quantum.AssetObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Create(Type)
+  nameWithType: AssetObject.Create(Type)
+  fullName: Quantum.AssetObject.Create(System.Type)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.AssetObject.Create``1(System.Action{{T}})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  parent: Quantum.AssetObject
+  definition: Quantum.AssetObject.Create``1(System.Action{``0})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.AssetObject.Reset
+  commentId: M:Quantum.AssetObject.Reset
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Reset()
+  nameWithType: AssetObject.Reset()
+  fullName: Quantum.AssetObject.Reset()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Guid
+  commentId: P:Quantum.AssetObject.Guid
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Guid
+  nameWithType: AssetObject.Guid
+  fullName: Quantum.AssetObject.Guid
+- uid: Quantum.AssetObject.Path
+  commentId: P:Quantum.AssetObject.Path
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Path
+  nameWithType: AssetObject.Path
+  fullName: Quantum.AssetObject.Path
+- uid: Quantum.AssetObject.Settings
+  commentId: P:Quantum.AssetObject.Settings
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Settings
+  nameWithType: AssetObject.Settings
+  fullName: Quantum.AssetObject.Settings
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Quantum.AssetObject.Create``1(System.Action{``0})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Photon.Deterministic.FP
+  commentId: T:Photon.Deterministic.FP
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FP
+  nameWithType: FP
+  fullName: Photon.Deterministic.FP
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.GroundSnapProcessor.AfterMoveStep*
+  commentId: Overload:Quantum.GroundSnapProcessor.AfterMoveStep
+  href: Quantum.GroundSnapProcessor.html#Quantum_GroundSnapProcessor_AfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_
+  name: AfterMoveStep
+  nameWithType: GroundSnapProcessor.AfterMoveStep
+  fullName: Quantum.GroundSnapProcessor.AfterMoveStep
+- uid: Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  commentId: M:Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  parent: Quantum.IAfterMoveStep
+  href: Quantum.IAfterMoveStep.html#Quantum_IAfterMoveStep_AfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_
+  name: AfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  nameWithType: IAfterMoveStep.AfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  fullName: Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext, Quantum.KCCProcessorInfo, Quantum.KCCOverlapInfo)
+  spec.csharp:
+  - uid: Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+    name: AfterMoveStep
+    href: Quantum.IAfterMoveStep.html#Quantum_IAfterMoveStep_AfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCOverlapInfo
+    name: KCCOverlapInfo
+    href: Quantum.KCCOverlapInfo.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+    name: AfterMoveStep
+    href: Quantum.IAfterMoveStep.html#Quantum_IAfterMoveStep_AfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_
+  - name: (
+  - uid: Quantum.KCCContext
+    name: KCCContext
+    href: Quantum.KCCContext.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCProcessorInfo
+    name: KCCProcessorInfo
+    href: Quantum.KCCProcessorInfo.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.KCCOverlapInfo
+    name: KCCOverlapInfo
+    href: Quantum.KCCOverlapInfo.html
+  - name: )
+- uid: Quantum.KCCContext
+  commentId: T:Quantum.KCCContext
+  parent: Quantum
+  href: Quantum.KCCContext.html
+  name: KCCContext
+  nameWithType: KCCContext
+  fullName: Quantum.KCCContext
+- uid: Quantum.KCCProcessorInfo
+  commentId: T:Quantum.KCCProcessorInfo
+  parent: Quantum
+  href: Quantum.KCCProcessorInfo.html
+  name: KCCProcessorInfo
+  nameWithType: KCCProcessorInfo
+  fullName: Quantum.KCCProcessorInfo
+- uid: Quantum.KCCOverlapInfo
+  commentId: T:Quantum.KCCOverlapInfo
+  parent: Quantum
+  href: Quantum.KCCOverlapInfo.html
+  name: KCCOverlapInfo
+  nameWithType: KCCOverlapInfo
+  fullName: Quantum.KCCOverlapInfo

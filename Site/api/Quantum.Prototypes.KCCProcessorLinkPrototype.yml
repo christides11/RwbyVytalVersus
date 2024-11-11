@@ -1,0 +1,554 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.Prototypes.KCCProcessorLinkPrototype
+  commentId: T:Quantum.Prototypes.KCCProcessorLinkPrototype
+  id: KCCProcessorLinkPrototype
+  parent: Quantum.Prototypes
+  children:
+  - Quantum.Prototypes.KCCProcessorLinkPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  - Quantum.Prototypes.KCCProcessorLinkPrototype.Materialize(Quantum.Frame,Quantum.KCCProcessorLink@,Quantum.PrototypeMaterializationContext@)
+  - Quantum.Prototypes.KCCProcessorLinkPrototype.Processor
+  langs:
+  - csharp
+  - vb
+  name: KCCProcessorLinkPrototype
+  nameWithType: KCCProcessorLinkPrototype
+  fullName: Quantum.Prototypes.KCCProcessorLinkPrototype
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: KCCProcessorLinkPrototype
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1474
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: >-
+      [Serializable]
+
+      [Prototype(typeof(KCCProcessorLink))]
+
+      public class KCCProcessorLinkPrototype : ComponentPrototype<KCCProcessorLink>, IPrototype
+    content.vb: >-
+      <Serializable>
+
+      <Prototype(GetType(KCCProcessorLink))>
+
+      Public Class KCCProcessorLinkPrototype Inherits ComponentPrototype(Of KCCProcessorLink) Implements IPrototype
+  inheritance:
+  - System.Object
+  - Quantum.ComponentPrototype
+  - Quantum.ComponentPrototype{Quantum.KCCProcessorLink}
+  implements:
+  - Quantum.IPrototype
+  inheritedMembers:
+  - Quantum.ComponentPrototype{Quantum.KCCProcessorLink}.ComponentType
+  - Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+  - Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  - Quantum.ComponentPrototype.ComponentTypeId
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  - type: Quantum.Prototypes.PrototypeAttribute
+    ctor: Quantum.Prototypes.PrototypeAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Quantum.KCCProcessorLink
+- uid: Quantum.Prototypes.KCCProcessorLinkPrototype.Processor
+  commentId: F:Quantum.Prototypes.KCCProcessorLinkPrototype.Processor
+  id: Processor
+  parent: Quantum.Prototypes.KCCProcessorLinkPrototype
+  langs:
+  - csharp
+  - vb
+  name: Processor
+  nameWithType: KCCProcessorLinkPrototype.Processor
+  fullName: Quantum.Prototypes.KCCProcessorLinkPrototype.Processor
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Processor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1477
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: public AssetRef<KCCProcessor> Processor
+    return:
+      type: Quantum.AssetRef{Quantum.KCCProcessor}
+    content.vb: Public Processor As AssetRef(Of KCCProcessor)
+- uid: Quantum.Prototypes.KCCProcessorLinkPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  commentId: M:Quantum.Prototypes.KCCProcessorLinkPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  id: AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  parent: Quantum.Prototypes.KCCProcessorLinkPrototype
+  langs:
+  - csharp
+  - vb
+  name: AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  nameWithType: KCCProcessorLinkPrototype.AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  fullName: Quantum.Prototypes.KCCProcessorLinkPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, in Quantum.PrototypeMaterializationContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddToEntity
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1479
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  example: []
+  syntax:
+    content: public override bool AddToEntity(FrameBase f, EntityRef entity, in PrototypeMaterializationContext context)
+    parameters:
+    - id: f
+      type: Quantum.Core.FrameBase
+    - id: entity
+      type: Quantum.EntityRef
+    - id: context
+      type: Quantum.PrototypeMaterializationContext
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function AddToEntity(f As FrameBase, entity As EntityRef, context As PrototypeMaterializationContext) As Boolean
+  overridden: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  overload: Quantum.Prototypes.KCCProcessorLinkPrototype.AddToEntity*
+  nameWithType.vb: KCCProcessorLinkPrototype.AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+  fullName.vb: Quantum.Prototypes.KCCProcessorLinkPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.PrototypeMaterializationContext)
+  name.vb: AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+- uid: Quantum.Prototypes.KCCProcessorLinkPrototype.Materialize(Quantum.Frame,Quantum.KCCProcessorLink@,Quantum.PrototypeMaterializationContext@)
+  commentId: M:Quantum.Prototypes.KCCProcessorLinkPrototype.Materialize(Quantum.Frame,Quantum.KCCProcessorLink@,Quantum.PrototypeMaterializationContext@)
+  id: Materialize(Quantum.Frame,Quantum.KCCProcessorLink@,Quantum.PrototypeMaterializationContext@)
+  parent: Quantum.Prototypes.KCCProcessorLinkPrototype
+  langs:
+  - csharp
+  - vb
+  name: Materialize(Frame, ref KCCProcessorLink, in PrototypeMaterializationContext)
+  nameWithType: KCCProcessorLinkPrototype.Materialize(Frame, ref KCCProcessorLink, in PrototypeMaterializationContext)
+  fullName: Quantum.Prototypes.KCCProcessorLinkPrototype.Materialize(Quantum.Frame, ref Quantum.KCCProcessorLink, in Quantum.PrototypeMaterializationContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Materialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1484
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: public void Materialize(Frame frame, ref KCCProcessorLink result, in PrototypeMaterializationContext context = default)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: result
+      type: Quantum.KCCProcessorLink
+    - id: context
+      type: Quantum.PrototypeMaterializationContext
+    content.vb: Public Sub Materialize(frame As Frame, result As KCCProcessorLink, context As PrototypeMaterializationContext = Nothing)
+  overload: Quantum.Prototypes.KCCProcessorLinkPrototype.Materialize*
+  nameWithType.vb: KCCProcessorLinkPrototype.Materialize(Frame, KCCProcessorLink, PrototypeMaterializationContext)
+  fullName.vb: Quantum.Prototypes.KCCProcessorLinkPrototype.Materialize(Quantum.Frame, Quantum.KCCProcessorLink, Quantum.PrototypeMaterializationContext)
+  name.vb: Materialize(Frame, KCCProcessorLink, PrototypeMaterializationContext)
+references:
+- uid: Quantum.Prototypes
+  commentId: N:Quantum.Prototypes
+  href: Quantum.html
+  name: Quantum.Prototypes
+  nameWithType: Quantum.Prototypes
+  fullName: Quantum.Prototypes
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Prototypes
+    name: Prototypes
+    href: Quantum.Prototypes.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Prototypes
+    name: Prototypes
+    href: Quantum.Prototypes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.ComponentPrototype
+  commentId: T:Quantum.ComponentPrototype
+  parent: Quantum
+  isExternal: true
+  name: ComponentPrototype
+  nameWithType: ComponentPrototype
+  fullName: Quantum.ComponentPrototype
+- uid: Quantum.ComponentPrototype{Quantum.KCCProcessorLink}
+  commentId: T:Quantum.ComponentPrototype{Quantum.KCCProcessorLink}
+  parent: Quantum
+  definition: Quantum.ComponentPrototype`1
+  href: Quantum.KCCProcessorLink.html
+  name: ComponentPrototype<KCCProcessorLink>
+  nameWithType: ComponentPrototype<KCCProcessorLink>
+  fullName: Quantum.ComponentPrototype<Quantum.KCCProcessorLink>
+  nameWithType.vb: ComponentPrototype(Of KCCProcessorLink)
+  fullName.vb: Quantum.ComponentPrototype(Of Quantum.KCCProcessorLink)
+  name.vb: ComponentPrototype(Of KCCProcessorLink)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: <
+  - uid: Quantum.KCCProcessorLink
+    name: KCCProcessorLink
+    href: Quantum.KCCProcessorLink.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.KCCProcessorLink
+    name: KCCProcessorLink
+    href: Quantum.KCCProcessorLink.html
+  - name: )
+- uid: Quantum.IPrototype
+  commentId: T:Quantum.IPrototype
+  parent: Quantum
+  isExternal: true
+  name: IPrototype
+  nameWithType: IPrototype
+  fullName: Quantum.IPrototype
+- uid: Quantum.ComponentPrototype{Quantum.KCCProcessorLink}.ComponentType
+  commentId: P:Quantum.ComponentPrototype{Quantum.KCCProcessorLink}.ComponentType
+  parent: Quantum.ComponentPrototype{Quantum.KCCProcessorLink}
+  definition: Quantum.ComponentPrototype`1.ComponentType
+  name: ComponentType
+  nameWithType: ComponentPrototype<KCCProcessorLink>.ComponentType
+  fullName: Quantum.ComponentPrototype<Quantum.KCCProcessorLink>.ComponentType
+  nameWithType.vb: ComponentPrototype(Of KCCProcessorLink).ComponentType
+  fullName.vb: Quantum.ComponentPrototype(Of Quantum.KCCProcessorLink).ComponentType
+- uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+  commentId: M:Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  name: AddToEntity(FrameBase, EntityRef)
+  nameWithType: ComponentPrototype.AddToEntity(FrameBase, EntityRef)
+  fullName: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: )
+- uid: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  commentId: M:Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: PrototypeTypeToComponentType(Type)
+  nameWithType: ComponentPrototype.PrototypeTypeToComponentType(Type)
+  fullName: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+    name: PrototypeTypeToComponentType
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+    name: PrototypeTypeToComponentType
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.ComponentPrototype.ComponentTypeId
+  commentId: P:Quantum.ComponentPrototype.ComponentTypeId
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  name: ComponentTypeId
+  nameWithType: ComponentPrototype.ComponentTypeId
+  fullName: Quantum.ComponentPrototype.ComponentTypeId
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ComponentPrototype`1
+  commentId: T:Quantum.ComponentPrototype`1
+  isExternal: true
+  name: ComponentPrototype<T>
+  nameWithType: ComponentPrototype<T>
+  fullName: Quantum.ComponentPrototype<T>
+  nameWithType.vb: ComponentPrototype(Of T)
+  fullName.vb: Quantum.ComponentPrototype(Of T)
+  name.vb: ComponentPrototype(Of T)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.ComponentPrototype`1.ComponentType
+  commentId: P:Quantum.ComponentPrototype`1.ComponentType
+  isExternal: true
+  name: ComponentType
+  nameWithType: ComponentPrototype<T>.ComponentType
+  fullName: Quantum.ComponentPrototype<T>.ComponentType
+  nameWithType.vb: ComponentPrototype(Of T).ComponentType
+  fullName.vb: Quantum.ComponentPrototype(Of T).ComponentType
+- uid: Quantum.AssetRef{Quantum.KCCProcessor}
+  commentId: T:Quantum.AssetRef{Quantum.KCCProcessor}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.KCCProcessor.html
+  name: AssetRef<KCCProcessor>
+  nameWithType: AssetRef<KCCProcessor>
+  fullName: Quantum.AssetRef<Quantum.KCCProcessor>
+  nameWithType.vb: AssetRef(Of KCCProcessor)
+  fullName.vb: Quantum.AssetRef(Of Quantum.KCCProcessor)
+  name.vb: AssetRef(Of KCCProcessor)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.KCCProcessor
+    name: KCCProcessor
+    href: Quantum.KCCProcessor.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.KCCProcessor
+    name: KCCProcessor
+    href: Quantum.KCCProcessor.html
+  - name: )
+- uid: Quantum.AssetRef`1
+  commentId: T:Quantum.AssetRef`1
+  isExternal: true
+  name: AssetRef<T>
+  nameWithType: AssetRef<T>
+  fullName: Quantum.AssetRef<T>
+  nameWithType.vb: AssetRef(Of T)
+  fullName.vb: Quantum.AssetRef(Of T)
+  name.vb: AssetRef(Of T)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  commentId: M:Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  name: AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  nameWithType: ComponentPrototype.AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  fullName: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, in Quantum.PrototypeMaterializationContext)
+  nameWithType.vb: ComponentPrototype.AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+  fullName.vb: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.PrototypeMaterializationContext)
+  name.vb: AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: Quantum.PrototypeMaterializationContext
+    name: PrototypeMaterializationContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.PrototypeMaterializationContext
+    name: PrototypeMaterializationContext
+    isExternal: true
+  - name: )
+- uid: Quantum.Prototypes.KCCProcessorLinkPrototype.AddToEntity*
+  commentId: Overload:Quantum.Prototypes.KCCProcessorLinkPrototype.AddToEntity
+  href: Quantum.Prototypes.KCCProcessorLinkPrototype.html#Quantum_Prototypes_KCCProcessorLinkPrototype_AddToEntity_Quantum_Core_FrameBase_Quantum_EntityRef_Quantum_PrototypeMaterializationContext__
+  name: AddToEntity
+  nameWithType: KCCProcessorLinkPrototype.AddToEntity
+  fullName: Quantum.Prototypes.KCCProcessorLinkPrototype.AddToEntity
+- uid: Quantum.Core.FrameBase
+  commentId: T:Quantum.Core.FrameBase
+  parent: Quantum.Core
+  isExternal: true
+  name: FrameBase
+  nameWithType: FrameBase
+  fullName: Quantum.Core.FrameBase
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.PrototypeMaterializationContext
+  commentId: T:Quantum.PrototypeMaterializationContext
+  parent: Quantum
+  isExternal: true
+  name: PrototypeMaterializationContext
+  nameWithType: PrototypeMaterializationContext
+  fullName: Quantum.PrototypeMaterializationContext
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.Core
+  commentId: N:Quantum.Core
+  href: Quantum.html
+  name: Quantum.Core
+  nameWithType: Quantum.Core
+  fullName: Quantum.Core
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+- uid: Quantum.Prototypes.KCCProcessorLinkPrototype.Materialize*
+  commentId: Overload:Quantum.Prototypes.KCCProcessorLinkPrototype.Materialize
+  href: Quantum.Prototypes.KCCProcessorLinkPrototype.html#Quantum_Prototypes_KCCProcessorLinkPrototype_Materialize_Quantum_Frame_Quantum_KCCProcessorLink__Quantum_PrototypeMaterializationContext__
+  name: Materialize
+  nameWithType: KCCProcessorLinkPrototype.Materialize
+  fullName: Quantum.Prototypes.KCCProcessorLinkPrototype.Materialize
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.KCCProcessorLink
+  commentId: T:Quantum.KCCProcessorLink
+  parent: Quantum
+  href: Quantum.KCCProcessorLink.html
+  name: KCCProcessorLink
+  nameWithType: KCCProcessorLink
+  fullName: Quantum.KCCProcessorLink

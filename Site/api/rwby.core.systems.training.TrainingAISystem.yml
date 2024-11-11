@@ -1,0 +1,1107 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.core.systems.training.TrainingAISystem
+  commentId: T:rwby.core.systems.training.TrainingAISystem
+  id: TrainingAISystem
+  parent: rwby.core.systems.training
+  children:
+  - rwby.core.systems.training.TrainingAISystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  - rwby.core.systems.training.TrainingAISystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  - rwby.core.systems.training.TrainingAISystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  - rwby.core.systems.training.TrainingAISystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  - rwby.core.systems.training.TrainingAISystem.Update(Quantum.Frame)
+  langs:
+  - csharp
+  - vb
+  name: TrainingAISystem
+  nameWithType: TrainingAISystem
+  fullName: rwby.core.systems.training.TrainingAISystem
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TrainingAISystem
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+    startLine: 7
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems.training
+  syntax:
+    content: >-
+      [Preserve]
+
+      public class TrainingAISystem : SystemMainThread, ISignalOnComponentAdded<HFSMAgent>, ISignalOnComponentRemoved<HFSMAgent>, ISignalOnComponentAdded<AIBlackboardComponent>, ISignalOnComponentRemoved<AIBlackboardComponent>, ISignal
+    content.vb: >-
+      <Preserve>
+
+      Public Class TrainingAISystem Inherits SystemMainThread Implements ISignalOnComponentAdded(Of HFSMAgent), ISignalOnComponentRemoved(Of HFSMAgent), ISignalOnComponentAdded(Of AIBlackboardComponent), ISignalOnComponentRemoved(Of AIBlackboardComponent), ISignal
+  inheritance:
+  - System.Object
+  - Quantum.SystemBase
+  - Quantum.SystemMainThread
+  implements:
+  - Quantum.ISignalOnComponentAdded{Quantum.HFSMAgent}
+  - Quantum.ISignalOnComponentRemoved{Quantum.HFSMAgent}
+  - Quantum.ISignalOnComponentAdded{Quantum.AIBlackboardComponent}
+  - Quantum.ISignalOnComponentRemoved{Quantum.AIBlackboardComponent}
+  - Quantum.ISignal
+  inheritedMembers:
+  - Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  - Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  - Quantum.SystemBase.RuntimeIndex
+  - Quantum.SystemBase.ParentSystem
+  - Quantum.SystemBase.ChildSystems
+  - Quantum.SystemBase.Hierarchy
+  - Quantum.SystemBase.StartEnabled
+  - Quantum.SystemBase.OnInit(Quantum.Frame)
+  - Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  - Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  attributes:
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
+- uid: rwby.core.systems.training.TrainingAISystem.Update(Quantum.Frame)
+  commentId: M:rwby.core.systems.training.TrainingAISystem.Update(Quantum.Frame)
+  id: Update(Quantum.Frame)
+  parent: rwby.core.systems.training.TrainingAISystem
+  langs:
+  - csharp
+  - vb
+  name: Update(Frame)
+  nameWithType: TrainingAISystem.Update(Frame)
+  fullName: rwby.core.systems.training.TrainingAISystem.Update(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Update
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+    startLine: 11
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems.training
+  summary: Override to add workload.
+  example: []
+  syntax:
+    content: public override void Update(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    content.vb: Public Overrides Sub Update(frame As Frame)
+  overridden: Quantum.SystemMainThread.Update(Quantum.Frame)
+  overload: rwby.core.systems.training.TrainingAISystem.Update*
+- uid: rwby.core.systems.training.TrainingAISystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  commentId: M:rwby.core.systems.training.TrainingAISystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  id: OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  parent: rwby.core.systems.training.TrainingAISystem
+  langs:
+  - csharp
+  - vb
+  name: OnAdded(Frame, EntityRef, AIBlackboardComponent*)
+  nameWithType: TrainingAISystem.OnAdded(Frame, EntityRef, AIBlackboardComponent*)
+  fullName: rwby.core.systems.training.TrainingAISystem.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.AIBlackboardComponent*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnAdded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+    startLine: 45
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems.training
+  summary: The signal is called after a component of the desired type has been added to an entity.
+  example: []
+  syntax:
+    content: public void OnAdded(Frame frame, EntityRef entity, AIBlackboardComponent* component)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was added to.
+    - id: component
+      type: Quantum.AIBlackboardComponent*
+      description: The component that was added.
+    content.vb: Public Sub OnAdded(frame As Frame, entity As EntityRef, component As AIBlackboardComponent*)
+  overload: rwby.core.systems.training.TrainingAISystem.OnAdded*
+  implements:
+  - Quantum.ISignalOnComponentAdded{Quantum.AIBlackboardComponent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+- uid: rwby.core.systems.training.TrainingAISystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  commentId: M:rwby.core.systems.training.TrainingAISystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  id: OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  parent: rwby.core.systems.training.TrainingAISystem
+  langs:
+  - csharp
+  - vb
+  name: OnRemoved(Frame, EntityRef, AIBlackboardComponent*)
+  nameWithType: TrainingAISystem.OnRemoved(Frame, EntityRef, AIBlackboardComponent*)
+  fullName: rwby.core.systems.training.TrainingAISystem.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.AIBlackboardComponent*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnRemoved
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+    startLine: 52
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems.training
+  summary: The signal is called after a component of the desired type has been removed from an entity.
+  example: []
+  syntax:
+    content: public void OnRemoved(Frame frame, EntityRef entity, AIBlackboardComponent* component)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was removed from.
+    - id: component
+      type: Quantum.AIBlackboardComponent*
+      description: The component that was removed.
+    content.vb: Public Sub OnRemoved(frame As Frame, entity As EntityRef, component As AIBlackboardComponent*)
+  overload: rwby.core.systems.training.TrainingAISystem.OnRemoved*
+  implements:
+  - Quantum.ISignalOnComponentRemoved{Quantum.AIBlackboardComponent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+- uid: rwby.core.systems.training.TrainingAISystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  commentId: M:rwby.core.systems.training.TrainingAISystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  id: OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  parent: rwby.core.systems.training.TrainingAISystem
+  langs:
+  - csharp
+  - vb
+  name: OnAdded(Frame, EntityRef, HFSMAgent*)
+  nameWithType: TrainingAISystem.OnAdded(Frame, EntityRef, HFSMAgent*)
+  fullName: rwby.core.systems.training.TrainingAISystem.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.HFSMAgent*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnAdded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+    startLine: 57
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems.training
+  summary: The signal is called after a component of the desired type has been added to an entity.
+  example: []
+  syntax:
+    content: public void OnAdded(Frame frame, EntityRef entity, HFSMAgent* component)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was added to.
+    - id: component
+      type: Quantum.HFSMAgent*
+      description: The component that was added.
+    content.vb: Public Sub OnAdded(frame As Frame, entity As EntityRef, component As HFSMAgent*)
+  overload: rwby.core.systems.training.TrainingAISystem.OnAdded*
+  implements:
+  - Quantum.ISignalOnComponentAdded{Quantum.HFSMAgent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+- uid: rwby.core.systems.training.TrainingAISystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  commentId: M:rwby.core.systems.training.TrainingAISystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  id: OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  parent: rwby.core.systems.training.TrainingAISystem
+  langs:
+  - csharp
+  - vb
+  name: OnRemoved(Frame, EntityRef, HFSMAgent*)
+  nameWithType: TrainingAISystem.OnRemoved(Frame, EntityRef, HFSMAgent*)
+  fullName: rwby.core.systems.training.TrainingAISystem.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.HFSMAgent*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnRemoved
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingAISystem.cs
+    startLine: 63
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems.training
+  summary: The signal is called after a component of the desired type has been removed from an entity.
+  example: []
+  syntax:
+    content: public void OnRemoved(Frame f, EntityRef entity, HFSMAgent* component)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was removed from.
+    - id: component
+      type: Quantum.HFSMAgent*
+      description: The component that was removed.
+    content.vb: Public Sub OnRemoved(f As Frame, entity As EntityRef, component As HFSMAgent*)
+  overload: rwby.core.systems.training.TrainingAISystem.OnRemoved*
+  implements:
+  - Quantum.ISignalOnComponentRemoved{Quantum.HFSMAgent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+references:
+- uid: rwby.core.systems.training
+  commentId: N:rwby.core.systems.training
+  href: rwby.html
+  name: rwby.core.systems.training
+  nameWithType: rwby.core.systems.training
+  fullName: rwby.core.systems.training
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.systems
+    name: systems
+    href: rwby.core.systems.html
+  - name: .
+  - uid: rwby.core.systems.training
+    name: training
+    href: rwby.core.systems.training.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.systems
+    name: systems
+    href: rwby.core.systems.html
+  - name: .
+  - uid: rwby.core.systems.training
+    name: training
+    href: rwby.core.systems.training.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.SystemBase
+  commentId: T:Quantum.SystemBase
+  parent: Quantum
+  href: Quantum.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: Quantum.SystemBase
+- uid: Quantum.SystemMainThread
+  commentId: T:Quantum.SystemMainThread
+  parent: Quantum
+  href: Quantum.SystemMainThread.html
+  name: SystemMainThread
+  nameWithType: SystemMainThread
+  fullName: Quantum.SystemMainThread
+- uid: Quantum.ISignalOnComponentAdded{Quantum.HFSMAgent}
+  commentId: T:Quantum.ISignalOnComponentAdded{Quantum.HFSMAgent}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentAdded`1
+  href: Quantum.ISignalOnComponentAdded-1.html
+  name: ISignalOnComponentAdded<HFSMAgent>
+  nameWithType: ISignalOnComponentAdded<HFSMAgent>
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.HFSMAgent>
+  nameWithType.vb: ISignalOnComponentAdded(Of HFSMAgent)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.HFSMAgent)
+  name.vb: ISignalOnComponentAdded(Of HFSMAgent)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: <
+  - uid: Quantum.HFSMAgent
+    name: HFSMAgent
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HFSMAgent
+    name: HFSMAgent
+    isExternal: true
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.HFSMAgent}
+  commentId: T:Quantum.ISignalOnComponentRemoved{Quantum.HFSMAgent}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentRemoved`1
+  href: Quantum.ISignalOnComponentRemoved-1.html
+  name: ISignalOnComponentRemoved<HFSMAgent>
+  nameWithType: ISignalOnComponentRemoved<HFSMAgent>
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.HFSMAgent>
+  nameWithType.vb: ISignalOnComponentRemoved(Of HFSMAgent)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.HFSMAgent)
+  name.vb: ISignalOnComponentRemoved(Of HFSMAgent)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: <
+  - uid: Quantum.HFSMAgent
+    name: HFSMAgent
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HFSMAgent
+    name: HFSMAgent
+    isExternal: true
+  - name: )
+- uid: Quantum.ISignalOnComponentAdded{Quantum.AIBlackboardComponent}
+  commentId: T:Quantum.ISignalOnComponentAdded{Quantum.AIBlackboardComponent}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentAdded`1
+  href: Quantum.ISignalOnComponentAdded-1.html
+  name: ISignalOnComponentAdded<AIBlackboardComponent>
+  nameWithType: ISignalOnComponentAdded<AIBlackboardComponent>
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.AIBlackboardComponent>
+  nameWithType.vb: ISignalOnComponentAdded(Of AIBlackboardComponent)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.AIBlackboardComponent)
+  name.vb: ISignalOnComponentAdded(Of AIBlackboardComponent)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: <
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.AIBlackboardComponent}
+  commentId: T:Quantum.ISignalOnComponentRemoved{Quantum.AIBlackboardComponent}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentRemoved`1
+  href: Quantum.ISignalOnComponentRemoved-1.html
+  name: ISignalOnComponentRemoved<AIBlackboardComponent>
+  nameWithType: ISignalOnComponentRemoved<AIBlackboardComponent>
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.AIBlackboardComponent>
+  nameWithType.vb: ISignalOnComponentRemoved(Of AIBlackboardComponent)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.AIBlackboardComponent)
+  name.vb: ISignalOnComponentRemoved(Of AIBlackboardComponent)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: <
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: )
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemMainThread
+  isExternal: true
+  href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_ScheduleUpdate_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: ScheduleUpdate(Frame, TaskHandle)
+  nameWithType: SystemMainThread.ScheduleUpdate(Frame, TaskHandle)
+  fullName: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: ScheduleUpdate
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_ScheduleUpdate_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: ScheduleUpdate
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_ScheduleUpdate_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemMainThread
+  isExternal: true
+  href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: SystemMainThread.Schedule(Frame, TaskHandle)
+  fullName: Quantum.SystemMainThread.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemBase.RuntimeIndex
+  commentId: P:Quantum.SystemBase.RuntimeIndex
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_RuntimeIndex
+  name: RuntimeIndex
+  nameWithType: SystemBase.RuntimeIndex
+  fullName: Quantum.SystemBase.RuntimeIndex
+- uid: Quantum.SystemBase.ParentSystem
+  commentId: P:Quantum.SystemBase.ParentSystem
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ParentSystem
+  name: ParentSystem
+  nameWithType: SystemBase.ParentSystem
+  fullName: Quantum.SystemBase.ParentSystem
+- uid: Quantum.SystemBase.ChildSystems
+  commentId: P:Quantum.SystemBase.ChildSystems
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ChildSystems
+  name: ChildSystems
+  nameWithType: SystemBase.ChildSystems
+  fullName: Quantum.SystemBase.ChildSystems
+- uid: Quantum.SystemBase.Hierarchy
+  commentId: P:Quantum.SystemBase.Hierarchy
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Hierarchy
+  name: Hierarchy
+  nameWithType: SystemBase.Hierarchy
+  fullName: Quantum.SystemBase.Hierarchy
+- uid: Quantum.SystemBase.StartEnabled
+  commentId: P:Quantum.SystemBase.StartEnabled
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_StartEnabled
+  name: StartEnabled
+  nameWithType: SystemBase.StartEnabled
+  fullName: Quantum.SystemBase.StartEnabled
+- uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnInit(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  name: OnInit(Frame)
+  nameWithType: SystemBase.OnInit(Frame)
+  fullName: Quantum.SystemBase.OnInit(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  name: OnEnabled(Frame)
+  nameWithType: SystemBase.OnEnabled(Frame)
+  fullName: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  name: OnDisabled(Frame)
+  nameWithType: SystemBase.OnDisabled(Frame)
+  fullName: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: OnSchedule(Frame, TaskHandle)
+  nameWithType: SystemBase.OnSchedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.OnSchedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ISignalOnComponentAdded`1
+  commentId: T:Quantum.ISignalOnComponentAdded`1
+  href: Quantum.ISignalOnComponentAdded-1.html
+  name: ISignalOnComponentAdded<T>
+  nameWithType: ISignalOnComponentAdded<T>
+  fullName: Quantum.ISignalOnComponentAdded<T>
+  nameWithType.vb: ISignalOnComponentAdded(Of T)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of T)
+  name.vb: ISignalOnComponentAdded(Of T)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved`1
+  commentId: T:Quantum.ISignalOnComponentRemoved`1
+  href: Quantum.ISignalOnComponentRemoved-1.html
+  name: ISignalOnComponentRemoved<T>
+  nameWithType: ISignalOnComponentRemoved<T>
+  fullName: Quantum.ISignalOnComponentRemoved<T>
+  nameWithType.vb: ISignalOnComponentRemoved(Of T)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of T)
+  name.vb: ISignalOnComponentRemoved(Of T)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.SystemMainThread.Update(Quantum.Frame)
+  commentId: M:Quantum.SystemMainThread.Update(Quantum.Frame)
+  parent: Quantum.SystemMainThread
+  href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Update_Quantum_Frame_
+  name: Update(Frame)
+  nameWithType: SystemMainThread.Update(Frame)
+  fullName: Quantum.SystemMainThread.Update(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemMainThread.Update(Quantum.Frame)
+    name: Update
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Update_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThread.Update(Quantum.Frame)
+    name: Update
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Update_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: rwby.core.systems.training.TrainingAISystem.Update*
+  commentId: Overload:rwby.core.systems.training.TrainingAISystem.Update
+  href: rwby.core.systems.training.TrainingAISystem.html#rwby_core_systems_training_TrainingAISystem_Update_Quantum_Frame_
+  name: Update
+  nameWithType: TrainingAISystem.Update
+  fullName: rwby.core.systems.training.TrainingAISystem.Update
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: rwby.core.systems.training.TrainingAISystem.OnAdded*
+  commentId: Overload:rwby.core.systems.training.TrainingAISystem.OnAdded
+  href: rwby.core.systems.training.TrainingAISystem.html#rwby_core_systems_training_TrainingAISystem_OnAdded_Quantum_Frame_Quantum_EntityRef_Quantum_AIBlackboardComponent__
+  name: OnAdded
+  nameWithType: TrainingAISystem.OnAdded
+  fullName: rwby.core.systems.training.TrainingAISystem.OnAdded
+- uid: Quantum.ISignalOnComponentAdded{Quantum.AIBlackboardComponent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  commentId: M:Quantum.ISignalOnComponentAdded{Quantum.AIBlackboardComponent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  parent: Quantum.ISignalOnComponentAdded{Quantum.AIBlackboardComponent}
+  definition: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnAdded(Frame, EntityRef, AIBlackboardComponent*)
+  nameWithType: ISignalOnComponentAdded<AIBlackboardComponent>.OnAdded(Frame, EntityRef, AIBlackboardComponent*)
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.AIBlackboardComponent>.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.AIBlackboardComponent*)
+  nameWithType.vb: ISignalOnComponentAdded(Of AIBlackboardComponent).OnAdded(Frame, EntityRef, AIBlackboardComponent*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.AIBlackboardComponent).OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.AIBlackboardComponent*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.AIBlackboardComponent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.AIBlackboardComponent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.AIBlackboardComponent*
+  isExternal: true
+  name: AIBlackboardComponent*
+  nameWithType: AIBlackboardComponent*
+  fullName: Quantum.AIBlackboardComponent*
+  spec.csharp:
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+- uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  commentId: M:Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  isExternal: true
+  href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnAdded(Frame, EntityRef, T*)
+  nameWithType: ISignalOnComponentAdded<T>.OnAdded(Frame, EntityRef, T*)
+  fullName: Quantum.ISignalOnComponentAdded<T>.OnAdded(Quantum.Frame, Quantum.EntityRef, T*)
+  nameWithType.vb: ISignalOnComponentAdded(Of T).OnAdded(Frame, EntityRef, T*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of T).OnAdded(Quantum.Frame, Quantum.EntityRef, T*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+- uid: rwby.core.systems.training.TrainingAISystem.OnRemoved*
+  commentId: Overload:rwby.core.systems.training.TrainingAISystem.OnRemoved
+  href: rwby.core.systems.training.TrainingAISystem.html#rwby_core_systems_training_TrainingAISystem_OnRemoved_Quantum_Frame_Quantum_EntityRef_Quantum_AIBlackboardComponent__
+  name: OnRemoved
+  nameWithType: TrainingAISystem.OnRemoved
+  fullName: rwby.core.systems.training.TrainingAISystem.OnRemoved
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.AIBlackboardComponent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  commentId: M:Quantum.ISignalOnComponentRemoved{Quantum.AIBlackboardComponent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+  parent: Quantum.ISignalOnComponentRemoved{Quantum.AIBlackboardComponent}
+  definition: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnRemoved(Frame, EntityRef, AIBlackboardComponent*)
+  nameWithType: ISignalOnComponentRemoved<AIBlackboardComponent>.OnRemoved(Frame, EntityRef, AIBlackboardComponent*)
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.AIBlackboardComponent>.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.AIBlackboardComponent*)
+  nameWithType.vb: ISignalOnComponentRemoved(Of AIBlackboardComponent).OnRemoved(Frame, EntityRef, AIBlackboardComponent*)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.AIBlackboardComponent).OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.AIBlackboardComponent*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.AIBlackboardComponent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.AIBlackboardComponent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.AIBlackboardComponent*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  commentId: M:Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  isExternal: true
+  href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnRemoved(Frame, EntityRef, T*)
+  nameWithType: ISignalOnComponentRemoved<T>.OnRemoved(Frame, EntityRef, T*)
+  fullName: Quantum.ISignalOnComponentRemoved<T>.OnRemoved(Quantum.Frame, Quantum.EntityRef, T*)
+  nameWithType.vb: ISignalOnComponentRemoved(Of T).OnRemoved(Frame, EntityRef, T*)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of T).OnRemoved(Quantum.Frame, Quantum.EntityRef, T*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+- uid: Quantum.ISignalOnComponentAdded{Quantum.HFSMAgent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  commentId: M:Quantum.ISignalOnComponentAdded{Quantum.HFSMAgent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  parent: Quantum.ISignalOnComponentAdded{Quantum.HFSMAgent}
+  definition: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnAdded(Frame, EntityRef, HFSMAgent*)
+  nameWithType: ISignalOnComponentAdded<HFSMAgent>.OnAdded(Frame, EntityRef, HFSMAgent*)
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.HFSMAgent>.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.HFSMAgent*)
+  nameWithType.vb: ISignalOnComponentAdded(Of HFSMAgent).OnAdded(Frame, EntityRef, HFSMAgent*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.HFSMAgent).OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.HFSMAgent*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.HFSMAgent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HFSMAgent
+    name: HFSMAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.HFSMAgent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HFSMAgent
+    name: HFSMAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.HFSMAgent*
+  isExternal: true
+  name: HFSMAgent*
+  nameWithType: HFSMAgent*
+  fullName: Quantum.HFSMAgent*
+  spec.csharp:
+  - uid: Quantum.HFSMAgent
+    name: HFSMAgent
+    isExternal: true
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.HFSMAgent
+    name: HFSMAgent
+    isExternal: true
+  - name: '*'
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.HFSMAgent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  commentId: M:Quantum.ISignalOnComponentRemoved{Quantum.HFSMAgent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+  parent: Quantum.ISignalOnComponentRemoved{Quantum.HFSMAgent}
+  definition: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnRemoved(Frame, EntityRef, HFSMAgent*)
+  nameWithType: ISignalOnComponentRemoved<HFSMAgent>.OnRemoved(Frame, EntityRef, HFSMAgent*)
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.HFSMAgent>.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.HFSMAgent*)
+  nameWithType.vb: ISignalOnComponentRemoved(Of HFSMAgent).OnRemoved(Frame, EntityRef, HFSMAgent*)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.HFSMAgent).OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.HFSMAgent*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.HFSMAgent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HFSMAgent
+    name: HFSMAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.HFSMAgent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.HFSMAgent*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HFSMAgent
+    name: HFSMAgent
+    isExternal: true
+  - name: '*'
+  - name: )

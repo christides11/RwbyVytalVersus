@@ -1,0 +1,791 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.InputProvider
+  commentId: T:Quantum.InputProvider
+  id: InputProvider
+  parent: Quantum
+  children:
+  - Quantum.InputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32,System.Int32)
+  - Quantum.InputProvider.#ctor(Photon.Deterministic.DeterministicTickInputSet[])
+  - Quantum.InputProvider.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  - Quantum.InputProvider.AddRpc(System.Int32,System.Byte[],System.Boolean)
+  - Quantum.InputProvider.CanSimulate(System.Int32)
+  - Quantum.InputProvider.Clear(System.Int32)
+  - Quantum.InputProvider.ExportToList(System.Int32)
+  - Quantum.InputProvider.GetInput(System.Int32,System.Int32)
+  - Quantum.InputProvider.GetRpc(System.Int32,System.Int32)
+  - Quantum.InputProvider.ImportFromList(Photon.Deterministic.DeterministicTickInputSet[])
+  - Quantum.InputProvider.InjectInput(Photon.Deterministic.DeterministicTickInput,System.Boolean)
+  - Quantum.InputProvider.OnInputConfirmed(Quantum.QuantumGame,Photon.Deterministic.DeterministicFrameInputTemp)
+  langs:
+  - csharp
+  - vb
+  name: InputProvider
+  nameWithType: InputProvider
+  fullName: Quantum.InputProvider
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InputProvider
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5903
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    The input provider is used to push recorded inputs into the simulation.
+
+    This class uses the full input history instead of delta compressed input stream 
+
+    which uses a large memory footprint.
+  example: []
+  syntax:
+    content: public class InputProvider
+    content.vb: Public Class InputProvider
+  inheritance:
+  - System.Object
+- uid: Quantum.InputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32,System.Int32)
+  commentId: M:Quantum.InputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32,System.Int32)
+  id: '#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32,System.Int32)'
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: InputProvider(DeterministicSessionConfig, int, int)
+  nameWithType: InputProvider.InputProvider(DeterministicSessionConfig, int, int)
+  fullName: Quantum.InputProvider.InputProvider(Photon.Deterministic.DeterministicSessionConfig, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5917
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Construct an input provider with a given capacity and grow size.
+  example: []
+  syntax:
+    content: public InputProvider(DeterministicSessionConfig config, int capacity = 3600, int growSize = 0)
+    parameters:
+    - id: config
+      type: Photon.Deterministic.DeterministicSessionConfig
+      description: Session config used to gather PlayerCount and RollbackWindow
+    - id: capacity
+      type: System.Int32
+      description: The initial capacity
+    - id: growSize
+      type: System.Int32
+      description: The grow size, 0 means doubling the buffer
+    content.vb: Public Sub New(config As DeterministicSessionConfig, capacity As Integer = 3600, growSize As Integer = 0)
+  overload: Quantum.InputProvider.#ctor*
+  nameWithType.vb: InputProvider.New(DeterministicSessionConfig, Integer, Integer)
+  fullName.vb: Quantum.InputProvider.New(Photon.Deterministic.DeterministicSessionConfig, Integer, Integer)
+  name.vb: New(DeterministicSessionConfig, Integer, Integer)
+- uid: Quantum.InputProvider.#ctor(Photon.Deterministic.DeterministicTickInputSet[])
+  commentId: M:Quantum.InputProvider.#ctor(Photon.Deterministic.DeterministicTickInputSet[])
+  id: '#ctor(Photon.Deterministic.DeterministicTickInputSet[])'
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: InputProvider(DeterministicTickInputSet[])
+  nameWithType: InputProvider.InputProvider(DeterministicTickInputSet[])
+  fullName: Quantum.InputProvider.InputProvider(Photon.Deterministic.DeterministicTickInputSet[])
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5925
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Construct an input provider with a given list of inputs.
+  example: []
+  syntax:
+    content: public InputProvider(DeterministicTickInputSet[] inputList)
+    parameters:
+    - id: inputList
+      type: Photon.Deterministic.DeterministicTickInputSet[]
+      description: Input list
+    content.vb: Public Sub New(inputList As DeterministicTickInputSet())
+  overload: Quantum.InputProvider.#ctor*
+  nameWithType.vb: InputProvider.New(DeterministicTickInputSet())
+  fullName.vb: Quantum.InputProvider.New(Photon.Deterministic.DeterministicTickInputSet())
+  name.vb: New(DeterministicTickInputSet())
+- uid: Quantum.InputProvider.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Quantum.InputProvider.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32)'
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: InputProvider(int, int, int, int)
+  nameWithType: InputProvider.InputProvider(int, int, int, int)
+  fullName: Quantum.InputProvider.InputProvider(int, int, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5936
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Construct an input provider with a given player count, start frame, capacity and grow size.
+  example: []
+  syntax:
+    content: public InputProvider(int playerCount, int startFrame, int capacity, int growSize)
+    parameters:
+    - id: playerCount
+      type: System.Int32
+      description: Player count
+    - id: startFrame
+      type: System.Int32
+      description: Start frame
+    - id: capacity
+      type: System.Int32
+      description: The initial capacity
+    - id: growSize
+      type: System.Int32
+      description: The grow size, 0 means doubling the buffer
+    content.vb: Public Sub New(playerCount As Integer, startFrame As Integer, capacity As Integer, growSize As Integer)
+  overload: Quantum.InputProvider.#ctor*
+  nameWithType.vb: InputProvider.New(Integer, Integer, Integer, Integer)
+  fullName.vb: Quantum.InputProvider.New(Integer, Integer, Integer, Integer)
+  name.vb: New(Integer, Integer, Integer, Integer)
+- uid: Quantum.InputProvider.CanSimulate(System.Int32)
+  commentId: M:Quantum.InputProvider.CanSimulate(System.Int32)
+  id: CanSimulate(System.Int32)
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: CanSimulate(int)
+  nameWithType: InputProvider.CanSimulate(int)
+  fullName: Quantum.InputProvider.CanSimulate(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CanSimulate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5951
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Returns true if the input provider can simulate the given frame.
+  example: []
+  syntax:
+    content: public bool CanSimulate(int frame)
+    parameters:
+    - id: frame
+      type: System.Int32
+      description: Requested frame
+    return:
+      type: System.Boolean
+      description: True if the input for this frame is available
+    content.vb: Public Function CanSimulate(frame As Integer) As Boolean
+  overload: Quantum.InputProvider.CanSimulate*
+  nameWithType.vb: InputProvider.CanSimulate(Integer)
+  fullName.vb: Quantum.InputProvider.CanSimulate(Integer)
+  name.vb: CanSimulate(Integer)
+- uid: Quantum.InputProvider.Clear(System.Int32)
+  commentId: M:Quantum.InputProvider.Clear(System.Int32)
+  id: Clear(System.Int32)
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: Clear(int)
+  nameWithType: InputProvider.Clear(int)
+  fullName: Quantum.InputProvider.Clear(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Clear
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5965
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Clear all recorded inputs. Usually called after a resync.
+  example: []
+  syntax:
+    content: public void Clear(int startFrame)
+    parameters:
+    - id: startFrame
+      type: System.Int32
+      description: New start frame
+    content.vb: Public Sub Clear(startFrame As Integer)
+  overload: Quantum.InputProvider.Clear*
+  nameWithType.vb: InputProvider.Clear(Integer)
+  fullName.vb: Quantum.InputProvider.Clear(Integer)
+  name.vb: Clear(Integer)
+- uid: Quantum.InputProvider.ImportFromList(Photon.Deterministic.DeterministicTickInputSet[])
+  commentId: M:Quantum.InputProvider.ImportFromList(Photon.Deterministic.DeterministicTickInputSet[])
+  id: ImportFromList(Photon.Deterministic.DeterministicTickInputSet[])
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: ImportFromList(DeterministicTickInputSet[])
+  nameWithType: InputProvider.ImportFromList(DeterministicTickInputSet[])
+  fullName: Quantum.InputProvider.ImportFromList(Photon.Deterministic.DeterministicTickInputSet[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ImportFromList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5979
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Import a list of inputs into the input provider.
+  example: []
+  syntax:
+    content: public void ImportFromList(DeterministicTickInputSet[] inputList)
+    parameters:
+    - id: inputList
+      type: Photon.Deterministic.DeterministicTickInputSet[]
+      description: A reference to the imported list is internally copied.
+    content.vb: Public Sub ImportFromList(inputList As DeterministicTickInputSet())
+  overload: Quantum.InputProvider.ImportFromList*
+  nameWithType.vb: InputProvider.ImportFromList(DeterministicTickInputSet())
+  fullName.vb: Quantum.InputProvider.ImportFromList(Photon.Deterministic.DeterministicTickInputSet())
+  name.vb: ImportFromList(DeterministicTickInputSet())
+- uid: Quantum.InputProvider.ExportToList(System.Int32)
+  commentId: M:Quantum.InputProvider.ExportToList(System.Int32)
+  id: ExportToList(System.Int32)
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: ExportToList(int)
+  nameWithType: InputProvider.ExportToList(int)
+  fullName: Quantum.InputProvider.ExportToList(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ExportToList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5996
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Export the inputs to a list.
+  example: []
+  syntax:
+    content: public DeterministicTickInputSet[] ExportToList(int verifiedFrame)
+    parameters:
+    - id: verifiedFrame
+      type: System.Int32
+      description: The max frame that in input available for
+    return:
+      type: Photon.Deterministic.DeterministicTickInputSet[]
+      description: A list on inputs that can be saved to a file.
+    content.vb: Public Function ExportToList(verifiedFrame As Integer) As DeterministicTickInputSet()
+  overload: Quantum.InputProvider.ExportToList*
+  nameWithType.vb: InputProvider.ExportToList(Integer)
+  fullName.vb: Quantum.InputProvider.ExportToList(Integer)
+  name.vb: ExportToList(Integer)
+- uid: Quantum.InputProvider.OnInputConfirmed(Quantum.QuantumGame,Photon.Deterministic.DeterministicFrameInputTemp)
+  commentId: M:Quantum.InputProvider.OnInputConfirmed(Quantum.QuantumGame,Photon.Deterministic.DeterministicFrameInputTemp)
+  id: OnInputConfirmed(Quantum.QuantumGame,Photon.Deterministic.DeterministicFrameInputTemp)
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: OnInputConfirmed(QuantumGame, DeterministicFrameInputTemp)
+  nameWithType: InputProvider.OnInputConfirmed(QuantumGame, DeterministicFrameInputTemp)
+  fullName: Quantum.InputProvider.OnInputConfirmed(Quantum.QuantumGame, Photon.Deterministic.DeterministicFrameInputTemp)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnInputConfirmed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6018
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: This callback is called when an input was confirmed and can be recorded.
+  example: []
+  syntax:
+    content: public void OnInputConfirmed(QuantumGame game, DeterministicFrameInputTemp input)
+    parameters:
+    - id: game
+      type: Quantum.QuantumGame
+      description: The game
+    - id: input
+      type: Photon.Deterministic.DeterministicFrameInputTemp
+      description: The confirmed input
+    content.vb: Public Sub OnInputConfirmed(game As QuantumGame, input As DeterministicFrameInputTemp)
+  overload: Quantum.InputProvider.OnInputConfirmed*
+- uid: Quantum.InputProvider.InjectInput(Photon.Deterministic.DeterministicTickInput,System.Boolean)
+  commentId: M:Quantum.InputProvider.InjectInput(Photon.Deterministic.DeterministicTickInput,System.Boolean)
+  id: InjectInput(Photon.Deterministic.DeterministicTickInput,System.Boolean)
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: InjectInput(DeterministicTickInput, bool)
+  nameWithType: InputProvider.InjectInput(DeterministicTickInput, bool)
+  fullName: Quantum.InputProvider.InjectInput(Photon.Deterministic.DeterministicTickInput, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InjectInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6039
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Injects a random input.
+  example: []
+  syntax:
+    content: public void InjectInput(DeterministicTickInput input, bool localReplay)
+    parameters:
+    - id: input
+      type: Photon.Deterministic.DeterministicTickInput
+      description: Input to inject
+    - id: localReplay
+      type: System.Boolean
+      description: If set to true the input sent flag is set to true
+    content.vb: Public Sub InjectInput(input As DeterministicTickInput, localReplay As Boolean)
+  overload: Quantum.InputProvider.InjectInput*
+  nameWithType.vb: InputProvider.InjectInput(DeterministicTickInput, Boolean)
+  fullName.vb: Quantum.InputProvider.InjectInput(Photon.Deterministic.DeterministicTickInput, Boolean)
+  name.vb: InjectInput(DeterministicTickInput, Boolean)
+- uid: Quantum.InputProvider.AddRpc(System.Int32,System.Byte[],System.Boolean)
+  commentId: M:Quantum.InputProvider.AddRpc(System.Int32,System.Byte[],System.Boolean)
+  id: AddRpc(System.Int32,System.Byte[],System.Boolean)
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: AddRpc(int, byte[], bool)
+  nameWithType: InputProvider.AddRpc(int, byte[], bool)
+  fullName: Quantum.InputProvider.AddRpc(int, byte[], bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddRpc
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6056
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Unused.
+  example: []
+  syntax:
+    content: public void AddRpc(int player, byte[] data, bool command)
+    parameters:
+    - id: player
+      type: System.Int32
+    - id: data
+      type: System.Byte[]
+    - id: command
+      type: System.Boolean
+    content.vb: Public Sub AddRpc(player As Integer, data As Byte(), command As Boolean)
+  overload: Quantum.InputProvider.AddRpc*
+  nameWithType.vb: InputProvider.AddRpc(Integer, Byte(), Boolean)
+  fullName.vb: Quantum.InputProvider.AddRpc(Integer, Byte(), Boolean)
+  name.vb: AddRpc(Integer, Byte(), Boolean)
+- uid: Quantum.InputProvider.GetRpc(System.Int32,System.Int32)
+  commentId: M:Quantum.InputProvider.GetRpc(System.Int32,System.Int32)
+  id: GetRpc(System.Int32,System.Int32)
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: GetRpc(int, int)
+  nameWithType: InputProvider.GetRpc(int, int)
+  fullName: Quantum.InputProvider.GetRpc(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetRpc
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6065
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Reads a rpc from the input provider.
+  example: []
+  syntax:
+    content: public QTuple<byte[], bool> GetRpc(int frame, int player)
+    parameters:
+    - id: frame
+      type: System.Int32
+      description: Frame
+    - id: player
+      type: System.Int32
+      description: Player
+    return:
+      type: Photon.Deterministic.QTuple{System.Byte[],System.Boolean}
+      description: The rpc and a bool that is true when the rpc is a command
+    content.vb: Public Function GetRpc(frame As Integer, player As Integer) As QTuple(Of Byte(), Boolean)
+  overload: Quantum.InputProvider.GetRpc*
+  nameWithType.vb: InputProvider.GetRpc(Integer, Integer)
+  fullName.vb: Quantum.InputProvider.GetRpc(Integer, Integer)
+  name.vb: GetRpc(Integer, Integer)
+- uid: Quantum.InputProvider.GetInput(System.Int32,System.Int32)
+  commentId: M:Quantum.InputProvider.GetInput(System.Int32,System.Int32)
+  id: GetInput(System.Int32,System.Int32)
+  parent: Quantum.InputProvider
+  langs:
+  - csharp
+  - vb
+  name: GetInput(int, int)
+  nameWithType: InputProvider.GetInput(int, int)
+  fullName: Quantum.InputProvider.GetInput(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6081
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Returns input for a given frame and player.
+  example: []
+  syntax:
+    content: public DeterministicFrameInputTemp GetInput(int frame, int player)
+    parameters:
+    - id: frame
+      type: System.Int32
+      description: Requested frame
+    - id: player
+      type: System.Int32
+      description: Requested player
+    return:
+      type: Photon.Deterministic.DeterministicFrameInputTemp
+      description: Input object for that player and frame
+    content.vb: Public Function GetInput(frame As Integer, player As Integer) As DeterministicFrameInputTemp
+  overload: Quantum.InputProvider.GetInput*
+  nameWithType.vb: InputProvider.GetInput(Integer, Integer)
+  fullName.vb: Quantum.InputProvider.GetInput(Integer, Integer)
+  name.vb: GetInput(Integer, Integer)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.InputProvider.#ctor*
+  commentId: Overload:Quantum.InputProvider.#ctor
+  href: Quantum.InputProvider.html#Quantum_InputProvider__ctor_Photon_Deterministic_DeterministicSessionConfig_System_Int32_System_Int32_
+  name: InputProvider
+  nameWithType: InputProvider.InputProvider
+  fullName: Quantum.InputProvider.InputProvider
+  nameWithType.vb: InputProvider.New
+  fullName.vb: Quantum.InputProvider.New
+  name.vb: New
+- uid: Photon.Deterministic.DeterministicSessionConfig
+  commentId: T:Photon.Deterministic.DeterministicSessionConfig
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicSessionConfig
+  nameWithType: DeterministicSessionConfig
+  fullName: Photon.Deterministic.DeterministicSessionConfig
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Photon.Deterministic.DeterministicTickInputSet[]
+  isExternal: true
+  name: DeterministicTickInputSet[]
+  nameWithType: DeterministicTickInputSet[]
+  fullName: Photon.Deterministic.DeterministicTickInputSet[]
+  nameWithType.vb: DeterministicTickInputSet()
+  fullName.vb: Photon.Deterministic.DeterministicTickInputSet()
+  name.vb: DeterministicTickInputSet()
+  spec.csharp:
+  - uid: Photon.Deterministic.DeterministicTickInputSet
+    name: DeterministicTickInputSet
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Photon.Deterministic.DeterministicTickInputSet
+    name: DeterministicTickInputSet
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.InputProvider.CanSimulate*
+  commentId: Overload:Quantum.InputProvider.CanSimulate
+  href: Quantum.InputProvider.html#Quantum_InputProvider_CanSimulate_System_Int32_
+  name: CanSimulate
+  nameWithType: InputProvider.CanSimulate
+  fullName: Quantum.InputProvider.CanSimulate
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.InputProvider.Clear*
+  commentId: Overload:Quantum.InputProvider.Clear
+  href: Quantum.InputProvider.html#Quantum_InputProvider_Clear_System_Int32_
+  name: Clear
+  nameWithType: InputProvider.Clear
+  fullName: Quantum.InputProvider.Clear
+- uid: Quantum.InputProvider.ImportFromList*
+  commentId: Overload:Quantum.InputProvider.ImportFromList
+  href: Quantum.InputProvider.html#Quantum_InputProvider_ImportFromList_Photon_Deterministic_DeterministicTickInputSet___
+  name: ImportFromList
+  nameWithType: InputProvider.ImportFromList
+  fullName: Quantum.InputProvider.ImportFromList
+- uid: Quantum.InputProvider.ExportToList*
+  commentId: Overload:Quantum.InputProvider.ExportToList
+  href: Quantum.InputProvider.html#Quantum_InputProvider_ExportToList_System_Int32_
+  name: ExportToList
+  nameWithType: InputProvider.ExportToList
+  fullName: Quantum.InputProvider.ExportToList
+- uid: Quantum.InputProvider.OnInputConfirmed*
+  commentId: Overload:Quantum.InputProvider.OnInputConfirmed
+  href: Quantum.InputProvider.html#Quantum_InputProvider_OnInputConfirmed_Quantum_QuantumGame_Photon_Deterministic_DeterministicFrameInputTemp_
+  name: OnInputConfirmed
+  nameWithType: InputProvider.OnInputConfirmed
+  fullName: Quantum.InputProvider.OnInputConfirmed
+- uid: Quantum.QuantumGame
+  commentId: T:Quantum.QuantumGame
+  parent: Quantum
+  href: Quantum.QuantumGame.html
+  name: QuantumGame
+  nameWithType: QuantumGame
+  fullName: Quantum.QuantumGame
+- uid: Photon.Deterministic.DeterministicFrameInputTemp
+  commentId: T:Photon.Deterministic.DeterministicFrameInputTemp
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicFrameInputTemp
+  nameWithType: DeterministicFrameInputTemp
+  fullName: Photon.Deterministic.DeterministicFrameInputTemp
+- uid: Quantum.InputProvider.InjectInput*
+  commentId: Overload:Quantum.InputProvider.InjectInput
+  href: Quantum.InputProvider.html#Quantum_InputProvider_InjectInput_Photon_Deterministic_DeterministicTickInput_System_Boolean_
+  name: InjectInput
+  nameWithType: InputProvider.InjectInput
+  fullName: Quantum.InputProvider.InjectInput
+- uid: Photon.Deterministic.DeterministicTickInput
+  commentId: T:Photon.Deterministic.DeterministicTickInput
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicTickInput
+  nameWithType: DeterministicTickInput
+  fullName: Photon.Deterministic.DeterministicTickInput
+- uid: Quantum.InputProvider.AddRpc*
+  commentId: Overload:Quantum.InputProvider.AddRpc
+  href: Quantum.InputProvider.html#Quantum_InputProvider_AddRpc_System_Int32_System_Byte___System_Boolean_
+  name: AddRpc
+  nameWithType: InputProvider.AddRpc
+  fullName: Quantum.InputProvider.AddRpc
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: Quantum.InputProvider.GetRpc*
+  commentId: Overload:Quantum.InputProvider.GetRpc
+  href: Quantum.InputProvider.html#Quantum_InputProvider_GetRpc_System_Int32_System_Int32_
+  name: GetRpc
+  nameWithType: InputProvider.GetRpc
+  fullName: Quantum.InputProvider.GetRpc
+- uid: Photon.Deterministic.QTuple{System.Byte[],System.Boolean}
+  commentId: T:Photon.Deterministic.QTuple{System.Byte[],System.Boolean}
+  parent: Photon.Deterministic
+  definition: Photon.Deterministic.QTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: QTuple<byte[], bool>
+  nameWithType: QTuple<byte[], bool>
+  fullName: Photon.Deterministic.QTuple<byte[], bool>
+  nameWithType.vb: QTuple(Of Byte(), Boolean)
+  fullName.vb: Photon.Deterministic.QTuple(Of Byte(), Boolean)
+  name.vb: QTuple(Of Byte(), Boolean)
+  spec.csharp:
+  - uid: Photon.Deterministic.QTuple`2
+    name: QTuple
+    isExternal: true
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Photon.Deterministic.QTuple`2
+    name: QTuple
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Photon.Deterministic.QTuple`2
+  commentId: T:Photon.Deterministic.QTuple`2
+  isExternal: true
+  name: QTuple<T0, T1>
+  nameWithType: QTuple<T0, T1>
+  fullName: Photon.Deterministic.QTuple<T0, T1>
+  nameWithType.vb: QTuple(Of T0, T1)
+  fullName.vb: Photon.Deterministic.QTuple(Of T0, T1)
+  name.vb: QTuple(Of T0, T1)
+  spec.csharp:
+  - uid: Photon.Deterministic.QTuple`2
+    name: QTuple
+    isExternal: true
+  - name: <
+  - name: T0
+  - name: ','
+  - name: " "
+  - name: T1
+  - name: '>'
+  spec.vb:
+  - uid: Photon.Deterministic.QTuple`2
+    name: QTuple
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T0
+  - name: ','
+  - name: " "
+  - name: T1
+  - name: )
+- uid: Quantum.InputProvider.GetInput*
+  commentId: Overload:Quantum.InputProvider.GetInput
+  href: Quantum.InputProvider.html#Quantum_InputProvider_GetInput_System_Int32_System_Int32_
+  name: GetInput
+  nameWithType: InputProvider.GetInput
+  fullName: Quantum.InputProvider.GetInput

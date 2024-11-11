@@ -1,0 +1,133 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.ISignalOnComponentAdded`1
+  commentId: T:Quantum.ISignalOnComponentAdded`1
+  id: ISignalOnComponentAdded`1
+  parent: Quantum
+  children:
+  - Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  langs:
+  - csharp
+  - vb
+  name: ISignalOnComponentAdded<T>
+  nameWithType: ISignalOnComponentAdded<T>
+  fullName: Quantum.ISignalOnComponentAdded<T>
+  type: Interface
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ISignalOnComponentAdded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 1629
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The signal is called after a component of the desired type has been added to an entity.
+  example: []
+  syntax:
+    content: 'public interface ISignalOnComponentAdded<T> : ISignal where T : unmanaged, IComponent'
+    typeParameters:
+    - id: T
+      description: Component type
+    content.vb: Public Interface ISignalOnComponentAdded(Of T As {Structure, IComponent}) Inherits ISignal
+  inheritedMembers:
+  - Quantum.ISignal.RuntimeIndex
+  nameWithType.vb: ISignalOnComponentAdded(Of T)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of T)
+  name.vb: ISignalOnComponentAdded(Of T)
+- uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  commentId: M:Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  id: OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  parent: Quantum.ISignalOnComponentAdded`1
+  langs:
+  - csharp
+  - vb
+  name: OnAdded(Frame, EntityRef, T*)
+  nameWithType: ISignalOnComponentAdded<T>.OnAdded(Frame, EntityRef, T*)
+  fullName: Quantum.ISignalOnComponentAdded<T>.OnAdded(Quantum.Frame, Quantum.EntityRef, T*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnAdded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 1636
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The signal is called after a component of the desired type has been added to an entity.
+  example: []
+  syntax:
+    content: void OnAdded(Frame f, EntityRef entity, T* component)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was added to.
+    - id: component
+      type: '{T}*'
+      description: The component that was added.
+    content.vb: Sub OnAdded(f As Frame, entity As EntityRef, component As T*)
+  overload: Quantum.ISignalOnComponentAdded`1.OnAdded*
+  nameWithType.vb: ISignalOnComponentAdded(Of T).OnAdded(Frame, EntityRef, T*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of T).OnAdded(Quantum.Frame, Quantum.EntityRef, T*)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ISignal.RuntimeIndex
+  commentId: P:Quantum.ISignal.RuntimeIndex
+  parent: Quantum.ISignal
+  isExternal: true
+  name: RuntimeIndex
+  nameWithType: ISignal.RuntimeIndex
+  fullName: Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.ISignalOnComponentAdded`1.OnAdded*
+  commentId: Overload:Quantum.ISignalOnComponentAdded`1.OnAdded
+  href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnAdded
+  nameWithType: ISignalOnComponentAdded<T>.OnAdded
+  fullName: Quantum.ISignalOnComponentAdded<T>.OnAdded
+  nameWithType.vb: ISignalOnComponentAdded(Of T).OnAdded
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of T).OnAdded
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: '{T}*'
+  isExternal: true
+  name: T*
+  nameWithType: T*
+  fullName: T*
+  spec.csharp:
+  - name: T
+  - name: '*'
+  spec.vb:
+  - name: T
+  - name: '*'

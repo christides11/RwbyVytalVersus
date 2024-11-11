@@ -1,0 +1,4043 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.QuantumGame
+  commentId: T:Quantum.QuantumGame
+  id: QuantumGame
+  parent: Quantum
+  children:
+  - Quantum.QuantumGame.#ctor(Quantum.IResourceManager,Quantum.IAssetSerializer,Quantum.ICallbackDispatcher,Quantum.IEventDispatcher)
+  - Quantum.QuantumGame.#ctor(Quantum.QuantumGame.StartParameters@)
+  - Quantum.QuantumGame.#ctor(Quantum.QuantumGameStartParameters@)
+  - Quantum.QuantumGame.AddPlayer(Quantum.RuntimePlayer)
+  - Quantum.QuantumGame.AddPlayer(System.Int32,Quantum.RuntimePlayer)
+  - Quantum.QuantumGame.AssetSerializer
+  - Quantum.QuantumGame.AssignSession(Photon.Deterministic.DeterministicSession)
+  - Quantum.QuantumGame.CheckTrackedHeapAllocations
+  - Quantum.QuantumGame.Configurations
+  - Quantum.QuantumGame.CreateFrame
+  - Quantum.QuantumGame.CreateFrameContext
+  - Quantum.QuantumGame.CreateSavegame(System.Boolean)
+  - Quantum.QuantumGame.DeserializeInputInto(System.Int32,System.Byte[],System.Byte*,System.Boolean)
+  - Quantum.QuantumGame.EventWaitingForConfirmationCount
+  - Quantum.QuantumGame.Frames
+  - Quantum.QuantumGame.GameFlags
+  - Quantum.QuantumGame.GetExtraErrorFrameDumpData(Photon.Deterministic.DeterministicFrame)
+  - Quantum.QuantumGame.GetInputInMemorySize
+  - Quantum.QuantumGame.GetInputSerializedFixedSize
+  - Quantum.QuantumGame.GetInstantReplaySnapshot(System.Int32)
+  - Quantum.QuantumGame.GetInstantReplaySnapshots(System.Int32,System.Int32,System.Collections.Generic.List{Quantum.Frame})
+  - Quantum.QuantumGame.GetLocalPlayerSlots
+  - Quantum.QuantumGame.GetLocalPlayers
+  - Quantum.QuantumGame.GetRecordedReplay(System.Boolean,System.Boolean,Quantum.QuantumJsonFriendlyDataBlob.Encoder,Quantum.QuantumJsonFriendlyDataBlob.Encoder,Quantum.QuantumJsonFriendlyDataBlob.Encoder)
+  - Quantum.QuantumGame.GetVerifiedFrame(System.Int32)
+  - Quantum.QuantumGame.HeapExtraCount
+  - Quantum.QuantumGame.InitCallbacks
+  - Quantum.QuantumGame.InstantReplayConfig
+  - Quantum.QuantumGame.InterpolationFactor
+  - Quantum.QuantumGame.OnChecksumComputed(System.Int32,System.UInt64)
+  - Quantum.QuantumGame.OnChecksumError(Photon.Deterministic.DeterministicTickChecksumError,Photon.Deterministic.DeterministicFrame[])
+  - Quantum.QuantumGame.OnChecksumErrorFrameDump(System.Int32,System.Int32,Photon.Deterministic.DeterministicSessionConfig,System.Byte[],System.Byte[],System.Byte[])
+  - Quantum.QuantumGame.OnDestroy
+  - Quantum.QuantumGame.OnGameEnded
+  - Quantum.QuantumGame.OnGameResync
+  - Quantum.QuantumGame.OnGameStart(Photon.Deterministic.DeterministicFrame)
+  - Quantum.QuantumGame.OnInputConfirmed(Photon.Deterministic.DeterministicFrameInputTemp)
+  - Quantum.QuantumGame.OnInputSetConfirmed(System.Int32,System.Int32,System.Byte[])
+  - Quantum.QuantumGame.OnLocalInput(System.Int32,System.Int32)
+  - Quantum.QuantumGame.OnLocalPlayerAddConfirmed(Photon.Deterministic.DeterministicFrame,System.Int32,Quantum.PlayerRef)
+  - Quantum.QuantumGame.OnLocalPlayerAddFailed(System.Int32,System.String)
+  - Quantum.QuantumGame.OnLocalPlayerRemoveConfirmed(Photon.Deterministic.DeterministicFrame,System.Int32,Quantum.PlayerRef)
+  - Quantum.QuantumGame.OnLocalPlayerRemoveFailed(System.Int32,System.String)
+  - Quantum.QuantumGame.OnPluginDisconnect(System.String)
+  - Quantum.QuantumGame.OnSerializedInput(System.Byte*,System.Array)
+  - Quantum.QuantumGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+  - Quantum.QuantumGame.OnSimulateFinished(Photon.Deterministic.DeterministicFrame)
+  - Quantum.QuantumGame.OnSimulationBegin
+  - Quantum.QuantumGame.OnSimulationEnd
+  - Quantum.QuantumGame.OnUpdateDone
+  - Quantum.QuantumGame.PlayerIsLocal(Quantum.PlayerRef)
+  - Quantum.QuantumGame.ProfilerSampleGenerated
+  - Quantum.QuantumGame.RecordInputStream
+  - Quantum.QuantumGame.RecordedChecksums
+  - Quantum.QuantumGame.RecordedInputs
+  - Quantum.QuantumGame.RemoveAllPlayers
+  - Quantum.QuantumGame.RemovePlayer
+  - Quantum.QuantumGame.RemovePlayer(System.Int32)
+  - Quantum.QuantumGame.ResourceManager
+  - Quantum.QuantumGame.SendCommand(Photon.Deterministic.DeterministicCommand)
+  - Quantum.QuantumGame.SendCommand(System.Int32,Photon.Deterministic.DeterministicCommand)
+  - Quantum.QuantumGame.SendPlayerData(Quantum.RuntimePlayer)
+  - Quantum.QuantumGame.SendPlayerData(System.Int32,Quantum.RuntimePlayer)
+  - Quantum.QuantumGame.Session
+  - Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector2,Photon.Deterministic.FP)
+  - Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  - Quantum.QuantumGame.StartRecordingChecksums
+  - Quantum.QuantumGame.StartRecordingInput(System.Nullable{System.Int32})
+  - Quantum.QuantumGame.StartRecordingInstantReplaySnapshots
+  - Quantum.QuantumGame.StartVerifyingChecksums(Quantum.ChecksumFile)
+  langs:
+  - csharp
+  - vb
+  name: QuantumGame
+  nameWithType: QuantumGame
+  fullName: Quantum.QuantumGame
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: QuantumGame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5271
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    QuantumGame acts as an interface to the simulation from the client code's perspective.
+
+    <p>Access and method to this class is always safe from the clients point of view.</p>
+  example: []
+  syntax:
+    content: public class QuantumGame
+    content.vb: Public Class QuantumGame
+  inheritance:
+  - System.Object
+- uid: Quantum.QuantumGame.ProfilerSampleGenerated
+  commentId: E:Quantum.QuantumGame.ProfilerSampleGenerated
+  id: ProfilerSampleGenerated
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: ProfilerSampleGenerated
+  nameWithType: QuantumGame.ProfilerSampleGenerated
+  fullName: Quantum.QuantumGame.ProfilerSampleGenerated
+  type: Event
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ProfilerSampleGenerated
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2793
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    A callback that is invoked after the <xref href="Photon.Deterministic.IDeterministicGame.OnSimulate(Photon.Deterministic.DeterministicFrame)" data-throw-if-not-resolved="false"></xref> callback.
+
+    It uses the <xref href="Quantum.Core.FrameContext.ProfilerContext" data-throw-if-not-resolved="false"></xref> to create a report.
+  example: []
+  syntax:
+    content: public event Action<ProfilerContextData> ProfilerSampleGenerated
+    return:
+      type: System.Action{Quantum.Profiling.ProfilerContextData}
+    content.vb: Public Event ProfilerSampleGenerated As Action(Of ProfilerContextData)
+- uid: Quantum.QuantumGame.Frames
+  commentId: P:Quantum.QuantumGame.Frames
+  id: Frames
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: Frames
+  nameWithType: QuantumGame.Frames
+  fullName: Quantum.QuantumGame.Frames
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Frames
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2837
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Access the frames of various times available during one tick.
+  example: []
+  syntax:
+    content: public QuantumGame.FramesContainer Frames { get; }
+    parameters: []
+    return:
+      type: Quantum.QuantumGame.FramesContainer
+    content.vb: Public ReadOnly Property Frames As QuantumGame.FramesContainer
+  overload: Quantum.QuantumGame.Frames*
+- uid: Quantum.QuantumGame.Configurations
+  commentId: P:Quantum.QuantumGame.Configurations
+  id: Configurations
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: Configurations
+  nameWithType: QuantumGame.Configurations
+  fullName: Quantum.QuantumGame.Configurations
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Configurations
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2842
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Access the configurations that the simulation is running with.
+
+    Only set after the first CreateFrame() call.
+  example: []
+  syntax:
+    content: public QuantumGame.ConfigurationsContainer Configurations { get; }
+    parameters: []
+    return:
+      type: Quantum.QuantumGame.ConfigurationsContainer
+    content.vb: Public ReadOnly Property Configurations As QuantumGame.ConfigurationsContainer
+  overload: Quantum.QuantumGame.Configurations*
+- uid: Quantum.QuantumGame.Session
+  commentId: P:Quantum.QuantumGame.Session
+  id: Session
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: QuantumGame.Session
+  fullName: Quantum.QuantumGame.Session
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Session
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2846
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Access the Deterministic session object to query more internals.
+  example: []
+  syntax:
+    content: public DeterministicSession Session { get; }
+    parameters: []
+    return:
+      type: Photon.Deterministic.DeterministicSession
+    content.vb: Public Property Session As DeterministicSession
+  overload: Quantum.QuantumGame.Session*
+- uid: Quantum.QuantumGame.InterpolationFactor
+  commentId: P:Quantum.QuantumGame.InterpolationFactor
+  id: InterpolationFactor
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: InterpolationFactor
+  nameWithType: QuantumGame.InterpolationFactor
+  fullName: Quantum.QuantumGame.InterpolationFactor
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InterpolationFactor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2850
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Used for position interpolation on the client for smoother interpolation results.
+  example: []
+  syntax:
+    content: public float InterpolationFactor { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property InterpolationFactor As Single
+  overload: Quantum.QuantumGame.InterpolationFactor*
+- uid: Quantum.QuantumGame.InstantReplayConfig
+  commentId: P:Quantum.QuantumGame.InstantReplayConfig
+  id: InstantReplayConfig
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: InstantReplayConfig
+  nameWithType: QuantumGame.InstantReplayConfig
+  fullName: Quantum.QuantumGame.InstantReplayConfig
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InstantReplayConfig
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2854
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Instant replay configuration, initialized by <xref href="Quantum.QuantumGameStartParameters.InstantReplaySettings" data-throw-if-not-resolved="false"></xref>."
+  example: []
+  syntax:
+    content: public InstantReplaySettings InstantReplayConfig { get; }
+    parameters: []
+    return:
+      type: Quantum.InstantReplaySettings
+    content.vb: Public Property InstantReplayConfig As InstantReplaySettings
+  overload: Quantum.QuantumGame.InstantReplayConfig*
+- uid: Quantum.QuantumGame.AssetSerializer
+  commentId: P:Quantum.QuantumGame.AssetSerializer
+  id: AssetSerializer
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: AssetSerializer
+  nameWithType: QuantumGame.AssetSerializer
+  fullName: Quantum.QuantumGame.AssetSerializer
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AssetSerializer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2858
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Asset serializer passed by <xref href="Quantum.QuantumGameStartParameters.AssetSerializer" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public IAssetSerializer AssetSerializer { get; }
+    parameters: []
+    return:
+      type: Quantum.IAssetSerializer
+    content.vb: Public ReadOnly Property AssetSerializer As IAssetSerializer
+  overload: Quantum.QuantumGame.AssetSerializer*
+- uid: Quantum.QuantumGame.ResourceManager
+  commentId: P:Quantum.QuantumGame.ResourceManager
+  id: ResourceManager
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: ResourceManager
+  nameWithType: QuantumGame.ResourceManager
+  fullName: Quantum.QuantumGame.ResourceManager
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ResourceManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2862
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Resource manager passed by <xref href="Quantum.QuantumGameStartParameters.ResourceManager" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public IResourceManager ResourceManager { get; }
+    parameters: []
+    return:
+      type: Quantum.IResourceManager
+    content.vb: Public ReadOnly Property ResourceManager As IResourceManager
+  overload: Quantum.QuantumGame.ResourceManager*
+- uid: Quantum.QuantumGame.HeapExtraCount
+  commentId: P:Quantum.QuantumGame.HeapExtraCount
+  id: HeapExtraCount
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: HeapExtraCount
+  nameWithType: QuantumGame.HeapExtraCount
+  fullName: Quantum.QuantumGame.HeapExtraCount
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HeapExtraCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2866
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Extra heaps to allocate for a session in case you need to create 'auxiliary' frames than actually required for the simulation itself.
+  example: []
+  syntax:
+    content: public int HeapExtraCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property HeapExtraCount As Integer
+  overload: Quantum.QuantumGame.HeapExtraCount*
+- uid: Quantum.QuantumGame.GameFlags
+  commentId: P:Quantum.QuantumGame.GameFlags
+  id: GameFlags
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: GameFlags
+  nameWithType: QuantumGame.GameFlags
+  fullName: Quantum.QuantumGame.GameFlags
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GameFlags
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2871
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Game flags passer by <xref href="Quantum.QuantumGameStartParameters.GameFlags" data-throw-if-not-resolved="false"></xref>.
+
+    See <xref href="Quantum.QuantumGameFlags" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public int GameFlags { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property GameFlags As Integer
+  overload: Quantum.QuantumGame.GameFlags*
+- uid: Quantum.QuantumGame.#ctor(Quantum.QuantumGameStartParameters@)
+  commentId: M:Quantum.QuantumGame.#ctor(Quantum.QuantumGameStartParameters@)
+  id: '#ctor(Quantum.QuantumGameStartParameters@)'
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: QuantumGame(in QuantumGameStartParameters)
+  nameWithType: QuantumGame.QuantumGame(in QuantumGameStartParameters)
+  fullName: Quantum.QuantumGame.QuantumGame(in Quantum.QuantumGameStartParameters)
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2895
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Create a Quantum game instance.
+  example: []
+  syntax:
+    content: public QuantumGame(in QuantumGameStartParameters startParams)
+    parameters:
+    - id: startParams
+      type: Quantum.QuantumGameStartParameters
+      description: Start parameters.
+    content.vb: Public Sub New(startParams As QuantumGameStartParameters)
+  overload: Quantum.QuantumGame.#ctor*
+  nameWithType.vb: QuantumGame.New(QuantumGameStartParameters)
+  fullName.vb: Quantum.QuantumGame.New(Quantum.QuantumGameStartParameters)
+  name.vb: New(QuantumGameStartParameters)
+- uid: Quantum.QuantumGame.GetLocalPlayers
+  commentId: M:Quantum.QuantumGame.GetLocalPlayers
+  id: GetLocalPlayers
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: GetLocalPlayers()
+  nameWithType: QuantumGame.GetLocalPlayers()
+  fullName: Quantum.QuantumGame.GetLocalPlayers()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetLocalPlayers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2923
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Returns an array that is unique on every client and represents the global player indices that the local client controls in the Quantum simulation.
+  example: []
+  syntax:
+    content: public List<PlayerRef> GetLocalPlayers()
+    return:
+      type: System.Collections.Generic.List{Quantum.PlayerRef}
+      description: Array of global players this client controls.
+    content.vb: Public Function GetLocalPlayers() As List(Of PlayerRef)
+  overload: Quantum.QuantumGame.GetLocalPlayers*
+- uid: Quantum.QuantumGame.GetLocalPlayerSlots
+  commentId: M:Quantum.QuantumGame.GetLocalPlayerSlots
+  id: GetLocalPlayerSlots
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: GetLocalPlayerSlots()
+  nameWithType: QuantumGame.GetLocalPlayerSlots()
+  fullName: Quantum.QuantumGame.GetLocalPlayerSlots()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetLocalPlayerSlots
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2931
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Returns an array that is unique on every client and represents the player slots that the local client controls in the Quantum simulation.
+  example: []
+  syntax:
+    content: public List<int> GetLocalPlayerSlots()
+    return:
+      type: System.Collections.Generic.List{System.Int32}
+      description: Array of local player slots  this client controls.
+    content.vb: Public Function GetLocalPlayerSlots() As List(Of Integer)
+  overload: Quantum.QuantumGame.GetLocalPlayerSlots*
+- uid: Quantum.QuantumGame.PlayerIsLocal(Quantum.PlayerRef)
+  commentId: M:Quantum.QuantumGame.PlayerIsLocal(Quantum.PlayerRef)
+  id: PlayerIsLocal(Quantum.PlayerRef)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: PlayerIsLocal(PlayerRef)
+  nameWithType: QuantumGame.PlayerIsLocal(PlayerRef)
+  fullName: Quantum.QuantumGame.PlayerIsLocal(Quantum.PlayerRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PlayerIsLocal
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2940
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Helps to decide if a PlayerRef is associated with the local player.
+  example: []
+  syntax:
+    content: public bool PlayerIsLocal(PlayerRef playerRef)
+    parameters:
+    - id: playerRef
+      type: Quantum.PlayerRef
+      description: Player reference
+    return:
+      type: System.Boolean
+      description: True if the player is the local player
+    content.vb: Public Function PlayerIsLocal(playerRef As PlayerRef) As Boolean
+  overload: Quantum.QuantumGame.PlayerIsLocal*
+- uid: Quantum.QuantumGame.SendCommand(Photon.Deterministic.DeterministicCommand)
+  commentId: M:Quantum.QuantumGame.SendCommand(Photon.Deterministic.DeterministicCommand)
+  id: SendCommand(Photon.Deterministic.DeterministicCommand)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: SendCommand(DeterministicCommand)
+  nameWithType: QuantumGame.SendCommand(DeterministicCommand)
+  fullName: Quantum.QuantumGame.SendCommand(Photon.Deterministic.DeterministicCommand)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SendCommand
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2958
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Sends a command to the server.
+  example:
+  - >-
+    <pre><code class="lang-csharp">RemoveUnitCommand command = new RemoveUnitCommand();
+
+    command.CellIndex = 42;
+
+    QuantumRunner.Default.Game.SendCommand(command);</code></pre>
+  syntax:
+    content: public DeterministicCommandSendResult SendCommand(DeterministicCommand command)
+    parameters:
+    - id: command
+      type: Photon.Deterministic.DeterministicCommand
+      description: Command to send
+    return:
+      type: Photon.Deterministic.DeterministicCommandSendResult
+    content.vb: Public Function SendCommand(command As DeterministicCommand) As DeterministicCommandSendResult
+  overload: Quantum.QuantumGame.SendCommand*
+- uid: Quantum.QuantumGame.SendCommand(System.Int32,Photon.Deterministic.DeterministicCommand)
+  commentId: M:Quantum.QuantumGame.SendCommand(System.Int32,Photon.Deterministic.DeterministicCommand)
+  id: SendCommand(System.Int32,Photon.Deterministic.DeterministicCommand)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: SendCommand(int, DeterministicCommand)
+  nameWithType: QuantumGame.SendCommand(int, DeterministicCommand)
+  fullName: Quantum.QuantumGame.SendCommand(int, Photon.Deterministic.DeterministicCommand)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SendCommand
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2969
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Sends a command to the server.
+  example: []
+  syntax:
+    content: public DeterministicCommandSendResult SendCommand(int playerSlot, DeterministicCommand command)
+    parameters:
+    - id: playerSlot
+      type: System.Int32
+      description: Specify the local player index when you have multiple players controlled from the same machine.
+    - id: command
+      type: Photon.Deterministic.DeterministicCommand
+      description: Command to send
+    return:
+      type: Photon.Deterministic.DeterministicCommandSendResult
+    content.vb: Public Function SendCommand(playerSlot As Integer, command As DeterministicCommand) As DeterministicCommandSendResult
+  overload: Quantum.QuantumGame.SendCommand*
+  nameWithType.vb: QuantumGame.SendCommand(Integer, DeterministicCommand)
+  fullName.vb: Quantum.QuantumGame.SendCommand(Integer, Photon.Deterministic.DeterministicCommand)
+  name.vb: SendCommand(Integer, DeterministicCommand)
+- uid: Quantum.QuantumGame.AddPlayer(Quantum.RuntimePlayer)
+  commentId: M:Quantum.QuantumGame.AddPlayer(Quantum.RuntimePlayer)
+  id: AddPlayer(Quantum.RuntimePlayer)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: AddPlayer(RuntimePlayer)
+  nameWithType: QuantumGame.AddPlayer(RuntimePlayer)
+  fullName: Quantum.QuantumGame.AddPlayer(Quantum.RuntimePlayer)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2980
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Send data for the local player to join the online match.
+
+    If the client has multiple local players, the data will be sent for the first player set.
+  example: []
+  syntax:
+    content: public void AddPlayer(RuntimePlayer data)
+    parameters:
+    - id: data
+      type: Quantum.RuntimePlayer
+      description: Player data
+    content.vb: Public Sub AddPlayer(data As RuntimePlayer)
+  overload: Quantum.QuantumGame.AddPlayer*
+- uid: Quantum.QuantumGame.AddPlayer(System.Int32,Quantum.RuntimePlayer)
+  commentId: M:Quantum.QuantumGame.AddPlayer(System.Int32,Quantum.RuntimePlayer)
+  id: AddPlayer(System.Int32,Quantum.RuntimePlayer)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: AddPlayer(int, RuntimePlayer)
+  nameWithType: QuantumGame.AddPlayer(int, RuntimePlayer)
+  fullName: Quantum.QuantumGame.AddPlayer(int, Quantum.RuntimePlayer)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2991
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Send data for one local player to join the online match.
+  example: []
+  syntax:
+    content: public void AddPlayer(int playerSlot, RuntimePlayer data)
+    parameters:
+    - id: playerSlot
+      type: System.Int32
+      description: Local player index
+    - id: data
+      type: Quantum.RuntimePlayer
+      description: Player data
+    content.vb: Public Sub AddPlayer(playerSlot As Integer, data As RuntimePlayer)
+  overload: Quantum.QuantumGame.AddPlayer*
+  nameWithType.vb: QuantumGame.AddPlayer(Integer, RuntimePlayer)
+  fullName.vb: Quantum.QuantumGame.AddPlayer(Integer, Quantum.RuntimePlayer)
+  name.vb: AddPlayer(Integer, RuntimePlayer)
+- uid: Quantum.QuantumGame.RemovePlayer
+  commentId: M:Quantum.QuantumGame.RemovePlayer
+  id: RemovePlayer
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: RemovePlayer()
+  nameWithType: QuantumGame.RemovePlayer()
+  fullName: Quantum.QuantumGame.RemovePlayer()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemovePlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2998
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Remove the player. Assuming there is only one local player that this client controls.
+  example: []
+  syntax:
+    content: public void RemovePlayer()
+    content.vb: Public Sub RemovePlayer()
+  overload: Quantum.QuantumGame.RemovePlayer*
+- uid: Quantum.QuantumGame.RemovePlayer(System.Int32)
+  commentId: M:Quantum.QuantumGame.RemovePlayer(System.Int32)
+  id: RemovePlayer(System.Int32)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: RemovePlayer(int)
+  nameWithType: QuantumGame.RemovePlayer(int)
+  fullName: Quantum.QuantumGame.RemovePlayer(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemovePlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3006
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Remove a player slot from the game.
+  example: []
+  syntax:
+    content: public void RemovePlayer(int playerSlot)
+    parameters:
+    - id: playerSlot
+      type: System.Int32
+      description: Local player
+    content.vb: Public Sub RemovePlayer(playerSlot As Integer)
+  overload: Quantum.QuantumGame.RemovePlayer*
+  nameWithType.vb: QuantumGame.RemovePlayer(Integer)
+  fullName.vb: Quantum.QuantumGame.RemovePlayer(Integer)
+  name.vb: RemovePlayer(Integer)
+- uid: Quantum.QuantumGame.RemoveAllPlayers
+  commentId: M:Quantum.QuantumGame.RemoveAllPlayers
+  id: RemoveAllPlayers
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: RemoveAllPlayers()
+  nameWithType: QuantumGame.RemoveAllPlayers()
+  fullName: Quantum.QuantumGame.RemoveAllPlayers()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemoveAllPlayers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3013
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Removes all players from the game and acts as a spectator.
+  example: []
+  syntax:
+    content: public void RemoveAllPlayers()
+    content.vb: Public Sub RemoveAllPlayers()
+  overload: Quantum.QuantumGame.RemoveAllPlayers*
+- uid: Quantum.QuantumGame.OnDestroy
+  commentId: M:Quantum.QuantumGame.OnDestroy
+  id: OnDestroy
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: QuantumGame.OnDestroy()
+  fullName: Quantum.QuantumGame.OnDestroy()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnDestroy
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3020
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The game is destroyed. This is called from inside the <xref href="Photon.Deterministic.DeterministicSession" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void OnDestroy()
+    content.vb: Public Sub OnDestroy()
+  overload: Quantum.QuantumGame.OnDestroy*
+- uid: Quantum.QuantumGame.CreateFrame
+  commentId: M:Quantum.QuantumGame.CreateFrame
+  id: CreateFrame
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: CreateFrame()
+  nameWithType: QuantumGame.CreateFrame()
+  fullName: Quantum.QuantumGame.CreateFrame()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateFrame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3030
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Create a new frame object using the internal frame context.
+  example: []
+  syntax:
+    content: public Frame CreateFrame()
+    return:
+      type: Quantum.Frame
+      description: Frame
+    content.vb: Public Function CreateFrame() As Frame
+  overload: Quantum.QuantumGame.CreateFrame*
+- uid: Quantum.QuantumGame.GetVerifiedFrame(System.Int32)
+  commentId: M:Quantum.QuantumGame.GetVerifiedFrame(System.Int32)
+  id: GetVerifiedFrame(System.Int32)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: GetVerifiedFrame(int)
+  nameWithType: QuantumGame.GetVerifiedFrame(int)
+  fullName: Quantum.QuantumGame.GetVerifiedFrame(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetVerifiedFrame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3060
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Tries to get the verified frame for a given tick from the snapshot buffer.
+  example: []
+  syntax:
+    content: public DeterministicFrame GetVerifiedFrame(int tick)
+    parameters:
+    - id: tick
+      type: System.Int32
+      description: Tick
+    return:
+      type: Photon.Deterministic.DeterministicFrame
+      description: Verified frame based on the requested tick or null.
+    content.vb: Public Function GetVerifiedFrame(tick As Integer) As DeterministicFrame
+  overload: Quantum.QuantumGame.GetVerifiedFrame*
+  nameWithType.vb: QuantumGame.GetVerifiedFrame(Integer)
+  fullName.vb: Quantum.QuantumGame.GetVerifiedFrame(Integer)
+  name.vb: GetVerifiedFrame(Integer)
+- uid: Quantum.QuantumGame.CreateFrameContext
+  commentId: M:Quantum.QuantumGame.CreateFrameContext
+  id: CreateFrameContext
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: CreateFrameContext()
+  nameWithType: QuantumGame.CreateFrameContext()
+  fullName: Quantum.QuantumGame.CreateFrameContext()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateFrameContext
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3076
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Create the frame context.
+  example: []
+  syntax:
+    content: public IDisposable CreateFrameContext()
+    return:
+      type: System.IDisposable
+      description: Frame context
+    content.vb: Public Function CreateFrameContext() As IDisposable
+  overload: Quantum.QuantumGame.CreateFrameContext*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Is raised when no <xref href="Quantum.SimulationConfig" data-throw-if-not-resolved="false"></xref> is set inside the <xref href="Quantum.RuntimeConfig" data-throw-if-not-resolved="false"></xref>.
+- uid: Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  commentId: M:Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  id: SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: SetPredictionArea(FPVector3, FP)
+  nameWithType: QuantumGame.SetPredictionArea(FPVector3, FP)
+  fullName: Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector3, Photon.Deterministic.FP)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetPredictionArea
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3177
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Set the prediction area.
+  example: []
+  syntax:
+    content: public void SetPredictionArea(FPVector3 position, FP radius)
+    parameters:
+    - id: position
+      type: Photon.Deterministic.FPVector3
+      description: Center of the prediction area
+    - id: radius
+      type: Photon.Deterministic.FP
+      description: Radius of the prediction area
+    content.vb: Public Sub SetPredictionArea(position As FPVector3, radius As FP)
+  overload: Quantum.QuantumGame.SetPredictionArea*
+- uid: Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector2,Photon.Deterministic.FP)
+  commentId: M:Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector2,Photon.Deterministic.FP)
+  id: SetPredictionArea(Photon.Deterministic.FPVector2,Photon.Deterministic.FP)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: SetPredictionArea(FPVector2, FP)
+  nameWithType: QuantumGame.SetPredictionArea(FPVector2, FP)
+  fullName: Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector2, Photon.Deterministic.FP)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetPredictionArea
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3186
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: See <xref href="Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector3%2cPhoton.Deterministic.FP)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void SetPredictionArea(FPVector2 position, FP radius)
+    parameters:
+    - id: position
+      type: Photon.Deterministic.FPVector2
+      description: ''
+    - id: radius
+      type: Photon.Deterministic.FP
+      description: ''
+    content.vb: Public Sub SetPredictionArea(position As FPVector2, radius As FP)
+  overload: Quantum.QuantumGame.SetPredictionArea*
+- uid: Quantum.QuantumGame.OnGameEnded
+  commentId: M:Quantum.QuantumGame.OnGameEnded
+  id: OnGameEnded
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnGameEnded()
+  nameWithType: QuantumGame.OnGameEnded()
+  fullName: Quantum.QuantumGame.OnGameEnded()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnGameEnded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3193
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Not implemented.
+  example: []
+  syntax:
+    content: public void OnGameEnded()
+    content.vb: Public Sub OnGameEnded()
+  overload: Quantum.QuantumGame.OnGameEnded*
+- uid: Quantum.QuantumGame.OnGameStart(Photon.Deterministic.DeterministicFrame)
+  commentId: M:Quantum.QuantumGame.OnGameStart(Photon.Deterministic.DeterministicFrame)
+  id: OnGameStart(Photon.Deterministic.DeterministicFrame)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnGameStart(DeterministicFrame)
+  nameWithType: QuantumGame.OnGameStart(DeterministicFrame)
+  fullName: Quantum.QuantumGame.OnGameStart(Photon.Deterministic.DeterministicFrame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnGameStart
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3201
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when the actual simulation starts after the online protocol start sequence was successful.
+  example: []
+  syntax:
+    content: public void OnGameStart(DeterministicFrame f)
+    parameters:
+    - id: f
+      type: Photon.Deterministic.DeterministicFrame
+      description: First frame
+    content.vb: Public Sub OnGameStart(f As DeterministicFrame)
+  overload: Quantum.QuantumGame.OnGameStart*
+- uid: Quantum.QuantumGame.OnGameResync
+  commentId: M:Quantum.QuantumGame.OnGameResync
+  id: OnGameResync
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnGameResync()
+  nameWithType: QuantumGame.OnGameResync()
+  fullName: Quantum.QuantumGame.OnGameResync()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnGameResync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3229
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when the game is starting from a snapshot after the snapshot has been received.
+  example: []
+  syntax:
+    content: public void OnGameResync()
+    content.vb: Public Sub OnGameResync()
+  overload: Quantum.QuantumGame.OnGameResync*
+- uid: Quantum.QuantumGame.OnLocalInput(System.Int32,System.Int32)
+  commentId: M:Quantum.QuantumGame.OnLocalInput(System.Int32,System.Int32)
+  id: OnLocalInput(System.Int32,System.Int32)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnLocalInput(int, int)
+  nameWithType: QuantumGame.OnLocalInput(int, int)
+  fullName: Quantum.QuantumGame.OnLocalInput(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnLocalInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3258
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called to poll local input.
+  example: []
+  syntax:
+    content: public DeterministicFrameInputTemp OnLocalInput(int frame, int playerSlot)
+    parameters:
+    - id: frame
+      type: System.Int32
+      description: Frame
+    - id: playerSlot
+      type: System.Int32
+      description: Player slot
+    return:
+      type: Photon.Deterministic.DeterministicFrameInputTemp
+      description: Polled input for this frame
+    content.vb: Public Function OnLocalInput(frame As Integer, playerSlot As Integer) As DeterministicFrameInputTemp
+  overload: Quantum.QuantumGame.OnLocalInput*
+  nameWithType.vb: QuantumGame.OnLocalInput(Integer, Integer)
+  fullName.vb: Quantum.QuantumGame.OnLocalInput(Integer, Integer)
+  name.vb: OnLocalInput(Integer, Integer)
+- uid: Quantum.QuantumGame.OnSerializedInput(System.Byte*,System.Array)
+  commentId: M:Quantum.QuantumGame.OnSerializedInput(System.Byte*,System.Array)
+  id: OnSerializedInput(System.Byte*,System.Array)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnSerializedInput(byte*, Array)
+  nameWithType: QuantumGame.OnSerializedInput(byte*, Array)
+  fullName: Quantum.QuantumGame.OnSerializedInput(byte*, System.Array)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnSerializedInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3291
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called to serialize the game-specific input.
+  example: []
+  syntax:
+    content: public void OnSerializedInput(byte* encoded, Array result)
+    parameters:
+    - id: encoded
+      type: System.Byte*
+      description: The source input
+    - id: result
+      type: System.Array
+      description: The destination input
+    content.vb: Public Sub OnSerializedInput(encoded As Byte*, result As Array)
+  overload: Quantum.QuantumGame.OnSerializedInput*
+  nameWithType.vb: QuantumGame.OnSerializedInput(Byte*, Array)
+  fullName.vb: Quantum.QuantumGame.OnSerializedInput(Byte*, System.Array)
+  name.vb: OnSerializedInput(Byte*, Array)
+- uid: Quantum.QuantumGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+  commentId: M:Quantum.QuantumGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+  id: OnSimulate(Photon.Deterministic.DeterministicFrame)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnSimulate(DeterministicFrame)
+  nameWithType: QuantumGame.OnSimulate(DeterministicFrame)
+  fullName: Quantum.QuantumGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnSimulate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3306
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when any simulation step was executed.
+  example: []
+  syntax:
+    content: public void OnSimulate(DeterministicFrame state)
+    parameters:
+    - id: state
+      type: Photon.Deterministic.DeterministicFrame
+      description: Frame that was simulated
+    content.vb: Public Sub OnSimulate(state As DeterministicFrame)
+  overload: Quantum.QuantumGame.OnSimulate*
+- uid: Quantum.QuantumGame.OnSimulateFinished(Photon.Deterministic.DeterministicFrame)
+  commentId: M:Quantum.QuantumGame.OnSimulateFinished(Photon.Deterministic.DeterministicFrame)
+  id: OnSimulateFinished(Photon.Deterministic.DeterministicFrame)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnSimulateFinished(DeterministicFrame)
+  nameWithType: QuantumGame.OnSimulateFinished(DeterministicFrame)
+  fullName: Quantum.QuantumGame.OnSimulateFinished(Photon.Deterministic.DeterministicFrame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnSimulateFinished
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3378
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called after any simulation step was executed and after the <xref href="Quantum.QuantumGame.OnSimulate(Photon.Deterministic.DeterministicFrame)" data-throw-if-not-resolved="false"></xref> callback.
+  example: []
+  syntax:
+    content: public void OnSimulateFinished(DeterministicFrame state)
+    parameters:
+    - id: state
+      type: Photon.Deterministic.DeterministicFrame
+      description: Frame that was simulated
+    content.vb: Public Sub OnSimulateFinished(state As DeterministicFrame)
+  overload: Quantum.QuantumGame.OnSimulateFinished*
+- uid: Quantum.QuantumGame.OnUpdateDone
+  commentId: M:Quantum.QuantumGame.OnUpdateDone
+  id: OnUpdateDone
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnUpdateDone()
+  nameWithType: QuantumGame.OnUpdateDone()
+  fullName: Quantum.QuantumGame.OnUpdateDone()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnUpdateDone
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3386
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when when the session completed its <xref href="Photon.Deterministic.DeterministicSession.Update(System.Nullable%7bSystem.Double%7d)" data-throw-if-not-resolved="false"></xref> loop.
+  example: []
+  syntax:
+    content: public void OnUpdateDone()
+    content.vb: Public Sub OnUpdateDone()
+  overload: Quantum.QuantumGame.OnUpdateDone*
+- uid: Quantum.QuantumGame.AssignSession(Photon.Deterministic.DeterministicSession)
+  commentId: M:Quantum.QuantumGame.AssignSession(Photon.Deterministic.DeterministicSession)
+  id: AssignSession(Photon.Deterministic.DeterministicSession)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: AssignSession(DeterministicSession)
+  nameWithType: QuantumGame.AssignSession(DeterministicSession)
+  fullName: Quantum.QuantumGame.AssignSession(Photon.Deterministic.DeterministicSession)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AssignSession
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3405
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The <xref href="Photon.Deterministic.DeterministicSession" data-throw-if-not-resolved="false"></xref> creates this reference during its initialization.
+  example: []
+  syntax:
+    content: public void AssignSession(DeterministicSession session)
+    parameters:
+    - id: session
+      type: Photon.Deterministic.DeterministicSession
+      description: Deterministic session that this game uses
+    content.vb: Public Sub AssignSession(session As DeterministicSession)
+  overload: Quantum.QuantumGame.AssignSession*
+- uid: Quantum.QuantumGame.OnChecksumError(Photon.Deterministic.DeterministicTickChecksumError,Photon.Deterministic.DeterministicFrame[])
+  commentId: M:Quantum.QuantumGame.OnChecksumError(Photon.Deterministic.DeterministicTickChecksumError,Photon.Deterministic.DeterministicFrame[])
+  id: OnChecksumError(Photon.Deterministic.DeterministicTickChecksumError,Photon.Deterministic.DeterministicFrame[])
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnChecksumError(DeterministicTickChecksumError, DeterministicFrame[])
+  nameWithType: QuantumGame.OnChecksumError(DeterministicTickChecksumError, DeterministicFrame[])
+  fullName: Quantum.QuantumGame.OnChecksumError(Photon.Deterministic.DeterministicTickChecksumError, Photon.Deterministic.DeterministicFrame[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnChecksumError
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3431
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when a checksum error was detected.
+  example: []
+  syntax:
+    content: public void OnChecksumError(DeterministicTickChecksumError error, DeterministicFrame[] frames)
+    parameters:
+    - id: error
+      type: Photon.Deterministic.DeterministicTickChecksumError
+      description: Checksum error information
+    - id: frames
+      type: Photon.Deterministic.DeterministicFrame[]
+      description: Contains the verified frame that was failed to validate
+    content.vb: Public Sub OnChecksumError([error] As DeterministicTickChecksumError, frames As DeterministicFrame())
+  overload: Quantum.QuantumGame.OnChecksumError*
+  nameWithType.vb: QuantumGame.OnChecksumError(DeterministicTickChecksumError, DeterministicFrame())
+  fullName.vb: Quantum.QuantumGame.OnChecksumError(Photon.Deterministic.DeterministicTickChecksumError, Photon.Deterministic.DeterministicFrame())
+  name.vb: OnChecksumError(DeterministicTickChecksumError, DeterministicFrame())
+- uid: Quantum.QuantumGame.OnChecksumComputed(System.Int32,System.UInt64)
+  commentId: M:Quantum.QuantumGame.OnChecksumComputed(System.Int32,System.UInt64)
+  id: OnChecksumComputed(System.Int32,System.UInt64)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnChecksumComputed(int, ulong)
+  nameWithType: QuantumGame.OnChecksumComputed(int, ulong)
+  fullName: Quantum.QuantumGame.OnChecksumComputed(int, ulong)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnChecksumComputed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3440
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when the local checksum was computed.
+  example: []
+  syntax:
+    content: public void OnChecksumComputed(int frame, ulong checksum)
+    parameters:
+    - id: frame
+      type: System.Int32
+      description: The frame the checksum belongs to
+    - id: checksum
+      type: System.UInt64
+      description: The checksum that will be send to the server
+    content.vb: Public Sub OnChecksumComputed(frame As Integer, checksum As ULong)
+  overload: Quantum.QuantumGame.OnChecksumComputed*
+  nameWithType.vb: QuantumGame.OnChecksumComputed(Integer, ULong)
+  fullName.vb: Quantum.QuantumGame.OnChecksumComputed(Integer, ULong)
+  name.vb: OnChecksumComputed(Integer, ULong)
+- uid: Quantum.QuantumGame.OnSimulationBegin
+  commentId: M:Quantum.QuantumGame.OnSimulationBegin
+  id: OnSimulationBegin
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnSimulationBegin()
+  nameWithType: QuantumGame.OnSimulationBegin()
+  fullName: Quantum.QuantumGame.OnSimulationBegin()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnSimulationBegin
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3448
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called before the session computes multiple simulation steps (frames).
+  example: []
+  syntax:
+    content: public void OnSimulationBegin()
+    content.vb: Public Sub OnSimulationBegin()
+  overload: Quantum.QuantumGame.OnSimulationBegin*
+- uid: Quantum.QuantumGame.OnSimulationEnd
+  commentId: M:Quantum.QuantumGame.OnSimulationEnd
+  id: OnSimulationEnd
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnSimulationEnd()
+  nameWithType: QuantumGame.OnSimulationEnd()
+  fullName: Quantum.QuantumGame.OnSimulationEnd()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnSimulationEnd
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3456
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when multiple simulation steps (frames) were executed.
+  example: []
+  syntax:
+    content: public void OnSimulationEnd()
+    content.vb: Public Sub OnSimulationEnd()
+  overload: Quantum.QuantumGame.OnSimulationEnd*
+- uid: Quantum.QuantumGame.OnInputConfirmed(Photon.Deterministic.DeterministicFrameInputTemp)
+  commentId: M:Quantum.QuantumGame.OnInputConfirmed(Photon.Deterministic.DeterministicFrameInputTemp)
+  id: OnInputConfirmed(Photon.Deterministic.DeterministicFrameInputTemp)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnInputConfirmed(DeterministicFrameInputTemp)
+  nameWithType: QuantumGame.OnInputConfirmed(DeterministicFrameInputTemp)
+  fullName: Quantum.QuantumGame.OnInputConfirmed(Photon.Deterministic.DeterministicFrameInputTemp)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnInputConfirmed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3464
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when an input object was confirmed by the server.
+  example: []
+  syntax:
+    content: public void OnInputConfirmed(DeterministicFrameInputTemp input)
+    parameters:
+    - id: input
+      type: Photon.Deterministic.DeterministicFrameInputTemp
+      description: Input object
+    content.vb: Public Sub OnInputConfirmed(input As DeterministicFrameInputTemp)
+  overload: Quantum.QuantumGame.OnInputConfirmed*
+- uid: Quantum.QuantumGame.OnInputSetConfirmed(System.Int32,System.Int32,System.Byte[])
+  commentId: M:Quantum.QuantumGame.OnInputSetConfirmed(System.Int32,System.Int32,System.Byte[])
+  id: OnInputSetConfirmed(System.Int32,System.Int32,System.Byte[])
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnInputSetConfirmed(int, int, byte[])
+  nameWithType: QuantumGame.OnInputSetConfirmed(int, int, byte[])
+  fullName: Quantum.QuantumGame.OnInputSetConfirmed(int, int, byte[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnInputSetConfirmed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3475
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when an input set (all clients) was confirmed by the server.
+  example: []
+  syntax:
+    content: public void OnInputSetConfirmed(int tick, int length, byte[] data)
+    parameters:
+    - id: tick
+      type: System.Int32
+      description: Tick
+    - id: length
+      type: System.Int32
+      description: Length of input object array
+    - id: data
+      type: System.Byte[]
+      description: Input objects
+    content.vb: Public Sub OnInputSetConfirmed(tick As Integer, length As Integer, data As Byte())
+  overload: Quantum.QuantumGame.OnInputSetConfirmed*
+  nameWithType.vb: QuantumGame.OnInputSetConfirmed(Integer, Integer, Byte())
+  fullName.vb: Quantum.QuantumGame.OnInputSetConfirmed(Integer, Integer, Byte())
+  name.vb: OnInputSetConfirmed(Integer, Integer, Byte())
+- uid: Quantum.QuantumGame.OnChecksumErrorFrameDump(System.Int32,System.Int32,Photon.Deterministic.DeterministicSessionConfig,System.Byte[],System.Byte[],System.Byte[])
+  commentId: M:Quantum.QuantumGame.OnChecksumErrorFrameDump(System.Int32,System.Int32,Photon.Deterministic.DeterministicSessionConfig,System.Byte[],System.Byte[],System.Byte[])
+  id: OnChecksumErrorFrameDump(System.Int32,System.Int32,Photon.Deterministic.DeterministicSessionConfig,System.Byte[],System.Byte[],System.Byte[])
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnChecksumErrorFrameDump(int, int, DeterministicSessionConfig, byte[], byte[], byte[])
+  nameWithType: QuantumGame.OnChecksumErrorFrameDump(int, int, DeterministicSessionConfig, byte[], byte[], byte[])
+  fullName: Quantum.QuantumGame.OnChecksumErrorFrameDump(int, int, Photon.Deterministic.DeterministicSessionConfig, byte[], byte[], byte[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnChecksumErrorFrameDump
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3488
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when the clients receives a frame dump of another client from the server.
+  example: []
+  syntax:
+    content: public void OnChecksumErrorFrameDump(int actorId, int frameNumber, DeterministicSessionConfig sessionConfig, byte[] runtimeConfig, byte[] frameData, byte[] extraData)
+    parameters:
+    - id: actorId
+      type: System.Int32
+      description: The Photon actor id that the dump belongs to
+    - id: frameNumber
+      type: System.Int32
+      description: The frame number of the dump
+    - id: sessionConfig
+      type: Photon.Deterministic.DeterministicSessionConfig
+      description: The session config
+    - id: runtimeConfig
+      type: System.Byte[]
+      description: The runtime config
+    - id: frameData
+      type: System.Byte[]
+      description: The frame data
+    - id: extraData
+      type: System.Byte[]
+      description: Extra dump meta information
+    content.vb: Public Sub OnChecksumErrorFrameDump(actorId As Integer, frameNumber As Integer, sessionConfig As DeterministicSessionConfig, runtimeConfig As Byte(), frameData As Byte(), extraData As Byte())
+  overload: Quantum.QuantumGame.OnChecksumErrorFrameDump*
+  nameWithType.vb: QuantumGame.OnChecksumErrorFrameDump(Integer, Integer, DeterministicSessionConfig, Byte(), Byte(), Byte())
+  fullName.vb: Quantum.QuantumGame.OnChecksumErrorFrameDump(Integer, Integer, Photon.Deterministic.DeterministicSessionConfig, Byte(), Byte(), Byte())
+  name.vb: OnChecksumErrorFrameDump(Integer, Integer, DeterministicSessionConfig, Byte(), Byte(), Byte())
+- uid: Quantum.QuantumGame.OnPluginDisconnect(System.String)
+  commentId: M:Quantum.QuantumGame.OnPluginDisconnect(System.String)
+  id: OnPluginDisconnect(System.String)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnPluginDisconnect(string)
+  nameWithType: QuantumGame.OnPluginDisconnect(string)
+  fullName: Quantum.QuantumGame.OnPluginDisconnect(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnPluginDisconnect
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3496
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when the server plugin disconnected the client.
+  example: []
+  syntax:
+    content: public void OnPluginDisconnect(string reason)
+    parameters:
+    - id: reason
+      type: System.String
+      description: Debug string
+    content.vb: Public Sub OnPluginDisconnect(reason As String)
+  overload: Quantum.QuantumGame.OnPluginDisconnect*
+  nameWithType.vb: QuantumGame.OnPluginDisconnect(String)
+  fullName.vb: Quantum.QuantumGame.OnPluginDisconnect(String)
+  name.vb: OnPluginDisconnect(String)
+- uid: Quantum.QuantumGame.OnLocalPlayerAddConfirmed(Photon.Deterministic.DeterministicFrame,System.Int32,Quantum.PlayerRef)
+  commentId: M:Quantum.QuantumGame.OnLocalPlayerAddConfirmed(Photon.Deterministic.DeterministicFrame,System.Int32,Quantum.PlayerRef)
+  id: OnLocalPlayerAddConfirmed(Photon.Deterministic.DeterministicFrame,System.Int32,Quantum.PlayerRef)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnLocalPlayerAddConfirmed(DeterministicFrame, int, PlayerRef)
+  nameWithType: QuantumGame.OnLocalPlayerAddConfirmed(DeterministicFrame, int, PlayerRef)
+  fullName: Quantum.QuantumGame.OnLocalPlayerAddConfirmed(Photon.Deterministic.DeterministicFrame, int, Quantum.PlayerRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnLocalPlayerAddConfirmed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3507
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when the server confirmed the addition of a (local) player.
+  example: []
+  syntax:
+    content: public void OnLocalPlayerAddConfirmed(DeterministicFrame frame, int playerSlot, PlayerRef player)
+    parameters:
+    - id: frame
+      type: Photon.Deterministic.DeterministicFrame
+      description: The frame the player has been added
+    - id: playerSlot
+      type: System.Int32
+      description: The player slot that was used to assign the player
+    - id: player
+      type: Quantum.PlayerRef
+      description: The player
+    content.vb: Public Sub OnLocalPlayerAddConfirmed(frame As DeterministicFrame, playerSlot As Integer, player As PlayerRef)
+  overload: Quantum.QuantumGame.OnLocalPlayerAddConfirmed*
+  nameWithType.vb: QuantumGame.OnLocalPlayerAddConfirmed(DeterministicFrame, Integer, PlayerRef)
+  fullName.vb: Quantum.QuantumGame.OnLocalPlayerAddConfirmed(Photon.Deterministic.DeterministicFrame, Integer, Quantum.PlayerRef)
+  name.vb: OnLocalPlayerAddConfirmed(DeterministicFrame, Integer, PlayerRef)
+- uid: Quantum.QuantumGame.OnLocalPlayerRemoveConfirmed(Photon.Deterministic.DeterministicFrame,System.Int32,Quantum.PlayerRef)
+  commentId: M:Quantum.QuantumGame.OnLocalPlayerRemoveConfirmed(Photon.Deterministic.DeterministicFrame,System.Int32,Quantum.PlayerRef)
+  id: OnLocalPlayerRemoveConfirmed(Photon.Deterministic.DeterministicFrame,System.Int32,Quantum.PlayerRef)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnLocalPlayerRemoveConfirmed(DeterministicFrame, int, PlayerRef)
+  nameWithType: QuantumGame.OnLocalPlayerRemoveConfirmed(DeterministicFrame, int, PlayerRef)
+  fullName: Quantum.QuantumGame.OnLocalPlayerRemoveConfirmed(Photon.Deterministic.DeterministicFrame, int, Quantum.PlayerRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnLocalPlayerRemoveConfirmed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3518
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when the server confirmed the removal of a (local) player.
+  example: []
+  syntax:
+    content: public void OnLocalPlayerRemoveConfirmed(DeterministicFrame frame, int playerSlot, PlayerRef player)
+    parameters:
+    - id: frame
+      type: Photon.Deterministic.DeterministicFrame
+      description: The frame when the request was confirmed
+    - id: playerSlot
+      type: System.Int32
+      description: The player slot of the removed player
+    - id: player
+      type: Quantum.PlayerRef
+      description: The player that was removed
+    content.vb: Public Sub OnLocalPlayerRemoveConfirmed(frame As DeterministicFrame, playerSlot As Integer, player As PlayerRef)
+  overload: Quantum.QuantumGame.OnLocalPlayerRemoveConfirmed*
+  nameWithType.vb: QuantumGame.OnLocalPlayerRemoveConfirmed(DeterministicFrame, Integer, PlayerRef)
+  fullName.vb: Quantum.QuantumGame.OnLocalPlayerRemoveConfirmed(Photon.Deterministic.DeterministicFrame, Integer, Quantum.PlayerRef)
+  name.vb: OnLocalPlayerRemoveConfirmed(DeterministicFrame, Integer, PlayerRef)
+- uid: Quantum.QuantumGame.OnLocalPlayerAddFailed(System.Int32,System.String)
+  commentId: M:Quantum.QuantumGame.OnLocalPlayerAddFailed(System.Int32,System.String)
+  id: OnLocalPlayerAddFailed(System.Int32,System.String)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnLocalPlayerAddFailed(int, string)
+  nameWithType: QuantumGame.OnLocalPlayerAddFailed(int, string)
+  fullName: Quantum.QuantumGame.OnLocalPlayerAddFailed(int, string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnLocalPlayerAddFailed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3527
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when the server failed to process the add player request.
+  example: []
+  syntax:
+    content: public void OnLocalPlayerAddFailed(int playerSlot, string message)
+    parameters:
+    - id: playerSlot
+      type: System.Int32
+      description: The player slot that was requested
+    - id: message
+      type: System.String
+      description: Debug message
+    content.vb: Public Sub OnLocalPlayerAddFailed(playerSlot As Integer, message As String)
+  overload: Quantum.QuantumGame.OnLocalPlayerAddFailed*
+  nameWithType.vb: QuantumGame.OnLocalPlayerAddFailed(Integer, String)
+  fullName.vb: Quantum.QuantumGame.OnLocalPlayerAddFailed(Integer, String)
+  name.vb: OnLocalPlayerAddFailed(Integer, String)
+- uid: Quantum.QuantumGame.OnLocalPlayerRemoveFailed(System.Int32,System.String)
+  commentId: M:Quantum.QuantumGame.OnLocalPlayerRemoveFailed(System.Int32,System.String)
+  id: OnLocalPlayerRemoveFailed(System.Int32,System.String)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: OnLocalPlayerRemoveFailed(int, string)
+  nameWithType: QuantumGame.OnLocalPlayerRemoveFailed(int, string)
+  fullName: Quantum.QuantumGame.OnLocalPlayerRemoveFailed(int, string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnLocalPlayerRemoveFailed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3536
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback is called when the server failed to process the remove player request.
+  example: []
+  syntax:
+    content: public void OnLocalPlayerRemoveFailed(int playerSlot, string message)
+    parameters:
+    - id: playerSlot
+      type: System.Int32
+      description: The player slot that was tried to remove
+    - id: message
+      type: System.String
+      description: Debug message
+    content.vb: Public Sub OnLocalPlayerRemoveFailed(playerSlot As Integer, message As String)
+  overload: Quantum.QuantumGame.OnLocalPlayerRemoveFailed*
+  nameWithType.vb: QuantumGame.OnLocalPlayerRemoveFailed(Integer, String)
+  fullName.vb: Quantum.QuantumGame.OnLocalPlayerRemoveFailed(Integer, String)
+  name.vb: OnLocalPlayerRemoveFailed(Integer, String)
+- uid: Quantum.QuantumGame.GetInputInMemorySize
+  commentId: M:Quantum.QuantumGame.GetInputInMemorySize
+  id: GetInputInMemorySize
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: GetInputInMemorySize()
+  nameWithType: QuantumGame.GetInputInMemorySize()
+  fullName: Quantum.QuantumGame.GetInputInMemorySize()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetInputInMemorySize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3544
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Return the in memory input size.
+  example: []
+  syntax:
+    content: public int GetInputInMemorySize()
+    return:
+      type: System.Int32
+      description: Input object size
+    content.vb: Public Function GetInputInMemorySize() As Integer
+  overload: Quantum.QuantumGame.GetInputInMemorySize*
+- uid: Quantum.QuantumGame.GetInputSerializedFixedSize
+  commentId: M:Quantum.QuantumGame.GetInputSerializedFixedSize
+  id: GetInputSerializedFixedSize
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: GetInputSerializedFixedSize()
+  nameWithType: QuantumGame.GetInputSerializedFixedSize()
+  fullName: Quantum.QuantumGame.GetInputSerializedFixedSize()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetInputSerializedFixedSize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3552
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Returns the serialized input size.
+  example: []
+  syntax:
+    content: public int GetInputSerializedFixedSize()
+    return:
+      type: System.Int32
+      description: Serialized input size
+    content.vb: Public Function GetInputSerializedFixedSize() As Integer
+  overload: Quantum.QuantumGame.GetInputSerializedFixedSize*
+- uid: Quantum.QuantumGame.DeserializeInputInto(System.Int32,System.Byte[],System.Byte*,System.Boolean)
+  commentId: M:Quantum.QuantumGame.DeserializeInputInto(System.Int32,System.Byte[],System.Byte*,System.Boolean)
+  id: DeserializeInputInto(System.Int32,System.Byte[],System.Byte*,System.Boolean)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: DeserializeInputInto(int, byte[], byte*, bool)
+  nameWithType: QuantumGame.DeserializeInputInto(int, byte[], byte*, bool)
+  fullName: Quantum.QuantumGame.DeserializeInputInto(int, byte[], byte*, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeserializeInputInto
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3610
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Asks the game to de-serialize input into the buffers, because it's game specific it cannot be done from here.
+  example: []
+  syntax:
+    content: public void DeserializeInputInto(int player, byte[] data, byte* buffer, bool verified)
+    parameters:
+    - id: player
+      type: System.Int32
+      description: The player the input is for
+    - id: data
+      type: System.Byte[]
+      description: The input data
+    - id: buffer
+      type: System.Byte*
+      description: The destination buffer
+    - id: verified
+      type: System.Boolean
+      description: Is the input verified
+    content.vb: Public Sub DeserializeInputInto(player As Integer, data As Byte(), buffer As Byte*, verified As Boolean)
+  overload: Quantum.QuantumGame.DeserializeInputInto*
+  nameWithType.vb: QuantumGame.DeserializeInputInto(Integer, Byte(), Byte*, Boolean)
+  fullName.vb: Quantum.QuantumGame.DeserializeInputInto(Integer, Byte(), Byte*, Boolean)
+  name.vb: DeserializeInputInto(Integer, Byte(), Byte*, Boolean)
+- uid: Quantum.QuantumGame.GetExtraErrorFrameDumpData(Photon.Deterministic.DeterministicFrame)
+  commentId: M:Quantum.QuantumGame.GetExtraErrorFrameDumpData(Photon.Deterministic.DeterministicFrame)
+  id: GetExtraErrorFrameDumpData(Photon.Deterministic.DeterministicFrame)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: GetExtraErrorFrameDumpData(DeterministicFrame)
+  nameWithType: QuantumGame.GetExtraErrorFrameDumpData(DeterministicFrame)
+  fullName: Quantum.QuantumGame.GetExtraErrorFrameDumpData(Photon.Deterministic.DeterministicFrame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetExtraErrorFrameDumpData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3668
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Creates information send to the server when detecting a checksum error.
+  example: []
+  syntax:
+    content: public byte[] GetExtraErrorFrameDumpData(DeterministicFrame frame)
+    parameters:
+    - id: frame
+      type: Photon.Deterministic.DeterministicFrame
+      description: Frame
+    return:
+      type: System.Byte[]
+      description: Serialized frame dump context
+    content.vb: Public Function GetExtraErrorFrameDumpData(frame As DeterministicFrame) As Byte()
+  overload: Quantum.QuantumGame.GetExtraErrorFrameDumpData*
+- uid: Quantum.QuantumGame.CheckTrackedHeapAllocations
+  commentId: M:Quantum.QuantumGame.CheckTrackedHeapAllocations
+  id: CheckTrackedHeapAllocations
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: CheckTrackedHeapAllocations()
+  nameWithType: QuantumGame.CheckTrackedHeapAllocations()
+  fullName: Quantum.QuantumGame.CheckTrackedHeapAllocations()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CheckTrackedHeapAllocations
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3682
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Trigger the heap allocation tracker during <xref href="Quantum.QuantumGame.OnDestroy" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void CheckTrackedHeapAllocations()
+    content.vb: Public Sub CheckTrackedHeapAllocations()
+  overload: Quantum.QuantumGame.CheckTrackedHeapAllocations*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: Is raised when HeapTrackingMode is unknown
+- uid: Quantum.QuantumGame.EventWaitingForConfirmationCount
+  commentId: P:Quantum.QuantumGame.EventWaitingForConfirmationCount
+  id: EventWaitingForConfirmationCount
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: EventWaitingForConfirmationCount
+  nameWithType: QuantumGame.EventWaitingForConfirmationCount
+  fullName: Quantum.QuantumGame.EventWaitingForConfirmationCount
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: EventWaitingForConfirmationCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3725
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The number of events in the queue waiting for confirmation.
+  example: []
+  syntax:
+    content: public int EventWaitingForConfirmationCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property EventWaitingForConfirmationCount As Integer
+  overload: Quantum.QuantumGame.EventWaitingForConfirmationCount*
+- uid: Quantum.QuantumGame.RecordedInputs
+  commentId: P:Quantum.QuantumGame.RecordedInputs
+  id: RecordedInputs
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: RecordedInputs
+  nameWithType: QuantumGame.RecordedInputs
+  fullName: Quantum.QuantumGame.RecordedInputs
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RecordedInputs
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3828
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    The recorded raw inputs.
+
+    The raw input recording automatically start when <xref href="Quantum.SessionRunner.Arguments.RecordingFlags" data-throw-if-not-resolved="false"></xref> contains
+
+    <xref href="Quantum.RecordingFlags.Input" data-throw-if-not-resolved="false"></xref> and <xref href="Photon.Deterministic.DeterministicSessionConfig.InputDeltaCompression" data-throw-if-not-resolved="false"></xref> is disabled.
+
+    The recording can also be started by calling <xref href="Quantum.QuantumGame.StartRecordingInput(System.Nullable%7bSystem.Int32%7d)" data-throw-if-not-resolved="false"></xref> manually.
+  example: []
+  syntax:
+    content: public InputProvider RecordedInputs { get; }
+    parameters: []
+    return:
+      type: Quantum.InputProvider
+    content.vb: Public Property RecordedInputs As InputProvider
+  overload: Quantum.QuantumGame.RecordedInputs*
+- uid: Quantum.QuantumGame.RecordedChecksums
+  commentId: P:Quantum.QuantumGame.RecordedChecksums
+  id: RecordedChecksums
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: RecordedChecksums
+  nameWithType: QuantumGame.RecordedChecksums
+  fullName: Quantum.QuantumGame.RecordedChecksums
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RecordedChecksums
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3835
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    The recorded checksums.
+
+    The checksum recording automatically start when <xref href="Quantum.SessionRunner.Arguments.RecordingFlags" data-throw-if-not-resolved="false"></xref> contains
+
+    <xref href="Quantum.RecordingFlags.Checksums" data-throw-if-not-resolved="false"></xref> and <xref href="Photon.Deterministic.DeterministicSessionConfig.ChecksumInterval" data-throw-if-not-resolved="false"></xref> &gt; 0.
+
+    The recording can also be started by calling <xref href="Quantum.QuantumGame.StartRecordingChecksums" data-throw-if-not-resolved="false"></xref> manually.
+  example: []
+  syntax:
+    content: public ChecksumFile RecordedChecksums { get; }
+    parameters: []
+    return:
+      type: Quantum.ChecksumFile
+    content.vb: Public Property RecordedChecksums As ChecksumFile
+  overload: Quantum.QuantumGame.RecordedChecksums*
+- uid: Quantum.QuantumGame.RecordInputStream
+  commentId: P:Quantum.QuantumGame.RecordInputStream
+  id: RecordInputStream
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: RecordInputStream
+  nameWithType: QuantumGame.RecordInputStream
+  fullName: Quantum.QuantumGame.RecordInputStream
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RecordInputStream
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3841
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    The recorded delta compressed input stream.
+
+    The raw input recording automatically start when <xref href="Quantum.SessionRunner.Arguments.RecordingFlags" data-throw-if-not-resolved="false"></xref> contains
+
+    <xref href="Quantum.RecordingFlags.Input" data-throw-if-not-resolved="false"></xref> and <xref href="Photon.Deterministic.DeterministicSessionConfig.InputDeltaCompression" data-throw-if-not-resolved="false"></xref> is enabled.
+
+    The recording can also be started by calling <xref href="Quantum.QuantumGame.StartRecordingInput(System.Nullable%7bSystem.Int32%7d)" data-throw-if-not-resolved="false"></xref> manually.    ///
+  example: []
+  syntax:
+    content: public Stream RecordInputStream { get; set; }
+    parameters: []
+    return:
+      type: System.IO.Stream
+    content.vb: Public Property RecordInputStream As Stream
+  overload: Quantum.QuantumGame.RecordInputStream*
+- uid: Quantum.QuantumGame.GetInstantReplaySnapshot(System.Int32)
+  commentId: M:Quantum.QuantumGame.GetInstantReplaySnapshot(System.Int32)
+  id: GetInstantReplaySnapshot(System.Int32)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: GetInstantReplaySnapshot(int)
+  nameWithType: QuantumGame.GetInstantReplaySnapshot(int)
+  fullName: Quantum.QuantumGame.GetInstantReplaySnapshot(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetInstantReplaySnapshot
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3850
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Get a recorded frame for a given frame number from the checksum or instant replay snapshot buffers.
+  example: []
+  syntax:
+    content: public Frame GetInstantReplaySnapshot(int frame)
+    parameters:
+    - id: frame
+      type: System.Int32
+      description: Frame number
+    return:
+      type: Quantum.Frame
+      description: Frame
+    content.vb: Public Function GetInstantReplaySnapshot(frame As Integer) As Frame
+  overload: Quantum.QuantumGame.GetInstantReplaySnapshot*
+  nameWithType.vb: QuantumGame.GetInstantReplaySnapshot(Integer)
+  fullName.vb: Quantum.QuantumGame.GetInstantReplaySnapshot(Integer)
+  name.vb: GetInstantReplaySnapshot(Integer)
+- uid: Quantum.QuantumGame.GetInstantReplaySnapshots(System.Int32,System.Int32,System.Collections.Generic.List{Quantum.Frame})
+  commentId: M:Quantum.QuantumGame.GetInstantReplaySnapshots(System.Int32,System.Int32,System.Collections.Generic.List{Quantum.Frame})
+  id: GetInstantReplaySnapshots(System.Int32,System.Int32,System.Collections.Generic.List{Quantum.Frame})
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: GetInstantReplaySnapshots(int, int, List<Frame>)
+  nameWithType: QuantumGame.GetInstantReplaySnapshots(int, int, List<Frame>)
+  fullName: Quantum.QuantumGame.GetInstantReplaySnapshots(int, int, System.Collections.Generic.List<Quantum.Frame>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetInstantReplaySnapshots
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3878
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Get recorded frames for a given frame number window from the checksum or instant replay snapshot buffers.
+  example: []
+  syntax:
+    content: public void GetInstantReplaySnapshots(int startFrame, int endFrame, List<Frame> frames)
+    parameters:
+    - id: startFrame
+      type: System.Int32
+      description: Start frame
+    - id: endFrame
+      type: System.Int32
+      description: End frame
+    - id: frames
+      type: System.Collections.Generic.List{Quantum.Frame}
+      description: Resulting frames
+    content.vb: Public Sub GetInstantReplaySnapshots(startFrame As Integer, endFrame As Integer, frames As List(Of Frame))
+  overload: Quantum.QuantumGame.GetInstantReplaySnapshots*
+  nameWithType.vb: QuantumGame.GetInstantReplaySnapshots(Integer, Integer, List(Of Frame))
+  fullName.vb: Quantum.QuantumGame.GetInstantReplaySnapshots(Integer, Integer, System.Collections.Generic.List(Of Quantum.Frame))
+  name.vb: GetInstantReplaySnapshots(Integer, Integer, List(Of Frame))
+- uid: Quantum.QuantumGame.CreateSavegame(System.Boolean)
+  commentId: M:Quantum.QuantumGame.CreateSavegame(System.Boolean)
+  id: CreateSavegame(System.Boolean)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: CreateSavegame(bool)
+  nameWithType: QuantumGame.CreateSavegame(bool)
+  fullName: Quantum.QuantumGame.CreateSavegame(bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateSavegame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3905
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Create a <xref href="Quantum.QuantumReplayFile" data-throw-if-not-resolved="false"></xref> file that represents a save game.
+  example: []
+  syntax:
+    content: public QuantumReplayFile CreateSavegame(bool includeDb = false)
+    parameters:
+    - id: includeDb
+      type: System.Boolean
+      description: Include the AssetDb
+    return:
+      type: Quantum.QuantumReplayFile
+      description: Replay file to be stored
+    content.vb: Public Function CreateSavegame(includeDb As Boolean = False) As QuantumReplayFile
+  overload: Quantum.QuantumGame.CreateSavegame*
+  nameWithType.vb: QuantumGame.CreateSavegame(Boolean)
+  fullName.vb: Quantum.QuantumGame.CreateSavegame(Boolean)
+  name.vb: CreateSavegame(Boolean)
+- uid: Quantum.QuantumGame.GetRecordedReplay(System.Boolean,System.Boolean,Quantum.QuantumJsonFriendlyDataBlob.Encoder,Quantum.QuantumJsonFriendlyDataBlob.Encoder,Quantum.QuantumJsonFriendlyDataBlob.Encoder)
+  commentId: M:Quantum.QuantumGame.GetRecordedReplay(System.Boolean,System.Boolean,Quantum.QuantumJsonFriendlyDataBlob.Encoder,Quantum.QuantumJsonFriendlyDataBlob.Encoder,Quantum.QuantumJsonFriendlyDataBlob.Encoder)
+  id: GetRecordedReplay(System.Boolean,System.Boolean,Quantum.QuantumJsonFriendlyDataBlob.Encoder,Quantum.QuantumJsonFriendlyDataBlob.Encoder,Quantum.QuantumJsonFriendlyDataBlob.Encoder)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: GetRecordedReplay(bool, bool, Encoder, Encoder, Encoder)
+  nameWithType: QuantumGame.GetRecordedReplay(bool, bool, QuantumJsonFriendlyDataBlob.Encoder, QuantumJsonFriendlyDataBlob.Encoder, QuantumJsonFriendlyDataBlob.Encoder)
+  fullName: Quantum.QuantumGame.GetRecordedReplay(bool, bool, Quantum.QuantumJsonFriendlyDataBlob.Encoder, Quantum.QuantumJsonFriendlyDataBlob.Encoder, Quantum.QuantumJsonFriendlyDataBlob.Encoder)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetRecordedReplay
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 3938
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Creates a replay file that represents a recorded replay of the complete simulation.
+
+    Requires the <xref href="Quantum.RecordingFlags" data-throw-if-not-resolved="false"></xref> to be set accordingly.
+  example: []
+  syntax:
+    content: public QuantumReplayFile GetRecordedReplay(bool includeChecksums = false, bool includeDb = false, QuantumJsonFriendlyDataBlob.Encoder customAssetDbSerializer = null, QuantumJsonFriendlyDataBlob.Encoder customRuntimeConfigSerializer = null, QuantumJsonFriendlyDataBlob.Encoder customInputSerializer = null)
+    parameters:
+    - id: includeChecksums
+      type: System.Boolean
+      description: Include checksums
+    - id: includeDb
+      type: System.Boolean
+      description: Include the asset db
+    - id: customAssetDbSerializer
+      type: Quantum.QuantumJsonFriendlyDataBlob.Encoder
+      description: A custom asset serializer
+    - id: customRuntimeConfigSerializer
+      type: Quantum.QuantumJsonFriendlyDataBlob.Encoder
+      description: A custom runtime config serializer
+    - id: customInputSerializer
+      type: Quantum.QuantumJsonFriendlyDataBlob.Encoder
+      description: A custom input serialized
+    return:
+      type: Quantum.QuantumReplayFile
+      description: Replay file to store
+    content.vb: Public Function GetRecordedReplay(includeChecksums As Boolean = False, includeDb As Boolean = False, customAssetDbSerializer As QuantumJsonFriendlyDataBlob.Encoder = Nothing, customRuntimeConfigSerializer As QuantumJsonFriendlyDataBlob.Encoder = Nothing, customInputSerializer As QuantumJsonFriendlyDataBlob.Encoder = Nothing) As QuantumReplayFile
+  overload: Quantum.QuantumGame.GetRecordedReplay*
+  nameWithType.vb: QuantumGame.GetRecordedReplay(Boolean, Boolean, QuantumJsonFriendlyDataBlob.Encoder, QuantumJsonFriendlyDataBlob.Encoder, QuantumJsonFriendlyDataBlob.Encoder)
+  fullName.vb: Quantum.QuantumGame.GetRecordedReplay(Boolean, Boolean, Quantum.QuantumJsonFriendlyDataBlob.Encoder, Quantum.QuantumJsonFriendlyDataBlob.Encoder, Quantum.QuantumJsonFriendlyDataBlob.Encoder)
+  name.vb: GetRecordedReplay(Boolean, Boolean, Encoder, Encoder, Encoder)
+- uid: Quantum.QuantumGame.StartRecordingInput(System.Nullable{System.Int32})
+  commentId: M:Quantum.QuantumGame.StartRecordingInput(System.Nullable{System.Int32})
+  id: StartRecordingInput(System.Nullable{System.Int32})
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: StartRecordingInput(int?)
+  nameWithType: QuantumGame.StartRecordingInput(int?)
+  fullName: Quantum.QuantumGame.StartRecordingInput(int?)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StartRecordingInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 4028
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Manually start the input recording.
+
+    Either accessible by 
+
+    <xref href="Quantum.QuantumGame.RecordedInputs" data-throw-if-not-resolved="false"></xref> (if <xref href="Photon.Deterministic.DeterministicSessionConfig.InputDeltaCompression" data-throw-if-not-resolved="false"></xref> is disabled) or
+
+    <xref href="Quantum.QuantumGame.RecordInputStream" data-throw-if-not-resolved="false"></xref> (if <xref href="Photon.Deterministic.DeterministicSessionConfig.InputDeltaCompression" data-throw-if-not-resolved="false"></xref> is enabled).
+  example: []
+  syntax:
+    content: public void StartRecordingInput(int? startFrame = null)
+    parameters:
+    - id: startFrame
+      type: System.Nullable{System.Int32}
+      description: ''
+    content.vb: Public Sub StartRecordingInput(startFrame As Integer? = Nothing)
+  overload: Quantum.QuantumGame.StartRecordingInput*
+  nameWithType.vb: QuantumGame.StartRecordingInput(Integer?)
+  fullName.vb: Quantum.QuantumGame.StartRecordingInput(Integer?)
+  name.vb: StartRecordingInput(Integer?)
+- uid: Quantum.QuantumGame.StartRecordingChecksums
+  commentId: M:Quantum.QuantumGame.StartRecordingChecksums
+  id: StartRecordingChecksums
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: StartRecordingChecksums()
+  nameWithType: QuantumGame.StartRecordingChecksums()
+  fullName: Quantum.QuantumGame.StartRecordingChecksums()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StartRecordingChecksums
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 4055
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Manually start the recording of checksums.
+  example: []
+  syntax:
+    content: public void StartRecordingChecksums()
+    content.vb: Public Sub StartRecordingChecksums()
+  overload: Quantum.QuantumGame.StartRecordingChecksums*
+- uid: Quantum.QuantumGame.StartVerifyingChecksums(Quantum.ChecksumFile)
+  commentId: M:Quantum.QuantumGame.StartVerifyingChecksums(Quantum.ChecksumFile)
+  id: StartVerifyingChecksums(Quantum.ChecksumFile)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: StartVerifyingChecksums(ChecksumFile)
+  nameWithType: QuantumGame.StartVerifyingChecksums(ChecksumFile)
+  fullName: Quantum.QuantumGame.StartVerifyingChecksums(Quantum.ChecksumFile)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StartVerifyingChecksums
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 4066
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Start verifying new checksums against a recorded checksum file.
+  example: []
+  syntax:
+    content: public void StartVerifyingChecksums(ChecksumFile checksums)
+    parameters:
+    - id: checksums
+      type: Quantum.ChecksumFile
+      description: Recorded checksum file
+    content.vb: Public Sub StartVerifyingChecksums(checksums As ChecksumFile)
+  overload: Quantum.QuantumGame.StartVerifyingChecksums*
+- uid: Quantum.QuantumGame.StartRecordingInstantReplaySnapshots
+  commentId: M:Quantum.QuantumGame.StartRecordingInstantReplaySnapshots
+  id: StartRecordingInstantReplaySnapshots
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: StartRecordingInstantReplaySnapshots()
+  nameWithType: QuantumGame.StartRecordingInstantReplaySnapshots()
+  fullName: Quantum.QuantumGame.StartRecordingInstantReplaySnapshots()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StartRecordingInstantReplaySnapshots
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 4077
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Manually start recording instant replay snapshots.
+
+    Requires <xref href="Quantum.QuantumGame.InstantReplayConfig" data-throw-if-not-resolved="false"></xref> to be set accordingly.
+  example: []
+  syntax:
+    content: public void StartRecordingInstantReplaySnapshots()
+    content.vb: Public Sub StartRecordingInstantReplaySnapshots()
+  overload: Quantum.QuantumGame.StartRecordingInstantReplaySnapshots*
+- uid: Quantum.QuantumGame.InitCallbacks
+  commentId: M:Quantum.QuantumGame.InitCallbacks
+  id: InitCallbacks
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: InitCallbacks()
+  nameWithType: QuantumGame.InitCallbacks()
+  fullName: Quantum.QuantumGame.InitCallbacks()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: InitCallbacks
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 4972
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Initializes all callbacks.
+  example: []
+  syntax:
+    content: public void InitCallbacks()
+    content.vb: Public Sub InitCallbacks()
+  overload: Quantum.QuantumGame.InitCallbacks*
+- uid: Quantum.QuantumGame.#ctor(Quantum.QuantumGame.StartParameters@)
+  commentId: M:Quantum.QuantumGame.#ctor(Quantum.QuantumGame.StartParameters@)
+  id: '#ctor(Quantum.QuantumGame.StartParameters@)'
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: QuantumGame(in StartParameters)
+  nameWithType: QuantumGame.QuantumGame(in QuantumGame.StartParameters)
+  fullName: Quantum.QuantumGame.QuantumGame(in Quantum.QuantumGame.StartParameters)
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5272
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Use QuantumGame(in QuantumGameStartParameters startParams)")]
+
+      public QuantumGame(in QuantumGame.StartParameters startParams)
+    parameters:
+    - id: startParams
+      type: Quantum.QuantumGame.StartParameters
+    content.vb: >-
+      <Obsolete("Use QuantumGame(in QuantumGameStartParameters startParams)")>
+
+      Public Sub New(startParams As QuantumGame.StartParameters)
+  overload: Quantum.QuantumGame.#ctor*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use QuantumGame(in QuantumGameStartParameters startParams)
+  nameWithType.vb: QuantumGame.New(QuantumGame.StartParameters)
+  fullName.vb: Quantum.QuantumGame.New(Quantum.QuantumGame.StartParameters)
+  name.vb: New(StartParameters)
+- uid: Quantum.QuantumGame.#ctor(Quantum.IResourceManager,Quantum.IAssetSerializer,Quantum.ICallbackDispatcher,Quantum.IEventDispatcher)
+  commentId: M:Quantum.QuantumGame.#ctor(Quantum.IResourceManager,Quantum.IAssetSerializer,Quantum.ICallbackDispatcher,Quantum.IEventDispatcher)
+  id: '#ctor(Quantum.IResourceManager,Quantum.IAssetSerializer,Quantum.ICallbackDispatcher,Quantum.IEventDispatcher)'
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: QuantumGame(IResourceManager, IAssetSerializer, ICallbackDispatcher, IEventDispatcher)
+  nameWithType: QuantumGame.QuantumGame(IResourceManager, IAssetSerializer, ICallbackDispatcher, IEventDispatcher)
+  fullName: Quantum.QuantumGame.QuantumGame(Quantum.IResourceManager, Quantum.IAssetSerializer, Quantum.ICallbackDispatcher, Quantum.IEventDispatcher)
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5275
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Has been replaced by QuantumGame(in QuantumGameStartParameters startParams)")]
+
+      public QuantumGame(IResourceManager manager, IAssetSerializer assetSerializer, ICallbackDispatcher callbackDispatcher, IEventDispatcher eventDispatcher)
+    parameters:
+    - id: manager
+      type: Quantum.IResourceManager
+    - id: assetSerializer
+      type: Quantum.IAssetSerializer
+    - id: callbackDispatcher
+      type: Quantum.ICallbackDispatcher
+    - id: eventDispatcher
+      type: Quantum.IEventDispatcher
+    content.vb: >-
+      <Obsolete("Has been replaced by QuantumGame(in QuantumGameStartParameters startParams)")>
+
+      Public Sub New(manager As IResourceManager, assetSerializer As IAssetSerializer, callbackDispatcher As ICallbackDispatcher, eventDispatcher As IEventDispatcher)
+  overload: Quantum.QuantumGame.#ctor*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Has been replaced by QuantumGame(in QuantumGameStartParameters startParams)
+  nameWithType.vb: QuantumGame.New(IResourceManager, IAssetSerializer, ICallbackDispatcher, IEventDispatcher)
+  fullName.vb: Quantum.QuantumGame.New(Quantum.IResourceManager, Quantum.IAssetSerializer, Quantum.ICallbackDispatcher, Quantum.IEventDispatcher)
+  name.vb: New(IResourceManager, IAssetSerializer, ICallbackDispatcher, IEventDispatcher)
+- uid: Quantum.QuantumGame.SendPlayerData(Quantum.RuntimePlayer)
+  commentId: M:Quantum.QuantumGame.SendPlayerData(Quantum.RuntimePlayer)
+  id: SendPlayerData(Quantum.RuntimePlayer)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: SendPlayerData(RuntimePlayer)
+  nameWithType: QuantumGame.SendPlayerData(RuntimePlayer)
+  fullName: Quantum.QuantumGame.SendPlayerData(Quantum.RuntimePlayer)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SendPlayerData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5284
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Use AddPlayer()")]
+
+      public void SendPlayerData(RuntimePlayer data)
+    parameters:
+    - id: data
+      type: Quantum.RuntimePlayer
+    content.vb: >-
+      <Obsolete("Use AddPlayer()")>
+
+      Public Sub SendPlayerData(data As RuntimePlayer)
+  overload: Quantum.QuantumGame.SendPlayerData*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use AddPlayer()
+- uid: Quantum.QuantumGame.SendPlayerData(System.Int32,Quantum.RuntimePlayer)
+  commentId: M:Quantum.QuantumGame.SendPlayerData(System.Int32,Quantum.RuntimePlayer)
+  id: SendPlayerData(System.Int32,Quantum.RuntimePlayer)
+  parent: Quantum.QuantumGame
+  langs:
+  - csharp
+  - vb
+  name: SendPlayerData(int, RuntimePlayer)
+  nameWithType: QuantumGame.SendPlayerData(int, RuntimePlayer)
+  fullName: Quantum.QuantumGame.SendPlayerData(int, Quantum.RuntimePlayer)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SendPlayerData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5289
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Obsolete("Use AddPlayer()")]
+
+      public void SendPlayerData(int playerSlot, RuntimePlayer data)
+    parameters:
+    - id: playerSlot
+      type: System.Int32
+    - id: data
+      type: Quantum.RuntimePlayer
+    content.vb: >-
+      <Obsolete("Use AddPlayer()")>
+
+      Public Sub SendPlayerData(playerSlot As Integer, data As RuntimePlayer)
+  overload: Quantum.QuantumGame.SendPlayerData*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use AddPlayer()
+  nameWithType.vb: QuantumGame.SendPlayerData(Integer, RuntimePlayer)
+  fullName.vb: Quantum.QuantumGame.SendPlayerData(Integer, Quantum.RuntimePlayer)
+  name.vb: SendPlayerData(Integer, RuntimePlayer)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Photon.Deterministic.IDeterministicGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+  commentId: M:Photon.Deterministic.IDeterministicGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+  isExternal: true
+  name: OnSimulate(DeterministicFrame)
+  nameWithType: IDeterministicGame.OnSimulate(DeterministicFrame)
+  fullName: Photon.Deterministic.IDeterministicGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+  spec.csharp:
+  - uid: Photon.Deterministic.IDeterministicGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+    name: OnSimulate
+    isExternal: true
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Photon.Deterministic.IDeterministicGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+    name: OnSimulate
+    isExternal: true
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.FrameContext.ProfilerContext
+  commentId: P:Quantum.Core.FrameContext.ProfilerContext
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: ProfilerContext
+  nameWithType: FrameContext.ProfilerContext
+  fullName: Quantum.Core.FrameContext.ProfilerContext
+- uid: System.Action{Quantum.Profiling.ProfilerContextData}
+  commentId: T:System.Action{Quantum.Profiling.ProfilerContextData}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<ProfilerContextData>
+  nameWithType: Action<ProfilerContextData>
+  fullName: System.Action<Quantum.Profiling.ProfilerContextData>
+  nameWithType.vb: Action(Of ProfilerContextData)
+  fullName.vb: System.Action(Of Quantum.Profiling.ProfilerContextData)
+  name.vb: Action(Of ProfilerContextData)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Quantum.Profiling.ProfilerContextData
+    name: ProfilerContextData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.Profiling.ProfilerContextData
+    name: ProfilerContextData
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.FrameContext
+  commentId: T:Quantum.Core.FrameContext
+  parent: Quantum.Core
+  isExternal: true
+  name: FrameContext
+  nameWithType: FrameContext
+  fullName: Quantum.Core.FrameContext
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.Core
+  commentId: N:Quantum.Core
+  href: Quantum.html
+  name: Quantum.Core
+  nameWithType: Quantum.Core
+  fullName: Quantum.Core
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+- uid: Quantum.QuantumGame.Frames*
+  commentId: Overload:Quantum.QuantumGame.Frames
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_Frames
+  name: Frames
+  nameWithType: QuantumGame.Frames
+  fullName: Quantum.QuantumGame.Frames
+- uid: Quantum.QuantumGame.FramesContainer
+  commentId: T:Quantum.QuantumGame.FramesContainer
+  parent: Quantum
+  href: Quantum.QuantumGame.html
+  name: QuantumGame.FramesContainer
+  nameWithType: QuantumGame.FramesContainer
+  fullName: Quantum.QuantumGame.FramesContainer
+  spec.csharp:
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+    href: Quantum.QuantumGame.html
+  - name: .
+  - uid: Quantum.QuantumGame.FramesContainer
+    name: FramesContainer
+    href: Quantum.QuantumGame.FramesContainer.html
+  spec.vb:
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+    href: Quantum.QuantumGame.html
+  - name: .
+  - uid: Quantum.QuantumGame.FramesContainer
+    name: FramesContainer
+    href: Quantum.QuantumGame.FramesContainer.html
+- uid: Quantum.QuantumGame.Configurations*
+  commentId: Overload:Quantum.QuantumGame.Configurations
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_Configurations
+  name: Configurations
+  nameWithType: QuantumGame.Configurations
+  fullName: Quantum.QuantumGame.Configurations
+- uid: Quantum.QuantumGame.ConfigurationsContainer
+  commentId: T:Quantum.QuantumGame.ConfigurationsContainer
+  parent: Quantum
+  href: Quantum.QuantumGame.html
+  name: QuantumGame.ConfigurationsContainer
+  nameWithType: QuantumGame.ConfigurationsContainer
+  fullName: Quantum.QuantumGame.ConfigurationsContainer
+  spec.csharp:
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+    href: Quantum.QuantumGame.html
+  - name: .
+  - uid: Quantum.QuantumGame.ConfigurationsContainer
+    name: ConfigurationsContainer
+    href: Quantum.QuantumGame.ConfigurationsContainer.html
+  spec.vb:
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+    href: Quantum.QuantumGame.html
+  - name: .
+  - uid: Quantum.QuantumGame.ConfigurationsContainer
+    name: ConfigurationsContainer
+    href: Quantum.QuantumGame.ConfigurationsContainer.html
+- uid: Quantum.QuantumGame.Session*
+  commentId: Overload:Quantum.QuantumGame.Session
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_Session
+  name: Session
+  nameWithType: QuantumGame.Session
+  fullName: Quantum.QuantumGame.Session
+- uid: Photon.Deterministic.DeterministicSession
+  commentId: T:Photon.Deterministic.DeterministicSession
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicSession
+  nameWithType: DeterministicSession
+  fullName: Photon.Deterministic.DeterministicSession
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.QuantumGame.InterpolationFactor*
+  commentId: Overload:Quantum.QuantumGame.InterpolationFactor
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_InterpolationFactor
+  name: InterpolationFactor
+  nameWithType: QuantumGame.InterpolationFactor
+  fullName: Quantum.QuantumGame.InterpolationFactor
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Quantum.QuantumGameStartParameters.InstantReplaySettings
+  commentId: F:Quantum.QuantumGameStartParameters.InstantReplaySettings
+  isExternal: true
+  name: InstantReplaySettings
+  nameWithType: QuantumGameStartParameters.InstantReplaySettings
+  fullName: Quantum.QuantumGameStartParameters.InstantReplaySettings
+- uid: Quantum.QuantumGame.InstantReplayConfig*
+  commentId: Overload:Quantum.QuantumGame.InstantReplayConfig
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_InstantReplayConfig
+  name: InstantReplayConfig
+  nameWithType: QuantumGame.InstantReplayConfig
+  fullName: Quantum.QuantumGame.InstantReplayConfig
+- uid: Quantum.InstantReplaySettings
+  commentId: T:Quantum.InstantReplaySettings
+  parent: Quantum
+  isExternal: true
+  name: InstantReplaySettings
+  nameWithType: InstantReplaySettings
+  fullName: Quantum.InstantReplaySettings
+- uid: Quantum.QuantumGameStartParameters.AssetSerializer
+  commentId: F:Quantum.QuantumGameStartParameters.AssetSerializer
+  isExternal: true
+  name: AssetSerializer
+  nameWithType: QuantumGameStartParameters.AssetSerializer
+  fullName: Quantum.QuantumGameStartParameters.AssetSerializer
+- uid: Quantum.QuantumGame.AssetSerializer*
+  commentId: Overload:Quantum.QuantumGame.AssetSerializer
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_AssetSerializer
+  name: AssetSerializer
+  nameWithType: QuantumGame.AssetSerializer
+  fullName: Quantum.QuantumGame.AssetSerializer
+- uid: Quantum.IAssetSerializer
+  commentId: T:Quantum.IAssetSerializer
+  parent: Quantum
+  isExternal: true
+  name: IAssetSerializer
+  nameWithType: IAssetSerializer
+  fullName: Quantum.IAssetSerializer
+- uid: Quantum.QuantumGameStartParameters.ResourceManager
+  commentId: F:Quantum.QuantumGameStartParameters.ResourceManager
+  isExternal: true
+  name: ResourceManager
+  nameWithType: QuantumGameStartParameters.ResourceManager
+  fullName: Quantum.QuantumGameStartParameters.ResourceManager
+- uid: Quantum.QuantumGame.ResourceManager*
+  commentId: Overload:Quantum.QuantumGame.ResourceManager
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_ResourceManager
+  name: ResourceManager
+  nameWithType: QuantumGame.ResourceManager
+  fullName: Quantum.QuantumGame.ResourceManager
+- uid: Quantum.IResourceManager
+  commentId: T:Quantum.IResourceManager
+  parent: Quantum
+  isExternal: true
+  name: IResourceManager
+  nameWithType: IResourceManager
+  fullName: Quantum.IResourceManager
+- uid: Quantum.QuantumGame.HeapExtraCount*
+  commentId: Overload:Quantum.QuantumGame.HeapExtraCount
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_HeapExtraCount
+  name: HeapExtraCount
+  nameWithType: QuantumGame.HeapExtraCount
+  fullName: Quantum.QuantumGame.HeapExtraCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.QuantumGameStartParameters.GameFlags
+  commentId: F:Quantum.QuantumGameStartParameters.GameFlags
+  isExternal: true
+  name: GameFlags
+  nameWithType: QuantumGameStartParameters.GameFlags
+  fullName: Quantum.QuantumGameStartParameters.GameFlags
+- uid: Quantum.QuantumGameFlags
+  commentId: T:Quantum.QuantumGameFlags
+  href: Quantum.QuantumGameFlags.html
+  name: QuantumGameFlags
+  nameWithType: QuantumGameFlags
+  fullName: Quantum.QuantumGameFlags
+- uid: Quantum.QuantumGame.GameFlags*
+  commentId: Overload:Quantum.QuantumGame.GameFlags
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_GameFlags
+  name: GameFlags
+  nameWithType: QuantumGame.GameFlags
+  fullName: Quantum.QuantumGame.GameFlags
+- uid: Quantum.QuantumGame.#ctor*
+  commentId: Overload:Quantum.QuantumGame.#ctor
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame__ctor_Quantum_QuantumGameStartParameters__
+  name: QuantumGame
+  nameWithType: QuantumGame.QuantumGame
+  fullName: Quantum.QuantumGame.QuantumGame
+  nameWithType.vb: QuantumGame.New
+  fullName.vb: Quantum.QuantumGame.New
+  name.vb: New
+- uid: Quantum.QuantumGameStartParameters
+  commentId: T:Quantum.QuantumGameStartParameters
+  parent: Quantum
+  isExternal: true
+  name: QuantumGameStartParameters
+  nameWithType: QuantumGameStartParameters
+  fullName: Quantum.QuantumGameStartParameters
+- uid: Quantum.QuantumGame.GetLocalPlayers*
+  commentId: Overload:Quantum.QuantumGame.GetLocalPlayers
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_GetLocalPlayers
+  name: GetLocalPlayers
+  nameWithType: QuantumGame.GetLocalPlayers
+  fullName: Quantum.QuantumGame.GetLocalPlayers
+- uid: System.Collections.Generic.List{Quantum.PlayerRef}
+  commentId: T:System.Collections.Generic.List{Quantum.PlayerRef}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<PlayerRef>
+  nameWithType: List<PlayerRef>
+  fullName: System.Collections.Generic.List<Quantum.PlayerRef>
+  nameWithType.vb: List(Of PlayerRef)
+  fullName.vb: System.Collections.Generic.List(Of Quantum.PlayerRef)
+  name.vb: List(Of PlayerRef)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Quantum.QuantumGame.GetLocalPlayerSlots*
+  commentId: Overload:Quantum.QuantumGame.GetLocalPlayerSlots
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_GetLocalPlayerSlots
+  name: GetLocalPlayerSlots
+  nameWithType: QuantumGame.GetLocalPlayerSlots
+  fullName: Quantum.QuantumGame.GetLocalPlayerSlots
+- uid: System.Collections.Generic.List{System.Int32}
+  commentId: T:System.Collections.Generic.List{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<int>
+  nameWithType: List<int>
+  fullName: System.Collections.Generic.List<int>
+  nameWithType.vb: List(Of Integer)
+  fullName.vb: System.Collections.Generic.List(Of Integer)
+  name.vb: List(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Quantum.QuantumGame.PlayerIsLocal*
+  commentId: Overload:Quantum.QuantumGame.PlayerIsLocal
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_PlayerIsLocal_Quantum_PlayerRef_
+  name: PlayerIsLocal
+  nameWithType: QuantumGame.PlayerIsLocal
+  fullName: Quantum.QuantumGame.PlayerIsLocal
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
+  parent: Quantum
+  isExternal: true
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.QuantumGame.SendCommand*
+  commentId: Overload:Quantum.QuantumGame.SendCommand
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_SendCommand_Photon_Deterministic_DeterministicCommand_
+  name: SendCommand
+  nameWithType: QuantumGame.SendCommand
+  fullName: Quantum.QuantumGame.SendCommand
+- uid: Photon.Deterministic.DeterministicCommand
+  commentId: T:Photon.Deterministic.DeterministicCommand
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicCommand
+  nameWithType: DeterministicCommand
+  fullName: Photon.Deterministic.DeterministicCommand
+- uid: Photon.Deterministic.DeterministicCommandSendResult
+  commentId: T:Photon.Deterministic.DeterministicCommandSendResult
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicCommandSendResult
+  nameWithType: DeterministicCommandSendResult
+  fullName: Photon.Deterministic.DeterministicCommandSendResult
+- uid: Quantum.QuantumGame.SendCommand(Photon.Deterministic.DeterministicCommand)
+  commentId: M:Quantum.QuantumGame.SendCommand(Photon.Deterministic.DeterministicCommand)
+  isExternal: true
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_SendCommand_Photon_Deterministic_DeterministicCommand_
+  name: SendCommand(DeterministicCommand)
+  nameWithType: QuantumGame.SendCommand(DeterministicCommand)
+  fullName: Quantum.QuantumGame.SendCommand(Photon.Deterministic.DeterministicCommand)
+  spec.csharp:
+  - uid: Quantum.QuantumGame.SendCommand(Photon.Deterministic.DeterministicCommand)
+    name: SendCommand
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_SendCommand_Photon_Deterministic_DeterministicCommand_
+  - name: (
+  - uid: Photon.Deterministic.DeterministicCommand
+    name: DeterministicCommand
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumGame.SendCommand(Photon.Deterministic.DeterministicCommand)
+    name: SendCommand
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_SendCommand_Photon_Deterministic_DeterministicCommand_
+  - name: (
+  - uid: Photon.Deterministic.DeterministicCommand
+    name: DeterministicCommand
+    isExternal: true
+  - name: )
+- uid: Quantum.QuantumGame.AddPlayer*
+  commentId: Overload:Quantum.QuantumGame.AddPlayer
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_AddPlayer_Quantum_RuntimePlayer_
+  name: AddPlayer
+  nameWithType: QuantumGame.AddPlayer
+  fullName: Quantum.QuantumGame.AddPlayer
+- uid: Quantum.RuntimePlayer
+  commentId: T:Quantum.RuntimePlayer
+  parent: Quantum
+  href: Quantum.RuntimePlayer.html
+  name: RuntimePlayer
+  nameWithType: RuntimePlayer
+  fullName: Quantum.RuntimePlayer
+- uid: Quantum.QuantumGame.RemovePlayer*
+  commentId: Overload:Quantum.QuantumGame.RemovePlayer
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_RemovePlayer
+  name: RemovePlayer
+  nameWithType: QuantumGame.RemovePlayer
+  fullName: Quantum.QuantumGame.RemovePlayer
+- uid: Quantum.QuantumGame.RemoveAllPlayers*
+  commentId: Overload:Quantum.QuantumGame.RemoveAllPlayers
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_RemoveAllPlayers
+  name: RemoveAllPlayers
+  nameWithType: QuantumGame.RemoveAllPlayers
+  fullName: Quantum.QuantumGame.RemoveAllPlayers
+- uid: Quantum.QuantumGame.OnDestroy*
+  commentId: Overload:Quantum.QuantumGame.OnDestroy
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnDestroy
+  name: OnDestroy
+  nameWithType: QuantumGame.OnDestroy
+  fullName: Quantum.QuantumGame.OnDestroy
+- uid: Quantum.QuantumGame.CreateFrame*
+  commentId: Overload:Quantum.QuantumGame.CreateFrame
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_CreateFrame
+  name: CreateFrame
+  nameWithType: QuantumGame.CreateFrame
+  fullName: Quantum.QuantumGame.CreateFrame
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.QuantumGame.GetVerifiedFrame*
+  commentId: Overload:Quantum.QuantumGame.GetVerifiedFrame
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_GetVerifiedFrame_System_Int32_
+  name: GetVerifiedFrame
+  nameWithType: QuantumGame.GetVerifiedFrame
+  fullName: Quantum.QuantumGame.GetVerifiedFrame
+- uid: Photon.Deterministic.DeterministicFrame
+  commentId: T:Photon.Deterministic.DeterministicFrame
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicFrame
+  nameWithType: DeterministicFrame
+  fullName: Photon.Deterministic.DeterministicFrame
+- uid: Quantum.SimulationConfig
+  commentId: T:Quantum.SimulationConfig
+  parent: Quantum
+  href: Quantum.SimulationConfig.html
+  name: SimulationConfig
+  nameWithType: SimulationConfig
+  fullName: Quantum.SimulationConfig
+- uid: Quantum.RuntimeConfig
+  commentId: T:Quantum.RuntimeConfig
+  parent: Quantum
+  href: Quantum.RuntimeConfig.html
+  name: RuntimeConfig
+  nameWithType: RuntimeConfig
+  fullName: Quantum.RuntimeConfig
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: Quantum.QuantumGame.CreateFrameContext*
+  commentId: Overload:Quantum.QuantumGame.CreateFrameContext
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_CreateFrameContext
+  name: CreateFrameContext
+  nameWithType: QuantumGame.CreateFrameContext
+  fullName: Quantum.QuantumGame.CreateFrameContext
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Quantum.QuantumGame.SetPredictionArea*
+  commentId: Overload:Quantum.QuantumGame.SetPredictionArea
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_SetPredictionArea_Photon_Deterministic_FPVector3_Photon_Deterministic_FP_
+  name: SetPredictionArea
+  nameWithType: QuantumGame.SetPredictionArea
+  fullName: Quantum.QuantumGame.SetPredictionArea
+- uid: Photon.Deterministic.FPVector3
+  commentId: T:Photon.Deterministic.FPVector3
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FPVector3
+  nameWithType: FPVector3
+  fullName: Photon.Deterministic.FPVector3
+- uid: Photon.Deterministic.FP
+  commentId: T:Photon.Deterministic.FP
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FP
+  nameWithType: FP
+  fullName: Photon.Deterministic.FP
+- uid: Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  commentId: M:Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  isExternal: true
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_SetPredictionArea_Photon_Deterministic_FPVector3_Photon_Deterministic_FP_
+  name: SetPredictionArea(FPVector3, FP)
+  nameWithType: QuantumGame.SetPredictionArea(FPVector3, FP)
+  fullName: Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector3, Photon.Deterministic.FP)
+  spec.csharp:
+  - uid: Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+    name: SetPredictionArea
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_SetPredictionArea_Photon_Deterministic_FPVector3_Photon_Deterministic_FP_
+  - name: (
+  - uid: Photon.Deterministic.FPVector3
+    name: FPVector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FP
+    name: FP
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumGame.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+    name: SetPredictionArea
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_SetPredictionArea_Photon_Deterministic_FPVector3_Photon_Deterministic_FP_
+  - name: (
+  - uid: Photon.Deterministic.FPVector3
+    name: FPVector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FP
+    name: FP
+    isExternal: true
+  - name: )
+- uid: Photon.Deterministic.FPVector2
+  commentId: T:Photon.Deterministic.FPVector2
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FPVector2
+  nameWithType: FPVector2
+  fullName: Photon.Deterministic.FPVector2
+- uid: Quantum.QuantumGame.OnGameEnded*
+  commentId: Overload:Quantum.QuantumGame.OnGameEnded
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnGameEnded
+  name: OnGameEnded
+  nameWithType: QuantumGame.OnGameEnded
+  fullName: Quantum.QuantumGame.OnGameEnded
+- uid: Quantum.QuantumGame.OnGameStart*
+  commentId: Overload:Quantum.QuantumGame.OnGameStart
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnGameStart_Photon_Deterministic_DeterministicFrame_
+  name: OnGameStart
+  nameWithType: QuantumGame.OnGameStart
+  fullName: Quantum.QuantumGame.OnGameStart
+- uid: Quantum.QuantumGame.OnGameResync*
+  commentId: Overload:Quantum.QuantumGame.OnGameResync
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnGameResync
+  name: OnGameResync
+  nameWithType: QuantumGame.OnGameResync
+  fullName: Quantum.QuantumGame.OnGameResync
+- uid: Quantum.QuantumGame.OnLocalInput*
+  commentId: Overload:Quantum.QuantumGame.OnLocalInput
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnLocalInput_System_Int32_System_Int32_
+  name: OnLocalInput
+  nameWithType: QuantumGame.OnLocalInput
+  fullName: Quantum.QuantumGame.OnLocalInput
+- uid: Photon.Deterministic.DeterministicFrameInputTemp
+  commentId: T:Photon.Deterministic.DeterministicFrameInputTemp
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicFrameInputTemp
+  nameWithType: DeterministicFrameInputTemp
+  fullName: Photon.Deterministic.DeterministicFrameInputTemp
+- uid: Quantum.QuantumGame.OnSerializedInput*
+  commentId: Overload:Quantum.QuantumGame.OnSerializedInput
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnSerializedInput_System_Byte__System_Array_
+  name: OnSerializedInput
+  nameWithType: QuantumGame.OnSerializedInput
+  fullName: Quantum.QuantumGame.OnSerializedInput
+- uid: System.Byte*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte*
+  nameWithType: byte*
+  fullName: byte*
+  nameWithType.vb: Byte*
+  fullName.vb: Byte*
+  name.vb: Byte*
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+- uid: System.Array
+  commentId: T:System.Array
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.array
+  name: Array
+  nameWithType: Array
+  fullName: System.Array
+- uid: Quantum.QuantumGame.OnSimulate*
+  commentId: Overload:Quantum.QuantumGame.OnSimulate
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnSimulate_Photon_Deterministic_DeterministicFrame_
+  name: OnSimulate
+  nameWithType: QuantumGame.OnSimulate
+  fullName: Quantum.QuantumGame.OnSimulate
+- uid: Quantum.QuantumGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+  commentId: M:Quantum.QuantumGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+  isExternal: true
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnSimulate_Photon_Deterministic_DeterministicFrame_
+  name: OnSimulate(DeterministicFrame)
+  nameWithType: QuantumGame.OnSimulate(DeterministicFrame)
+  fullName: Quantum.QuantumGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+  spec.csharp:
+  - uid: Quantum.QuantumGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+    name: OnSimulate
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnSimulate_Photon_Deterministic_DeterministicFrame_
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumGame.OnSimulate(Photon.Deterministic.DeterministicFrame)
+    name: OnSimulate
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnSimulate_Photon_Deterministic_DeterministicFrame_
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: )
+- uid: Quantum.QuantumGame.OnSimulateFinished*
+  commentId: Overload:Quantum.QuantumGame.OnSimulateFinished
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnSimulateFinished_Photon_Deterministic_DeterministicFrame_
+  name: OnSimulateFinished
+  nameWithType: QuantumGame.OnSimulateFinished
+  fullName: Quantum.QuantumGame.OnSimulateFinished
+- uid: Photon.Deterministic.DeterministicSession.Update(System.Nullable{System.Double})
+  commentId: M:Photon.Deterministic.DeterministicSession.Update(System.Nullable{System.Double})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Update(double?)
+  nameWithType: DeterministicSession.Update(double?)
+  fullName: Photon.Deterministic.DeterministicSession.Update(double?)
+  nameWithType.vb: DeterministicSession.Update(Double?)
+  fullName.vb: Photon.Deterministic.DeterministicSession.Update(Double?)
+  name.vb: Update(Double?)
+  spec.csharp:
+  - uid: Photon.Deterministic.DeterministicSession.Update(System.Nullable{System.Double})
+    name: Update
+    isExternal: true
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: Photon.Deterministic.DeterministicSession.Update(System.Nullable{System.Double})
+    name: Update
+    isExternal: true
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  - name: )
+- uid: Quantum.QuantumGame.OnUpdateDone*
+  commentId: Overload:Quantum.QuantumGame.OnUpdateDone
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnUpdateDone
+  name: OnUpdateDone
+  nameWithType: QuantumGame.OnUpdateDone
+  fullName: Quantum.QuantumGame.OnUpdateDone
+- uid: Quantum.QuantumGame.AssignSession*
+  commentId: Overload:Quantum.QuantumGame.AssignSession
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_AssignSession_Photon_Deterministic_DeterministicSession_
+  name: AssignSession
+  nameWithType: QuantumGame.AssignSession
+  fullName: Quantum.QuantumGame.AssignSession
+- uid: Quantum.QuantumGame.OnChecksumError*
+  commentId: Overload:Quantum.QuantumGame.OnChecksumError
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnChecksumError_Photon_Deterministic_DeterministicTickChecksumError_Photon_Deterministic_DeterministicFrame___
+  name: OnChecksumError
+  nameWithType: QuantumGame.OnChecksumError
+  fullName: Quantum.QuantumGame.OnChecksumError
+- uid: Photon.Deterministic.DeterministicTickChecksumError
+  commentId: T:Photon.Deterministic.DeterministicTickChecksumError
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicTickChecksumError
+  nameWithType: DeterministicTickChecksumError
+  fullName: Photon.Deterministic.DeterministicTickChecksumError
+- uid: Photon.Deterministic.DeterministicFrame[]
+  isExternal: true
+  name: DeterministicFrame[]
+  nameWithType: DeterministicFrame[]
+  fullName: Photon.Deterministic.DeterministicFrame[]
+  nameWithType.vb: DeterministicFrame()
+  fullName.vb: Photon.Deterministic.DeterministicFrame()
+  name.vb: DeterministicFrame()
+  spec.csharp:
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.QuantumGame.OnChecksumComputed*
+  commentId: Overload:Quantum.QuantumGame.OnChecksumComputed
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnChecksumComputed_System_Int32_System_UInt64_
+  name: OnChecksumComputed
+  nameWithType: QuantumGame.OnChecksumComputed
+  fullName: Quantum.QuantumGame.OnChecksumComputed
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: Quantum.QuantumGame.OnSimulationBegin*
+  commentId: Overload:Quantum.QuantumGame.OnSimulationBegin
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnSimulationBegin
+  name: OnSimulationBegin
+  nameWithType: QuantumGame.OnSimulationBegin
+  fullName: Quantum.QuantumGame.OnSimulationBegin
+- uid: Quantum.QuantumGame.OnSimulationEnd*
+  commentId: Overload:Quantum.QuantumGame.OnSimulationEnd
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnSimulationEnd
+  name: OnSimulationEnd
+  nameWithType: QuantumGame.OnSimulationEnd
+  fullName: Quantum.QuantumGame.OnSimulationEnd
+- uid: Quantum.QuantumGame.OnInputConfirmed*
+  commentId: Overload:Quantum.QuantumGame.OnInputConfirmed
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnInputConfirmed_Photon_Deterministic_DeterministicFrameInputTemp_
+  name: OnInputConfirmed
+  nameWithType: QuantumGame.OnInputConfirmed
+  fullName: Quantum.QuantumGame.OnInputConfirmed
+- uid: Quantum.QuantumGame.OnInputSetConfirmed*
+  commentId: Overload:Quantum.QuantumGame.OnInputSetConfirmed
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnInputSetConfirmed_System_Int32_System_Int32_System_Byte___
+  name: OnInputSetConfirmed
+  nameWithType: QuantumGame.OnInputSetConfirmed
+  fullName: Quantum.QuantumGame.OnInputSetConfirmed
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: Quantum.QuantumGame.OnChecksumErrorFrameDump*
+  commentId: Overload:Quantum.QuantumGame.OnChecksumErrorFrameDump
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnChecksumErrorFrameDump_System_Int32_System_Int32_Photon_Deterministic_DeterministicSessionConfig_System_Byte___System_Byte___System_Byte___
+  name: OnChecksumErrorFrameDump
+  nameWithType: QuantumGame.OnChecksumErrorFrameDump
+  fullName: Quantum.QuantumGame.OnChecksumErrorFrameDump
+- uid: Photon.Deterministic.DeterministicSessionConfig
+  commentId: T:Photon.Deterministic.DeterministicSessionConfig
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicSessionConfig
+  nameWithType: DeterministicSessionConfig
+  fullName: Photon.Deterministic.DeterministicSessionConfig
+- uid: Quantum.QuantumGame.OnPluginDisconnect*
+  commentId: Overload:Quantum.QuantumGame.OnPluginDisconnect
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnPluginDisconnect_System_String_
+  name: OnPluginDisconnect
+  nameWithType: QuantumGame.OnPluginDisconnect
+  fullName: Quantum.QuantumGame.OnPluginDisconnect
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Quantum.QuantumGame.OnLocalPlayerAddConfirmed*
+  commentId: Overload:Quantum.QuantumGame.OnLocalPlayerAddConfirmed
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnLocalPlayerAddConfirmed_Photon_Deterministic_DeterministicFrame_System_Int32_Quantum_PlayerRef_
+  name: OnLocalPlayerAddConfirmed
+  nameWithType: QuantumGame.OnLocalPlayerAddConfirmed
+  fullName: Quantum.QuantumGame.OnLocalPlayerAddConfirmed
+- uid: Quantum.QuantumGame.OnLocalPlayerRemoveConfirmed*
+  commentId: Overload:Quantum.QuantumGame.OnLocalPlayerRemoveConfirmed
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnLocalPlayerRemoveConfirmed_Photon_Deterministic_DeterministicFrame_System_Int32_Quantum_PlayerRef_
+  name: OnLocalPlayerRemoveConfirmed
+  nameWithType: QuantumGame.OnLocalPlayerRemoveConfirmed
+  fullName: Quantum.QuantumGame.OnLocalPlayerRemoveConfirmed
+- uid: Quantum.QuantumGame.OnLocalPlayerAddFailed*
+  commentId: Overload:Quantum.QuantumGame.OnLocalPlayerAddFailed
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnLocalPlayerAddFailed_System_Int32_System_String_
+  name: OnLocalPlayerAddFailed
+  nameWithType: QuantumGame.OnLocalPlayerAddFailed
+  fullName: Quantum.QuantumGame.OnLocalPlayerAddFailed
+- uid: Quantum.QuantumGame.OnLocalPlayerRemoveFailed*
+  commentId: Overload:Quantum.QuantumGame.OnLocalPlayerRemoveFailed
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnLocalPlayerRemoveFailed_System_Int32_System_String_
+  name: OnLocalPlayerRemoveFailed
+  nameWithType: QuantumGame.OnLocalPlayerRemoveFailed
+  fullName: Quantum.QuantumGame.OnLocalPlayerRemoveFailed
+- uid: Quantum.QuantumGame.GetInputInMemorySize*
+  commentId: Overload:Quantum.QuantumGame.GetInputInMemorySize
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_GetInputInMemorySize
+  name: GetInputInMemorySize
+  nameWithType: QuantumGame.GetInputInMemorySize
+  fullName: Quantum.QuantumGame.GetInputInMemorySize
+- uid: Quantum.QuantumGame.GetInputSerializedFixedSize*
+  commentId: Overload:Quantum.QuantumGame.GetInputSerializedFixedSize
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_GetInputSerializedFixedSize
+  name: GetInputSerializedFixedSize
+  nameWithType: QuantumGame.GetInputSerializedFixedSize
+  fullName: Quantum.QuantumGame.GetInputSerializedFixedSize
+- uid: Quantum.QuantumGame.DeserializeInputInto*
+  commentId: Overload:Quantum.QuantumGame.DeserializeInputInto
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_DeserializeInputInto_System_Int32_System_Byte___System_Byte__System_Boolean_
+  name: DeserializeInputInto
+  nameWithType: QuantumGame.DeserializeInputInto
+  fullName: Quantum.QuantumGame.DeserializeInputInto
+- uid: Quantum.QuantumGame.GetExtraErrorFrameDumpData*
+  commentId: Overload:Quantum.QuantumGame.GetExtraErrorFrameDumpData
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_GetExtraErrorFrameDumpData_Photon_Deterministic_DeterministicFrame_
+  name: GetExtraErrorFrameDumpData
+  nameWithType: QuantumGame.GetExtraErrorFrameDumpData
+  fullName: Quantum.QuantumGame.GetExtraErrorFrameDumpData
+- uid: Quantum.QuantumGame.OnDestroy
+  commentId: M:Quantum.QuantumGame.OnDestroy
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnDestroy
+  name: OnDestroy()
+  nameWithType: QuantumGame.OnDestroy()
+  fullName: Quantum.QuantumGame.OnDestroy()
+  spec.csharp:
+  - uid: Quantum.QuantumGame.OnDestroy
+    name: OnDestroy
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnDestroy
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumGame.OnDestroy
+    name: OnDestroy
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_OnDestroy
+  - name: (
+  - name: )
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: Quantum.QuantumGame.CheckTrackedHeapAllocations*
+  commentId: Overload:Quantum.QuantumGame.CheckTrackedHeapAllocations
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_CheckTrackedHeapAllocations
+  name: CheckTrackedHeapAllocations
+  nameWithType: QuantumGame.CheckTrackedHeapAllocations
+  fullName: Quantum.QuantumGame.CheckTrackedHeapAllocations
+- uid: Quantum.QuantumGame.EventWaitingForConfirmationCount*
+  commentId: Overload:Quantum.QuantumGame.EventWaitingForConfirmationCount
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_EventWaitingForConfirmationCount
+  name: EventWaitingForConfirmationCount
+  nameWithType: QuantumGame.EventWaitingForConfirmationCount
+  fullName: Quantum.QuantumGame.EventWaitingForConfirmationCount
+- uid: Quantum.SessionRunner.Arguments.RecordingFlags
+  commentId: F:Quantum.SessionRunner.Arguments.RecordingFlags
+  href: Quantum.SessionRunner.Arguments.html#Quantum_SessionRunner_Arguments_RecordingFlags
+  name: RecordingFlags
+  nameWithType: SessionRunner.Arguments.RecordingFlags
+  fullName: Quantum.SessionRunner.Arguments.RecordingFlags
+- uid: Quantum.RecordingFlags.Input
+  commentId: F:Quantum.RecordingFlags.Input
+  isExternal: true
+  name: Input
+  nameWithType: RecordingFlags.Input
+  fullName: Quantum.RecordingFlags.Input
+- uid: Photon.Deterministic.DeterministicSessionConfig.InputDeltaCompression
+  commentId: F:Photon.Deterministic.DeterministicSessionConfig.InputDeltaCompression
+  isExternal: true
+  name: InputDeltaCompression
+  nameWithType: DeterministicSessionConfig.InputDeltaCompression
+  fullName: Photon.Deterministic.DeterministicSessionConfig.InputDeltaCompression
+- uid: Quantum.QuantumGame.StartRecordingInput(System.Nullable{System.Int32})
+  commentId: M:Quantum.QuantumGame.StartRecordingInput(System.Nullable{System.Int32})
+  isExternal: true
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_StartRecordingInput_System_Nullable_System_Int32__
+  name: StartRecordingInput(int?)
+  nameWithType: QuantumGame.StartRecordingInput(int?)
+  fullName: Quantum.QuantumGame.StartRecordingInput(int?)
+  nameWithType.vb: QuantumGame.StartRecordingInput(Integer?)
+  fullName.vb: Quantum.QuantumGame.StartRecordingInput(Integer?)
+  name.vb: StartRecordingInput(Integer?)
+  spec.csharp:
+  - uid: Quantum.QuantumGame.StartRecordingInput(System.Nullable{System.Int32})
+    name: StartRecordingInput
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_StartRecordingInput_System_Nullable_System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumGame.StartRecordingInput(System.Nullable{System.Int32})
+    name: StartRecordingInput
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_StartRecordingInput_System_Nullable_System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: )
+- uid: Quantum.QuantumGame.RecordedInputs*
+  commentId: Overload:Quantum.QuantumGame.RecordedInputs
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_RecordedInputs
+  name: RecordedInputs
+  nameWithType: QuantumGame.RecordedInputs
+  fullName: Quantum.QuantumGame.RecordedInputs
+- uid: Quantum.InputProvider
+  commentId: T:Quantum.InputProvider
+  parent: Quantum
+  href: Quantum.InputProvider.html
+  name: InputProvider
+  nameWithType: InputProvider
+  fullName: Quantum.InputProvider
+- uid: Quantum.RecordingFlags.Checksums
+  commentId: F:Quantum.RecordingFlags.Checksums
+  isExternal: true
+  name: Checksums
+  nameWithType: RecordingFlags.Checksums
+  fullName: Quantum.RecordingFlags.Checksums
+- uid: Photon.Deterministic.DeterministicSessionConfig.ChecksumInterval
+  commentId: F:Photon.Deterministic.DeterministicSessionConfig.ChecksumInterval
+  isExternal: true
+  name: ChecksumInterval
+  nameWithType: DeterministicSessionConfig.ChecksumInterval
+  fullName: Photon.Deterministic.DeterministicSessionConfig.ChecksumInterval
+- uid: Quantum.QuantumGame.StartRecordingChecksums
+  commentId: M:Quantum.QuantumGame.StartRecordingChecksums
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_StartRecordingChecksums
+  name: StartRecordingChecksums()
+  nameWithType: QuantumGame.StartRecordingChecksums()
+  fullName: Quantum.QuantumGame.StartRecordingChecksums()
+  spec.csharp:
+  - uid: Quantum.QuantumGame.StartRecordingChecksums
+    name: StartRecordingChecksums
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_StartRecordingChecksums
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumGame.StartRecordingChecksums
+    name: StartRecordingChecksums
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_StartRecordingChecksums
+  - name: (
+  - name: )
+- uid: Quantum.QuantumGame.RecordedChecksums*
+  commentId: Overload:Quantum.QuantumGame.RecordedChecksums
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_RecordedChecksums
+  name: RecordedChecksums
+  nameWithType: QuantumGame.RecordedChecksums
+  fullName: Quantum.QuantumGame.RecordedChecksums
+- uid: Quantum.ChecksumFile
+  commentId: T:Quantum.ChecksumFile
+  parent: Quantum
+  href: Quantum.ChecksumFile.html
+  name: ChecksumFile
+  nameWithType: ChecksumFile
+  fullName: Quantum.ChecksumFile
+- uid: Quantum.QuantumGame.RecordInputStream*
+  commentId: Overload:Quantum.QuantumGame.RecordInputStream
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_RecordInputStream
+  name: RecordInputStream
+  nameWithType: QuantumGame.RecordInputStream
+  fullName: Quantum.QuantumGame.RecordInputStream
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: Quantum.QuantumGame.GetInstantReplaySnapshot*
+  commentId: Overload:Quantum.QuantumGame.GetInstantReplaySnapshot
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_GetInstantReplaySnapshot_System_Int32_
+  name: GetInstantReplaySnapshot
+  nameWithType: QuantumGame.GetInstantReplaySnapshot
+  fullName: Quantum.QuantumGame.GetInstantReplaySnapshot
+- uid: Quantum.QuantumGame.GetInstantReplaySnapshots*
+  commentId: Overload:Quantum.QuantumGame.GetInstantReplaySnapshots
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_GetInstantReplaySnapshots_System_Int32_System_Int32_System_Collections_Generic_List_Quantum_Frame__
+  name: GetInstantReplaySnapshots
+  nameWithType: QuantumGame.GetInstantReplaySnapshots
+  fullName: Quantum.QuantumGame.GetInstantReplaySnapshots
+- uid: System.Collections.Generic.List{Quantum.Frame}
+  commentId: T:System.Collections.Generic.List{Quantum.Frame}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Frame>
+  nameWithType: List<Frame>
+  fullName: System.Collections.Generic.List<Quantum.Frame>
+  nameWithType.vb: List(Of Frame)
+  fullName.vb: System.Collections.Generic.List(Of Quantum.Frame)
+  name.vb: List(Of Frame)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.QuantumReplayFile
+  commentId: T:Quantum.QuantumReplayFile
+  parent: Quantum
+  href: Quantum.QuantumReplayFile.html
+  name: QuantumReplayFile
+  nameWithType: QuantumReplayFile
+  fullName: Quantum.QuantumReplayFile
+- uid: Quantum.QuantumGame.CreateSavegame*
+  commentId: Overload:Quantum.QuantumGame.CreateSavegame
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_CreateSavegame_System_Boolean_
+  name: CreateSavegame
+  nameWithType: QuantumGame.CreateSavegame
+  fullName: Quantum.QuantumGame.CreateSavegame
+- uid: Quantum.RecordingFlags
+  commentId: T:Quantum.RecordingFlags
+  parent: Quantum
+  isExternal: true
+  name: RecordingFlags
+  nameWithType: RecordingFlags
+  fullName: Quantum.RecordingFlags
+- uid: Quantum.QuantumGame.GetRecordedReplay*
+  commentId: Overload:Quantum.QuantumGame.GetRecordedReplay
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_GetRecordedReplay_System_Boolean_System_Boolean_Quantum_QuantumJsonFriendlyDataBlob_Encoder_Quantum_QuantumJsonFriendlyDataBlob_Encoder_Quantum_QuantumJsonFriendlyDataBlob_Encoder_
+  name: GetRecordedReplay
+  nameWithType: QuantumGame.GetRecordedReplay
+  fullName: Quantum.QuantumGame.GetRecordedReplay
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Encoder
+  commentId: T:Quantum.QuantumJsonFriendlyDataBlob.Encoder
+  parent: Quantum
+  href: Quantum.QuantumJsonFriendlyDataBlob.html
+  name: QuantumJsonFriendlyDataBlob.Encoder
+  nameWithType: QuantumJsonFriendlyDataBlob.Encoder
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Encoder
+  spec.csharp:
+  - uid: Quantum.QuantumJsonFriendlyDataBlob
+    name: QuantumJsonFriendlyDataBlob
+    href: Quantum.QuantumJsonFriendlyDataBlob.html
+  - name: .
+  - uid: Quantum.QuantumJsonFriendlyDataBlob.Encoder
+    name: Encoder
+    href: Quantum.QuantumJsonFriendlyDataBlob.Encoder.html
+  spec.vb:
+  - uid: Quantum.QuantumJsonFriendlyDataBlob
+    name: QuantumJsonFriendlyDataBlob
+    href: Quantum.QuantumJsonFriendlyDataBlob.html
+  - name: .
+  - uid: Quantum.QuantumJsonFriendlyDataBlob.Encoder
+    name: Encoder
+    href: Quantum.QuantumJsonFriendlyDataBlob.Encoder.html
+- uid: Quantum.QuantumGame.RecordedInputs
+  commentId: P:Quantum.QuantumGame.RecordedInputs
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_RecordedInputs
+  name: RecordedInputs
+  nameWithType: QuantumGame.RecordedInputs
+  fullName: Quantum.QuantumGame.RecordedInputs
+- uid: Quantum.QuantumGame.RecordInputStream
+  commentId: P:Quantum.QuantumGame.RecordInputStream
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_RecordInputStream
+  name: RecordInputStream
+  nameWithType: QuantumGame.RecordInputStream
+  fullName: Quantum.QuantumGame.RecordInputStream
+- uid: Quantum.QuantumGame.StartRecordingInput*
+  commentId: Overload:Quantum.QuantumGame.StartRecordingInput
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_StartRecordingInput_System_Nullable_System_Int32__
+  name: StartRecordingInput
+  nameWithType: QuantumGame.StartRecordingInput
+  fullName: Quantum.QuantumGame.StartRecordingInput
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.QuantumGame.StartRecordingChecksums*
+  commentId: Overload:Quantum.QuantumGame.StartRecordingChecksums
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_StartRecordingChecksums
+  name: StartRecordingChecksums
+  nameWithType: QuantumGame.StartRecordingChecksums
+  fullName: Quantum.QuantumGame.StartRecordingChecksums
+- uid: Quantum.QuantumGame.StartVerifyingChecksums*
+  commentId: Overload:Quantum.QuantumGame.StartVerifyingChecksums
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_StartVerifyingChecksums_Quantum_ChecksumFile_
+  name: StartVerifyingChecksums
+  nameWithType: QuantumGame.StartVerifyingChecksums
+  fullName: Quantum.QuantumGame.StartVerifyingChecksums
+- uid: Quantum.QuantumGame.InstantReplayConfig
+  commentId: P:Quantum.QuantumGame.InstantReplayConfig
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_InstantReplayConfig
+  name: InstantReplayConfig
+  nameWithType: QuantumGame.InstantReplayConfig
+  fullName: Quantum.QuantumGame.InstantReplayConfig
+- uid: Quantum.QuantumGame.StartRecordingInstantReplaySnapshots*
+  commentId: Overload:Quantum.QuantumGame.StartRecordingInstantReplaySnapshots
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_StartRecordingInstantReplaySnapshots
+  name: StartRecordingInstantReplaySnapshots
+  nameWithType: QuantumGame.StartRecordingInstantReplaySnapshots
+  fullName: Quantum.QuantumGame.StartRecordingInstantReplaySnapshots
+- uid: Quantum.QuantumGame.InitCallbacks*
+  commentId: Overload:Quantum.QuantumGame.InitCallbacks
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_InitCallbacks
+  name: InitCallbacks
+  nameWithType: QuantumGame.InitCallbacks
+  fullName: Quantum.QuantumGame.InitCallbacks
+- uid: Quantum.QuantumGame.StartParameters
+  commentId: T:Quantum.QuantumGame.StartParameters
+  parent: Quantum
+  href: Quantum.QuantumGame.html
+  name: QuantumGame.StartParameters
+  nameWithType: QuantumGame.StartParameters
+  fullName: Quantum.QuantumGame.StartParameters
+  spec.csharp:
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+    href: Quantum.QuantumGame.html
+  - name: .
+  - uid: Quantum.QuantumGame.StartParameters
+    name: StartParameters
+    href: Quantum.QuantumGame.StartParameters.html
+  spec.vb:
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+    href: Quantum.QuantumGame.html
+  - name: .
+  - uid: Quantum.QuantumGame.StartParameters
+    name: StartParameters
+    href: Quantum.QuantumGame.StartParameters.html
+- uid: Quantum.ICallbackDispatcher
+  commentId: T:Quantum.ICallbackDispatcher
+  parent: Quantum
+  isExternal: true
+  name: ICallbackDispatcher
+  nameWithType: ICallbackDispatcher
+  fullName: Quantum.ICallbackDispatcher
+- uid: Quantum.IEventDispatcher
+  commentId: T:Quantum.IEventDispatcher
+  parent: Quantum
+  isExternal: true
+  name: IEventDispatcher
+  nameWithType: IEventDispatcher
+  fullName: Quantum.IEventDispatcher
+- uid: Quantum.QuantumGame.SendPlayerData*
+  commentId: Overload:Quantum.QuantumGame.SendPlayerData
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_SendPlayerData_Quantum_RuntimePlayer_
+  name: SendPlayerData
+  nameWithType: QuantumGame.SendPlayerData
+  fullName: Quantum.QuantumGame.SendPlayerData

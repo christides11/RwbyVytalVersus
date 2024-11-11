@@ -1,0 +1,145 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.ISignalOnPlayerDisconnected
+  commentId: T:Quantum.ISignalOnPlayerDisconnected
+  id: ISignalOnPlayerDisconnected
+  parent: Quantum
+  children:
+  - Quantum.ISignalOnPlayerDisconnected.OnPlayerDisconnected(Quantum.Frame,Quantum.PlayerRef)
+  langs:
+  - csharp
+  - vb
+  name: ISignalOnPlayerDisconnected
+  nameWithType: ISignalOnPlayerDisconnected
+  fullName: Quantum.ISignalOnPlayerDisconnected
+  type: Interface
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ISignalOnPlayerDisconnected
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 1687
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    The signal is called when a player has been removed and disconnected from the simulation.
+
+    <p>It's originating from the <xref href="Quantum.Core.PlayerConnectedSystem" data-throw-if-not-resolved="false"></xref>.</p><p>The connected status is based on the <xref href="Photon.Deterministic.DeterministicFrame.GetPlayerInputFlags(Quantum.PlayerRef)" data-throw-if-not-resolved="false"></xref>.</p><p>The signal is always called from a verified frame.</p>
+  example: []
+  syntax:
+    content: 'public interface ISignalOnPlayerDisconnected : ISignal'
+    content.vb: Public Interface ISignalOnPlayerDisconnected Inherits ISignal
+  inheritedMembers:
+  - Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignalOnPlayerDisconnected.OnPlayerDisconnected(Quantum.Frame,Quantum.PlayerRef)
+  commentId: M:Quantum.ISignalOnPlayerDisconnected.OnPlayerDisconnected(Quantum.Frame,Quantum.PlayerRef)
+  id: OnPlayerDisconnected(Quantum.Frame,Quantum.PlayerRef)
+  parent: Quantum.ISignalOnPlayerDisconnected
+  langs:
+  - csharp
+  - vb
+  name: OnPlayerDisconnected(Frame, PlayerRef)
+  nameWithType: ISignalOnPlayerDisconnected.OnPlayerDisconnected(Frame, PlayerRef)
+  fullName: Quantum.ISignalOnPlayerDisconnected.OnPlayerDisconnected(Quantum.Frame, Quantum.PlayerRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnPlayerDisconnected
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 1695
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    The signal is called when a player has been removed and disconnected from the simulation.
+
+    <p>It's originating from the <xref href="Quantum.Core.PlayerConnectedSystem" data-throw-if-not-resolved="false"></xref>.</p><p>The connected status is based on the <xref href="Photon.Deterministic.DeterministicFrame.GetPlayerInputFlags(Quantum.PlayerRef)" data-throw-if-not-resolved="false"></xref>.</p><p>The signal is always called from a verified frame.</p>
+  example: []
+  syntax:
+    content: void OnPlayerDisconnected(Frame f, PlayerRef player)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: player
+      type: Quantum.PlayerRef
+      description: The disconnected player.
+    content.vb: Sub OnPlayerDisconnected(f As Frame, player As PlayerRef)
+  overload: Quantum.ISignalOnPlayerDisconnected.OnPlayerDisconnected*
+references:
+- uid: Quantum.Core.PlayerConnectedSystem
+  commentId: T:Quantum.Core.PlayerConnectedSystem
+  href: Quantum.Core.PlayerConnectedSystem.html
+  name: PlayerConnectedSystem
+  nameWithType: PlayerConnectedSystem
+  fullName: Quantum.Core.PlayerConnectedSystem
+- uid: Photon.Deterministic.DeterministicFrame.GetPlayerInputFlags(Quantum.PlayerRef)
+  commentId: M:Photon.Deterministic.DeterministicFrame.GetPlayerInputFlags(Quantum.PlayerRef)
+  isExternal: true
+  name: GetPlayerInputFlags(PlayerRef)
+  nameWithType: DeterministicFrame.GetPlayerInputFlags(PlayerRef)
+  fullName: Photon.Deterministic.DeterministicFrame.GetPlayerInputFlags(Quantum.PlayerRef)
+  spec.csharp:
+  - uid: Photon.Deterministic.DeterministicFrame.GetPlayerInputFlags(Quantum.PlayerRef)
+    name: GetPlayerInputFlags
+    isExternal: true
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Photon.Deterministic.DeterministicFrame.GetPlayerInputFlags(Quantum.PlayerRef)
+    name: GetPlayerInputFlags
+    isExternal: true
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ISignal.RuntimeIndex
+  commentId: P:Quantum.ISignal.RuntimeIndex
+  parent: Quantum.ISignal
+  isExternal: true
+  name: RuntimeIndex
+  nameWithType: ISignal.RuntimeIndex
+  fullName: Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.ISignalOnPlayerDisconnected.OnPlayerDisconnected*
+  commentId: Overload:Quantum.ISignalOnPlayerDisconnected.OnPlayerDisconnected
+  href: Quantum.ISignalOnPlayerDisconnected.html#Quantum_ISignalOnPlayerDisconnected_OnPlayerDisconnected_Quantum_Frame_Quantum_PlayerRef_
+  name: OnPlayerDisconnected
+  nameWithType: ISignalOnPlayerDisconnected.OnPlayerDisconnected
+  fullName: Quantum.ISignalOnPlayerDisconnected.OnPlayerDisconnected
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
+  parent: Quantum
+  isExternal: true
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef

@@ -1,0 +1,1327 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.SimulationConfig
+  commentId: T:Quantum.SimulationConfig
+  id: SimulationConfig
+  parent: Quantum
+  children:
+  - Quantum.SimulationConfig.AutoLoadSceneFromMap
+  - Quantum.SimulationConfig.ChecksumErrorDumpOptions
+  - Quantum.SimulationConfig.ChecksumSnapshotHistoryLengthSeconds
+  - Quantum.SimulationConfig.DEFAULT_ID
+  - Quantum.SimulationConfig.DeltaTimeType
+  - Quantum.SimulationConfig.Entities
+  - Quantum.SimulationConfig.HeapExtraCount
+  - Quantum.SimulationConfig.HeapPageCount
+  - Quantum.SimulationConfig.HeapPageShift
+  - Quantum.SimulationConfig.HeapTrackingMode
+  - Quantum.SimulationConfig.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.SimulationConfig.Navigation
+  - Quantum.SimulationConfig.Physics
+  - Quantum.SimulationConfig.ThreadCount
+  - Quantum.SimulationConfig.tag_CharacterEntry
+  - Quantum.SimulationConfig.tag_CharacterEntryWait
+  - Quantum.SimulationConfig.tag_CharacterState_Idle
+  langs:
+  - csharp
+  - vb
+  name: SimulationConfig
+  nameWithType: SimulationConfig
+  fullName: Quantum.SimulationConfig
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SimulationConfig
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+    startLine: 7
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The SimulationConfig holds parameters used in the ECS layer and inside core systems like physics and navigation.
+  example: []
+  syntax:
+    content: 'public class SimulationConfig : AssetObject'
+    content.vb: Public Class SimulationConfig Inherits AssetObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Quantum.AssetObject
+  inheritedMembers:
+  - Quantum.AssetObject.Identifier
+  - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Create``1
+  - Quantum.AssetObject.Create(System.Type)
+  - Quantum.AssetObject.Create``1(System.Action{{T}})
+  - Quantum.AssetObject.Reset
+  - Quantum.AssetObject.Guid
+  - Quantum.AssetObject.Path
+  - Quantum.AssetObject.Settings
+- uid: Quantum.SimulationConfig.DEFAULT_ID
+  commentId: F:Quantum.SimulationConfig.DEFAULT_ID
+  id: DEFAULT_ID
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ID
+  nameWithType: SimulationConfig.DEFAULT_ID
+  fullName: Quantum.SimulationConfig.DEFAULT_ID
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DEFAULT_ID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 19
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: "Obsolete: Don't use the hard coded guids instead reference the simulation config used in the RuntimeConfig."
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Don't use the hard coded guids instead reference the simulation config used in the RuntimeConfig")]
+
+      public const long DEFAULT_ID = 5
+    return:
+      type: System.Int64
+    content.vb: >-
+      <Obsolete("Don't use the hard coded guids instead reference the simulation config used in the RuntimeConfig")>
+
+      Public Const DEFAULT_ID As Long = 5
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Don't use the hard coded guids instead reference the simulation config used in the RuntimeConfig
+- uid: Quantum.SimulationConfig.Entities
+  commentId: F:Quantum.SimulationConfig.Entities
+  id: Entities
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: Entities
+  nameWithType: SimulationConfig.Entities
+  fullName: Quantum.SimulationConfig.Entities
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Entities
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 50
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Global entities configuration
+  example: []
+  syntax:
+    content: >-
+      [InlineHelp]
+
+      public FrameBase.EntitiesConfig Entities
+    return:
+      type: Quantum.Core.FrameBase.EntitiesConfig
+    content.vb: >-
+      <InlineHelp>
+
+      Public Entities As FrameBase.EntitiesConfig
+  attributes:
+  - type: Quantum.InlineHelpAttribute
+    ctor: Quantum.InlineHelpAttribute.#ctor
+    arguments: []
+- uid: Quantum.SimulationConfig.Physics
+  commentId: F:Quantum.SimulationConfig.Physics
+  id: Physics
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: Physics
+  nameWithType: SimulationConfig.Physics
+  fullName: Quantum.SimulationConfig.Physics
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Physics
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 56
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Global physics configurations.
+  example: []
+  syntax:
+    content: >-
+      [InlineHelp]
+
+      public PhysicsCommon.Config Physics
+    return:
+      type: Quantum.PhysicsCommon.Config
+    content.vb: >-
+      <InlineHelp>
+
+      Public Physics As PhysicsCommon.Config
+  attributes:
+  - type: Quantum.InlineHelpAttribute
+    ctor: Quantum.InlineHelpAttribute.#ctor
+    arguments: []
+- uid: Quantum.SimulationConfig.Navigation
+  commentId: F:Quantum.SimulationConfig.Navigation
+  id: Navigation
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: Navigation
+  nameWithType: SimulationConfig.Navigation
+  fullName: Quantum.SimulationConfig.Navigation
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Navigation
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 62
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Global navmesh configurations.
+  example: []
+  syntax:
+    content: >-
+      [InlineHelp]
+
+      public Navigation.Config Navigation
+    return:
+      type: Quantum.Navigation.Config
+    content.vb: >-
+      <InlineHelp>
+
+      Public Navigation As Navigation.Config
+  attributes:
+  - type: Quantum.InlineHelpAttribute
+    ctor: Quantum.InlineHelpAttribute.#ctor
+    arguments: []
+- uid: Quantum.SimulationConfig.AutoLoadSceneFromMap
+  commentId: F:Quantum.SimulationConfig.AutoLoadSceneFromMap
+  id: AutoLoadSceneFromMap
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: AutoLoadSceneFromMap
+  nameWithType: SimulationConfig.AutoLoadSceneFromMap
+  fullName: Quantum.SimulationConfig.AutoLoadSceneFromMap
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AutoLoadSceneFromMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 70
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    This option will trigger a Unity scene load during the Quantum start sequence.\n
+
+    This might be convenient to start with but once the starting sequence is customized disable it and implement the scene loading by yourself.
+
+    "Previous Scene" refers to a scene name in Quantum Map.
+  example: []
+  syntax:
+    content: >-
+      [InlineHelp]
+
+      public SimulationConfig.AutoLoadSceneFromMapMode AutoLoadSceneFromMap
+    return:
+      type: Quantum.SimulationConfig.AutoLoadSceneFromMapMode
+    content.vb: >-
+      <InlineHelp>
+
+      Public AutoLoadSceneFromMap As SimulationConfig.AutoLoadSceneFromMapMode
+  attributes:
+  - type: Quantum.InlineHelpAttribute
+    ctor: Quantum.InlineHelpAttribute.#ctor
+    arguments: []
+- uid: Quantum.SimulationConfig.DeltaTimeType
+  commentId: F:Quantum.SimulationConfig.DeltaTimeType
+  id: DeltaTimeType
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: DeltaTimeType
+  nameWithType: SimulationConfig.DeltaTimeType
+  fullName: Quantum.SimulationConfig.DeltaTimeType
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeltaTimeType
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 77
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Configure how the client tracks the time to progress the Quantum simulation from the QuantumRunner class.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Set on SessionRunner.Arguments.DeltaTimeType instead")]
+
+      public SimulationUpdateTime DeltaTimeType
+    return:
+      type: Quantum.SimulationUpdateTime
+    content.vb: >-
+      <Obsolete("Set on SessionRunner.Arguments.DeltaTimeType instead")>
+
+      Public DeltaTimeType As SimulationUpdateTime
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Set on SessionRunner.Arguments.DeltaTimeType instead
+- uid: Quantum.SimulationConfig.ThreadCount
+  commentId: F:Quantum.SimulationConfig.ThreadCount
+  id: ThreadCount
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: ThreadCount
+  nameWithType: SimulationConfig.ThreadCount
+  fullName: Quantum.SimulationConfig.ThreadCount
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ThreadCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 83
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Override the number of threads used internally. Default is 2.
+  example: []
+  syntax:
+    content: >-
+      [InlineHelp]
+
+      public int ThreadCount
+    return:
+      type: System.Int32
+    content.vb: >-
+      <InlineHelp>
+
+      Public ThreadCount As Integer
+  attributes:
+  - type: Quantum.InlineHelpAttribute
+    ctor: Quantum.InlineHelpAttribute.#ctor
+    arguments: []
+- uid: Quantum.SimulationConfig.ChecksumSnapshotHistoryLengthSeconds
+  commentId: F:Quantum.SimulationConfig.ChecksumSnapshotHistoryLengthSeconds
+  id: ChecksumSnapshotHistoryLengthSeconds
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: ChecksumSnapshotHistoryLengthSeconds
+  nameWithType: SimulationConfig.ChecksumSnapshotHistoryLengthSeconds
+  fullName: Quantum.SimulationConfig.ChecksumSnapshotHistoryLengthSeconds
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ChecksumSnapshotHistoryLengthSeconds
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 89
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: How long to store checksumed verified frames. The are used to generate a frame dump in case of a checksum error happening. Not used in Replay and Local mode. Default is 3.
+  example: []
+  syntax:
+    content: >-
+      [InlineHelp]
+
+      public FP ChecksumSnapshotHistoryLengthSeconds
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <InlineHelp>
+
+      Public ChecksumSnapshotHistoryLengthSeconds As FP
+  attributes:
+  - type: Quantum.InlineHelpAttribute
+    ctor: Quantum.InlineHelpAttribute.#ctor
+    arguments: []
+- uid: Quantum.SimulationConfig.ChecksumErrorDumpOptions
+  commentId: F:Quantum.SimulationConfig.ChecksumErrorDumpOptions
+  id: ChecksumErrorDumpOptions
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: ChecksumErrorDumpOptions
+  nameWithType: SimulationConfig.ChecksumErrorDumpOptions
+  fullName: Quantum.SimulationConfig.ChecksumErrorDumpOptions
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ChecksumErrorDumpOptions
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 95
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Additional options for checksum dumps, if the default settings don't provide a clear picture.
+  example: []
+  syntax:
+    content: >-
+      [InlineHelp]
+
+      public SimulationConfigChecksumErrorDumpOptions ChecksumErrorDumpOptions
+    return:
+      type: Quantum.SimulationConfigChecksumErrorDumpOptions
+    content.vb: >-
+      <InlineHelp>
+
+      Public ChecksumErrorDumpOptions As SimulationConfigChecksumErrorDumpOptions
+  attributes:
+  - type: Quantum.InlineHelpAttribute
+    ctor: Quantum.InlineHelpAttribute.#ctor
+    arguments: []
+- uid: Quantum.SimulationConfig.HeapTrackingMode
+  commentId: F:Quantum.SimulationConfig.HeapTrackingMode
+  id: HeapTrackingMode
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: HeapTrackingMode
+  nameWithType: SimulationConfig.HeapTrackingMode
+  fullName: Quantum.SimulationConfig.HeapTrackingMode
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HeapTrackingMode
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 104
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    If and to which extent allocations in the Frame Heap should be tracked when in Debug mode.
+
+    Recommended modes for development is `DetectLeaks`.
+
+    While actively debugging a memory leak,`TraceAllocations` mode can be enabled (warning: tracing is very slow).
+  example: []
+  syntax:
+    content: >-
+      [InlineHelp]
+
+      public HeapTrackingMode HeapTrackingMode
+    return:
+      type: Quantum.Allocator.HeapTrackingMode
+    content.vb: >-
+      <InlineHelp>
+
+      Public HeapTrackingMode As HeapTrackingMode
+  attributes:
+  - type: Quantum.InlineHelpAttribute
+    ctor: Quantum.InlineHelpAttribute.#ctor
+    arguments: []
+- uid: Quantum.SimulationConfig.HeapPageShift
+  commentId: F:Quantum.SimulationConfig.HeapPageShift
+  id: HeapPageShift
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: HeapPageShift
+  nameWithType: SimulationConfig.HeapPageShift
+  fullName: Quantum.SimulationConfig.HeapPageShift
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HeapPageShift
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 112
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Define the max heap size for one page of memory the frame class uses for custom allocations like QList for example. The default is 15.
+  remarks: 2^15 = 32.768 bytes
+  example: []
+  syntax:
+    content: >-
+      [InlineHelp]
+
+      public int HeapPageShift
+    return:
+      type: System.Int32
+    content.vb: >-
+      <InlineHelp>
+
+      Public HeapPageShift As Integer
+  attributes:
+  - type: Quantum.InlineHelpAttribute
+    ctor: Quantum.InlineHelpAttribute.#ctor
+    arguments: []
+- uid: Quantum.SimulationConfig.HeapPageCount
+  commentId: F:Quantum.SimulationConfig.HeapPageCount
+  id: HeapPageCount
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: HeapPageCount
+  nameWithType: SimulationConfig.HeapPageCount
+  fullName: Quantum.SimulationConfig.HeapPageCount
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HeapPageCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 119
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Define the max heap page count for memory the frame class uses for custom allocations like QList for example. Default is 256.
+  remarks: <pre><code class="lang-csharp">TotalHeapSizeInBytes = (1 &lt;&lt; HeapPageShift) * HeapPageCount</code></pre>
+  example: []
+  syntax:
+    content: >-
+      [InlineHelp]
+
+      public int HeapPageCount
+    return:
+      type: System.Int32
+    content.vb: >-
+      <InlineHelp>
+
+      Public HeapPageCount As Integer
+  attributes:
+  - type: Quantum.InlineHelpAttribute
+    ctor: Quantum.InlineHelpAttribute.#ctor
+    arguments: []
+- uid: Quantum.SimulationConfig.HeapExtraCount
+  commentId: F:Quantum.SimulationConfig.HeapExtraCount
+  id: HeapExtraCount
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: HeapExtraCount
+  nameWithType: SimulationConfig.HeapExtraCount
+  fullName: Quantum.SimulationConfig.HeapExtraCount
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HeapExtraCount
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 127
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Sets extra heaps to allocate for a session in case you need to
+
+    create 'auxiliary' frames than actually required for the simulation itself.
+
+    Default is 0.
+  example: []
+  syntax:
+    content: >-
+      [InlineHelp]
+
+      public int HeapExtraCount
+    return:
+      type: System.Int32
+    content.vb: >-
+      <InlineHelp>
+
+      Public HeapExtraCount As Integer
+  attributes:
+  - type: Quantum.InlineHelpAttribute
+    ctor: Quantum.InlineHelpAttribute.#ctor
+    arguments: []
+- uid: Quantum.SimulationConfig.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.SimulationConfig.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  id: Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: Loaded(IResourceManager, Allocator)
+  nameWithType: SimulationConfig.Loaded(IResourceManager, Native.Allocator)
+  fullName: Quantum.SimulationConfig.Loaded(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Loaded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
+    startLine: 134
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The asset loaded callback, caches fixed calculation results.
+  example: []
+  syntax:
+    content: public override void Loaded(IResourceManager resourceManager, Native.Allocator allocator)
+    parameters:
+    - id: resourceManager
+      type: Quantum.IResourceManager
+      description: Resource manager.
+    - id: allocator
+      type: Photon.Deterministic.Native.Allocator
+      description: The allocator.
+    content.vb: Public Overrides Sub Loaded(resourceManager As IResourceManager, allocator As Native.Allocator)
+  overridden: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  overload: Quantum.SimulationConfig.Loaded*
+- uid: Quantum.SimulationConfig.tag_CharacterEntryWait
+  commentId: F:Quantum.SimulationConfig.tag_CharacterEntryWait
+  id: tag_CharacterEntryWait
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: tag_CharacterEntryWait
+  nameWithType: SimulationConfig.tag_CharacterEntryWait
+  fullName: Quantum.SimulationConfig.tag_CharacterEntryWait
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_CharacterEntryWait
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+    startLine: 9
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<Tag> tag_CharacterEntryWait
+    return:
+      type: Quantum.AssetRef{Quantum.Tag}
+    content.vb: Public tag_CharacterEntryWait As AssetRef(Of Tag)
+- uid: Quantum.SimulationConfig.tag_CharacterEntry
+  commentId: F:Quantum.SimulationConfig.tag_CharacterEntry
+  id: tag_CharacterEntry
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: tag_CharacterEntry
+  nameWithType: SimulationConfig.tag_CharacterEntry
+  fullName: Quantum.SimulationConfig.tag_CharacterEntry
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_CharacterEntry
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+    startLine: 10
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<Tag> tag_CharacterEntry
+    return:
+      type: Quantum.AssetRef{Quantum.Tag}
+    content.vb: Public tag_CharacterEntry As AssetRef(Of Tag)
+- uid: Quantum.SimulationConfig.tag_CharacterState_Idle
+  commentId: F:Quantum.SimulationConfig.tag_CharacterState_Idle
+  id: tag_CharacterState_Idle
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: tag_CharacterState_Idle
+  nameWithType: SimulationConfig.tag_CharacterState_Idle
+  fullName: Quantum.SimulationConfig.tag_CharacterState_Idle
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_CharacterState_Idle
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+    startLine: 11
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<Tag> tag_CharacterState_Idle
+    return:
+      type: Quantum.AssetRef{Quantum.Tag}
+    content.vb: Public tag_CharacterState_Idle As AssetRef(Of Tag)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Quantum.AssetObject
+  commentId: T:Quantum.AssetObject
+  parent: Quantum
+  isExternal: true
+  name: AssetObject
+  nameWithType: AssetObject
+  fullName: Quantum.AssetObject
+- uid: Quantum.AssetObject.Identifier
+  commentId: F:Quantum.AssetObject.Identifier
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Identifier
+  nameWithType: AssetObject.Identifier
+  fullName: Quantum.AssetObject.Identifier
+- uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Disposed(IResourceManager, Allocator)
+  nameWithType: AssetObject.Disposed(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Disposed(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Create``1
+  commentId: M:Quantum.AssetObject.Create``1
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Create<T>()
+  nameWithType: AssetObject.Create<T>()
+  fullName: Quantum.AssetObject.Create<T>()
+  nameWithType.vb: AssetObject.Create(Of T)()
+  fullName.vb: Quantum.AssetObject.Create(Of T)()
+  name.vb: Create(Of T)()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Create(System.Type)
+  commentId: M:Quantum.AssetObject.Create(System.Type)
+  parent: Quantum.AssetObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Create(Type)
+  nameWithType: AssetObject.Create(Type)
+  fullName: Quantum.AssetObject.Create(System.Type)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.AssetObject.Create``1(System.Action{{T}})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  parent: Quantum.AssetObject
+  definition: Quantum.AssetObject.Create``1(System.Action{``0})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.AssetObject.Reset
+  commentId: M:Quantum.AssetObject.Reset
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Reset()
+  nameWithType: AssetObject.Reset()
+  fullName: Quantum.AssetObject.Reset()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Guid
+  commentId: P:Quantum.AssetObject.Guid
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Guid
+  nameWithType: AssetObject.Guid
+  fullName: Quantum.AssetObject.Guid
+- uid: Quantum.AssetObject.Path
+  commentId: P:Quantum.AssetObject.Path
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Path
+  nameWithType: AssetObject.Path
+  fullName: Quantum.AssetObject.Path
+- uid: Quantum.AssetObject.Settings
+  commentId: P:Quantum.AssetObject.Settings
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Settings
+  nameWithType: AssetObject.Settings
+  fullName: Quantum.AssetObject.Settings
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Quantum.AssetObject.Create``1(System.Action{``0})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: Quantum.Core.FrameBase.EntitiesConfig
+  commentId: T:Quantum.Core.FrameBase.EntitiesConfig
+  parent: Quantum.Core
+  isExternal: true
+  name: FrameBase.EntitiesConfig
+  nameWithType: FrameBase.EntitiesConfig
+  fullName: Quantum.Core.FrameBase.EntitiesConfig
+  spec.csharp:
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: .
+  - uid: Quantum.Core.FrameBase.EntitiesConfig
+    name: EntitiesConfig
+    isExternal: true
+  spec.vb:
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: .
+  - uid: Quantum.Core.FrameBase.EntitiesConfig
+    name: EntitiesConfig
+    isExternal: true
+- uid: Quantum.Core
+  commentId: N:Quantum.Core
+  href: Quantum.html
+  name: Quantum.Core
+  nameWithType: Quantum.Core
+  fullName: Quantum.Core
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+- uid: Quantum.PhysicsCommon.Config
+  commentId: T:Quantum.PhysicsCommon.Config
+  parent: Quantum
+  isExternal: true
+  name: PhysicsCommon.Config
+  nameWithType: PhysicsCommon.Config
+  fullName: Quantum.PhysicsCommon.Config
+  spec.csharp:
+  - uid: Quantum.PhysicsCommon
+    name: PhysicsCommon
+    isExternal: true
+  - name: .
+  - uid: Quantum.PhysicsCommon.Config
+    name: Config
+    isExternal: true
+  spec.vb:
+  - uid: Quantum.PhysicsCommon
+    name: PhysicsCommon
+    isExternal: true
+  - name: .
+  - uid: Quantum.PhysicsCommon.Config
+    name: Config
+    isExternal: true
+- uid: Quantum.Navigation.Config
+  commentId: T:Quantum.Navigation.Config
+  parent: Quantum
+  isExternal: true
+  name: Navigation.Config
+  nameWithType: Navigation.Config
+  fullName: Quantum.Navigation.Config
+  spec.csharp:
+  - uid: Quantum.Navigation
+    name: Navigation
+    isExternal: true
+  - name: .
+  - uid: Quantum.Navigation.Config
+    name: Config
+    isExternal: true
+  spec.vb:
+  - uid: Quantum.Navigation
+    name: Navigation
+    isExternal: true
+  - name: .
+  - uid: Quantum.Navigation.Config
+    name: Config
+    isExternal: true
+- uid: Quantum.SimulationConfig.AutoLoadSceneFromMapMode
+  commentId: T:Quantum.SimulationConfig.AutoLoadSceneFromMapMode
+  parent: Quantum
+  href: Quantum.SimulationConfig.html
+  name: SimulationConfig.AutoLoadSceneFromMapMode
+  nameWithType: SimulationConfig.AutoLoadSceneFromMapMode
+  fullName: Quantum.SimulationConfig.AutoLoadSceneFromMapMode
+  spec.csharp:
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: .
+  - uid: Quantum.SimulationConfig.AutoLoadSceneFromMapMode
+    name: AutoLoadSceneFromMapMode
+    href: Quantum.SimulationConfig.AutoLoadSceneFromMapMode.html
+  spec.vb:
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: .
+  - uid: Quantum.SimulationConfig.AutoLoadSceneFromMapMode
+    name: AutoLoadSceneFromMapMode
+    href: Quantum.SimulationConfig.AutoLoadSceneFromMapMode.html
+- uid: Quantum.SimulationUpdateTime
+  commentId: T:Quantum.SimulationUpdateTime
+  parent: Quantum
+  isExternal: true
+  name: SimulationUpdateTime
+  nameWithType: SimulationUpdateTime
+  fullName: Quantum.SimulationUpdateTime
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Photon.Deterministic.FP
+  commentId: T:Photon.Deterministic.FP
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FP
+  nameWithType: FP
+  fullName: Photon.Deterministic.FP
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.SimulationConfigChecksumErrorDumpOptions
+  commentId: T:Quantum.SimulationConfigChecksumErrorDumpOptions
+  parent: Quantum
+  href: Quantum.SimulationConfigChecksumErrorDumpOptions.html
+  name: SimulationConfigChecksumErrorDumpOptions
+  nameWithType: SimulationConfigChecksumErrorDumpOptions
+  fullName: Quantum.SimulationConfigChecksumErrorDumpOptions
+- uid: Quantum.Allocator.HeapTrackingMode
+  commentId: T:Quantum.Allocator.HeapTrackingMode
+  parent: Quantum.Allocator
+  isExternal: true
+  name: HeapTrackingMode
+  nameWithType: HeapTrackingMode
+  fullName: Quantum.Allocator.HeapTrackingMode
+- uid: Quantum.Allocator
+  commentId: N:Quantum.Allocator
+  isExternal: true
+  name: Quantum.Allocator
+  nameWithType: Quantum.Allocator
+  fullName: Quantum.Allocator
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    isExternal: true
+  - name: .
+  - uid: Quantum.Allocator
+    name: Allocator
+    isExternal: true
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    isExternal: true
+  - name: .
+  - uid: Quantum.Allocator
+    name: Allocator
+    isExternal: true
+- uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Loaded(IResourceManager, Allocator)
+  nameWithType: AssetObject.Loaded(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Loaded(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.SimulationConfig.Loaded*
+  commentId: Overload:Quantum.SimulationConfig.Loaded
+  href: Quantum.SimulationConfig.html#Quantum_SimulationConfig_Loaded_Quantum_IResourceManager_Photon_Deterministic_Native_Allocator_
+  name: Loaded
+  nameWithType: SimulationConfig.Loaded
+  fullName: Quantum.SimulationConfig.Loaded
+- uid: Quantum.IResourceManager
+  commentId: T:Quantum.IResourceManager
+  parent: Quantum
+  isExternal: true
+  name: IResourceManager
+  nameWithType: IResourceManager
+  fullName: Quantum.IResourceManager
+- uid: Photon.Deterministic.Native.Allocator
+  commentId: T:Photon.Deterministic.Native.Allocator
+  parent: Photon.Deterministic
+  isExternal: true
+  name: Native.Allocator
+  nameWithType: Native.Allocator
+  fullName: Photon.Deterministic.Native.Allocator
+  spec.csharp:
+  - uid: Photon.Deterministic.Native
+    name: Native
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  spec.vb:
+  - uid: Photon.Deterministic.Native
+    name: Native
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+- uid: Quantum.AssetRef{Quantum.Tag}
+  commentId: T:Quantum.AssetRef{Quantum.Tag}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.Tag.html
+  name: AssetRef<Tag>
+  nameWithType: AssetRef<Tag>
+  fullName: Quantum.AssetRef<Quantum.Tag>
+  nameWithType.vb: AssetRef(Of Tag)
+  fullName.vb: Quantum.AssetRef(Of Quantum.Tag)
+  name.vb: AssetRef(Of Tag)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.Tag
+    name: Tag
+    href: Quantum.Tag.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.Tag
+    name: Tag
+    href: Quantum.Tag.html
+  - name: )
+- uid: Quantum.AssetRef`1
+  commentId: T:Quantum.AssetRef`1
+  isExternal: true
+  name: AssetRef<T>
+  nameWithType: AssetRef<T>
+  fullName: Quantum.AssetRef<T>
+  nameWithType.vb: AssetRef(Of T)
+  fullName.vb: Quantum.AssetRef(Of T)
+  name.vb: AssetRef(Of T)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

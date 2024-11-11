@@ -1,0 +1,807 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.Core.NavigationSystem
+  commentId: T:Quantum.Core.NavigationSystem
+  id: NavigationSystem
+  parent: Quantum.Core
+  children:
+  - Quantum.Core.NavigationSystem.OnMoveAgent(Quantum.EntityRef,Photon.Deterministic.FPVector2)
+  - Quantum.Core.NavigationSystem.OnSearchFailed(Quantum.EntityRef,System.Boolean@)
+  - Quantum.Core.NavigationSystem.OnWaypointReached(Quantum.EntityRef,Photon.Deterministic.FPVector3,Quantum.Navigation.WaypointFlag,System.Boolean@)
+  - Quantum.Core.NavigationSystem.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  langs:
+  - csharp
+  - vb
+  name: NavigationSystem
+  nameWithType: NavigationSystem
+  fullName: Quantum.Core.NavigationSystem
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: NavigationSystem
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9211
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: The Quantum core navigation system.
+  example: []
+  syntax:
+    content: >-
+      [Preserve]
+
+      public class NavigationSystem : SystemBase, INavigationCallbacks
+    content.vb: >-
+      <Preserve>
+
+      Public Class NavigationSystem Inherits SystemBase Implements INavigationCallbacks
+  inheritance:
+  - System.Object
+  - Quantum.SystemBase
+  implements:
+  - Quantum.INavigationCallbacks
+  inheritedMembers:
+  - Quantum.SystemBase.RuntimeIndex
+  - Quantum.SystemBase.ParentSystem
+  - Quantum.SystemBase.ChildSystems
+  - Quantum.SystemBase.Hierarchy
+  - Quantum.SystemBase.StartEnabled
+  - Quantum.SystemBase.OnInit(Quantum.Frame)
+  - Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  - Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  attributes:
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
+- uid: Quantum.Core.NavigationSystem.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.Core.NavigationSystem.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  id: Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.Core.NavigationSystem
+  langs:
+  - csharp
+  - vb
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: NavigationSystem.Schedule(Frame, TaskHandle)
+  fullName: Quantum.Core.NavigationSystem.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Schedule
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9221
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: Create the navigation system update task graph.
+  example: []
+  syntax:
+    content: protected override TaskHandle Schedule(Frame f, TaskHandle taskHandle)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: taskHandle
+      type: Quantum.Task.TaskHandle
+      description: The root task handle used to create new tasks.
+    return:
+      type: Quantum.Task.TaskHandle
+      description: Updated task handle with the navigation update graph.
+    content.vb: Protected Overrides Function Schedule(f As Frame, taskHandle As TaskHandle) As TaskHandle
+  overridden: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  overload: Quantum.Core.NavigationSystem.Schedule*
+- uid: Quantum.Core.NavigationSystem.OnWaypointReached(Quantum.EntityRef,Photon.Deterministic.FPVector3,Quantum.Navigation.WaypointFlag,System.Boolean@)
+  commentId: M:Quantum.Core.NavigationSystem.OnWaypointReached(Quantum.EntityRef,Photon.Deterministic.FPVector3,Quantum.Navigation.WaypointFlag,System.Boolean@)
+  id: OnWaypointReached(Quantum.EntityRef,Photon.Deterministic.FPVector3,Quantum.Navigation.WaypointFlag,System.Boolean@)
+  parent: Quantum.Core.NavigationSystem
+  langs:
+  - csharp
+  - vb
+  name: OnWaypointReached(EntityRef, FPVector3, WaypointFlag, ref bool)
+  nameWithType: NavigationSystem.OnWaypointReached(EntityRef, FPVector3, Navigation.WaypointFlag, ref bool)
+  fullName: Quantum.Core.NavigationSystem.OnWaypointReached(Quantum.EntityRef, Photon.Deterministic.FPVector3, Quantum.Navigation.WaypointFlag, ref bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnWaypointReached
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9227
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: >-
+    Callback is executed when a waypoint has been reached.
+
+    Set resetAgent parameter to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when a new target for the agent was issued inside this callback.
+  example: []
+  syntax:
+    content: public void OnWaypointReached(EntityRef entity, FPVector3 waypoint, Navigation.WaypointFlag waypointFlags, ref bool resetAgent)
+    parameters:
+    - id: entity
+      type: Quantum.EntityRef
+      description: Agent entity
+    - id: waypoint
+      type: Photon.Deterministic.FPVector3
+      description: World position waypoint
+    - id: waypointFlags
+      type: Quantum.Navigation.WaypointFlag
+      description: Waypoint flags
+    - id: resetAgent
+      type: System.Boolean
+      description: A flag to prevent resetting the agent after this callback.
+    content.vb: Public Sub OnWaypointReached(entity As EntityRef, waypoint As FPVector3, waypointFlags As Navigation.WaypointFlag, resetAgent As Boolean)
+  overload: Quantum.Core.NavigationSystem.OnWaypointReached*
+  implements:
+  - Quantum.INavigationCallbacks.OnWaypointReached(Quantum.EntityRef,Photon.Deterministic.FPVector3,Quantum.Navigation.WaypointFlag,System.Boolean@)
+  nameWithType.vb: NavigationSystem.OnWaypointReached(EntityRef, FPVector3, Navigation.WaypointFlag, Boolean)
+  fullName.vb: Quantum.Core.NavigationSystem.OnWaypointReached(Quantum.EntityRef, Photon.Deterministic.FPVector3, Quantum.Navigation.WaypointFlag, Boolean)
+  name.vb: OnWaypointReached(EntityRef, FPVector3, WaypointFlag, Boolean)
+- uid: Quantum.Core.NavigationSystem.OnSearchFailed(Quantum.EntityRef,System.Boolean@)
+  commentId: M:Quantum.Core.NavigationSystem.OnSearchFailed(Quantum.EntityRef,System.Boolean@)
+  id: OnSearchFailed(Quantum.EntityRef,System.Boolean@)
+  parent: Quantum.Core.NavigationSystem
+  langs:
+  - csharp
+  - vb
+  name: OnSearchFailed(EntityRef, ref bool)
+  nameWithType: NavigationSystem.OnSearchFailed(EntityRef, ref bool)
+  fullName: Quantum.Core.NavigationSystem.OnSearchFailed(Quantum.EntityRef, ref bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnSearchFailed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9232
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: >-
+    The path finding request issued by <xref href="Quantum.NavMeshPathfinder.SetTarget(Quantum.Core.FrameBase%2cPhoton.Deterministic.FPVector3%2cQuantum.NavMesh)" data-throw-if-not-resolved="false"></xref> failed.
+
+    Set resetAgent parameter to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when a new target for the agent was issued inside this callback.
+  example: []
+  syntax:
+    content: public void OnSearchFailed(EntityRef entity, ref bool resetAgent)
+    parameters:
+    - id: entity
+      type: Quantum.EntityRef
+      description: Agent entity
+    - id: resetAgent
+      type: System.Boolean
+      description: A flag to prevent resetting the agent after this callback.
+    content.vb: Public Sub OnSearchFailed(entity As EntityRef, resetAgent As Boolean)
+  overload: Quantum.Core.NavigationSystem.OnSearchFailed*
+  implements:
+  - Quantum.INavigationCallbacks.OnSearchFailed(Quantum.EntityRef,System.Boolean@)
+  nameWithType.vb: NavigationSystem.OnSearchFailed(EntityRef, Boolean)
+  fullName.vb: Quantum.Core.NavigationSystem.OnSearchFailed(Quantum.EntityRef, Boolean)
+  name.vb: OnSearchFailed(EntityRef, Boolean)
+- uid: Quantum.Core.NavigationSystem.OnMoveAgent(Quantum.EntityRef,Photon.Deterministic.FPVector2)
+  commentId: M:Quantum.Core.NavigationSystem.OnMoveAgent(Quantum.EntityRef,Photon.Deterministic.FPVector2)
+  id: OnMoveAgent(Quantum.EntityRef,Photon.Deterministic.FPVector2)
+  parent: Quantum.Core.NavigationSystem
+  langs:
+  - csharp
+  - vb
+  name: OnMoveAgent(EntityRef, FPVector2)
+  nameWithType: NavigationSystem.OnMoveAgent(EntityRef, FPVector2)
+  fullName: Quantum.Core.NavigationSystem.OnMoveAgent(Quantum.EntityRef, Photon.Deterministic.FPVector2)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnMoveAgent
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9237
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: >-
+    This callback is only called when <xref href="Quantum.NavMeshAgentConfig.MovementType" data-throw-if-not-resolved="false"></xref> is set to <xref href="Quantum.Navigation.MovementType.Callback" data-throw-if-not-resolved="false"></xref>."/&gt;
+
+    It can be used to implement a custom steering behavior for the agent using the desiredDirection which is an outcome of the pathfinding and avoidance systems.
+  example: []
+  syntax:
+    content: public void OnMoveAgent(EntityRef entity, FPVector2 desiredDirection)
+    parameters:
+    - id: entity
+      type: Quantum.EntityRef
+      description: Agent entity
+    - id: desiredDirection
+      type: Photon.Deterministic.FPVector2
+      description: Desired movement direction
+    content.vb: Public Sub OnMoveAgent(entity As EntityRef, desiredDirection As FPVector2)
+  overload: Quantum.Core.NavigationSystem.OnMoveAgent*
+  implements:
+  - Quantum.INavigationCallbacks.OnMoveAgent(Quantum.EntityRef,Photon.Deterministic.FPVector2)
+references:
+- uid: Quantum.Core
+  commentId: N:Quantum.Core
+  href: Quantum.html
+  name: Quantum.Core
+  nameWithType: Quantum.Core
+  fullName: Quantum.Core
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.SystemBase
+  commentId: T:Quantum.SystemBase
+  parent: Quantum
+  href: Quantum.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: Quantum.SystemBase
+- uid: Quantum.INavigationCallbacks
+  commentId: T:Quantum.INavigationCallbacks
+  parent: Quantum
+  isExternal: true
+  name: INavigationCallbacks
+  nameWithType: INavigationCallbacks
+  fullName: Quantum.INavigationCallbacks
+- uid: Quantum.SystemBase.RuntimeIndex
+  commentId: P:Quantum.SystemBase.RuntimeIndex
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_RuntimeIndex
+  name: RuntimeIndex
+  nameWithType: SystemBase.RuntimeIndex
+  fullName: Quantum.SystemBase.RuntimeIndex
+- uid: Quantum.SystemBase.ParentSystem
+  commentId: P:Quantum.SystemBase.ParentSystem
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ParentSystem
+  name: ParentSystem
+  nameWithType: SystemBase.ParentSystem
+  fullName: Quantum.SystemBase.ParentSystem
+- uid: Quantum.SystemBase.ChildSystems
+  commentId: P:Quantum.SystemBase.ChildSystems
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ChildSystems
+  name: ChildSystems
+  nameWithType: SystemBase.ChildSystems
+  fullName: Quantum.SystemBase.ChildSystems
+- uid: Quantum.SystemBase.Hierarchy
+  commentId: P:Quantum.SystemBase.Hierarchy
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Hierarchy
+  name: Hierarchy
+  nameWithType: SystemBase.Hierarchy
+  fullName: Quantum.SystemBase.Hierarchy
+- uid: Quantum.SystemBase.StartEnabled
+  commentId: P:Quantum.SystemBase.StartEnabled
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_StartEnabled
+  name: StartEnabled
+  nameWithType: SystemBase.StartEnabled
+  fullName: Quantum.SystemBase.StartEnabled
+- uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnInit(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  name: OnInit(Frame)
+  nameWithType: SystemBase.OnInit(Frame)
+  fullName: Quantum.SystemBase.OnInit(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  name: OnEnabled(Frame)
+  nameWithType: SystemBase.OnEnabled(Frame)
+  fullName: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  name: OnDisabled(Frame)
+  nameWithType: SystemBase.OnDisabled(Frame)
+  fullName: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: OnSchedule(Frame, TaskHandle)
+  nameWithType: SystemBase.OnSchedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.OnSchedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: SystemBase.Schedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.NavigationSystem.Schedule*
+  commentId: Overload:Quantum.Core.NavigationSystem.Schedule
+  href: Quantum.Core.NavigationSystem.html#Quantum_Core_NavigationSystem_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule
+  nameWithType: NavigationSystem.Schedule
+  fullName: Quantum.Core.NavigationSystem.Schedule
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.Task.TaskHandle
+  commentId: T:Quantum.Task.TaskHandle
+  parent: Quantum.Task
+  isExternal: true
+  name: TaskHandle
+  nameWithType: TaskHandle
+  fullName: Quantum.Task.TaskHandle
+- uid: Quantum.Task
+  commentId: N:Quantum.Task
+  href: Quantum.html
+  name: Quantum.Task
+  nameWithType: Quantum.Task
+  fullName: Quantum.Task
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Task
+    name: Task
+    href: Quantum.Task.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Task
+    name: Task
+    href: Quantum.Task.html
+- uid: Quantum.Core.NavigationSystem.OnWaypointReached*
+  commentId: Overload:Quantum.Core.NavigationSystem.OnWaypointReached
+  href: Quantum.Core.NavigationSystem.html#Quantum_Core_NavigationSystem_OnWaypointReached_Quantum_EntityRef_Photon_Deterministic_FPVector3_Quantum_Navigation_WaypointFlag_System_Boolean__
+  name: OnWaypointReached
+  nameWithType: NavigationSystem.OnWaypointReached
+  fullName: Quantum.Core.NavigationSystem.OnWaypointReached
+- uid: Quantum.INavigationCallbacks.OnWaypointReached(Quantum.EntityRef,Photon.Deterministic.FPVector3,Quantum.Navigation.WaypointFlag,System.Boolean@)
+  commentId: M:Quantum.INavigationCallbacks.OnWaypointReached(Quantum.EntityRef,Photon.Deterministic.FPVector3,Quantum.Navigation.WaypointFlag,System.Boolean@)
+  parent: Quantum.INavigationCallbacks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: OnWaypointReached(EntityRef, FPVector3, WaypointFlag, ref bool)
+  nameWithType: INavigationCallbacks.OnWaypointReached(EntityRef, FPVector3, Navigation.WaypointFlag, ref bool)
+  fullName: Quantum.INavigationCallbacks.OnWaypointReached(Quantum.EntityRef, Photon.Deterministic.FPVector3, Quantum.Navigation.WaypointFlag, ref bool)
+  nameWithType.vb: INavigationCallbacks.OnWaypointReached(EntityRef, FPVector3, Navigation.WaypointFlag, Boolean)
+  fullName.vb: Quantum.INavigationCallbacks.OnWaypointReached(Quantum.EntityRef, Photon.Deterministic.FPVector3, Quantum.Navigation.WaypointFlag, Boolean)
+  name.vb: OnWaypointReached(EntityRef, FPVector3, WaypointFlag, Boolean)
+  spec.csharp:
+  - uid: Quantum.INavigationCallbacks.OnWaypointReached(Quantum.EntityRef,Photon.Deterministic.FPVector3,Quantum.Navigation.WaypointFlag,System.Boolean@)
+    name: OnWaypointReached
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FPVector3
+    name: FPVector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.Navigation.WaypointFlag
+    name: WaypointFlag
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Quantum.INavigationCallbacks.OnWaypointReached(Quantum.EntityRef,Photon.Deterministic.FPVector3,Quantum.Navigation.WaypointFlag,System.Boolean@)
+    name: OnWaypointReached
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FPVector3
+    name: FPVector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.Navigation.WaypointFlag
+    name: WaypointFlag
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Photon.Deterministic.FPVector3
+  commentId: T:Photon.Deterministic.FPVector3
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FPVector3
+  nameWithType: FPVector3
+  fullName: Photon.Deterministic.FPVector3
+- uid: Quantum.Navigation.WaypointFlag
+  commentId: T:Quantum.Navigation.WaypointFlag
+  parent: Quantum
+  isExternal: true
+  name: Navigation.WaypointFlag
+  nameWithType: Navigation.WaypointFlag
+  fullName: Quantum.Navigation.WaypointFlag
+  spec.csharp:
+  - uid: Quantum.Navigation
+    name: Navigation
+    isExternal: true
+  - name: .
+  - uid: Quantum.Navigation.WaypointFlag
+    name: WaypointFlag
+    isExternal: true
+  spec.vb:
+  - uid: Quantum.Navigation
+    name: Navigation
+    isExternal: true
+  - name: .
+  - uid: Quantum.Navigation.WaypointFlag
+    name: WaypointFlag
+    isExternal: true
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.NavMeshPathfinder.SetTarget(Quantum.Core.FrameBase,Photon.Deterministic.FPVector3,Quantum.NavMesh)
+  commentId: M:Quantum.NavMeshPathfinder.SetTarget(Quantum.Core.FrameBase,Photon.Deterministic.FPVector3,Quantum.NavMesh)
+  isExternal: true
+  name: SetTarget(FrameBase, FPVector3, NavMesh)
+  nameWithType: NavMeshPathfinder.SetTarget(FrameBase, FPVector3, NavMesh)
+  fullName: Quantum.NavMeshPathfinder.SetTarget(Quantum.Core.FrameBase, Photon.Deterministic.FPVector3, Quantum.NavMesh)
+  spec.csharp:
+  - uid: Quantum.NavMeshPathfinder.SetTarget(Quantum.Core.FrameBase,Photon.Deterministic.FPVector3,Quantum.NavMesh)
+    name: SetTarget
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FPVector3
+    name: FPVector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.NavMesh
+    name: NavMesh
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.NavMeshPathfinder.SetTarget(Quantum.Core.FrameBase,Photon.Deterministic.FPVector3,Quantum.NavMesh)
+    name: SetTarget
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FPVector3
+    name: FPVector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.NavMesh
+    name: NavMesh
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.NavigationSystem.OnSearchFailed*
+  commentId: Overload:Quantum.Core.NavigationSystem.OnSearchFailed
+  href: Quantum.Core.NavigationSystem.html#Quantum_Core_NavigationSystem_OnSearchFailed_Quantum_EntityRef_System_Boolean__
+  name: OnSearchFailed
+  nameWithType: NavigationSystem.OnSearchFailed
+  fullName: Quantum.Core.NavigationSystem.OnSearchFailed
+- uid: Quantum.INavigationCallbacks.OnSearchFailed(Quantum.EntityRef,System.Boolean@)
+  commentId: M:Quantum.INavigationCallbacks.OnSearchFailed(Quantum.EntityRef,System.Boolean@)
+  parent: Quantum.INavigationCallbacks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: OnSearchFailed(EntityRef, ref bool)
+  nameWithType: INavigationCallbacks.OnSearchFailed(EntityRef, ref bool)
+  fullName: Quantum.INavigationCallbacks.OnSearchFailed(Quantum.EntityRef, ref bool)
+  nameWithType.vb: INavigationCallbacks.OnSearchFailed(EntityRef, Boolean)
+  fullName.vb: Quantum.INavigationCallbacks.OnSearchFailed(Quantum.EntityRef, Boolean)
+  name.vb: OnSearchFailed(EntityRef, Boolean)
+  spec.csharp:
+  - uid: Quantum.INavigationCallbacks.OnSearchFailed(Quantum.EntityRef,System.Boolean@)
+    name: OnSearchFailed
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Quantum.INavigationCallbacks.OnSearchFailed(Quantum.EntityRef,System.Boolean@)
+    name: OnSearchFailed
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Quantum.NavMeshAgentConfig.MovementType
+  commentId: F:Quantum.NavMeshAgentConfig.MovementType
+  isExternal: true
+  name: MovementType
+  nameWithType: NavMeshAgentConfig.MovementType
+  fullName: Quantum.NavMeshAgentConfig.MovementType
+- uid: Quantum.Navigation.MovementType.Callback
+  commentId: F:Quantum.Navigation.MovementType.Callback
+  isExternal: true
+  name: Callback
+  nameWithType: Navigation.MovementType.Callback
+  fullName: Quantum.Navigation.MovementType.Callback
+- uid: Quantum.Core.NavigationSystem.OnMoveAgent*
+  commentId: Overload:Quantum.Core.NavigationSystem.OnMoveAgent
+  href: Quantum.Core.NavigationSystem.html#Quantum_Core_NavigationSystem_OnMoveAgent_Quantum_EntityRef_Photon_Deterministic_FPVector2_
+  name: OnMoveAgent
+  nameWithType: NavigationSystem.OnMoveAgent
+  fullName: Quantum.Core.NavigationSystem.OnMoveAgent
+- uid: Quantum.INavigationCallbacks.OnMoveAgent(Quantum.EntityRef,Photon.Deterministic.FPVector2)
+  commentId: M:Quantum.INavigationCallbacks.OnMoveAgent(Quantum.EntityRef,Photon.Deterministic.FPVector2)
+  parent: Quantum.INavigationCallbacks
+  isExternal: true
+  name: OnMoveAgent(EntityRef, FPVector2)
+  nameWithType: INavigationCallbacks.OnMoveAgent(EntityRef, FPVector2)
+  fullName: Quantum.INavigationCallbacks.OnMoveAgent(Quantum.EntityRef, Photon.Deterministic.FPVector2)
+  spec.csharp:
+  - uid: Quantum.INavigationCallbacks.OnMoveAgent(Quantum.EntityRef,Photon.Deterministic.FPVector2)
+    name: OnMoveAgent
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FPVector2
+    name: FPVector2
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.INavigationCallbacks.OnMoveAgent(Quantum.EntityRef,Photon.Deterministic.FPVector2)
+    name: OnMoveAgent
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FPVector2
+    name: FPVector2
+    isExternal: true
+  - name: )
+- uid: Photon.Deterministic.FPVector2
+  commentId: T:Photon.Deterministic.FPVector2
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FPVector2
+  nameWithType: FPVector2
+  fullName: Photon.Deterministic.FPVector2

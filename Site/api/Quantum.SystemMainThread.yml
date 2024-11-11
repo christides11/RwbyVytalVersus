@@ -1,0 +1,545 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.SystemMainThread
+  commentId: T:Quantum.SystemMainThread
+  id: SystemMainThread
+  parent: Quantum
+  children:
+  - Quantum.SystemMainThread.#ctor
+  - Quantum.SystemMainThread.#ctor(System.String)
+  - Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  - Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  - Quantum.SystemMainThread.Update(Quantum.Frame)
+  langs:
+  - csharp
+  - vb
+  name: SystemMainThread
+  nameWithType: SystemMainThread
+  fullName: Quantum.SystemMainThread
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SystemMainThread
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8387
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Most common Quantum system type. Implements a regular Update() with all the usual features.
+
+    <p>Always register new system types on the <xref href="Quantum.SystemsConfig" data-throw-if-not-resolved="false"></xref>.</p>
+  example: []
+  syntax:
+    content: 'public abstract class SystemMainThread : SystemBase'
+    content.vb: Public MustInherit Class SystemMainThread Inherits SystemBase
+  inheritance:
+  - System.Object
+  - Quantum.SystemBase
+  derivedClasses:
+  - Quantum.BotSDK.BotSDKDebuggerSystem
+  - Quantum.BotSDK.BotSDKTimerSystem
+  - Quantum.CombatHitDetectionSystem
+  - Quantum.CombatHitResolverSystem
+  - Quantum.CombatboxBroadphaseSystem
+  - Quantum.CombatboxNarrowphaseSystem
+  - Quantum.CombatboxResolverSystem
+  - Quantum.Core.PlayerConnectedSystem
+  - Quantum.SystemMainThreadFilter`1
+  - Quantum.SystemMainThreadGroup
+  - Quantum.mfo.Systems.StructSizeCheckSystem
+  - Quantum.mfo.Systems.UpdateCombatTargetSystem
+  - rwby.core.systems.GenericGamemodeStateSystem
+  - rwby.core.systems.MapIntroSystem
+  - rwby.core.systems.TeamVersusEndGameSystem
+  - rwby.core.systems.TeamVersusOutroSetupSystem
+  - rwby.core.systems.TeamVersusPlayerRespawnSystem
+  - rwby.core.systems.TeamVersusVictoryScreenSystem
+  - rwby.core.systems.TrainingPlayerRespawnSystem
+  - rwby.core.systems.teamversus.TeamVersusCharacterIntroSystem
+  - rwby.core.systems.training.TrainingAISystem
+  - rwby.core.systems.training.TrainingDummyEarlyUpdateSystem
+  - rwby.core.systems.training.TrainingDummyGeneralSystem
+  inheritedMembers:
+  - Quantum.SystemBase.RuntimeIndex
+  - Quantum.SystemBase.ParentSystem
+  - Quantum.SystemBase.ChildSystems
+  - Quantum.SystemBase.Hierarchy
+  - Quantum.SystemBase.StartEnabled
+  - Quantum.SystemBase.OnInit(Quantum.Frame)
+  - Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  - Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+- uid: Quantum.SystemMainThread.#ctor
+  commentId: M:Quantum.SystemMainThread.#ctor
+  id: '#ctor'
+  parent: Quantum.SystemMainThread
+  langs:
+  - csharp
+  - vb
+  name: SystemMainThread()
+  nameWithType: SystemMainThread.SystemMainThread()
+  fullName: Quantum.SystemMainThread.SystemMainThread()
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8394
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Create a new system.
+  example: []
+  syntax:
+    content: public SystemMainThread()
+    content.vb: Public Sub New()
+  overload: Quantum.SystemMainThread.#ctor*
+  nameWithType.vb: SystemMainThread.New()
+  fullName.vb: Quantum.SystemMainThread.New()
+  name.vb: New()
+- uid: Quantum.SystemMainThread.#ctor(System.String)
+  commentId: M:Quantum.SystemMainThread.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Quantum.SystemMainThread
+  langs:
+  - csharp
+  - vb
+  name: SystemMainThread(string)
+  nameWithType: SystemMainThread.SystemMainThread(string)
+  fullName: Quantum.SystemMainThread.SystemMainThread(string)
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8402
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Create a new system with a custom name.
+  example: []
+  syntax:
+    content: public SystemMainThread(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The system name shows up in the task profiler for example.
+    content.vb: Public Sub New(name As String)
+  overload: Quantum.SystemMainThread.#ctor*
+  nameWithType.vb: SystemMainThread.New(String)
+  fullName.vb: Quantum.SystemMainThread.New(String)
+  name.vb: New(String)
+- uid: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  id: ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemMainThread
+  langs:
+  - csharp
+  - vb
+  name: ScheduleUpdate(Frame, TaskHandle)
+  nameWithType: SystemMainThread.ScheduleUpdate(Frame, TaskHandle)
+  fullName: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame, Quantum.Task.TaskHandle)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ScheduleUpdate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8412
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Adds the basic update callback.
+  example: []
+  syntax:
+    content: protected TaskHandle ScheduleUpdate(Frame f, TaskHandle taskHandle)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The referenced frame.
+    - id: taskHandle
+      type: Quantum.Task.TaskHandle
+      description: The initial task handle.
+    return:
+      type: Quantum.Task.TaskHandle
+      description: The final task graph.
+    content.vb: Protected Function ScheduleUpdate(f As Frame, taskHandle As TaskHandle) As TaskHandle
+  overload: Quantum.SystemMainThread.ScheduleUpdate*
+- uid: Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  id: Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemMainThread
+  langs:
+  - csharp
+  - vb
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: SystemMainThread.Schedule(Frame, TaskHandle)
+  fullName: Quantum.SystemMainThread.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Schedule
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8426
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Override to add additional tasks.
+  example: []
+  syntax:
+    content: protected override TaskHandle Schedule(Frame f, TaskHandle taskHandle)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The referenced frame.
+    - id: taskHandle
+      type: Quantum.Task.TaskHandle
+      description: The initial task handle.
+    return:
+      type: Quantum.Task.TaskHandle
+      description: The final task graph.
+    content.vb: Protected Overrides Function Schedule(f As Frame, taskHandle As TaskHandle) As TaskHandle
+  overridden: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  overload: Quantum.SystemMainThread.Schedule*
+- uid: Quantum.SystemMainThread.Update(Quantum.Frame)
+  commentId: M:Quantum.SystemMainThread.Update(Quantum.Frame)
+  id: Update(Quantum.Frame)
+  parent: Quantum.SystemMainThread
+  langs:
+  - csharp
+  - vb
+  name: Update(Frame)
+  nameWithType: SystemMainThread.Update(Frame)
+  fullName: Quantum.SystemMainThread.Update(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Update
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8442
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Override to add workload.
+  example: []
+  syntax:
+    content: public abstract void Update(Frame f)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The current fame.
+    content.vb: Public MustOverride Sub Update(f As Frame)
+  overload: Quantum.SystemMainThread.Update*
+references:
+- uid: Quantum.SystemsConfig
+  commentId: T:Quantum.SystemsConfig
+  parent: Quantum
+  href: Quantum.SystemsConfig.html
+  name: SystemsConfig
+  nameWithType: SystemsConfig
+  fullName: Quantum.SystemsConfig
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.SystemBase
+  commentId: T:Quantum.SystemBase
+  parent: Quantum
+  href: Quantum.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: Quantum.SystemBase
+- uid: Quantum.SystemBase.RuntimeIndex
+  commentId: P:Quantum.SystemBase.RuntimeIndex
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_RuntimeIndex
+  name: RuntimeIndex
+  nameWithType: SystemBase.RuntimeIndex
+  fullName: Quantum.SystemBase.RuntimeIndex
+- uid: Quantum.SystemBase.ParentSystem
+  commentId: P:Quantum.SystemBase.ParentSystem
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ParentSystem
+  name: ParentSystem
+  nameWithType: SystemBase.ParentSystem
+  fullName: Quantum.SystemBase.ParentSystem
+- uid: Quantum.SystemBase.ChildSystems
+  commentId: P:Quantum.SystemBase.ChildSystems
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ChildSystems
+  name: ChildSystems
+  nameWithType: SystemBase.ChildSystems
+  fullName: Quantum.SystemBase.ChildSystems
+- uid: Quantum.SystemBase.Hierarchy
+  commentId: P:Quantum.SystemBase.Hierarchy
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Hierarchy
+  name: Hierarchy
+  nameWithType: SystemBase.Hierarchy
+  fullName: Quantum.SystemBase.Hierarchy
+- uid: Quantum.SystemBase.StartEnabled
+  commentId: P:Quantum.SystemBase.StartEnabled
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_StartEnabled
+  name: StartEnabled
+  nameWithType: SystemBase.StartEnabled
+  fullName: Quantum.SystemBase.StartEnabled
+- uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnInit(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  name: OnInit(Frame)
+  nameWithType: SystemBase.OnInit(Frame)
+  fullName: Quantum.SystemBase.OnInit(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  name: OnEnabled(Frame)
+  nameWithType: SystemBase.OnEnabled(Frame)
+  fullName: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  name: OnDisabled(Frame)
+  nameWithType: SystemBase.OnDisabled(Frame)
+  fullName: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: OnSchedule(Frame, TaskHandle)
+  nameWithType: SystemBase.OnSchedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.OnSchedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.SystemMainThread.#ctor*
+  commentId: Overload:Quantum.SystemMainThread.#ctor
+  href: Quantum.SystemMainThread.html#Quantum_SystemMainThread__ctor
+  name: SystemMainThread
+  nameWithType: SystemMainThread.SystemMainThread
+  fullName: Quantum.SystemMainThread.SystemMainThread
+  nameWithType.vb: SystemMainThread.New
+  fullName.vb: Quantum.SystemMainThread.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Quantum.SystemMainThread.ScheduleUpdate*
+  commentId: Overload:Quantum.SystemMainThread.ScheduleUpdate
+  href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_ScheduleUpdate_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: ScheduleUpdate
+  nameWithType: SystemMainThread.ScheduleUpdate
+  fullName: Quantum.SystemMainThread.ScheduleUpdate
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.Task.TaskHandle
+  commentId: T:Quantum.Task.TaskHandle
+  parent: Quantum.Task
+  isExternal: true
+  name: TaskHandle
+  nameWithType: TaskHandle
+  fullName: Quantum.Task.TaskHandle
+- uid: Quantum.Task
+  commentId: N:Quantum.Task
+  href: Quantum.html
+  name: Quantum.Task
+  nameWithType: Quantum.Task
+  fullName: Quantum.Task
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Task
+    name: Task
+    href: Quantum.Task.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Task
+    name: Task
+    href: Quantum.Task.html
+- uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: SystemBase.Schedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemMainThread.Schedule*
+  commentId: Overload:Quantum.SystemMainThread.Schedule
+  href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule
+  nameWithType: SystemMainThread.Schedule
+  fullName: Quantum.SystemMainThread.Schedule
+- uid: Quantum.SystemMainThread.Update*
+  commentId: Overload:Quantum.SystemMainThread.Update
+  href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Update_Quantum_Frame_
+  name: Update
+  nameWithType: SystemMainThread.Update
+  fullName: Quantum.SystemMainThread.Update

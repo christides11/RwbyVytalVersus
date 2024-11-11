@@ -1,0 +1,1487 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.SessionRunner
+  commentId: T:Quantum.SessionRunner
+  id: SessionRunner
+  parent: Quantum
+  children:
+  - Quantum.SessionRunner.Communicator
+  - Quantum.SessionRunner.CreateRunnerInternal(Quantum.SessionRunner.Arguments)
+  - Quantum.SessionRunner.DeltaTimeType
+  - Quantum.SessionRunner.Destroy
+  - Quantum.SessionRunner.DeterministicGame
+  - Quantum.SessionRunner.Dispose
+  - Quantum.SessionRunner.Id
+  - Quantum.SessionRunner.IsRunning
+  - Quantum.SessionRunner.OnShutdown(Quantum.ShutdownCause)
+  - Quantum.SessionRunner.RecordingFlags
+  - Quantum.SessionRunner.Service(System.Nullable{System.Double})
+  - Quantum.SessionRunner.Session
+  - Quantum.SessionRunner.Shutdown(Quantum.ShutdownCause)
+  - Quantum.SessionRunner.ShutdownAsync(Quantum.ShutdownCause)
+  - Quantum.SessionRunner.ShutdownInternal(Quantum.SessionRunner,Quantum.ShutdownCause)
+  - Quantum.SessionRunner.Start(Quantum.SessionRunner.Arguments)
+  - Quantum.SessionRunner.StartAsync(Quantum.SessionRunner.Arguments)
+  - Quantum.SessionRunner.State
+  - Quantum.SessionRunner.WaitForShutdownAsync
+  - Quantum.SessionRunner.WaitForShutdownAsync(System.Threading.CancellationToken)
+  - Quantum.SessionRunner.WaitForStartAsync(System.Single)
+  - Quantum.SessionRunner.WaitForStartAsync(System.Threading.CancellationToken)
+  - Quantum.SessionRunner.op_Implicit(Quantum.SessionRunner)~System.Boolean
+  langs:
+  - csharp
+  - vb
+  name: SessionRunner
+  nameWithType: SessionRunner
+  fullName: Quantum.SessionRunner
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SessionRunner
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7861
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    The SessionRunner helps to start, run and shutdown a Quantum simulation.
+
+    It should never be reused for multiple simulations of multiple runs of the same game session. Always recrate the runner.
+
+    It has an extensive list of starting <xref href="Quantum.SessionRunner.Arguments" data-throw-if-not-resolved="false"></xref> that make it start-able for a variety of use cases: Local, Multiplayer, Replay, Server etc
+
+    It extracts platform dependent code into the <xref href="Quantum.IRunnerFactory" data-throw-if-not-resolved="false"></xref> parameter.
+
+    It offers asynchronous methods to start and stop the runner but although it uses the TPL syntax for convenience it is not considered to be run in a multi-threaded environment. 
+
+    Use the non-async versions of the methods or use a <xref href="System.Threading.Tasks.ConcurrentExclusiveSchedulerPair.ExclusiveScheduler" data-throw-if-not-resolved="false"></xref> for unit tests and console applications.
+
+    Also never use the async methods from the Quantum server plugin, parallelization is done by the Photon-Server.
+
+    This class is delivered in source code to enable developers to create custom runner code.
+  example: []
+  syntax:
+    content: public class SessionRunner
+    content.vb: Public Class SessionRunner
+  inheritance:
+  - System.Object
+- uid: Quantum.SessionRunner.Session
+  commentId: P:Quantum.SessionRunner.Session
+  id: Session
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: SessionRunner.Session
+  fullName: Quantum.SessionRunner.Session
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Session
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7430
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Access the Quantum session. Will be created during the start sequence.
+  example: []
+  syntax:
+    content: public DeterministicSession Session { get; }
+    parameters: []
+    return:
+      type: Photon.Deterministic.DeterministicSession
+    content.vb: Public Property Session As DeterministicSession
+  overload: Quantum.SessionRunner.Session*
+- uid: Quantum.SessionRunner.DeterministicGame
+  commentId: P:Quantum.SessionRunner.DeterministicGame
+  id: DeterministicGame
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: DeterministicGame
+  nameWithType: SessionRunner.DeterministicGame
+  fullName: Quantum.SessionRunner.DeterministicGame
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeterministicGame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7434
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Access the Quantum game. Will be created during the start sequence.
+  example: []
+  syntax:
+    content: public IDeterministicGame DeterministicGame { get; }
+    parameters: []
+    return:
+      type: Photon.Deterministic.IDeterministicGame
+    content.vb: Public Property DeterministicGame As IDeterministicGame
+  overload: Quantum.SessionRunner.DeterministicGame*
+- uid: Quantum.SessionRunner.Id
+  commentId: P:Quantum.SessionRunner.Id
+  id: Id
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: SessionRunner.Id
+  fullName: Quantum.SessionRunner.Id
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Id
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7438
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Runner id, is set by <xref href="Quantum.SessionRunner.Arguments.RunnerId" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: Quantum.SessionRunner.Id*
+- uid: Quantum.SessionRunner.IsRunning
+  commentId: P:Quantum.SessionRunner.IsRunning
+  id: IsRunning
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: IsRunning
+  nameWithType: SessionRunner.IsRunning
+  fullName: Quantum.SessionRunner.IsRunning
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IsRunning
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7442
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Returns if the SessionRunner is running a simulation.
+  example: []
+  syntax:
+    content: public bool IsRunning { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRunning As Boolean
+  overload: Quantum.SessionRunner.IsRunning*
+- uid: Quantum.SessionRunner.Communicator
+  commentId: P:Quantum.SessionRunner.Communicator
+  id: Communicator
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Communicator
+  nameWithType: SessionRunner.Communicator
+  fullName: Quantum.SessionRunner.Communicator
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Communicator
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7446
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Access the communicator object.
+  example: []
+  syntax:
+    content: public ICommunicator Communicator { get; }
+    parameters: []
+    return:
+      type: Photon.Deterministic.ICommunicator
+    content.vb: Public Property Communicator As ICommunicator
+  overload: Quantum.SessionRunner.Communicator*
+- uid: Quantum.SessionRunner.State
+  commentId: P:Quantum.SessionRunner.State
+  id: State
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: SessionRunner.State
+  fullName: Quantum.SessionRunner.State
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: State
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7450
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Get the current state of the runner.
+  example: []
+  syntax:
+    content: public SessionRunner.SessionState State { get; }
+    parameters: []
+    return:
+      type: Quantum.SessionRunner.SessionState
+    content.vb: Public Property State As SessionRunner.SessionState
+  overload: Quantum.SessionRunner.State*
+- uid: Quantum.SessionRunner.DeltaTimeType
+  commentId: P:Quantum.SessionRunner.DeltaTimeType
+  id: DeltaTimeType
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: DeltaTimeType
+  nameWithType: SessionRunner.DeltaTimeType
+  fullName: Quantum.SessionRunner.DeltaTimeType
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeltaTimeType
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7454
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Will be used by the Unity runner to update the Quantum simulation with different delta time settings.
+  example: []
+  syntax:
+    content: public SimulationUpdateTime DeltaTimeType { get; set; }
+    parameters: []
+    return:
+      type: Quantum.SimulationUpdateTime
+    content.vb: Public Property DeltaTimeType As SimulationUpdateTime
+  overload: Quantum.SessionRunner.DeltaTimeType*
+- uid: Quantum.SessionRunner.RecordingFlags
+  commentId: P:Quantum.SessionRunner.RecordingFlags
+  id: RecordingFlags
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: RecordingFlags
+  nameWithType: SessionRunner.RecordingFlags
+  fullName: Quantum.SessionRunner.RecordingFlags
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RecordingFlags
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7458
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Access the recording flags that the runner was started with.
+  example: []
+  syntax:
+    content: public RecordingFlags RecordingFlags { get; }
+    parameters: []
+    return:
+      type: Quantum.RecordingFlags
+    content.vb: Public Property RecordingFlags As RecordingFlags
+  overload: Quantum.SessionRunner.RecordingFlags*
+- uid: Quantum.SessionRunner.op_Implicit(Quantum.SessionRunner)~System.Boolean
+  commentId: M:Quantum.SessionRunner.op_Implicit(Quantum.SessionRunner)~System.Boolean
+  id: op_Implicit(Quantum.SessionRunner)~System.Boolean
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: implicit operator bool(SessionRunner)
+  nameWithType: SessionRunner.implicit operator bool(SessionRunner)
+  fullName: Quantum.SessionRunner.implicit operator bool(Quantum.SessionRunner)
+  type: Operator
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: op_Implicit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7469
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Support Unity null checks.
+  example: []
+  syntax:
+    content: public static implicit operator bool(SessionRunner v)
+    parameters:
+    - id: v
+      type: Quantum.SessionRunner
+      description: ''
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Widening Operator CType(v As SessionRunner) As Boolean
+  overload: Quantum.SessionRunner.op_Implicit*
+  nameWithType.vb: SessionRunner.CType(SessionRunner)
+  fullName.vb: Quantum.SessionRunner.CType(Quantum.SessionRunner)
+  name.vb: CType(SessionRunner)
+- uid: Quantum.SessionRunner.Dispose
+  commentId: M:Quantum.SessionRunner.Dispose
+  id: Dispose
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: SessionRunner.Dispose()
+  fullName: Quantum.SessionRunner.Dispose()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Dispose
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7477
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Implements disposable interface. Calls Shutdown internally. 
+
+    This is also called from inside Session.Destroy() to signal shutdown by the simulation.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Quantum.SessionRunner.Dispose*
+- uid: Quantum.SessionRunner.Destroy
+  commentId: M:Quantum.SessionRunner.Destroy
+  id: Destroy
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Destroy()
+  nameWithType: SessionRunner.Destroy()
+  fullName: Quantum.SessionRunner.Destroy()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Destroy
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7484
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Calls shutdown. Backwards compatibility.
+  example: []
+  syntax:
+    content: public void Destroy()
+    content.vb: Public Sub Destroy()
+  overload: Quantum.SessionRunner.Destroy*
+- uid: Quantum.SessionRunner.OnShutdown(Quantum.ShutdownCause)
+  commentId: M:Quantum.SessionRunner.OnShutdown(Quantum.ShutdownCause)
+  id: OnShutdown(Quantum.ShutdownCause)
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: OnShutdown(ShutdownCause)
+  nameWithType: SessionRunner.OnShutdown(ShutdownCause)
+  fullName: Quantum.SessionRunner.OnShutdown(Quantum.ShutdownCause)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnShutdown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7493
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Can be overridden in a subclass not be notified on shutdowns.
+
+    Is called right after tje <xref href="Quantum.SessionRunner.Arguments.OnShutdown" data-throw-if-not-resolved="false"></xref> callback.
+  example: []
+  syntax:
+    content: protected virtual void OnShutdown(ShutdownCause cause)
+    parameters:
+    - id: cause
+      type: Quantum.ShutdownCause
+      description: The shutdown cause
+    content.vb: Protected Overridable Sub OnShutdown(cause As ShutdownCause)
+  overload: Quantum.SessionRunner.OnShutdown*
+- uid: Quantum.SessionRunner.Service(System.Nullable{System.Double})
+  commentId: M:Quantum.SessionRunner.Service(System.Nullable{System.Double})
+  id: Service(System.Nullable{System.Double})
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Service(double?)
+  nameWithType: SessionRunner.Service(double?)
+  fullName: Quantum.SessionRunner.Service(double?)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Service
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7501
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    To update the Quantum simulation this needs to be run from the outside.
+
+    From Unity is would be a MonoBehaviour, on the plugin it would be from OnDeterministicUpdate() 
+
+    and the spectator has an extra service task to tick this.
+  example: []
+  syntax:
+    content: public void Service(double? deltaTime = null)
+    parameters:
+    - id: deltaTime
+      type: System.Nullable{System.Double}
+      description: If null the internal stopwatch is used to update, otherwise pass in the desired delta time to progress the simulation.
+    content.vb: Public Sub Service(deltaTime As Double? = Nothing)
+  overload: Quantum.SessionRunner.Service*
+  nameWithType.vb: SessionRunner.Service(Double?)
+  fullName.vb: Quantum.SessionRunner.Service(Double?)
+  name.vb: Service(Double?)
+- uid: Quantum.SessionRunner.Start(Quantum.SessionRunner.Arguments)
+  commentId: M:Quantum.SessionRunner.Start(Quantum.SessionRunner.Arguments)
+  id: Start(Quantum.SessionRunner.Arguments)
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Start(Arguments)
+  nameWithType: SessionRunner.Start(SessionRunner.Arguments)
+  fullName: Quantum.SessionRunner.Start(Quantum.SessionRunner.Arguments)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Start
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7549
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Create a runner object and initiates the start procedure.
+
+    This method returns right away and will not wait until the actual simulation is started after the start protocol and potentially waiting for a snapshot.
+
+    Use <xref href="Quantum.SessionRunner.WaitForStartAsync(System.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> to get notified about the actual local game start.
+  example: []
+  syntax:
+    content: public static SessionRunner Start(SessionRunner.Arguments arguments)
+    parameters:
+    - id: arguments
+      type: Quantum.SessionRunner.Arguments
+      description: Start runner arguments.
+    return:
+      type: Quantum.SessionRunner
+      description: Session runner object
+    content.vb: Public Shared Function Start(arguments As SessionRunner.Arguments) As SessionRunner
+  overload: Quantum.SessionRunner.Start*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Arguments were invalid, check exception message.
+- uid: Quantum.SessionRunner.StartAsync(Quantum.SessionRunner.Arguments)
+  commentId: M:Quantum.SessionRunner.StartAsync(Quantum.SessionRunner.Arguments)
+  id: StartAsync(Quantum.SessionRunner.Arguments)
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: StartAsync(Arguments)
+  nameWithType: SessionRunner.StartAsync(SessionRunner.Arguments)
+  fullName: Quantum.SessionRunner.StartAsync(Quantum.SessionRunner.Arguments)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StartAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7572
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Async version of the start sequence. Will return the runner object once the connection is complete.
+
+    <xref href="Quantum.SessionRunner.Arguments.StartGameTimeoutInSeconds" data-throw-if-not-resolved="false"></xref> must be greater than 0.
+
+    Set explicit <xref href="Quantum.SessionRunner.Arguments.TaskRunner" data-throw-if-not-resolved="false"></xref> or the default Task.Factory is used.
+
+    Use <xref href="Quantum.SessionRunner.Arguments.CancellationToken" data-throw-if-not-resolved="false"></xref> to cancel this task.
+
+    Make sure to run this from a Unity "async void" method to not lose the unhandled exceptions.
+  example: []
+  syntax:
+    content: public static Task<SessionRunner> StartAsync(SessionRunner.Arguments arguments)
+    parameters:
+    - id: arguments
+      type: Quantum.SessionRunner.Arguments
+      description: Start runner arguments.
+    return:
+      type: System.Threading.Tasks.Task{Quantum.SessionRunner}
+      description: Session runner object
+    content.vb: Public Shared Function StartAsync(arguments As SessionRunner.Arguments) As Task(Of SessionRunner)
+  overload: Quantum.SessionRunner.StartAsync*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Arguments were invalid, check exception message.
+  - type: Quantum.SessionRunnerException
+    commentId: T:Quantum.SessionRunnerException
+    description: Session failed to start.
+- uid: Quantum.SessionRunner.Shutdown(Quantum.ShutdownCause)
+  commentId: M:Quantum.SessionRunner.Shutdown(Quantum.ShutdownCause)
+  id: Shutdown(Quantum.ShutdownCause)
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Shutdown(ShutdownCause)
+  nameWithType: SessionRunner.Shutdown(ShutdownCause)
+  fullName: Quantum.SessionRunner.Shutdown(Quantum.ShutdownCause)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Shutdown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7621
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Shutdown the runner. 
+
+    Can be called from inside the simulation (during a simulation callback), the shutdown will commence during the next <xref href="Quantum.SessionRunner.Service(System.Nullable%7bSystem.Double%7d)" data-throw-if-not-resolved="false"></xref> call.
+  example: []
+  syntax:
+    content: public void Shutdown(ShutdownCause cause = ShutdownCause.Ok)
+    parameters:
+    - id: cause
+      type: Quantum.ShutdownCause
+      description: Shutdown cause
+    content.vb: Public Sub Shutdown(cause As ShutdownCause = ShutdownCause.Ok)
+  overload: Quantum.SessionRunner.Shutdown*
+- uid: Quantum.SessionRunner.ShutdownAsync(Quantum.ShutdownCause)
+  commentId: M:Quantum.SessionRunner.ShutdownAsync(Quantum.ShutdownCause)
+  id: ShutdownAsync(Quantum.ShutdownCause)
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: ShutdownAsync(ShutdownCause)
+  nameWithType: SessionRunner.ShutdownAsync(ShutdownCause)
+  fullName: Quantum.SessionRunner.ShutdownAsync(Quantum.ShutdownCause)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ShutdownAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7653
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Shutdown the runner asynchronously. 
+
+    Can be called from a simulation callback.
+
+    Will also wait for the connection to be properly disconnected.
+  example: []
+  syntax:
+    content: public Task ShutdownAsync(ShutdownCause cause = ShutdownCause.Ok)
+    parameters:
+    - id: cause
+      type: Quantum.ShutdownCause
+      description: Shutdown cause
+    return:
+      type: System.Threading.Tasks.Task
+      description: Once the complete shutdown is completed.
+    content.vb: Public Function ShutdownAsync(cause As ShutdownCause = ShutdownCause.Ok) As Task
+  overload: Quantum.SessionRunner.ShutdownAsync*
+  exceptions:
+  - type: Quantum.SessionRunnerException
+    commentId: T:Quantum.SessionRunnerException
+    description: TaskFactory was never set.
+- uid: Quantum.SessionRunner.WaitForStartAsync(System.Single)
+  commentId: M:Quantum.SessionRunner.WaitForStartAsync(System.Single)
+  id: WaitForStartAsync(System.Single)
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: WaitForStartAsync(float)
+  nameWithType: SessionRunner.WaitForStartAsync(float)
+  fullName: Quantum.SessionRunner.WaitForStartAsync(float)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: WaitForStartAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7706
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: When starting the runner synchronously this Task can be used to wait for success, error or timeout.
+  example: []
+  syntax:
+    content: public Task WaitForStartAsync(float timeoutInSeconds)
+    parameters:
+    - id: timeoutInSeconds
+      type: System.Single
+      description: Wait for game start timeout.
+    return:
+      type: System.Threading.Tasks.Task
+      description: Returns when the start has completed or failed.
+    content.vb: Public Function WaitForStartAsync(timeoutInSeconds As Single) As Task
+  overload: Quantum.SessionRunner.WaitForStartAsync*
+  nameWithType.vb: SessionRunner.WaitForStartAsync(Single)
+  fullName.vb: Quantum.SessionRunner.WaitForStartAsync(Single)
+  name.vb: WaitForStartAsync(Single)
+- uid: Quantum.SessionRunner.WaitForStartAsync(System.Threading.CancellationToken)
+  commentId: M:Quantum.SessionRunner.WaitForStartAsync(System.Threading.CancellationToken)
+  id: WaitForStartAsync(System.Threading.CancellationToken)
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: WaitForStartAsync(CancellationToken)
+  nameWithType: SessionRunner.WaitForStartAsync(CancellationToken)
+  fullName: Quantum.SessionRunner.WaitForStartAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: WaitForStartAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7716
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: When starting the runner synchronously this Task can be used to wait for success, error or timeout.
+  example: []
+  syntax:
+    content: public Task WaitForStartAsync(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token.
+    return:
+      type: System.Threading.Tasks.Task
+      description: Returns when the start has completed or failed.
+    content.vb: Public Function WaitForStartAsync(cancellationToken As CancellationToken) As Task
+  overload: Quantum.SessionRunner.WaitForStartAsync*
+- uid: Quantum.SessionRunner.WaitForShutdownAsync(System.Threading.CancellationToken)
+  commentId: M:Quantum.SessionRunner.WaitForShutdownAsync(System.Threading.CancellationToken)
+  id: WaitForShutdownAsync(System.Threading.CancellationToken)
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: WaitForShutdownAsync(CancellationToken)
+  nameWithType: SessionRunner.WaitForShutdownAsync(CancellationToken)
+  fullName: Quantum.SessionRunner.WaitForShutdownAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: WaitForShutdownAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7740
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Wait for the simulation shutdown is signaled. This is an alternative way to listen for the <xref href="Quantum.SessionRunner.Arguments.OnShutdown" data-throw-if-not-resolved="false"></xref> callback.
+  example: []
+  syntax:
+    content: public Task WaitForShutdownAsync(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel this task
+    return:
+      type: System.Threading.Tasks.Task
+      description: After the runner shut down.
+    content.vb: Public Function WaitForShutdownAsync(cancellationToken As CancellationToken) As Task
+  overload: Quantum.SessionRunner.WaitForShutdownAsync*
+- uid: Quantum.SessionRunner.WaitForShutdownAsync
+  commentId: M:Quantum.SessionRunner.WaitForShutdownAsync
+  id: WaitForShutdownAsync
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: WaitForShutdownAsync()
+  nameWithType: SessionRunner.WaitForShutdownAsync()
+  fullName: Quantum.SessionRunner.WaitForShutdownAsync()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: WaitForShutdownAsync
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7757
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Wait for the simulation shutdown is signaled. This is an alternative way to listen for the <xref href="Quantum.SessionRunner.Arguments.OnShutdown" data-throw-if-not-resolved="false"></xref> callback.
+  example: []
+  syntax:
+    content: public Task WaitForShutdownAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: After the runner shut down.
+    content.vb: Public Function WaitForShutdownAsync() As Task
+  overload: Quantum.SessionRunner.WaitForShutdownAsync*
+- uid: Quantum.SessionRunner.CreateRunnerInternal(Quantum.SessionRunner.Arguments)
+  commentId: M:Quantum.SessionRunner.CreateRunnerInternal(Quantum.SessionRunner.Arguments)
+  id: CreateRunnerInternal(Quantum.SessionRunner.Arguments)
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: CreateRunnerInternal(Arguments)
+  nameWithType: SessionRunner.CreateRunnerInternal(SessionRunner.Arguments)
+  fullName: Quantum.SessionRunner.CreateRunnerInternal(Quantum.SessionRunner.Arguments)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateRunnerInternal
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7770
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Create runner object and initiates the start procedure.
+  example: []
+  syntax:
+    content: protected static SessionRunner CreateRunnerInternal(SessionRunner.Arguments arguments)
+    parameters:
+    - id: arguments
+      type: Quantum.SessionRunner.Arguments
+      description: Start arguments.
+    return:
+      type: Quantum.SessionRunner
+      description: Initialized runner object.
+    content.vb: Protected Shared Function CreateRunnerInternal(arguments As SessionRunner.Arguments) As SessionRunner
+  overload: Quantum.SessionRunner.CreateRunnerInternal*
+- uid: Quantum.SessionRunner.ShutdownInternal(Quantum.SessionRunner,Quantum.ShutdownCause)
+  commentId: M:Quantum.SessionRunner.ShutdownInternal(Quantum.SessionRunner,Quantum.ShutdownCause)
+  id: ShutdownInternal(Quantum.SessionRunner,Quantum.ShutdownCause)
+  parent: Quantum.SessionRunner
+  langs:
+  - csharp
+  - vb
+  name: ShutdownInternal(SessionRunner, ShutdownCause)
+  nameWithType: SessionRunner.ShutdownInternal(SessionRunner, ShutdownCause)
+  fullName: Quantum.SessionRunner.ShutdownInternal(Quantum.SessionRunner, Quantum.ShutdownCause)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ShutdownInternal
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7829
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Internal shutdown method.
+  example: []
+  syntax:
+    content: protected static void ShutdownInternal(SessionRunner runner, ShutdownCause cause)
+    parameters:
+    - id: runner
+      type: Quantum.SessionRunner
+      description: Session runner object.
+    - id: cause
+      type: Quantum.ShutdownCause
+      description: Shutdown code.
+    content.vb: Protected Shared Sub ShutdownInternal(runner As SessionRunner, cause As ShutdownCause)
+  overload: Quantum.SessionRunner.ShutdownInternal*
+references:
+- uid: Quantum.SessionRunner.Arguments
+  commentId: T:Quantum.SessionRunner.Arguments
+  parent: Quantum
+  href: Quantum.SessionRunner.html
+  name: SessionRunner.Arguments
+  nameWithType: SessionRunner.Arguments
+  fullName: Quantum.SessionRunner.Arguments
+  spec.csharp:
+  - uid: Quantum.SessionRunner
+    name: SessionRunner
+    href: Quantum.SessionRunner.html
+  - name: .
+  - uid: Quantum.SessionRunner.Arguments
+    name: Arguments
+    href: Quantum.SessionRunner.Arguments.html
+  spec.vb:
+  - uid: Quantum.SessionRunner
+    name: SessionRunner
+    href: Quantum.SessionRunner.html
+  - name: .
+  - uid: Quantum.SessionRunner.Arguments
+    name: Arguments
+    href: Quantum.SessionRunner.Arguments.html
+- uid: Quantum.IRunnerFactory
+  commentId: T:Quantum.IRunnerFactory
+  parent: Quantum
+  href: Quantum.IRunnerFactory.html
+  name: IRunnerFactory
+  nameWithType: IRunnerFactory
+  fullName: Quantum.IRunnerFactory
+- uid: System.Threading.Tasks.ConcurrentExclusiveSchedulerPair.ExclusiveScheduler
+  commentId: P:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair.ExclusiveScheduler
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.concurrentexclusiveschedulerpair.exclusivescheduler
+  name: ExclusiveScheduler
+  nameWithType: ConcurrentExclusiveSchedulerPair.ExclusiveScheduler
+  fullName: System.Threading.Tasks.ConcurrentExclusiveSchedulerPair.ExclusiveScheduler
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.SessionRunner.Session*
+  commentId: Overload:Quantum.SessionRunner.Session
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_Session
+  name: Session
+  nameWithType: SessionRunner.Session
+  fullName: Quantum.SessionRunner.Session
+- uid: Photon.Deterministic.DeterministicSession
+  commentId: T:Photon.Deterministic.DeterministicSession
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicSession
+  nameWithType: DeterministicSession
+  fullName: Photon.Deterministic.DeterministicSession
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.SessionRunner.DeterministicGame*
+  commentId: Overload:Quantum.SessionRunner.DeterministicGame
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_DeterministicGame
+  name: DeterministicGame
+  nameWithType: SessionRunner.DeterministicGame
+  fullName: Quantum.SessionRunner.DeterministicGame
+- uid: Photon.Deterministic.IDeterministicGame
+  commentId: T:Photon.Deterministic.IDeterministicGame
+  parent: Photon.Deterministic
+  isExternal: true
+  name: IDeterministicGame
+  nameWithType: IDeterministicGame
+  fullName: Photon.Deterministic.IDeterministicGame
+- uid: Quantum.SessionRunner.Arguments.RunnerId
+  commentId: F:Quantum.SessionRunner.Arguments.RunnerId
+  href: Quantum.SessionRunner.Arguments.html#Quantum_SessionRunner_Arguments_RunnerId
+  name: RunnerId
+  nameWithType: SessionRunner.Arguments.RunnerId
+  fullName: Quantum.SessionRunner.Arguments.RunnerId
+- uid: Quantum.SessionRunner.Id*
+  commentId: Overload:Quantum.SessionRunner.Id
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_Id
+  name: Id
+  nameWithType: SessionRunner.Id
+  fullName: Quantum.SessionRunner.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Quantum.SessionRunner.IsRunning*
+  commentId: Overload:Quantum.SessionRunner.IsRunning
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_IsRunning
+  name: IsRunning
+  nameWithType: SessionRunner.IsRunning
+  fullName: Quantum.SessionRunner.IsRunning
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.SessionRunner.Communicator*
+  commentId: Overload:Quantum.SessionRunner.Communicator
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_Communicator
+  name: Communicator
+  nameWithType: SessionRunner.Communicator
+  fullName: Quantum.SessionRunner.Communicator
+- uid: Photon.Deterministic.ICommunicator
+  commentId: T:Photon.Deterministic.ICommunicator
+  parent: Photon.Deterministic
+  isExternal: true
+  name: ICommunicator
+  nameWithType: ICommunicator
+  fullName: Photon.Deterministic.ICommunicator
+- uid: Quantum.SessionRunner.State*
+  commentId: Overload:Quantum.SessionRunner.State
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_State
+  name: State
+  nameWithType: SessionRunner.State
+  fullName: Quantum.SessionRunner.State
+- uid: Quantum.SessionRunner.SessionState
+  commentId: T:Quantum.SessionRunner.SessionState
+  parent: Quantum
+  href: Quantum.SessionRunner.html
+  name: SessionRunner.SessionState
+  nameWithType: SessionRunner.SessionState
+  fullName: Quantum.SessionRunner.SessionState
+  spec.csharp:
+  - uid: Quantum.SessionRunner
+    name: SessionRunner
+    href: Quantum.SessionRunner.html
+  - name: .
+  - uid: Quantum.SessionRunner.SessionState
+    name: SessionState
+    href: Quantum.SessionRunner.SessionState.html
+  spec.vb:
+  - uid: Quantum.SessionRunner
+    name: SessionRunner
+    href: Quantum.SessionRunner.html
+  - name: .
+  - uid: Quantum.SessionRunner.SessionState
+    name: SessionState
+    href: Quantum.SessionRunner.SessionState.html
+- uid: Quantum.SessionRunner.DeltaTimeType*
+  commentId: Overload:Quantum.SessionRunner.DeltaTimeType
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_DeltaTimeType
+  name: DeltaTimeType
+  nameWithType: SessionRunner.DeltaTimeType
+  fullName: Quantum.SessionRunner.DeltaTimeType
+- uid: Quantum.SimulationUpdateTime
+  commentId: T:Quantum.SimulationUpdateTime
+  parent: Quantum
+  isExternal: true
+  name: SimulationUpdateTime
+  nameWithType: SimulationUpdateTime
+  fullName: Quantum.SimulationUpdateTime
+- uid: Quantum.SessionRunner.RecordingFlags*
+  commentId: Overload:Quantum.SessionRunner.RecordingFlags
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_RecordingFlags
+  name: RecordingFlags
+  nameWithType: SessionRunner.RecordingFlags
+  fullName: Quantum.SessionRunner.RecordingFlags
+- uid: Quantum.RecordingFlags
+  commentId: T:Quantum.RecordingFlags
+  parent: Quantum
+  isExternal: true
+  name: RecordingFlags
+  nameWithType: RecordingFlags
+  fullName: Quantum.RecordingFlags
+- uid: Quantum.SessionRunner.op_Implicit*
+  commentId: Overload:Quantum.SessionRunner.op_Implicit
+  name: implicit operator
+  nameWithType: SessionRunner.implicit operator
+  fullName: Quantum.SessionRunner.implicit operator
+  nameWithType.vb: SessionRunner.CType
+  fullName.vb: Quantum.SessionRunner.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: Quantum.SessionRunner
+  commentId: T:Quantum.SessionRunner
+  parent: Quantum
+  href: Quantum.SessionRunner.html
+  name: SessionRunner
+  nameWithType: SessionRunner
+  fullName: Quantum.SessionRunner
+- uid: Quantum.SessionRunner.Dispose*
+  commentId: Overload:Quantum.SessionRunner.Dispose
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_Dispose
+  name: Dispose
+  nameWithType: SessionRunner.Dispose
+  fullName: Quantum.SessionRunner.Dispose
+- uid: Quantum.SessionRunner.Destroy*
+  commentId: Overload:Quantum.SessionRunner.Destroy
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_Destroy
+  name: Destroy
+  nameWithType: SessionRunner.Destroy
+  fullName: Quantum.SessionRunner.Destroy
+- uid: Quantum.SessionRunner.Arguments.OnShutdown
+  commentId: F:Quantum.SessionRunner.Arguments.OnShutdown
+  href: Quantum.SessionRunner.Arguments.html#Quantum_SessionRunner_Arguments_OnShutdown
+  name: OnShutdown
+  nameWithType: SessionRunner.Arguments.OnShutdown
+  fullName: Quantum.SessionRunner.Arguments.OnShutdown
+- uid: Quantum.SessionRunner.OnShutdown*
+  commentId: Overload:Quantum.SessionRunner.OnShutdown
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_OnShutdown_Quantum_ShutdownCause_
+  name: OnShutdown
+  nameWithType: SessionRunner.OnShutdown
+  fullName: Quantum.SessionRunner.OnShutdown
+- uid: Quantum.ShutdownCause
+  commentId: T:Quantum.ShutdownCause
+  parent: Quantum
+  href: Quantum.ShutdownCause.html
+  name: ShutdownCause
+  nameWithType: ShutdownCause
+  fullName: Quantum.ShutdownCause
+- uid: Quantum.SessionRunner.Service*
+  commentId: Overload:Quantum.SessionRunner.Service
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_Service_System_Nullable_System_Double__
+  name: Service
+  nameWithType: SessionRunner.Service
+  fullName: Quantum.SessionRunner.Service
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.SessionRunner.WaitForStartAsync(System.Threading.CancellationToken)
+  commentId: M:Quantum.SessionRunner.WaitForStartAsync(System.Threading.CancellationToken)
+  isExternal: true
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_WaitForStartAsync_System_Threading_CancellationToken_
+  name: WaitForStartAsync(CancellationToken)
+  nameWithType: SessionRunner.WaitForStartAsync(CancellationToken)
+  fullName: Quantum.SessionRunner.WaitForStartAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Quantum.SessionRunner.WaitForStartAsync(System.Threading.CancellationToken)
+    name: WaitForStartAsync
+    href: Quantum.SessionRunner.html#Quantum_SessionRunner_WaitForStartAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Quantum.SessionRunner.WaitForStartAsync(System.Threading.CancellationToken)
+    name: WaitForStartAsync
+    href: Quantum.SessionRunner.html#Quantum_SessionRunner_WaitForStartAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: Quantum.SessionRunner.Start*
+  commentId: Overload:Quantum.SessionRunner.Start
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_Start_Quantum_SessionRunner_Arguments_
+  name: Start
+  nameWithType: SessionRunner.Start
+  fullName: Quantum.SessionRunner.Start
+- uid: Quantum.SessionRunner.Arguments.StartGameTimeoutInSeconds
+  commentId: F:Quantum.SessionRunner.Arguments.StartGameTimeoutInSeconds
+  href: Quantum.SessionRunner.Arguments.html#Quantum_SessionRunner_Arguments_StartGameTimeoutInSeconds
+  name: StartGameTimeoutInSeconds
+  nameWithType: SessionRunner.Arguments.StartGameTimeoutInSeconds
+  fullName: Quantum.SessionRunner.Arguments.StartGameTimeoutInSeconds
+- uid: Quantum.SessionRunner.Arguments.TaskRunner
+  commentId: F:Quantum.SessionRunner.Arguments.TaskRunner
+  href: Quantum.SessionRunner.Arguments.html#Quantum_SessionRunner_Arguments_TaskRunner
+  name: TaskRunner
+  nameWithType: SessionRunner.Arguments.TaskRunner
+  fullName: Quantum.SessionRunner.Arguments.TaskRunner
+- uid: Quantum.SessionRunner.Arguments.CancellationToken
+  commentId: F:Quantum.SessionRunner.Arguments.CancellationToken
+  href: Quantum.SessionRunner.Arguments.html#Quantum_SessionRunner_Arguments_CancellationToken
+  name: CancellationToken
+  nameWithType: SessionRunner.Arguments.CancellationToken
+  fullName: Quantum.SessionRunner.Arguments.CancellationToken
+- uid: Quantum.SessionRunnerException
+  commentId: T:Quantum.SessionRunnerException
+  href: Quantum.SessionRunnerException.html
+  name: SessionRunnerException
+  nameWithType: SessionRunnerException
+  fullName: Quantum.SessionRunnerException
+- uid: Quantum.SessionRunner.StartAsync*
+  commentId: Overload:Quantum.SessionRunner.StartAsync
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_StartAsync_Quantum_SessionRunner_Arguments_
+  name: StartAsync
+  nameWithType: SessionRunner.StartAsync
+  fullName: Quantum.SessionRunner.StartAsync
+- uid: System.Threading.Tasks.Task{Quantum.SessionRunner}
+  commentId: T:System.Threading.Tasks.Task{Quantum.SessionRunner}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SessionRunner>
+  nameWithType: Task<SessionRunner>
+  fullName: System.Threading.Tasks.Task<Quantum.SessionRunner>
+  nameWithType.vb: Task(Of SessionRunner)
+  fullName.vb: System.Threading.Tasks.Task(Of Quantum.SessionRunner)
+  name.vb: Task(Of SessionRunner)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Quantum.SessionRunner
+    name: SessionRunner
+    href: Quantum.SessionRunner.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.SessionRunner
+    name: SessionRunner
+    href: Quantum.SessionRunner.html
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Quantum.SessionRunner.Service(System.Nullable{System.Double})
+  commentId: M:Quantum.SessionRunner.Service(System.Nullable{System.Double})
+  isExternal: true
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_Service_System_Nullable_System_Double__
+  name: Service(double?)
+  nameWithType: SessionRunner.Service(double?)
+  fullName: Quantum.SessionRunner.Service(double?)
+  nameWithType.vb: SessionRunner.Service(Double?)
+  fullName.vb: Quantum.SessionRunner.Service(Double?)
+  name.vb: Service(Double?)
+  spec.csharp:
+  - uid: Quantum.SessionRunner.Service(System.Nullable{System.Double})
+    name: Service
+    href: Quantum.SessionRunner.html#Quantum_SessionRunner_Service_System_Nullable_System_Double__
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: Quantum.SessionRunner.Service(System.Nullable{System.Double})
+    name: Service
+    href: Quantum.SessionRunner.html#Quantum_SessionRunner_Service_System_Nullable_System_Double__
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  - name: )
+- uid: Quantum.SessionRunner.Shutdown*
+  commentId: Overload:Quantum.SessionRunner.Shutdown
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_Shutdown_Quantum_ShutdownCause_
+  name: Shutdown
+  nameWithType: SessionRunner.Shutdown
+  fullName: Quantum.SessionRunner.Shutdown
+- uid: Quantum.SessionRunner.ShutdownAsync*
+  commentId: Overload:Quantum.SessionRunner.ShutdownAsync
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_ShutdownAsync_Quantum_ShutdownCause_
+  name: ShutdownAsync
+  nameWithType: SessionRunner.ShutdownAsync
+  fullName: Quantum.SessionRunner.ShutdownAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Quantum.SessionRunner.WaitForStartAsync*
+  commentId: Overload:Quantum.SessionRunner.WaitForStartAsync
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_WaitForStartAsync_System_Single_
+  name: WaitForStartAsync
+  nameWithType: SessionRunner.WaitForStartAsync
+  fullName: Quantum.SessionRunner.WaitForStartAsync
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Quantum.SessionRunner.WaitForShutdownAsync*
+  commentId: Overload:Quantum.SessionRunner.WaitForShutdownAsync
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_WaitForShutdownAsync_System_Threading_CancellationToken_
+  name: WaitForShutdownAsync
+  nameWithType: SessionRunner.WaitForShutdownAsync
+  fullName: Quantum.SessionRunner.WaitForShutdownAsync
+- uid: Quantum.SessionRunner.CreateRunnerInternal*
+  commentId: Overload:Quantum.SessionRunner.CreateRunnerInternal
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_CreateRunnerInternal_Quantum_SessionRunner_Arguments_
+  name: CreateRunnerInternal
+  nameWithType: SessionRunner.CreateRunnerInternal
+  fullName: Quantum.SessionRunner.CreateRunnerInternal
+- uid: Quantum.SessionRunner.ShutdownInternal*
+  commentId: Overload:Quantum.SessionRunner.ShutdownInternal
+  href: Quantum.SessionRunner.html#Quantum_SessionRunner_ShutdownInternal_Quantum_SessionRunner_Quantum_ShutdownCause_
+  name: ShutdownInternal
+  nameWithType: SessionRunner.ShutdownInternal
+  fullName: Quantum.SessionRunner.ShutdownInternal

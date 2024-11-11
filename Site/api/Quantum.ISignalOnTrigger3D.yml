@@ -1,0 +1,152 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.ISignalOnTrigger3D
+  commentId: T:Quantum.ISignalOnTrigger3D
+  id: ISignalOnTrigger3D
+  parent: Quantum
+  children:
+  - Quantum.ISignalOnTrigger3D.OnTrigger3D(Quantum.Frame,Quantum.TriggerInfo3D)
+  langs:
+  - csharp
+  - vb
+  name: ISignalOnTrigger3D
+  nameWithType: ISignalOnTrigger3D
+  fullName: Quantum.ISignalOnTrigger3D
+  type: Interface
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ISignalOnTrigger3D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 293
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Interface for receiving callbacks once per frame while a non-trigger and a trigger 3D colliders are touching.
+
+    <remarks>No collision is checked between two kinematic colliders that are both trigger or both non-trigger.</remarks><remarks>At least one of the entities involved in a collision must have the respective <xref href="Quantum.CallbackFlags" data-throw-if-not-resolved="false"></xref> set for the callback to be called.</remarks><remarks>See <xref href="Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef%2cQuantum.CallbackFlags)" data-throw-if-not-resolved="false"></xref> for setting the callbacks flags to an entity.</remarks>
+  example: []
+  syntax:
+    content: 'public interface ISignalOnTrigger3D : ISignal'
+    content.vb: Public Interface ISignalOnTrigger3D Inherits ISignal
+  inheritedMembers:
+  - Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignalOnTrigger3D.OnTrigger3D(Quantum.Frame,Quantum.TriggerInfo3D)
+  commentId: M:Quantum.ISignalOnTrigger3D.OnTrigger3D(Quantum.Frame,Quantum.TriggerInfo3D)
+  id: OnTrigger3D(Quantum.Frame,Quantum.TriggerInfo3D)
+  parent: Quantum.ISignalOnTrigger3D
+  langs:
+  - csharp
+  - vb
+  name: OnTrigger3D(Frame, TriggerInfo3D)
+  nameWithType: ISignalOnTrigger3D.OnTrigger3D(Frame, TriggerInfo3D)
+  fullName: Quantum.ISignalOnTrigger3D.OnTrigger3D(Quantum.Frame, Quantum.TriggerInfo3D)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnTrigger3D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 300
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Called once per frame while a non-trigger and a trigger 3D colliders are touching.
+  example: []
+  syntax:
+    content: void OnTrigger3D(Frame f, TriggerInfo3D info)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame in which the collision happened.
+    - id: info
+      type: Quantum.TriggerInfo3D
+      description: The <xref href="Quantum.TriggerInfo3D" data-throw-if-not-resolved="false"></xref> with data about the trigger collision.
+    content.vb: Sub OnTrigger3D(f As Frame, info As TriggerInfo3D)
+  overload: Quantum.ISignalOnTrigger3D.OnTrigger3D*
+references:
+- uid: Quantum.CallbackFlags
+  commentId: T:Quantum.CallbackFlags
+  isExternal: true
+  name: CallbackFlags
+  nameWithType: CallbackFlags
+  fullName: Quantum.CallbackFlags
+- uid: Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+  commentId: M:Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+  isExternal: true
+  name: SetCallbacks(EntityRef, CallbackFlags)
+  nameWithType: PhysicsEngine3D.Api.SetCallbacks(EntityRef, CallbackFlags)
+  fullName: Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef, Quantum.CallbackFlags)
+  spec.csharp:
+  - uid: Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+    name: SetCallbacks
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CallbackFlags
+    name: CallbackFlags
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+    name: SetCallbacks
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CallbackFlags
+    name: CallbackFlags
+    isExternal: true
+  - name: )
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ISignal.RuntimeIndex
+  commentId: P:Quantum.ISignal.RuntimeIndex
+  parent: Quantum.ISignal
+  isExternal: true
+  name: RuntimeIndex
+  nameWithType: ISignal.RuntimeIndex
+  fullName: Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.TriggerInfo3D
+  commentId: T:Quantum.TriggerInfo3D
+  parent: Quantum
+  isExternal: true
+  name: TriggerInfo3D
+  nameWithType: TriggerInfo3D
+  fullName: Quantum.TriggerInfo3D
+- uid: Quantum.ISignalOnTrigger3D.OnTrigger3D*
+  commentId: Overload:Quantum.ISignalOnTrigger3D.OnTrigger3D
+  href: Quantum.ISignalOnTrigger3D.html#Quantum_ISignalOnTrigger3D_OnTrigger3D_Quantum_Frame_Quantum_TriggerInfo3D_
+  name: OnTrigger3D
+  nameWithType: ISignalOnTrigger3D.OnTrigger3D
+  fullName: Quantum.ISignalOnTrigger3D.OnTrigger3D
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame

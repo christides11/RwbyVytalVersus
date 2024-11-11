@@ -1,0 +1,1110 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.EQS.EnvQueryTestDistance
+  commentId: T:Quantum.EQS.EnvQueryTestDistance
+  id: EnvQueryTestDistance
+  parent: Quantum.EQS
+  children:
+  - Quantum.EQS.EnvQueryTestDistance.FinalizeInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+  - Quantum.EQS.EnvQueryTestDistance.RunTest(Quantum.Frame,Quantum.EnvQuery*,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+  - Quantum.EQS.EnvQueryTestDistance.distanceBeforeFilteredOut
+  - Quantum.EQS.EnvQueryTestDistance.distanceTo
+  langs:
+  - csharp
+  - vb
+  name: EnvQueryTestDistance
+  nameWithType: EnvQueryTestDistance
+  fullName: Quantum.EQS.EnvQueryTestDistance
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestDistance.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: EnvQueryTestDistance
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestDistance.cs
+    startLine: 5
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.EQS
+  syntax:
+    content: 'public class EnvQueryTestDistance : EnvQueryTest'
+    content.vb: Public Class EnvQueryTestDistance Inherits EnvQueryTest
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Quantum.AssetObject
+  - Quantum.EQS.EnvQueryTest
+  inheritedMembers:
+  - Quantum.EQS.EnvQueryTest.testPurpose
+  - Quantum.EQS.EnvQueryTest.IsActive
+  - Quantum.EQS.EnvQueryTest.ScaleFactor
+  - Quantum.EQS.EnvQueryTest.ScoringEquation
+  - Quantum.EQS.EnvQueryTest.StartInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+  - Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+  - Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame,System.Int32,Quantum.EnvQueryCached*)
+  - Quantum.AssetObject.Identifier
+  - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Create``1
+  - Quantum.AssetObject.Create(System.Type)
+  - Quantum.AssetObject.Create``1(System.Action{{T}})
+  - Quantum.AssetObject.Reset
+  - Quantum.AssetObject.Guid
+  - Quantum.AssetObject.Path
+  - Quantum.AssetObject.Settings
+- uid: Quantum.EQS.EnvQueryTestDistance.distanceTo
+  commentId: F:Quantum.EQS.EnvQueryTestDistance.distanceTo
+  id: distanceTo
+  parent: Quantum.EQS.EnvQueryTestDistance
+  langs:
+  - csharp
+  - vb
+  name: distanceTo
+  nameWithType: EnvQueryTestDistance.distanceTo
+  fullName: Quantum.EQS.EnvQueryTestDistance.distanceTo
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestDistance.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: distanceTo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestDistance.cs
+    startLine: 7
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.EQS
+  syntax:
+    content: public EnvQueryContext distanceTo
+    return:
+      type: Quantum.EnvQueryContext
+    content.vb: Public distanceTo As EnvQueryContext
+- uid: Quantum.EQS.EnvQueryTestDistance.distanceBeforeFilteredOut
+  commentId: F:Quantum.EQS.EnvQueryTestDistance.distanceBeforeFilteredOut
+  id: distanceBeforeFilteredOut
+  parent: Quantum.EQS.EnvQueryTestDistance
+  langs:
+  - csharp
+  - vb
+  name: distanceBeforeFilteredOut
+  nameWithType: EnvQueryTestDistance.distanceBeforeFilteredOut
+  fullName: Quantum.EQS.EnvQueryTestDistance.distanceBeforeFilteredOut
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestDistance.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: distanceBeforeFilteredOut
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestDistance.cs
+    startLine: 9
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.EQS
+  syntax:
+    content: >-
+      [DrawIf("testPurpose", 1, CompareOperator.NotEqual, DrawIfMode.ReadOnly)]
+
+      public FP distanceBeforeFilteredOut
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: >-
+      <DrawIf("testPurpose", 1, CompareOperator.NotEqual, DrawIfMode.ReadOnly)>
+
+      Public distanceBeforeFilteredOut As FP
+  attributes:
+  - type: Quantum.DrawIfAttribute
+    ctor: Quantum.DrawIfAttribute.#ctor(System.String,System.Int64,Quantum.CompareOperator,Quantum.DrawIfMode)
+    arguments:
+    - type: System.String
+      value: testPurpose
+    - type: System.Int64
+      value: "1"
+    - type: Quantum.CompareOperator
+      value: 1
+    - type: Quantum.DrawIfMode
+      value: 0
+- uid: Quantum.EQS.EnvQueryTestDistance.RunTest(Quantum.Frame,Quantum.EnvQuery*,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+  commentId: M:Quantum.EQS.EnvQueryTestDistance.RunTest(Quantum.Frame,Quantum.EnvQuery*,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+  id: RunTest(Quantum.Frame,Quantum.EnvQuery*,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+  parent: Quantum.EQS.EnvQueryTestDistance
+  langs:
+  - csharp
+  - vb
+  name: RunTest(Frame, EnvQuery*, int, List<EnvQueryItem>)
+  nameWithType: EnvQueryTestDistance.RunTest(Frame, EnvQuery*, int, List<EnvQueryItem>)
+  fullName: Quantum.EQS.EnvQueryTestDistance.RunTest(Quantum.Frame, Quantum.EnvQuery*, int, System.Collections.Generic.List<Quantum.EnvQueryItem>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestDistance.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RunTest
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestDistance.cs
+    startLine: 11
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.EQS
+  example: []
+  syntax:
+    content: public override void RunTest(Frame frame, EnvQuery* envQuery, int currentTest, List<EnvQueryItem> envQueryItems)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: envQuery
+      type: Quantum.EnvQuery*
+    - id: currentTest
+      type: System.Int32
+    - id: envQueryItems
+      type: System.Collections.Generic.List{Quantum.EnvQueryItem}
+    content.vb: Public Overrides Sub RunTest(frame As Frame, envQuery As EnvQuery*, currentTest As Integer, envQueryItems As List(Of EnvQueryItem))
+  overridden: Quantum.EQS.EnvQueryTest.RunTest(Quantum.Frame,Quantum.EnvQuery*,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+  overload: Quantum.EQS.EnvQueryTestDistance.RunTest*
+  nameWithType.vb: EnvQueryTestDistance.RunTest(Frame, EnvQuery*, Integer, List(Of EnvQueryItem))
+  fullName.vb: Quantum.EQS.EnvQueryTestDistance.RunTest(Quantum.Frame, Quantum.EnvQuery*, Integer, System.Collections.Generic.List(Of Quantum.EnvQueryItem))
+  name.vb: RunTest(Frame, EnvQuery*, Integer, List(Of EnvQueryItem))
+- uid: Quantum.EQS.EnvQueryTestDistance.FinalizeInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+  commentId: M:Quantum.EQS.EnvQueryTestDistance.FinalizeInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+  id: FinalizeInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+  parent: Quantum.EQS.EnvQueryTestDistance
+  langs:
+  - csharp
+  - vb
+  name: FinalizeInjectionTest(Frame, EnvQueryCached*, int, ref int)
+  nameWithType: EnvQueryTestDistance.FinalizeInjectionTest(Frame, EnvQueryCached*, int, ref int)
+  fullName: Quantum.EQS.EnvQueryTestDistance.FinalizeInjectionTest(Quantum.Frame, Quantum.EnvQueryCached*, int, ref int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestDistance.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FinalizeInjectionTest
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestDistance.cs
+    startLine: 41
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.EQS
+  example: []
+  syntax:
+    content: public override void FinalizeInjectionTest(Frame frame, EnvQueryCached* envQuery, int currentTest, ref int queryCurrentIndex)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: envQuery
+      type: Quantum.EnvQueryCached*
+    - id: currentTest
+      type: System.Int32
+    - id: queryCurrentIndex
+      type: System.Int32
+    content.vb: Public Overrides Sub FinalizeInjectionTest(frame As Frame, envQuery As EnvQueryCached*, currentTest As Integer, queryCurrentIndex As Integer)
+  overridden: Quantum.EQS.EnvQueryTest.FinalizeInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+  overload: Quantum.EQS.EnvQueryTestDistance.FinalizeInjectionTest*
+  nameWithType.vb: EnvQueryTestDistance.FinalizeInjectionTest(Frame, EnvQueryCached*, Integer, Integer)
+  fullName.vb: Quantum.EQS.EnvQueryTestDistance.FinalizeInjectionTest(Quantum.Frame, Quantum.EnvQueryCached*, Integer, Integer)
+  name.vb: FinalizeInjectionTest(Frame, EnvQueryCached*, Integer, Integer)
+references:
+- uid: Quantum.EQS
+  commentId: N:Quantum.EQS
+  href: Quantum.html
+  name: Quantum.EQS
+  nameWithType: Quantum.EQS
+  fullName: Quantum.EQS
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.EQS
+    name: EQS
+    href: Quantum.EQS.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.EQS
+    name: EQS
+    href: Quantum.EQS.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Quantum.AssetObject
+  commentId: T:Quantum.AssetObject
+  parent: Quantum
+  isExternal: true
+  name: AssetObject
+  nameWithType: AssetObject
+  fullName: Quantum.AssetObject
+- uid: Quantum.EQS.EnvQueryTest
+  commentId: T:Quantum.EQS.EnvQueryTest
+  parent: Quantum.EQS
+  href: Quantum.EQS.EnvQueryTest.html
+  name: EnvQueryTest
+  nameWithType: EnvQueryTest
+  fullName: Quantum.EQS.EnvQueryTest
+- uid: Quantum.EQS.EnvQueryTest.testPurpose
+  commentId: F:Quantum.EQS.EnvQueryTest.testPurpose
+  parent: Quantum.EQS.EnvQueryTest
+  href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_testPurpose
+  name: testPurpose
+  nameWithType: EnvQueryTest.testPurpose
+  fullName: Quantum.EQS.EnvQueryTest.testPurpose
+- uid: Quantum.EQS.EnvQueryTest.IsActive
+  commentId: F:Quantum.EQS.EnvQueryTest.IsActive
+  parent: Quantum.EQS.EnvQueryTest
+  href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_IsActive
+  name: IsActive
+  nameWithType: EnvQueryTest.IsActive
+  fullName: Quantum.EQS.EnvQueryTest.IsActive
+- uid: Quantum.EQS.EnvQueryTest.ScaleFactor
+  commentId: F:Quantum.EQS.EnvQueryTest.ScaleFactor
+  parent: Quantum.EQS.EnvQueryTest
+  href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_ScaleFactor
+  name: ScaleFactor
+  nameWithType: EnvQueryTest.ScaleFactor
+  fullName: Quantum.EQS.EnvQueryTest.ScaleFactor
+- uid: Quantum.EQS.EnvQueryTest.ScoringEquation
+  commentId: F:Quantum.EQS.EnvQueryTest.ScoringEquation
+  parent: Quantum.EQS.EnvQueryTest
+  href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_ScoringEquation
+  name: ScoringEquation
+  nameWithType: EnvQueryTest.ScoringEquation
+  fullName: Quantum.EQS.EnvQueryTest.ScoringEquation
+- uid: Quantum.EQS.EnvQueryTest.StartInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+  commentId: M:Quantum.EQS.EnvQueryTest.StartInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+  parent: Quantum.EQS.EnvQueryTest
+  isExternal: true
+  href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_StartInjectionTest_Quantum_Frame_Quantum_EnvQueryCached__System_Int32_System_Int32__
+  name: StartInjectionTest(Frame, EnvQueryCached*, int, ref int)
+  nameWithType: EnvQueryTest.StartInjectionTest(Frame, EnvQueryCached*, int, ref int)
+  fullName: Quantum.EQS.EnvQueryTest.StartInjectionTest(Quantum.Frame, Quantum.EnvQueryCached*, int, ref int)
+  nameWithType.vb: EnvQueryTest.StartInjectionTest(Frame, EnvQueryCached*, Integer, Integer)
+  fullName.vb: Quantum.EQS.EnvQueryTest.StartInjectionTest(Quantum.Frame, Quantum.EnvQueryCached*, Integer, Integer)
+  name.vb: StartInjectionTest(Frame, EnvQueryCached*, Integer, Integer)
+  spec.csharp:
+  - uid: Quantum.EQS.EnvQueryTest.StartInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+    name: StartInjectionTest
+    href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_StartInjectionTest_Quantum_Frame_Quantum_EnvQueryCached__System_Int32_System_Int32__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EnvQueryCached
+    name: EnvQueryCached
+    href: Quantum.EnvQueryCached.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Quantum.EQS.EnvQueryTest.StartInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+    name: StartInjectionTest
+    href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_StartInjectionTest_Quantum_Frame_Quantum_EnvQueryCached__System_Int32_System_Int32__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EnvQueryCached
+    name: EnvQueryCached
+    href: Quantum.EnvQueryCached.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+  commentId: M:Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+  parent: Quantum.EQS.EnvQueryTest
+  isExternal: true
+  href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_NormalizeItemScores_Quantum_Frame_System_Int32_System_Collections_Generic_List_Quantum_EnvQueryItem__
+  name: NormalizeItemScores(Frame, int, List<EnvQueryItem>)
+  nameWithType: EnvQueryTest.NormalizeItemScores(Frame, int, List<EnvQueryItem>)
+  fullName: Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame, int, System.Collections.Generic.List<Quantum.EnvQueryItem>)
+  nameWithType.vb: EnvQueryTest.NormalizeItemScores(Frame, Integer, List(Of EnvQueryItem))
+  fullName.vb: Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame, Integer, System.Collections.Generic.List(Of Quantum.EnvQueryItem))
+  name.vb: NormalizeItemScores(Frame, Integer, List(Of EnvQueryItem))
+  spec.csharp:
+  - uid: Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+    name: NormalizeItemScores
+    href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_NormalizeItemScores_Quantum_Frame_System_Int32_System_Collections_Generic_List_Quantum_EnvQueryItem__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Quantum.EnvQueryItem
+    name: EnvQueryItem
+    href: Quantum.EnvQueryItem.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+    name: NormalizeItemScores
+    href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_NormalizeItemScores_Quantum_Frame_System_Int32_System_Collections_Generic_List_Quantum_EnvQueryItem__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.EnvQueryItem
+    name: EnvQueryItem
+    href: Quantum.EnvQueryItem.html
+  - name: )
+  - name: )
+- uid: Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame,System.Int32,Quantum.EnvQueryCached*)
+  commentId: M:Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame,System.Int32,Quantum.EnvQueryCached*)
+  parent: Quantum.EQS.EnvQueryTest
+  isExternal: true
+  href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_NormalizeItemScores_Quantum_Frame_System_Int32_Quantum_EnvQueryCached__
+  name: NormalizeItemScores(Frame, int, EnvQueryCached*)
+  nameWithType: EnvQueryTest.NormalizeItemScores(Frame, int, EnvQueryCached*)
+  fullName: Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame, int, Quantum.EnvQueryCached*)
+  nameWithType.vb: EnvQueryTest.NormalizeItemScores(Frame, Integer, EnvQueryCached*)
+  fullName.vb: Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame, Integer, Quantum.EnvQueryCached*)
+  name.vb: NormalizeItemScores(Frame, Integer, EnvQueryCached*)
+  spec.csharp:
+  - uid: Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame,System.Int32,Quantum.EnvQueryCached*)
+    name: NormalizeItemScores
+    href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_NormalizeItemScores_Quantum_Frame_System_Int32_Quantum_EnvQueryCached__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.EnvQueryCached
+    name: EnvQueryCached
+    href: Quantum.EnvQueryCached.html
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.EQS.EnvQueryTest.NormalizeItemScores(Quantum.Frame,System.Int32,Quantum.EnvQueryCached*)
+    name: NormalizeItemScores
+    href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_NormalizeItemScores_Quantum_Frame_System_Int32_Quantum_EnvQueryCached__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.EnvQueryCached
+    name: EnvQueryCached
+    href: Quantum.EnvQueryCached.html
+  - name: '*'
+  - name: )
+- uid: Quantum.AssetObject.Identifier
+  commentId: F:Quantum.AssetObject.Identifier
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Identifier
+  nameWithType: AssetObject.Identifier
+  fullName: Quantum.AssetObject.Identifier
+- uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Loaded(IResourceManager, Allocator)
+  nameWithType: AssetObject.Loaded(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Loaded(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Disposed(IResourceManager, Allocator)
+  nameWithType: AssetObject.Disposed(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Disposed(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Create``1
+  commentId: M:Quantum.AssetObject.Create``1
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Create<T>()
+  nameWithType: AssetObject.Create<T>()
+  fullName: Quantum.AssetObject.Create<T>()
+  nameWithType.vb: AssetObject.Create(Of T)()
+  fullName.vb: Quantum.AssetObject.Create(Of T)()
+  name.vb: Create(Of T)()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Create(System.Type)
+  commentId: M:Quantum.AssetObject.Create(System.Type)
+  parent: Quantum.AssetObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Create(Type)
+  nameWithType: AssetObject.Create(Type)
+  fullName: Quantum.AssetObject.Create(System.Type)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.AssetObject.Create``1(System.Action{{T}})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  parent: Quantum.AssetObject
+  definition: Quantum.AssetObject.Create``1(System.Action{``0})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.AssetObject.Reset
+  commentId: M:Quantum.AssetObject.Reset
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Reset()
+  nameWithType: AssetObject.Reset()
+  fullName: Quantum.AssetObject.Reset()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Guid
+  commentId: P:Quantum.AssetObject.Guid
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Guid
+  nameWithType: AssetObject.Guid
+  fullName: Quantum.AssetObject.Guid
+- uid: Quantum.AssetObject.Path
+  commentId: P:Quantum.AssetObject.Path
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Path
+  nameWithType: AssetObject.Path
+  fullName: Quantum.AssetObject.Path
+- uid: Quantum.AssetObject.Settings
+  commentId: P:Quantum.AssetObject.Settings
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Settings
+  nameWithType: AssetObject.Settings
+  fullName: Quantum.AssetObject.Settings
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.AssetObject.Create``1(System.Action{``0})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.EnvQueryContext
+  commentId: T:Quantum.EnvQueryContext
+  parent: Quantum
+  href: Quantum.EnvQueryContext.html
+  name: EnvQueryContext
+  nameWithType: EnvQueryContext
+  fullName: Quantum.EnvQueryContext
+- uid: Photon.Deterministic.FP
+  commentId: T:Photon.Deterministic.FP
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FP
+  nameWithType: FP
+  fullName: Photon.Deterministic.FP
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.EQS.EnvQueryTest.RunTest(Quantum.Frame,Quantum.EnvQuery*,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+  commentId: M:Quantum.EQS.EnvQueryTest.RunTest(Quantum.Frame,Quantum.EnvQuery*,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+  parent: Quantum.EQS.EnvQueryTest
+  isExternal: true
+  href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_RunTest_Quantum_Frame_Quantum_EnvQuery__System_Int32_System_Collections_Generic_List_Quantum_EnvQueryItem__
+  name: RunTest(Frame, EnvQuery*, int, List<EnvQueryItem>)
+  nameWithType: EnvQueryTest.RunTest(Frame, EnvQuery*, int, List<EnvQueryItem>)
+  fullName: Quantum.EQS.EnvQueryTest.RunTest(Quantum.Frame, Quantum.EnvQuery*, int, System.Collections.Generic.List<Quantum.EnvQueryItem>)
+  nameWithType.vb: EnvQueryTest.RunTest(Frame, EnvQuery*, Integer, List(Of EnvQueryItem))
+  fullName.vb: Quantum.EQS.EnvQueryTest.RunTest(Quantum.Frame, Quantum.EnvQuery*, Integer, System.Collections.Generic.List(Of Quantum.EnvQueryItem))
+  name.vb: RunTest(Frame, EnvQuery*, Integer, List(Of EnvQueryItem))
+  spec.csharp:
+  - uid: Quantum.EQS.EnvQueryTest.RunTest(Quantum.Frame,Quantum.EnvQuery*,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+    name: RunTest
+    href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_RunTest_Quantum_Frame_Quantum_EnvQuery__System_Int32_System_Collections_Generic_List_Quantum_EnvQueryItem__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EnvQuery
+    name: EnvQuery
+    href: Quantum.EnvQuery.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Quantum.EnvQueryItem
+    name: EnvQueryItem
+    href: Quantum.EnvQueryItem.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.EQS.EnvQueryTest.RunTest(Quantum.Frame,Quantum.EnvQuery*,System.Int32,System.Collections.Generic.List{Quantum.EnvQueryItem})
+    name: RunTest
+    href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_RunTest_Quantum_Frame_Quantum_EnvQuery__System_Int32_System_Collections_Generic_List_Quantum_EnvQueryItem__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EnvQuery
+    name: EnvQuery
+    href: Quantum.EnvQuery.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.EnvQueryItem
+    name: EnvQueryItem
+    href: Quantum.EnvQueryItem.html
+  - name: )
+  - name: )
+- uid: Quantum.EQS.EnvQueryTestDistance.RunTest*
+  commentId: Overload:Quantum.EQS.EnvQueryTestDistance.RunTest
+  href: Quantum.EQS.EnvQueryTestDistance.html#Quantum_EQS_EnvQueryTestDistance_RunTest_Quantum_Frame_Quantum_EnvQuery__System_Int32_System_Collections_Generic_List_Quantum_EnvQueryItem__
+  name: RunTest
+  nameWithType: EnvQueryTestDistance.RunTest
+  fullName: Quantum.EQS.EnvQueryTestDistance.RunTest
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.EnvQuery*
+  isExternal: true
+  href: Quantum.EnvQuery.html
+  name: EnvQuery*
+  nameWithType: EnvQuery*
+  fullName: Quantum.EnvQuery*
+  spec.csharp:
+  - uid: Quantum.EnvQuery
+    name: EnvQuery
+    href: Quantum.EnvQuery.html
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.EnvQuery
+    name: EnvQuery
+    href: Quantum.EnvQuery.html
+  - name: '*'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.List{Quantum.EnvQueryItem}
+  commentId: T:System.Collections.Generic.List{Quantum.EnvQueryItem}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<EnvQueryItem>
+  nameWithType: List<EnvQueryItem>
+  fullName: System.Collections.Generic.List<Quantum.EnvQueryItem>
+  nameWithType.vb: List(Of EnvQueryItem)
+  fullName.vb: System.Collections.Generic.List(Of Quantum.EnvQueryItem)
+  name.vb: List(Of EnvQueryItem)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Quantum.EnvQueryItem
+    name: EnvQueryItem
+    href: Quantum.EnvQueryItem.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.EnvQueryItem
+    name: EnvQueryItem
+    href: Quantum.EnvQueryItem.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Quantum.EQS.EnvQueryTest.FinalizeInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+  commentId: M:Quantum.EQS.EnvQueryTest.FinalizeInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+  parent: Quantum.EQS.EnvQueryTest
+  isExternal: true
+  href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_FinalizeInjectionTest_Quantum_Frame_Quantum_EnvQueryCached__System_Int32_System_Int32__
+  name: FinalizeInjectionTest(Frame, EnvQueryCached*, int, ref int)
+  nameWithType: EnvQueryTest.FinalizeInjectionTest(Frame, EnvQueryCached*, int, ref int)
+  fullName: Quantum.EQS.EnvQueryTest.FinalizeInjectionTest(Quantum.Frame, Quantum.EnvQueryCached*, int, ref int)
+  nameWithType.vb: EnvQueryTest.FinalizeInjectionTest(Frame, EnvQueryCached*, Integer, Integer)
+  fullName.vb: Quantum.EQS.EnvQueryTest.FinalizeInjectionTest(Quantum.Frame, Quantum.EnvQueryCached*, Integer, Integer)
+  name.vb: FinalizeInjectionTest(Frame, EnvQueryCached*, Integer, Integer)
+  spec.csharp:
+  - uid: Quantum.EQS.EnvQueryTest.FinalizeInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+    name: FinalizeInjectionTest
+    href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_FinalizeInjectionTest_Quantum_Frame_Quantum_EnvQueryCached__System_Int32_System_Int32__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EnvQueryCached
+    name: EnvQueryCached
+    href: Quantum.EnvQueryCached.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Quantum.EQS.EnvQueryTest.FinalizeInjectionTest(Quantum.Frame,Quantum.EnvQueryCached*,System.Int32,System.Int32@)
+    name: FinalizeInjectionTest
+    href: Quantum.EQS.EnvQueryTest.html#Quantum_EQS_EnvQueryTest_FinalizeInjectionTest_Quantum_Frame_Quantum_EnvQueryCached__System_Int32_System_Int32__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EnvQueryCached
+    name: EnvQueryCached
+    href: Quantum.EnvQueryCached.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Quantum.EQS.EnvQueryTestDistance.FinalizeInjectionTest*
+  commentId: Overload:Quantum.EQS.EnvQueryTestDistance.FinalizeInjectionTest
+  href: Quantum.EQS.EnvQueryTestDistance.html#Quantum_EQS_EnvQueryTestDistance_FinalizeInjectionTest_Quantum_Frame_Quantum_EnvQueryCached__System_Int32_System_Int32__
+  name: FinalizeInjectionTest
+  nameWithType: EnvQueryTestDistance.FinalizeInjectionTest
+  fullName: Quantum.EQS.EnvQueryTestDistance.FinalizeInjectionTest
+- uid: Quantum.EnvQueryCached*
+  isExternal: true
+  href: Quantum.EnvQueryCached.html
+  name: EnvQueryCached*
+  nameWithType: EnvQueryCached*
+  fullName: Quantum.EnvQueryCached*
+  spec.csharp:
+  - uid: Quantum.EnvQueryCached
+    name: EnvQueryCached
+    href: Quantum.EnvQueryCached.html
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.EnvQueryCached
+    name: EnvQueryCached
+    href: Quantum.EnvQueryCached.html
+  - name: '*'

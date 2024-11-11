@@ -1,0 +1,1461 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.UpdateGenericStateMachineSystem
+  commentId: T:Quantum.UpdateGenericStateMachineSystem
+  id: UpdateGenericStateMachineSystem
+  parent: Quantum
+  children:
+  - Quantum.UpdateGenericStateMachineSystem.ChangeState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,System.Boolean)
+  - Quantum.UpdateGenericStateMachineSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  - Quantum.UpdateGenericStateMachineSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  - Quantum.UpdateGenericStateMachineSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  - Quantum.UpdateGenericStateMachineSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  - Quantum.UpdateGenericStateMachineSystem.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
+  - Quantum.UpdateGenericStateMachineSystem.UpdateState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  langs:
+  - csharp
+  - vb
+  name: UpdateGenericStateMachineSystem
+  nameWithType: UpdateGenericStateMachineSystem
+  fullName: Quantum.UpdateGenericStateMachineSystem
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateGenericStateMachineSystem
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+    startLine: 2
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: 'public class UpdateGenericStateMachineSystem : SystemMainThreadFilter<UpdateGenericStateMachineSystem.Filter>, ISignalOnComponentAdded<GenericStateAgent>, ISignalOnComponentRemoved<GenericStateAgent>, ISignalOnComponentAdded<TrackedStates>, ISignalOnComponentRemoved<TrackedStates>, ISignal'
+    content.vb: Public Class UpdateGenericStateMachineSystem Inherits SystemMainThreadFilter(Of UpdateGenericStateMachineSystem.Filter) Implements ISignalOnComponentAdded(Of GenericStateAgent), ISignalOnComponentRemoved(Of GenericStateAgent), ISignalOnComponentAdded(Of TrackedStates), ISignalOnComponentRemoved(Of TrackedStates), ISignal
+  inheritance:
+  - System.Object
+  - Quantum.SystemBase
+  - Quantum.SystemMainThread
+  - Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}
+  implements:
+  - Quantum.ISignalOnComponentAdded{Quantum.GenericStateAgent}
+  - Quantum.ISignalOnComponentRemoved{Quantum.GenericStateAgent}
+  - Quantum.ISignalOnComponentAdded{Quantum.TrackedStates}
+  - Quantum.ISignalOnComponentRemoved{Quantum.TrackedStates}
+  - Quantum.ISignal
+  inheritedMembers:
+  - Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.UseCulling
+  - Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Without
+  - Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Any
+  - Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame)
+  - Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  - Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  - Quantum.SystemBase.RuntimeIndex
+  - Quantum.SystemBase.ParentSystem
+  - Quantum.SystemBase.ChildSystems
+  - Quantum.SystemBase.Hierarchy
+  - Quantum.SystemBase.StartEnabled
+  - Quantum.SystemBase.OnInit(Quantum.Frame)
+  - Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  - Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+- uid: Quantum.UpdateGenericStateMachineSystem.UpdateState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  commentId: M:Quantum.UpdateGenericStateMachineSystem.UpdateState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  id: UpdateState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  parent: Quantum.UpdateGenericStateMachineSystem
+  langs:
+  - csharp
+  - vb
+  name: UpdateState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase)
+  nameWithType: UpdateGenericStateMachineSystem.UpdateState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase)
+  fullName: Quantum.UpdateGenericStateMachineSystem.UpdateState(Quantum.Frame, Quantum.HNSFStateAgentData*, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateState
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+    startLine: 12
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public virtual void UpdateState(Frame frame, HNSFStateAgentData* agentData, EntityRef entity, AIBlackboardComponent* blackboard, AIConfigBase aiConfig)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: agentData
+      type: Quantum.HNSFStateAgentData*
+    - id: entity
+      type: Quantum.EntityRef
+    - id: blackboard
+      type: Quantum.AIBlackboardComponent*
+    - id: aiConfig
+      type: Quantum.AIConfigBase
+    content.vb: Public Overridable Sub UpdateState(frame As Frame, agentData As HNSFStateAgentData*, entity As EntityRef, blackboard As AIBlackboardComponent*, aiConfig As AIConfigBase)
+  overload: Quantum.UpdateGenericStateMachineSystem.UpdateState*
+- uid: Quantum.UpdateGenericStateMachineSystem.ChangeState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,System.Boolean)
+  commentId: M:Quantum.UpdateGenericStateMachineSystem.ChangeState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,System.Boolean)
+  id: ChangeState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,System.Boolean)
+  parent: Quantum.UpdateGenericStateMachineSystem
+  langs:
+  - csharp
+  - vb
+  name: ChangeState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase, bool)
+  nameWithType: UpdateGenericStateMachineSystem.ChangeState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase, bool)
+  fullName: Quantum.UpdateGenericStateMachineSystem.ChangeState(Quantum.Frame, Quantum.HNSFStateAgentData*, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ChangeState
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+    startLine: 49
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public virtual void ChangeState(Frame frame, HNSFStateAgentData* stateData, EntityRef entity, AIBlackboardComponent* blackboard, AIConfigBase config, bool cleanup = false)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: stateData
+      type: Quantum.HNSFStateAgentData*
+    - id: entity
+      type: Quantum.EntityRef
+    - id: blackboard
+      type: Quantum.AIBlackboardComponent*
+    - id: config
+      type: Quantum.AIConfigBase
+    - id: cleanup
+      type: System.Boolean
+    content.vb: Public Overridable Sub ChangeState(frame As Frame, stateData As HNSFStateAgentData*, entity As EntityRef, blackboard As AIBlackboardComponent*, config As AIConfigBase, cleanup As Boolean = False)
+  overload: Quantum.UpdateGenericStateMachineSystem.ChangeState*
+  nameWithType.vb: UpdateGenericStateMachineSystem.ChangeState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase, Boolean)
+  fullName.vb: Quantum.UpdateGenericStateMachineSystem.ChangeState(Quantum.Frame, Quantum.HNSFStateAgentData*, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, Boolean)
+  name.vb: ChangeState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase, Boolean)
+- uid: Quantum.UpdateGenericStateMachineSystem.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
+  commentId: M:Quantum.UpdateGenericStateMachineSystem.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
+  id: Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
+  parent: Quantum.UpdateGenericStateMachineSystem
+  langs:
+  - csharp
+  - vb
+  name: Update(Frame, ref Filter)
+  nameWithType: UpdateGenericStateMachineSystem.Update(Frame, ref UpdateGenericStateMachineSystem.Filter)
+  fullName: Quantum.UpdateGenericStateMachineSystem.Update(Quantum.Frame, ref Quantum.UpdateGenericStateMachineSystem.Filter)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Update
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+    startLine: 60
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Override to add workload.
+  example: []
+  syntax:
+    content: public override void Update(Frame frame, ref UpdateGenericStateMachineSystem.Filter filter)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: filter
+      type: Quantum.UpdateGenericStateMachineSystem.Filter
+      description: The frame object.
+    content.vb: Public Overrides Sub Update(frame As Frame, filter As UpdateGenericStateMachineSystem.Filter)
+  overridden: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
+  overload: Quantum.UpdateGenericStateMachineSystem.Update*
+  nameWithType.vb: UpdateGenericStateMachineSystem.Update(Frame, UpdateGenericStateMachineSystem.Filter)
+  fullName.vb: Quantum.UpdateGenericStateMachineSystem.Update(Quantum.Frame, Quantum.UpdateGenericStateMachineSystem.Filter)
+  name.vb: Update(Frame, Filter)
+- uid: Quantum.UpdateGenericStateMachineSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  commentId: M:Quantum.UpdateGenericStateMachineSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  id: OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  parent: Quantum.UpdateGenericStateMachineSystem
+  langs:
+  - csharp
+  - vb
+  name: OnAdded(Frame, EntityRef, GenericStateAgent*)
+  nameWithType: UpdateGenericStateMachineSystem.OnAdded(Frame, EntityRef, GenericStateAgent*)
+  fullName: Quantum.UpdateGenericStateMachineSystem.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.GenericStateAgent*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnAdded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+    startLine: 77
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The signal is called after a component of the desired type has been added to an entity.
+  example: []
+  syntax:
+    content: public void OnAdded(Frame frame, EntityRef entity, GenericStateAgent* component)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was added to.
+    - id: component
+      type: Quantum.GenericStateAgent*
+      description: The component that was added.
+    content.vb: Public Sub OnAdded(frame As Frame, entity As EntityRef, component As GenericStateAgent*)
+  overload: Quantum.UpdateGenericStateMachineSystem.OnAdded*
+  implements:
+  - Quantum.ISignalOnComponentAdded{Quantum.GenericStateAgent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+- uid: Quantum.UpdateGenericStateMachineSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  commentId: M:Quantum.UpdateGenericStateMachineSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  id: OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  parent: Quantum.UpdateGenericStateMachineSystem
+  langs:
+  - csharp
+  - vb
+  name: OnRemoved(Frame, EntityRef, GenericStateAgent*)
+  nameWithType: UpdateGenericStateMachineSystem.OnRemoved(Frame, EntityRef, GenericStateAgent*)
+  fullName: Quantum.UpdateGenericStateMachineSystem.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.GenericStateAgent*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnRemoved
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+    startLine: 84
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The signal is called after a component of the desired type has been removed from an entity.
+  example: []
+  syntax:
+    content: public void OnRemoved(Frame frame, EntityRef entity, GenericStateAgent* component)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was removed from.
+    - id: component
+      type: Quantum.GenericStateAgent*
+      description: The component that was removed.
+    content.vb: Public Sub OnRemoved(frame As Frame, entity As EntityRef, component As GenericStateAgent*)
+  overload: Quantum.UpdateGenericStateMachineSystem.OnRemoved*
+  implements:
+  - Quantum.ISignalOnComponentRemoved{Quantum.GenericStateAgent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+- uid: Quantum.UpdateGenericStateMachineSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  commentId: M:Quantum.UpdateGenericStateMachineSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  id: OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  parent: Quantum.UpdateGenericStateMachineSystem
+  langs:
+  - csharp
+  - vb
+  name: OnAdded(Frame, EntityRef, TrackedStates*)
+  nameWithType: UpdateGenericStateMachineSystem.OnAdded(Frame, EntityRef, TrackedStates*)
+  fullName: Quantum.UpdateGenericStateMachineSystem.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.TrackedStates*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnAdded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+    startLine: 90
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The signal is called after a component of the desired type has been added to an entity.
+  example: []
+  syntax:
+    content: public void OnAdded(Frame f, EntityRef entity, TrackedStates* component)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was added to.
+    - id: component
+      type: Quantum.TrackedStates*
+      description: The component that was added.
+    content.vb: Public Sub OnAdded(f As Frame, entity As EntityRef, component As TrackedStates*)
+  overload: Quantum.UpdateGenericStateMachineSystem.OnAdded*
+  implements:
+  - Quantum.ISignalOnComponentAdded{Quantum.TrackedStates}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+- uid: Quantum.UpdateGenericStateMachineSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  commentId: M:Quantum.UpdateGenericStateMachineSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  id: OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  parent: Quantum.UpdateGenericStateMachineSystem
+  langs:
+  - csharp
+  - vb
+  name: OnRemoved(Frame, EntityRef, TrackedStates*)
+  nameWithType: UpdateGenericStateMachineSystem.OnRemoved(Frame, EntityRef, TrackedStates*)
+  fullName: Quantum.UpdateGenericStateMachineSystem.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.TrackedStates*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnRemoved
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
+    startLine: 95
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The signal is called after a component of the desired type has been removed from an entity.
+  example: []
+  syntax:
+    content: public void OnRemoved(Frame f, EntityRef entity, TrackedStates* component)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was removed from.
+    - id: component
+      type: Quantum.TrackedStates*
+      description: The component that was removed.
+    content.vb: Public Sub OnRemoved(f As Frame, entity As EntityRef, component As TrackedStates*)
+  overload: Quantum.UpdateGenericStateMachineSystem.OnRemoved*
+  implements:
+  - Quantum.ISignalOnComponentRemoved{Quantum.TrackedStates}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.SystemBase
+  commentId: T:Quantum.SystemBase
+  parent: Quantum
+  href: Quantum.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: Quantum.SystemBase
+- uid: Quantum.SystemMainThread
+  commentId: T:Quantum.SystemMainThread
+  parent: Quantum
+  href: Quantum.SystemMainThread.html
+  name: SystemMainThread
+  nameWithType: SystemMainThread
+  fullName: Quantum.SystemMainThread
+- uid: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}
+  commentId: T:Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}
+  parent: Quantum
+  definition: Quantum.SystemMainThreadFilter`1
+  href: Quantum.SystemMainThreadFilter-1.html
+  name: SystemMainThreadFilter<UpdateGenericStateMachineSystem.Filter>
+  nameWithType: SystemMainThreadFilter<UpdateGenericStateMachineSystem.Filter>
+  fullName: Quantum.SystemMainThreadFilter<Quantum.UpdateGenericStateMachineSystem.Filter>
+  nameWithType.vb: SystemMainThreadFilter(Of UpdateGenericStateMachineSystem.Filter)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of Quantum.UpdateGenericStateMachineSystem.Filter)
+  name.vb: SystemMainThreadFilter(Of UpdateGenericStateMachineSystem.Filter)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter`1
+    name: SystemMainThreadFilter
+    href: Quantum.SystemMainThreadFilter-1.html
+  - name: <
+  - uid: Quantum.UpdateGenericStateMachineSystem
+    name: UpdateGenericStateMachineSystem
+    href: Quantum.UpdateGenericStateMachineSystem.html
+  - name: .
+  - uid: Quantum.UpdateGenericStateMachineSystem.Filter
+    name: Filter
+    href: Quantum.UpdateGenericStateMachineSystem.Filter.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter`1
+    name: SystemMainThreadFilter
+    href: Quantum.SystemMainThreadFilter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.UpdateGenericStateMachineSystem
+    name: UpdateGenericStateMachineSystem
+    href: Quantum.UpdateGenericStateMachineSystem.html
+  - name: .
+  - uid: Quantum.UpdateGenericStateMachineSystem.Filter
+    name: Filter
+    href: Quantum.UpdateGenericStateMachineSystem.Filter.html
+  - name: )
+- uid: Quantum.ISignalOnComponentAdded{Quantum.GenericStateAgent}
+  commentId: T:Quantum.ISignalOnComponentAdded{Quantum.GenericStateAgent}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentAdded`1
+  href: Quantum.ISignalOnComponentAdded-1.html
+  name: ISignalOnComponentAdded<GenericStateAgent>
+  nameWithType: ISignalOnComponentAdded<GenericStateAgent>
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.GenericStateAgent>
+  nameWithType.vb: ISignalOnComponentAdded(Of GenericStateAgent)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.GenericStateAgent)
+  name.vb: ISignalOnComponentAdded(Of GenericStateAgent)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: <
+  - uid: Quantum.GenericStateAgent
+    name: GenericStateAgent
+    href: Quantum.GenericStateAgent.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.GenericStateAgent
+    name: GenericStateAgent
+    href: Quantum.GenericStateAgent.html
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.GenericStateAgent}
+  commentId: T:Quantum.ISignalOnComponentRemoved{Quantum.GenericStateAgent}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentRemoved`1
+  href: Quantum.ISignalOnComponentRemoved-1.html
+  name: ISignalOnComponentRemoved<GenericStateAgent>
+  nameWithType: ISignalOnComponentRemoved<GenericStateAgent>
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.GenericStateAgent>
+  nameWithType.vb: ISignalOnComponentRemoved(Of GenericStateAgent)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.GenericStateAgent)
+  name.vb: ISignalOnComponentRemoved(Of GenericStateAgent)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: <
+  - uid: Quantum.GenericStateAgent
+    name: GenericStateAgent
+    href: Quantum.GenericStateAgent.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.GenericStateAgent
+    name: GenericStateAgent
+    href: Quantum.GenericStateAgent.html
+  - name: )
+- uid: Quantum.ISignalOnComponentAdded{Quantum.TrackedStates}
+  commentId: T:Quantum.ISignalOnComponentAdded{Quantum.TrackedStates}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentAdded`1
+  href: Quantum.ISignalOnComponentAdded-1.html
+  name: ISignalOnComponentAdded<TrackedStates>
+  nameWithType: ISignalOnComponentAdded<TrackedStates>
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.TrackedStates>
+  nameWithType.vb: ISignalOnComponentAdded(Of TrackedStates)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.TrackedStates)
+  name.vb: ISignalOnComponentAdded(Of TrackedStates)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: <
+  - uid: Quantum.TrackedStates
+    name: TrackedStates
+    href: Quantum.TrackedStates.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.TrackedStates
+    name: TrackedStates
+    href: Quantum.TrackedStates.html
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.TrackedStates}
+  commentId: T:Quantum.ISignalOnComponentRemoved{Quantum.TrackedStates}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentRemoved`1
+  href: Quantum.ISignalOnComponentRemoved-1.html
+  name: ISignalOnComponentRemoved<TrackedStates>
+  nameWithType: ISignalOnComponentRemoved<TrackedStates>
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.TrackedStates>
+  nameWithType.vb: ISignalOnComponentRemoved(Of TrackedStates)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.TrackedStates)
+  name.vb: ISignalOnComponentRemoved(Of TrackedStates)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: <
+  - uid: Quantum.TrackedStates
+    name: TrackedStates
+    href: Quantum.TrackedStates.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.TrackedStates
+    name: TrackedStates
+    href: Quantum.TrackedStates.html
+  - name: )
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.UseCulling
+  commentId: P:Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.UseCulling
+  parent: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}
+  definition: Quantum.SystemMainThreadFilter`1.UseCulling
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_UseCulling
+  name: UseCulling
+  nameWithType: SystemMainThreadFilter<UpdateGenericStateMachineSystem.Filter>.UseCulling
+  fullName: Quantum.SystemMainThreadFilter<Quantum.UpdateGenericStateMachineSystem.Filter>.UseCulling
+  nameWithType.vb: SystemMainThreadFilter(Of UpdateGenericStateMachineSystem.Filter).UseCulling
+  fullName.vb: Quantum.SystemMainThreadFilter(Of Quantum.UpdateGenericStateMachineSystem.Filter).UseCulling
+- uid: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Without
+  commentId: P:Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Without
+  parent: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}
+  definition: Quantum.SystemMainThreadFilter`1.Without
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Without
+  name: Without
+  nameWithType: SystemMainThreadFilter<UpdateGenericStateMachineSystem.Filter>.Without
+  fullName: Quantum.SystemMainThreadFilter<Quantum.UpdateGenericStateMachineSystem.Filter>.Without
+  nameWithType.vb: SystemMainThreadFilter(Of UpdateGenericStateMachineSystem.Filter).Without
+  fullName.vb: Quantum.SystemMainThreadFilter(Of Quantum.UpdateGenericStateMachineSystem.Filter).Without
+- uid: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Any
+  commentId: P:Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Any
+  parent: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}
+  definition: Quantum.SystemMainThreadFilter`1.Any
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Any
+  name: Any
+  nameWithType: SystemMainThreadFilter<UpdateGenericStateMachineSystem.Filter>.Any
+  fullName: Quantum.SystemMainThreadFilter<Quantum.UpdateGenericStateMachineSystem.Filter>.Any
+  nameWithType.vb: SystemMainThreadFilter(Of UpdateGenericStateMachineSystem.Filter).Any
+  fullName.vb: Quantum.SystemMainThreadFilter(Of Quantum.UpdateGenericStateMachineSystem.Filter).Any
+- uid: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame)
+  commentId: M:Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame)
+  parent: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}
+  definition: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame)
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  name: Update(Frame)
+  nameWithType: SystemMainThreadFilter<UpdateGenericStateMachineSystem.Filter>.Update(Frame)
+  fullName: Quantum.SystemMainThreadFilter<Quantum.UpdateGenericStateMachineSystem.Filter>.Update(Quantum.Frame)
+  nameWithType.vb: SystemMainThreadFilter(Of UpdateGenericStateMachineSystem.Filter).Update(Frame)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of Quantum.UpdateGenericStateMachineSystem.Filter).Update(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemMainThread
+  isExternal: true
+  href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_ScheduleUpdate_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: ScheduleUpdate(Frame, TaskHandle)
+  nameWithType: SystemMainThread.ScheduleUpdate(Frame, TaskHandle)
+  fullName: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: ScheduleUpdate
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_ScheduleUpdate_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: ScheduleUpdate
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_ScheduleUpdate_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemMainThread
+  isExternal: true
+  href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: SystemMainThread.Schedule(Frame, TaskHandle)
+  fullName: Quantum.SystemMainThread.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThread.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemMainThread.html#Quantum_SystemMainThread_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemBase.RuntimeIndex
+  commentId: P:Quantum.SystemBase.RuntimeIndex
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_RuntimeIndex
+  name: RuntimeIndex
+  nameWithType: SystemBase.RuntimeIndex
+  fullName: Quantum.SystemBase.RuntimeIndex
+- uid: Quantum.SystemBase.ParentSystem
+  commentId: P:Quantum.SystemBase.ParentSystem
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ParentSystem
+  name: ParentSystem
+  nameWithType: SystemBase.ParentSystem
+  fullName: Quantum.SystemBase.ParentSystem
+- uid: Quantum.SystemBase.ChildSystems
+  commentId: P:Quantum.SystemBase.ChildSystems
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ChildSystems
+  name: ChildSystems
+  nameWithType: SystemBase.ChildSystems
+  fullName: Quantum.SystemBase.ChildSystems
+- uid: Quantum.SystemBase.Hierarchy
+  commentId: P:Quantum.SystemBase.Hierarchy
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Hierarchy
+  name: Hierarchy
+  nameWithType: SystemBase.Hierarchy
+  fullName: Quantum.SystemBase.Hierarchy
+- uid: Quantum.SystemBase.StartEnabled
+  commentId: P:Quantum.SystemBase.StartEnabled
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_StartEnabled
+  name: StartEnabled
+  nameWithType: SystemBase.StartEnabled
+  fullName: Quantum.SystemBase.StartEnabled
+- uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnInit(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  name: OnInit(Frame)
+  nameWithType: SystemBase.OnInit(Frame)
+  fullName: Quantum.SystemBase.OnInit(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  name: OnEnabled(Frame)
+  nameWithType: SystemBase.OnEnabled(Frame)
+  fullName: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  name: OnDisabled(Frame)
+  nameWithType: SystemBase.OnDisabled(Frame)
+  fullName: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: OnSchedule(Frame, TaskHandle)
+  nameWithType: SystemBase.OnSchedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.OnSchedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.SystemMainThreadFilter`1
+  commentId: T:Quantum.SystemMainThreadFilter`1
+  href: Quantum.SystemMainThreadFilter-1.html
+  name: SystemMainThreadFilter<T>
+  nameWithType: SystemMainThreadFilter<T>
+  fullName: Quantum.SystemMainThreadFilter<T>
+  nameWithType.vb: SystemMainThreadFilter(Of T)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T)
+  name.vb: SystemMainThreadFilter(Of T)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter`1
+    name: SystemMainThreadFilter
+    href: Quantum.SystemMainThreadFilter-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter`1
+    name: SystemMainThreadFilter
+    href: Quantum.SystemMainThreadFilter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.ISignalOnComponentAdded`1
+  commentId: T:Quantum.ISignalOnComponentAdded`1
+  href: Quantum.ISignalOnComponentAdded-1.html
+  name: ISignalOnComponentAdded<T>
+  nameWithType: ISignalOnComponentAdded<T>
+  fullName: Quantum.ISignalOnComponentAdded<T>
+  nameWithType.vb: ISignalOnComponentAdded(Of T)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of T)
+  name.vb: ISignalOnComponentAdded(Of T)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved`1
+  commentId: T:Quantum.ISignalOnComponentRemoved`1
+  href: Quantum.ISignalOnComponentRemoved-1.html
+  name: ISignalOnComponentRemoved<T>
+  nameWithType: ISignalOnComponentRemoved<T>
+  fullName: Quantum.ISignalOnComponentRemoved<T>
+  nameWithType.vb: ISignalOnComponentRemoved(Of T)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of T)
+  name.vb: ISignalOnComponentRemoved(Of T)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.SystemMainThreadFilter`1.UseCulling
+  commentId: P:Quantum.SystemMainThreadFilter`1.UseCulling
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_UseCulling
+  name: UseCulling
+  nameWithType: SystemMainThreadFilter<T>.UseCulling
+  fullName: Quantum.SystemMainThreadFilter<T>.UseCulling
+  nameWithType.vb: SystemMainThreadFilter(Of T).UseCulling
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T).UseCulling
+- uid: Quantum.SystemMainThreadFilter`1.Without
+  commentId: P:Quantum.SystemMainThreadFilter`1.Without
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Without
+  name: Without
+  nameWithType: SystemMainThreadFilter<T>.Without
+  fullName: Quantum.SystemMainThreadFilter<T>.Without
+  nameWithType.vb: SystemMainThreadFilter(Of T).Without
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T).Without
+- uid: Quantum.SystemMainThreadFilter`1.Any
+  commentId: P:Quantum.SystemMainThreadFilter`1.Any
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Any
+  name: Any
+  nameWithType: SystemMainThreadFilter<T>.Any
+  fullName: Quantum.SystemMainThreadFilter<T>.Any
+  nameWithType.vb: SystemMainThreadFilter(Of T).Any
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T).Any
+- uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame)
+  commentId: M:Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame)
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  name: Update(Frame)
+  nameWithType: SystemMainThreadFilter<T>.Update(Frame)
+  fullName: Quantum.SystemMainThreadFilter<T>.Update(Quantum.Frame)
+  nameWithType.vb: SystemMainThreadFilter(Of T).Update(Frame)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T).Update(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.UpdateGenericStateMachineSystem.UpdateState*
+  commentId: Overload:Quantum.UpdateGenericStateMachineSystem.UpdateState
+  href: Quantum.UpdateGenericStateMachineSystem.html#Quantum_UpdateGenericStateMachineSystem_UpdateState_Quantum_Frame_Quantum_HNSFStateAgentData__Quantum_EntityRef_Quantum_AIBlackboardComponent__Quantum_AIConfigBase_
+  name: UpdateState
+  nameWithType: UpdateGenericStateMachineSystem.UpdateState
+  fullName: Quantum.UpdateGenericStateMachineSystem.UpdateState
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.HNSFStateAgentData*
+  isExternal: true
+  href: Quantum.HNSFStateAgentData.html
+  name: HNSFStateAgentData*
+  nameWithType: HNSFStateAgentData*
+  fullName: Quantum.HNSFStateAgentData*
+  spec.csharp:
+  - uid: Quantum.HNSFStateAgentData
+    name: HNSFStateAgentData
+    href: Quantum.HNSFStateAgentData.html
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.HNSFStateAgentData
+    name: HNSFStateAgentData
+    href: Quantum.HNSFStateAgentData.html
+  - name: '*'
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.AIBlackboardComponent*
+  isExternal: true
+  name: AIBlackboardComponent*
+  nameWithType: AIBlackboardComponent*
+  fullName: Quantum.AIBlackboardComponent*
+  spec.csharp:
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+- uid: Quantum.AIConfigBase
+  commentId: T:Quantum.AIConfigBase
+  parent: Quantum
+  isExternal: true
+  name: AIConfigBase
+  nameWithType: AIConfigBase
+  fullName: Quantum.AIConfigBase
+- uid: Quantum.UpdateGenericStateMachineSystem.ChangeState*
+  commentId: Overload:Quantum.UpdateGenericStateMachineSystem.ChangeState
+  href: Quantum.UpdateGenericStateMachineSystem.html#Quantum_UpdateGenericStateMachineSystem_ChangeState_Quantum_Frame_Quantum_HNSFStateAgentData__Quantum_EntityRef_Quantum_AIBlackboardComponent__Quantum_AIConfigBase_System_Boolean_
+  name: ChangeState
+  nameWithType: UpdateGenericStateMachineSystem.ChangeState
+  fullName: Quantum.UpdateGenericStateMachineSystem.ChangeState
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
+  commentId: M:Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
+  parent: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}
+  definition: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame,`0@)
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  name: Update(Frame, ref Filter)
+  nameWithType: SystemMainThreadFilter<UpdateGenericStateMachineSystem.Filter>.Update(Frame, ref UpdateGenericStateMachineSystem.Filter)
+  fullName: Quantum.SystemMainThreadFilter<Quantum.UpdateGenericStateMachineSystem.Filter>.Update(Quantum.Frame, ref Quantum.UpdateGenericStateMachineSystem.Filter)
+  nameWithType.vb: SystemMainThreadFilter(Of UpdateGenericStateMachineSystem.Filter).Update(Frame, UpdateGenericStateMachineSystem.Filter)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of Quantum.UpdateGenericStateMachineSystem.Filter).Update(Quantum.Frame, Quantum.UpdateGenericStateMachineSystem.Filter)
+  name.vb: Update(Frame, Filter)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.UpdateGenericStateMachineSystem.Filter
+    name: Filter
+    href: Quantum.UpdateGenericStateMachineSystem.Filter.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.UpdateGenericStateMachineSystem.Filter
+    name: Filter
+    href: Quantum.UpdateGenericStateMachineSystem.Filter.html
+  - name: )
+- uid: Quantum.UpdateGenericStateMachineSystem.Update*
+  commentId: Overload:Quantum.UpdateGenericStateMachineSystem.Update
+  href: Quantum.UpdateGenericStateMachineSystem.html#Quantum_UpdateGenericStateMachineSystem_Update_Quantum_Frame_Quantum_UpdateGenericStateMachineSystem_Filter__
+  name: Update
+  nameWithType: UpdateGenericStateMachineSystem.Update
+  fullName: Quantum.UpdateGenericStateMachineSystem.Update
+- uid: Quantum.UpdateGenericStateMachineSystem.Filter
+  commentId: T:Quantum.UpdateGenericStateMachineSystem.Filter
+  parent: Quantum
+  href: Quantum.UpdateGenericStateMachineSystem.html
+  name: UpdateGenericStateMachineSystem.Filter
+  nameWithType: UpdateGenericStateMachineSystem.Filter
+  fullName: Quantum.UpdateGenericStateMachineSystem.Filter
+  spec.csharp:
+  - uid: Quantum.UpdateGenericStateMachineSystem
+    name: UpdateGenericStateMachineSystem
+    href: Quantum.UpdateGenericStateMachineSystem.html
+  - name: .
+  - uid: Quantum.UpdateGenericStateMachineSystem.Filter
+    name: Filter
+    href: Quantum.UpdateGenericStateMachineSystem.Filter.html
+  spec.vb:
+  - uid: Quantum.UpdateGenericStateMachineSystem
+    name: UpdateGenericStateMachineSystem
+    href: Quantum.UpdateGenericStateMachineSystem.html
+  - name: .
+  - uid: Quantum.UpdateGenericStateMachineSystem.Filter
+    name: Filter
+    href: Quantum.UpdateGenericStateMachineSystem.Filter.html
+- uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame,`0@)
+  commentId: M:Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame,`0@)
+  href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  name: Update(Frame, ref T)
+  nameWithType: SystemMainThreadFilter<T>.Update(Frame, ref T)
+  fullName: Quantum.SystemMainThreadFilter<T>.Update(Quantum.Frame, ref T)
+  nameWithType.vb: SystemMainThreadFilter(Of T).Update(Frame, T)
+  fullName.vb: Quantum.SystemMainThreadFilter(Of T).Update(Quantum.Frame, T)
+  name.vb: Update(Frame, T)
+  spec.csharp:
+  - uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame,`0@)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemMainThreadFilter`1.Update(Quantum.Frame,`0@)
+    name: Update
+    href: Quantum.SystemMainThreadFilter-1.html#Quantum_SystemMainThreadFilter_1_Update_Quantum_Frame__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.UpdateGenericStateMachineSystem.OnAdded*
+  commentId: Overload:Quantum.UpdateGenericStateMachineSystem.OnAdded
+  href: Quantum.UpdateGenericStateMachineSystem.html#Quantum_UpdateGenericStateMachineSystem_OnAdded_Quantum_Frame_Quantum_EntityRef_Quantum_GenericStateAgent__
+  name: OnAdded
+  nameWithType: UpdateGenericStateMachineSystem.OnAdded
+  fullName: Quantum.UpdateGenericStateMachineSystem.OnAdded
+- uid: Quantum.ISignalOnComponentAdded{Quantum.GenericStateAgent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  commentId: M:Quantum.ISignalOnComponentAdded{Quantum.GenericStateAgent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  parent: Quantum.ISignalOnComponentAdded{Quantum.GenericStateAgent}
+  definition: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnAdded(Frame, EntityRef, GenericStateAgent*)
+  nameWithType: ISignalOnComponentAdded<GenericStateAgent>.OnAdded(Frame, EntityRef, GenericStateAgent*)
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.GenericStateAgent>.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.GenericStateAgent*)
+  nameWithType.vb: ISignalOnComponentAdded(Of GenericStateAgent).OnAdded(Frame, EntityRef, GenericStateAgent*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.GenericStateAgent).OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.GenericStateAgent*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.GenericStateAgent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.GenericStateAgent
+    name: GenericStateAgent
+    href: Quantum.GenericStateAgent.html
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.GenericStateAgent}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.GenericStateAgent
+    name: GenericStateAgent
+    href: Quantum.GenericStateAgent.html
+  - name: '*'
+  - name: )
+- uid: Quantum.GenericStateAgent*
+  isExternal: true
+  href: Quantum.GenericStateAgent.html
+  name: GenericStateAgent*
+  nameWithType: GenericStateAgent*
+  fullName: Quantum.GenericStateAgent*
+  spec.csharp:
+  - uid: Quantum.GenericStateAgent
+    name: GenericStateAgent
+    href: Quantum.GenericStateAgent.html
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.GenericStateAgent
+    name: GenericStateAgent
+    href: Quantum.GenericStateAgent.html
+  - name: '*'
+- uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  commentId: M:Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  isExternal: true
+  href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnAdded(Frame, EntityRef, T*)
+  nameWithType: ISignalOnComponentAdded<T>.OnAdded(Frame, EntityRef, T*)
+  fullName: Quantum.ISignalOnComponentAdded<T>.OnAdded(Quantum.Frame, Quantum.EntityRef, T*)
+  nameWithType.vb: ISignalOnComponentAdded(Of T).OnAdded(Frame, EntityRef, T*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of T).OnAdded(Quantum.Frame, Quantum.EntityRef, T*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+- uid: Quantum.UpdateGenericStateMachineSystem.OnRemoved*
+  commentId: Overload:Quantum.UpdateGenericStateMachineSystem.OnRemoved
+  href: Quantum.UpdateGenericStateMachineSystem.html#Quantum_UpdateGenericStateMachineSystem_OnRemoved_Quantum_Frame_Quantum_EntityRef_Quantum_GenericStateAgent__
+  name: OnRemoved
+  nameWithType: UpdateGenericStateMachineSystem.OnRemoved
+  fullName: Quantum.UpdateGenericStateMachineSystem.OnRemoved
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.GenericStateAgent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  commentId: M:Quantum.ISignalOnComponentRemoved{Quantum.GenericStateAgent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+  parent: Quantum.ISignalOnComponentRemoved{Quantum.GenericStateAgent}
+  definition: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnRemoved(Frame, EntityRef, GenericStateAgent*)
+  nameWithType: ISignalOnComponentRemoved<GenericStateAgent>.OnRemoved(Frame, EntityRef, GenericStateAgent*)
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.GenericStateAgent>.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.GenericStateAgent*)
+  nameWithType.vb: ISignalOnComponentRemoved(Of GenericStateAgent).OnRemoved(Frame, EntityRef, GenericStateAgent*)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.GenericStateAgent).OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.GenericStateAgent*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.GenericStateAgent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.GenericStateAgent
+    name: GenericStateAgent
+    href: Quantum.GenericStateAgent.html
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.GenericStateAgent}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.GenericStateAgent
+    name: GenericStateAgent
+    href: Quantum.GenericStateAgent.html
+  - name: '*'
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  commentId: M:Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  isExternal: true
+  href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnRemoved(Frame, EntityRef, T*)
+  nameWithType: ISignalOnComponentRemoved<T>.OnRemoved(Frame, EntityRef, T*)
+  fullName: Quantum.ISignalOnComponentRemoved<T>.OnRemoved(Quantum.Frame, Quantum.EntityRef, T*)
+  nameWithType.vb: ISignalOnComponentRemoved(Of T).OnRemoved(Frame, EntityRef, T*)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of T).OnRemoved(Quantum.Frame, Quantum.EntityRef, T*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+- uid: Quantum.ISignalOnComponentAdded{Quantum.TrackedStates}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  commentId: M:Quantum.ISignalOnComponentAdded{Quantum.TrackedStates}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  parent: Quantum.ISignalOnComponentAdded{Quantum.TrackedStates}
+  definition: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnAdded(Frame, EntityRef, TrackedStates*)
+  nameWithType: ISignalOnComponentAdded<TrackedStates>.OnAdded(Frame, EntityRef, TrackedStates*)
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.TrackedStates>.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.TrackedStates*)
+  nameWithType.vb: ISignalOnComponentAdded(Of TrackedStates).OnAdded(Frame, EntityRef, TrackedStates*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.TrackedStates).OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.TrackedStates*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.TrackedStates}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TrackedStates
+    name: TrackedStates
+    href: Quantum.TrackedStates.html
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.TrackedStates}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TrackedStates
+    name: TrackedStates
+    href: Quantum.TrackedStates.html
+  - name: '*'
+  - name: )
+- uid: Quantum.TrackedStates*
+  isExternal: true
+  href: Quantum.TrackedStates.html
+  name: TrackedStates*
+  nameWithType: TrackedStates*
+  fullName: Quantum.TrackedStates*
+  spec.csharp:
+  - uid: Quantum.TrackedStates
+    name: TrackedStates
+    href: Quantum.TrackedStates.html
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.TrackedStates
+    name: TrackedStates
+    href: Quantum.TrackedStates.html
+  - name: '*'
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.TrackedStates}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  commentId: M:Quantum.ISignalOnComponentRemoved{Quantum.TrackedStates}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+  parent: Quantum.ISignalOnComponentRemoved{Quantum.TrackedStates}
+  definition: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnRemoved(Frame, EntityRef, TrackedStates*)
+  nameWithType: ISignalOnComponentRemoved<TrackedStates>.OnRemoved(Frame, EntityRef, TrackedStates*)
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.TrackedStates>.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.TrackedStates*)
+  nameWithType.vb: ISignalOnComponentRemoved(Of TrackedStates).OnRemoved(Frame, EntityRef, TrackedStates*)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.TrackedStates).OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.TrackedStates*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.TrackedStates}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TrackedStates
+    name: TrackedStates
+    href: Quantum.TrackedStates.html
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.TrackedStates}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TrackedStates
+    name: TrackedStates
+    href: Quantum.TrackedStates.html
+  - name: '*'
+  - name: )

@@ -1,0 +1,920 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.StateTimelineEditorView
+  commentId: T:Global.StateTimelineEditorView
+  id: StateTimelineEditorView
+  parent: Global
+  children:
+  - Global.StateTimelineEditorView.#ctor
+  - Global.StateTimelineEditorView.BuildFrameCounter
+  - Global.StateTimelineEditorView.BuildSideBar
+  - Global.StateTimelineEditorView.BuildUI
+  - Global.StateTimelineEditorView.ChangeZoomLevel(System.Single)
+  - Global.StateTimelineEditorView.CreateFramebar(Quantum.HNSFState,Quantum.HNSFStateAction)
+  - Global.StateTimelineEditorView.DeepCopyReflection``1(``0)
+  - Global.StateTimelineEditorView.ForceRefresh
+  - Global.StateTimelineEditorView.GetFrameWidth
+  - Global.StateTimelineEditorView.GetStateTimelineParents(Quantum.HNSFState)
+  - Global.StateTimelineEditorView.SetStateAsset(Quantum.HNSFState)
+  - Global.StateTimelineEditorView.SidebarCreateLabel(UnityEngine.UIElements.ScrollView,Quantum.HNSFState,Quantum.HNSFStateAction,System.Int32)
+  - Global.StateTimelineEditorView.actionCopy
+  - Global.StateTimelineEditorView.depthColors
+  - Global.StateTimelineEditorView.frameInterruptColor
+  - Global.StateTimelineEditorView.frameZeroColor
+  - Global.StateTimelineEditorView.lastKnownMousePosition
+  - Global.StateTimelineEditorView.parentColor
+  - Global.StateTimelineEditorView.zoomMultiplier
+  langs:
+  - csharp
+  - vb
+  name: StateTimelineEditorView
+  nameWithType: StateTimelineEditorView
+  fullName: StateTimelineEditorView
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StateTimelineEditorView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 12
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: 'public class StateTimelineEditorView : VisualElement'
+    content.vb: Public Class StateTimelineEditorView Inherits VisualElement
+  inheritance:
+  - System.Object
+  - UnityEngine.UIElements.CallbackEventHandler
+  - UnityEngine.UIElements.Focusable
+  - UnityEngine.UIElements.VisualElement
+- uid: Global.StateTimelineEditorView.zoomMultiplier
+  commentId: F:Global.StateTimelineEditorView.zoomMultiplier
+  id: zoomMultiplier
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: zoomMultiplier
+  nameWithType: StateTimelineEditorView.zoomMultiplier
+  fullName: StateTimelineEditorView.zoomMultiplier
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: zoomMultiplier
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 17
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: >-
+      [SerializeField]
+
+      public float zoomMultiplier
+    return:
+      type: System.Single
+    content.vb: >-
+      <SerializeField>
+
+      Public zoomMultiplier As Single
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: Global.StateTimelineEditorView.actionCopy
+  commentId: F:Global.StateTimelineEditorView.actionCopy
+  id: actionCopy
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: actionCopy
+  nameWithType: StateTimelineEditorView.actionCopy
+  fullName: StateTimelineEditorView.actionCopy
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: actionCopy
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 19
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public static HNSFStateAction actionCopy
+    return:
+      type: Quantum.HNSFStateAction
+    content.vb: Public Shared actionCopy As HNSFStateAction
+- uid: Global.StateTimelineEditorView.frameZeroColor
+  commentId: F:Global.StateTimelineEditorView.frameZeroColor
+  id: frameZeroColor
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: frameZeroColor
+  nameWithType: StateTimelineEditorView.frameZeroColor
+  fullName: StateTimelineEditorView.frameZeroColor
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: frameZeroColor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 21
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public Color frameZeroColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public frameZeroColor As Color
+- uid: Global.StateTimelineEditorView.frameInterruptColor
+  commentId: F:Global.StateTimelineEditorView.frameInterruptColor
+  id: frameInterruptColor
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: frameInterruptColor
+  nameWithType: StateTimelineEditorView.frameInterruptColor
+  fullName: StateTimelineEditorView.frameInterruptColor
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: frameInterruptColor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 22
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public Color frameInterruptColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public frameInterruptColor As Color
+- uid: Global.StateTimelineEditorView.depthColors
+  commentId: F:Global.StateTimelineEditorView.depthColors
+  id: depthColors
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: depthColors
+  nameWithType: StateTimelineEditorView.depthColors
+  fullName: StateTimelineEditorView.depthColors
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: depthColors
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 24
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public Color[] depthColors
+    return:
+      type: UnityEngine.Color[]
+    content.vb: Public depthColors As Color()
+- uid: Global.StateTimelineEditorView.parentColor
+  commentId: F:Global.StateTimelineEditorView.parentColor
+  id: parentColor
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: parentColor
+  nameWithType: StateTimelineEditorView.parentColor
+  fullName: StateTimelineEditorView.parentColor
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: parentColor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 29
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public Color parentColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public parentColor As Color
+- uid: Global.StateTimelineEditorView.lastKnownMousePosition
+  commentId: F:Global.StateTimelineEditorView.lastKnownMousePosition
+  id: lastKnownMousePosition
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: lastKnownMousePosition
+  nameWithType: StateTimelineEditorView.lastKnownMousePosition
+  fullName: StateTimelineEditorView.lastKnownMousePosition
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: lastKnownMousePosition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 31
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public static Vector2 lastKnownMousePosition
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public Shared lastKnownMousePosition As Vector2
+- uid: Global.StateTimelineEditorView.#ctor
+  commentId: M:Global.StateTimelineEditorView.#ctor
+  id: '#ctor'
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: StateTimelineEditorView()
+  nameWithType: StateTimelineEditorView.StateTimelineEditorView()
+  fullName: StateTimelineEditorView.StateTimelineEditorView()
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 33
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public StateTimelineEditorView()
+    content.vb: Public Sub New()
+  overload: Global.StateTimelineEditorView.#ctor*
+  nameWithType.vb: StateTimelineEditorView.New()
+  fullName.vb: StateTimelineEditorView.New()
+  name.vb: New()
+- uid: Global.StateTimelineEditorView.SetStateAsset(Quantum.HNSFState)
+  commentId: M:Global.StateTimelineEditorView.SetStateAsset(Quantum.HNSFState)
+  id: SetStateAsset(Quantum.HNSFState)
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: SetStateAsset(HNSFState)
+  nameWithType: StateTimelineEditorView.SetStateAsset(HNSFState)
+  fullName: StateTimelineEditorView.SetStateAsset(Quantum.HNSFState)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetStateAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 86
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public void SetStateAsset(HNSFState state)
+    parameters:
+    - id: state
+      type: Quantum.HNSFState
+    content.vb: Public Sub SetStateAsset(state As HNSFState)
+  overload: Global.StateTimelineEditorView.SetStateAsset*
+- uid: Global.StateTimelineEditorView.GetStateTimelineParents(Quantum.HNSFState)
+  commentId: M:Global.StateTimelineEditorView.GetStateTimelineParents(Quantum.HNSFState)
+  id: GetStateTimelineParents(Quantum.HNSFState)
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: GetStateTimelineParents(HNSFState)
+  nameWithType: StateTimelineEditorView.GetStateTimelineParents(HNSFState)
+  fullName: StateTimelineEditorView.GetStateTimelineParents(Quantum.HNSFState)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetStateTimelineParents
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 94
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public virtual HNSFState[] GetStateTimelineParents(HNSFState startingTimeline)
+    parameters:
+    - id: startingTimeline
+      type: Quantum.HNSFState
+    return:
+      type: Quantum.HNSFState[]
+    content.vb: Public Overridable Function GetStateTimelineParents(startingTimeline As HNSFState) As HNSFState()
+  overload: Global.StateTimelineEditorView.GetStateTimelineParents*
+- uid: Global.StateTimelineEditorView.ForceRefresh
+  commentId: M:Global.StateTimelineEditorView.ForceRefresh
+  id: ForceRefresh
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: ForceRefresh()
+  nameWithType: StateTimelineEditorView.ForceRefresh()
+  fullName: StateTimelineEditorView.ForceRefresh()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ForceRefresh
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 111
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public void ForceRefresh()
+    content.vb: Public Sub ForceRefresh()
+  overload: Global.StateTimelineEditorView.ForceRefresh*
+- uid: Global.StateTimelineEditorView.BuildUI
+  commentId: M:Global.StateTimelineEditorView.BuildUI
+  id: BuildUI
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: BuildUI()
+  nameWithType: StateTimelineEditorView.BuildUI()
+  fullName: StateTimelineEditorView.BuildUI()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BuildUI
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 139
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public virtual UniTaskVoid BuildUI()
+    return:
+      type: Cysharp.Threading.Tasks.UniTaskVoid
+    content.vb: Public Overridable Function BuildUI() As UniTaskVoid
+  overload: Global.StateTimelineEditorView.BuildUI*
+- uid: Global.StateTimelineEditorView.BuildSideBar
+  commentId: M:Global.StateTimelineEditorView.BuildSideBar
+  id: BuildSideBar
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: BuildSideBar()
+  nameWithType: StateTimelineEditorView.BuildSideBar()
+  fullName: StateTimelineEditorView.BuildSideBar()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BuildSideBar
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 151
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public virtual UniTask BuildSideBar()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Overridable Function BuildSideBar() As UniTask
+  overload: Global.StateTimelineEditorView.BuildSideBar*
+- uid: Global.StateTimelineEditorView.DeepCopyReflection``1(``0)
+  commentId: M:Global.StateTimelineEditorView.DeepCopyReflection``1(``0)
+  id: DeepCopyReflection``1(``0)
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: DeepCopyReflection<T>(T)
+  nameWithType: StateTimelineEditorView.DeepCopyReflection<T>(T)
+  fullName: StateTimelineEditorView.DeepCopyReflection<T>(T)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeepCopyReflection
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 221
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public static T DeepCopyReflection<T>(T input)
+    parameters:
+    - id: input
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function DeepCopyReflection(Of T)(input As T) As T
+  overload: Global.StateTimelineEditorView.DeepCopyReflection*
+  nameWithType.vb: StateTimelineEditorView.DeepCopyReflection(Of T)(T)
+  fullName.vb: StateTimelineEditorView.DeepCopyReflection(Of T)(T)
+  name.vb: DeepCopyReflection(Of T)(T)
+- uid: Global.StateTimelineEditorView.SidebarCreateLabel(UnityEngine.UIElements.ScrollView,Quantum.HNSFState,Quantum.HNSFStateAction,System.Int32)
+  commentId: M:Global.StateTimelineEditorView.SidebarCreateLabel(UnityEngine.UIElements.ScrollView,Quantum.HNSFState,Quantum.HNSFStateAction,System.Int32)
+  id: SidebarCreateLabel(UnityEngine.UIElements.ScrollView,Quantum.HNSFState,Quantum.HNSFStateAction,System.Int32)
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: SidebarCreateLabel(ScrollView, HNSFState, HNSFStateAction, int)
+  nameWithType: StateTimelineEditorView.SidebarCreateLabel(ScrollView, HNSFState, HNSFStateAction, int)
+  fullName: StateTimelineEditorView.SidebarCreateLabel(UnityEngine.UIElements.ScrollView, Quantum.HNSFState, Quantum.HNSFStateAction, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SidebarCreateLabel
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 247
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public virtual void SidebarCreateLabel(ScrollView sidebarPanel, HNSFState stateTimeline, HNSFStateAction stateAction, int depth = 0)
+    parameters:
+    - id: sidebarPanel
+      type: UnityEngine.UIElements.ScrollView
+    - id: stateTimeline
+      type: Quantum.HNSFState
+    - id: stateAction
+      type: Quantum.HNSFStateAction
+    - id: depth
+      type: System.Int32
+    content.vb: Public Overridable Sub SidebarCreateLabel(sidebarPanel As ScrollView, stateTimeline As HNSFState, stateAction As HNSFStateAction, depth As Integer = 0)
+  overload: Global.StateTimelineEditorView.SidebarCreateLabel*
+  nameWithType.vb: StateTimelineEditorView.SidebarCreateLabel(ScrollView, HNSFState, HNSFStateAction, Integer)
+  fullName.vb: StateTimelineEditorView.SidebarCreateLabel(UnityEngine.UIElements.ScrollView, Quantum.HNSFState, Quantum.HNSFStateAction, Integer)
+  name.vb: SidebarCreateLabel(ScrollView, HNSFState, HNSFStateAction, Integer)
+- uid: Global.StateTimelineEditorView.CreateFramebar(Quantum.HNSFState,Quantum.HNSFStateAction)
+  commentId: M:Global.StateTimelineEditorView.CreateFramebar(Quantum.HNSFState,Quantum.HNSFStateAction)
+  id: CreateFramebar(Quantum.HNSFState,Quantum.HNSFStateAction)
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: CreateFramebar(HNSFState, HNSFStateAction)
+  nameWithType: StateTimelineEditorView.CreateFramebar(HNSFState, HNSFStateAction)
+  fullName: StateTimelineEditorView.CreateFramebar(Quantum.HNSFState, Quantum.HNSFStateAction)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateFramebar
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 268
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public virtual StateTimelineFramebar CreateFramebar(HNSFState stateTimeline, HNSFStateAction stateAction)
+    parameters:
+    - id: stateTimeline
+      type: Quantum.HNSFState
+    - id: stateAction
+      type: Quantum.HNSFStateAction
+    return:
+      type: Global.StateTimelineFramebar
+    content.vb: Public Overridable Function CreateFramebar(stateTimeline As HNSFState, stateAction As HNSFStateAction) As StateTimelineFramebar
+  overload: Global.StateTimelineEditorView.CreateFramebar*
+- uid: Global.StateTimelineEditorView.BuildFrameCounter
+  commentId: M:Global.StateTimelineEditorView.BuildFrameCounter
+  id: BuildFrameCounter
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: BuildFrameCounter()
+  nameWithType: StateTimelineEditorView.BuildFrameCounter()
+  fullName: StateTimelineEditorView.BuildFrameCounter()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BuildFrameCounter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 315
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public virtual void BuildFrameCounter()
+    content.vb: Public Overridable Sub BuildFrameCounter()
+  overload: Global.StateTimelineEditorView.BuildFrameCounter*
+- uid: Global.StateTimelineEditorView.ChangeZoomLevel(System.Single)
+  commentId: M:Global.StateTimelineEditorView.ChangeZoomLevel(System.Single)
+  id: ChangeZoomLevel(System.Single)
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: ChangeZoomLevel(float)
+  nameWithType: StateTimelineEditorView.ChangeZoomLevel(float)
+  fullName: StateTimelineEditorView.ChangeZoomLevel(float)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ChangeZoomLevel
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 352
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public virtual void ChangeZoomLevel(float multi)
+    parameters:
+    - id: multi
+      type: System.Single
+    content.vb: Public Overridable Sub ChangeZoomLevel(multi As Single)
+  overload: Global.StateTimelineEditorView.ChangeZoomLevel*
+  nameWithType.vb: StateTimelineEditorView.ChangeZoomLevel(Single)
+  fullName.vb: StateTimelineEditorView.ChangeZoomLevel(Single)
+  name.vb: ChangeZoomLevel(Single)
+- uid: Global.StateTimelineEditorView.GetFrameWidth
+  commentId: M:Global.StateTimelineEditorView.GetFrameWidth
+  id: GetFrameWidth
+  parent: Global.StateTimelineEditorView
+  langs:
+  - csharp
+  - vb
+  name: GetFrameWidth()
+  nameWithType: StateTimelineEditorView.GetFrameWidth()
+  fullName: StateTimelineEditorView.GetFrameWidth()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetFrameWidth
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimelineEditorView.cs
+    startLine: 357
+  assemblies:
+  - HNSF.Editor
+  namespace: Global
+  syntax:
+    content: public virtual float GetFrameWidth()
+    return:
+      type: System.Single
+    content.vb: Public Overridable Function GetFrameWidth() As Single
+  overload: Global.StateTimelineEditorView.GetFrameWidth*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.UIElements.CallbackEventHandler
+  commentId: T:UnityEngine.UIElements.CallbackEventHandler
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: CallbackEventHandler
+  nameWithType: CallbackEventHandler
+  fullName: UnityEngine.UIElements.CallbackEventHandler
+- uid: UnityEngine.UIElements.Focusable
+  commentId: T:UnityEngine.UIElements.Focusable
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: Focusable
+  nameWithType: Focusable
+  fullName: UnityEngine.UIElements.Focusable
+- uid: UnityEngine.UIElements.VisualElement
+  commentId: T:UnityEngine.UIElements.VisualElement
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: VisualElement
+  nameWithType: VisualElement
+  fullName: UnityEngine.UIElements.VisualElement
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.UIElements
+  commentId: N:UnityEngine.UIElements
+  isExternal: true
+  name: UnityEngine.UIElements
+  nameWithType: UnityEngine.UIElements
+  fullName: UnityEngine.UIElements
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Quantum.HNSFStateAction
+  commentId: T:Quantum.HNSFStateAction
+  parent: Quantum
+  href: Quantum.HNSFStateAction.html
+  name: HNSFStateAction
+  nameWithType: HNSFStateAction
+  fullName: Quantum.HNSFStateAction
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Color[]
+  isExternal: true
+  name: Color[]
+  nameWithType: Color[]
+  fullName: UnityEngine.Color[]
+  nameWithType.vb: Color()
+  fullName.vb: UnityEngine.Color()
+  name.vb: Color()
+  spec.csharp:
+  - uid: UnityEngine.Color
+    name: Color
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Color
+    name: Color
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: Global.StateTimelineEditorView.#ctor*
+  commentId: Overload:Global.StateTimelineEditorView.#ctor
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView__ctor
+  name: StateTimelineEditorView
+  nameWithType: StateTimelineEditorView.StateTimelineEditorView
+  fullName: StateTimelineEditorView.StateTimelineEditorView
+  nameWithType.vb: StateTimelineEditorView.New
+  fullName.vb: StateTimelineEditorView.New
+  name.vb: New
+- uid: Global.StateTimelineEditorView.SetStateAsset*
+  commentId: Overload:Global.StateTimelineEditorView.SetStateAsset
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView_SetStateAsset_Quantum_HNSFState_
+  name: SetStateAsset
+  nameWithType: StateTimelineEditorView.SetStateAsset
+  fullName: StateTimelineEditorView.SetStateAsset
+- uid: Quantum.HNSFState
+  commentId: T:Quantum.HNSFState
+  parent: Quantum
+  href: Quantum.HNSFState.html
+  name: HNSFState
+  nameWithType: HNSFState
+  fullName: Quantum.HNSFState
+- uid: Global.StateTimelineEditorView.GetStateTimelineParents*
+  commentId: Overload:Global.StateTimelineEditorView.GetStateTimelineParents
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView_GetStateTimelineParents_Quantum_HNSFState_
+  name: GetStateTimelineParents
+  nameWithType: StateTimelineEditorView.GetStateTimelineParents
+  fullName: StateTimelineEditorView.GetStateTimelineParents
+- uid: Quantum.HNSFState[]
+  isExternal: true
+  name: HNSFState[]
+  nameWithType: HNSFState[]
+  fullName: Quantum.HNSFState[]
+  nameWithType.vb: HNSFState()
+  fullName.vb: Quantum.HNSFState()
+  name.vb: HNSFState()
+  spec.csharp:
+  - uid: Quantum.HNSFState
+    name: HNSFState
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Quantum.HNSFState
+    name: HNSFState
+  - name: (
+  - name: )
+- uid: Global.StateTimelineEditorView.ForceRefresh*
+  commentId: Overload:Global.StateTimelineEditorView.ForceRefresh
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView_ForceRefresh
+  name: ForceRefresh
+  nameWithType: StateTimelineEditorView.ForceRefresh
+  fullName: StateTimelineEditorView.ForceRefresh
+- uid: Global.StateTimelineEditorView.BuildUI*
+  commentId: Overload:Global.StateTimelineEditorView.BuildUI
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView_BuildUI
+  name: BuildUI
+  nameWithType: StateTimelineEditorView.BuildUI
+  fullName: StateTimelineEditorView.BuildUI
+- uid: Cysharp.Threading.Tasks.UniTaskVoid
+  commentId: T:Cysharp.Threading.Tasks.UniTaskVoid
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTaskVoid
+  nameWithType: UniTaskVoid
+  fullName: Cysharp.Threading.Tasks.UniTaskVoid
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Global.StateTimelineEditorView.BuildSideBar*
+  commentId: Overload:Global.StateTimelineEditorView.BuildSideBar
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView_BuildSideBar
+  name: BuildSideBar
+  nameWithType: StateTimelineEditorView.BuildSideBar
+  fullName: StateTimelineEditorView.BuildSideBar
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: Global.StateTimelineEditorView.DeepCopyReflection*
+  commentId: Overload:Global.StateTimelineEditorView.DeepCopyReflection
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView_DeepCopyReflection__1___0_
+  name: DeepCopyReflection
+  nameWithType: StateTimelineEditorView.DeepCopyReflection
+  fullName: StateTimelineEditorView.DeepCopyReflection
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Global.StateTimelineEditorView.SidebarCreateLabel*
+  commentId: Overload:Global.StateTimelineEditorView.SidebarCreateLabel
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView_SidebarCreateLabel_UnityEngine_UIElements_ScrollView_Quantum_HNSFState_Quantum_HNSFStateAction_System_Int32_
+  name: SidebarCreateLabel
+  nameWithType: StateTimelineEditorView.SidebarCreateLabel
+  fullName: StateTimelineEditorView.SidebarCreateLabel
+- uid: UnityEngine.UIElements.ScrollView
+  commentId: T:UnityEngine.UIElements.ScrollView
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: ScrollView
+  nameWithType: ScrollView
+  fullName: UnityEngine.UIElements.ScrollView
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Global.StateTimelineEditorView.CreateFramebar*
+  commentId: Overload:Global.StateTimelineEditorView.CreateFramebar
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView_CreateFramebar_Quantum_HNSFState_Quantum_HNSFStateAction_
+  name: CreateFramebar
+  nameWithType: StateTimelineEditorView.CreateFramebar
+  fullName: StateTimelineEditorView.CreateFramebar
+- uid: Global.StateTimelineFramebar
+  commentId: T:Global.StateTimelineFramebar
+  href: StateTimelineFramebar.html
+  name: StateTimelineFramebar
+  nameWithType: StateTimelineFramebar
+  fullName: StateTimelineFramebar
+- uid: Global.StateTimelineEditorView.BuildFrameCounter*
+  commentId: Overload:Global.StateTimelineEditorView.BuildFrameCounter
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView_BuildFrameCounter
+  name: BuildFrameCounter
+  nameWithType: StateTimelineEditorView.BuildFrameCounter
+  fullName: StateTimelineEditorView.BuildFrameCounter
+- uid: Global.StateTimelineEditorView.ChangeZoomLevel*
+  commentId: Overload:Global.StateTimelineEditorView.ChangeZoomLevel
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView_ChangeZoomLevel_System_Single_
+  name: ChangeZoomLevel
+  nameWithType: StateTimelineEditorView.ChangeZoomLevel
+  fullName: StateTimelineEditorView.ChangeZoomLevel
+- uid: Global.StateTimelineEditorView.GetFrameWidth*
+  commentId: Overload:Global.StateTimelineEditorView.GetFrameWidth
+  href: Global.StateTimelineEditorView.html#StateTimelineEditorView_GetFrameWidth
+  name: GetFrameWidth
+  nameWithType: StateTimelineEditorView.GetFrameWidth
+  fullName: StateTimelineEditorView.GetFrameWidth

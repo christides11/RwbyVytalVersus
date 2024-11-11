@@ -1,0 +1,700 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.KCCPenetrationSolver
+  commentId: T:Quantum.KCCPenetrationSolver
+  id: KCCPenetrationSolver
+  parent: Quantum
+  children:
+  - Quantum.KCCPenetrationSolver.#ctor
+  - Quantum.KCCPenetrationSolver.#ctor(System.Int32)
+  - Quantum.KCCPenetrationSolver.AddCorrection(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  - Quantum.KCCPenetrationSolver.CalculateBest(System.Int32,Photon.Deterministic.FP)
+  - Quantum.KCCPenetrationSolver.CalculateBinary
+  - Quantum.KCCPenetrationSolver.CalculateGradientDescent(System.Int32,Photon.Deterministic.FP)
+  - Quantum.KCCPenetrationSolver.CalculateMinMax
+  - Quantum.KCCPenetrationSolver.CalculateSum
+  - Quantum.KCCPenetrationSolver.Count
+  - Quantum.KCCPenetrationSolver.GetCorrection(System.Int32)
+  - Quantum.KCCPenetrationSolver.GetCorrection(System.Int32,Photon.Deterministic.FPVector3@)
+  - Quantum.KCCPenetrationSolver.GetCorrection(System.Int32,Photon.Deterministic.FPVector3@,Photon.Deterministic.FP@)
+  - Quantum.KCCPenetrationSolver.Iterations
+  - Quantum.KCCPenetrationSolver.Reset
+  - Quantum.KCCPenetrationSolver.TargetCorrection
+  langs:
+  - csharp
+  - vb
+  name: KCCPenetrationSolver
+  nameWithType: KCCPenetrationSolver
+  fullName: Quantum.KCCPenetrationSolver
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: KCCPenetrationSolver
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 5
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public sealed class KCCPenetrationSolver
+    content.vb: Public NotInheritable Class KCCPenetrationSolver
+  inheritance:
+  - System.Object
+- uid: Quantum.KCCPenetrationSolver.Count
+  commentId: P:Quantum.KCCPenetrationSolver.Count
+  id: Count
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: KCCPenetrationSolver.Count
+  fullName: Quantum.KCCPenetrationSolver.Count
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Count
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 10
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Count of input corrections.
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: Quantum.KCCPenetrationSolver.Count*
+- uid: Quantum.KCCPenetrationSolver.Iterations
+  commentId: P:Quantum.KCCPenetrationSolver.Iterations
+  id: Iterations
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: Iterations
+  nameWithType: KCCPenetrationSolver.Iterations
+  fullName: Quantum.KCCPenetrationSolver.Iterations
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Iterations
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 12
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Number of iterations in last calculation.
+  example: []
+  syntax:
+    content: public int Iterations { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Iterations As Integer
+  overload: Quantum.KCCPenetrationSolver.Iterations*
+- uid: Quantum.KCCPenetrationSolver.TargetCorrection
+  commentId: P:Quantum.KCCPenetrationSolver.TargetCorrection
+  id: TargetCorrection
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: TargetCorrection
+  nameWithType: KCCPenetrationSolver.TargetCorrection
+  fullName: Quantum.KCCPenetrationSolver.TargetCorrection
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TargetCorrection
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 14
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Correction calculated from input corrections.
+  example: []
+  syntax:
+    content: public FPVector3 TargetCorrection { get; }
+    parameters: []
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: Public ReadOnly Property TargetCorrection As FPVector3
+  overload: Quantum.KCCPenetrationSolver.TargetCorrection*
+- uid: Quantum.KCCPenetrationSolver.#ctor
+  commentId: M:Quantum.KCCPenetrationSolver.#ctor
+  id: '#ctor'
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: KCCPenetrationSolver()
+  nameWithType: KCCPenetrationSolver.KCCPenetrationSolver()
+  fullName: Quantum.KCCPenetrationSolver.KCCPenetrationSolver()
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 28
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public KCCPenetrationSolver()
+    content.vb: Public Sub New()
+  overload: Quantum.KCCPenetrationSolver.#ctor*
+  nameWithType.vb: KCCPenetrationSolver.New()
+  fullName.vb: Quantum.KCCPenetrationSolver.New()
+  name.vb: New()
+- uid: Quantum.KCCPenetrationSolver.#ctor(System.Int32)
+  commentId: M:Quantum.KCCPenetrationSolver.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: KCCPenetrationSolver(int)
+  nameWithType: KCCPenetrationSolver.KCCPenetrationSolver(int)
+  fullName: Quantum.KCCPenetrationSolver.KCCPenetrationSolver(int)
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 32
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public KCCPenetrationSolver(int capacity)
+    parameters:
+    - id: capacity
+      type: System.Int32
+    content.vb: Public Sub New(capacity As Integer)
+  overload: Quantum.KCCPenetrationSolver.#ctor*
+  nameWithType.vb: KCCPenetrationSolver.New(Integer)
+  fullName.vb: Quantum.KCCPenetrationSolver.New(Integer)
+  name.vb: New(Integer)
+- uid: Quantum.KCCPenetrationSolver.Reset
+  commentId: M:Quantum.KCCPenetrationSolver.Reset
+  id: Reset
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: KCCPenetrationSolver.Reset()
+  fullName: Quantum.KCCPenetrationSolver.Reset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Reset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 48
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Resets resolver. Call this before adding corrections.
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: Quantum.KCCPenetrationSolver.Reset*
+- uid: Quantum.KCCPenetrationSolver.AddCorrection(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  commentId: M:Quantum.KCCPenetrationSolver.AddCorrection(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  id: AddCorrection(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: AddCorrection(FPVector3, FP)
+  nameWithType: KCCPenetrationSolver.AddCorrection(FPVector3, FP)
+  fullName: Quantum.KCCPenetrationSolver.AddCorrection(Photon.Deterministic.FPVector3, Photon.Deterministic.FP)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddCorrection
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 60
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Adds single correction vector.
+  example: []
+  syntax:
+    content: public bool AddCorrection(FPVector3 direction, FP distance)
+    parameters:
+    - id: direction
+      type: Photon.Deterministic.FPVector3
+    - id: distance
+      type: Photon.Deterministic.FP
+    return:
+      type: System.Boolean
+    content.vb: Public Function AddCorrection(direction As FPVector3, distance As FP) As Boolean
+  overload: Quantum.KCCPenetrationSolver.AddCorrection*
+- uid: Quantum.KCCPenetrationSolver.GetCorrection(System.Int32)
+  commentId: M:Quantum.KCCPenetrationSolver.GetCorrection(System.Int32)
+  id: GetCorrection(System.Int32)
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: GetCorrection(int)
+  nameWithType: KCCPenetrationSolver.GetCorrection(int)
+  fullName: Quantum.KCCPenetrationSolver.GetCorrection(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetCorrection
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 82
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Returns correction at specific index.
+  example: []
+  syntax:
+    content: public FPVector3 GetCorrection(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: Public Function GetCorrection(index As Integer) As FPVector3
+  overload: Quantum.KCCPenetrationSolver.GetCorrection*
+  nameWithType.vb: KCCPenetrationSolver.GetCorrection(Integer)
+  fullName.vb: Quantum.KCCPenetrationSolver.GetCorrection(Integer)
+  name.vb: GetCorrection(Integer)
+- uid: Quantum.KCCPenetrationSolver.GetCorrection(System.Int32,Photon.Deterministic.FPVector3@)
+  commentId: M:Quantum.KCCPenetrationSolver.GetCorrection(System.Int32,Photon.Deterministic.FPVector3@)
+  id: GetCorrection(System.Int32,Photon.Deterministic.FPVector3@)
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: GetCorrection(int, out FPVector3)
+  nameWithType: KCCPenetrationSolver.GetCorrection(int, out FPVector3)
+  fullName: Quantum.KCCPenetrationSolver.GetCorrection(int, out Photon.Deterministic.FPVector3)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetCorrection
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 90
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Returns correction amount and direction at specific index.
+  example: []
+  syntax:
+    content: public FPVector3 GetCorrection(int index, out FPVector3 direction)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: direction
+      type: Photon.Deterministic.FPVector3
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: Public Function GetCorrection(index As Integer, direction As FPVector3) As FPVector3
+  overload: Quantum.KCCPenetrationSolver.GetCorrection*
+  nameWithType.vb: KCCPenetrationSolver.GetCorrection(Integer, FPVector3)
+  fullName.vb: Quantum.KCCPenetrationSolver.GetCorrection(Integer, Photon.Deterministic.FPVector3)
+  name.vb: GetCorrection(Integer, FPVector3)
+- uid: Quantum.KCCPenetrationSolver.GetCorrection(System.Int32,Photon.Deterministic.FPVector3@,Photon.Deterministic.FP@)
+  commentId: M:Quantum.KCCPenetrationSolver.GetCorrection(System.Int32,Photon.Deterministic.FPVector3@,Photon.Deterministic.FP@)
+  id: GetCorrection(System.Int32,Photon.Deterministic.FPVector3@,Photon.Deterministic.FP@)
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: GetCorrection(int, out FPVector3, out FP)
+  nameWithType: KCCPenetrationSolver.GetCorrection(int, out FPVector3, out FP)
+  fullName: Quantum.KCCPenetrationSolver.GetCorrection(int, out Photon.Deterministic.FPVector3, out Photon.Deterministic.FP)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetCorrection
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 100
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Returns correction amount, direction and distance at specific index.
+  example: []
+  syntax:
+    content: public FPVector3 GetCorrection(int index, out FPVector3 direction, out FP distance)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: direction
+      type: Photon.Deterministic.FPVector3
+    - id: distance
+      type: Photon.Deterministic.FP
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: Public Function GetCorrection(index As Integer, direction As FPVector3, distance As FP) As FPVector3
+  overload: Quantum.KCCPenetrationSolver.GetCorrection*
+  nameWithType.vb: KCCPenetrationSolver.GetCorrection(Integer, FPVector3, FP)
+  fullName.vb: Quantum.KCCPenetrationSolver.GetCorrection(Integer, Photon.Deterministic.FPVector3, Photon.Deterministic.FP)
+  name.vb: GetCorrection(Integer, FPVector3, FP)
+- uid: Quantum.KCCPenetrationSolver.CalculateBest(System.Int32,Photon.Deterministic.FP)
+  commentId: M:Quantum.KCCPenetrationSolver.CalculateBest(System.Int32,Photon.Deterministic.FP)
+  id: CalculateBest(System.Int32,Photon.Deterministic.FP)
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: CalculateBest(int, FP)
+  nameWithType: KCCPenetrationSolver.CalculateBest(int, FP)
+  fullName: Quantum.KCCPenetrationSolver.CalculateBest(int, Photon.Deterministic.FP)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CalculateBest
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 111
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Calculates target correction vector based on added corrections.
+  example: []
+  syntax:
+    content: public FPVector3 CalculateBest(int maxIterations, FP maxError)
+    parameters:
+    - id: maxIterations
+      type: System.Int32
+    - id: maxError
+      type: Photon.Deterministic.FP
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: Public Function CalculateBest(maxIterations As Integer, maxError As FP) As FPVector3
+  overload: Quantum.KCCPenetrationSolver.CalculateBest*
+  nameWithType.vb: KCCPenetrationSolver.CalculateBest(Integer, FP)
+  fullName.vb: Quantum.KCCPenetrationSolver.CalculateBest(Integer, Photon.Deterministic.FP)
+  name.vb: CalculateBest(Integer, FP)
+- uid: Quantum.KCCPenetrationSolver.CalculateMinMax
+  commentId: M:Quantum.KCCPenetrationSolver.CalculateMinMax
+  id: CalculateMinMax
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: CalculateMinMax()
+  nameWithType: KCCPenetrationSolver.CalculateMinMax()
+  fullName: Quantum.KCCPenetrationSolver.CalculateMinMax()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CalculateMinMax
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 140
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Calculates target correction vector based on added corrections.
+  example: []
+  syntax:
+    content: public FPVector3 CalculateMinMax()
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: Public Function CalculateMinMax() As FPVector3
+  overload: Quantum.KCCPenetrationSolver.CalculateMinMax*
+- uid: Quantum.KCCPenetrationSolver.CalculateSum
+  commentId: M:Quantum.KCCPenetrationSolver.CalculateSum
+  id: CalculateSum
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: CalculateSum()
+  nameWithType: KCCPenetrationSolver.CalculateSum()
+  fullName: Quantum.KCCPenetrationSolver.CalculateSum()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CalculateSum
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 151
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Calculates target correction vector based on added corrections.
+  example: []
+  syntax:
+    content: public FPVector3 CalculateSum()
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: Public Function CalculateSum() As FPVector3
+  overload: Quantum.KCCPenetrationSolver.CalculateSum*
+- uid: Quantum.KCCPenetrationSolver.CalculateBinary
+  commentId: M:Quantum.KCCPenetrationSolver.CalculateBinary
+  id: CalculateBinary
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: CalculateBinary()
+  nameWithType: KCCPenetrationSolver.CalculateBinary()
+  fullName: Quantum.KCCPenetrationSolver.CalculateBinary()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CalculateBinary
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 167
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Calculates target correction vector based on added corrections.
+  example: []
+  syntax:
+    content: public FPVector3 CalculateBinary()
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: Public Function CalculateBinary() As FPVector3
+  overload: Quantum.KCCPenetrationSolver.CalculateBinary*
+- uid: Quantum.KCCPenetrationSolver.CalculateGradientDescent(System.Int32,Photon.Deterministic.FP)
+  commentId: M:Quantum.KCCPenetrationSolver.CalculateGradientDescent(System.Int32,Photon.Deterministic.FP)
+  id: CalculateGradientDescent(System.Int32,Photon.Deterministic.FP)
+  parent: Quantum.KCCPenetrationSolver
+  langs:
+  - csharp
+  - vb
+  name: CalculateGradientDescent(int, FP)
+  nameWithType: KCCPenetrationSolver.CalculateGradientDescent(int, FP)
+  fullName: Quantum.KCCPenetrationSolver.CalculateGradientDescent(int, Photon.Deterministic.FP)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CalculateGradientDescent
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Utilities/KCCPenetrationSolver.cs
+    startLine: 193
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Calculates target correction vector based on added corrections.
+  example: []
+  syntax:
+    content: public FPVector3 CalculateGradientDescent(int maxIterations, FP maxError)
+    parameters:
+    - id: maxIterations
+      type: System.Int32
+    - id: maxError
+      type: Photon.Deterministic.FP
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: Public Function CalculateGradientDescent(maxIterations As Integer, maxError As FP) As FPVector3
+  overload: Quantum.KCCPenetrationSolver.CalculateGradientDescent*
+  nameWithType.vb: KCCPenetrationSolver.CalculateGradientDescent(Integer, FP)
+  fullName.vb: Quantum.KCCPenetrationSolver.CalculateGradientDescent(Integer, Photon.Deterministic.FP)
+  name.vb: CalculateGradientDescent(Integer, FP)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.KCCPenetrationSolver.Count*
+  commentId: Overload:Quantum.KCCPenetrationSolver.Count
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver_Count
+  name: Count
+  nameWithType: KCCPenetrationSolver.Count
+  fullName: Quantum.KCCPenetrationSolver.Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.KCCPenetrationSolver.Iterations*
+  commentId: Overload:Quantum.KCCPenetrationSolver.Iterations
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver_Iterations
+  name: Iterations
+  nameWithType: KCCPenetrationSolver.Iterations
+  fullName: Quantum.KCCPenetrationSolver.Iterations
+- uid: Quantum.KCCPenetrationSolver.TargetCorrection*
+  commentId: Overload:Quantum.KCCPenetrationSolver.TargetCorrection
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver_TargetCorrection
+  name: TargetCorrection
+  nameWithType: KCCPenetrationSolver.TargetCorrection
+  fullName: Quantum.KCCPenetrationSolver.TargetCorrection
+- uid: Photon.Deterministic.FPVector3
+  commentId: T:Photon.Deterministic.FPVector3
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FPVector3
+  nameWithType: FPVector3
+  fullName: Photon.Deterministic.FPVector3
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.KCCPenetrationSolver.#ctor*
+  commentId: Overload:Quantum.KCCPenetrationSolver.#ctor
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver__ctor
+  name: KCCPenetrationSolver
+  nameWithType: KCCPenetrationSolver.KCCPenetrationSolver
+  fullName: Quantum.KCCPenetrationSolver.KCCPenetrationSolver
+  nameWithType.vb: KCCPenetrationSolver.New
+  fullName.vb: Quantum.KCCPenetrationSolver.New
+  name.vb: New
+- uid: Quantum.KCCPenetrationSolver.Reset*
+  commentId: Overload:Quantum.KCCPenetrationSolver.Reset
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver_Reset
+  name: Reset
+  nameWithType: KCCPenetrationSolver.Reset
+  fullName: Quantum.KCCPenetrationSolver.Reset
+- uid: Quantum.KCCPenetrationSolver.AddCorrection*
+  commentId: Overload:Quantum.KCCPenetrationSolver.AddCorrection
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver_AddCorrection_Photon_Deterministic_FPVector3_Photon_Deterministic_FP_
+  name: AddCorrection
+  nameWithType: KCCPenetrationSolver.AddCorrection
+  fullName: Quantum.KCCPenetrationSolver.AddCorrection
+- uid: Photon.Deterministic.FP
+  commentId: T:Photon.Deterministic.FP
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FP
+  nameWithType: FP
+  fullName: Photon.Deterministic.FP
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.KCCPenetrationSolver.GetCorrection*
+  commentId: Overload:Quantum.KCCPenetrationSolver.GetCorrection
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver_GetCorrection_System_Int32_
+  name: GetCorrection
+  nameWithType: KCCPenetrationSolver.GetCorrection
+  fullName: Quantum.KCCPenetrationSolver.GetCorrection
+- uid: Quantum.KCCPenetrationSolver.CalculateBest*
+  commentId: Overload:Quantum.KCCPenetrationSolver.CalculateBest
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver_CalculateBest_System_Int32_Photon_Deterministic_FP_
+  name: CalculateBest
+  nameWithType: KCCPenetrationSolver.CalculateBest
+  fullName: Quantum.KCCPenetrationSolver.CalculateBest
+- uid: Quantum.KCCPenetrationSolver.CalculateMinMax*
+  commentId: Overload:Quantum.KCCPenetrationSolver.CalculateMinMax
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver_CalculateMinMax
+  name: CalculateMinMax
+  nameWithType: KCCPenetrationSolver.CalculateMinMax
+  fullName: Quantum.KCCPenetrationSolver.CalculateMinMax
+- uid: Quantum.KCCPenetrationSolver.CalculateSum*
+  commentId: Overload:Quantum.KCCPenetrationSolver.CalculateSum
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver_CalculateSum
+  name: CalculateSum
+  nameWithType: KCCPenetrationSolver.CalculateSum
+  fullName: Quantum.KCCPenetrationSolver.CalculateSum
+- uid: Quantum.KCCPenetrationSolver.CalculateBinary*
+  commentId: Overload:Quantum.KCCPenetrationSolver.CalculateBinary
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver_CalculateBinary
+  name: CalculateBinary
+  nameWithType: KCCPenetrationSolver.CalculateBinary
+  fullName: Quantum.KCCPenetrationSolver.CalculateBinary
+- uid: Quantum.KCCPenetrationSolver.CalculateGradientDescent*
+  commentId: Overload:Quantum.KCCPenetrationSolver.CalculateGradientDescent
+  href: Quantum.KCCPenetrationSolver.html#Quantum_KCCPenetrationSolver_CalculateGradientDescent_System_Int32_Photon_Deterministic_FP_
+  name: CalculateGradientDescent
+  nameWithType: KCCPenetrationSolver.CalculateGradientDescent
+  fullName: Quantum.KCCPenetrationSolver.CalculateGradientDescent

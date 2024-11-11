@@ -1,0 +1,770 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.HNSFStateHelper
+  commentId: T:Quantum.HNSFStateHelper
+  id: HNSFStateHelper
+  parent: Quantum
+  children:
+  - Quantum.HNSFStateHelper.CauseStateTransition(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFState,Quantum.HNSFStateContext@,System.Boolean,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  - Quantum.HNSFStateHelper.CauseStateTransition(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Boolean,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  - Quantum.HNSFStateHelper.ChangeMoveset(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.AssetRef{Quantum.HNSFState},Quantum.HNSFStateAgent*,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  - Quantum.HNSFStateHelper.ConvertFrameNumber(System.Int32,System.Int32)
+  - Quantum.HNSFStateHelper.IsFrameWithinRanges(Quantum.ActionRange[],System.Int32,System.Int32)
+  - Quantum.HNSFStateHelper.IsFrameWithinRanges(Quantum.ActionRange[],System.Int32,System.Int32,Photon.Deterministic.FP@)
+  - Quantum.HNSFStateHelper.Update(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFState,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  - Quantum.HNSFStateHelper.Update(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  - Quantum.HNSFStateHelper.UpdateState(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  langs:
+  - csharp
+  - vb
+  name: HNSFStateHelper
+  nameWithType: HNSFStateHelper
+  fullName: Quantum.HNSFStateHelper
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/HNSFStateHelper.Chara.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HNSFStateHelper
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/HNSFStateHelper.Chara.cs
+    startLine: 5
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static class HNSFStateHelper
+    content.vb: Public Module HNSFStateHelper
+  inheritance:
+  - System.Object
+- uid: Quantum.HNSFStateHelper.CauseStateTransition(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Boolean,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  commentId: M:Quantum.HNSFStateHelper.CauseStateTransition(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Boolean,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  id: CauseStateTransition(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Boolean,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  parent: Quantum.HNSFStateHelper
+  langs:
+  - csharp
+  - vb
+  name: CauseStateTransition(Frame, FP, EntityRef, ref HNSFStateContext, bool, List<Type>, List<Type>)
+  nameWithType: HNSFStateHelper.CauseStateTransition(Frame, FP, EntityRef, ref HNSFStateContext, bool, List<Type>, List<Type>)
+  fullName: Quantum.HNSFStateHelper.CauseStateTransition(Quantum.Frame, Photon.Deterministic.FP, Quantum.EntityRef, ref Quantum.HNSFStateContext, bool, System.Collections.Generic.List<System.Type>, System.Collections.Generic.List<System.Type>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CauseStateTransition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+    startLine: 8
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static void CauseStateTransition(Frame frame, FP deltaTime, EntityRef entity, ref HNSFStateContext stateContext, bool cleanup = false, List<Type> whitelist = null, List<Type> blacklist = null)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: deltaTime
+      type: Photon.Deterministic.FP
+    - id: entity
+      type: Quantum.EntityRef
+    - id: stateContext
+      type: Quantum.HNSFStateContext
+    - id: cleanup
+      type: System.Boolean
+    - id: whitelist
+      type: System.Collections.Generic.List{System.Type}
+    - id: blacklist
+      type: System.Collections.Generic.List{System.Type}
+    content.vb: Public Shared Sub CauseStateTransition(frame As Frame, deltaTime As FP, entity As EntityRef, stateContext As HNSFStateContext, cleanup As Boolean = False, whitelist As List(Of Type) = Nothing, blacklist As List(Of Type) = Nothing)
+  overload: Quantum.HNSFStateHelper.CauseStateTransition*
+  nameWithType.vb: HNSFStateHelper.CauseStateTransition(Frame, FP, EntityRef, HNSFStateContext, Boolean, List(Of Type), List(Of Type))
+  fullName.vb: Quantum.HNSFStateHelper.CauseStateTransition(Quantum.Frame, Photon.Deterministic.FP, Quantum.EntityRef, Quantum.HNSFStateContext, Boolean, System.Collections.Generic.List(Of System.Type), System.Collections.Generic.List(Of System.Type))
+  name.vb: CauseStateTransition(Frame, FP, EntityRef, HNSFStateContext, Boolean, List(Of Type), List(Of Type))
+- uid: Quantum.HNSFStateHelper.CauseStateTransition(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFState,Quantum.HNSFStateContext@,System.Boolean,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  commentId: M:Quantum.HNSFStateHelper.CauseStateTransition(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFState,Quantum.HNSFStateContext@,System.Boolean,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  id: CauseStateTransition(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFState,Quantum.HNSFStateContext@,System.Boolean,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  parent: Quantum.HNSFStateHelper
+  langs:
+  - csharp
+  - vb
+  name: CauseStateTransition(Frame, FP, EntityRef, HNSFState, ref HNSFStateContext, bool, List<Type>, List<Type>)
+  nameWithType: HNSFStateHelper.CauseStateTransition(Frame, FP, EntityRef, HNSFState, ref HNSFStateContext, bool, List<Type>, List<Type>)
+  fullName: Quantum.HNSFStateHelper.CauseStateTransition(Quantum.Frame, Photon.Deterministic.FP, Quantum.EntityRef, Quantum.HNSFState, ref Quantum.HNSFStateContext, bool, System.Collections.Generic.List<System.Type>, System.Collections.Generic.List<System.Type>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CauseStateTransition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+    startLine: 19
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static void CauseStateTransition(Frame frame, FP deltaTime, EntityRef entity, HNSFState currentState, ref HNSFStateContext stateContext, bool cleanup = false, List<Type> whitelist = null, List<Type> blacklist = null)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: deltaTime
+      type: Photon.Deterministic.FP
+    - id: entity
+      type: Quantum.EntityRef
+    - id: currentState
+      type: Quantum.HNSFState
+    - id: stateContext
+      type: Quantum.HNSFStateContext
+    - id: cleanup
+      type: System.Boolean
+    - id: whitelist
+      type: System.Collections.Generic.List{System.Type}
+    - id: blacklist
+      type: System.Collections.Generic.List{System.Type}
+    content.vb: Public Shared Sub CauseStateTransition(frame As Frame, deltaTime As FP, entity As EntityRef, currentState As HNSFState, stateContext As HNSFStateContext, cleanup As Boolean = False, whitelist As List(Of Type) = Nothing, blacklist As List(Of Type) = Nothing)
+  overload: Quantum.HNSFStateHelper.CauseStateTransition*
+  nameWithType.vb: HNSFStateHelper.CauseStateTransition(Frame, FP, EntityRef, HNSFState, HNSFStateContext, Boolean, List(Of Type), List(Of Type))
+  fullName.vb: Quantum.HNSFStateHelper.CauseStateTransition(Quantum.Frame, Photon.Deterministic.FP, Quantum.EntityRef, Quantum.HNSFState, Quantum.HNSFStateContext, Boolean, System.Collections.Generic.List(Of System.Type), System.Collections.Generic.List(Of System.Type))
+  name.vb: CauseStateTransition(Frame, FP, EntityRef, HNSFState, HNSFStateContext, Boolean, List(Of Type), List(Of Type))
+- uid: Quantum.HNSFStateHelper.ChangeMoveset(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.AssetRef{Quantum.HNSFState},Quantum.HNSFStateAgent*,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  commentId: M:Quantum.HNSFStateHelper.ChangeMoveset(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.AssetRef{Quantum.HNSFState},Quantum.HNSFStateAgent*,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  id: ChangeMoveset(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.AssetRef{Quantum.HNSFState},Quantum.HNSFStateAgent*,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  parent: Quantum.HNSFStateHelper
+  langs:
+  - csharp
+  - vb
+  name: ChangeMoveset(Frame, FP, EntityRef, AssetRef<HNSFState>, HNSFStateAgent*, AIBlackboardComponent*, AIConfigBase)
+  nameWithType: HNSFStateHelper.ChangeMoveset(Frame, FP, EntityRef, AssetRef<HNSFState>, HNSFStateAgent*, AIBlackboardComponent*, AIConfigBase)
+  fullName: Quantum.HNSFStateHelper.ChangeMoveset(Quantum.Frame, Photon.Deterministic.FP, Quantum.EntityRef, Quantum.AssetRef<Quantum.HNSFState>, Quantum.HNSFStateAgent*, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ChangeMoveset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+    startLine: 54
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static void ChangeMoveset(Frame frame, FP deltaTime, EntityRef entity, AssetRef<HNSFState> toMovesetRef, HNSFStateAgent* stateAgent, AIBlackboardComponent* blackboard, AIConfigBase config)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: deltaTime
+      type: Photon.Deterministic.FP
+    - id: entity
+      type: Quantum.EntityRef
+    - id: toMovesetRef
+      type: Quantum.AssetRef{Quantum.HNSFState}
+    - id: stateAgent
+      type: Quantum.HNSFStateAgent*
+    - id: blackboard
+      type: Quantum.AIBlackboardComponent*
+    - id: config
+      type: Quantum.AIConfigBase
+    content.vb: Public Shared Sub ChangeMoveset(frame As Frame, deltaTime As FP, entity As EntityRef, toMovesetRef As AssetRef(Of HNSFState), stateAgent As HNSFStateAgent*, blackboard As AIBlackboardComponent*, config As AIConfigBase)
+  overload: Quantum.HNSFStateHelper.ChangeMoveset*
+  nameWithType.vb: HNSFStateHelper.ChangeMoveset(Frame, FP, EntityRef, AssetRef(Of HNSFState), HNSFStateAgent*, AIBlackboardComponent*, AIConfigBase)
+  fullName.vb: Quantum.HNSFStateHelper.ChangeMoveset(Quantum.Frame, Photon.Deterministic.FP, Quantum.EntityRef, Quantum.AssetRef(Of Quantum.HNSFState), Quantum.HNSFStateAgent*, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase)
+  name.vb: ChangeMoveset(Frame, FP, EntityRef, AssetRef(Of HNSFState), HNSFStateAgent*, AIBlackboardComponent*, AIConfigBase)
+- uid: Quantum.HNSFStateHelper.UpdateState(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  commentId: M:Quantum.HNSFStateHelper.UpdateState(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  id: UpdateState(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  parent: Quantum.HNSFStateHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateState(Frame, EntityRef, ref HNSFStateContext, List<Type>, List<Type>)
+  nameWithType: HNSFStateHelper.UpdateState(Frame, EntityRef, ref HNSFStateContext, List<Type>, List<Type>)
+  fullName: Quantum.HNSFStateHelper.UpdateState(Quantum.Frame, Quantum.EntityRef, ref Quantum.HNSFStateContext, System.Collections.Generic.List<System.Type>, System.Collections.Generic.List<System.Type>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateState
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+    startLine: 68
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static void UpdateState(Frame frame, EntityRef entity, ref HNSFStateContext stateContext, List<Type> whitelist = null, List<Type> blacklist = null)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: entity
+      type: Quantum.EntityRef
+    - id: stateContext
+      type: Quantum.HNSFStateContext
+    - id: whitelist
+      type: System.Collections.Generic.List{System.Type}
+    - id: blacklist
+      type: System.Collections.Generic.List{System.Type}
+    content.vb: Public Shared Sub UpdateState(frame As Frame, entity As EntityRef, stateContext As HNSFStateContext, whitelist As List(Of Type) = Nothing, blacklist As List(Of Type) = Nothing)
+  overload: Quantum.HNSFStateHelper.UpdateState*
+  nameWithType.vb: HNSFStateHelper.UpdateState(Frame, EntityRef, HNSFStateContext, List(Of Type), List(Of Type))
+  fullName.vb: Quantum.HNSFStateHelper.UpdateState(Quantum.Frame, Quantum.EntityRef, Quantum.HNSFStateContext, System.Collections.Generic.List(Of System.Type), System.Collections.Generic.List(Of System.Type))
+  name.vb: UpdateState(Frame, EntityRef, HNSFStateContext, List(Of Type), List(Of Type))
+- uid: Quantum.HNSFStateHelper.Update(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  commentId: M:Quantum.HNSFStateHelper.Update(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  id: Update(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  parent: Quantum.HNSFStateHelper
+  langs:
+  - csharp
+  - vb
+  name: Update(Frame, FP, EntityRef, ref HNSFStateContext, List<Type>, List<Type>)
+  nameWithType: HNSFStateHelper.Update(Frame, FP, EntityRef, ref HNSFStateContext, List<Type>, List<Type>)
+  fullName: Quantum.HNSFStateHelper.Update(Quantum.Frame, Photon.Deterministic.FP, Quantum.EntityRef, ref Quantum.HNSFStateContext, System.Collections.Generic.List<System.Type>, System.Collections.Generic.List<System.Type>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Update
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+    startLine: 73
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static void Update(Frame frame, FP deltaTime, EntityRef entity, ref HNSFStateContext context, List<Type> whitelist = null, List<Type> blacklist = null)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: deltaTime
+      type: Photon.Deterministic.FP
+    - id: entity
+      type: Quantum.EntityRef
+    - id: context
+      type: Quantum.HNSFStateContext
+    - id: whitelist
+      type: System.Collections.Generic.List{System.Type}
+    - id: blacklist
+      type: System.Collections.Generic.List{System.Type}
+    content.vb: Public Shared Sub Update(frame As Frame, deltaTime As FP, entity As EntityRef, context As HNSFStateContext, whitelist As List(Of Type) = Nothing, blacklist As List(Of Type) = Nothing)
+  overload: Quantum.HNSFStateHelper.Update*
+  nameWithType.vb: HNSFStateHelper.Update(Frame, FP, EntityRef, HNSFStateContext, List(Of Type), List(Of Type))
+  fullName.vb: Quantum.HNSFStateHelper.Update(Quantum.Frame, Photon.Deterministic.FP, Quantum.EntityRef, Quantum.HNSFStateContext, System.Collections.Generic.List(Of System.Type), System.Collections.Generic.List(Of System.Type))
+  name.vb: Update(Frame, FP, EntityRef, HNSFStateContext, List(Of Type), List(Of Type))
+- uid: Quantum.HNSFStateHelper.Update(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFState,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  commentId: M:Quantum.HNSFStateHelper.Update(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFState,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  id: Update(Quantum.Frame,Photon.Deterministic.FP,Quantum.EntityRef,Quantum.HNSFState,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  parent: Quantum.HNSFStateHelper
+  langs:
+  - csharp
+  - vb
+  name: Update(Frame, FP, EntityRef, HNSFState, ref HNSFStateContext, List<Type>, List<Type>)
+  nameWithType: HNSFStateHelper.Update(Frame, FP, EntityRef, HNSFState, ref HNSFStateContext, List<Type>, List<Type>)
+  fullName: Quantum.HNSFStateHelper.Update(Quantum.Frame, Photon.Deterministic.FP, Quantum.EntityRef, Quantum.HNSFState, ref Quantum.HNSFStateContext, System.Collections.Generic.List<System.Type>, System.Collections.Generic.List<System.Type>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Update
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+    startLine: 78
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static void Update(Frame frame, FP deltaTime, EntityRef entity, HNSFState state, ref HNSFStateContext context, List<Type> whitelist = null, List<Type> blacklist = null)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: deltaTime
+      type: Photon.Deterministic.FP
+    - id: entity
+      type: Quantum.EntityRef
+    - id: state
+      type: Quantum.HNSFState
+    - id: context
+      type: Quantum.HNSFStateContext
+    - id: whitelist
+      type: System.Collections.Generic.List{System.Type}
+    - id: blacklist
+      type: System.Collections.Generic.List{System.Type}
+    content.vb: Public Shared Sub Update(frame As Frame, deltaTime As FP, entity As EntityRef, state As HNSFState, context As HNSFStateContext, whitelist As List(Of Type) = Nothing, blacklist As List(Of Type) = Nothing)
+  overload: Quantum.HNSFStateHelper.Update*
+  nameWithType.vb: HNSFStateHelper.Update(Frame, FP, EntityRef, HNSFState, HNSFStateContext, List(Of Type), List(Of Type))
+  fullName.vb: Quantum.HNSFStateHelper.Update(Quantum.Frame, Photon.Deterministic.FP, Quantum.EntityRef, Quantum.HNSFState, Quantum.HNSFStateContext, System.Collections.Generic.List(Of System.Type), System.Collections.Generic.List(Of System.Type))
+  name.vb: Update(Frame, FP, EntityRef, HNSFState, HNSFStateContext, List(Of Type), List(Of Type))
+- uid: Quantum.HNSFStateHelper.IsFrameWithinRanges(Quantum.ActionRange[],System.Int32,System.Int32)
+  commentId: M:Quantum.HNSFStateHelper.IsFrameWithinRanges(Quantum.ActionRange[],System.Int32,System.Int32)
+  id: IsFrameWithinRanges(Quantum.ActionRange[],System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Quantum.HNSFStateHelper
+  langs:
+  - csharp
+  - vb
+  name: IsFrameWithinRanges(ActionRange[], int, int)
+  nameWithType: HNSFStateHelper.IsFrameWithinRanges(ActionRange[], int, int)
+  fullName: Quantum.HNSFStateHelper.IsFrameWithinRanges(Quantum.ActionRange[], int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IsFrameWithinRanges
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+    startLine: 83
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static bool IsFrameWithinRanges(this ActionRange[] actionRangeList, int stateTotalFrames, int frame)
+    parameters:
+    - id: actionRangeList
+      type: Quantum.ActionRange[]
+    - id: stateTotalFrames
+      type: System.Int32
+    - id: frame
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsFrameWithinRanges(actionRangeList As ActionRange(), stateTotalFrames As Integer, frame As Integer) As Boolean
+  overload: Quantum.HNSFStateHelper.IsFrameWithinRanges*
+  nameWithType.vb: HNSFStateHelper.IsFrameWithinRanges(ActionRange(), Integer, Integer)
+  fullName.vb: Quantum.HNSFStateHelper.IsFrameWithinRanges(Quantum.ActionRange(), Integer, Integer)
+  name.vb: IsFrameWithinRanges(ActionRange(), Integer, Integer)
+- uid: Quantum.HNSFStateHelper.IsFrameWithinRanges(Quantum.ActionRange[],System.Int32,System.Int32,Photon.Deterministic.FP@)
+  commentId: M:Quantum.HNSFStateHelper.IsFrameWithinRanges(Quantum.ActionRange[],System.Int32,System.Int32,Photon.Deterministic.FP@)
+  id: IsFrameWithinRanges(Quantum.ActionRange[],System.Int32,System.Int32,Photon.Deterministic.FP@)
+  isExtensionMethod: true
+  parent: Quantum.HNSFStateHelper
+  langs:
+  - csharp
+  - vb
+  name: IsFrameWithinRanges(ActionRange[], int, int, out FP)
+  nameWithType: HNSFStateHelper.IsFrameWithinRanges(ActionRange[], int, int, out FP)
+  fullName: Quantum.HNSFStateHelper.IsFrameWithinRanges(Quantum.ActionRange[], int, int, out Photon.Deterministic.FP)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IsFrameWithinRanges
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+    startLine: 96
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static bool IsFrameWithinRanges(this ActionRange[] actionRangeList, int stateTotalFrames, int frame, out FP percentage)
+    parameters:
+    - id: actionRangeList
+      type: Quantum.ActionRange[]
+    - id: stateTotalFrames
+      type: System.Int32
+    - id: frame
+      type: System.Int32
+    - id: percentage
+      type: Photon.Deterministic.FP
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsFrameWithinRanges(actionRangeList As ActionRange(), stateTotalFrames As Integer, frame As Integer, percentage As FP) As Boolean
+  overload: Quantum.HNSFStateHelper.IsFrameWithinRanges*
+  nameWithType.vb: HNSFStateHelper.IsFrameWithinRanges(ActionRange(), Integer, Integer, FP)
+  fullName.vb: Quantum.HNSFStateHelper.IsFrameWithinRanges(Quantum.ActionRange(), Integer, Integer, Photon.Deterministic.FP)
+  name.vb: IsFrameWithinRanges(ActionRange(), Integer, Integer, FP)
+- uid: Quantum.HNSFStateHelper.ConvertFrameNumber(System.Int32,System.Int32)
+  commentId: M:Quantum.HNSFStateHelper.ConvertFrameNumber(System.Int32,System.Int32)
+  id: ConvertFrameNumber(System.Int32,System.Int32)
+  parent: Quantum.HNSFStateHelper
+  langs:
+  - csharp
+  - vb
+  name: ConvertFrameNumber(int, int)
+  nameWithType: HNSFStateHelper.ConvertFrameNumber(int, int)
+  fullName: Quantum.HNSFStateHelper.ConvertFrameNumber(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ConvertFrameNumber
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFStateHelper.cs
+    startLine: 111
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static int ConvertFrameNumber(int stateTotalFrames, int number)
+    parameters:
+    - id: stateTotalFrames
+      type: System.Int32
+    - id: number
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function ConvertFrameNumber(stateTotalFrames As Integer, number As Integer) As Integer
+  overload: Quantum.HNSFStateHelper.ConvertFrameNumber*
+  nameWithType.vb: HNSFStateHelper.ConvertFrameNumber(Integer, Integer)
+  fullName.vb: Quantum.HNSFStateHelper.ConvertFrameNumber(Integer, Integer)
+  name.vb: ConvertFrameNumber(Integer, Integer)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.HNSFStateHelper.CauseStateTransition*
+  commentId: Overload:Quantum.HNSFStateHelper.CauseStateTransition
+  href: Quantum.HNSFStateHelper.html#Quantum_HNSFStateHelper_CauseStateTransition_Quantum_Frame_Photon_Deterministic_FP_Quantum_EntityRef_Quantum_HNSFStateContext__System_Boolean_System_Collections_Generic_List_System_Type__System_Collections_Generic_List_System_Type__
+  name: CauseStateTransition
+  nameWithType: HNSFStateHelper.CauseStateTransition
+  fullName: Quantum.HNSFStateHelper.CauseStateTransition
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Photon.Deterministic.FP
+  commentId: T:Photon.Deterministic.FP
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FP
+  nameWithType: FP
+  fullName: Photon.Deterministic.FP
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.HNSFStateContext
+  commentId: T:Quantum.HNSFStateContext
+  parent: Quantum
+  href: Quantum.HNSFStateContext.html
+  name: HNSFStateContext
+  nameWithType: HNSFStateContext
+  fullName: Quantum.HNSFStateContext
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.List{System.Type}
+  commentId: T:System.Collections.Generic.List{System.Type}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Type>
+  nameWithType: List<Type>
+  fullName: System.Collections.Generic.List<System.Type>
+  nameWithType.vb: List(Of Type)
+  fullName.vb: System.Collections.Generic.List(Of System.Type)
+  name.vb: List(Of Type)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Quantum.HNSFState
+  commentId: T:Quantum.HNSFState
+  parent: Quantum
+  href: Quantum.HNSFState.html
+  name: HNSFState
+  nameWithType: HNSFState
+  fullName: Quantum.HNSFState
+- uid: Quantum.HNSFStateHelper.ChangeMoveset*
+  commentId: Overload:Quantum.HNSFStateHelper.ChangeMoveset
+  href: Quantum.HNSFStateHelper.html#Quantum_HNSFStateHelper_ChangeMoveset_Quantum_Frame_Photon_Deterministic_FP_Quantum_EntityRef_Quantum_AssetRef_Quantum_HNSFState__Quantum_HNSFStateAgent__Quantum_AIBlackboardComponent__Quantum_AIConfigBase_
+  name: ChangeMoveset
+  nameWithType: HNSFStateHelper.ChangeMoveset
+  fullName: Quantum.HNSFStateHelper.ChangeMoveset
+- uid: Quantum.AssetRef{Quantum.HNSFState}
+  commentId: T:Quantum.AssetRef{Quantum.HNSFState}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.HNSFState.html
+  name: AssetRef<HNSFState>
+  nameWithType: AssetRef<HNSFState>
+  fullName: Quantum.AssetRef<Quantum.HNSFState>
+  nameWithType.vb: AssetRef(Of HNSFState)
+  fullName.vb: Quantum.AssetRef(Of Quantum.HNSFState)
+  name.vb: AssetRef(Of HNSFState)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.HNSFState
+    name: HNSFState
+    href: Quantum.HNSFState.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HNSFState
+    name: HNSFState
+    href: Quantum.HNSFState.html
+  - name: )
+- uid: Quantum.HNSFStateAgent*
+  isExternal: true
+  href: Quantum.HNSFStateAgent.html
+  name: HNSFStateAgent*
+  nameWithType: HNSFStateAgent*
+  fullName: Quantum.HNSFStateAgent*
+  spec.csharp:
+  - uid: Quantum.HNSFStateAgent
+    name: HNSFStateAgent
+    href: Quantum.HNSFStateAgent.html
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.HNSFStateAgent
+    name: HNSFStateAgent
+    href: Quantum.HNSFStateAgent.html
+  - name: '*'
+- uid: Quantum.AIBlackboardComponent*
+  isExternal: true
+  name: AIBlackboardComponent*
+  nameWithType: AIBlackboardComponent*
+  fullName: Quantum.AIBlackboardComponent*
+  spec.csharp:
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+- uid: Quantum.AIConfigBase
+  commentId: T:Quantum.AIConfigBase
+  parent: Quantum
+  isExternal: true
+  name: AIConfigBase
+  nameWithType: AIConfigBase
+  fullName: Quantum.AIConfigBase
+- uid: Quantum.AssetRef`1
+  commentId: T:Quantum.AssetRef`1
+  isExternal: true
+  name: AssetRef<T>
+  nameWithType: AssetRef<T>
+  fullName: Quantum.AssetRef<T>
+  nameWithType.vb: AssetRef(Of T)
+  fullName.vb: Quantum.AssetRef(Of T)
+  name.vb: AssetRef(Of T)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.HNSFStateHelper.UpdateState*
+  commentId: Overload:Quantum.HNSFStateHelper.UpdateState
+  href: Quantum.HNSFStateHelper.html#Quantum_HNSFStateHelper_UpdateState_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__System_Collections_Generic_List_System_Type__System_Collections_Generic_List_System_Type__
+  name: UpdateState
+  nameWithType: HNSFStateHelper.UpdateState
+  fullName: Quantum.HNSFStateHelper.UpdateState
+- uid: Quantum.HNSFStateHelper.Update*
+  commentId: Overload:Quantum.HNSFStateHelper.Update
+  href: Quantum.HNSFStateHelper.html#Quantum_HNSFStateHelper_Update_Quantum_Frame_Photon_Deterministic_FP_Quantum_EntityRef_Quantum_HNSFStateContext__System_Collections_Generic_List_System_Type__System_Collections_Generic_List_System_Type__
+  name: Update
+  nameWithType: HNSFStateHelper.Update
+  fullName: Quantum.HNSFStateHelper.Update
+- uid: Quantum.HNSFStateHelper.IsFrameWithinRanges*
+  commentId: Overload:Quantum.HNSFStateHelper.IsFrameWithinRanges
+  href: Quantum.HNSFStateHelper.html#Quantum_HNSFStateHelper_IsFrameWithinRanges_Quantum_ActionRange___System_Int32_System_Int32_
+  name: IsFrameWithinRanges
+  nameWithType: HNSFStateHelper.IsFrameWithinRanges
+  fullName: Quantum.HNSFStateHelper.IsFrameWithinRanges
+- uid: Quantum.ActionRange[]
+  isExternal: true
+  href: Quantum.ActionRange.html
+  name: ActionRange[]
+  nameWithType: ActionRange[]
+  fullName: Quantum.ActionRange[]
+  nameWithType.vb: ActionRange()
+  fullName.vb: Quantum.ActionRange()
+  name.vb: ActionRange()
+  spec.csharp:
+  - uid: Quantum.ActionRange
+    name: ActionRange
+    href: Quantum.ActionRange.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Quantum.ActionRange
+    name: ActionRange
+    href: Quantum.ActionRange.html
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.HNSFStateHelper.ConvertFrameNumber*
+  commentId: Overload:Quantum.HNSFStateHelper.ConvertFrameNumber
+  href: Quantum.HNSFStateHelper.html#Quantum_HNSFStateHelper_ConvertFrameNumber_System_Int32_System_Int32_
+  name: ConvertFrameNumber
+  nameWithType: HNSFStateHelper.ConvertFrameNumber
+  fullName: Quantum.HNSFStateHelper.ConvertFrameNumber

@@ -1,0 +1,1329 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.HNSFParamAssetRef
+  commentId: T:Quantum.HNSFParamAssetRef
+  id: HNSFParamAssetRef
+  parent: Quantum
+  children:
+  - Quantum.HNSFParamAssetRef.GetBlackboardValue(Quantum.BlackboardValue)
+  - Quantum.HNSFParamAssetRef.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  - Quantum.HNSFParamAssetRef.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  - Quantum.HNSFParamAssetRef.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  - Quantum.HNSFParamAssetRef.functionRef
+  - Quantum.HNSFParamAssetRef.op_Implicit(Quantum.AssetRef)~Quantum.HNSFParamAssetRef
+  langs:
+  - csharp
+  - vb
+  name: HNSFParamAssetRef
+  nameWithType: HNSFParamAssetRef
+  fullName: Quantum.HNSFParamAssetRef
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HNSFParamAssetRef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+    startLine: 5
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Serializable]
+
+      public sealed class HNSFParamAssetRef : HNSFParam<AssetRef>
+    content.vb: >-
+      <Serializable>
+
+      Public NotInheritable Class HNSFParamAssetRef Inherits HNSFParam(Of AssetRef)
+  inheritance:
+  - System.Object
+  - Quantum.HNSFParam{Quantum.AssetRef}
+  inheritedMembers:
+  - Quantum.HNSFParam{Quantum.AssetRef}.Source
+  - Quantum.HNSFParam{Quantum.AssetRef}.Key
+  - Quantum.HNSFParam{Quantum.AssetRef}.DefaultValue
+  - Quantum.HNSFParam{Quantum.AssetRef}.Resolve(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  - Quantum.HNSFParam{Quantum.AssetRef}.ResolveBlackboard(Quantum.Frame,Quantum.AIBlackboardComponent*)
+  - Quantum.HNSFParam{Quantum.AssetRef}.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  - Quantum.HNSFParam{Quantum.AssetRef}.ResolveFunction(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  - Quantum.HNSFParam{Quantum.AssetRef}.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Quantum.HNSFParamAssetRef.op_Implicit(Quantum.AssetRef)~Quantum.HNSFParamAssetRef
+  commentId: M:Quantum.HNSFParamAssetRef.op_Implicit(Quantum.AssetRef)~Quantum.HNSFParamAssetRef
+  id: op_Implicit(Quantum.AssetRef)~Quantum.HNSFParamAssetRef
+  parent: Quantum.HNSFParamAssetRef
+  langs:
+  - csharp
+  - vb
+  name: implicit operator HNSFParamAssetRef(AssetRef)
+  nameWithType: HNSFParamAssetRef.implicit operator HNSFParamAssetRef(AssetRef)
+  fullName: Quantum.HNSFParamAssetRef.implicit operator Quantum.HNSFParamAssetRef(Quantum.AssetRef)
+  type: Operator
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: op_Implicit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+    startLine: 8
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static implicit operator HNSFParamAssetRef(AssetRef value)
+    parameters:
+    - id: value
+      type: Quantum.AssetRef
+    return:
+      type: Quantum.HNSFParamAssetRef
+    content.vb: Public Shared Widening Operator CType(value As AssetRef) As HNSFParamAssetRef
+  overload: Quantum.HNSFParamAssetRef.op_Implicit*
+  nameWithType.vb: HNSFParamAssetRef.CType(AssetRef)
+  fullName.vb: Quantum.HNSFParamAssetRef.CType(Quantum.AssetRef)
+  name.vb: CType(AssetRef)
+- uid: Quantum.HNSFParamAssetRef.functionRef
+  commentId: F:Quantum.HNSFParamAssetRef.functionRef
+  id: functionRef
+  parent: Quantum.HNSFParamAssetRef
+  langs:
+  - csharp
+  - vb
+  name: functionRef
+  nameWithType: HNSFParamAssetRef.functionRef
+  fullName: Quantum.HNSFParamAssetRef.functionRef
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: functionRef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+    startLine: 13
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<HNSFStateFunction> functionRef
+    return:
+      type: Quantum.AssetRef{Quantum.HNSFStateFunction}
+    content.vb: Public functionRef As AssetRef(Of HNSFStateFunction)
+- uid: Quantum.HNSFParamAssetRef.GetBlackboardValue(Quantum.BlackboardValue)
+  commentId: M:Quantum.HNSFParamAssetRef.GetBlackboardValue(Quantum.BlackboardValue)
+  id: GetBlackboardValue(Quantum.BlackboardValue)
+  parent: Quantum.HNSFParamAssetRef
+  langs:
+  - csharp
+  - vb
+  name: GetBlackboardValue(BlackboardValue)
+  nameWithType: HNSFParamAssetRef.GetBlackboardValue(BlackboardValue)
+  fullName: Quantum.HNSFParamAssetRef.GetBlackboardValue(Quantum.BlackboardValue)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetBlackboardValue
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+    startLine: 16
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: protected override AssetRef GetBlackboardValue(BlackboardValue value)
+    parameters:
+    - id: value
+      type: Quantum.BlackboardValue
+    return:
+      type: Quantum.AssetRef
+    content.vb: Protected Overrides Function GetBlackboardValue(value As BlackboardValue) As AssetRef
+  overridden: Quantum.HNSFParam{Quantum.AssetRef}.GetBlackboardValue(Quantum.BlackboardValue)
+  overload: Quantum.HNSFParamAssetRef.GetBlackboardValue*
+- uid: Quantum.HNSFParamAssetRef.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  commentId: M:Quantum.HNSFParamAssetRef.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  id: GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  parent: Quantum.HNSFParamAssetRef
+  langs:
+  - csharp
+  - vb
+  name: GetConfigValue(KeyValuePair)
+  nameWithType: HNSFParamAssetRef.GetConfigValue(AIConfigBase.KeyValuePair)
+  fullName: Quantum.HNSFParamAssetRef.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetConfigValue
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+    startLine: 21
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: protected override AssetRef GetConfigValue(AIConfigBase.KeyValuePair configPair)
+    parameters:
+    - id: configPair
+      type: Quantum.AIConfigBase.KeyValuePair
+    return:
+      type: Quantum.AssetRef
+    content.vb: Protected Overrides Function GetConfigValue(configPair As AIConfigBase.KeyValuePair) As AssetRef
+  overridden: Quantum.HNSFParam{Quantum.AssetRef}.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  overload: Quantum.HNSFParamAssetRef.GetConfigValue*
+- uid: Quantum.HNSFParamAssetRef.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParamAssetRef.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  id: GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  parent: Quantum.HNSFParamAssetRef
+  langs:
+  - csharp
+  - vb
+  name: GetFunctionValue(Frame, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParamAssetRef.GetFunctionValue(Frame, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParamAssetRef.GetFunctionValue(Quantum.Frame, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetFunctionValue
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+    startLine: 26
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: protected override AssetRef GetFunctionValue(Frame frame, EntityRef entity, ref HNSFStateContext stateContext)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: entity
+      type: Quantum.EntityRef
+    - id: stateContext
+      type: Quantum.HNSFStateContext
+    return:
+      type: Quantum.AssetRef
+    content.vb: Protected Overrides Function GetFunctionValue(frame As Frame, entity As EntityRef, stateContext As HNSFStateContext) As AssetRef
+  overridden: Quantum.HNSFParam{Quantum.AssetRef}.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  overload: Quantum.HNSFParamAssetRef.GetFunctionValue*
+  nameWithType.vb: HNSFParamAssetRef.GetFunctionValue(Frame, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParamAssetRef.GetFunctionValue(Quantum.Frame, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: GetFunctionValue(Frame, EntityRef, HNSFStateContext)
+- uid: Quantum.HNSFParamAssetRef.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParamAssetRef.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  id: GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  parent: Quantum.HNSFParamAssetRef
+  langs:
+  - csharp
+  - vb
+  name: GetFunctionValue(FrameThreadSafe, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParamAssetRef.GetFunctionValue(FrameThreadSafe, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParamAssetRef.GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetFunctionValue
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Params/HNSFParamAssetRef.cs
+    startLine: 31
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: protected override AssetRef GetFunctionValue(FrameThreadSafe frame, EntityRef entity, ref HNSFStateContext stateContext)
+    parameters:
+    - id: frame
+      type: Quantum.FrameThreadSafe
+    - id: entity
+      type: Quantum.EntityRef
+    - id: stateContext
+      type: Quantum.HNSFStateContext
+    return:
+      type: Quantum.AssetRef
+    content.vb: Protected Overrides Function GetFunctionValue(frame As FrameThreadSafe, entity As EntityRef, stateContext As HNSFStateContext) As AssetRef
+  overridden: Quantum.HNSFParam{Quantum.AssetRef}.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  overload: Quantum.HNSFParamAssetRef.GetFunctionValue*
+  nameWithType.vb: HNSFParamAssetRef.GetFunctionValue(FrameThreadSafe, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParamAssetRef.GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: GetFunctionValue(FrameThreadSafe, EntityRef, HNSFStateContext)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.HNSFParam{Quantum.AssetRef}
+  commentId: T:Quantum.HNSFParam{Quantum.AssetRef}
+  parent: Quantum
+  definition: Quantum.HNSFParam`1
+  href: Quantum.HNSFParam-1.html
+  name: HNSFParam<AssetRef>
+  nameWithType: HNSFParam<AssetRef>
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>
+  nameWithType.vb: HNSFParam(Of AssetRef)
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef)
+  name.vb: HNSFParam(Of AssetRef)
+  spec.csharp:
+  - uid: Quantum.HNSFParam`1
+    name: HNSFParam
+    href: Quantum.HNSFParam-1.html
+  - name: <
+  - uid: Quantum.AssetRef
+    name: AssetRef
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.HNSFParam`1
+    name: HNSFParam
+    href: Quantum.HNSFParam-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.AssetRef
+    name: AssetRef
+    isExternal: true
+  - name: )
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.Source
+  commentId: F:Quantum.HNSFParam{Quantum.AssetRef}.Source
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.Source
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_Source
+  name: Source
+  nameWithType: HNSFParam<AssetRef>.Source
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.Source
+  nameWithType.vb: HNSFParam(Of AssetRef).Source
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).Source
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.Key
+  commentId: F:Quantum.HNSFParam{Quantum.AssetRef}.Key
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.Key
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_Key
+  name: Key
+  nameWithType: HNSFParam<AssetRef>.Key
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.Key
+  nameWithType.vb: HNSFParam(Of AssetRef).Key
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).Key
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.DefaultValue
+  commentId: F:Quantum.HNSFParam{Quantum.AssetRef}.DefaultValue
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.DefaultValue
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_DefaultValue
+  name: DefaultValue
+  nameWithType: HNSFParam<AssetRef>.DefaultValue
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.DefaultValue
+  nameWithType.vb: HNSFParam(Of AssetRef).DefaultValue
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).DefaultValue
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.Resolve(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParam{Quantum.AssetRef}.Resolve(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.Resolve(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_Resolve_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  name: Resolve(Frame, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParam<AssetRef>.Resolve(Frame, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.Resolve(Quantum.Frame, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  nameWithType.vb: HNSFParam(Of AssetRef).Resolve(Frame, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).Resolve(Quantum.Frame, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: Resolve(Frame, EntityRef, HNSFStateContext)
+  spec.csharp:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.Resolve(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: Resolve
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_Resolve_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.Resolve(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: Resolve
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_Resolve_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveBlackboard(Quantum.Frame,Quantum.AIBlackboardComponent*)
+  commentId: M:Quantum.HNSFParam{Quantum.AssetRef}.ResolveBlackboard(Quantum.Frame,Quantum.AIBlackboardComponent*)
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.ResolveBlackboard(Quantum.Frame,Quantum.AIBlackboardComponent*)
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_Frame_Quantum_AIBlackboardComponent__
+  name: ResolveBlackboard(Frame, AIBlackboardComponent*)
+  nameWithType: HNSFParam<AssetRef>.ResolveBlackboard(Frame, AIBlackboardComponent*)
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.ResolveBlackboard(Quantum.Frame, Quantum.AIBlackboardComponent*)
+  nameWithType.vb: HNSFParam(Of AssetRef).ResolveBlackboard(Frame, AIBlackboardComponent*)
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).ResolveBlackboard(Quantum.Frame, Quantum.AIBlackboardComponent*)
+  spec.csharp:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveBlackboard(Quantum.Frame,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_Frame_Quantum_AIBlackboardComponent__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveBlackboard(Quantum.Frame,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_Frame_Quantum_AIBlackboardComponent__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  commentId: M:Quantum.HNSFParam{Quantum.AssetRef}.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_FrameThreadSafe_Quantum_AIBlackboardComponent__
+  name: ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  nameWithType: HNSFParam<AssetRef>.ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.ResolveBlackboard(Quantum.FrameThreadSafe, Quantum.AIBlackboardComponent*)
+  nameWithType.vb: HNSFParam(Of AssetRef).ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).ResolveBlackboard(Quantum.FrameThreadSafe, Quantum.AIBlackboardComponent*)
+  spec.csharp:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_FrameThreadSafe_Quantum_AIBlackboardComponent__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_FrameThreadSafe_Quantum_AIBlackboardComponent__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveFunction(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParam{Quantum.AssetRef}.ResolveFunction(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.ResolveFunction(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  name: ResolveFunction(Frame, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParam<AssetRef>.ResolveFunction(Frame, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.ResolveFunction(Quantum.Frame, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  nameWithType.vb: HNSFParam(Of AssetRef).ResolveFunction(Frame, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).ResolveFunction(Quantum.Frame, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: ResolveFunction(Frame, EntityRef, HNSFStateContext)
+  spec.csharp:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveFunction(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: ResolveFunction
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveFunction(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: ResolveFunction
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParam{Quantum.AssetRef}.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  name: ResolveFunction(FrameThreadSafe, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParam<AssetRef>.ResolveFunction(FrameThreadSafe, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.ResolveFunction(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  nameWithType.vb: HNSFParam(Of AssetRef).ResolveFunction(FrameThreadSafe, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).ResolveFunction(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: ResolveFunction(FrameThreadSafe, EntityRef, HNSFStateContext)
+  spec.csharp:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: ResolveFunction
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: ResolveFunction
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.HNSFParam`1
+  commentId: T:Quantum.HNSFParam`1
+  href: Quantum.HNSFParam-1.html
+  name: HNSFParam<T>
+  nameWithType: HNSFParam<T>
+  fullName: Quantum.HNSFParam<T>
+  nameWithType.vb: HNSFParam(Of T)
+  fullName.vb: Quantum.HNSFParam(Of T)
+  name.vb: HNSFParam(Of T)
+  spec.csharp:
+  - uid: Quantum.HNSFParam`1
+    name: HNSFParam
+    href: Quantum.HNSFParam-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.HNSFParam`1
+    name: HNSFParam
+    href: Quantum.HNSFParam-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.HNSFParam`1.Source
+  commentId: F:Quantum.HNSFParam`1.Source
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_Source
+  name: Source
+  nameWithType: HNSFParam<T>.Source
+  fullName: Quantum.HNSFParam<T>.Source
+  nameWithType.vb: HNSFParam(Of T).Source
+  fullName.vb: Quantum.HNSFParam(Of T).Source
+- uid: Quantum.HNSFParam`1.Key
+  commentId: F:Quantum.HNSFParam`1.Key
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_Key
+  name: Key
+  nameWithType: HNSFParam<T>.Key
+  fullName: Quantum.HNSFParam<T>.Key
+  nameWithType.vb: HNSFParam(Of T).Key
+  fullName.vb: Quantum.HNSFParam(Of T).Key
+- uid: Quantum.HNSFParam`1.DefaultValue
+  commentId: F:Quantum.HNSFParam`1.DefaultValue
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_DefaultValue
+  name: DefaultValue
+  nameWithType: HNSFParam<T>.DefaultValue
+  fullName: Quantum.HNSFParam<T>.DefaultValue
+  nameWithType.vb: HNSFParam(Of T).DefaultValue
+  fullName.vb: Quantum.HNSFParam(Of T).DefaultValue
+- uid: Quantum.HNSFParam`1.Resolve(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParam`1.Resolve(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  isExternal: true
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_Resolve_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  name: Resolve(Frame, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParam<T>.Resolve(Frame, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParam<T>.Resolve(Quantum.Frame, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  nameWithType.vb: HNSFParam(Of T).Resolve(Frame, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParam(Of T).Resolve(Quantum.Frame, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: Resolve(Frame, EntityRef, HNSFStateContext)
+  spec.csharp:
+  - uid: Quantum.HNSFParam`1.Resolve(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: Resolve
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_Resolve_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam`1.Resolve(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: Resolve
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_Resolve_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+- uid: Quantum.HNSFParam`1.ResolveBlackboard(Quantum.Frame,Quantum.AIBlackboardComponent*)
+  commentId: M:Quantum.HNSFParam`1.ResolveBlackboard(Quantum.Frame,Quantum.AIBlackboardComponent*)
+  isExternal: true
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_Frame_Quantum_AIBlackboardComponent__
+  name: ResolveBlackboard(Frame, AIBlackboardComponent*)
+  nameWithType: HNSFParam<T>.ResolveBlackboard(Frame, AIBlackboardComponent*)
+  fullName: Quantum.HNSFParam<T>.ResolveBlackboard(Quantum.Frame, Quantum.AIBlackboardComponent*)
+  nameWithType.vb: HNSFParam(Of T).ResolveBlackboard(Frame, AIBlackboardComponent*)
+  fullName.vb: Quantum.HNSFParam(Of T).ResolveBlackboard(Quantum.Frame, Quantum.AIBlackboardComponent*)
+  spec.csharp:
+  - uid: Quantum.HNSFParam`1.ResolveBlackboard(Quantum.Frame,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_Frame_Quantum_AIBlackboardComponent__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam`1.ResolveBlackboard(Quantum.Frame,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_Frame_Quantum_AIBlackboardComponent__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.HNSFParam`1.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  commentId: M:Quantum.HNSFParam`1.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  isExternal: true
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_FrameThreadSafe_Quantum_AIBlackboardComponent__
+  name: ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  nameWithType: HNSFParam<T>.ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  fullName: Quantum.HNSFParam<T>.ResolveBlackboard(Quantum.FrameThreadSafe, Quantum.AIBlackboardComponent*)
+  nameWithType.vb: HNSFParam(Of T).ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  fullName.vb: Quantum.HNSFParam(Of T).ResolveBlackboard(Quantum.FrameThreadSafe, Quantum.AIBlackboardComponent*)
+  spec.csharp:
+  - uid: Quantum.HNSFParam`1.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_FrameThreadSafe_Quantum_AIBlackboardComponent__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam`1.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveBlackboard_Quantum_FrameThreadSafe_Quantum_AIBlackboardComponent__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.HNSFParam`1.ResolveFunction(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParam`1.ResolveFunction(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  isExternal: true
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  name: ResolveFunction(Frame, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParam<T>.ResolveFunction(Frame, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParam<T>.ResolveFunction(Quantum.Frame, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  nameWithType.vb: HNSFParam(Of T).ResolveFunction(Frame, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParam(Of T).ResolveFunction(Quantum.Frame, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: ResolveFunction(Frame, EntityRef, HNSFStateContext)
+  spec.csharp:
+  - uid: Quantum.HNSFParam`1.ResolveFunction(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: ResolveFunction
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam`1.ResolveFunction(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: ResolveFunction
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+- uid: Quantum.HNSFParam`1.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParam`1.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  isExternal: true
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  name: ResolveFunction(FrameThreadSafe, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParam<T>.ResolveFunction(FrameThreadSafe, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParam<T>.ResolveFunction(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  nameWithType.vb: HNSFParam(Of T).ResolveFunction(FrameThreadSafe, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParam(Of T).ResolveFunction(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: ResolveFunction(FrameThreadSafe, EntityRef, HNSFStateContext)
+  spec.csharp:
+  - uid: Quantum.HNSFParam`1.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: ResolveFunction
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam`1.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: ResolveFunction
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_ResolveFunction_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+- uid: Quantum.HNSFParamAssetRef.op_Implicit*
+  commentId: Overload:Quantum.HNSFParamAssetRef.op_Implicit
+  name: implicit operator
+  nameWithType: HNSFParamAssetRef.implicit operator
+  fullName: Quantum.HNSFParamAssetRef.implicit operator
+  nameWithType.vb: HNSFParamAssetRef.CType
+  fullName.vb: Quantum.HNSFParamAssetRef.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: Quantum.AssetRef
+  commentId: T:Quantum.AssetRef
+  parent: Quantum
+  isExternal: true
+  name: AssetRef
+  nameWithType: AssetRef
+  fullName: Quantum.AssetRef
+- uid: Quantum.HNSFParamAssetRef
+  commentId: T:Quantum.HNSFParamAssetRef
+  parent: Quantum
+  href: Quantum.HNSFParamAssetRef.html
+  name: HNSFParamAssetRef
+  nameWithType: HNSFParamAssetRef
+  fullName: Quantum.HNSFParamAssetRef
+- uid: Quantum.AssetRef{Quantum.HNSFStateFunction}
+  commentId: T:Quantum.AssetRef{Quantum.HNSFStateFunction}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.HNSFStateFunction.html
+  name: AssetRef<HNSFStateFunction>
+  nameWithType: AssetRef<HNSFStateFunction>
+  fullName: Quantum.AssetRef<Quantum.HNSFStateFunction>
+  nameWithType.vb: AssetRef(Of HNSFStateFunction)
+  fullName.vb: Quantum.AssetRef(Of Quantum.HNSFStateFunction)
+  name.vb: AssetRef(Of HNSFStateFunction)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.HNSFStateFunction
+    name: HNSFStateFunction
+    href: Quantum.HNSFStateFunction.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HNSFStateFunction
+    name: HNSFStateFunction
+    href: Quantum.HNSFStateFunction.html
+  - name: )
+- uid: Quantum.AssetRef`1
+  commentId: T:Quantum.AssetRef`1
+  isExternal: true
+  name: AssetRef<T>
+  nameWithType: AssetRef<T>
+  fullName: Quantum.AssetRef<T>
+  nameWithType.vb: AssetRef(Of T)
+  fullName.vb: Quantum.AssetRef(Of T)
+  name.vb: AssetRef(Of T)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.GetBlackboardValue(Quantum.BlackboardValue)
+  commentId: M:Quantum.HNSFParam{Quantum.AssetRef}.GetBlackboardValue(Quantum.BlackboardValue)
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.GetBlackboardValue(Quantum.BlackboardValue)
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetBlackboardValue_Quantum_BlackboardValue_
+  name: GetBlackboardValue(BlackboardValue)
+  nameWithType: HNSFParam<AssetRef>.GetBlackboardValue(BlackboardValue)
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.GetBlackboardValue(Quantum.BlackboardValue)
+  nameWithType.vb: HNSFParam(Of AssetRef).GetBlackboardValue(BlackboardValue)
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).GetBlackboardValue(Quantum.BlackboardValue)
+  spec.csharp:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.GetBlackboardValue(Quantum.BlackboardValue)
+    name: GetBlackboardValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetBlackboardValue_Quantum_BlackboardValue_
+  - name: (
+  - uid: Quantum.BlackboardValue
+    name: BlackboardValue
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.GetBlackboardValue(Quantum.BlackboardValue)
+    name: GetBlackboardValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetBlackboardValue_Quantum_BlackboardValue_
+  - name: (
+  - uid: Quantum.BlackboardValue
+    name: BlackboardValue
+    isExternal: true
+  - name: )
+- uid: Quantum.HNSFParamAssetRef.GetBlackboardValue*
+  commentId: Overload:Quantum.HNSFParamAssetRef.GetBlackboardValue
+  href: Quantum.HNSFParamAssetRef.html#Quantum_HNSFParamAssetRef_GetBlackboardValue_Quantum_BlackboardValue_
+  name: GetBlackboardValue
+  nameWithType: HNSFParamAssetRef.GetBlackboardValue
+  fullName: Quantum.HNSFParamAssetRef.GetBlackboardValue
+- uid: Quantum.BlackboardValue
+  commentId: T:Quantum.BlackboardValue
+  parent: Quantum
+  isExternal: true
+  name: BlackboardValue
+  nameWithType: BlackboardValue
+  fullName: Quantum.BlackboardValue
+- uid: Quantum.HNSFParam`1.GetBlackboardValue(Quantum.BlackboardValue)
+  commentId: M:Quantum.HNSFParam`1.GetBlackboardValue(Quantum.BlackboardValue)
+  isExternal: true
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetBlackboardValue_Quantum_BlackboardValue_
+  name: GetBlackboardValue(BlackboardValue)
+  nameWithType: HNSFParam<T>.GetBlackboardValue(BlackboardValue)
+  fullName: Quantum.HNSFParam<T>.GetBlackboardValue(Quantum.BlackboardValue)
+  nameWithType.vb: HNSFParam(Of T).GetBlackboardValue(BlackboardValue)
+  fullName.vb: Quantum.HNSFParam(Of T).GetBlackboardValue(Quantum.BlackboardValue)
+  spec.csharp:
+  - uid: Quantum.HNSFParam`1.GetBlackboardValue(Quantum.BlackboardValue)
+    name: GetBlackboardValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetBlackboardValue_Quantum_BlackboardValue_
+  - name: (
+  - uid: Quantum.BlackboardValue
+    name: BlackboardValue
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam`1.GetBlackboardValue(Quantum.BlackboardValue)
+    name: GetBlackboardValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetBlackboardValue_Quantum_BlackboardValue_
+  - name: (
+  - uid: Quantum.BlackboardValue
+    name: BlackboardValue
+    isExternal: true
+  - name: )
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  commentId: M:Quantum.HNSFParam{Quantum.AssetRef}.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetConfigValue_Quantum_AIConfigBase_KeyValuePair_
+  name: GetConfigValue(KeyValuePair)
+  nameWithType: HNSFParam<AssetRef>.GetConfigValue(AIConfigBase.KeyValuePair)
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  nameWithType.vb: HNSFParam(Of AssetRef).GetConfigValue(AIConfigBase.KeyValuePair)
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  spec.csharp:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+    name: GetConfigValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetConfigValue_Quantum_AIConfigBase_KeyValuePair_
+  - name: (
+  - uid: Quantum.AIConfigBase.KeyValuePair
+    name: KeyValuePair
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+    name: GetConfigValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetConfigValue_Quantum_AIConfigBase_KeyValuePair_
+  - name: (
+  - uid: Quantum.AIConfigBase.KeyValuePair
+    name: KeyValuePair
+    isExternal: true
+  - name: )
+- uid: Quantum.HNSFParamAssetRef.GetConfigValue*
+  commentId: Overload:Quantum.HNSFParamAssetRef.GetConfigValue
+  href: Quantum.HNSFParamAssetRef.html#Quantum_HNSFParamAssetRef_GetConfigValue_Quantum_AIConfigBase_KeyValuePair_
+  name: GetConfigValue
+  nameWithType: HNSFParamAssetRef.GetConfigValue
+  fullName: Quantum.HNSFParamAssetRef.GetConfigValue
+- uid: Quantum.AIConfigBase.KeyValuePair
+  commentId: T:Quantum.AIConfigBase.KeyValuePair
+  parent: Quantum
+  isExternal: true
+  name: AIConfigBase.KeyValuePair
+  nameWithType: AIConfigBase.KeyValuePair
+  fullName: Quantum.AIConfigBase.KeyValuePair
+  spec.csharp:
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: .
+  - uid: Quantum.AIConfigBase.KeyValuePair
+    name: KeyValuePair
+    isExternal: true
+  spec.vb:
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: .
+  - uid: Quantum.AIConfigBase.KeyValuePair
+    name: KeyValuePair
+    isExternal: true
+- uid: Quantum.HNSFParam`1.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  commentId: M:Quantum.HNSFParam`1.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  isExternal: true
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetConfigValue_Quantum_AIConfigBase_KeyValuePair_
+  name: GetConfigValue(KeyValuePair)
+  nameWithType: HNSFParam<T>.GetConfigValue(AIConfigBase.KeyValuePair)
+  fullName: Quantum.HNSFParam<T>.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  nameWithType.vb: HNSFParam(Of T).GetConfigValue(AIConfigBase.KeyValuePair)
+  fullName.vb: Quantum.HNSFParam(Of T).GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  spec.csharp:
+  - uid: Quantum.HNSFParam`1.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+    name: GetConfigValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetConfigValue_Quantum_AIConfigBase_KeyValuePair_
+  - name: (
+  - uid: Quantum.AIConfigBase.KeyValuePair
+    name: KeyValuePair
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam`1.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+    name: GetConfigValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetConfigValue_Quantum_AIConfigBase_KeyValuePair_
+  - name: (
+  - uid: Quantum.AIConfigBase.KeyValuePair
+    name: KeyValuePair
+    isExternal: true
+  - name: )
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParam{Quantum.AssetRef}.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  name: GetFunctionValue(Frame, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParam<AssetRef>.GetFunctionValue(Frame, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.GetFunctionValue(Quantum.Frame, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  nameWithType.vb: HNSFParam(Of AssetRef).GetFunctionValue(Frame, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).GetFunctionValue(Quantum.Frame, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: GetFunctionValue(Frame, EntityRef, HNSFStateContext)
+  spec.csharp:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: GetFunctionValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: GetFunctionValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+- uid: Quantum.HNSFParamAssetRef.GetFunctionValue*
+  commentId: Overload:Quantum.HNSFParamAssetRef.GetFunctionValue
+  href: Quantum.HNSFParamAssetRef.html#Quantum_HNSFParamAssetRef_GetFunctionValue_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  name: GetFunctionValue
+  nameWithType: HNSFParamAssetRef.GetFunctionValue
+  fullName: Quantum.HNSFParamAssetRef.GetFunctionValue
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.HNSFStateContext
+  commentId: T:Quantum.HNSFStateContext
+  parent: Quantum
+  href: Quantum.HNSFStateContext.html
+  name: HNSFStateContext
+  nameWithType: HNSFStateContext
+  fullName: Quantum.HNSFStateContext
+- uid: Quantum.HNSFParam`1.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParam`1.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  isExternal: true
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  name: GetFunctionValue(Frame, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParam<T>.GetFunctionValue(Frame, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParam<T>.GetFunctionValue(Quantum.Frame, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  nameWithType.vb: HNSFParam(Of T).GetFunctionValue(Frame, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParam(Of T).GetFunctionValue(Quantum.Frame, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: GetFunctionValue(Frame, EntityRef, HNSFStateContext)
+  spec.csharp:
+  - uid: Quantum.HNSFParam`1.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: GetFunctionValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam`1.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: GetFunctionValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+- uid: Quantum.HNSFParam{Quantum.AssetRef}.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParam{Quantum.AssetRef}.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  parent: Quantum.HNSFParam{Quantum.AssetRef}
+  definition: Quantum.HNSFParam`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  name: GetFunctionValue(FrameThreadSafe, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParam<AssetRef>.GetFunctionValue(FrameThreadSafe, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParam<Quantum.AssetRef>.GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  nameWithType.vb: HNSFParam(Of AssetRef).GetFunctionValue(FrameThreadSafe, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParam(Of Quantum.AssetRef).GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: GetFunctionValue(FrameThreadSafe, EntityRef, HNSFStateContext)
+  spec.csharp:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: GetFunctionValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam{Quantum.AssetRef}.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: GetFunctionValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+- uid: Quantum.FrameThreadSafe
+  commentId: T:Quantum.FrameThreadSafe
+  parent: Quantum
+  isExternal: true
+  name: FrameThreadSafe
+  nameWithType: FrameThreadSafe
+  fullName: Quantum.FrameThreadSafe
+- uid: Quantum.HNSFParam`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.HNSFParam`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  isExternal: true
+  href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  name: GetFunctionValue(FrameThreadSafe, EntityRef, ref HNSFStateContext)
+  nameWithType: HNSFParam<T>.GetFunctionValue(FrameThreadSafe, EntityRef, ref HNSFStateContext)
+  fullName: Quantum.HNSFParam<T>.GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.HNSFStateContext)
+  nameWithType.vb: HNSFParam(Of T).GetFunctionValue(FrameThreadSafe, EntityRef, HNSFStateContext)
+  fullName.vb: Quantum.HNSFParam(Of T).GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.HNSFStateContext)
+  name.vb: GetFunctionValue(FrameThreadSafe, EntityRef, HNSFStateContext)
+  spec.csharp:
+  - uid: Quantum.HNSFParam`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: GetFunctionValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.HNSFParam`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
+    name: GetFunctionValue
+    href: Quantum.HNSFParam-1.html#Quantum_HNSFParam_1_GetFunctionValue_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateContext__
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.HNSFStateContext
+    name: HNSFStateContext
+    href: Quantum.HNSFStateContext.html
+  - name: )

@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.EKCCCollisionType
+  commentId: T:Quantum.EKCCCollisionType
+  id: EKCCCollisionType
+  parent: Quantum
+  children:
+  - Quantum.EKCCCollisionType.Ground
+  - Quantum.EKCCCollisionType.Hang
+  - Quantum.EKCCCollisionType.None
+  - Quantum.EKCCCollisionType.Slope
+  - Quantum.EKCCCollisionType.Top
+  - Quantum.EKCCCollisionType.Trigger
+  - Quantum.EKCCCollisionType.Wall
+  langs:
+  - csharp
+  - vb
+  name: EKCCCollisionType
+  nameWithType: EKCCCollisionType
+  fullName: Quantum.EKCCCollisionType
+  type: Enum
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: EKCCCollisionType
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+    startLine: 16
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Defines collision type between KCC and overlapping collider surface calculated from depenetration or a trigger.
+
+    <ul><li>None - Default.</li><li>Ground - Angle between Up and normalized depenetration vector is between 0 and KCCData.MaxGroundAngle.</li><li>Slope - Angle between Up and normalized depenetration vector is between KCCData.MaxGroundAngle and (90 - KCCData.MaxWallAngle).</li><li>Wall - Angle between Back and normalized depenetration vector is between -KCCData.MaxWallAngle and KCCData.MaxWallAngle.</li><li>Hang - Angle between Back and normalized depenetration vector is between -30 and -KCCData.MaxWallAngle.</li><li>Top - Angle between Back and normalized depenetration vector is lower than -30.</li><li>Trigger - Overlapping collider - trigger. Penetration is unknown.</li></ul>
+  example: []
+  syntax:
+    content: 'public enum EKCCCollisionType : byte'
+    content.vb: Public Enum EKCCCollisionType As Byte
+- uid: Quantum.EKCCCollisionType.None
+  commentId: F:Quantum.EKCCCollisionType.None
+  id: None
+  parent: Quantum.EKCCCollisionType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: EKCCCollisionType.None
+  fullName: Quantum.EKCCCollisionType.None
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: None
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+    startLine: 18
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: None = 0
+    return:
+      type: Quantum.EKCCCollisionType
+- uid: Quantum.EKCCCollisionType.Ground
+  commentId: F:Quantum.EKCCCollisionType.Ground
+  id: Ground
+  parent: Quantum.EKCCCollisionType
+  langs:
+  - csharp
+  - vb
+  name: Ground
+  nameWithType: EKCCCollisionType.Ground
+  fullName: Quantum.EKCCCollisionType.Ground
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Ground
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+    startLine: 19
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: Ground = 1
+    return:
+      type: Quantum.EKCCCollisionType
+- uid: Quantum.EKCCCollisionType.Slope
+  commentId: F:Quantum.EKCCCollisionType.Slope
+  id: Slope
+  parent: Quantum.EKCCCollisionType
+  langs:
+  - csharp
+  - vb
+  name: Slope
+  nameWithType: EKCCCollisionType.Slope
+  fullName: Quantum.EKCCCollisionType.Slope
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Slope
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+    startLine: 20
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: Slope = 2
+    return:
+      type: Quantum.EKCCCollisionType
+- uid: Quantum.EKCCCollisionType.Wall
+  commentId: F:Quantum.EKCCCollisionType.Wall
+  id: Wall
+  parent: Quantum.EKCCCollisionType
+  langs:
+  - csharp
+  - vb
+  name: Wall
+  nameWithType: EKCCCollisionType.Wall
+  fullName: Quantum.EKCCCollisionType.Wall
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Wall
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+    startLine: 21
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: Wall = 4
+    return:
+      type: Quantum.EKCCCollisionType
+- uid: Quantum.EKCCCollisionType.Hang
+  commentId: F:Quantum.EKCCCollisionType.Hang
+  id: Hang
+  parent: Quantum.EKCCCollisionType
+  langs:
+  - csharp
+  - vb
+  name: Hang
+  nameWithType: EKCCCollisionType.Hang
+  fullName: Quantum.EKCCCollisionType.Hang
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Hang
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+    startLine: 22
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: Hang = 8
+    return:
+      type: Quantum.EKCCCollisionType
+- uid: Quantum.EKCCCollisionType.Top
+  commentId: F:Quantum.EKCCCollisionType.Top
+  id: Top
+  parent: Quantum.EKCCCollisionType
+  langs:
+  - csharp
+  - vb
+  name: Top
+  nameWithType: EKCCCollisionType.Top
+  fullName: Quantum.EKCCCollisionType.Top
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Top
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+    startLine: 23
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: Top = 16
+    return:
+      type: Quantum.EKCCCollisionType
+- uid: Quantum.EKCCCollisionType.Trigger
+  commentId: F:Quantum.EKCCCollisionType.Trigger
+  id: Trigger
+  parent: Quantum.EKCCCollisionType
+  langs:
+  - csharp
+  - vb
+  name: Trigger
+  nameWithType: EKCCCollisionType.Trigger
+  fullName: Quantum.EKCCCollisionType.Trigger
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Trigger
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Data/KCCCollision.cs
+    startLine: 24
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: Trigger = 32
+    return:
+      type: Quantum.EKCCCollisionType
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.EKCCCollisionType
+  commentId: T:Quantum.EKCCCollisionType
+  parent: Quantum
+  href: Quantum.EKCCCollisionType.html
+  name: EKCCCollisionType
+  nameWithType: EKCCCollisionType
+  fullName: Quantum.EKCCCollisionType

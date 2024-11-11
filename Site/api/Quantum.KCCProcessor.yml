@@ -1,0 +1,510 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.KCCProcessor
+  commentId: T:Quantum.KCCProcessor
+  id: KCCProcessor
+  parent: Quantum
+  children:
+  - Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+  - Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  langs:
+  - csharp
+  - vb
+  name: KCCProcessor
+  nameWithType: KCCProcessor
+  fullName: Quantum.KCCProcessor
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: KCCProcessor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessor.cs
+    startLine: 2
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: 'public abstract class KCCProcessor : AssetObject'
+    content.vb: Public MustInherit Class KCCProcessor Inherits AssetObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Quantum.AssetObject
+  derivedClasses:
+  - Quantum.EnvironmentProcessor
+  - Quantum.FighterEnvironmentProcessor
+  - Quantum.GroundSnapProcessor
+  - Quantum.StepUpProcessor
+  inheritedMembers:
+  - Quantum.AssetObject.Identifier
+  - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Create``1
+  - Quantum.AssetObject.Create(System.Type)
+  - Quantum.AssetObject.Create``1(System.Action{{T}})
+  - Quantum.AssetObject.Reset
+  - Quantum.AssetObject.Guid
+  - Quantum.AssetObject.Path
+  - Quantum.AssetObject.Settings
+- uid: Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+  commentId: M:Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+  id: OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
+  parent: Quantum.KCCProcessor
+  langs:
+  - csharp
+  - vb
+  name: OnEnter(KCCContext, KCCProcessorInfo, KCCOverlapHit)
+  nameWithType: KCCProcessor.OnEnter(KCCContext, KCCProcessorInfo, KCCOverlapHit)
+  fullName: Quantum.KCCProcessor.OnEnter(Quantum.KCCContext, Quantum.KCCProcessorInfo, Quantum.KCCOverlapHit)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnEnter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessor.cs
+    startLine: 21
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    This callback is invoked:
+
+    <ul><li>When the KCC starts colliding with a static collider/trigger with a KCCProcessor assigned to AssetObject.</li><li>When the KCC starts colliding with an entity which has KCCProcessorSource component and valid KCCProcessor linked.</li><li>When a custom processor is registered to the KCC using KCC.AddModifier().</li></ul>
+
+    Return value:
+
+    <ul><li>True - the KCC starts "tracking" this processor and the processor starts getting callbacks - IBeforeMove, IAfterMoveStep, IAfterMove during KCC update and OnExit() when the collision ends.</li><li>False - the KCC invokes OnEnter() next tick if the collision is still valid. This can be used to defer processor logic until some other condition is met.</li></ul>
+
+    The return value is ignored if the processor is added via KCC.AddModifier() with 'forceAdd' parameter set to true.
+  example: []
+  syntax:
+    content: public virtual bool OnEnter(KCCContext context, KCCProcessorInfo processorInfo, KCCOverlapHit overlapHit)
+    parameters:
+    - id: context
+      type: Quantum.KCCContext
+      description: Reference to KCC context.
+    - id: processorInfo
+      type: Quantum.KCCProcessorInfo
+      description: Contains information about the processor registration source and a collider/entity that is referencing this processor.
+    - id: overlapHit
+      type: Quantum.KCCOverlapHit
+      description: Reference to a collider/entity overlap hit which references this processor. The value is null for manually registered processors (modifiers) and processors linked in KCC settings.
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function OnEnter(context As KCCContext, processorInfo As KCCProcessorInfo, overlapHit As KCCOverlapHit) As Boolean
+  overload: Quantum.KCCProcessor.OnEnter*
+- uid: Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  commentId: M:Quantum.KCCProcessor.OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  id: OnExit(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  parent: Quantum.KCCProcessor
+  langs:
+  - csharp
+  - vb
+  name: OnExit(KCCContext, KCCProcessorInfo)
+  nameWithType: KCCProcessor.OnExit(KCCContext, KCCProcessorInfo)
+  fullName: Quantum.KCCProcessor.OnExit(Quantum.KCCContext, Quantum.KCCProcessorInfo)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessor.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnExit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/KCCProcessor.cs
+    startLine: 39
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    This callback is invoked:
+
+    <ul><li>When the KCC stops colliding with a static collider/trigger with a KCCProcessor assigned to AssetObject.</li><li>When the KCC stops colliding with an entity which has KCCProcessorSource component and valid KCCProcessor linked.</li><li>When a custom processor is unregistered from the KCC using KCC.RemoveModifier().</li></ul>
+
+    Return value:
+
+    <ul><li>True - the KCC stops "tracking" this processor and the processor stops getting callbacks - IBeforeMove, IAfterMoveStep, IAfterMove.</li><li>False - the KCC invokes OnExit() next tick if the collision is still invalid. This can be used to defer stopping processor logic until some other condition is met.</li></ul>
+
+    The return value is ignored if the processor is removed via KCC.RemoveModifier() with 'forceRemove' parameter set to true.
+  example: []
+  syntax:
+    content: public virtual bool OnExit(KCCContext context, KCCProcessorInfo processorInfo)
+    parameters:
+    - id: context
+      type: Quantum.KCCContext
+      description: Reference to KCC context.
+    - id: processorInfo
+      type: Quantum.KCCProcessorInfo
+      description: Contains information about the processor registration source and a collider/entity that is referencing this processor.
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function OnExit(context As KCCContext, processorInfo As KCCProcessorInfo) As Boolean
+  overload: Quantum.KCCProcessor.OnExit*
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Quantum.AssetObject
+  commentId: T:Quantum.AssetObject
+  parent: Quantum
+  isExternal: true
+  name: AssetObject
+  nameWithType: AssetObject
+  fullName: Quantum.AssetObject
+- uid: Quantum.AssetObject.Identifier
+  commentId: F:Quantum.AssetObject.Identifier
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Identifier
+  nameWithType: AssetObject.Identifier
+  fullName: Quantum.AssetObject.Identifier
+- uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Loaded(IResourceManager, Allocator)
+  nameWithType: AssetObject.Loaded(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Loaded(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Disposed(IResourceManager, Allocator)
+  nameWithType: AssetObject.Disposed(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Disposed(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Create``1
+  commentId: M:Quantum.AssetObject.Create``1
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Create<T>()
+  nameWithType: AssetObject.Create<T>()
+  fullName: Quantum.AssetObject.Create<T>()
+  nameWithType.vb: AssetObject.Create(Of T)()
+  fullName.vb: Quantum.AssetObject.Create(Of T)()
+  name.vb: Create(Of T)()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Create(System.Type)
+  commentId: M:Quantum.AssetObject.Create(System.Type)
+  parent: Quantum.AssetObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Create(Type)
+  nameWithType: AssetObject.Create(Type)
+  fullName: Quantum.AssetObject.Create(System.Type)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.AssetObject.Create``1(System.Action{{T}})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  parent: Quantum.AssetObject
+  definition: Quantum.AssetObject.Create``1(System.Action{``0})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.AssetObject.Reset
+  commentId: M:Quantum.AssetObject.Reset
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Reset()
+  nameWithType: AssetObject.Reset()
+  fullName: Quantum.AssetObject.Reset()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Guid
+  commentId: P:Quantum.AssetObject.Guid
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Guid
+  nameWithType: AssetObject.Guid
+  fullName: Quantum.AssetObject.Guid
+- uid: Quantum.AssetObject.Path
+  commentId: P:Quantum.AssetObject.Path
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Path
+  nameWithType: AssetObject.Path
+  fullName: Quantum.AssetObject.Path
+- uid: Quantum.AssetObject.Settings
+  commentId: P:Quantum.AssetObject.Settings
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Settings
+  nameWithType: AssetObject.Settings
+  fullName: Quantum.AssetObject.Settings
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Quantum.AssetObject.Create``1(System.Action{``0})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.KCCProcessor.OnEnter*
+  commentId: Overload:Quantum.KCCProcessor.OnEnter
+  href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnEnter_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapHit_
+  name: OnEnter
+  nameWithType: KCCProcessor.OnEnter
+  fullName: Quantum.KCCProcessor.OnEnter
+- uid: Quantum.KCCContext
+  commentId: T:Quantum.KCCContext
+  parent: Quantum
+  href: Quantum.KCCContext.html
+  name: KCCContext
+  nameWithType: KCCContext
+  fullName: Quantum.KCCContext
+- uid: Quantum.KCCProcessorInfo
+  commentId: T:Quantum.KCCProcessorInfo
+  parent: Quantum
+  href: Quantum.KCCProcessorInfo.html
+  name: KCCProcessorInfo
+  nameWithType: KCCProcessorInfo
+  fullName: Quantum.KCCProcessorInfo
+- uid: Quantum.KCCOverlapHit
+  commentId: T:Quantum.KCCOverlapHit
+  parent: Quantum
+  href: Quantum.KCCOverlapHit.html
+  name: KCCOverlapHit
+  nameWithType: KCCOverlapHit
+  fullName: Quantum.KCCOverlapHit
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.KCCProcessor.OnExit*
+  commentId: Overload:Quantum.KCCProcessor.OnExit
+  href: Quantum.KCCProcessor.html#Quantum_KCCProcessor_OnExit_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  name: OnExit
+  nameWithType: KCCProcessor.OnExit
+  fullName: Quantum.KCCProcessor.OnExit

@@ -1,0 +1,248 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.QuantumGameFlags
+  commentId: T:Quantum.QuantumGameFlags
+  id: QuantumGameFlags
+  parent: Quantum
+  children:
+  - Quantum.QuantumGameFlags.CustomFlagsStart
+  - Quantum.QuantumGameFlags.DisableInterpolatableStates
+  - Quantum.QuantumGameFlags.DisableSharedChecksumSerializer
+  - Quantum.QuantumGameFlags.EnableTaskProfiler
+  - Quantum.QuantumGameFlags.Server
+  langs:
+  - csharp
+  - vb
+  name: QuantumGameFlags
+  nameWithType: QuantumGameFlags
+  fullName: Quantum.QuantumGameFlags
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: QuantumGameFlags
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5230
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    This class contains values for flags that will be accessible with <xref href="Quantum.QuantumGame.GameFlags" data-throw-if-not-resolved="false"></xref>.
+
+    Built-in flags control some aspects of QuantumGame inner workings, without affecting the simulation
+
+    outcome.
+  example: []
+  syntax:
+    content: public class QuantumGameFlags
+    content.vb: Public Class QuantumGameFlags
+  inheritance:
+  - System.Object
+- uid: Quantum.QuantumGameFlags.Server
+  commentId: F:Quantum.QuantumGameFlags.Server
+  id: Server
+  parent: Quantum.QuantumGameFlags
+  langs:
+  - csharp
+  - vb
+  name: Server
+  nameWithType: QuantumGameFlags.Server
+  fullName: Quantum.QuantumGameFlags.Server
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Server
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5236
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Starts the game in the server mode. 
+
+    When this flag is not set, all the events marked with "server" get culled immediately.
+
+    If this flag is set, all the events marked with "client" get culled immediately.
+  example: []
+  syntax:
+    content: public const int Server = 1
+    return:
+      type: System.Int32
+    content.vb: Public Const Server As Integer = 1
+- uid: Quantum.QuantumGameFlags.DisableSharedChecksumSerializer
+  commentId: F:Quantum.QuantumGameFlags.DisableSharedChecksumSerializer
+  id: DisableSharedChecksumSerializer
+  parent: Quantum.QuantumGameFlags
+  langs:
+  - csharp
+  - vb
+  name: DisableSharedChecksumSerializer
+  nameWithType: QuantumGameFlags.DisableSharedChecksumSerializer
+  fullName: Quantum.QuantumGameFlags.DisableSharedChecksumSerializer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DisableSharedChecksumSerializer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5243
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    By default, QuantumGame uses a single shared checksum serializer to reduce allocations. 
+
+    The serializer is *not* static - it is only shared between frames coming from the same QuantumGame.
+
+    Set this flag if you want to disable this behaviour, for example if you calculate
+
+    checksums for multiple frames using multiple threads.
+  example: []
+  syntax:
+    content: public const int DisableSharedChecksumSerializer = 2
+    return:
+      type: System.Int32
+    content.vb: Public Const DisableSharedChecksumSerializer As Integer = 2
+- uid: Quantum.QuantumGameFlags.DisableInterpolatableStates
+  commentId: F:Quantum.QuantumGameFlags.DisableInterpolatableStates
+  id: DisableInterpolatableStates
+  parent: Quantum.QuantumGameFlags
+  langs:
+  - csharp
+  - vb
+  name: DisableInterpolatableStates
+  nameWithType: QuantumGameFlags.DisableInterpolatableStates
+  fullName: Quantum.QuantumGameFlags.DisableInterpolatableStates
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DisableInterpolatableStates
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5250
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    By default, a Quantum session creates additional frame instances to cache previous states that can
+
+    be used for interpolation, notably for transform interpolations on the View.
+
+    Set this flag if you want to disable this behaviour (e.g. a server-side or console-only simulation),
+
+    reducing memory allocations and the time spent copying states over.
+  example: []
+  syntax:
+    content: public const int DisableInterpolatableStates = 4
+    return:
+      type: System.Int32
+    content.vb: Public Const DisableInterpolatableStates As Integer = 4
+- uid: Quantum.QuantumGameFlags.EnableTaskProfiler
+  commentId: F:Quantum.QuantumGameFlags.EnableTaskProfiler
+  id: EnableTaskProfiler
+  parent: Quantum.QuantumGameFlags
+  langs:
+  - csharp
+  - vb
+  name: EnableTaskProfiler
+  nameWithType: QuantumGameFlags.EnableTaskProfiler
+  fullName: Quantum.QuantumGameFlags.EnableTaskProfiler
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: EnableTaskProfiler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5254
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Set this flag to enables the Quantum task profiler in debug or release configurations.
+  example: []
+  syntax:
+    content: public const int EnableTaskProfiler = 8
+    return:
+      type: System.Int32
+    content.vb: Public Const EnableTaskProfiler As Integer = 8
+- uid: Quantum.QuantumGameFlags.CustomFlagsStart
+  commentId: F:Quantum.QuantumGameFlags.CustomFlagsStart
+  id: CustomFlagsStart
+  parent: Quantum.QuantumGameFlags
+  langs:
+  - csharp
+  - vb
+  name: CustomFlagsStart
+  nameWithType: QuantumGameFlags.CustomFlagsStart
+  fullName: Quantum.QuantumGameFlags.CustomFlagsStart
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CustomFlagsStart
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5258
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Custom user flags start from this value. Flags are accessible with <xref href="Quantum.QuantumGame.GameFlags" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public const int CustomFlagsStart = 65536
+    return:
+      type: System.Int32
+    content.vb: Public Const CustomFlagsStart As Integer = 65536
+references:
+- uid: Quantum.QuantumGame.GameFlags
+  commentId: P:Quantum.QuantumGame.GameFlags
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_GameFlags
+  name: GameFlags
+  nameWithType: QuantumGame.GameFlags
+  fullName: Quantum.QuantumGame.GameFlags
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

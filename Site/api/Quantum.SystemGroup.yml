@@ -1,0 +1,717 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.SystemGroup
+  commentId: T:Quantum.SystemGroup
+  id: SystemGroup
+  parent: Quantum
+  children:
+  - Quantum.SystemGroup.#ctor(System.String,Quantum.SystemBase[])
+  - Quantum.SystemGroup.ChildSystems
+  - Quantum.SystemGroup.OnDisabled(Quantum.Frame)
+  - Quantum.SystemGroup.OnEnabled(Quantum.Frame)
+  - Quantum.SystemGroup.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  langs:
+  - csharp
+  - vb
+  name: SystemGroup
+  nameWithType: SystemGroup
+  fullName: Quantum.SystemGroup
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SystemGroup
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8306
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The base class for a hierarchy of systems.
+  example: []
+  syntax:
+    content: 'public class SystemGroup : SystemBase'
+    content.vb: Public Class SystemGroup Inherits SystemBase
+  inheritance:
+  - System.Object
+  - Quantum.SystemBase
+  inheritedMembers:
+  - Quantum.SystemBase.RuntimeIndex
+  - Quantum.SystemBase.ParentSystem
+  - Quantum.SystemBase.Hierarchy
+  - Quantum.SystemBase.StartEnabled
+  - Quantum.SystemBase.OnInit(Quantum.Frame)
+  - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+- uid: Quantum.SystemGroup.ChildSystems
+  commentId: P:Quantum.SystemGroup.ChildSystems
+  id: ChildSystems
+  parent: Quantum.SystemGroup
+  langs:
+  - csharp
+  - vb
+  name: ChildSystems
+  nameWithType: SystemGroup.ChildSystems
+  fullName: Quantum.SystemGroup.ChildSystems
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ChildSystems
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8310
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The enumerable child systems.
+  example: []
+  syntax:
+    content: public override sealed IEnumerable<SystemBase> ChildSystems { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{Quantum.SystemBase}
+    content.vb: Public NotOverridable Overrides ReadOnly Property ChildSystems As IEnumerable(Of SystemBase)
+  overridden: Quantum.SystemBase.ChildSystems
+  overload: Quantum.SystemGroup.ChildSystems*
+- uid: Quantum.SystemGroup.#ctor(System.String,Quantum.SystemBase[])
+  commentId: M:Quantum.SystemGroup.#ctor(System.String,Quantum.SystemBase[])
+  id: '#ctor(System.String,Quantum.SystemBase[])'
+  parent: Quantum.SystemGroup
+  langs:
+  - csharp
+  - vb
+  name: SystemGroup(string, params SystemBase[])
+  nameWithType: SystemGroup.SystemGroup(string, params SystemBase[])
+  fullName: Quantum.SystemGroup.SystemGroup(string, params Quantum.SystemBase[])
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8319
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Create a new system group.
+  example: []
+  syntax:
+    content: public SystemGroup(string name, params SystemBase[] children)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the system.
+    - id: children
+      type: Quantum.SystemBase[]
+      description: The child systems.
+    content.vb: Public Sub New(name As String, ParamArray children As SystemBase())
+  overload: Quantum.SystemGroup.#ctor*
+  nameWithType.vb: SystemGroup.New(String, ParamArray SystemBase())
+  fullName.vb: Quantum.SystemGroup.New(String, ParamArray Quantum.SystemBase())
+  name.vb: New(String, ParamArray SystemBase())
+- uid: Quantum.SystemGroup.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemGroup.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  id: Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemGroup
+  langs:
+  - csharp
+  - vb
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: SystemGroup.Schedule(Frame, TaskHandle)
+  fullName: Quantum.SystemGroup.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Schedule
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8333
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Add the child systems the the task hierarchy.
+  example: []
+  syntax:
+    content: protected override sealed TaskHandle Schedule(Frame f, TaskHandle taskHandle)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The referenced frame.
+    - id: taskHandle
+      type: Quantum.Task.TaskHandle
+      description: The initial task handle.
+    return:
+      type: Quantum.Task.TaskHandle
+      description: The final task graph.
+    content.vb: Protected NotOverridable Overrides Function Schedule(f As Frame, taskHandle As TaskHandle) As TaskHandle
+  overridden: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  overload: Quantum.SystemGroup.Schedule*
+- uid: Quantum.SystemGroup.OnEnabled(Quantum.Frame)
+  commentId: M:Quantum.SystemGroup.OnEnabled(Quantum.Frame)
+  id: OnEnabled(Quantum.Frame)
+  parent: Quantum.SystemGroup
+  langs:
+  - csharp
+  - vb
+  name: OnEnabled(Frame)
+  nameWithType: SystemGroup.OnEnabled(Frame)
+  fullName: Quantum.SystemGroup.OnEnabled(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnEnabled
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8350
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Is called when the system was enabled for example after calling <xref href="Quantum.Frame.SystemEnable%60%601" data-throw-if-not-resolved="false"></xref> 
+
+    or during <xref href="Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public override void OnEnabled(Frame f)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The referenced frame.
+    content.vb: Public Overrides Sub OnEnabled(f As Frame)
+  overridden: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  overload: Quantum.SystemGroup.OnEnabled*
+- uid: Quantum.SystemGroup.OnDisabled(Quantum.Frame)
+  commentId: M:Quantum.SystemGroup.OnDisabled(Quantum.Frame)
+  id: OnDisabled(Quantum.Frame)
+  parent: Quantum.SystemGroup
+  langs:
+  - csharp
+  - vb
+  name: OnDisabled(Frame)
+  nameWithType: SystemGroup.OnDisabled(Frame)
+  fullName: Quantum.SystemGroup.OnDisabled(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnDisabled
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 8361
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Is called when the system was disabled for example after <xref href="Quantum.Frame.SystemDisable(System.Type)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public override void OnDisabled(Frame f)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The referenced frame.
+    content.vb: Public Overrides Sub OnDisabled(f As Frame)
+  overridden: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  overload: Quantum.SystemGroup.OnDisabled*
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.SystemBase
+  commentId: T:Quantum.SystemBase
+  parent: Quantum
+  href: Quantum.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: Quantum.SystemBase
+- uid: Quantum.SystemBase.RuntimeIndex
+  commentId: P:Quantum.SystemBase.RuntimeIndex
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_RuntimeIndex
+  name: RuntimeIndex
+  nameWithType: SystemBase.RuntimeIndex
+  fullName: Quantum.SystemBase.RuntimeIndex
+- uid: Quantum.SystemBase.ParentSystem
+  commentId: P:Quantum.SystemBase.ParentSystem
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ParentSystem
+  name: ParentSystem
+  nameWithType: SystemBase.ParentSystem
+  fullName: Quantum.SystemBase.ParentSystem
+- uid: Quantum.SystemBase.Hierarchy
+  commentId: P:Quantum.SystemBase.Hierarchy
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Hierarchy
+  name: Hierarchy
+  nameWithType: SystemBase.Hierarchy
+  fullName: Quantum.SystemBase.Hierarchy
+- uid: Quantum.SystemBase.StartEnabled
+  commentId: P:Quantum.SystemBase.StartEnabled
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_StartEnabled
+  name: StartEnabled
+  nameWithType: SystemBase.StartEnabled
+  fullName: Quantum.SystemBase.StartEnabled
+- uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnInit(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  name: OnInit(Frame)
+  nameWithType: SystemBase.OnInit(Frame)
+  fullName: Quantum.SystemBase.OnInit(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: OnSchedule(Frame, TaskHandle)
+  nameWithType: SystemBase.OnSchedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.OnSchedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.SystemBase.ChildSystems
+  commentId: P:Quantum.SystemBase.ChildSystems
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ChildSystems
+  name: ChildSystems
+  nameWithType: SystemBase.ChildSystems
+  fullName: Quantum.SystemBase.ChildSystems
+- uid: Quantum.SystemGroup.ChildSystems*
+  commentId: Overload:Quantum.SystemGroup.ChildSystems
+  href: Quantum.SystemGroup.html#Quantum_SystemGroup_ChildSystems
+  name: ChildSystems
+  nameWithType: SystemGroup.ChildSystems
+  fullName: Quantum.SystemGroup.ChildSystems
+- uid: System.Collections.Generic.IEnumerable{Quantum.SystemBase}
+  commentId: T:System.Collections.Generic.IEnumerable{Quantum.SystemBase}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<SystemBase>
+  nameWithType: IEnumerable<SystemBase>
+  fullName: System.Collections.Generic.IEnumerable<Quantum.SystemBase>
+  nameWithType.vb: IEnumerable(Of SystemBase)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Quantum.SystemBase)
+  name.vb: IEnumerable(Of SystemBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Quantum.SystemBase
+    name: SystemBase
+    href: Quantum.SystemBase.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.SystemBase
+    name: SystemBase
+    href: Quantum.SystemBase.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Quantum.SystemGroup.#ctor*
+  commentId: Overload:Quantum.SystemGroup.#ctor
+  href: Quantum.SystemGroup.html#Quantum_SystemGroup__ctor_System_String_Quantum_SystemBase___
+  name: SystemGroup
+  nameWithType: SystemGroup.SystemGroup
+  fullName: Quantum.SystemGroup.SystemGroup
+  nameWithType.vb: SystemGroup.New
+  fullName.vb: Quantum.SystemGroup.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Quantum.SystemBase[]
+  isExternal: true
+  href: Quantum.SystemBase.html
+  name: SystemBase[]
+  nameWithType: SystemBase[]
+  fullName: Quantum.SystemBase[]
+  nameWithType.vb: SystemBase()
+  fullName.vb: Quantum.SystemBase()
+  name.vb: SystemBase()
+  spec.csharp:
+  - uid: Quantum.SystemBase
+    name: SystemBase
+    href: Quantum.SystemBase.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Quantum.SystemBase
+    name: SystemBase
+    href: Quantum.SystemBase.html
+  - name: (
+  - name: )
+- uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: SystemBase.Schedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemGroup.Schedule*
+  commentId: Overload:Quantum.SystemGroup.Schedule
+  href: Quantum.SystemGroup.html#Quantum_SystemGroup_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule
+  nameWithType: SystemGroup.Schedule
+  fullName: Quantum.SystemGroup.Schedule
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.Task.TaskHandle
+  commentId: T:Quantum.Task.TaskHandle
+  parent: Quantum.Task
+  isExternal: true
+  name: TaskHandle
+  nameWithType: TaskHandle
+  fullName: Quantum.Task.TaskHandle
+- uid: Quantum.Task
+  commentId: N:Quantum.Task
+  href: Quantum.html
+  name: Quantum.Task
+  nameWithType: Quantum.Task
+  fullName: Quantum.Task
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Task
+    name: Task
+    href: Quantum.Task.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Task
+    name: Task
+    href: Quantum.Task.html
+- uid: Quantum.Frame.SystemEnable``1
+  commentId: M:Quantum.Frame.SystemEnable``1
+  href: Quantum.Frame.html#Quantum_Frame_SystemEnable__1
+  name: SystemEnable<T>()
+  nameWithType: Frame.SystemEnable<T>()
+  fullName: Quantum.Frame.SystemEnable<T>()
+  nameWithType.vb: Frame.SystemEnable(Of T)()
+  fullName.vb: Quantum.Frame.SystemEnable(Of T)()
+  name.vb: SystemEnable(Of T)()
+  spec.csharp:
+  - uid: Quantum.Frame.SystemEnable``1
+    name: SystemEnable
+    href: Quantum.Frame.html#Quantum_Frame_SystemEnable__1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.Frame.SystemEnable``1
+    name: SystemEnable
+    href: Quantum.Frame.html#Quantum_Frame_SystemEnable__1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)
+  commentId: M:Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)
+  isExternal: true
+  href: Quantum.QuantumGame.html#Quantum_QuantumGame_InitSystems_Photon_Deterministic_DeterministicFrame_
+  name: InitSystems(DeterministicFrame)
+  nameWithType: QuantumGame.InitSystems(DeterministicFrame)
+  fullName: Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)
+  spec.csharp:
+  - uid: Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)
+    name: InitSystems
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_InitSystems_Photon_Deterministic_DeterministicFrame_
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumGame.InitSystems(Photon.Deterministic.DeterministicFrame)
+    name: InitSystems
+    href: Quantum.QuantumGame.html#Quantum_QuantumGame_InitSystems_Photon_Deterministic_DeterministicFrame_
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  name: OnEnabled(Frame)
+  nameWithType: SystemBase.OnEnabled(Frame)
+  fullName: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemGroup.OnEnabled*
+  commentId: Overload:Quantum.SystemGroup.OnEnabled
+  href: Quantum.SystemGroup.html#Quantum_SystemGroup_OnEnabled_Quantum_Frame_
+  name: OnEnabled
+  nameWithType: SystemGroup.OnEnabled
+  fullName: Quantum.SystemGroup.OnEnabled
+- uid: Quantum.Frame.SystemDisable(System.Type)
+  commentId: M:Quantum.Frame.SystemDisable(System.Type)
+  isExternal: true
+  href: Quantum.Frame.html#Quantum_Frame_SystemDisable_System_Type_
+  name: SystemDisable(Type)
+  nameWithType: Frame.SystemDisable(Type)
+  fullName: Quantum.Frame.SystemDisable(System.Type)
+  spec.csharp:
+  - uid: Quantum.Frame.SystemDisable(System.Type)
+    name: SystemDisable
+    href: Quantum.Frame.html#Quantum_Frame_SystemDisable_System_Type_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.Frame.SystemDisable(System.Type)
+    name: SystemDisable
+    href: Quantum.Frame.html#Quantum_Frame_SystemDisable_System_Type_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  name: OnDisabled(Frame)
+  nameWithType: SystemBase.OnDisabled(Frame)
+  fullName: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemGroup.OnDisabled*
+  commentId: Overload:Quantum.SystemGroup.OnDisabled
+  href: Quantum.SystemGroup.html#Quantum_SystemGroup_OnDisabled_Quantum_Frame_
+  name: OnDisabled
+  nameWithType: SystemGroup.OnDisabled
+  fullName: Quantum.SystemGroup.OnDisabled

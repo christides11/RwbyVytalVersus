@@ -1,0 +1,808 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.core.HudElementGenericAurabar
+  commentId: T:rwby.core.HudElementGenericAurabar
+  id: HudElementGenericAurabar
+  parent: rwby.core
+  children:
+  - rwby.core.HudElementGenericAurabar.FighterDef
+  - rwby.core.HudElementGenericAurabar.Initialize(System.Int32,System.Int32)
+  - rwby.core.HudElementGenericAurabar.RootCanvas
+  - rwby.core.HudElementGenericAurabar.Teardown
+  - rwby.core.HudElementGenericAurabar.auraBurnoutColor
+  - rwby.core.HudElementGenericAurabar.auraColor
+  - rwby.core.HudElementGenericAurabar.auraValue
+  - rwby.core.HudElementGenericAurabar.backBar
+  - rwby.core.HudElementGenericAurabar.chipDelay
+  - rwby.core.HudElementGenericAurabar.chipSpeed
+  - rwby.core.HudElementGenericAurabar.fighterEntityView
+  - rwby.core.HudElementGenericAurabar.frontBar
+  - rwby.core.HudElementGenericAurabar.globalPlayerID
+  - rwby.core.HudElementGenericAurabar.lerpTime
+  - rwby.core.HudElementGenericAurabar.localPlayerID
+  - rwby.core.HudElementGenericAurabar.maxAuraValue
+  langs:
+  - csharp
+  - vb
+  name: HudElementGenericAurabar
+  nameWithType: HudElementGenericAurabar
+  fullName: rwby.core.HudElementGenericAurabar
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HudElementGenericAurabar
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: 'public class HudElementGenericAurabar : MonoBehaviour, IHUDElement, IFighterDefinitionUser'
+    content.vb: Public Class HudElementGenericAurabar Inherits MonoBehaviour Implements IHUDElement, IFighterDefinitionUser
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  implements:
+  - rwby.IHUDElement
+  - rwby.IFighterDefinitionUser
+- uid: rwby.core.HudElementGenericAurabar.FighterDef
+  commentId: P:rwby.core.HudElementGenericAurabar.FighterDef
+  id: FighterDef
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: FighterDef
+  nameWithType: HudElementGenericAurabar.FighterDef
+  fullName: rwby.core.HudElementGenericAurabar.FighterDef
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FighterDef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public IFighterDefinition FighterDef { get; set; }
+    parameters: []
+    return:
+      type: Global.IFighterDefinition
+    content.vb: Public Property FighterDef As IFighterDefinition
+  overload: rwby.core.HudElementGenericAurabar.FighterDef*
+  implements:
+  - rwby.IFighterDefinitionUser.FighterDef
+- uid: rwby.core.HudElementGenericAurabar.globalPlayerID
+  commentId: F:rwby.core.HudElementGenericAurabar.globalPlayerID
+  id: globalPlayerID
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: globalPlayerID
+  nameWithType: HudElementGenericAurabar.globalPlayerID
+  fullName: rwby.core.HudElementGenericAurabar.globalPlayerID
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: globalPlayerID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public int globalPlayerID
+    return:
+      type: System.Int32
+    content.vb: Public globalPlayerID As Integer
+- uid: rwby.core.HudElementGenericAurabar.localPlayerID
+  commentId: F:rwby.core.HudElementGenericAurabar.localPlayerID
+  id: localPlayerID
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: localPlayerID
+  nameWithType: HudElementGenericAurabar.localPlayerID
+  fullName: rwby.core.HudElementGenericAurabar.localPlayerID
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localPlayerID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public int localPlayerID
+    return:
+      type: System.Int32
+    content.vb: Public localPlayerID As Integer
+- uid: rwby.core.HudElementGenericAurabar.fighterEntityView
+  commentId: F:rwby.core.HudElementGenericAurabar.fighterEntityView
+  id: fighterEntityView
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: fighterEntityView
+  nameWithType: HudElementGenericAurabar.fighterEntityView
+  fullName: rwby.core.HudElementGenericAurabar.fighterEntityView
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: fighterEntityView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public QuantumEntityView fighterEntityView
+    return:
+      type: Quantum.QuantumEntityView
+    content.vb: Public fighterEntityView As QuantumEntityView
+- uid: rwby.core.HudElementGenericAurabar.backBar
+  commentId: F:rwby.core.HudElementGenericAurabar.backBar
+  id: backBar
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: backBar
+  nameWithType: HudElementGenericAurabar.backBar
+  fullName: rwby.core.HudElementGenericAurabar.backBar
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: backBar
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public Image backBar
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: Public backBar As Image
+- uid: rwby.core.HudElementGenericAurabar.frontBar
+  commentId: F:rwby.core.HudElementGenericAurabar.frontBar
+  id: frontBar
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: frontBar
+  nameWithType: HudElementGenericAurabar.frontBar
+  fullName: rwby.core.HudElementGenericAurabar.frontBar
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: frontBar
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public Image frontBar
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: Public frontBar As Image
+- uid: rwby.core.HudElementGenericAurabar.auraValue
+  commentId: F:rwby.core.HudElementGenericAurabar.auraValue
+  id: auraValue
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: auraValue
+  nameWithType: HudElementGenericAurabar.auraValue
+  fullName: rwby.core.HudElementGenericAurabar.auraValue
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: auraValue
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: >-
+      [ReadOnly]
+
+      public int auraValue
+    return:
+      type: System.Int32
+    content.vb: >-
+      <ReadOnly>
+
+      Public auraValue As Integer
+  attributes:
+  - type: Quantum.ReadOnlyAttribute
+    ctor: Quantum.ReadOnlyAttribute.#ctor
+    arguments: []
+- uid: rwby.core.HudElementGenericAurabar.maxAuraValue
+  commentId: F:rwby.core.HudElementGenericAurabar.maxAuraValue
+  id: maxAuraValue
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: maxAuraValue
+  nameWithType: HudElementGenericAurabar.maxAuraValue
+  fullName: rwby.core.HudElementGenericAurabar.maxAuraValue
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: maxAuraValue
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: >-
+      [ReadOnly]
+
+      public int maxAuraValue
+    return:
+      type: System.Int32
+    content.vb: >-
+      <ReadOnly>
+
+      Public maxAuraValue As Integer
+  attributes:
+  - type: Quantum.ReadOnlyAttribute
+    ctor: Quantum.ReadOnlyAttribute.#ctor
+    arguments: []
+- uid: rwby.core.HudElementGenericAurabar.lerpTime
+  commentId: F:rwby.core.HudElementGenericAurabar.lerpTime
+  id: lerpTime
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: lerpTime
+  nameWithType: HudElementGenericAurabar.lerpTime
+  fullName: rwby.core.HudElementGenericAurabar.lerpTime
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: lerpTime
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: >-
+      [ReadOnly]
+
+      public float lerpTime
+    return:
+      type: System.Single
+    content.vb: >-
+      <ReadOnly>
+
+      Public lerpTime As Single
+  attributes:
+  - type: Quantum.ReadOnlyAttribute
+    ctor: Quantum.ReadOnlyAttribute.#ctor
+    arguments: []
+- uid: rwby.core.HudElementGenericAurabar.chipSpeed
+  commentId: F:rwby.core.HudElementGenericAurabar.chipSpeed
+  id: chipSpeed
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: chipSpeed
+  nameWithType: HudElementGenericAurabar.chipSpeed
+  fullName: rwby.core.HudElementGenericAurabar.chipSpeed
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: chipSpeed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public float chipSpeed
+    return:
+      type: System.Single
+    content.vb: Public chipSpeed As Single
+- uid: rwby.core.HudElementGenericAurabar.chipDelay
+  commentId: F:rwby.core.HudElementGenericAurabar.chipDelay
+  id: chipDelay
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: chipDelay
+  nameWithType: HudElementGenericAurabar.chipDelay
+  fullName: rwby.core.HudElementGenericAurabar.chipDelay
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: chipDelay
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public float chipDelay
+    return:
+      type: System.Single
+    content.vb: Public chipDelay As Single
+- uid: rwby.core.HudElementGenericAurabar.auraColor
+  commentId: F:rwby.core.HudElementGenericAurabar.auraColor
+  id: auraColor
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: auraColor
+  nameWithType: HudElementGenericAurabar.auraColor
+  fullName: rwby.core.HudElementGenericAurabar.auraColor
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: auraColor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 28
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public Color auraColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public auraColor As Color
+- uid: rwby.core.HudElementGenericAurabar.auraBurnoutColor
+  commentId: F:rwby.core.HudElementGenericAurabar.auraBurnoutColor
+  id: auraBurnoutColor
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: auraBurnoutColor
+  nameWithType: HudElementGenericAurabar.auraBurnoutColor
+  fullName: rwby.core.HudElementGenericAurabar.auraBurnoutColor
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: auraBurnoutColor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 29
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public Color auraBurnoutColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public auraBurnoutColor As Color
+- uid: rwby.core.HudElementGenericAurabar.RootCanvas
+  commentId: P:rwby.core.HudElementGenericAurabar.RootCanvas
+  id: RootCanvas
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: RootCanvas
+  nameWithType: HudElementGenericAurabar.RootCanvas
+  fullName: rwby.core.HudElementGenericAurabar.RootCanvas
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RootCanvas
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 31
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public Canvas RootCanvas { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Canvas
+    content.vb: Public Property RootCanvas As Canvas
+  overload: rwby.core.HudElementGenericAurabar.RootCanvas*
+  implements:
+  - rwby.IHUDElement.RootCanvas
+- uid: rwby.core.HudElementGenericAurabar.Initialize(System.Int32,System.Int32)
+  commentId: M:rwby.core.HudElementGenericAurabar.Initialize(System.Int32,System.Int32)
+  id: Initialize(System.Int32,System.Int32)
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: Initialize(int, int)
+  nameWithType: HudElementGenericAurabar.Initialize(int, int)
+  fullName: rwby.core.HudElementGenericAurabar.Initialize(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 33
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Initialize(int localPlayerID, int networkPlayerID)
+    parameters:
+    - id: localPlayerID
+      type: System.Int32
+    - id: networkPlayerID
+      type: System.Int32
+    content.vb: Public Sub Initialize(localPlayerID As Integer, networkPlayerID As Integer)
+  overload: rwby.core.HudElementGenericAurabar.Initialize*
+  implements:
+  - rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  nameWithType.vb: HudElementGenericAurabar.Initialize(Integer, Integer)
+  fullName.vb: rwby.core.HudElementGenericAurabar.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+- uid: rwby.core.HudElementGenericAurabar.Teardown
+  commentId: M:rwby.core.HudElementGenericAurabar.Teardown
+  id: Teardown
+  parent: rwby.core.HudElementGenericAurabar
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: HudElementGenericAurabar.Teardown()
+  fullName: rwby.core.HudElementGenericAurabar.Teardown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Teardown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericAurabar.cs
+    startLine: 106
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Teardown()
+    content.vb: Public Sub Teardown()
+  overload: rwby.core.HudElementGenericAurabar.Teardown*
+  implements:
+  - rwby.IHUDElement.Teardown
+references:
+- uid: rwby.core
+  commentId: N:rwby.core
+  href: rwby.html
+  name: rwby.core
+  nameWithType: rwby.core
+  fullName: rwby.core
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: rwby.IHUDElement
+  commentId: T:rwby.IHUDElement
+  parent: rwby
+  href: rwby.IHUDElement.html
+  name: IHUDElement
+  nameWithType: IHUDElement
+  fullName: rwby.IHUDElement
+- uid: rwby.IFighterDefinitionUser
+  commentId: T:rwby.IFighterDefinitionUser
+  parent: rwby
+  href: rwby.IFighterDefinitionUser.html
+  name: IFighterDefinitionUser
+  nameWithType: IFighterDefinitionUser
+  fullName: rwby.IFighterDefinitionUser
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: rwby.core.HudElementGenericAurabar.FighterDef*
+  commentId: Overload:rwby.core.HudElementGenericAurabar.FighterDef
+  href: rwby.core.HudElementGenericAurabar.html#rwby_core_HudElementGenericAurabar_FighterDef
+  name: FighterDef
+  nameWithType: HudElementGenericAurabar.FighterDef
+  fullName: rwby.core.HudElementGenericAurabar.FighterDef
+- uid: rwby.IFighterDefinitionUser.FighterDef
+  commentId: P:rwby.IFighterDefinitionUser.FighterDef
+  parent: rwby.IFighterDefinitionUser
+  name: FighterDef
+  nameWithType: IFighterDefinitionUser.FighterDef
+  fullName: rwby.IFighterDefinitionUser.FighterDef
+- uid: Global.IFighterDefinition
+  commentId: T:Global.IFighterDefinition
+  href: IFighterDefinition.html
+  name: IFighterDefinition
+  nameWithType: IFighterDefinition
+  fullName: IFighterDefinition
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.QuantumEntityView
+  commentId: T:Quantum.QuantumEntityView
+  parent: Quantum
+  name: QuantumEntityView
+  nameWithType: QuantumEntityView
+  fullName: Quantum.QuantumEntityView
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: UnityEngine.UI.Image
+  commentId: T:UnityEngine.UI.Image
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: UnityEngine.UI.Image
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  isExternal: true
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    isExternal: true
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: rwby.core.HudElementGenericAurabar.RootCanvas*
+  commentId: Overload:rwby.core.HudElementGenericAurabar.RootCanvas
+  href: rwby.core.HudElementGenericAurabar.html#rwby_core_HudElementGenericAurabar_RootCanvas
+  name: RootCanvas
+  nameWithType: HudElementGenericAurabar.RootCanvas
+  fullName: rwby.core.HudElementGenericAurabar.RootCanvas
+- uid: rwby.IHUDElement.RootCanvas
+  commentId: P:rwby.IHUDElement.RootCanvas
+  parent: rwby.IHUDElement
+  name: RootCanvas
+  nameWithType: IHUDElement.RootCanvas
+  fullName: rwby.IHUDElement.RootCanvas
+- uid: UnityEngine.Canvas
+  commentId: T:UnityEngine.Canvas
+  parent: UnityEngine
+  isExternal: true
+  name: Canvas
+  nameWithType: Canvas
+  fullName: UnityEngine.Canvas
+- uid: rwby.core.HudElementGenericAurabar.Initialize*
+  commentId: Overload:rwby.core.HudElementGenericAurabar.Initialize
+  href: rwby.core.HudElementGenericAurabar.html#rwby_core_HudElementGenericAurabar_Initialize_System_Int32_System_Int32_
+  name: Initialize
+  nameWithType: HudElementGenericAurabar.Initialize
+  fullName: rwby.core.HudElementGenericAurabar.Initialize
+- uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  commentId: M:rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  parent: rwby.IHUDElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Initialize(int, int)
+  nameWithType: IHUDElement.Initialize(int, int)
+  fullName: rwby.IHUDElement.Initialize(int, int)
+  nameWithType.vb: IHUDElement.Initialize(Integer, Integer)
+  fullName.vb: rwby.IHUDElement.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+  spec.csharp:
+  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+    name: Initialize
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+    name: Initialize
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: rwby.core.HudElementGenericAurabar.Teardown*
+  commentId: Overload:rwby.core.HudElementGenericAurabar.Teardown
+  href: rwby.core.HudElementGenericAurabar.html#rwby_core_HudElementGenericAurabar_Teardown
+  name: Teardown
+  nameWithType: HudElementGenericAurabar.Teardown
+  fullName: rwby.core.HudElementGenericAurabar.Teardown
+- uid: rwby.IHUDElement.Teardown
+  commentId: M:rwby.IHUDElement.Teardown
+  parent: rwby.IHUDElement
+  name: Teardown()
+  nameWithType: IHUDElement.Teardown()
+  fullName: rwby.IHUDElement.Teardown()
+  spec.csharp:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )

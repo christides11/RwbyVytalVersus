@@ -1,0 +1,152 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.ISignalOnCollisionEnter2D
+  commentId: T:Quantum.ISignalOnCollisionEnter2D
+  id: ISignalOnCollisionEnter2D
+  parent: Quantum
+  children:
+  - Quantum.ISignalOnCollisionEnter2D.OnCollisionEnter2D(Quantum.Frame,Quantum.CollisionInfo2D)
+  langs:
+  - csharp
+  - vb
+  name: ISignalOnCollisionEnter2D
+  nameWithType: ISignalOnCollisionEnter2D
+  fullName: Quantum.ISignalOnCollisionEnter2D
+  type: Interface
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ISignalOnCollisionEnter2D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 161
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Interface for receiving callbacks once two non-trigger 2D colliders start touching.
+
+    <remarks>At least one of the entities involved in a collision must have the respective <xref href="Quantum.CallbackFlags" data-throw-if-not-resolved="false"></xref> set for the callback to be called.</remarks><remarks>See <xref href="Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef%2cQuantum.CallbackFlags)" data-throw-if-not-resolved="false"></xref> for setting the callbacks flags to an entity.</remarks>
+  example: []
+  syntax:
+    content: 'public interface ISignalOnCollisionEnter2D : ISignal'
+    content.vb: Public Interface ISignalOnCollisionEnter2D Inherits ISignal
+  inheritedMembers:
+  - Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignalOnCollisionEnter2D.OnCollisionEnter2D(Quantum.Frame,Quantum.CollisionInfo2D)
+  commentId: M:Quantum.ISignalOnCollisionEnter2D.OnCollisionEnter2D(Quantum.Frame,Quantum.CollisionInfo2D)
+  id: OnCollisionEnter2D(Quantum.Frame,Quantum.CollisionInfo2D)
+  parent: Quantum.ISignalOnCollisionEnter2D
+  langs:
+  - csharp
+  - vb
+  name: OnCollisionEnter2D(Frame, CollisionInfo2D)
+  nameWithType: ISignalOnCollisionEnter2D.OnCollisionEnter2D(Frame, CollisionInfo2D)
+  fullName: Quantum.ISignalOnCollisionEnter2D.OnCollisionEnter2D(Quantum.Frame, Quantum.CollisionInfo2D)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnCollisionEnter2D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 168
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Called once two non-trigger 2D colliders start touching.
+  example: []
+  syntax:
+    content: void OnCollisionEnter2D(Frame f, CollisionInfo2D info)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame in which the collision happened.
+    - id: info
+      type: Quantum.CollisionInfo2D
+      description: The <xref href="Quantum.CollisionInfo2D" data-throw-if-not-resolved="false"></xref> with data about the collision.
+    content.vb: Sub OnCollisionEnter2D(f As Frame, info As CollisionInfo2D)
+  overload: Quantum.ISignalOnCollisionEnter2D.OnCollisionEnter2D*
+references:
+- uid: Quantum.CallbackFlags
+  commentId: T:Quantum.CallbackFlags
+  isExternal: true
+  name: CallbackFlags
+  nameWithType: CallbackFlags
+  fullName: Quantum.CallbackFlags
+- uid: Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+  commentId: M:Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+  isExternal: true
+  name: SetCallbacks(EntityRef, CallbackFlags)
+  nameWithType: PhysicsEngine2D.Api.SetCallbacks(EntityRef, CallbackFlags)
+  fullName: Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef, Quantum.CallbackFlags)
+  spec.csharp:
+  - uid: Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+    name: SetCallbacks
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CallbackFlags
+    name: CallbackFlags
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+    name: SetCallbacks
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CallbackFlags
+    name: CallbackFlags
+    isExternal: true
+  - name: )
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ISignal.RuntimeIndex
+  commentId: P:Quantum.ISignal.RuntimeIndex
+  parent: Quantum.ISignal
+  isExternal: true
+  name: RuntimeIndex
+  nameWithType: ISignal.RuntimeIndex
+  fullName: Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.CollisionInfo2D
+  commentId: T:Quantum.CollisionInfo2D
+  parent: Quantum
+  isExternal: true
+  name: CollisionInfo2D
+  nameWithType: CollisionInfo2D
+  fullName: Quantum.CollisionInfo2D
+- uid: Quantum.ISignalOnCollisionEnter2D.OnCollisionEnter2D*
+  commentId: Overload:Quantum.ISignalOnCollisionEnter2D.OnCollisionEnter2D
+  href: Quantum.ISignalOnCollisionEnter2D.html#Quantum_ISignalOnCollisionEnter2D_OnCollisionEnter2D_Quantum_Frame_Quantum_CollisionInfo2D_
+  name: OnCollisionEnter2D
+  nameWithType: ISignalOnCollisionEnter2D.OnCollisionEnter2D
+  fullName: Quantum.ISignalOnCollisionEnter2D.OnCollisionEnter2D
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame

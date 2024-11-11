@@ -1,0 +1,693 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.DotNetSessionRunner
+  commentId: T:Quantum.DotNetSessionRunner
+  id: DotNetSessionRunner
+  parent: Quantum
+  children:
+  - Quantum.DotNetSessionRunner.AssetSerializer
+  - Quantum.DotNetSessionRunner.CallbackDispatcher
+  - Quantum.DotNetSessionRunner.CustomResourceManager
+  - Quantum.DotNetSessionRunner.EventDispatcher
+  - Quantum.DotNetSessionRunner.Init(Photon.Deterministic.DeterministicSessionRunnerInitArguments)
+  - Quantum.DotNetSessionRunner.OnGameResult
+  - Quantum.DotNetSessionRunner.Runner
+  - Quantum.DotNetSessionRunner.Service(System.Double)
+  - Quantum.DotNetSessionRunner.Shutdown
+  - Quantum.DotNetSessionRunner.Start(Photon.Deterministic.DeterministicSessionRunnerStartArguments)
+  - Quantum.DotNetSessionRunner.TryCreateSnapshot(System.Int32@,System.Byte[]@)
+  langs:
+  - csharp
+  - vb
+  name: DotNetSessionRunner
+  nameWithType: DotNetSessionRunner
+  fullName: Quantum.DotNetSessionRunner
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DotNetSessionRunner
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6927
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    This class implements the <xref href="Photon.Deterministic.IDeterministicSessionRunner" data-throw-if-not-resolved="false"></xref> interface and contains code to glue together the Quantum server and Quantum session runner.
+
+    This was formerly part of the Quantum Server SDK.
+  example: []
+  syntax:
+    content: public class DotNetSessionRunner
+    content.vb: Public Class DotNetSessionRunner
+  inheritance:
+  - System.Object
+- uid: Quantum.DotNetSessionRunner.AssetSerializer
+  commentId: P:Quantum.DotNetSessionRunner.AssetSerializer
+  id: AssetSerializer
+  parent: Quantum.DotNetSessionRunner
+  langs:
+  - csharp
+  - vb
+  name: AssetSerializer
+  nameWithType: DotNetSessionRunner.AssetSerializer
+  fullName: Quantum.DotNetSessionRunner.AssetSerializer
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AssetSerializer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6938
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Get and set the AssetSerializer directly after <xref href="Photon.Deterministic.IDeterministicSessionRunner" data-throw-if-not-resolved="false"></xref> creation, until it is possible to pass it internally.
+  example: []
+  syntax:
+    content: public IAssetSerializer AssetSerializer { get; set; }
+    parameters: []
+    return:
+      type: Quantum.IAssetSerializer
+    content.vb: Public Property AssetSerializer As IAssetSerializer
+  overload: Quantum.DotNetSessionRunner.AssetSerializer*
+- uid: Quantum.DotNetSessionRunner.CustomResourceManager
+  commentId: P:Quantum.DotNetSessionRunner.CustomResourceManager
+  id: CustomResourceManager
+  parent: Quantum.DotNetSessionRunner
+  langs:
+  - csharp
+  - vb
+  name: CustomResourceManager
+  nameWithType: DotNetSessionRunner.CustomResourceManager
+  fullName: Quantum.DotNetSessionRunner.CustomResourceManager
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CustomResourceManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6944
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Assign a custom resource manager which will use the cached static resource manager as <xref href="Quantum.ResourceManagerStatic.FallbackResourceManager" data-throw-if-not-resolved="false"></xref>.
+
+    Must be set right after creation.
+  example: []
+  syntax:
+    content: public ResourceManagerStatic CustomResourceManager { get; set; }
+    parameters: []
+    return:
+      type: Quantum.ResourceManagerStatic
+    content.vb: Public Property CustomResourceManager As ResourceManagerStatic
+  overload: Quantum.DotNetSessionRunner.CustomResourceManager*
+- uid: Quantum.DotNetSessionRunner.Runner
+  commentId: P:Quantum.DotNetSessionRunner.Runner
+  id: Runner
+  parent: Quantum.DotNetSessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Runner
+  nameWithType: DotNetSessionRunner.Runner
+  fullName: Quantum.DotNetSessionRunner.Runner
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Runner
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6949
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Grants access to the Quantum session runner.
+  example: []
+  syntax:
+    content: public SessionRunner Runner { get; }
+    parameters: []
+    return:
+      type: Quantum.SessionRunner
+    content.vb: Public ReadOnly Property Runner As SessionRunner
+  overload: Quantum.DotNetSessionRunner.Runner*
+- uid: Quantum.DotNetSessionRunner.EventDispatcher
+  commentId: P:Quantum.DotNetSessionRunner.EventDispatcher
+  id: EventDispatcher
+  parent: Quantum.DotNetSessionRunner
+  langs:
+  - csharp
+  - vb
+  name: EventDispatcher
+  nameWithType: DotNetSessionRunner.EventDispatcher
+  fullName: Quantum.DotNetSessionRunner.EventDispatcher
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: EventDispatcher
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6954
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Access Quantum events.
+  example: []
+  syntax:
+    content: public object EventDispatcher { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public ReadOnly Property EventDispatcher As Object
+  overload: Quantum.DotNetSessionRunner.EventDispatcher*
+- uid: Quantum.DotNetSessionRunner.CallbackDispatcher
+  commentId: P:Quantum.DotNetSessionRunner.CallbackDispatcher
+  id: CallbackDispatcher
+  parent: Quantum.DotNetSessionRunner
+  langs:
+  - csharp
+  - vb
+  name: CallbackDispatcher
+  nameWithType: DotNetSessionRunner.CallbackDispatcher
+  fullName: Quantum.DotNetSessionRunner.CallbackDispatcher
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CallbackDispatcher
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6959
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Access Quantum callbacks.
+  example: []
+  syntax:
+    content: public object CallbackDispatcher { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public ReadOnly Property CallbackDispatcher As Object
+  overload: Quantum.DotNetSessionRunner.CallbackDispatcher*
+- uid: Quantum.DotNetSessionRunner.OnGameResult
+  commentId: P:Quantum.DotNetSessionRunner.OnGameResult
+  id: OnGameResult
+  parent: Quantum.DotNetSessionRunner
+  langs:
+  - csharp
+  - vb
+  name: OnGameResult
+  nameWithType: DotNetSessionRunner.OnGameResult
+  fullName: Quantum.DotNetSessionRunner.OnGameResult
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnGameResult
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6964
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Callback raised on game result events from the simulation.
+  example: []
+  syntax:
+    content: public Action<byte[]> OnGameResult { get; set; }
+    parameters: []
+    return:
+      type: System.Action{System.Byte[]}
+    content.vb: Public Property OnGameResult As Action(Of Byte())
+  overload: Quantum.DotNetSessionRunner.OnGameResult*
+- uid: Quantum.DotNetSessionRunner.Init(Photon.Deterministic.DeterministicSessionRunnerInitArguments)
+  commentId: M:Quantum.DotNetSessionRunner.Init(Photon.Deterministic.DeterministicSessionRunnerInitArguments)
+  id: Init(Photon.Deterministic.DeterministicSessionRunnerInitArguments)
+  parent: Quantum.DotNetSessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Init(DeterministicSessionRunnerInitArguments)
+  nameWithType: DotNetSessionRunner.Init(DeterministicSessionRunnerInitArguments)
+  fullName: Quantum.DotNetSessionRunner.Init(Photon.Deterministic.DeterministicSessionRunnerInitArguments)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Init
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6970
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Initialized the server simulation. It initializes static classes like FPLut, Native.Utils and instantiates a static resource manager that is shared over multiple server simulations.
+
+    This method throws exceptions on errors.
+  example: []
+  syntax:
+    content: public void Init(DeterministicSessionRunnerInitArguments args)
+    parameters:
+    - id: args
+      type: Photon.Deterministic.DeterministicSessionRunnerInitArguments
+    content.vb: Public Sub Init(args As DeterministicSessionRunnerInitArguments)
+  overload: Quantum.DotNetSessionRunner.Init*
+- uid: Quantum.DotNetSessionRunner.Shutdown
+  commentId: M:Quantum.DotNetSessionRunner.Shutdown
+  id: Shutdown
+  parent: Quantum.DotNetSessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Shutdown()
+  nameWithType: DotNetSessionRunner.Shutdown()
+  fullName: Quantum.DotNetSessionRunner.Shutdown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Shutdown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7021
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Disposes the Quantum runner.
+  example: []
+  syntax:
+    content: public void Shutdown()
+    content.vb: Public Sub Shutdown()
+  overload: Quantum.DotNetSessionRunner.Shutdown*
+- uid: Quantum.DotNetSessionRunner.Start(Photon.Deterministic.DeterministicSessionRunnerStartArguments)
+  commentId: M:Quantum.DotNetSessionRunner.Start(Photon.Deterministic.DeterministicSessionRunnerStartArguments)
+  id: Start(Photon.Deterministic.DeterministicSessionRunnerStartArguments)
+  parent: Quantum.DotNetSessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Start(DeterministicSessionRunnerStartArguments)
+  nameWithType: DotNetSessionRunner.Start(DeterministicSessionRunnerStartArguments)
+  fullName: Quantum.DotNetSessionRunner.Start(Photon.Deterministic.DeterministicSessionRunnerStartArguments)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Start
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7042
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Implements the start of the Quantum online session. Instantiates a Quantum runner.
+  example: []
+  syntax:
+    content: public void Start(DeterministicSessionRunnerStartArguments args)
+    parameters:
+    - id: args
+      type: Photon.Deterministic.DeterministicSessionRunnerStartArguments
+      description: Start arguments
+    content.vb: Public Sub Start(args As DeterministicSessionRunnerStartArguments)
+  overload: Quantum.DotNetSessionRunner.Start*
+- uid: Quantum.DotNetSessionRunner.Service(System.Double)
+  commentId: M:Quantum.DotNetSessionRunner.Service(System.Double)
+  id: Service(System.Double)
+  parent: Quantum.DotNetSessionRunner
+  langs:
+  - csharp
+  - vb
+  name: Service(double)
+  nameWithType: DotNetSessionRunner.Service(double)
+  fullName: Quantum.DotNetSessionRunner.Service(double)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Service
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7086
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Implements the server update callback.
+  example: []
+  syntax:
+    content: public void Service(double gameTime)
+    parameters:
+    - id: gameTime
+      type: System.Double
+      description: Game time in seconds
+    content.vb: Public Sub Service(gameTime As Double)
+  overload: Quantum.DotNetSessionRunner.Service*
+  nameWithType.vb: DotNetSessionRunner.Service(Double)
+  fullName.vb: Quantum.DotNetSessionRunner.Service(Double)
+  name.vb: Service(Double)
+- uid: Quantum.DotNetSessionRunner.TryCreateSnapshot(System.Int32@,System.Byte[]@)
+  commentId: M:Quantum.DotNetSessionRunner.TryCreateSnapshot(System.Int32@,System.Byte[]@)
+  id: TryCreateSnapshot(System.Int32@,System.Byte[]@)
+  parent: Quantum.DotNetSessionRunner
+  langs:
+  - csharp
+  - vb
+  name: TryCreateSnapshot(ref int, ref byte[])
+  nameWithType: DotNetSessionRunner.TryCreateSnapshot(ref int, ref byte[])
+  fullName: Quantum.DotNetSessionRunner.TryCreateSnapshot(ref int, ref byte[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryCreateSnapshot
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7111
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Implements the server snapshot requested callback. 
+
+    This will use the most recent simulated frame on the server to use as a snapshot for late-joining clients.
+
+    Which will bypass requesting buddy snapshots from other clients.
+  example: []
+  syntax:
+    content: public bool TryCreateSnapshot(ref int tick, ref byte[] data)
+    parameters:
+    - id: tick
+      type: System.Int32
+      description: The tick of the snapshot.
+    - id: data
+      type: System.Byte[]
+      description: DeterministicFrame object serialized.
+    return:
+      type: System.Boolean
+      description: True, if the snapshot was set.
+    content.vb: Public Function TryCreateSnapshot(tick As Integer, data As Byte()) As Boolean
+  overload: Quantum.DotNetSessionRunner.TryCreateSnapshot*
+  nameWithType.vb: DotNetSessionRunner.TryCreateSnapshot(Integer, Byte())
+  fullName.vb: Quantum.DotNetSessionRunner.TryCreateSnapshot(Integer, Byte())
+  name.vb: TryCreateSnapshot(Integer, Byte())
+references:
+- uid: Photon.Deterministic.IDeterministicSessionRunner
+  commentId: T:Photon.Deterministic.IDeterministicSessionRunner
+  isExternal: true
+  name: IDeterministicSessionRunner
+  nameWithType: IDeterministicSessionRunner
+  fullName: Photon.Deterministic.IDeterministicSessionRunner
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.DotNetSessionRunner.AssetSerializer*
+  commentId: Overload:Quantum.DotNetSessionRunner.AssetSerializer
+  href: Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_AssetSerializer
+  name: AssetSerializer
+  nameWithType: DotNetSessionRunner.AssetSerializer
+  fullName: Quantum.DotNetSessionRunner.AssetSerializer
+- uid: Quantum.IAssetSerializer
+  commentId: T:Quantum.IAssetSerializer
+  parent: Quantum
+  isExternal: true
+  name: IAssetSerializer
+  nameWithType: IAssetSerializer
+  fullName: Quantum.IAssetSerializer
+- uid: Quantum.ResourceManagerStatic.FallbackResourceManager
+  commentId: P:Quantum.ResourceManagerStatic.FallbackResourceManager
+  isExternal: true
+  name: FallbackResourceManager
+  nameWithType: ResourceManagerStatic.FallbackResourceManager
+  fullName: Quantum.ResourceManagerStatic.FallbackResourceManager
+- uid: Quantum.DotNetSessionRunner.CustomResourceManager*
+  commentId: Overload:Quantum.DotNetSessionRunner.CustomResourceManager
+  href: Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_CustomResourceManager
+  name: CustomResourceManager
+  nameWithType: DotNetSessionRunner.CustomResourceManager
+  fullName: Quantum.DotNetSessionRunner.CustomResourceManager
+- uid: Quantum.ResourceManagerStatic
+  commentId: T:Quantum.ResourceManagerStatic
+  parent: Quantum
+  isExternal: true
+  name: ResourceManagerStatic
+  nameWithType: ResourceManagerStatic
+  fullName: Quantum.ResourceManagerStatic
+- uid: Quantum.DotNetSessionRunner.Runner*
+  commentId: Overload:Quantum.DotNetSessionRunner.Runner
+  href: Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_Runner
+  name: Runner
+  nameWithType: DotNetSessionRunner.Runner
+  fullName: Quantum.DotNetSessionRunner.Runner
+- uid: Quantum.SessionRunner
+  commentId: T:Quantum.SessionRunner
+  parent: Quantum
+  href: Quantum.SessionRunner.html
+  name: SessionRunner
+  nameWithType: SessionRunner
+  fullName: Quantum.SessionRunner
+- uid: Quantum.DotNetSessionRunner.EventDispatcher*
+  commentId: Overload:Quantum.DotNetSessionRunner.EventDispatcher
+  href: Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_EventDispatcher
+  name: EventDispatcher
+  nameWithType: DotNetSessionRunner.EventDispatcher
+  fullName: Quantum.DotNetSessionRunner.EventDispatcher
+- uid: Quantum.DotNetSessionRunner.CallbackDispatcher*
+  commentId: Overload:Quantum.DotNetSessionRunner.CallbackDispatcher
+  href: Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_CallbackDispatcher
+  name: CallbackDispatcher
+  nameWithType: DotNetSessionRunner.CallbackDispatcher
+  fullName: Quantum.DotNetSessionRunner.CallbackDispatcher
+- uid: Quantum.DotNetSessionRunner.OnGameResult*
+  commentId: Overload:Quantum.DotNetSessionRunner.OnGameResult
+  href: Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_OnGameResult
+  name: OnGameResult
+  nameWithType: DotNetSessionRunner.OnGameResult
+  fullName: Quantum.DotNetSessionRunner.OnGameResult
+- uid: System.Action{System.Byte[]}
+  commentId: T:System.Action{System.Byte[]}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<byte[]>
+  nameWithType: Action<byte[]>
+  fullName: System.Action<byte[]>
+  nameWithType.vb: Action(Of Byte())
+  fullName.vb: System.Action(Of Byte())
+  name.vb: Action(Of Byte())
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.DotNetSessionRunner.Init*
+  commentId: Overload:Quantum.DotNetSessionRunner.Init
+  href: Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_Init_Photon_Deterministic_DeterministicSessionRunnerInitArguments_
+  name: Init
+  nameWithType: DotNetSessionRunner.Init
+  fullName: Quantum.DotNetSessionRunner.Init
+- uid: Photon.Deterministic.DeterministicSessionRunnerInitArguments
+  commentId: T:Photon.Deterministic.DeterministicSessionRunnerInitArguments
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicSessionRunnerInitArguments
+  nameWithType: DeterministicSessionRunnerInitArguments
+  fullName: Photon.Deterministic.DeterministicSessionRunnerInitArguments
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.DotNetSessionRunner.Shutdown*
+  commentId: Overload:Quantum.DotNetSessionRunner.Shutdown
+  href: Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_Shutdown
+  name: Shutdown
+  nameWithType: DotNetSessionRunner.Shutdown
+  fullName: Quantum.DotNetSessionRunner.Shutdown
+- uid: Quantum.DotNetSessionRunner.Start*
+  commentId: Overload:Quantum.DotNetSessionRunner.Start
+  href: Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_Start_Photon_Deterministic_DeterministicSessionRunnerStartArguments_
+  name: Start
+  nameWithType: DotNetSessionRunner.Start
+  fullName: Quantum.DotNetSessionRunner.Start
+- uid: Photon.Deterministic.DeterministicSessionRunnerStartArguments
+  commentId: T:Photon.Deterministic.DeterministicSessionRunnerStartArguments
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicSessionRunnerStartArguments
+  nameWithType: DeterministicSessionRunnerStartArguments
+  fullName: Photon.Deterministic.DeterministicSessionRunnerStartArguments
+- uid: Quantum.DotNetSessionRunner.Service*
+  commentId: Overload:Quantum.DotNetSessionRunner.Service
+  href: Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_Service_System_Double_
+  name: Service
+  nameWithType: DotNetSessionRunner.Service
+  fullName: Quantum.DotNetSessionRunner.Service
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Quantum.DotNetSessionRunner.TryCreateSnapshot*
+  commentId: Overload:Quantum.DotNetSessionRunner.TryCreateSnapshot
+  href: Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_TryCreateSnapshot_System_Int32__System_Byte____
+  name: TryCreateSnapshot
+  nameWithType: DotNetSessionRunner.TryCreateSnapshot
+  fullName: Quantum.DotNetSessionRunner.TryCreateSnapshot
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

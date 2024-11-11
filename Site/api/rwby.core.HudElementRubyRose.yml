@@ -1,0 +1,549 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.core.HudElementRubyRose
+  commentId: T:rwby.core.HudElementRubyRose
+  id: HudElementRubyRose
+  parent: rwby.core
+  children:
+  - rwby.core.HudElementRubyRose.FighterDef
+  - rwby.core.HudElementRubyRose.Initialize(System.Int32,System.Int32)
+  - rwby.core.HudElementRubyRose.RootCanvas
+  - rwby.core.HudElementRubyRose.Teardown
+  - rwby.core.HudElementRubyRose.aurabarHudElement
+  - rwby.core.HudElementRubyRose.fighterEntityView
+  - rwby.core.HudElementRubyRose.globalPlayerID
+  - rwby.core.HudElementRubyRose.healthbarHudElement
+  - rwby.core.HudElementRubyRose.localPlayerID
+  langs:
+  - csharp
+  - vb
+  name: HudElementRubyRose
+  nameWithType: HudElementRubyRose
+  fullName: rwby.core.HudElementRubyRose
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HudElementRubyRose
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: 'public class HudElementRubyRose : MonoBehaviour, IHUDElement, IFighterDefinitionUser'
+    content.vb: Public Class HudElementRubyRose Inherits MonoBehaviour Implements IHUDElement, IFighterDefinitionUser
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  implements:
+  - rwby.IHUDElement
+  - rwby.IFighterDefinitionUser
+- uid: rwby.core.HudElementRubyRose.FighterDef
+  commentId: P:rwby.core.HudElementRubyRose.FighterDef
+  id: FighterDef
+  parent: rwby.core.HudElementRubyRose
+  langs:
+  - csharp
+  - vb
+  name: FighterDef
+  nameWithType: HudElementRubyRose.FighterDef
+  fullName: rwby.core.HudElementRubyRose.FighterDef
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FighterDef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public IFighterDefinition FighterDef { get; set; }
+    parameters: []
+    return:
+      type: Global.IFighterDefinition
+    content.vb: Public Property FighterDef As IFighterDefinition
+  overload: rwby.core.HudElementRubyRose.FighterDef*
+  implements:
+  - rwby.IFighterDefinitionUser.FighterDef
+- uid: rwby.core.HudElementRubyRose.globalPlayerID
+  commentId: F:rwby.core.HudElementRubyRose.globalPlayerID
+  id: globalPlayerID
+  parent: rwby.core.HudElementRubyRose
+  langs:
+  - csharp
+  - vb
+  name: globalPlayerID
+  nameWithType: HudElementRubyRose.globalPlayerID
+  fullName: rwby.core.HudElementRubyRose.globalPlayerID
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: globalPlayerID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public int globalPlayerID
+    return:
+      type: System.Int32
+    content.vb: Public globalPlayerID As Integer
+- uid: rwby.core.HudElementRubyRose.localPlayerID
+  commentId: F:rwby.core.HudElementRubyRose.localPlayerID
+  id: localPlayerID
+  parent: rwby.core.HudElementRubyRose
+  langs:
+  - csharp
+  - vb
+  name: localPlayerID
+  nameWithType: HudElementRubyRose.localPlayerID
+  fullName: rwby.core.HudElementRubyRose.localPlayerID
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localPlayerID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public int localPlayerID
+    return:
+      type: System.Int32
+    content.vb: Public localPlayerID As Integer
+- uid: rwby.core.HudElementRubyRose.fighterEntityView
+  commentId: F:rwby.core.HudElementRubyRose.fighterEntityView
+  id: fighterEntityView
+  parent: rwby.core.HudElementRubyRose
+  langs:
+  - csharp
+  - vb
+  name: fighterEntityView
+  nameWithType: HudElementRubyRose.fighterEntityView
+  fullName: rwby.core.HudElementRubyRose.fighterEntityView
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: fighterEntityView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public QuantumEntityView fighterEntityView
+    return:
+      type: Quantum.QuantumEntityView
+    content.vb: Public fighterEntityView As QuantumEntityView
+- uid: rwby.core.HudElementRubyRose.healthbarHudElement
+  commentId: F:rwby.core.HudElementRubyRose.healthbarHudElement
+  id: healthbarHudElement
+  parent: rwby.core.HudElementRubyRose
+  langs:
+  - csharp
+  - vb
+  name: healthbarHudElement
+  nameWithType: HudElementRubyRose.healthbarHudElement
+  fullName: rwby.core.HudElementRubyRose.healthbarHudElement
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: healthbarHudElement
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public HudElementGenericHealthbar healthbarHudElement
+    return:
+      type: rwby.core.HudElementGenericHealthbar
+    content.vb: Public healthbarHudElement As HudElementGenericHealthbar
+- uid: rwby.core.HudElementRubyRose.aurabarHudElement
+  commentId: F:rwby.core.HudElementRubyRose.aurabarHudElement
+  id: aurabarHudElement
+  parent: rwby.core.HudElementRubyRose
+  langs:
+  - csharp
+  - vb
+  name: aurabarHudElement
+  nameWithType: HudElementRubyRose.aurabarHudElement
+  fullName: rwby.core.HudElementRubyRose.aurabarHudElement
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: aurabarHudElement
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public HudElementGenericAurabar aurabarHudElement
+    return:
+      type: rwby.core.HudElementGenericAurabar
+    content.vb: Public aurabarHudElement As HudElementGenericAurabar
+- uid: rwby.core.HudElementRubyRose.RootCanvas
+  commentId: P:rwby.core.HudElementRubyRose.RootCanvas
+  id: RootCanvas
+  parent: rwby.core.HudElementRubyRose
+  langs:
+  - csharp
+  - vb
+  name: RootCanvas
+  nameWithType: HudElementRubyRose.RootCanvas
+  fullName: rwby.core.HudElementRubyRose.RootCanvas
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RootCanvas
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public Canvas RootCanvas { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Canvas
+    content.vb: Public Property RootCanvas As Canvas
+  overload: rwby.core.HudElementRubyRose.RootCanvas*
+  implements:
+  - rwby.IHUDElement.RootCanvas
+- uid: rwby.core.HudElementRubyRose.Initialize(System.Int32,System.Int32)
+  commentId: M:rwby.core.HudElementRubyRose.Initialize(System.Int32,System.Int32)
+  id: Initialize(System.Int32,System.Int32)
+  parent: rwby.core.HudElementRubyRose
+  langs:
+  - csharp
+  - vb
+  name: Initialize(int, int)
+  nameWithType: HudElementRubyRose.Initialize(int, int)
+  fullName: rwby.core.HudElementRubyRose.Initialize(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Initialize(int localPlayerID, int networkPlayerID)
+    parameters:
+    - id: localPlayerID
+      type: System.Int32
+    - id: networkPlayerID
+      type: System.Int32
+    content.vb: Public Sub Initialize(localPlayerID As Integer, networkPlayerID As Integer)
+  overload: rwby.core.HudElementRubyRose.Initialize*
+  implements:
+  - rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  nameWithType.vb: HudElementRubyRose.Initialize(Integer, Integer)
+  fullName.vb: rwby.core.HudElementRubyRose.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+- uid: rwby.core.HudElementRubyRose.Teardown
+  commentId: M:rwby.core.HudElementRubyRose.Teardown
+  id: Teardown
+  parent: rwby.core.HudElementRubyRose
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: HudElementRubyRose.Teardown()
+  fullName: rwby.core.HudElementRubyRose.Teardown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Teardown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+    startLine: 36
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Teardown()
+    content.vb: Public Sub Teardown()
+  overload: rwby.core.HudElementRubyRose.Teardown*
+  implements:
+  - rwby.IHUDElement.Teardown
+references:
+- uid: rwby.core
+  commentId: N:rwby.core
+  href: rwby.html
+  name: rwby.core
+  nameWithType: rwby.core
+  fullName: rwby.core
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: rwby.IHUDElement
+  commentId: T:rwby.IHUDElement
+  parent: rwby
+  href: rwby.IHUDElement.html
+  name: IHUDElement
+  nameWithType: IHUDElement
+  fullName: rwby.IHUDElement
+- uid: rwby.IFighterDefinitionUser
+  commentId: T:rwby.IFighterDefinitionUser
+  parent: rwby
+  href: rwby.IFighterDefinitionUser.html
+  name: IFighterDefinitionUser
+  nameWithType: IFighterDefinitionUser
+  fullName: rwby.IFighterDefinitionUser
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: rwby.core.HudElementRubyRose.FighterDef*
+  commentId: Overload:rwby.core.HudElementRubyRose.FighterDef
+  href: rwby.core.HudElementRubyRose.html#rwby_core_HudElementRubyRose_FighterDef
+  name: FighterDef
+  nameWithType: HudElementRubyRose.FighterDef
+  fullName: rwby.core.HudElementRubyRose.FighterDef
+- uid: rwby.IFighterDefinitionUser.FighterDef
+  commentId: P:rwby.IFighterDefinitionUser.FighterDef
+  parent: rwby.IFighterDefinitionUser
+  name: FighterDef
+  nameWithType: IFighterDefinitionUser.FighterDef
+  fullName: rwby.IFighterDefinitionUser.FighterDef
+- uid: Global.IFighterDefinition
+  commentId: T:Global.IFighterDefinition
+  href: IFighterDefinition.html
+  name: IFighterDefinition
+  nameWithType: IFighterDefinition
+  fullName: IFighterDefinition
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.QuantumEntityView
+  commentId: T:Quantum.QuantumEntityView
+  parent: Quantum
+  name: QuantumEntityView
+  nameWithType: QuantumEntityView
+  fullName: Quantum.QuantumEntityView
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: rwby.core.HudElementGenericHealthbar
+  commentId: T:rwby.core.HudElementGenericHealthbar
+  parent: rwby.core
+  href: rwby.core.HudElementGenericHealthbar.html
+  name: HudElementGenericHealthbar
+  nameWithType: HudElementGenericHealthbar
+  fullName: rwby.core.HudElementGenericHealthbar
+- uid: rwby.core.HudElementGenericAurabar
+  commentId: T:rwby.core.HudElementGenericAurabar
+  parent: rwby.core
+  href: rwby.core.HudElementGenericAurabar.html
+  name: HudElementGenericAurabar
+  nameWithType: HudElementGenericAurabar
+  fullName: rwby.core.HudElementGenericAurabar
+- uid: rwby.core.HudElementRubyRose.RootCanvas*
+  commentId: Overload:rwby.core.HudElementRubyRose.RootCanvas
+  href: rwby.core.HudElementRubyRose.html#rwby_core_HudElementRubyRose_RootCanvas
+  name: RootCanvas
+  nameWithType: HudElementRubyRose.RootCanvas
+  fullName: rwby.core.HudElementRubyRose.RootCanvas
+- uid: rwby.IHUDElement.RootCanvas
+  commentId: P:rwby.IHUDElement.RootCanvas
+  parent: rwby.IHUDElement
+  name: RootCanvas
+  nameWithType: IHUDElement.RootCanvas
+  fullName: rwby.IHUDElement.RootCanvas
+- uid: UnityEngine.Canvas
+  commentId: T:UnityEngine.Canvas
+  parent: UnityEngine
+  isExternal: true
+  name: Canvas
+  nameWithType: Canvas
+  fullName: UnityEngine.Canvas
+- uid: rwby.core.HudElementRubyRose.Initialize*
+  commentId: Overload:rwby.core.HudElementRubyRose.Initialize
+  href: rwby.core.HudElementRubyRose.html#rwby_core_HudElementRubyRose_Initialize_System_Int32_System_Int32_
+  name: Initialize
+  nameWithType: HudElementRubyRose.Initialize
+  fullName: rwby.core.HudElementRubyRose.Initialize
+- uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  commentId: M:rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  parent: rwby.IHUDElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Initialize(int, int)
+  nameWithType: IHUDElement.Initialize(int, int)
+  fullName: rwby.IHUDElement.Initialize(int, int)
+  nameWithType.vb: IHUDElement.Initialize(Integer, Integer)
+  fullName.vb: rwby.IHUDElement.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+  spec.csharp:
+  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+    name: Initialize
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+    name: Initialize
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: rwby.core.HudElementRubyRose.Teardown*
+  commentId: Overload:rwby.core.HudElementRubyRose.Teardown
+  href: rwby.core.HudElementRubyRose.html#rwby_core_HudElementRubyRose_Teardown
+  name: Teardown
+  nameWithType: HudElementRubyRose.Teardown
+  fullName: rwby.core.HudElementRubyRose.Teardown
+- uid: rwby.IHUDElement.Teardown
+  commentId: M:rwby.IHUDElement.Teardown
+  parent: rwby.IHUDElement
+  name: Teardown()
+  nameWithType: IHUDElement.Teardown()
+  fullName: rwby.IHUDElement.Teardown()
+  spec.csharp:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )

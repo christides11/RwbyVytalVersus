@@ -1,0 +1,921 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.Core.PhysicsSystem2D
+  commentId: T:Quantum.Core.PhysicsSystem2D
+  id: PhysicsSystem2D
+  parent: Quantum.Core
+  children:
+  - Quantum.Core.PhysicsSystem2D.OnCollision2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  - Quantum.Core.PhysicsSystem2D.OnCollisionEnter2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  - Quantum.Core.PhysicsSystem2D.OnCollisionExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  - Quantum.Core.PhysicsSystem2D.OnInit(Quantum.Frame)
+  - Quantum.Core.PhysicsSystem2D.OnTrigger2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  - Quantum.Core.PhysicsSystem2D.OnTriggerEnter2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  - Quantum.Core.PhysicsSystem2D.OnTriggerExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  - Quantum.Core.PhysicsSystem2D.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  langs:
+  - csharp
+  - vb
+  name: PhysicsSystem2D
+  nameWithType: PhysicsSystem2D
+  fullName: Quantum.Core.PhysicsSystem2D
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PhysicsSystem2D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9255
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: The Quantum core physics system.
+  example: []
+  syntax:
+    content: >-
+      [Preserve]
+
+      public class PhysicsSystem2D : SystemBase, ICollisionCallbacks2D
+    content.vb: >-
+      <Preserve>
+
+      Public Class PhysicsSystem2D Inherits SystemBase Implements ICollisionCallbacks2D
+  inheritance:
+  - System.Object
+  - Quantum.SystemBase
+  implements:
+  - Quantum.Core.ICollisionCallbacks2D
+  inheritedMembers:
+  - Quantum.SystemBase.RuntimeIndex
+  - Quantum.SystemBase.ParentSystem
+  - Quantum.SystemBase.ChildSystems
+  - Quantum.SystemBase.Hierarchy
+  - Quantum.SystemBase.StartEnabled
+  - Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  - Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  attributes:
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
+- uid: Quantum.Core.PhysicsSystem2D.OnInit(Quantum.Frame)
+  commentId: M:Quantum.Core.PhysicsSystem2D.OnInit(Quantum.Frame)
+  id: OnInit(Quantum.Frame)
+  parent: Quantum.Core.PhysicsSystem2D
+  langs:
+  - csharp
+  - vb
+  name: OnInit(Frame)
+  nameWithType: PhysicsSystem2D.OnInit(Frame)
+  fullName: Quantum.Core.PhysicsSystem2D.OnInit(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnInit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9261
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: Initializes the 2D physics system.
+  example: []
+  syntax:
+    content: public override void OnInit(Frame f)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    content.vb: Public Overrides Sub OnInit(f As Frame)
+  overridden: Quantum.SystemBase.OnInit(Quantum.Frame)
+  overload: Quantum.Core.PhysicsSystem2D.OnInit*
+- uid: Quantum.Core.PhysicsSystem2D.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.Core.PhysicsSystem2D.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  id: Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.Core.PhysicsSystem2D
+  langs:
+  - csharp
+  - vb
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: PhysicsSystem2D.Schedule(Frame, TaskHandle)
+  fullName: Quantum.Core.PhysicsSystem2D.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Schedule
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9271
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: Create the 2D physics system update task graph.
+  example: []
+  syntax:
+    content: protected override TaskHandle Schedule(Frame f, TaskHandle taskHandle)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: taskHandle
+      type: Quantum.Task.TaskHandle
+      description: The initial task handle.
+    return:
+      type: Quantum.Task.TaskHandle
+      description: The updated task handle with the physics update graph.
+    content.vb: Protected Overrides Function Schedule(f As Frame, taskHandle As TaskHandle) As TaskHandle
+  overridden: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  overload: Quantum.Core.PhysicsSystem2D.Schedule*
+- uid: Quantum.Core.PhysicsSystem2D.OnCollision2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  commentId: M:Quantum.Core.PhysicsSystem2D.OnCollision2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  id: OnCollision2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  parent: Quantum.Core.PhysicsSystem2D
+  langs:
+  - csharp
+  - vb
+  name: OnCollision2D(FrameBase, CollisionInfo2D)
+  nameWithType: PhysicsSystem2D.OnCollision2D(FrameBase, CollisionInfo2D)
+  fullName: Quantum.Core.PhysicsSystem2D.OnCollision2D(Quantum.Core.FrameBase, Quantum.CollisionInfo2D)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnCollision2D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9276
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: Called once per frame while two non-trigger 2D colliders are touching.
+  example: []
+  syntax:
+    content: public void OnCollision2D(FrameBase f, CollisionInfo2D info)
+    parameters:
+    - id: f
+      type: Quantum.Core.FrameBase
+      description: The frame in which the collision happened.
+    - id: info
+      type: Quantum.CollisionInfo2D
+      description: The <xref href="Quantum.CollisionInfo2D" data-throw-if-not-resolved="false"></xref> with data about the collision.
+    content.vb: Public Sub OnCollision2D(f As FrameBase, info As CollisionInfo2D)
+  overload: Quantum.Core.PhysicsSystem2D.OnCollision2D*
+  implements:
+  - Quantum.Core.ICollisionCallbacks2D.OnCollision2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+- uid: Quantum.Core.PhysicsSystem2D.OnCollisionEnter2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  commentId: M:Quantum.Core.PhysicsSystem2D.OnCollisionEnter2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  id: OnCollisionEnter2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  parent: Quantum.Core.PhysicsSystem2D
+  langs:
+  - csharp
+  - vb
+  name: OnCollisionEnter2D(FrameBase, CollisionInfo2D)
+  nameWithType: PhysicsSystem2D.OnCollisionEnter2D(FrameBase, CollisionInfo2D)
+  fullName: Quantum.Core.PhysicsSystem2D.OnCollisionEnter2D(Quantum.Core.FrameBase, Quantum.CollisionInfo2D)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnCollisionEnter2D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9281
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: Called once two non-trigger 2D colliders start touching.
+  example: []
+  syntax:
+    content: public void OnCollisionEnter2D(FrameBase f, CollisionInfo2D info)
+    parameters:
+    - id: f
+      type: Quantum.Core.FrameBase
+      description: The frame in which the collision happened.
+    - id: info
+      type: Quantum.CollisionInfo2D
+      description: The <xref href="Quantum.CollisionInfo2D" data-throw-if-not-resolved="false"></xref> with data about the collision.
+    content.vb: Public Sub OnCollisionEnter2D(f As FrameBase, info As CollisionInfo2D)
+  overload: Quantum.Core.PhysicsSystem2D.OnCollisionEnter2D*
+  implements:
+  - Quantum.Core.ICollisionCallbacks2D.OnCollisionEnter2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+- uid: Quantum.Core.PhysicsSystem2D.OnCollisionExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  commentId: M:Quantum.Core.PhysicsSystem2D.OnCollisionExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  id: OnCollisionExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  parent: Quantum.Core.PhysicsSystem2D
+  langs:
+  - csharp
+  - vb
+  name: OnCollisionExit2D(FrameBase, ExitInfo2D)
+  nameWithType: PhysicsSystem2D.OnCollisionExit2D(FrameBase, ExitInfo2D)
+  fullName: Quantum.Core.PhysicsSystem2D.OnCollisionExit2D(Quantum.Core.FrameBase, Quantum.ExitInfo2D)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnCollisionExit2D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9286
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: Called once two non-trigger 2D colliders stop touching.
+  example: []
+  syntax:
+    content: public void OnCollisionExit2D(FrameBase f, ExitInfo2D info)
+    parameters:
+    - id: f
+      type: Quantum.Core.FrameBase
+      description: The frame in which the entities stopped touching.
+    - id: info
+      type: Quantum.ExitInfo2D
+      description: The <xref href="Quantum.ExitInfo2D" data-throw-if-not-resolved="false"></xref> with the entities that were touching.
+    content.vb: Public Sub OnCollisionExit2D(f As FrameBase, info As ExitInfo2D)
+  overload: Quantum.Core.PhysicsSystem2D.OnCollisionExit2D*
+  implements:
+  - Quantum.Core.ICollisionCallbacks2D.OnCollisionExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+- uid: Quantum.Core.PhysicsSystem2D.OnTrigger2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  commentId: M:Quantum.Core.PhysicsSystem2D.OnTrigger2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  id: OnTrigger2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  parent: Quantum.Core.PhysicsSystem2D
+  langs:
+  - csharp
+  - vb
+  name: OnTrigger2D(FrameBase, TriggerInfo2D)
+  nameWithType: PhysicsSystem2D.OnTrigger2D(FrameBase, TriggerInfo2D)
+  fullName: Quantum.Core.PhysicsSystem2D.OnTrigger2D(Quantum.Core.FrameBase, Quantum.TriggerInfo2D)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnTrigger2D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9291
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: Called once per frame while a non-trigger and a trigger 2D colliders are touching.
+  example: []
+  syntax:
+    content: public void OnTrigger2D(FrameBase f, TriggerInfo2D info)
+    parameters:
+    - id: f
+      type: Quantum.Core.FrameBase
+      description: The frame in which the collision happened.
+    - id: info
+      type: Quantum.TriggerInfo2D
+      description: The <xref href="Quantum.TriggerInfo2D" data-throw-if-not-resolved="false"></xref> with data about the trigger collision.
+    content.vb: Public Sub OnTrigger2D(f As FrameBase, info As TriggerInfo2D)
+  overload: Quantum.Core.PhysicsSystem2D.OnTrigger2D*
+  implements:
+  - Quantum.Core.ICollisionCallbacks2D.OnTrigger2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+- uid: Quantum.Core.PhysicsSystem2D.OnTriggerEnter2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  commentId: M:Quantum.Core.PhysicsSystem2D.OnTriggerEnter2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  id: OnTriggerEnter2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  parent: Quantum.Core.PhysicsSystem2D
+  langs:
+  - csharp
+  - vb
+  name: OnTriggerEnter2D(FrameBase, TriggerInfo2D)
+  nameWithType: PhysicsSystem2D.OnTriggerEnter2D(FrameBase, TriggerInfo2D)
+  fullName: Quantum.Core.PhysicsSystem2D.OnTriggerEnter2D(Quantum.Core.FrameBase, Quantum.TriggerInfo2D)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnTriggerEnter2D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9296
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: Called once a non-trigger and a trigger 2D colliders start touching.
+  example: []
+  syntax:
+    content: public void OnTriggerEnter2D(FrameBase f, TriggerInfo2D info)
+    parameters:
+    - id: f
+      type: Quantum.Core.FrameBase
+      description: The frame in which the collision happened.
+    - id: info
+      type: Quantum.TriggerInfo2D
+      description: The <xref href="Quantum.TriggerInfo2D" data-throw-if-not-resolved="false"></xref> with data about the trigger collision.
+    content.vb: Public Sub OnTriggerEnter2D(f As FrameBase, info As TriggerInfo2D)
+  overload: Quantum.Core.PhysicsSystem2D.OnTriggerEnter2D*
+  implements:
+  - Quantum.Core.ICollisionCallbacks2D.OnTriggerEnter2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+- uid: Quantum.Core.PhysicsSystem2D.OnTriggerExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  commentId: M:Quantum.Core.PhysicsSystem2D.OnTriggerExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  id: OnTriggerExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  parent: Quantum.Core.PhysicsSystem2D
+  langs:
+  - csharp
+  - vb
+  name: OnTriggerExit2D(FrameBase, ExitInfo2D)
+  nameWithType: PhysicsSystem2D.OnTriggerExit2D(FrameBase, ExitInfo2D)
+  fullName: Quantum.Core.PhysicsSystem2D.OnTriggerExit2D(Quantum.Core.FrameBase, Quantum.ExitInfo2D)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnTriggerExit2D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9301
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: Called once a non-trigger and a trigger 2D colliders stop touching.
+  example: []
+  syntax:
+    content: public void OnTriggerExit2D(FrameBase f, ExitInfo2D info)
+    parameters:
+    - id: f
+      type: Quantum.Core.FrameBase
+      description: The frame in which the entities stopped touching.
+    - id: info
+      type: Quantum.ExitInfo2D
+      description: The <xref href="Quantum.ExitInfo2D" data-throw-if-not-resolved="false"></xref> with the entities that were touching.
+    content.vb: Public Sub OnTriggerExit2D(f As FrameBase, info As ExitInfo2D)
+  overload: Quantum.Core.PhysicsSystem2D.OnTriggerExit2D*
+  implements:
+  - Quantum.Core.ICollisionCallbacks2D.OnTriggerExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+references:
+- uid: Quantum.Core
+  commentId: N:Quantum.Core
+  href: Quantum.html
+  name: Quantum.Core
+  nameWithType: Quantum.Core
+  fullName: Quantum.Core
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.SystemBase
+  commentId: T:Quantum.SystemBase
+  parent: Quantum
+  href: Quantum.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: Quantum.SystemBase
+- uid: Quantum.Core.ICollisionCallbacks2D
+  commentId: T:Quantum.Core.ICollisionCallbacks2D
+  parent: Quantum.Core
+  isExternal: true
+  name: ICollisionCallbacks2D
+  nameWithType: ICollisionCallbacks2D
+  fullName: Quantum.Core.ICollisionCallbacks2D
+- uid: Quantum.SystemBase.RuntimeIndex
+  commentId: P:Quantum.SystemBase.RuntimeIndex
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_RuntimeIndex
+  name: RuntimeIndex
+  nameWithType: SystemBase.RuntimeIndex
+  fullName: Quantum.SystemBase.RuntimeIndex
+- uid: Quantum.SystemBase.ParentSystem
+  commentId: P:Quantum.SystemBase.ParentSystem
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ParentSystem
+  name: ParentSystem
+  nameWithType: SystemBase.ParentSystem
+  fullName: Quantum.SystemBase.ParentSystem
+- uid: Quantum.SystemBase.ChildSystems
+  commentId: P:Quantum.SystemBase.ChildSystems
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ChildSystems
+  name: ChildSystems
+  nameWithType: SystemBase.ChildSystems
+  fullName: Quantum.SystemBase.ChildSystems
+- uid: Quantum.SystemBase.Hierarchy
+  commentId: P:Quantum.SystemBase.Hierarchy
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Hierarchy
+  name: Hierarchy
+  nameWithType: SystemBase.Hierarchy
+  fullName: Quantum.SystemBase.Hierarchy
+- uid: Quantum.SystemBase.StartEnabled
+  commentId: P:Quantum.SystemBase.StartEnabled
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_StartEnabled
+  name: StartEnabled
+  nameWithType: SystemBase.StartEnabled
+  fullName: Quantum.SystemBase.StartEnabled
+- uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  name: OnEnabled(Frame)
+  nameWithType: SystemBase.OnEnabled(Frame)
+  fullName: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  name: OnDisabled(Frame)
+  nameWithType: SystemBase.OnDisabled(Frame)
+  fullName: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: OnSchedule(Frame, TaskHandle)
+  nameWithType: SystemBase.OnSchedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.OnSchedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnInit(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  name: OnInit(Frame)
+  nameWithType: SystemBase.OnInit(Frame)
+  fullName: Quantum.SystemBase.OnInit(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.Core.PhysicsSystem2D.OnInit*
+  commentId: Overload:Quantum.Core.PhysicsSystem2D.OnInit
+  href: Quantum.Core.PhysicsSystem2D.html#Quantum_Core_PhysicsSystem2D_OnInit_Quantum_Frame_
+  name: OnInit
+  nameWithType: PhysicsSystem2D.OnInit
+  fullName: Quantum.Core.PhysicsSystem2D.OnInit
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: SystemBase.Schedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.PhysicsSystem2D.Schedule*
+  commentId: Overload:Quantum.Core.PhysicsSystem2D.Schedule
+  href: Quantum.Core.PhysicsSystem2D.html#Quantum_Core_PhysicsSystem2D_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule
+  nameWithType: PhysicsSystem2D.Schedule
+  fullName: Quantum.Core.PhysicsSystem2D.Schedule
+- uid: Quantum.Task.TaskHandle
+  commentId: T:Quantum.Task.TaskHandle
+  parent: Quantum.Task
+  isExternal: true
+  name: TaskHandle
+  nameWithType: TaskHandle
+  fullName: Quantum.Task.TaskHandle
+- uid: Quantum.Task
+  commentId: N:Quantum.Task
+  href: Quantum.html
+  name: Quantum.Task
+  nameWithType: Quantum.Task
+  fullName: Quantum.Task
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Task
+    name: Task
+    href: Quantum.Task.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Task
+    name: Task
+    href: Quantum.Task.html
+- uid: Quantum.CollisionInfo2D
+  commentId: T:Quantum.CollisionInfo2D
+  parent: Quantum
+  isExternal: true
+  name: CollisionInfo2D
+  nameWithType: CollisionInfo2D
+  fullName: Quantum.CollisionInfo2D
+- uid: Quantum.Core.PhysicsSystem2D.OnCollision2D*
+  commentId: Overload:Quantum.Core.PhysicsSystem2D.OnCollision2D
+  href: Quantum.Core.PhysicsSystem2D.html#Quantum_Core_PhysicsSystem2D_OnCollision2D_Quantum_Core_FrameBase_Quantum_CollisionInfo2D_
+  name: OnCollision2D
+  nameWithType: PhysicsSystem2D.OnCollision2D
+  fullName: Quantum.Core.PhysicsSystem2D.OnCollision2D
+- uid: Quantum.Core.ICollisionCallbacks2D.OnCollision2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  commentId: M:Quantum.Core.ICollisionCallbacks2D.OnCollision2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  parent: Quantum.Core.ICollisionCallbacks2D
+  isExternal: true
+  name: OnCollision2D(FrameBase, CollisionInfo2D)
+  nameWithType: ICollisionCallbacks2D.OnCollision2D(FrameBase, CollisionInfo2D)
+  fullName: Quantum.Core.ICollisionCallbacks2D.OnCollision2D(Quantum.Core.FrameBase, Quantum.CollisionInfo2D)
+  spec.csharp:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnCollision2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+    name: OnCollision2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CollisionInfo2D
+    name: CollisionInfo2D
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnCollision2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+    name: OnCollision2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CollisionInfo2D
+    name: CollisionInfo2D
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.FrameBase
+  commentId: T:Quantum.Core.FrameBase
+  parent: Quantum.Core
+  isExternal: true
+  name: FrameBase
+  nameWithType: FrameBase
+  fullName: Quantum.Core.FrameBase
+- uid: Quantum.Core.PhysicsSystem2D.OnCollisionEnter2D*
+  commentId: Overload:Quantum.Core.PhysicsSystem2D.OnCollisionEnter2D
+  href: Quantum.Core.PhysicsSystem2D.html#Quantum_Core_PhysicsSystem2D_OnCollisionEnter2D_Quantum_Core_FrameBase_Quantum_CollisionInfo2D_
+  name: OnCollisionEnter2D
+  nameWithType: PhysicsSystem2D.OnCollisionEnter2D
+  fullName: Quantum.Core.PhysicsSystem2D.OnCollisionEnter2D
+- uid: Quantum.Core.ICollisionCallbacks2D.OnCollisionEnter2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  commentId: M:Quantum.Core.ICollisionCallbacks2D.OnCollisionEnter2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+  parent: Quantum.Core.ICollisionCallbacks2D
+  isExternal: true
+  name: OnCollisionEnter2D(FrameBase, CollisionInfo2D)
+  nameWithType: ICollisionCallbacks2D.OnCollisionEnter2D(FrameBase, CollisionInfo2D)
+  fullName: Quantum.Core.ICollisionCallbacks2D.OnCollisionEnter2D(Quantum.Core.FrameBase, Quantum.CollisionInfo2D)
+  spec.csharp:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnCollisionEnter2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+    name: OnCollisionEnter2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CollisionInfo2D
+    name: CollisionInfo2D
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnCollisionEnter2D(Quantum.Core.FrameBase,Quantum.CollisionInfo2D)
+    name: OnCollisionEnter2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CollisionInfo2D
+    name: CollisionInfo2D
+    isExternal: true
+  - name: )
+- uid: Quantum.ExitInfo2D
+  commentId: T:Quantum.ExitInfo2D
+  parent: Quantum
+  isExternal: true
+  name: ExitInfo2D
+  nameWithType: ExitInfo2D
+  fullName: Quantum.ExitInfo2D
+- uid: Quantum.Core.PhysicsSystem2D.OnCollisionExit2D*
+  commentId: Overload:Quantum.Core.PhysicsSystem2D.OnCollisionExit2D
+  href: Quantum.Core.PhysicsSystem2D.html#Quantum_Core_PhysicsSystem2D_OnCollisionExit2D_Quantum_Core_FrameBase_Quantum_ExitInfo2D_
+  name: OnCollisionExit2D
+  nameWithType: PhysicsSystem2D.OnCollisionExit2D
+  fullName: Quantum.Core.PhysicsSystem2D.OnCollisionExit2D
+- uid: Quantum.Core.ICollisionCallbacks2D.OnCollisionExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  commentId: M:Quantum.Core.ICollisionCallbacks2D.OnCollisionExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  parent: Quantum.Core.ICollisionCallbacks2D
+  isExternal: true
+  name: OnCollisionExit2D(FrameBase, ExitInfo2D)
+  nameWithType: ICollisionCallbacks2D.OnCollisionExit2D(FrameBase, ExitInfo2D)
+  fullName: Quantum.Core.ICollisionCallbacks2D.OnCollisionExit2D(Quantum.Core.FrameBase, Quantum.ExitInfo2D)
+  spec.csharp:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnCollisionExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+    name: OnCollisionExit2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.ExitInfo2D
+    name: ExitInfo2D
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnCollisionExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+    name: OnCollisionExit2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.ExitInfo2D
+    name: ExitInfo2D
+    isExternal: true
+  - name: )
+- uid: Quantum.TriggerInfo2D
+  commentId: T:Quantum.TriggerInfo2D
+  parent: Quantum
+  isExternal: true
+  name: TriggerInfo2D
+  nameWithType: TriggerInfo2D
+  fullName: Quantum.TriggerInfo2D
+- uid: Quantum.Core.PhysicsSystem2D.OnTrigger2D*
+  commentId: Overload:Quantum.Core.PhysicsSystem2D.OnTrigger2D
+  href: Quantum.Core.PhysicsSystem2D.html#Quantum_Core_PhysicsSystem2D_OnTrigger2D_Quantum_Core_FrameBase_Quantum_TriggerInfo2D_
+  name: OnTrigger2D
+  nameWithType: PhysicsSystem2D.OnTrigger2D
+  fullName: Quantum.Core.PhysicsSystem2D.OnTrigger2D
+- uid: Quantum.Core.ICollisionCallbacks2D.OnTrigger2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  commentId: M:Quantum.Core.ICollisionCallbacks2D.OnTrigger2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  parent: Quantum.Core.ICollisionCallbacks2D
+  isExternal: true
+  name: OnTrigger2D(FrameBase, TriggerInfo2D)
+  nameWithType: ICollisionCallbacks2D.OnTrigger2D(FrameBase, TriggerInfo2D)
+  fullName: Quantum.Core.ICollisionCallbacks2D.OnTrigger2D(Quantum.Core.FrameBase, Quantum.TriggerInfo2D)
+  spec.csharp:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnTrigger2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+    name: OnTrigger2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TriggerInfo2D
+    name: TriggerInfo2D
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnTrigger2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+    name: OnTrigger2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TriggerInfo2D
+    name: TriggerInfo2D
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.PhysicsSystem2D.OnTriggerEnter2D*
+  commentId: Overload:Quantum.Core.PhysicsSystem2D.OnTriggerEnter2D
+  href: Quantum.Core.PhysicsSystem2D.html#Quantum_Core_PhysicsSystem2D_OnTriggerEnter2D_Quantum_Core_FrameBase_Quantum_TriggerInfo2D_
+  name: OnTriggerEnter2D
+  nameWithType: PhysicsSystem2D.OnTriggerEnter2D
+  fullName: Quantum.Core.PhysicsSystem2D.OnTriggerEnter2D
+- uid: Quantum.Core.ICollisionCallbacks2D.OnTriggerEnter2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  commentId: M:Quantum.Core.ICollisionCallbacks2D.OnTriggerEnter2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+  parent: Quantum.Core.ICollisionCallbacks2D
+  isExternal: true
+  name: OnTriggerEnter2D(FrameBase, TriggerInfo2D)
+  nameWithType: ICollisionCallbacks2D.OnTriggerEnter2D(FrameBase, TriggerInfo2D)
+  fullName: Quantum.Core.ICollisionCallbacks2D.OnTriggerEnter2D(Quantum.Core.FrameBase, Quantum.TriggerInfo2D)
+  spec.csharp:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnTriggerEnter2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+    name: OnTriggerEnter2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TriggerInfo2D
+    name: TriggerInfo2D
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnTriggerEnter2D(Quantum.Core.FrameBase,Quantum.TriggerInfo2D)
+    name: OnTriggerEnter2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TriggerInfo2D
+    name: TriggerInfo2D
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.PhysicsSystem2D.OnTriggerExit2D*
+  commentId: Overload:Quantum.Core.PhysicsSystem2D.OnTriggerExit2D
+  href: Quantum.Core.PhysicsSystem2D.html#Quantum_Core_PhysicsSystem2D_OnTriggerExit2D_Quantum_Core_FrameBase_Quantum_ExitInfo2D_
+  name: OnTriggerExit2D
+  nameWithType: PhysicsSystem2D.OnTriggerExit2D
+  fullName: Quantum.Core.PhysicsSystem2D.OnTriggerExit2D
+- uid: Quantum.Core.ICollisionCallbacks2D.OnTriggerExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  commentId: M:Quantum.Core.ICollisionCallbacks2D.OnTriggerExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+  parent: Quantum.Core.ICollisionCallbacks2D
+  isExternal: true
+  name: OnTriggerExit2D(FrameBase, ExitInfo2D)
+  nameWithType: ICollisionCallbacks2D.OnTriggerExit2D(FrameBase, ExitInfo2D)
+  fullName: Quantum.Core.ICollisionCallbacks2D.OnTriggerExit2D(Quantum.Core.FrameBase, Quantum.ExitInfo2D)
+  spec.csharp:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnTriggerExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+    name: OnTriggerExit2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.ExitInfo2D
+    name: ExitInfo2D
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.ICollisionCallbacks2D.OnTriggerExit2D(Quantum.Core.FrameBase,Quantum.ExitInfo2D)
+    name: OnTriggerExit2D
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.ExitInfo2D
+    name: ExitInfo2D
+    isExternal: true
+  - name: )

@@ -1,0 +1,1743 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.CallbackDispatcher
+  commentId: T:Quantum.CallbackDispatcher
+  id: CallbackDispatcher
+  parent: Quantum
+  children:
+  - Quantum.CallbackDispatcher.#ctor
+  - Quantum.CallbackDispatcher.#ctor(System.Collections.Generic.Dictionary{System.Type,System.Int32})
+  - Quantum.CallbackDispatcher.GetBuiltInTypes
+  - Quantum.CallbackDispatcher.Publish(Quantum.CallbackBase)
+  langs:
+  - csharp
+  - vb
+  name: CallbackDispatcher
+  nameWithType: CallbackDispatcher
+  fullName: Quantum.CallbackDispatcher
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CallbackDispatcher
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2511
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    A subscribe and publish pattern for Quantum callbacks.
+
+    A Quantum callback is a invocation from inside the simulation during certain situations.
+  example: []
+  syntax:
+    content: 'public class CallbackDispatcher : DispatcherBase, ICallbackDispatcher'
+    content.vb: Public Class CallbackDispatcher Inherits DispatcherBase Implements ICallbackDispatcher
+  inheritance:
+  - System.Object
+  - Quantum.DispatcherBase
+  implements:
+  - Quantum.ICallbackDispatcher
+  inheritedMembers:
+  - Quantum.DispatcherBase.GetIndex``1
+  - Quantum.DispatcherBase.Subscribe``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}},System.Boolean,System.UInt32,Quantum.DispatchableFilter)
+  - Quantum.DispatcherBase.Unsubscribe(Quantum.DispatcherSubscription)
+  - Quantum.DispatcherBase.UnsubscribeHandler``1(Quantum.DispatchableHandler{{TDispatchable}})
+  - Quantum.DispatcherBase.UnsubscribeListener``1(System.Object)
+  - Quantum.DispatcherBase.SubscribeManual``1(Quantum.DispatchableHandler{{TDispatchable}},System.Boolean,Quantum.DispatchableFilter)
+  - Quantum.DispatcherBase.SubscribeManual``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}},System.Boolean,Quantum.DispatchableFilter)
+  - Quantum.DispatcherBase.Clear
+  - Quantum.DispatcherBase.RemoveDeadListeners
+  - Quantum.DispatcherBase.UnsubscribeListener(System.Object)
+  - Quantum.DispatcherBase.GetListenerStatus(System.Object,System.UInt32)
+  - Quantum.DispatcherBase.InvokeMeta``1({TDispatchable})
+  - Quantum.DispatcherBase.InvokeMeta(System.Int32,Quantum.IDispatchable)
+  - Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}},Quantum.DispatchableFilter,System.UInt32)
+  - Quantum.DispatcherBase.SubscribeManualInternal``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}},Quantum.DispatchableFilter,System.Boolean)
+  - Quantum.DispatcherBase.UnsubscribeInternal``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}})
+  - Quantum.DispatcherBase.Next
+  - Quantum.DispatcherBase.IsEmpty
+- uid: Quantum.CallbackDispatcher.GetBuiltInTypes
+  commentId: M:Quantum.CallbackDispatcher.GetBuiltInTypes
+  id: GetBuiltInTypes
+  parent: Quantum.CallbackDispatcher
+  langs:
+  - csharp
+  - vb
+  name: GetBuiltInTypes()
+  nameWithType: CallbackDispatcher.GetBuiltInTypes()
+  fullName: Quantum.CallbackDispatcher.GetBuiltInTypes()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetBuiltInTypes
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2516
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Assembles a dictionary of built-in Quantum callback types.
+  example: []
+  syntax:
+    content: protected static Dictionary<Type, int> GetBuiltInTypes()
+    return:
+      type: System.Collections.Generic.Dictionary{System.Type,System.Int32}
+      description: Callback mapping
+    content.vb: Protected Shared Function GetBuiltInTypes() As Dictionary(Of Type, Integer)
+  overload: Quantum.CallbackDispatcher.GetBuiltInTypes*
+- uid: Quantum.CallbackDispatcher.#ctor
+  commentId: M:Quantum.CallbackDispatcher.#ctor
+  id: '#ctor'
+  parent: Quantum.CallbackDispatcher
+  langs:
+  - csharp
+  - vb
+  name: CallbackDispatcher()
+  nameWithType: CallbackDispatcher.CallbackDispatcher()
+  fullName: Quantum.CallbackDispatcher.CallbackDispatcher()
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2542
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Constructor calls <xref href="Quantum.CallbackDispatcher.GetBuiltInTypes" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public CallbackDispatcher()
+    content.vb: Public Sub New()
+  overload: Quantum.CallbackDispatcher.#ctor*
+  nameWithType.vb: CallbackDispatcher.New()
+  fullName.vb: Quantum.CallbackDispatcher.New()
+  name.vb: New()
+- uid: Quantum.CallbackDispatcher.#ctor(System.Collections.Generic.Dictionary{System.Type,System.Int32})
+  commentId: M:Quantum.CallbackDispatcher.#ctor(System.Collections.Generic.Dictionary{System.Type,System.Int32})
+  id: '#ctor(System.Collections.Generic.Dictionary{System.Type,System.Int32})'
+  parent: Quantum.CallbackDispatcher
+  langs:
+  - csharp
+  - vb
+  name: CallbackDispatcher(Dictionary<Type, int>)
+  nameWithType: CallbackDispatcher.CallbackDispatcher(Dictionary<Type, int>)
+  fullName: Quantum.CallbackDispatcher.CallbackDispatcher(System.Collections.Generic.Dictionary<System.Type, int>)
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2547
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Constructor to add the callback type mapping manually.
+  example: []
+  syntax:
+    content: protected CallbackDispatcher(Dictionary<Type, int> callbackTypes)
+    parameters:
+    - id: callbackTypes
+      type: System.Collections.Generic.Dictionary{System.Type,System.Int32}
+      description: ''
+    content.vb: Protected Sub New(callbackTypes As Dictionary(Of Type, Integer))
+  overload: Quantum.CallbackDispatcher.#ctor*
+  nameWithType.vb: CallbackDispatcher.New(Dictionary(Of Type, Integer))
+  fullName.vb: Quantum.CallbackDispatcher.New(System.Collections.Generic.Dictionary(Of System.Type, Integer))
+  name.vb: New(Dictionary(Of Type, Integer))
+- uid: Quantum.CallbackDispatcher.Publish(Quantum.CallbackBase)
+  commentId: M:Quantum.CallbackDispatcher.Publish(Quantum.CallbackBase)
+  id: Publish(Quantum.CallbackBase)
+  parent: Quantum.CallbackDispatcher
+  langs:
+  - csharp
+  - vb
+  name: Publish(CallbackBase)
+  nameWithType: CallbackDispatcher.Publish(CallbackBase)
+  fullName: Quantum.CallbackDispatcher.Publish(Quantum.CallbackBase)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Publish
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2553
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Publish a callback.
+  example: []
+  syntax:
+    content: public bool Publish(CallbackBase e)
+    parameters:
+    - id: e
+      type: Quantum.CallbackBase
+      description: ''
+    return:
+      type: System.Boolean
+      description: True if the callback has been handled by any subscriber
+    content.vb: Public Function Publish(e As CallbackBase) As Boolean
+  overload: Quantum.CallbackDispatcher.Publish*
+  implements:
+  - Quantum.ICallbackDispatcher.Publish(Quantum.CallbackBase)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.DispatcherBase
+  commentId: T:Quantum.DispatcherBase
+  parent: Quantum
+  isExternal: true
+  name: DispatcherBase
+  nameWithType: DispatcherBase
+  fullName: Quantum.DispatcherBase
+- uid: Quantum.ICallbackDispatcher
+  commentId: T:Quantum.ICallbackDispatcher
+  parent: Quantum
+  isExternal: true
+  name: ICallbackDispatcher
+  nameWithType: ICallbackDispatcher
+  fullName: Quantum.ICallbackDispatcher
+- uid: Quantum.DispatcherBase.GetIndex``1
+  commentId: M:Quantum.DispatcherBase.GetIndex``1
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  name: GetIndex<TDispatchable>()
+  nameWithType: DispatcherBase.GetIndex<TDispatchable>()
+  fullName: Quantum.DispatcherBase.GetIndex<TDispatchable>()
+  nameWithType.vb: DispatcherBase.GetIndex(Of TDispatchable)()
+  fullName.vb: Quantum.DispatcherBase.GetIndex(Of TDispatchable)()
+  name.vb: GetIndex(Of TDispatchable)()
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.GetIndex``1
+    name: GetIndex
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.GetIndex``1
+    name: GetIndex
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.DispatcherBase.Subscribe``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}},System.Boolean,System.UInt32,Quantum.DispatchableFilter)
+  commentId: M:Quantum.DispatcherBase.Subscribe``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,System.UInt32,Quantum.DispatchableFilter)
+  parent: Quantum.DispatcherBase
+  definition: Quantum.DispatcherBase.Subscribe``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,System.UInt32,Quantum.DispatchableFilter)
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: Subscribe<TDispatchable>(object, DispatchableHandler<TDispatchable>, bool, uint, DispatchableFilter)
+  nameWithType: DispatcherBase.Subscribe<TDispatchable>(object, DispatchableHandler<TDispatchable>, bool, uint, DispatchableFilter)
+  fullName: Quantum.DispatcherBase.Subscribe<TDispatchable>(object, Quantum.DispatchableHandler<TDispatchable>, bool, uint, Quantum.DispatchableFilter)
+  nameWithType.vb: DispatcherBase.Subscribe(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), Boolean, UInteger, DispatchableFilter)
+  fullName.vb: Quantum.DispatcherBase.Subscribe(Of TDispatchable)(Object, Quantum.DispatchableHandler(Of TDispatchable), Boolean, UInteger, Quantum.DispatchableFilter)
+  name.vb: Subscribe(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), Boolean, UInteger, DispatchableFilter)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.Subscribe``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,System.UInt32,Quantum.DispatchableFilter)
+    name: Subscribe
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.Subscribe``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,System.UInt32,Quantum.DispatchableFilter)
+    name: Subscribe
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+- uid: Quantum.DispatcherBase.Unsubscribe(Quantum.DispatcherSubscription)
+  commentId: M:Quantum.DispatcherBase.Unsubscribe(Quantum.DispatcherSubscription)
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  name: Unsubscribe(DispatcherSubscription)
+  nameWithType: DispatcherBase.Unsubscribe(DispatcherSubscription)
+  fullName: Quantum.DispatcherBase.Unsubscribe(Quantum.DispatcherSubscription)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.Unsubscribe(Quantum.DispatcherSubscription)
+    name: Unsubscribe
+    isExternal: true
+  - name: (
+  - uid: Quantum.DispatcherSubscription
+    name: DispatcherSubscription
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.Unsubscribe(Quantum.DispatcherSubscription)
+    name: Unsubscribe
+    isExternal: true
+  - name: (
+  - uid: Quantum.DispatcherSubscription
+    name: DispatcherSubscription
+    isExternal: true
+  - name: )
+- uid: Quantum.DispatcherBase.UnsubscribeHandler``1(Quantum.DispatchableHandler{{TDispatchable}})
+  commentId: M:Quantum.DispatcherBase.UnsubscribeHandler``1(Quantum.DispatchableHandler{``0})
+  parent: Quantum.DispatcherBase
+  definition: Quantum.DispatcherBase.UnsubscribeHandler``1(Quantum.DispatchableHandler{``0})
+  name: UnsubscribeHandler<TDispatchable>(DispatchableHandler<TDispatchable>)
+  nameWithType: DispatcherBase.UnsubscribeHandler<TDispatchable>(DispatchableHandler<TDispatchable>)
+  fullName: Quantum.DispatcherBase.UnsubscribeHandler<TDispatchable>(Quantum.DispatchableHandler<TDispatchable>)
+  nameWithType.vb: DispatcherBase.UnsubscribeHandler(Of TDispatchable)(DispatchableHandler(Of TDispatchable))
+  fullName.vb: Quantum.DispatcherBase.UnsubscribeHandler(Of TDispatchable)(Quantum.DispatchableHandler(Of TDispatchable))
+  name.vb: UnsubscribeHandler(Of TDispatchable)(DispatchableHandler(Of TDispatchable))
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.UnsubscribeHandler``1(Quantum.DispatchableHandler{``0})
+    name: UnsubscribeHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.UnsubscribeHandler``1(Quantum.DispatchableHandler{``0})
+    name: UnsubscribeHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: )
+- uid: Quantum.DispatcherBase.UnsubscribeListener``1(System.Object)
+  commentId: M:Quantum.DispatcherBase.UnsubscribeListener``1(System.Object)
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: UnsubscribeListener<TDispatchable>(object)
+  nameWithType: DispatcherBase.UnsubscribeListener<TDispatchable>(object)
+  fullName: Quantum.DispatcherBase.UnsubscribeListener<TDispatchable>(object)
+  nameWithType.vb: DispatcherBase.UnsubscribeListener(Of TDispatchable)(Object)
+  fullName.vb: Quantum.DispatcherBase.UnsubscribeListener(Of TDispatchable)(Object)
+  name.vb: UnsubscribeListener(Of TDispatchable)(Object)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.UnsubscribeListener``1(System.Object)
+    name: UnsubscribeListener
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.UnsubscribeListener``1(System.Object)
+    name: UnsubscribeListener
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Quantum.DispatcherBase.SubscribeManual``1(Quantum.DispatchableHandler{{TDispatchable}},System.Boolean,Quantum.DispatchableFilter)
+  commentId: M:Quantum.DispatcherBase.SubscribeManual``1(Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+  parent: Quantum.DispatcherBase
+  definition: Quantum.DispatcherBase.SubscribeManual``1(Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: SubscribeManual<TDispatchable>(DispatchableHandler<TDispatchable>, bool, DispatchableFilter)
+  nameWithType: DispatcherBase.SubscribeManual<TDispatchable>(DispatchableHandler<TDispatchable>, bool, DispatchableFilter)
+  fullName: Quantum.DispatcherBase.SubscribeManual<TDispatchable>(Quantum.DispatchableHandler<TDispatchable>, bool, Quantum.DispatchableFilter)
+  nameWithType.vb: DispatcherBase.SubscribeManual(Of TDispatchable)(DispatchableHandler(Of TDispatchable), Boolean, DispatchableFilter)
+  fullName.vb: Quantum.DispatcherBase.SubscribeManual(Of TDispatchable)(Quantum.DispatchableHandler(Of TDispatchable), Boolean, Quantum.DispatchableFilter)
+  name.vb: SubscribeManual(Of TDispatchable)(DispatchableHandler(Of TDispatchable), Boolean, DispatchableFilter)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.SubscribeManual``1(Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+    name: SubscribeManual
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.SubscribeManual``1(Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+    name: SubscribeManual
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+- uid: Quantum.DispatcherBase.SubscribeManual``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}},System.Boolean,Quantum.DispatchableFilter)
+  commentId: M:Quantum.DispatcherBase.SubscribeManual``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+  parent: Quantum.DispatcherBase
+  definition: Quantum.DispatcherBase.SubscribeManual``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: SubscribeManual<TDispatchable>(object, DispatchableHandler<TDispatchable>, bool, DispatchableFilter)
+  nameWithType: DispatcherBase.SubscribeManual<TDispatchable>(object, DispatchableHandler<TDispatchable>, bool, DispatchableFilter)
+  fullName: Quantum.DispatcherBase.SubscribeManual<TDispatchable>(object, Quantum.DispatchableHandler<TDispatchable>, bool, Quantum.DispatchableFilter)
+  nameWithType.vb: DispatcherBase.SubscribeManual(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), Boolean, DispatchableFilter)
+  fullName.vb: Quantum.DispatcherBase.SubscribeManual(Of TDispatchable)(Object, Quantum.DispatchableHandler(Of TDispatchable), Boolean, Quantum.DispatchableFilter)
+  name.vb: SubscribeManual(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), Boolean, DispatchableFilter)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.SubscribeManual``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+    name: SubscribeManual
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.SubscribeManual``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+    name: SubscribeManual
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+- uid: Quantum.DispatcherBase.Clear
+  commentId: M:Quantum.DispatcherBase.Clear
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  name: Clear()
+  nameWithType: DispatcherBase.Clear()
+  fullName: Quantum.DispatcherBase.Clear()
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.DispatcherBase.RemoveDeadListeners
+  commentId: M:Quantum.DispatcherBase.RemoveDeadListeners
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  name: RemoveDeadListeners()
+  nameWithType: DispatcherBase.RemoveDeadListeners()
+  fullName: Quantum.DispatcherBase.RemoveDeadListeners()
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.RemoveDeadListeners
+    name: RemoveDeadListeners
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.RemoveDeadListeners
+    name: RemoveDeadListeners
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.DispatcherBase.UnsubscribeListener(System.Object)
+  commentId: M:Quantum.DispatcherBase.UnsubscribeListener(System.Object)
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: UnsubscribeListener(object)
+  nameWithType: DispatcherBase.UnsubscribeListener(object)
+  fullName: Quantum.DispatcherBase.UnsubscribeListener(object)
+  nameWithType.vb: DispatcherBase.UnsubscribeListener(Object)
+  fullName.vb: Quantum.DispatcherBase.UnsubscribeListener(Object)
+  name.vb: UnsubscribeListener(Object)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.UnsubscribeListener(System.Object)
+    name: UnsubscribeListener
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.UnsubscribeListener(System.Object)
+    name: UnsubscribeListener
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Quantum.DispatcherBase.GetListenerStatus(System.Object,System.UInt32)
+  commentId: M:Quantum.DispatcherBase.GetListenerStatus(System.Object,System.UInt32)
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: GetListenerStatus(object, uint)
+  nameWithType: DispatcherBase.GetListenerStatus(object, uint)
+  fullName: Quantum.DispatcherBase.GetListenerStatus(object, uint)
+  nameWithType.vb: DispatcherBase.GetListenerStatus(Object, UInteger)
+  fullName.vb: Quantum.DispatcherBase.GetListenerStatus(Object, UInteger)
+  name.vb: GetListenerStatus(Object, UInteger)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.GetListenerStatus(System.Object,System.UInt32)
+    name: GetListenerStatus
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.GetListenerStatus(System.Object,System.UInt32)
+    name: GetListenerStatus
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: Quantum.DispatcherBase.InvokeMeta``1({TDispatchable})
+  commentId: M:Quantum.DispatcherBase.InvokeMeta``1(``0)
+  parent: Quantum.DispatcherBase
+  definition: Quantum.DispatcherBase.InvokeMeta``1(``0)
+  name: InvokeMeta<TDispatchable>(TDispatchable)
+  nameWithType: DispatcherBase.InvokeMeta<TDispatchable>(TDispatchable)
+  fullName: Quantum.DispatcherBase.InvokeMeta<TDispatchable>(TDispatchable)
+  nameWithType.vb: DispatcherBase.InvokeMeta(Of TDispatchable)(TDispatchable)
+  fullName.vb: Quantum.DispatcherBase.InvokeMeta(Of TDispatchable)(TDispatchable)
+  name.vb: InvokeMeta(Of TDispatchable)(TDispatchable)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.InvokeMeta``1(``0)
+    name: InvokeMeta
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - name: TDispatchable
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.InvokeMeta``1(``0)
+    name: InvokeMeta
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - name: TDispatchable
+  - name: )
+- uid: Quantum.DispatcherBase.InvokeMeta(System.Int32,Quantum.IDispatchable)
+  commentId: M:Quantum.DispatcherBase.InvokeMeta(System.Int32,Quantum.IDispatchable)
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: InvokeMeta(int, IDispatchable)
+  nameWithType: DispatcherBase.InvokeMeta(int, IDispatchable)
+  fullName: Quantum.DispatcherBase.InvokeMeta(int, Quantum.IDispatchable)
+  nameWithType.vb: DispatcherBase.InvokeMeta(Integer, IDispatchable)
+  fullName.vb: Quantum.DispatcherBase.InvokeMeta(Integer, Quantum.IDispatchable)
+  name.vb: InvokeMeta(Integer, IDispatchable)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.InvokeMeta(System.Int32,Quantum.IDispatchable)
+    name: InvokeMeta
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.IDispatchable
+    name: IDispatchable
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.InvokeMeta(System.Int32,Quantum.IDispatchable)
+    name: InvokeMeta
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.IDispatchable
+    name: IDispatchable
+    isExternal: true
+  - name: )
+- uid: Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}},Quantum.DispatchableFilter,System.UInt32)
+  commentId: M:Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.UInt32)
+  parent: Quantum.DispatcherBase
+  definition: Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.UInt32)
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: SubscribeInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>, DispatchableFilter, uint)
+  nameWithType: DispatcherBase.SubscribeInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>, DispatchableFilter, uint)
+  fullName: Quantum.DispatcherBase.SubscribeInternal<TDispatchable>(object, Quantum.DispatchableHandler<TDispatchable>, Quantum.DispatchableFilter, uint)
+  nameWithType.vb: DispatcherBase.SubscribeInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), DispatchableFilter, UInteger)
+  fullName.vb: Quantum.DispatcherBase.SubscribeInternal(Of TDispatchable)(Object, Quantum.DispatchableHandler(Of TDispatchable), Quantum.DispatchableFilter, UInteger)
+  name.vb: SubscribeInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), DispatchableFilter, UInteger)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.UInt32)
+    name: SubscribeInternal
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.UInt32)
+    name: SubscribeInternal
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: Quantum.DispatcherBase.SubscribeManualInternal``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}},Quantum.DispatchableFilter,System.Boolean)
+  commentId: M:Quantum.DispatcherBase.SubscribeManualInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.Boolean)
+  parent: Quantum.DispatcherBase
+  definition: Quantum.DispatcherBase.SubscribeManualInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.Boolean)
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: SubscribeManualInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>, DispatchableFilter, bool)
+  nameWithType: DispatcherBase.SubscribeManualInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>, DispatchableFilter, bool)
+  fullName: Quantum.DispatcherBase.SubscribeManualInternal<TDispatchable>(object, Quantum.DispatchableHandler<TDispatchable>, Quantum.DispatchableFilter, bool)
+  nameWithType.vb: DispatcherBase.SubscribeManualInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), DispatchableFilter, Boolean)
+  fullName.vb: Quantum.DispatcherBase.SubscribeManualInternal(Of TDispatchable)(Object, Quantum.DispatchableHandler(Of TDispatchable), Quantum.DispatchableFilter, Boolean)
+  name.vb: SubscribeManualInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), DispatchableFilter, Boolean)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.SubscribeManualInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.Boolean)
+    name: SubscribeManualInternal
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.SubscribeManualInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.Boolean)
+    name: SubscribeManualInternal
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Quantum.DispatcherBase.UnsubscribeInternal``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}})
+  commentId: M:Quantum.DispatcherBase.UnsubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0})
+  parent: Quantum.DispatcherBase
+  definition: Quantum.DispatcherBase.UnsubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0})
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: UnsubscribeInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>)
+  nameWithType: DispatcherBase.UnsubscribeInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>)
+  fullName: Quantum.DispatcherBase.UnsubscribeInternal<TDispatchable>(object, Quantum.DispatchableHandler<TDispatchable>)
+  nameWithType.vb: DispatcherBase.UnsubscribeInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable))
+  fullName.vb: Quantum.DispatcherBase.UnsubscribeInternal(Of TDispatchable)(Object, Quantum.DispatchableHandler(Of TDispatchable))
+  name.vb: UnsubscribeInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable))
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.UnsubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0})
+    name: UnsubscribeInternal
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.UnsubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0})
+    name: UnsubscribeInternal
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: )
+- uid: Quantum.DispatcherBase.Next
+  commentId: P:Quantum.DispatcherBase.Next
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  name: Next
+  nameWithType: DispatcherBase.Next
+  fullName: Quantum.DispatcherBase.Next
+- uid: Quantum.DispatcherBase.IsEmpty
+  commentId: P:Quantum.DispatcherBase.IsEmpty
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  name: IsEmpty
+  nameWithType: DispatcherBase.IsEmpty
+  fullName: Quantum.DispatcherBase.IsEmpty
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.DispatcherBase.Subscribe``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,System.UInt32,Quantum.DispatchableFilter)
+  commentId: M:Quantum.DispatcherBase.Subscribe``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,System.UInt32,Quantum.DispatchableFilter)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: Subscribe<TDispatchable>(object, DispatchableHandler<TDispatchable>, bool, uint, DispatchableFilter)
+  nameWithType: DispatcherBase.Subscribe<TDispatchable>(object, DispatchableHandler<TDispatchable>, bool, uint, DispatchableFilter)
+  fullName: Quantum.DispatcherBase.Subscribe<TDispatchable>(object, Quantum.DispatchableHandler<TDispatchable>, bool, uint, Quantum.DispatchableFilter)
+  nameWithType.vb: DispatcherBase.Subscribe(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), Boolean, UInteger, DispatchableFilter)
+  fullName.vb: Quantum.DispatcherBase.Subscribe(Of TDispatchable)(Object, Quantum.DispatchableHandler(Of TDispatchable), Boolean, UInteger, Quantum.DispatchableFilter)
+  name.vb: Subscribe(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), Boolean, UInteger, DispatchableFilter)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.Subscribe``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,System.UInt32,Quantum.DispatchableFilter)
+    name: Subscribe
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.Subscribe``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,System.UInt32,Quantum.DispatchableFilter)
+    name: Subscribe
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+- uid: Quantum.DispatcherBase.UnsubscribeHandler``1(Quantum.DispatchableHandler{``0})
+  commentId: M:Quantum.DispatcherBase.UnsubscribeHandler``1(Quantum.DispatchableHandler{``0})
+  isExternal: true
+  name: UnsubscribeHandler<TDispatchable>(DispatchableHandler<TDispatchable>)
+  nameWithType: DispatcherBase.UnsubscribeHandler<TDispatchable>(DispatchableHandler<TDispatchable>)
+  fullName: Quantum.DispatcherBase.UnsubscribeHandler<TDispatchable>(Quantum.DispatchableHandler<TDispatchable>)
+  nameWithType.vb: DispatcherBase.UnsubscribeHandler(Of TDispatchable)(DispatchableHandler(Of TDispatchable))
+  fullName.vb: Quantum.DispatcherBase.UnsubscribeHandler(Of TDispatchable)(Quantum.DispatchableHandler(Of TDispatchable))
+  name.vb: UnsubscribeHandler(Of TDispatchable)(DispatchableHandler(Of TDispatchable))
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.UnsubscribeHandler``1(Quantum.DispatchableHandler{``0})
+    name: UnsubscribeHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.UnsubscribeHandler``1(Quantum.DispatchableHandler{``0})
+    name: UnsubscribeHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: )
+- uid: Quantum.DispatcherBase.SubscribeManual``1(Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+  commentId: M:Quantum.DispatcherBase.SubscribeManual``1(Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: SubscribeManual<TDispatchable>(DispatchableHandler<TDispatchable>, bool, DispatchableFilter)
+  nameWithType: DispatcherBase.SubscribeManual<TDispatchable>(DispatchableHandler<TDispatchable>, bool, DispatchableFilter)
+  fullName: Quantum.DispatcherBase.SubscribeManual<TDispatchable>(Quantum.DispatchableHandler<TDispatchable>, bool, Quantum.DispatchableFilter)
+  nameWithType.vb: DispatcherBase.SubscribeManual(Of TDispatchable)(DispatchableHandler(Of TDispatchable), Boolean, DispatchableFilter)
+  fullName.vb: Quantum.DispatcherBase.SubscribeManual(Of TDispatchable)(Quantum.DispatchableHandler(Of TDispatchable), Boolean, Quantum.DispatchableFilter)
+  name.vb: SubscribeManual(Of TDispatchable)(DispatchableHandler(Of TDispatchable), Boolean, DispatchableFilter)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.SubscribeManual``1(Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+    name: SubscribeManual
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.SubscribeManual``1(Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+    name: SubscribeManual
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+- uid: Quantum.DispatcherBase.SubscribeManual``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+  commentId: M:Quantum.DispatcherBase.SubscribeManual``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: SubscribeManual<TDispatchable>(object, DispatchableHandler<TDispatchable>, bool, DispatchableFilter)
+  nameWithType: DispatcherBase.SubscribeManual<TDispatchable>(object, DispatchableHandler<TDispatchable>, bool, DispatchableFilter)
+  fullName: Quantum.DispatcherBase.SubscribeManual<TDispatchable>(object, Quantum.DispatchableHandler<TDispatchable>, bool, Quantum.DispatchableFilter)
+  nameWithType.vb: DispatcherBase.SubscribeManual(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), Boolean, DispatchableFilter)
+  fullName.vb: Quantum.DispatcherBase.SubscribeManual(Of TDispatchable)(Object, Quantum.DispatchableHandler(Of TDispatchable), Boolean, Quantum.DispatchableFilter)
+  name.vb: SubscribeManual(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), Boolean, DispatchableFilter)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.SubscribeManual``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+    name: SubscribeManual
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.SubscribeManual``1(System.Object,Quantum.DispatchableHandler{``0},System.Boolean,Quantum.DispatchableFilter)
+    name: SubscribeManual
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: )
+- uid: Quantum.DispatcherBase.InvokeMeta``1(``0)
+  commentId: M:Quantum.DispatcherBase.InvokeMeta``1(``0)
+  isExternal: true
+  name: InvokeMeta<TDispatchable>(TDispatchable)
+  nameWithType: DispatcherBase.InvokeMeta<TDispatchable>(TDispatchable)
+  fullName: Quantum.DispatcherBase.InvokeMeta<TDispatchable>(TDispatchable)
+  nameWithType.vb: DispatcherBase.InvokeMeta(Of TDispatchable)(TDispatchable)
+  fullName.vb: Quantum.DispatcherBase.InvokeMeta(Of TDispatchable)(TDispatchable)
+  name.vb: InvokeMeta(Of TDispatchable)(TDispatchable)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.InvokeMeta``1(``0)
+    name: InvokeMeta
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - name: TDispatchable
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.InvokeMeta``1(``0)
+    name: InvokeMeta
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - name: TDispatchable
+  - name: )
+- uid: Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.UInt32)
+  commentId: M:Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.UInt32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: SubscribeInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>, DispatchableFilter, uint)
+  nameWithType: DispatcherBase.SubscribeInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>, DispatchableFilter, uint)
+  fullName: Quantum.DispatcherBase.SubscribeInternal<TDispatchable>(object, Quantum.DispatchableHandler<TDispatchable>, Quantum.DispatchableFilter, uint)
+  nameWithType.vb: DispatcherBase.SubscribeInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), DispatchableFilter, UInteger)
+  fullName.vb: Quantum.DispatcherBase.SubscribeInternal(Of TDispatchable)(Object, Quantum.DispatchableHandler(Of TDispatchable), Quantum.DispatchableFilter, UInteger)
+  name.vb: SubscribeInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), DispatchableFilter, UInteger)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.UInt32)
+    name: SubscribeInternal
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.UInt32)
+    name: SubscribeInternal
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: Quantum.DispatcherBase.SubscribeManualInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.Boolean)
+  commentId: M:Quantum.DispatcherBase.SubscribeManualInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.Boolean)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: SubscribeManualInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>, DispatchableFilter, bool)
+  nameWithType: DispatcherBase.SubscribeManualInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>, DispatchableFilter, bool)
+  fullName: Quantum.DispatcherBase.SubscribeManualInternal<TDispatchable>(object, Quantum.DispatchableHandler<TDispatchable>, Quantum.DispatchableFilter, bool)
+  nameWithType.vb: DispatcherBase.SubscribeManualInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), DispatchableFilter, Boolean)
+  fullName.vb: Quantum.DispatcherBase.SubscribeManualInternal(Of TDispatchable)(Object, Quantum.DispatchableHandler(Of TDispatchable), Quantum.DispatchableFilter, Boolean)
+  name.vb: SubscribeManualInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable), DispatchableFilter, Boolean)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.SubscribeManualInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.Boolean)
+    name: SubscribeManualInternal
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.SubscribeManualInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.Boolean)
+    name: SubscribeManualInternal
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableFilter
+    name: DispatchableFilter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Quantum.DispatcherBase.UnsubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0})
+  commentId: M:Quantum.DispatcherBase.UnsubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: UnsubscribeInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>)
+  nameWithType: DispatcherBase.UnsubscribeInternal<TDispatchable>(object, DispatchableHandler<TDispatchable>)
+  fullName: Quantum.DispatcherBase.UnsubscribeInternal<TDispatchable>(object, Quantum.DispatchableHandler<TDispatchable>)
+  nameWithType.vb: DispatcherBase.UnsubscribeInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable))
+  fullName.vb: Quantum.DispatcherBase.UnsubscribeInternal(Of TDispatchable)(Object, Quantum.DispatchableHandler(Of TDispatchable))
+  name.vb: UnsubscribeInternal(Of TDispatchable)(Object, DispatchableHandler(Of TDispatchable))
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.UnsubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0})
+    name: UnsubscribeInternal
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.UnsubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0})
+    name: UnsubscribeInternal
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Quantum.DispatchableHandler`1
+    name: DispatchableHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: )
+- uid: Quantum.CallbackDispatcher.GetBuiltInTypes*
+  commentId: Overload:Quantum.CallbackDispatcher.GetBuiltInTypes
+  href: Quantum.CallbackDispatcher.html#Quantum_CallbackDispatcher_GetBuiltInTypes
+  name: GetBuiltInTypes
+  nameWithType: CallbackDispatcher.GetBuiltInTypes
+  fullName: Quantum.CallbackDispatcher.GetBuiltInTypes
+- uid: System.Collections.Generic.Dictionary{System.Type,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.Type,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Type, int>
+  nameWithType: Dictionary<Type, int>
+  fullName: System.Collections.Generic.Dictionary<System.Type, int>
+  nameWithType.vb: Dictionary(Of Type, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Type, Integer)
+  name.vb: Dictionary(Of Type, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Quantum.CallbackDispatcher.GetBuiltInTypes
+  commentId: M:Quantum.CallbackDispatcher.GetBuiltInTypes
+  href: Quantum.CallbackDispatcher.html#Quantum_CallbackDispatcher_GetBuiltInTypes
+  name: GetBuiltInTypes()
+  nameWithType: CallbackDispatcher.GetBuiltInTypes()
+  fullName: Quantum.CallbackDispatcher.GetBuiltInTypes()
+  spec.csharp:
+  - uid: Quantum.CallbackDispatcher.GetBuiltInTypes
+    name: GetBuiltInTypes
+    href: Quantum.CallbackDispatcher.html#Quantum_CallbackDispatcher_GetBuiltInTypes
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.CallbackDispatcher.GetBuiltInTypes
+    name: GetBuiltInTypes
+    href: Quantum.CallbackDispatcher.html#Quantum_CallbackDispatcher_GetBuiltInTypes
+  - name: (
+  - name: )
+- uid: Quantum.CallbackDispatcher.#ctor*
+  commentId: Overload:Quantum.CallbackDispatcher.#ctor
+  href: Quantum.CallbackDispatcher.html#Quantum_CallbackDispatcher__ctor
+  name: CallbackDispatcher
+  nameWithType: CallbackDispatcher.CallbackDispatcher
+  fullName: Quantum.CallbackDispatcher.CallbackDispatcher
+  nameWithType.vb: CallbackDispatcher.New
+  fullName.vb: Quantum.CallbackDispatcher.New
+  name.vb: New
+- uid: Quantum.CallbackDispatcher.Publish*
+  commentId: Overload:Quantum.CallbackDispatcher.Publish
+  href: Quantum.CallbackDispatcher.html#Quantum_CallbackDispatcher_Publish_Quantum_CallbackBase_
+  name: Publish
+  nameWithType: CallbackDispatcher.Publish
+  fullName: Quantum.CallbackDispatcher.Publish
+- uid: Quantum.ICallbackDispatcher.Publish(Quantum.CallbackBase)
+  commentId: M:Quantum.ICallbackDispatcher.Publish(Quantum.CallbackBase)
+  parent: Quantum.ICallbackDispatcher
+  isExternal: true
+  name: Publish(CallbackBase)
+  nameWithType: ICallbackDispatcher.Publish(CallbackBase)
+  fullName: Quantum.ICallbackDispatcher.Publish(Quantum.CallbackBase)
+  spec.csharp:
+  - uid: Quantum.ICallbackDispatcher.Publish(Quantum.CallbackBase)
+    name: Publish
+    isExternal: true
+  - name: (
+  - uid: Quantum.CallbackBase
+    name: CallbackBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.ICallbackDispatcher.Publish(Quantum.CallbackBase)
+    name: Publish
+    isExternal: true
+  - name: (
+  - uid: Quantum.CallbackBase
+    name: CallbackBase
+    isExternal: true
+  - name: )
+- uid: Quantum.CallbackBase
+  commentId: T:Quantum.CallbackBase
+  parent: Quantum
+  isExternal: true
+  name: CallbackBase
+  nameWithType: CallbackBase
+  fullName: Quantum.CallbackBase
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

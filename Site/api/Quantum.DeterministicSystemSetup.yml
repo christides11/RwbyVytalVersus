@@ -1,0 +1,326 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.DeterministicSystemSetup
+  commentId: T:Quantum.DeterministicSystemSetup
+  id: DeterministicSystemSetup
+  parent: Quantum
+  children:
+  - Quantum.DeterministicSystemSetup.CreateSystems(Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+  langs:
+  - csharp
+  - vb
+  name: DeterministicSystemSetup
+  nameWithType: DeterministicSystemSetup
+  fullName: Quantum.DeterministicSystemSetup
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeterministicSystemSetup
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2353
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Responsible for instantiating Quantum systems on simulation start.
+
+    User systems can be added by adding a <xref href="Quantum.SystemsConfig" data-throw-if-not-resolved="false"></xref> to the <xref href="Quantum.RuntimeConfig" data-throw-if-not-resolved="false"></xref>.
+
+    Or adding them in the user callback <xref href="Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection%7bQuantum.SystemBase%7d%2cQuantum.RuntimeConfig%2cQuantum.SimulationConfig%2cQuantum.SystemsConfig)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static class DeterministicSystemSetup
+    content.vb: Public Module DeterministicSystemSetup
+  inheritance:
+  - System.Object
+- uid: Quantum.DeterministicSystemSetup.CreateSystems(Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+  commentId: M:Quantum.DeterministicSystemSetup.CreateSystems(Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+  id: CreateSystems(Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+  parent: Quantum.DeterministicSystemSetup
+  langs:
+  - csharp
+  - vb
+  name: CreateSystems(RuntimeConfig, SimulationConfig, SystemsConfig)
+  nameWithType: DeterministicSystemSetup.CreateSystems(RuntimeConfig, SimulationConfig, SystemsConfig)
+  fullName: Quantum.DeterministicSystemSetup.CreateSystems(Quantum.RuntimeConfig, Quantum.SimulationConfig, Quantum.SystemsConfig)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateSystems
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2375
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    The methods instantiates requested Quantum systems when starting the simulation.
+
+    <p>
+
+    It first tries to call the legacy system setup method (SystemSetup class), if the method is found it will return those systems on not use the provided systems config.
+
+    </p><p>
+
+    If <code class="paramref">systemsConfig</code> is null only the default Quantum system are created. Otherwise the types inside <code class="paramref">systemsConfig</code> are created.
+
+    </p><p>
+
+    Debug build will add the <xref href="Quantum.Core.DebugCommand" data-throw-if-not-resolved="false"></xref> system. Disable this by defining QUANTUM_DEBUG_COMMAND_DISABLED.
+
+    </p><p>
+
+    Finally the <xref href="Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection%7bQuantum.SystemBase%7d%2cQuantum.RuntimeConfig%2cQuantum.SimulationConfig%2cQuantum.SystemsConfig)" data-throw-if-not-resolved="false"></xref> partial method is called to allow changes to the final system list.
+
+    </p>
+  example: []
+  syntax:
+    content: public static ICollection<SystemBase> CreateSystems(RuntimeConfig gameConfig, SimulationConfig simulationConfig, SystemsConfig systemsConfig)
+    parameters:
+    - id: gameConfig
+      type: Quantum.RuntimeConfig
+      description: Runtime config.
+    - id: simulationConfig
+      type: Quantum.SimulationConfig
+      description: Simulation config.
+    - id: systemsConfig
+      type: Quantum.SystemsConfig
+      description: List of systems to create.
+    return:
+      type: System.Collections.Generic.ICollection{Quantum.SystemBase}
+      description: Collection of Quantum system objects.
+    content.vb: Public Shared Function CreateSystems(gameConfig As RuntimeConfig, simulationConfig As SimulationConfig, systemsConfig As SystemsConfig) As ICollection(Of SystemBase)
+  overload: Quantum.DeterministicSystemSetup.CreateSystems*
+references:
+- uid: Quantum.SystemsConfig
+  commentId: T:Quantum.SystemsConfig
+  parent: Quantum
+  href: Quantum.SystemsConfig.html
+  name: SystemsConfig
+  nameWithType: SystemsConfig
+  fullName: Quantum.SystemsConfig
+- uid: Quantum.RuntimeConfig
+  commentId: T:Quantum.RuntimeConfig
+  parent: Quantum
+  href: Quantum.RuntimeConfig.html
+  name: RuntimeConfig
+  nameWithType: RuntimeConfig
+  fullName: Quantum.RuntimeConfig
+- uid: Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection{Quantum.SystemBase},Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+  commentId: M:Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection{Quantum.SystemBase},Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+  isExternal: true
+  href: Quantum.DeterministicSystemSetup.html#Quantum_DeterministicSystemSetup_AddSystemsUser_System_Collections_Generic_ICollection_Quantum_SystemBase__Quantum_RuntimeConfig_Quantum_SimulationConfig_Quantum_SystemsConfig_
+  name: AddSystemsUser(ICollection<SystemBase>, RuntimeConfig, SimulationConfig, SystemsConfig)
+  nameWithType: DeterministicSystemSetup.AddSystemsUser(ICollection<SystemBase>, RuntimeConfig, SimulationConfig, SystemsConfig)
+  fullName: Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection<Quantum.SystemBase>, Quantum.RuntimeConfig, Quantum.SimulationConfig, Quantum.SystemsConfig)
+  nameWithType.vb: DeterministicSystemSetup.AddSystemsUser(ICollection(Of SystemBase), RuntimeConfig, SimulationConfig, SystemsConfig)
+  fullName.vb: Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection(Of Quantum.SystemBase), Quantum.RuntimeConfig, Quantum.SimulationConfig, Quantum.SystemsConfig)
+  name.vb: AddSystemsUser(ICollection(Of SystemBase), RuntimeConfig, SimulationConfig, SystemsConfig)
+  spec.csharp:
+  - uid: Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection{Quantum.SystemBase},Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+    name: AddSystemsUser
+    href: Quantum.DeterministicSystemSetup.html#Quantum_DeterministicSystemSetup_AddSystemsUser_System_Collections_Generic_ICollection_Quantum_SystemBase__Quantum_RuntimeConfig_Quantum_SimulationConfig_Quantum_SystemsConfig_
+  - name: (
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Quantum.SystemBase
+    name: SystemBase
+    href: Quantum.SystemBase.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Quantum.RuntimeConfig
+    name: RuntimeConfig
+    href: Quantum.RuntimeConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.DeterministicSystemSetup.AddSystemsUser(System.Collections.Generic.ICollection{Quantum.SystemBase},Quantum.RuntimeConfig,Quantum.SimulationConfig,Quantum.SystemsConfig)
+    name: AddSystemsUser
+    href: Quantum.DeterministicSystemSetup.html#Quantum_DeterministicSystemSetup_AddSystemsUser_System_Collections_Generic_ICollection_Quantum_SystemBase__Quantum_RuntimeConfig_Quantum_SimulationConfig_Quantum_SystemsConfig_
+  - name: (
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.SystemBase
+    name: SystemBase
+    href: Quantum.SystemBase.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Quantum.RuntimeConfig
+    name: RuntimeConfig
+    href: Quantum.RuntimeConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SystemsConfig
+    name: SystemsConfig
+    href: Quantum.SystemsConfig.html
+  - name: )
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.Core.DebugCommand
+  commentId: T:Quantum.Core.DebugCommand
+  href: Quantum.Core.DebugCommand.html
+  name: DebugCommand
+  nameWithType: DebugCommand
+  fullName: Quantum.Core.DebugCommand
+- uid: Quantum.DeterministicSystemSetup.CreateSystems*
+  commentId: Overload:Quantum.DeterministicSystemSetup.CreateSystems
+  href: Quantum.DeterministicSystemSetup.html#Quantum_DeterministicSystemSetup_CreateSystems_Quantum_RuntimeConfig_Quantum_SimulationConfig_Quantum_SystemsConfig_
+  name: CreateSystems
+  nameWithType: DeterministicSystemSetup.CreateSystems
+  fullName: Quantum.DeterministicSystemSetup.CreateSystems
+- uid: Quantum.SimulationConfig
+  commentId: T:Quantum.SimulationConfig
+  parent: Quantum
+  href: Quantum.SimulationConfig.html
+  name: SimulationConfig
+  nameWithType: SimulationConfig
+  fullName: Quantum.SimulationConfig
+- uid: System.Collections.Generic.ICollection{Quantum.SystemBase}
+  commentId: T:System.Collections.Generic.ICollection{Quantum.SystemBase}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<SystemBase>
+  nameWithType: ICollection<SystemBase>
+  fullName: System.Collections.Generic.ICollection<Quantum.SystemBase>
+  nameWithType.vb: ICollection(Of SystemBase)
+  fullName.vb: System.Collections.Generic.ICollection(Of Quantum.SystemBase)
+  name.vb: ICollection(Of SystemBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Quantum.SystemBase
+    name: SystemBase
+    href: Quantum.SystemBase.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.SystemBase
+    name: SystemBase
+    href: Quantum.SystemBase.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

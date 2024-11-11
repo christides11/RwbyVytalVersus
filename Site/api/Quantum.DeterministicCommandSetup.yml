@@ -1,0 +1,310 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.DeterministicCommandSetup
+  commentId: T:Quantum.DeterministicCommandSetup
+  id: DeterministicCommandSetup
+  parent: Quantum
+  children:
+  - Quantum.DeterministicCommandSetup.GetCommandFactories(Quantum.RuntimeConfig,Quantum.SimulationConfig)
+  - Quantum.DeterministicCommandSetup.WhenAddCommandFactories
+  langs:
+  - csharp
+  - vb
+  name: DeterministicCommandSetup
+  nameWithType: DeterministicCommandSetup
+  fullName: Quantum.DeterministicCommandSetup
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeterministicCommandSetup
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 353
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    A partial static class to extend by implementing the partial method <xref href="Quantum.DeterministicCommandSetup.AddCommandFactoriesUser(System.Collections.Generic.ICollection%7bPhoton.Deterministic.IDeterministicCommandFactory%7d%2cQuantum.RuntimeConfig%2cQuantum.SimulationConfig)" data-throw-if-not-resolved="false"></xref>.
+
+    It's used to create the Quantum command factories when initializing the simulation, 
+
+    either <xref href="Photon.Deterministic.DeterministicCommand" data-throw-if-not-resolved="false"></xref> or <xref href="Photon.Deterministic.DeterministicCommandPool%601" data-throw-if-not-resolved="false"></xref> object.
+
+    Only commands added here can be invoked by the simulation.
+  example: []
+  syntax:
+    content: public static class DeterministicCommandSetup
+    content.vb: Public Module DeterministicCommandSetup
+  inheritance:
+  - System.Object
+- uid: Quantum.DeterministicCommandSetup.WhenAddCommandFactories
+  commentId: F:Quantum.DeterministicCommandSetup.WhenAddCommandFactories
+  id: WhenAddCommandFactories
+  parent: Quantum.DeterministicCommandSetup
+  langs:
+  - csharp
+  - vb
+  name: WhenAddCommandFactories
+  nameWithType: DeterministicCommandSetup.WhenAddCommandFactories
+  fullName: Quantum.DeterministicCommandSetup.WhenAddCommandFactories
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/CommandSetup.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: WhenAddCommandFactories
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/CommandSetup.User.cs
+    startLine: 9
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static DeterministicCommandSetup.EventCommandFactories WhenAddCommandFactories
+    return:
+      type: Quantum.DeterministicCommandSetup.EventCommandFactories
+    content.vb: Public Shared WhenAddCommandFactories As DeterministicCommandSetup.EventCommandFactories
+- uid: Quantum.DeterministicCommandSetup.GetCommandFactories(Quantum.RuntimeConfig,Quantum.SimulationConfig)
+  commentId: M:Quantum.DeterministicCommandSetup.GetCommandFactories(Quantum.RuntimeConfig,Quantum.SimulationConfig)
+  id: GetCommandFactories(Quantum.RuntimeConfig,Quantum.SimulationConfig)
+  parent: Quantum.DeterministicCommandSetup
+  langs:
+  - csharp
+  - vb
+  name: GetCommandFactories(RuntimeConfig, SimulationConfig)
+  nameWithType: DeterministicCommandSetup.GetCommandFactories(RuntimeConfig, SimulationConfig)
+  fullName: Quantum.DeterministicCommandSetup.GetCommandFactories(Quantum.RuntimeConfig, Quantum.SimulationConfig)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetCommandFactories
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 360
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Creates a list of command factories for a Quantum simulation.
+  example: []
+  syntax:
+    content: public static IDeterministicCommandFactory[] GetCommandFactories(RuntimeConfig gameConfig, SimulationConfig simulationConfig)
+    parameters:
+    - id: gameConfig
+      type: Quantum.RuntimeConfig
+      description: The used RuntimeConfig
+    - id: simulationConfig
+      type: Quantum.SimulationConfig
+      description: The used SimulationConfig
+    return:
+      type: Photon.Deterministic.IDeterministicCommandFactory[]
+      description: List of command factories
+    content.vb: Public Shared Function GetCommandFactories(gameConfig As RuntimeConfig, simulationConfig As SimulationConfig) As IDeterministicCommandFactory()
+  overload: Quantum.DeterministicCommandSetup.GetCommandFactories*
+references:
+- uid: Quantum.DeterministicCommandSetup.AddCommandFactoriesUser(System.Collections.Generic.ICollection{Photon.Deterministic.IDeterministicCommandFactory},Quantum.RuntimeConfig,Quantum.SimulationConfig)
+  commentId: M:Quantum.DeterministicCommandSetup.AddCommandFactoriesUser(System.Collections.Generic.ICollection{Photon.Deterministic.IDeterministicCommandFactory},Quantum.RuntimeConfig,Quantum.SimulationConfig)
+  isExternal: true
+  href: Quantum.DeterministicCommandSetup.html#Quantum_DeterministicCommandSetup_AddCommandFactoriesUser_System_Collections_Generic_ICollection_Photon_Deterministic_IDeterministicCommandFactory__Quantum_RuntimeConfig_Quantum_SimulationConfig_
+  name: AddCommandFactoriesUser(ICollection<IDeterministicCommandFactory>, RuntimeConfig, SimulationConfig)
+  nameWithType: DeterministicCommandSetup.AddCommandFactoriesUser(ICollection<IDeterministicCommandFactory>, RuntimeConfig, SimulationConfig)
+  fullName: Quantum.DeterministicCommandSetup.AddCommandFactoriesUser(System.Collections.Generic.ICollection<Photon.Deterministic.IDeterministicCommandFactory>, Quantum.RuntimeConfig, Quantum.SimulationConfig)
+  nameWithType.vb: DeterministicCommandSetup.AddCommandFactoriesUser(ICollection(Of IDeterministicCommandFactory), RuntimeConfig, SimulationConfig)
+  fullName.vb: Quantum.DeterministicCommandSetup.AddCommandFactoriesUser(System.Collections.Generic.ICollection(Of Photon.Deterministic.IDeterministicCommandFactory), Quantum.RuntimeConfig, Quantum.SimulationConfig)
+  name.vb: AddCommandFactoriesUser(ICollection(Of IDeterministicCommandFactory), RuntimeConfig, SimulationConfig)
+  spec.csharp:
+  - uid: Quantum.DeterministicCommandSetup.AddCommandFactoriesUser(System.Collections.Generic.ICollection{Photon.Deterministic.IDeterministicCommandFactory},Quantum.RuntimeConfig,Quantum.SimulationConfig)
+    name: AddCommandFactoriesUser
+    href: Quantum.DeterministicCommandSetup.html#Quantum_DeterministicCommandSetup_AddCommandFactoriesUser_System_Collections_Generic_ICollection_Photon_Deterministic_IDeterministicCommandFactory__Quantum_RuntimeConfig_Quantum_SimulationConfig_
+  - name: (
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Photon.Deterministic.IDeterministicCommandFactory
+    name: IDeterministicCommandFactory
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Quantum.RuntimeConfig
+    name: RuntimeConfig
+    href: Quantum.RuntimeConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.DeterministicCommandSetup.AddCommandFactoriesUser(System.Collections.Generic.ICollection{Photon.Deterministic.IDeterministicCommandFactory},Quantum.RuntimeConfig,Quantum.SimulationConfig)
+    name: AddCommandFactoriesUser
+    href: Quantum.DeterministicCommandSetup.html#Quantum_DeterministicCommandSetup_AddCommandFactoriesUser_System_Collections_Generic_ICollection_Photon_Deterministic_IDeterministicCommandFactory__Quantum_RuntimeConfig_Quantum_SimulationConfig_
+  - name: (
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Photon.Deterministic.IDeterministicCommandFactory
+    name: IDeterministicCommandFactory
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Quantum.RuntimeConfig
+    name: RuntimeConfig
+    href: Quantum.RuntimeConfig.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.SimulationConfig
+    name: SimulationConfig
+    href: Quantum.SimulationConfig.html
+  - name: )
+- uid: Photon.Deterministic.DeterministicCommand
+  commentId: T:Photon.Deterministic.DeterministicCommand
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicCommand
+  nameWithType: DeterministicCommand
+  fullName: Photon.Deterministic.DeterministicCommand
+- uid: Photon.Deterministic.DeterministicCommandPool`1
+  commentId: T:Photon.Deterministic.DeterministicCommandPool`1
+  isExternal: true
+  name: DeterministicCommandPool<T>
+  nameWithType: DeterministicCommandPool<T>
+  fullName: Photon.Deterministic.DeterministicCommandPool<T>
+  nameWithType.vb: DeterministicCommandPool(Of T)
+  fullName.vb: Photon.Deterministic.DeterministicCommandPool(Of T)
+  name.vb: DeterministicCommandPool(Of T)
+  spec.csharp:
+  - uid: Photon.Deterministic.DeterministicCommandPool`1
+    name: DeterministicCommandPool
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Photon.Deterministic.DeterministicCommandPool`1
+    name: DeterministicCommandPool
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.DeterministicCommandSetup.EventCommandFactories
+  commentId: T:Quantum.DeterministicCommandSetup.EventCommandFactories
+  parent: Quantum
+  href: Quantum.DeterministicCommandSetup.html
+  name: DeterministicCommandSetup.EventCommandFactories
+  nameWithType: DeterministicCommandSetup.EventCommandFactories
+  fullName: Quantum.DeterministicCommandSetup.EventCommandFactories
+  spec.csharp:
+  - uid: Quantum.DeterministicCommandSetup
+    name: DeterministicCommandSetup
+    href: Quantum.DeterministicCommandSetup.html
+  - name: .
+  - uid: Quantum.DeterministicCommandSetup.EventCommandFactories
+    name: EventCommandFactories
+    href: Quantum.DeterministicCommandSetup.EventCommandFactories.html
+  spec.vb:
+  - uid: Quantum.DeterministicCommandSetup
+    name: DeterministicCommandSetup
+    href: Quantum.DeterministicCommandSetup.html
+  - name: .
+  - uid: Quantum.DeterministicCommandSetup.EventCommandFactories
+    name: EventCommandFactories
+    href: Quantum.DeterministicCommandSetup.EventCommandFactories.html
+- uid: Quantum.DeterministicCommandSetup.GetCommandFactories*
+  commentId: Overload:Quantum.DeterministicCommandSetup.GetCommandFactories
+  href: Quantum.DeterministicCommandSetup.html#Quantum_DeterministicCommandSetup_GetCommandFactories_Quantum_RuntimeConfig_Quantum_SimulationConfig_
+  name: GetCommandFactories
+  nameWithType: DeterministicCommandSetup.GetCommandFactories
+  fullName: Quantum.DeterministicCommandSetup.GetCommandFactories
+- uid: Quantum.RuntimeConfig
+  commentId: T:Quantum.RuntimeConfig
+  parent: Quantum
+  href: Quantum.RuntimeConfig.html
+  name: RuntimeConfig
+  nameWithType: RuntimeConfig
+  fullName: Quantum.RuntimeConfig
+- uid: Quantum.SimulationConfig
+  commentId: T:Quantum.SimulationConfig
+  parent: Quantum
+  href: Quantum.SimulationConfig.html
+  name: SimulationConfig
+  nameWithType: SimulationConfig
+  fullName: Quantum.SimulationConfig
+- uid: Photon.Deterministic.IDeterministicCommandFactory[]
+  isExternal: true
+  name: IDeterministicCommandFactory[]
+  nameWithType: IDeterministicCommandFactory[]
+  fullName: Photon.Deterministic.IDeterministicCommandFactory[]
+  nameWithType.vb: IDeterministicCommandFactory()
+  fullName.vb: Photon.Deterministic.IDeterministicCommandFactory()
+  name.vb: IDeterministicCommandFactory()
+  spec.csharp:
+  - uid: Photon.Deterministic.IDeterministicCommandFactory
+    name: IDeterministicCommandFactory
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Photon.Deterministic.IDeterministicCommandFactory
+    name: IDeterministicCommandFactory
+    isExternal: true
+  - name: (
+  - name: )

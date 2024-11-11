@@ -1,0 +1,782 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.UModFighterDefinition
+  commentId: T:Global.UModFighterDefinition
+  id: UModFighterDefinition
+  parent: Global
+  children:
+  - Global.UModFighterDefinition.GetCommandList
+  - Global.UModFighterDefinition.GetFighter
+  - Global.UModFighterDefinition.GetFighterQuantum
+  - Global.UModFighterDefinition.GetHUDReferences
+  - Global.UModFighterDefinition.LoadAssets
+  - Global.UModFighterDefinition.Unload
+  - Global.UModFighterDefinition.UnloadAssets
+  langs:
+  - csharp
+  - vb
+  name: UModFighterDefinition
+  nameWithType: UModFighterDefinition
+  fullName: UModFighterDefinition
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UModFighterDefinition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 8
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  syntax:
+    content: >-
+      [Serializable]
+
+      [CreateAssetMenu(menuName = "rwby/UMod/Content/Fighter Definition")]
+
+      public class UModFighterDefinition : IFighterDefinition
+    content.vb: >-
+      <Serializable>
+
+      <CreateAssetMenu(menuName:="rwby/UMod/Content/Fighter Definition")>
+
+      Public Class UModFighterDefinition Inherits IFighterDefinition
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Global.IContentDefinition
+  - Global.IFighterDefinition
+  inheritedMembers:
+  - Global.IFighterDefinition.Selectable
+  - Global.IFighterDefinition.Health
+  - Global.IFighterDefinition.Aura
+  - Global.IFighterDefinition.AuraGainPerFrame
+  - Global.IContentDefinition.modDefinition
+  - Global.IContentDefinition.ID
+  - Global.IContentDefinition.Name
+  - Global.IContentDefinition.Description
+  - Global.IContentDefinition.Tags
+  - Global.IContentDefinition.Load(System.String)
+  - Global.IContentDefinition.RegisterQuantumAsset
+  - Global.IContentDefinition.UnregisterQuantumAsset
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: menuName
+      type: System.String
+      value: rwby/UMod/Content/Fighter Definition
+- uid: Global.UModFighterDefinition.LoadAssets
+  commentId: M:Global.UModFighterDefinition.LoadAssets
+  id: LoadAssets
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: LoadAssets()
+  nameWithType: UModFighterDefinition.LoadAssets()
+  fullName: UModFighterDefinition.LoadAssets()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadAssets
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 14
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override UniTask<bool> LoadAssets()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Overrides Function LoadAssets() As UniTask(Of Boolean)
+  overridden: Global.IContentDefinition.LoadAssets
+  overload: Global.UModFighterDefinition.LoadAssets*
+- uid: Global.UModFighterDefinition.GetFighter
+  commentId: M:Global.UModFighterDefinition.GetFighter
+  id: GetFighter
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetFighter()
+  nameWithType: UModFighterDefinition.GetFighter()
+  fullName: UModFighterDefinition.GetFighter()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetFighter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 24
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override GameObject GetFighter()
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public Overrides Function GetFighter() As GameObject
+  overridden: Global.IFighterDefinition.GetFighter
+  overload: Global.UModFighterDefinition.GetFighter*
+- uid: Global.UModFighterDefinition.GetFighterQuantum
+  commentId: M:Global.UModFighterDefinition.GetFighterQuantum
+  id: GetFighterQuantum
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetFighterQuantum()
+  nameWithType: UModFighterDefinition.GetFighterQuantum()
+  fullName: UModFighterDefinition.GetFighterQuantum()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetFighterQuantum
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 29
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override CharaDefinitionAsset GetFighterQuantum()
+    return:
+      type: Quantum.CharaDefinitionAsset
+    content.vb: Public Overrides Function GetFighterQuantum() As CharaDefinitionAsset
+  overridden: Global.IFighterDefinition.GetFighterQuantum
+  overload: Global.UModFighterDefinition.GetFighterQuantum*
+- uid: Global.UModFighterDefinition.GetHUDReferences
+  commentId: M:Global.UModFighterDefinition.GetHUDReferences
+  id: GetHUDReferences
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetHUDReferences()
+  nameWithType: UModFighterDefinition.GetHUDReferences()
+  fullName: UModFighterDefinition.GetHUDReferences()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetHUDReferences
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 34
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override ModAssetSoftReference[] GetHUDReferences()
+    return:
+      type: Global.ModAssetSoftReference[]
+    content.vb: Public Overrides Function GetHUDReferences() As ModAssetSoftReference()
+  overridden: Global.IFighterDefinition.GetHUDReferences
+  overload: Global.UModFighterDefinition.GetHUDReferences*
+- uid: Global.UModFighterDefinition.GetCommandList
+  commentId: M:Global.UModFighterDefinition.GetCommandList
+  id: GetCommandList
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetCommandList()
+  nameWithType: UModFighterDefinition.GetCommandList()
+  fullName: UModFighterDefinition.GetCommandList()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetCommandList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 39
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override BaseCommandListDefinition GetCommandList()
+    return:
+      type: rwby.BaseCommandListDefinition
+    content.vb: Public Overrides Function GetCommandList() As BaseCommandListDefinition
+  overridden: Global.IFighterDefinition.GetCommandList
+  overload: Global.UModFighterDefinition.GetCommandList*
+- uid: Global.UModFighterDefinition.UnloadAssets
+  commentId: M:Global.UModFighterDefinition.UnloadAssets
+  id: UnloadAssets
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: UnloadAssets()
+  nameWithType: UModFighterDefinition.UnloadAssets()
+  fullName: UModFighterDefinition.UnloadAssets()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadAssets
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 44
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void UnloadAssets()
+    content.vb: Public Overrides Sub UnloadAssets()
+  overridden: Global.IContentDefinition.UnloadAssets
+  overload: Global.UModFighterDefinition.UnloadAssets*
+- uid: Global.UModFighterDefinition.Unload
+  commentId: M:Global.UModFighterDefinition.Unload
+  id: Unload
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: Unload()
+  nameWithType: UModFighterDefinition.Unload()
+  fullName: UModFighterDefinition.Unload()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Unload
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 48
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void Unload()
+    content.vb: Public Overrides Sub Unload()
+  overridden: Global.IContentDefinition.Unload
+  overload: Global.UModFighterDefinition.Unload*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Global.IContentDefinition
+  commentId: T:Global.IContentDefinition
+  href: IContentDefinition.html
+  name: IContentDefinition
+  nameWithType: IContentDefinition
+  fullName: IContentDefinition
+- uid: Global.IFighterDefinition
+  commentId: T:Global.IFighterDefinition
+  href: IFighterDefinition.html
+  name: IFighterDefinition
+  nameWithType: IFighterDefinition
+  fullName: IFighterDefinition
+- uid: Global.IFighterDefinition.Selectable
+  commentId: P:Global.IFighterDefinition.Selectable
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_Selectable
+  name: Selectable
+  nameWithType: IFighterDefinition.Selectable
+  fullName: IFighterDefinition.Selectable
+- uid: Global.IFighterDefinition.Health
+  commentId: P:Global.IFighterDefinition.Health
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_Health
+  name: Health
+  nameWithType: IFighterDefinition.Health
+  fullName: IFighterDefinition.Health
+- uid: Global.IFighterDefinition.Aura
+  commentId: P:Global.IFighterDefinition.Aura
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_Aura
+  name: Aura
+  nameWithType: IFighterDefinition.Aura
+  fullName: IFighterDefinition.Aura
+- uid: Global.IFighterDefinition.AuraGainPerFrame
+  commentId: P:Global.IFighterDefinition.AuraGainPerFrame
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_AuraGainPerFrame
+  name: AuraGainPerFrame
+  nameWithType: IFighterDefinition.AuraGainPerFrame
+  fullName: IFighterDefinition.AuraGainPerFrame
+- uid: Global.IContentDefinition.modDefinition
+  commentId: P:Global.IContentDefinition.modDefinition
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_modDefinition
+  name: modDefinition
+  nameWithType: IContentDefinition.modDefinition
+  fullName: IContentDefinition.modDefinition
+- uid: Global.IContentDefinition.ID
+  commentId: P:Global.IContentDefinition.ID
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_ID
+  name: ID
+  nameWithType: IContentDefinition.ID
+  fullName: IContentDefinition.ID
+- uid: Global.IContentDefinition.Name
+  commentId: P:Global.IContentDefinition.Name
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Name
+  name: Name
+  nameWithType: IContentDefinition.Name
+  fullName: IContentDefinition.Name
+- uid: Global.IContentDefinition.Description
+  commentId: P:Global.IContentDefinition.Description
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Description
+  name: Description
+  nameWithType: IContentDefinition.Description
+  fullName: IContentDefinition.Description
+- uid: Global.IContentDefinition.Tags
+  commentId: P:Global.IContentDefinition.Tags
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Tags
+  name: Tags
+  nameWithType: IContentDefinition.Tags
+  fullName: IContentDefinition.Tags
+- uid: Global.IContentDefinition.Load(System.String)
+  commentId: M:Global.IContentDefinition.Load(System.String)
+  parent: Global.IContentDefinition
+  isExternal: true
+  href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  name: Load(string)
+  nameWithType: IContentDefinition.Load(string)
+  fullName: IContentDefinition.Load(string)
+  nameWithType.vb: IContentDefinition.Load(String)
+  fullName.vb: IContentDefinition.Load(String)
+  name.vb: Load(String)
+  spec.csharp:
+  - uid: Global.IContentDefinition.Load(System.String)
+    name: Load
+    href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.Load(System.String)
+    name: Load
+    href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Global.IContentDefinition.RegisterQuantumAsset
+  commentId: M:Global.IContentDefinition.RegisterQuantumAsset
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  name: RegisterQuantumAsset()
+  nameWithType: IContentDefinition.RegisterQuantumAsset()
+  fullName: IContentDefinition.RegisterQuantumAsset()
+  spec.csharp:
+  - uid: Global.IContentDefinition.RegisterQuantumAsset
+    name: RegisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.RegisterQuantumAsset
+    name: RegisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  - name: (
+  - name: )
+- uid: Global.IContentDefinition.UnregisterQuantumAsset
+  commentId: M:Global.IContentDefinition.UnregisterQuantumAsset
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  name: UnregisterQuantumAsset()
+  nameWithType: IContentDefinition.UnregisterQuantumAsset()
+  fullName: IContentDefinition.UnregisterQuantumAsset()
+  spec.csharp:
+  - uid: Global.IContentDefinition.UnregisterQuantumAsset
+    name: UnregisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.UnregisterQuantumAsset
+    name: UnregisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.IContentDefinition.LoadAssets
+  commentId: M:Global.IContentDefinition.LoadAssets
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  name: LoadAssets()
+  nameWithType: IContentDefinition.LoadAssets()
+  fullName: IContentDefinition.LoadAssets()
+  spec.csharp:
+  - uid: Global.IContentDefinition.LoadAssets
+    name: LoadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.LoadAssets
+    name: LoadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  - name: (
+  - name: )
+- uid: Global.UModFighterDefinition.LoadAssets*
+  commentId: Overload:Global.UModFighterDefinition.LoadAssets
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_LoadAssets
+  name: LoadAssets
+  nameWithType: UModFighterDefinition.LoadAssets
+  fullName: UModFighterDefinition.LoadAssets
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Global.IFighterDefinition.GetFighter
+  commentId: M:Global.IFighterDefinition.GetFighter
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_GetFighter
+  name: GetFighter()
+  nameWithType: IFighterDefinition.GetFighter()
+  fullName: IFighterDefinition.GetFighter()
+  spec.csharp:
+  - uid: Global.IFighterDefinition.GetFighter
+    name: GetFighter
+    href: Global.IFighterDefinition.html#IFighterDefinition_GetFighter
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IFighterDefinition.GetFighter
+    name: GetFighter
+    href: Global.IFighterDefinition.html#IFighterDefinition_GetFighter
+  - name: (
+  - name: )
+- uid: Global.UModFighterDefinition.GetFighter*
+  commentId: Overload:Global.UModFighterDefinition.GetFighter
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_GetFighter
+  name: GetFighter
+  nameWithType: UModFighterDefinition.GetFighter
+  fullName: UModFighterDefinition.GetFighter
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: Global.IFighterDefinition.GetFighterQuantum
+  commentId: M:Global.IFighterDefinition.GetFighterQuantum
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_GetFighterQuantum
+  name: GetFighterQuantum()
+  nameWithType: IFighterDefinition.GetFighterQuantum()
+  fullName: IFighterDefinition.GetFighterQuantum()
+  spec.csharp:
+  - uid: Global.IFighterDefinition.GetFighterQuantum
+    name: GetFighterQuantum
+    href: Global.IFighterDefinition.html#IFighterDefinition_GetFighterQuantum
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IFighterDefinition.GetFighterQuantum
+    name: GetFighterQuantum
+    href: Global.IFighterDefinition.html#IFighterDefinition_GetFighterQuantum
+  - name: (
+  - name: )
+- uid: Global.UModFighterDefinition.GetFighterQuantum*
+  commentId: Overload:Global.UModFighterDefinition.GetFighterQuantum
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_GetFighterQuantum
+  name: GetFighterQuantum
+  nameWithType: UModFighterDefinition.GetFighterQuantum
+  fullName: UModFighterDefinition.GetFighterQuantum
+- uid: Quantum.CharaDefinitionAsset
+  commentId: T:Quantum.CharaDefinitionAsset
+  parent: Quantum
+  href: Quantum.CharaDefinitionAsset.html
+  name: CharaDefinitionAsset
+  nameWithType: CharaDefinitionAsset
+  fullName: Quantum.CharaDefinitionAsset
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Global.IFighterDefinition.GetHUDReferences
+  commentId: M:Global.IFighterDefinition.GetHUDReferences
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_GetHUDReferences
+  name: GetHUDReferences()
+  nameWithType: IFighterDefinition.GetHUDReferences()
+  fullName: IFighterDefinition.GetHUDReferences()
+  spec.csharp:
+  - uid: Global.IFighterDefinition.GetHUDReferences
+    name: GetHUDReferences
+    href: Global.IFighterDefinition.html#IFighterDefinition_GetHUDReferences
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IFighterDefinition.GetHUDReferences
+    name: GetHUDReferences
+    href: Global.IFighterDefinition.html#IFighterDefinition_GetHUDReferences
+  - name: (
+  - name: )
+- uid: Global.UModFighterDefinition.GetHUDReferences*
+  commentId: Overload:Global.UModFighterDefinition.GetHUDReferences
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_GetHUDReferences
+  name: GetHUDReferences
+  nameWithType: UModFighterDefinition.GetHUDReferences
+  fullName: UModFighterDefinition.GetHUDReferences
+- uid: Global.ModAssetSoftReference[]
+  isExternal: true
+  href: ModAssetSoftReference.html
+  name: ModAssetSoftReference[]
+  nameWithType: ModAssetSoftReference[]
+  fullName: ModAssetSoftReference[]
+  nameWithType.vb: ModAssetSoftReference()
+  fullName.vb: ModAssetSoftReference()
+  name.vb: ModAssetSoftReference()
+  spec.csharp:
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: (
+  - name: )
+- uid: Global.IFighterDefinition.GetCommandList
+  commentId: M:Global.IFighterDefinition.GetCommandList
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_GetCommandList
+  name: GetCommandList()
+  nameWithType: IFighterDefinition.GetCommandList()
+  fullName: IFighterDefinition.GetCommandList()
+  spec.csharp:
+  - uid: Global.IFighterDefinition.GetCommandList
+    name: GetCommandList
+    href: Global.IFighterDefinition.html#IFighterDefinition_GetCommandList
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IFighterDefinition.GetCommandList
+    name: GetCommandList
+    href: Global.IFighterDefinition.html#IFighterDefinition_GetCommandList
+  - name: (
+  - name: )
+- uid: Global.UModFighterDefinition.GetCommandList*
+  commentId: Overload:Global.UModFighterDefinition.GetCommandList
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_GetCommandList
+  name: GetCommandList
+  nameWithType: UModFighterDefinition.GetCommandList
+  fullName: UModFighterDefinition.GetCommandList
+- uid: rwby.BaseCommandListDefinition
+  commentId: T:rwby.BaseCommandListDefinition
+  parent: rwby
+  href: rwby.BaseCommandListDefinition.html
+  name: BaseCommandListDefinition
+  nameWithType: BaseCommandListDefinition
+  fullName: rwby.BaseCommandListDefinition
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: Global.IContentDefinition.UnloadAssets
+  commentId: M:Global.IContentDefinition.UnloadAssets
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  name: UnloadAssets()
+  nameWithType: IContentDefinition.UnloadAssets()
+  fullName: IContentDefinition.UnloadAssets()
+  spec.csharp:
+  - uid: Global.IContentDefinition.UnloadAssets
+    name: UnloadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.UnloadAssets
+    name: UnloadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  - name: (
+  - name: )
+- uid: Global.UModFighterDefinition.UnloadAssets*
+  commentId: Overload:Global.UModFighterDefinition.UnloadAssets
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_UnloadAssets
+  name: UnloadAssets
+  nameWithType: UModFighterDefinition.UnloadAssets
+  fullName: UModFighterDefinition.UnloadAssets
+- uid: Global.IContentDefinition.Unload
+  commentId: M:Global.IContentDefinition.Unload
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Unload
+  name: Unload()
+  nameWithType: IContentDefinition.Unload()
+  fullName: IContentDefinition.Unload()
+  spec.csharp:
+  - uid: Global.IContentDefinition.Unload
+    name: Unload
+    href: Global.IContentDefinition.html#IContentDefinition_Unload
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.Unload
+    name: Unload
+    href: Global.IContentDefinition.html#IContentDefinition_Unload
+  - name: (
+  - name: )
+- uid: Global.UModFighterDefinition.Unload*
+  commentId: Overload:Global.UModFighterDefinition.Unload
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_Unload
+  name: Unload
+  nameWithType: UModFighterDefinition.Unload
+  fullName: UModFighterDefinition.Unload

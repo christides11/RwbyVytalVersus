@@ -1,0 +1,152 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.ISignalOnTrigger2D
+  commentId: T:Quantum.ISignalOnTrigger2D
+  id: ISignalOnTrigger2D
+  parent: Quantum
+  children:
+  - Quantum.ISignalOnTrigger2D.OnTrigger2D(Quantum.Frame,Quantum.TriggerInfo2D)
+  langs:
+  - csharp
+  - vb
+  name: ISignalOnTrigger2D
+  nameWithType: ISignalOnTrigger2D
+  fullName: Quantum.ISignalOnTrigger2D
+  type: Interface
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ISignalOnTrigger2D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 194
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Interface for receiving callbacks once per frame while a non-trigger and a trigger 2D colliders are touching.
+
+    <remarks>No collision is checked between two kinematic colliders that are both trigger or both non-trigger.</remarks><remarks>At least one of the entities involved in a collision must have the respective <xref href="Quantum.CallbackFlags" data-throw-if-not-resolved="false"></xref> set for the callback to be called.</remarks><remarks>See <xref href="Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef%2cQuantum.CallbackFlags)" data-throw-if-not-resolved="false"></xref> for setting the callbacks flags to an entity.</remarks>
+  example: []
+  syntax:
+    content: 'public interface ISignalOnTrigger2D : ISignal'
+    content.vb: Public Interface ISignalOnTrigger2D Inherits ISignal
+  inheritedMembers:
+  - Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignalOnTrigger2D.OnTrigger2D(Quantum.Frame,Quantum.TriggerInfo2D)
+  commentId: M:Quantum.ISignalOnTrigger2D.OnTrigger2D(Quantum.Frame,Quantum.TriggerInfo2D)
+  id: OnTrigger2D(Quantum.Frame,Quantum.TriggerInfo2D)
+  parent: Quantum.ISignalOnTrigger2D
+  langs:
+  - csharp
+  - vb
+  name: OnTrigger2D(Frame, TriggerInfo2D)
+  nameWithType: ISignalOnTrigger2D.OnTrigger2D(Frame, TriggerInfo2D)
+  fullName: Quantum.ISignalOnTrigger2D.OnTrigger2D(Quantum.Frame, Quantum.TriggerInfo2D)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnTrigger2D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 201
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Called once per frame while a non-trigger and a trigger 2D colliders are touching.
+  example: []
+  syntax:
+    content: void OnTrigger2D(Frame f, TriggerInfo2D info)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame in which the collision happened.
+    - id: info
+      type: Quantum.TriggerInfo2D
+      description: The <xref href="Quantum.TriggerInfo2D" data-throw-if-not-resolved="false"></xref> with data about the trigger collision.
+    content.vb: Sub OnTrigger2D(f As Frame, info As TriggerInfo2D)
+  overload: Quantum.ISignalOnTrigger2D.OnTrigger2D*
+references:
+- uid: Quantum.CallbackFlags
+  commentId: T:Quantum.CallbackFlags
+  isExternal: true
+  name: CallbackFlags
+  nameWithType: CallbackFlags
+  fullName: Quantum.CallbackFlags
+- uid: Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+  commentId: M:Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+  isExternal: true
+  name: SetCallbacks(EntityRef, CallbackFlags)
+  nameWithType: PhysicsEngine2D.Api.SetCallbacks(EntityRef, CallbackFlags)
+  fullName: Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef, Quantum.CallbackFlags)
+  spec.csharp:
+  - uid: Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+    name: SetCallbacks
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CallbackFlags
+    name: CallbackFlags
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Physics2D.PhysicsEngine2D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+    name: SetCallbacks
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CallbackFlags
+    name: CallbackFlags
+    isExternal: true
+  - name: )
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ISignal.RuntimeIndex
+  commentId: P:Quantum.ISignal.RuntimeIndex
+  parent: Quantum.ISignal
+  isExternal: true
+  name: RuntimeIndex
+  nameWithType: ISignal.RuntimeIndex
+  fullName: Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.TriggerInfo2D
+  commentId: T:Quantum.TriggerInfo2D
+  parent: Quantum
+  isExternal: true
+  name: TriggerInfo2D
+  nameWithType: TriggerInfo2D
+  fullName: Quantum.TriggerInfo2D
+- uid: Quantum.ISignalOnTrigger2D.OnTrigger2D*
+  commentId: Overload:Quantum.ISignalOnTrigger2D.OnTrigger2D
+  href: Quantum.ISignalOnTrigger2D.html#Quantum_ISignalOnTrigger2D_OnTrigger2D_Quantum_Frame_Quantum_TriggerInfo2D_
+  name: OnTrigger2D
+  nameWithType: ISignalOnTrigger2D.OnTrigger2D
+  fullName: Quantum.ISignalOnTrigger2D.OnTrigger2D
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame

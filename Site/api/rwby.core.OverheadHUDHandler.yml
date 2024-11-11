@@ -1,0 +1,762 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.core.OverheadHUDHandler
+  commentId: T:rwby.core.OverheadHUDHandler
+  id: OverheadHUDHandler
+  parent: rwby.core
+  children:
+  - rwby.core.OverheadHUDHandler.DeleteElement(rwby.core.OverheadHUDElement)
+  - rwby.core.OverheadHUDHandler.FighterDef
+  - rwby.core.OverheadHUDHandler.Initialize(System.Int32,System.Int32)
+  - rwby.core.OverheadHUDHandler.RootCanvas
+  - rwby.core.OverheadHUDHandler.Teardown
+  - rwby.core.OverheadHUDHandler.checkLayerMask
+  - rwby.core.OverheadHUDHandler.elementPrefab
+  - rwby.core.OverheadHUDHandler.entityViewtoHUDElement
+  - rwby.core.OverheadHUDHandler.fighterEntityView
+  - rwby.core.OverheadHUDHandler.globalPlayerID
+  - rwby.core.OverheadHUDHandler.localPlayerID
+  - rwby.core.OverheadHUDHandler.updateRate
+  langs:
+  - csharp
+  - vb
+  name: OverheadHUDHandler
+  nameWithType: OverheadHUDHandler
+  fullName: rwby.core.OverheadHUDHandler
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OverheadHUDHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: 'public class OverheadHUDHandler : MonoBehaviour, IHUDElement, IFighterDefinitionUser'
+    content.vb: Public Class OverheadHUDHandler Inherits MonoBehaviour Implements IHUDElement, IFighterDefinitionUser
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  implements:
+  - rwby.IHUDElement
+  - rwby.IFighterDefinitionUser
+- uid: rwby.core.OverheadHUDHandler.FighterDef
+  commentId: P:rwby.core.OverheadHUDHandler.FighterDef
+  id: FighterDef
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: FighterDef
+  nameWithType: OverheadHUDHandler.FighterDef
+  fullName: rwby.core.OverheadHUDHandler.FighterDef
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FighterDef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public IFighterDefinition FighterDef { get; set; }
+    parameters: []
+    return:
+      type: Global.IFighterDefinition
+    content.vb: Public Property FighterDef As IFighterDefinition
+  overload: rwby.core.OverheadHUDHandler.FighterDef*
+  implements:
+  - rwby.IFighterDefinitionUser.FighterDef
+- uid: rwby.core.OverheadHUDHandler.globalPlayerID
+  commentId: F:rwby.core.OverheadHUDHandler.globalPlayerID
+  id: globalPlayerID
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: globalPlayerID
+  nameWithType: OverheadHUDHandler.globalPlayerID
+  fullName: rwby.core.OverheadHUDHandler.globalPlayerID
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: globalPlayerID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public int globalPlayerID
+    return:
+      type: System.Int32
+    content.vb: Public globalPlayerID As Integer
+- uid: rwby.core.OverheadHUDHandler.localPlayerID
+  commentId: F:rwby.core.OverheadHUDHandler.localPlayerID
+  id: localPlayerID
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: localPlayerID
+  nameWithType: OverheadHUDHandler.localPlayerID
+  fullName: rwby.core.OverheadHUDHandler.localPlayerID
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localPlayerID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public int localPlayerID
+    return:
+      type: System.Int32
+    content.vb: Public localPlayerID As Integer
+- uid: rwby.core.OverheadHUDHandler.fighterEntityView
+  commentId: F:rwby.core.OverheadHUDHandler.fighterEntityView
+  id: fighterEntityView
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: fighterEntityView
+  nameWithType: OverheadHUDHandler.fighterEntityView
+  fullName: rwby.core.OverheadHUDHandler.fighterEntityView
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: fighterEntityView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public QuantumEntityView fighterEntityView
+    return:
+      type: Quantum.QuantumEntityView
+    content.vb: Public fighterEntityView As QuantumEntityView
+- uid: rwby.core.OverheadHUDHandler.updateRate
+  commentId: F:rwby.core.OverheadHUDHandler.updateRate
+  id: updateRate
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: updateRate
+  nameWithType: OverheadHUDHandler.updateRate
+  fullName: rwby.core.OverheadHUDHandler.updateRate
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: updateRate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public int updateRate
+    return:
+      type: System.Int32
+    content.vb: Public updateRate As Integer
+- uid: rwby.core.OverheadHUDHandler.elementPrefab
+  commentId: F:rwby.core.OverheadHUDHandler.elementPrefab
+  id: elementPrefab
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: elementPrefab
+  nameWithType: OverheadHUDHandler.elementPrefab
+  fullName: rwby.core.OverheadHUDHandler.elementPrefab
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: elementPrefab
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public GameObject elementPrefab
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public elementPrefab As GameObject
+- uid: rwby.core.OverheadHUDHandler.checkLayerMask
+  commentId: F:rwby.core.OverheadHUDHandler.checkLayerMask
+  id: checkLayerMask
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: checkLayerMask
+  nameWithType: OverheadHUDHandler.checkLayerMask
+  fullName: rwby.core.OverheadHUDHandler.checkLayerMask
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: checkLayerMask
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public LayerMask checkLayerMask
+    return:
+      type: Quantum.LayerMask
+    content.vb: Public checkLayerMask As LayerMask
+- uid: rwby.core.OverheadHUDHandler.entityViewtoHUDElement
+  commentId: F:rwby.core.OverheadHUDHandler.entityViewtoHUDElement
+  id: entityViewtoHUDElement
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: entityViewtoHUDElement
+  nameWithType: OverheadHUDHandler.entityViewtoHUDElement
+  fullName: rwby.core.OverheadHUDHandler.entityViewtoHUDElement
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: entityViewtoHUDElement
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public Dictionary<EntityRef, OverheadHUDElement> entityViewtoHUDElement
+    return:
+      type: System.Collections.Generic.Dictionary{Quantum.EntityRef,rwby.core.OverheadHUDElement}
+    content.vb: Public entityViewtoHUDElement As Dictionary(Of EntityRef, OverheadHUDElement)
+- uid: rwby.core.OverheadHUDHandler.RootCanvas
+  commentId: P:rwby.core.OverheadHUDHandler.RootCanvas
+  id: RootCanvas
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: RootCanvas
+  nameWithType: OverheadHUDHandler.RootCanvas
+  fullName: rwby.core.OverheadHUDHandler.RootCanvas
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RootCanvas
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public Canvas RootCanvas { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Canvas
+    content.vb: Public Property RootCanvas As Canvas
+  overload: rwby.core.OverheadHUDHandler.RootCanvas*
+  implements:
+  - rwby.IHUDElement.RootCanvas
+- uid: rwby.core.OverheadHUDHandler.Initialize(System.Int32,System.Int32)
+  commentId: M:rwby.core.OverheadHUDHandler.Initialize(System.Int32,System.Int32)
+  id: Initialize(System.Int32,System.Int32)
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: Initialize(int, int)
+  nameWithType: OverheadHUDHandler.Initialize(int, int)
+  fullName: rwby.core.OverheadHUDHandler.Initialize(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 29
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Initialize(int localPlayerID, int networkPlayerID)
+    parameters:
+    - id: localPlayerID
+      type: System.Int32
+    - id: networkPlayerID
+      type: System.Int32
+    content.vb: Public Sub Initialize(localPlayerID As Integer, networkPlayerID As Integer)
+  overload: rwby.core.OverheadHUDHandler.Initialize*
+  implements:
+  - rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  nameWithType.vb: OverheadHUDHandler.Initialize(Integer, Integer)
+  fullName.vb: rwby.core.OverheadHUDHandler.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+- uid: rwby.core.OverheadHUDHandler.DeleteElement(rwby.core.OverheadHUDElement)
+  commentId: M:rwby.core.OverheadHUDHandler.DeleteElement(rwby.core.OverheadHUDElement)
+  id: DeleteElement(rwby.core.OverheadHUDElement)
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: DeleteElement(OverheadHUDElement)
+  nameWithType: OverheadHUDHandler.DeleteElement(OverheadHUDElement)
+  fullName: rwby.core.OverheadHUDHandler.DeleteElement(rwby.core.OverheadHUDElement)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeleteElement
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 88
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public void DeleteElement(OverheadHUDElement element)
+    parameters:
+    - id: element
+      type: rwby.core.OverheadHUDElement
+    content.vb: Public Sub DeleteElement(element As OverheadHUDElement)
+  overload: rwby.core.OverheadHUDHandler.DeleteElement*
+- uid: rwby.core.OverheadHUDHandler.Teardown
+  commentId: M:rwby.core.OverheadHUDHandler.Teardown
+  id: Teardown
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: OverheadHUDHandler.Teardown()
+  fullName: rwby.core.OverheadHUDHandler.Teardown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Teardown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 96
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Teardown()
+    content.vb: Public Sub Teardown()
+  overload: rwby.core.OverheadHUDHandler.Teardown*
+  implements:
+  - rwby.IHUDElement.Teardown
+references:
+- uid: rwby.core
+  commentId: N:rwby.core
+  href: rwby.html
+  name: rwby.core
+  nameWithType: rwby.core
+  fullName: rwby.core
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: rwby.IHUDElement
+  commentId: T:rwby.IHUDElement
+  parent: rwby
+  href: rwby.IHUDElement.html
+  name: IHUDElement
+  nameWithType: IHUDElement
+  fullName: rwby.IHUDElement
+- uid: rwby.IFighterDefinitionUser
+  commentId: T:rwby.IFighterDefinitionUser
+  parent: rwby
+  href: rwby.IFighterDefinitionUser.html
+  name: IFighterDefinitionUser
+  nameWithType: IFighterDefinitionUser
+  fullName: rwby.IFighterDefinitionUser
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: rwby.core.OverheadHUDHandler.FighterDef*
+  commentId: Overload:rwby.core.OverheadHUDHandler.FighterDef
+  href: rwby.core.OverheadHUDHandler.html#rwby_core_OverheadHUDHandler_FighterDef
+  name: FighterDef
+  nameWithType: OverheadHUDHandler.FighterDef
+  fullName: rwby.core.OverheadHUDHandler.FighterDef
+- uid: rwby.IFighterDefinitionUser.FighterDef
+  commentId: P:rwby.IFighterDefinitionUser.FighterDef
+  parent: rwby.IFighterDefinitionUser
+  name: FighterDef
+  nameWithType: IFighterDefinitionUser.FighterDef
+  fullName: rwby.IFighterDefinitionUser.FighterDef
+- uid: Global.IFighterDefinition
+  commentId: T:Global.IFighterDefinition
+  href: IFighterDefinition.html
+  name: IFighterDefinition
+  nameWithType: IFighterDefinition
+  fullName: IFighterDefinition
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.QuantumEntityView
+  commentId: T:Quantum.QuantumEntityView
+  parent: Quantum
+  name: QuantumEntityView
+  nameWithType: QuantumEntityView
+  fullName: Quantum.QuantumEntityView
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: Quantum.LayerMask
+  commentId: T:Quantum.LayerMask
+  parent: Quantum
+  isExternal: true
+  name: LayerMask
+  nameWithType: LayerMask
+  fullName: Quantum.LayerMask
+- uid: System.Collections.Generic.Dictionary{Quantum.EntityRef,rwby.core.OverheadHUDElement}
+  commentId: T:System.Collections.Generic.Dictionary{Quantum.EntityRef,rwby.core.OverheadHUDElement}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<EntityRef, OverheadHUDElement>
+  nameWithType: Dictionary<EntityRef, OverheadHUDElement>
+  fullName: System.Collections.Generic.Dictionary<Quantum.EntityRef, rwby.core.OverheadHUDElement>
+  nameWithType.vb: Dictionary(Of EntityRef, OverheadHUDElement)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Quantum.EntityRef, rwby.core.OverheadHUDElement)
+  name.vb: Dictionary(Of EntityRef, OverheadHUDElement)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: rwby.core.OverheadHUDElement
+    name: OverheadHUDElement
+    href: rwby.core.OverheadHUDElement.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: rwby.core.OverheadHUDElement
+    name: OverheadHUDElement
+    href: rwby.core.OverheadHUDElement.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: rwby.core.OverheadHUDHandler.RootCanvas*
+  commentId: Overload:rwby.core.OverheadHUDHandler.RootCanvas
+  href: rwby.core.OverheadHUDHandler.html#rwby_core_OverheadHUDHandler_RootCanvas
+  name: RootCanvas
+  nameWithType: OverheadHUDHandler.RootCanvas
+  fullName: rwby.core.OverheadHUDHandler.RootCanvas
+- uid: rwby.IHUDElement.RootCanvas
+  commentId: P:rwby.IHUDElement.RootCanvas
+  parent: rwby.IHUDElement
+  name: RootCanvas
+  nameWithType: IHUDElement.RootCanvas
+  fullName: rwby.IHUDElement.RootCanvas
+- uid: UnityEngine.Canvas
+  commentId: T:UnityEngine.Canvas
+  parent: UnityEngine
+  isExternal: true
+  name: Canvas
+  nameWithType: Canvas
+  fullName: UnityEngine.Canvas
+- uid: rwby.core.OverheadHUDHandler.Initialize*
+  commentId: Overload:rwby.core.OverheadHUDHandler.Initialize
+  href: rwby.core.OverheadHUDHandler.html#rwby_core_OverheadHUDHandler_Initialize_System_Int32_System_Int32_
+  name: Initialize
+  nameWithType: OverheadHUDHandler.Initialize
+  fullName: rwby.core.OverheadHUDHandler.Initialize
+- uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  commentId: M:rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  parent: rwby.IHUDElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Initialize(int, int)
+  nameWithType: IHUDElement.Initialize(int, int)
+  fullName: rwby.IHUDElement.Initialize(int, int)
+  nameWithType.vb: IHUDElement.Initialize(Integer, Integer)
+  fullName.vb: rwby.IHUDElement.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+  spec.csharp:
+  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+    name: Initialize
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+    name: Initialize
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: rwby.core.OverheadHUDHandler.DeleteElement*
+  commentId: Overload:rwby.core.OverheadHUDHandler.DeleteElement
+  href: rwby.core.OverheadHUDHandler.html#rwby_core_OverheadHUDHandler_DeleteElement_rwby_core_OverheadHUDElement_
+  name: DeleteElement
+  nameWithType: OverheadHUDHandler.DeleteElement
+  fullName: rwby.core.OverheadHUDHandler.DeleteElement
+- uid: rwby.core.OverheadHUDElement
+  commentId: T:rwby.core.OverheadHUDElement
+  parent: rwby.core
+  href: rwby.core.OverheadHUDElement.html
+  name: OverheadHUDElement
+  nameWithType: OverheadHUDElement
+  fullName: rwby.core.OverheadHUDElement
+- uid: rwby.core.OverheadHUDHandler.Teardown*
+  commentId: Overload:rwby.core.OverheadHUDHandler.Teardown
+  href: rwby.core.OverheadHUDHandler.html#rwby_core_OverheadHUDHandler_Teardown
+  name: Teardown
+  nameWithType: OverheadHUDHandler.Teardown
+  fullName: rwby.core.OverheadHUDHandler.Teardown
+- uid: rwby.IHUDElement.Teardown
+  commentId: M:rwby.IHUDElement.Teardown
+  parent: rwby.IHUDElement
+  name: Teardown()
+  nameWithType: IHUDElement.Teardown()
+  fullName: rwby.IHUDElement.Teardown()
+  spec.csharp:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )

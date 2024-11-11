@@ -1,0 +1,847 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  commentId: T:Quantum.Prototypes.TeamVersusGlobalsPrototype
+  id: TeamVersusGlobalsPrototype
+  parent: Quantum.Prototypes
+  children:
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.Materialize(Quantum.Frame,Quantum.TeamVersusGlobals@,Quantum.PrototypeMaterializationContext@)
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.characterIntroType
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.gameTimeLimitEndFrame
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.gameTimeLimitStartFrame
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.playerData
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.playersRequestingRespawn
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.teamScores
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.winningTeam
+  langs:
+  - csharp
+  - vb
+  name: TeamVersusGlobalsPrototype
+  nameWithType: TeamVersusGlobalsPrototype
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TeamVersusGlobalsPrototype
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1578
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: >-
+      [Serializable]
+
+      [Prototype(typeof(TeamVersusGlobals))]
+
+      public class TeamVersusGlobalsPrototype : ComponentPrototype<TeamVersusGlobals>, IPrototype
+    content.vb: >-
+      <Serializable>
+
+      <Prototype(GetType(TeamVersusGlobals))>
+
+      Public Class TeamVersusGlobalsPrototype Inherits ComponentPrototype(Of TeamVersusGlobals) Implements IPrototype
+  inheritance:
+  - System.Object
+  - Quantum.ComponentPrototype
+  - Quantum.ComponentPrototype{Quantum.TeamVersusGlobals}
+  implements:
+  - Quantum.IPrototype
+  inheritedMembers:
+  - Quantum.ComponentPrototype{Quantum.TeamVersusGlobals}.ComponentType
+  - Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+  - Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  - Quantum.ComponentPrototype.ComponentTypeId
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  - type: Quantum.Prototypes.PrototypeAttribute
+    ctor: Quantum.Prototypes.PrototypeAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Quantum.TeamVersusGlobals
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.playerData
+  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.playerData
+  id: playerData
+  parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  langs:
+  - csharp
+  - vb
+  name: playerData
+  nameWithType: TeamVersusGlobalsPrototype.playerData
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.playerData
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playerData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1583
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: >-
+      [Dictionary]
+
+      [DynamicCollection]
+
+      public DictionaryEntry_Int32_TeamVersusPlayerData[] playerData
+    return:
+      type: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData[]
+    content.vb: >-
+      <Dictionary>
+
+      <DynamicCollection>
+
+      Public playerData As DictionaryEntry_Int32_TeamVersusPlayerData()
+  attributes:
+  - type: Quantum.DictionaryAttribute
+    ctor: Quantum.DictionaryAttribute.#ctor
+    arguments: []
+  - type: Quantum.DynamicCollectionAttribute
+    ctor: Quantum.DynamicCollectionAttribute.#ctor
+    arguments: []
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.playersRequestingRespawn
+  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.playersRequestingRespawn
+  id: playersRequestingRespawn
+  parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  langs:
+  - csharp
+  - vb
+  name: playersRequestingRespawn
+  nameWithType: TeamVersusGlobalsPrototype.playersRequestingRespawn
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.playersRequestingRespawn
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playersRequestingRespawn
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1586
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: >-
+      [Dictionary]
+
+      [DynamicCollection]
+
+      public DictionaryEntry_PlayerRef_Int32[] playersRequestingRespawn
+    return:
+      type: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32[]
+    content.vb: >-
+      <Dictionary>
+
+      <DynamicCollection>
+
+      Public playersRequestingRespawn As DictionaryEntry_PlayerRef_Int32()
+  attributes:
+  - type: Quantum.DictionaryAttribute
+    ctor: Quantum.DictionaryAttribute.#ctor
+    arguments: []
+  - type: Quantum.DynamicCollectionAttribute
+    ctor: Quantum.DynamicCollectionAttribute.#ctor
+    arguments: []
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.teamScores
+  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.teamScores
+  id: teamScores
+  parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  langs:
+  - csharp
+  - vb
+  name: teamScores
+  nameWithType: TeamVersusGlobalsPrototype.teamScores
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.teamScores
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: teamScores
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1589
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: >-
+      [Dictionary]
+
+      [DynamicCollection]
+
+      public DictionaryEntry_Int32_Int32[] teamScores
+    return:
+      type: Quantum.Prototypes.DictionaryEntry_Int32_Int32[]
+    content.vb: >-
+      <Dictionary>
+
+      <DynamicCollection>
+
+      Public teamScores As DictionaryEntry_Int32_Int32()
+  attributes:
+  - type: Quantum.DictionaryAttribute
+    ctor: Quantum.DictionaryAttribute.#ctor
+    arguments: []
+  - type: Quantum.DynamicCollectionAttribute
+    ctor: Quantum.DynamicCollectionAttribute.#ctor
+    arguments: []
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.gameTimeLimitStartFrame
+  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.gameTimeLimitStartFrame
+  id: gameTimeLimitStartFrame
+  parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  langs:
+  - csharp
+  - vb
+  name: gameTimeLimitStartFrame
+  nameWithType: TeamVersusGlobalsPrototype.gameTimeLimitStartFrame
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.gameTimeLimitStartFrame
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: gameTimeLimitStartFrame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1590
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: public int gameTimeLimitStartFrame
+    return:
+      type: System.Int32
+    content.vb: Public gameTimeLimitStartFrame As Integer
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.gameTimeLimitEndFrame
+  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.gameTimeLimitEndFrame
+  id: gameTimeLimitEndFrame
+  parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  langs:
+  - csharp
+  - vb
+  name: gameTimeLimitEndFrame
+  nameWithType: TeamVersusGlobalsPrototype.gameTimeLimitEndFrame
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.gameTimeLimitEndFrame
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: gameTimeLimitEndFrame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1591
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: public int gameTimeLimitEndFrame
+    return:
+      type: System.Int32
+    content.vb: Public gameTimeLimitEndFrame As Integer
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.winningTeam
+  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.winningTeam
+  id: winningTeam
+  parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  langs:
+  - csharp
+  - vb
+  name: winningTeam
+  nameWithType: TeamVersusGlobalsPrototype.winningTeam
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.winningTeam
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: winningTeam
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1592
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: public int winningTeam
+    return:
+      type: System.Int32
+    content.vb: Public winningTeam As Integer
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.characterIntroType
+  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.characterIntroType
+  id: characterIntroType
+  parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  langs:
+  - csharp
+  - vb
+  name: characterIntroType
+  nameWithType: TeamVersusGlobalsPrototype.characterIntroType
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.characterIntroType
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: characterIntroType
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1593
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: public QEnum32<CharacterIntroType> characterIntroType
+    return:
+      type: Quantum.QEnum32{Quantum.CharacterIntroType}
+    content.vb: Public characterIntroType As QEnum32(Of CharacterIntroType)
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  commentId: M:Quantum.Prototypes.TeamVersusGlobalsPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  id: AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  langs:
+  - csharp
+  - vb
+  name: AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  nameWithType: TeamVersusGlobalsPrototype.AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, in Quantum.PrototypeMaterializationContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddToEntity
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1595
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  example: []
+  syntax:
+    content: public override bool AddToEntity(FrameBase f, EntityRef entity, in PrototypeMaterializationContext context)
+    parameters:
+    - id: f
+      type: Quantum.Core.FrameBase
+    - id: entity
+      type: Quantum.EntityRef
+    - id: context
+      type: Quantum.PrototypeMaterializationContext
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function AddToEntity(f As FrameBase, entity As EntityRef, context As PrototypeMaterializationContext) As Boolean
+  overridden: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  overload: Quantum.Prototypes.TeamVersusGlobalsPrototype.AddToEntity*
+  nameWithType.vb: TeamVersusGlobalsPrototype.AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+  fullName.vb: Quantum.Prototypes.TeamVersusGlobalsPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.PrototypeMaterializationContext)
+  name.vb: AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.Materialize(Quantum.Frame,Quantum.TeamVersusGlobals@,Quantum.PrototypeMaterializationContext@)
+  commentId: M:Quantum.Prototypes.TeamVersusGlobalsPrototype.Materialize(Quantum.Frame,Quantum.TeamVersusGlobals@,Quantum.PrototypeMaterializationContext@)
+  id: Materialize(Quantum.Frame,Quantum.TeamVersusGlobals@,Quantum.PrototypeMaterializationContext@)
+  parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  langs:
+  - csharp
+  - vb
+  name: Materialize(Frame, ref TeamVersusGlobals, in PrototypeMaterializationContext)
+  nameWithType: TeamVersusGlobalsPrototype.Materialize(Frame, ref TeamVersusGlobals, in PrototypeMaterializationContext)
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.Materialize(Quantum.Frame, ref Quantum.TeamVersusGlobals, in Quantum.PrototypeMaterializationContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Materialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1600
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: public void Materialize(Frame frame, ref TeamVersusGlobals result, in PrototypeMaterializationContext context = default)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: result
+      type: Quantum.TeamVersusGlobals
+    - id: context
+      type: Quantum.PrototypeMaterializationContext
+    content.vb: Public Sub Materialize(frame As Frame, result As TeamVersusGlobals, context As PrototypeMaterializationContext = Nothing)
+  overload: Quantum.Prototypes.TeamVersusGlobalsPrototype.Materialize*
+  nameWithType.vb: TeamVersusGlobalsPrototype.Materialize(Frame, TeamVersusGlobals, PrototypeMaterializationContext)
+  fullName.vb: Quantum.Prototypes.TeamVersusGlobalsPrototype.Materialize(Quantum.Frame, Quantum.TeamVersusGlobals, Quantum.PrototypeMaterializationContext)
+  name.vb: Materialize(Frame, TeamVersusGlobals, PrototypeMaterializationContext)
+references:
+- uid: Quantum.Prototypes
+  commentId: N:Quantum.Prototypes
+  href: Quantum.html
+  name: Quantum.Prototypes
+  nameWithType: Quantum.Prototypes
+  fullName: Quantum.Prototypes
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Prototypes
+    name: Prototypes
+    href: Quantum.Prototypes.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Prototypes
+    name: Prototypes
+    href: Quantum.Prototypes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.ComponentPrototype
+  commentId: T:Quantum.ComponentPrototype
+  parent: Quantum
+  isExternal: true
+  name: ComponentPrototype
+  nameWithType: ComponentPrototype
+  fullName: Quantum.ComponentPrototype
+- uid: Quantum.ComponentPrototype{Quantum.TeamVersusGlobals}
+  commentId: T:Quantum.ComponentPrototype{Quantum.TeamVersusGlobals}
+  parent: Quantum
+  definition: Quantum.ComponentPrototype`1
+  href: Quantum.TeamVersusGlobals.html
+  name: ComponentPrototype<TeamVersusGlobals>
+  nameWithType: ComponentPrototype<TeamVersusGlobals>
+  fullName: Quantum.ComponentPrototype<Quantum.TeamVersusGlobals>
+  nameWithType.vb: ComponentPrototype(Of TeamVersusGlobals)
+  fullName.vb: Quantum.ComponentPrototype(Of Quantum.TeamVersusGlobals)
+  name.vb: ComponentPrototype(Of TeamVersusGlobals)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: <
+  - uid: Quantum.TeamVersusGlobals
+    name: TeamVersusGlobals
+    href: Quantum.TeamVersusGlobals.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.TeamVersusGlobals
+    name: TeamVersusGlobals
+    href: Quantum.TeamVersusGlobals.html
+  - name: )
+- uid: Quantum.IPrototype
+  commentId: T:Quantum.IPrototype
+  parent: Quantum
+  isExternal: true
+  name: IPrototype
+  nameWithType: IPrototype
+  fullName: Quantum.IPrototype
+- uid: Quantum.ComponentPrototype{Quantum.TeamVersusGlobals}.ComponentType
+  commentId: P:Quantum.ComponentPrototype{Quantum.TeamVersusGlobals}.ComponentType
+  parent: Quantum.ComponentPrototype{Quantum.TeamVersusGlobals}
+  definition: Quantum.ComponentPrototype`1.ComponentType
+  name: ComponentType
+  nameWithType: ComponentPrototype<TeamVersusGlobals>.ComponentType
+  fullName: Quantum.ComponentPrototype<Quantum.TeamVersusGlobals>.ComponentType
+  nameWithType.vb: ComponentPrototype(Of TeamVersusGlobals).ComponentType
+  fullName.vb: Quantum.ComponentPrototype(Of Quantum.TeamVersusGlobals).ComponentType
+- uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+  commentId: M:Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  name: AddToEntity(FrameBase, EntityRef)
+  nameWithType: ComponentPrototype.AddToEntity(FrameBase, EntityRef)
+  fullName: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: )
+- uid: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  commentId: M:Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: PrototypeTypeToComponentType(Type)
+  nameWithType: ComponentPrototype.PrototypeTypeToComponentType(Type)
+  fullName: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+    name: PrototypeTypeToComponentType
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+    name: PrototypeTypeToComponentType
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.ComponentPrototype.ComponentTypeId
+  commentId: P:Quantum.ComponentPrototype.ComponentTypeId
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  name: ComponentTypeId
+  nameWithType: ComponentPrototype.ComponentTypeId
+  fullName: Quantum.ComponentPrototype.ComponentTypeId
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ComponentPrototype`1
+  commentId: T:Quantum.ComponentPrototype`1
+  isExternal: true
+  name: ComponentPrototype<T>
+  nameWithType: ComponentPrototype<T>
+  fullName: Quantum.ComponentPrototype<T>
+  nameWithType.vb: ComponentPrototype(Of T)
+  fullName.vb: Quantum.ComponentPrototype(Of T)
+  name.vb: ComponentPrototype(Of T)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.ComponentPrototype`1.ComponentType
+  commentId: P:Quantum.ComponentPrototype`1.ComponentType
+  isExternal: true
+  name: ComponentType
+  nameWithType: ComponentPrototype<T>.ComponentType
+  fullName: Quantum.ComponentPrototype<T>.ComponentType
+  nameWithType.vb: ComponentPrototype(Of T).ComponentType
+  fullName.vb: Quantum.ComponentPrototype(Of T).ComponentType
+- uid: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData[]
+  isExternal: true
+  href: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData.html
+  name: DictionaryEntry_Int32_TeamVersusPlayerData[]
+  nameWithType: DictionaryEntry_Int32_TeamVersusPlayerData[]
+  fullName: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData[]
+  nameWithType.vb: DictionaryEntry_Int32_TeamVersusPlayerData()
+  fullName.vb: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData()
+  name.vb: DictionaryEntry_Int32_TeamVersusPlayerData()
+  spec.csharp:
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData
+    name: DictionaryEntry_Int32_TeamVersusPlayerData
+    href: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData
+    name: DictionaryEntry_Int32_TeamVersusPlayerData
+    href: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData.html
+  - name: (
+  - name: )
+- uid: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32[]
+  isExternal: true
+  href: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32.html
+  name: DictionaryEntry_PlayerRef_Int32[]
+  nameWithType: DictionaryEntry_PlayerRef_Int32[]
+  fullName: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32[]
+  nameWithType.vb: DictionaryEntry_PlayerRef_Int32()
+  fullName.vb: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32()
+  name.vb: DictionaryEntry_PlayerRef_Int32()
+  spec.csharp:
+  - uid: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32
+    name: DictionaryEntry_PlayerRef_Int32
+    href: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32
+    name: DictionaryEntry_PlayerRef_Int32
+    href: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32.html
+  - name: (
+  - name: )
+- uid: Quantum.Prototypes.DictionaryEntry_Int32_Int32[]
+  isExternal: true
+  href: Quantum.Prototypes.DictionaryEntry_Int32_Int32.html
+  name: DictionaryEntry_Int32_Int32[]
+  nameWithType: DictionaryEntry_Int32_Int32[]
+  fullName: Quantum.Prototypes.DictionaryEntry_Int32_Int32[]
+  nameWithType.vb: DictionaryEntry_Int32_Int32()
+  fullName.vb: Quantum.Prototypes.DictionaryEntry_Int32_Int32()
+  name.vb: DictionaryEntry_Int32_Int32()
+  spec.csharp:
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_Int32
+    name: DictionaryEntry_Int32_Int32
+    href: Quantum.Prototypes.DictionaryEntry_Int32_Int32.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_Int32
+    name: DictionaryEntry_Int32_Int32
+    href: Quantum.Prototypes.DictionaryEntry_Int32_Int32.html
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.QEnum32{Quantum.CharacterIntroType}
+  commentId: T:Quantum.QEnum32{Quantum.CharacterIntroType}
+  parent: Quantum
+  definition: Quantum.QEnum32`1
+  href: Quantum.CharacterIntroType.html
+  name: QEnum32<CharacterIntroType>
+  nameWithType: QEnum32<CharacterIntroType>
+  fullName: Quantum.QEnum32<Quantum.CharacterIntroType>
+  nameWithType.vb: QEnum32(Of CharacterIntroType)
+  fullName.vb: Quantum.QEnum32(Of Quantum.CharacterIntroType)
+  name.vb: QEnum32(Of CharacterIntroType)
+  spec.csharp:
+  - uid: Quantum.QEnum32`1
+    name: QEnum32
+    isExternal: true
+  - name: <
+  - uid: Quantum.CharacterIntroType
+    name: CharacterIntroType
+    href: Quantum.CharacterIntroType.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.QEnum32`1
+    name: QEnum32
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.CharacterIntroType
+    name: CharacterIntroType
+    href: Quantum.CharacterIntroType.html
+  - name: )
+- uid: Quantum.QEnum32`1
+  commentId: T:Quantum.QEnum32`1
+  isExternal: true
+  name: QEnum32<T>
+  nameWithType: QEnum32<T>
+  fullName: Quantum.QEnum32<T>
+  nameWithType.vb: QEnum32(Of T)
+  fullName.vb: Quantum.QEnum32(Of T)
+  name.vb: QEnum32(Of T)
+  spec.csharp:
+  - uid: Quantum.QEnum32`1
+    name: QEnum32
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.QEnum32`1
+    name: QEnum32
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  commentId: M:Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  name: AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  nameWithType: ComponentPrototype.AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  fullName: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, in Quantum.PrototypeMaterializationContext)
+  nameWithType.vb: ComponentPrototype.AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+  fullName.vb: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.PrototypeMaterializationContext)
+  name.vb: AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: Quantum.PrototypeMaterializationContext
+    name: PrototypeMaterializationContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.PrototypeMaterializationContext
+    name: PrototypeMaterializationContext
+    isExternal: true
+  - name: )
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.AddToEntity*
+  commentId: Overload:Quantum.Prototypes.TeamVersusGlobalsPrototype.AddToEntity
+  href: Quantum.Prototypes.TeamVersusGlobalsPrototype.html#Quantum_Prototypes_TeamVersusGlobalsPrototype_AddToEntity_Quantum_Core_FrameBase_Quantum_EntityRef_Quantum_PrototypeMaterializationContext__
+  name: AddToEntity
+  nameWithType: TeamVersusGlobalsPrototype.AddToEntity
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.AddToEntity
+- uid: Quantum.Core.FrameBase
+  commentId: T:Quantum.Core.FrameBase
+  parent: Quantum.Core
+  isExternal: true
+  name: FrameBase
+  nameWithType: FrameBase
+  fullName: Quantum.Core.FrameBase
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.PrototypeMaterializationContext
+  commentId: T:Quantum.PrototypeMaterializationContext
+  parent: Quantum
+  isExternal: true
+  name: PrototypeMaterializationContext
+  nameWithType: PrototypeMaterializationContext
+  fullName: Quantum.PrototypeMaterializationContext
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.Core
+  commentId: N:Quantum.Core
+  href: Quantum.html
+  name: Quantum.Core
+  nameWithType: Quantum.Core
+  fullName: Quantum.Core
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.Materialize*
+  commentId: Overload:Quantum.Prototypes.TeamVersusGlobalsPrototype.Materialize
+  href: Quantum.Prototypes.TeamVersusGlobalsPrototype.html#Quantum_Prototypes_TeamVersusGlobalsPrototype_Materialize_Quantum_Frame_Quantum_TeamVersusGlobals__Quantum_PrototypeMaterializationContext__
+  name: Materialize
+  nameWithType: TeamVersusGlobalsPrototype.Materialize
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.Materialize
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.TeamVersusGlobals
+  commentId: T:Quantum.TeamVersusGlobals
+  parent: Quantum
+  href: Quantum.TeamVersusGlobals.html
+  name: TeamVersusGlobals
+  nameWithType: TeamVersusGlobals
+  fullName: Quantum.TeamVersusGlobals

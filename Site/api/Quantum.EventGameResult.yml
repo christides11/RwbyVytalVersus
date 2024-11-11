@@ -1,0 +1,299 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.EventGameResult
+  commentId: T:Quantum.EventGameResult
+  id: EventGameResult
+  parent: Quantum
+  children:
+  - Quantum.EventGameResult.#ctor
+  - Quantum.EventGameResult.Game
+  - Quantum.EventGameResult.GameResult
+  - Quantum.EventGameResult.ID
+  langs:
+  - csharp
+  - vb
+  name: EventGameResult
+  nameWithType: EventGameResult
+  fullName: Quantum.EventGameResult
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: EventGameResult
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2470
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Does not have to implement checksum, because it's a hard-coded synced event.
+  example: []
+  syntax:
+    content: 'public sealed class EventGameResult : EventBase, IDispatchable'
+    content.vb: Public NotInheritable Class EventGameResult Inherits EventBase Implements IDispatchable
+  inheritance:
+  - System.Object
+  - Quantum.EventBase
+  implements:
+  - Quantum.IDispatchable
+  inheritedMembers:
+  - Quantum.EventBase.Tick
+  - Quantum.EventBase.Id
+  - Quantum.EventBase.OnReleased
+  - Quantum.EventBase.Synced
+  - Quantum.EventBase.CanBeInvokedOnServer
+  - Quantum.EventBase.CanBeInvokedOnClient
+- uid: Quantum.EventGameResult.ID
+  commentId: F:Quantum.EventGameResult.ID
+  id: ID
+  parent: Quantum.EventGameResult
+  langs:
+  - csharp
+  - vb
+  name: ID
+  nameWithType: EventGameResult.ID
+  fullName: Quantum.EventGameResult.ID
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2474
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The game result event id.
+  example: []
+  syntax:
+    content: public const int ID = 0
+    return:
+      type: System.Int32
+    content.vb: Public Const ID As Integer = 0
+- uid: Quantum.EventGameResult.GameResult
+  commentId: F:Quantum.EventGameResult.GameResult
+  id: GameResult
+  parent: Quantum.EventGameResult
+  langs:
+  - csharp
+  - vb
+  name: GameResult
+  nameWithType: EventGameResult.GameResult
+  fullName: Quantum.EventGameResult.GameResult
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GameResult
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2479
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The game result that was created by the simulation.
+  example: []
+  syntax:
+    content: public GameResult GameResult
+    return:
+      type: Quantum.GameResult
+    content.vb: Public GameResult As GameResult
+- uid: Quantum.EventGameResult.#ctor
+  commentId: M:Quantum.EventGameResult.#ctor
+  id: '#ctor'
+  parent: Quantum.EventGameResult
+  langs:
+  - csharp
+  - vb
+  name: EventGameResult()
+  nameWithType: EventGameResult.EventGameResult()
+  fullName: Quantum.EventGameResult.EventGameResult()
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2484
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Constructor.
+  example: []
+  syntax:
+    content: public EventGameResult()
+    content.vb: Public Sub New()
+  overload: Quantum.EventGameResult.#ctor*
+  nameWithType.vb: EventGameResult.New()
+  fullName.vb: Quantum.EventGameResult.New()
+  name.vb: New()
+- uid: Quantum.EventGameResult.Game
+  commentId: P:Quantum.EventGameResult.Game
+  id: Game
+  parent: Quantum.EventGameResult
+  langs:
+  - csharp
+  - vb
+  name: Game
+  nameWithType: EventGameResult.Game
+  fullName: Quantum.EventGameResult.Game
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Game
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2490
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Override the Game accessor to return the specialized <xref href="Quantum.QuantumGame" data-throw-if-not-resolved="false"></xref> instead of the interface.
+  example: []
+  syntax:
+    content: public QuantumGame Game { get; set; }
+    parameters: []
+    return:
+      type: Quantum.QuantumGame
+    content.vb: Public Property Game As QuantumGame
+  overload: Quantum.EventGameResult.Game*
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.EventBase
+  commentId: T:Quantum.EventBase
+  parent: Quantum
+  isExternal: true
+  name: EventBase
+  nameWithType: EventBase
+  fullName: Quantum.EventBase
+- uid: Quantum.IDispatchable
+  commentId: T:Quantum.IDispatchable
+  parent: Quantum
+  isExternal: true
+  name: IDispatchable
+  nameWithType: IDispatchable
+  fullName: Quantum.IDispatchable
+- uid: Quantum.EventBase.Tick
+  commentId: F:Quantum.EventBase.Tick
+  parent: Quantum.EventBase
+  isExternal: true
+  name: Tick
+  nameWithType: EventBase.Tick
+  fullName: Quantum.EventBase.Tick
+- uid: Quantum.EventBase.Id
+  commentId: F:Quantum.EventBase.Id
+  parent: Quantum.EventBase
+  isExternal: true
+  name: Id
+  nameWithType: EventBase.Id
+  fullName: Quantum.EventBase.Id
+- uid: Quantum.EventBase.OnReleased
+  commentId: M:Quantum.EventBase.OnReleased
+  parent: Quantum.EventBase
+  isExternal: true
+  name: OnReleased()
+  nameWithType: EventBase.OnReleased()
+  fullName: Quantum.EventBase.OnReleased()
+  spec.csharp:
+  - uid: Quantum.EventBase.OnReleased
+    name: OnReleased
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.EventBase.OnReleased
+    name: OnReleased
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.EventBase.Synced
+  commentId: P:Quantum.EventBase.Synced
+  parent: Quantum.EventBase
+  isExternal: true
+  name: Synced
+  nameWithType: EventBase.Synced
+  fullName: Quantum.EventBase.Synced
+- uid: Quantum.EventBase.CanBeInvokedOnServer
+  commentId: P:Quantum.EventBase.CanBeInvokedOnServer
+  parent: Quantum.EventBase
+  isExternal: true
+  name: CanBeInvokedOnServer
+  nameWithType: EventBase.CanBeInvokedOnServer
+  fullName: Quantum.EventBase.CanBeInvokedOnServer
+- uid: Quantum.EventBase.CanBeInvokedOnClient
+  commentId: P:Quantum.EventBase.CanBeInvokedOnClient
+  parent: Quantum.EventBase
+  isExternal: true
+  name: CanBeInvokedOnClient
+  nameWithType: EventBase.CanBeInvokedOnClient
+  fullName: Quantum.EventBase.CanBeInvokedOnClient
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.GameResult
+  commentId: T:Quantum.GameResult
+  parent: Quantum
+  href: Quantum.GameResult.html
+  name: GameResult
+  nameWithType: GameResult
+  fullName: Quantum.GameResult
+- uid: Quantum.EventGameResult.#ctor*
+  commentId: Overload:Quantum.EventGameResult.#ctor
+  href: Quantum.EventGameResult.html#Quantum_EventGameResult__ctor
+  name: EventGameResult
+  nameWithType: EventGameResult.EventGameResult
+  fullName: Quantum.EventGameResult.EventGameResult
+  nameWithType.vb: EventGameResult.New
+  fullName.vb: Quantum.EventGameResult.New
+  name.vb: New
+- uid: Quantum.QuantumGame
+  commentId: T:Quantum.QuantumGame
+  parent: Quantum
+  href: Quantum.QuantumGame.html
+  name: QuantumGame
+  nameWithType: QuantumGame
+  fullName: Quantum.QuantumGame
+- uid: Quantum.EventGameResult.Game*
+  commentId: Overload:Quantum.EventGameResult.Game
+  href: Quantum.EventGameResult.html#Quantum_EventGameResult_Game
+  name: Game
+  nameWithType: EventGameResult.Game
+  fullName: Quantum.EventGameResult.Game

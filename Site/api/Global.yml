@@ -3,6 +3,7 @@ items:
 - uid: Global
   id: Global
   children:
+  - Global.AddTypeMenuAttribute
   - Global.AddressableFighterDefinitionContainer
   - Global.AddressablesFighterDefinition
   - Global.AddressablesGamemodeDefinition
@@ -12,10 +13,28 @@ items:
   - Global.AddressablesMapDefinitionContainer
   - Global.AddressablesModInfoAsset
   - Global.AddressablesModLoader
+  - Global.AdvancedTypeModal
+  - Global.AdvancedTypePopup
+  - Global.AdvancedTypePopupItem
   - Global.AnimancerVisualEffect
   - Global.AnimationAssetBaker
   - Global.AnimationCurveExtensions
   - Global.AvailableModDefinition
+  - Global.BF_AddSnow
+  - Global.BF_FPS
+  - Global.BF_FxMouse
+  - Global.BF_InputSystemSwitcher
+  - Global.BF_InteractiveEffects
+  - Global.BF_InteractiveEffectsAdditional
+  - Global.BF_LightSwitch
+  - Global.BF_PlayerMovement
+  - Global.BF_PlayerReset
+  - Global.BF_PlayerSnow
+  - Global.BF_Rotator
+  - Global.BF_SnowAssetManager
+  - Global.BF_SnowSubShowcase
+  - Global.BF_SnowTerrain
+  - Global.BF_SquareBanding
   - Global.BaseContentDefinitionContainer`1
   - Global.BaseFighterDefinitionContainer
   - Global.BaseGamemodeDefinition
@@ -35,6 +54,7 @@ items:
   - Global.DevicePickerUtility
   - Global.DevicePickerUtility.DelegatePickerEvent
   - Global.DualsenseEdgeGamepadHID
+  - Global.EQSTester
   - Global.EntityInputDebugger
   - Global.EntityPhysicsDebugger
   - Global.EntityPrototypeBaker
@@ -45,9 +65,12 @@ items:
   - Global.ExButton
   - Global.FPConverter
   - Global.FighterContentHelper
+  - Global.FighterPassiveAuraGainSystem
+  - Global.FighterPassiveAuraGainSystem.Filter
   - Global.FighterShakeManager
   - Global.FighterVFXManager
   - Global.FighterViewHandle
+  - Global.FileCreationHelpers
   - Global.GamemodeContentHelper
   - Global.GamemodeTeamConfig
   - Global.GeneralHelpers
@@ -56,6 +79,8 @@ items:
   - Global.GlobalVFXManager
   - Global.GlyphEntry
   - Global.GroupVisualEffect
+  - Global.HNSFHelper
+  - Global.HitboxResolveResult
   - Global.HudElementContentHelper
   - Global.IContentDefinition
   - Global.IControllerChangedCallback
@@ -69,9 +94,12 @@ items:
   - Global.InputPlayerManager.DelegateWhenControlSchemeChanged
   - Global.InputPlayerManager.NavigationType
   - Global.InputRumbleManager
+  - Global.JumpCalcWindow
   - Global.LoadedModDefinition
   - Global.LocalLoadedModDefinition
   - Global.LocalModLoader
+  - Global.MLPForceSaveProbes
+  - Global.MLPSettings
   - Global.MapContentHelper
   - Global.MapViewManager
   - Global.MenuAndHandlerBase
@@ -83,6 +111,8 @@ items:
   - Global.ModManager
   - Global.ModOnlineRequirement
   - Global.ModProfile
+  - Global.ModifyHitstopSystem
+  - Global.ModifyHitstopSystem.Filter
   - Global.NewCameraInputController
   - Global.NewCameraInputController.InputReader
   - Global.OptionsGameplayScreen
@@ -93,7 +123,9 @@ items:
   - Global.OptionsScreen.OptionsScreenMenus
   - Global.OptionsSidebarItem
   - Global.ParticleSystemVisualEffect
+  - Global.PhysicsExtensions
   - Global.PlayerCamPositioner
+  - Global.PopUpAssetInspector
   - Global.ProfileDefinition
   - Global.ProfileDefinition.CameraVariables
   - Global.ProfilesManager
@@ -105,8 +137,20 @@ items:
   - Global.SongContentHelper
   - Global.SplitScreenManager
   - Global.SplitScreenManager.RectDefinition
+  - Global.StateActionLabel
+  - Global.StateActionLabel.OnChange
+  - Global.StateConverter
+  - Global.StateTimelineEditorView
+  - Global.StateTimelineFramebar
   - Global.SubassetConverter
   - Global.TextColorBounce
+  - Global.UIOutline
+  - Global.UModFighterDefinition
+  - Global.UModLoadedModDefinition
+  - Global.UModMapDefinition
+  - Global.UModModInfoAsset
+  - Global.UModModInfoAssetInspector
+  - Global.UModModLoader
   - Global.VFXGraphVisualEffect
   - Global.VisualEffectBase
   - Global.VisualEffectBase.VisualEffectPlayStatus
@@ -119,8 +163,284 @@ items:
   fullName: ''
   type: Namespace
   assemblies:
-  - rwby
+  - Assembly-CSharp
 references:
+- uid: Global.BF_SnowTerrain
+  commentId: T:Global.BF_SnowTerrain
+  href: BF_SnowTerrain.html
+  name: BF_SnowTerrain
+  nameWithType: BF_SnowTerrain
+  fullName: BF_SnowTerrain
+- uid: Global.BF_FxMouse
+  commentId: T:Global.BF_FxMouse
+  href: BF_FxMouse.html
+  name: BF_FxMouse
+  nameWithType: BF_FxMouse
+  fullName: BF_FxMouse
+- uid: Global.BF_AddSnow
+  commentId: T:Global.BF_AddSnow
+  href: BF_AddSnow.html
+  name: BF_AddSnow
+  nameWithType: BF_AddSnow
+  fullName: BF_AddSnow
+- uid: Global.BF_PlayerMovement
+  commentId: T:Global.BF_PlayerMovement
+  href: BF_PlayerMovement.html
+  name: BF_PlayerMovement
+  nameWithType: BF_PlayerMovement
+  fullName: BF_PlayerMovement
+- uid: Global.BF_SnowAssetManager
+  commentId: T:Global.BF_SnowAssetManager
+  href: BF_SnowAssetManager.html
+  name: BF_SnowAssetManager
+  nameWithType: BF_SnowAssetManager
+  fullName: BF_SnowAssetManager
+- uid: Global.BF_SquareBanding
+  commentId: T:Global.BF_SquareBanding
+  href: BF_SquareBanding.html
+  name: BF_SquareBanding
+  nameWithType: BF_SquareBanding
+  fullName: BF_SquareBanding
+- uid: Global.BF_FPS
+  commentId: T:Global.BF_FPS
+  href: BF_FPS.html
+  name: BF_FPS
+  nameWithType: BF_FPS
+  fullName: BF_FPS
+- uid: Global.BF_InputSystemSwitcher
+  commentId: T:Global.BF_InputSystemSwitcher
+  href: BF_InputSystemSwitcher.html
+  name: BF_InputSystemSwitcher
+  nameWithType: BF_InputSystemSwitcher
+  fullName: BF_InputSystemSwitcher
+- uid: Global.BF_PlayerSnow
+  commentId: T:Global.BF_PlayerSnow
+  href: BF_PlayerSnow.html
+  name: BF_PlayerSnow
+  nameWithType: BF_PlayerSnow
+  fullName: BF_PlayerSnow
+- uid: Global.BF_Rotator
+  commentId: T:Global.BF_Rotator
+  href: BF_Rotator.html
+  name: BF_Rotator
+  nameWithType: BF_Rotator
+  fullName: BF_Rotator
+- uid: Global.MLPSettings
+  commentId: T:Global.MLPSettings
+  href: MLPSettings.html
+  name: MLPSettings
+  nameWithType: MLPSettings
+  fullName: MLPSettings
+- uid: Global.BF_InteractiveEffects
+  commentId: T:Global.BF_InteractiveEffects
+  href: BF_InteractiveEffects.html
+  name: BF_InteractiveEffects
+  nameWithType: BF_InteractiveEffects
+  fullName: BF_InteractiveEffects
+- uid: Global.BF_InteractiveEffectsAdditional
+  commentId: T:Global.BF_InteractiveEffectsAdditional
+  href: BF_InteractiveEffectsAdditional.html
+  name: BF_InteractiveEffectsAdditional
+  nameWithType: BF_InteractiveEffectsAdditional
+  fullName: BF_InteractiveEffectsAdditional
+- uid: Global.BF_PlayerReset
+  commentId: T:Global.BF_PlayerReset
+  href: BF_PlayerReset.html
+  name: BF_PlayerReset
+  nameWithType: BF_PlayerReset
+  fullName: BF_PlayerReset
+- uid: Global.MLPForceSaveProbes
+  commentId: T:Global.MLPForceSaveProbes
+  href: MLPForceSaveProbes.html
+  name: MLPForceSaveProbes
+  nameWithType: MLPForceSaveProbes
+  fullName: MLPForceSaveProbes
+- uid: Global.BF_LightSwitch
+  commentId: T:Global.BF_LightSwitch
+  href: BF_LightSwitch.html
+  name: BF_LightSwitch
+  nameWithType: BF_LightSwitch
+  fullName: BF_LightSwitch
+- uid: Global.UIOutline
+  commentId: T:Global.UIOutline
+  href: UIOutline.html
+  name: UIOutline
+  nameWithType: UIOutline
+  fullName: UIOutline
+- uid: Global.BF_SnowSubShowcase
+  commentId: T:Global.BF_SnowSubShowcase
+  href: BF_SnowSubShowcase.html
+  name: BF_SnowSubShowcase
+  nameWithType: BF_SnowSubShowcase
+  fullName: BF_SnowSubShowcase
+- uid: Global.EQSTester
+  commentId: T:Global.EQSTester
+  href: EQSTester.html
+  name: EQSTester
+  nameWithType: EQSTester
+  fullName: EQSTester
+- uid: Global.PopUpAssetInspector
+  commentId: T:Global.PopUpAssetInspector
+  href: PopUpAssetInspector.html
+  name: PopUpAssetInspector
+  nameWithType: PopUpAssetInspector
+  fullName: PopUpAssetInspector
+- uid: Global.StateConverter
+  commentId: T:Global.StateConverter
+  href: StateConverter.html
+  name: StateConverter
+  nameWithType: StateConverter
+  fullName: StateConverter
+- uid: Global.AdvancedTypeModal
+  commentId: T:Global.AdvancedTypeModal
+  href: AdvancedTypeModal.html
+  name: AdvancedTypeModal
+  nameWithType: AdvancedTypeModal
+  fullName: AdvancedTypeModal
+- uid: Global.AdvancedTypePopupItem
+  commentId: T:Global.AdvancedTypePopupItem
+  href: AdvancedTypePopupItem.html
+  name: AdvancedTypePopupItem
+  nameWithType: AdvancedTypePopupItem
+  fullName: AdvancedTypePopupItem
+- uid: Global.StateActionLabel
+  commentId: T:Global.StateActionLabel
+  href: StateActionLabel.html
+  name: StateActionLabel
+  nameWithType: StateActionLabel
+  fullName: StateActionLabel
+- uid: Global.StateActionLabel.OnChange
+  commentId: T:Global.StateActionLabel.OnChange
+  href: StateActionLabel.html
+  name: StateActionLabel.OnChange
+  nameWithType: StateActionLabel.OnChange
+  fullName: StateActionLabel.OnChange
+  spec.csharp:
+  - uid: Global.StateActionLabel
+    name: StateActionLabel
+    href: StateActionLabel.html
+  - name: .
+  - uid: Global.StateActionLabel.OnChange
+    name: OnChange
+    href: StateActionLabel.OnChange.html
+  spec.vb:
+  - uid: Global.StateActionLabel
+    name: StateActionLabel
+    href: StateActionLabel.html
+  - name: .
+  - uid: Global.StateActionLabel.OnChange
+    name: OnChange
+    href: StateActionLabel.OnChange.html
+- uid: Global.StateTimelineEditorView
+  commentId: T:Global.StateTimelineEditorView
+  href: StateTimelineEditorView.html
+  name: StateTimelineEditorView
+  nameWithType: StateTimelineEditorView
+  fullName: StateTimelineEditorView
+- uid: Global.JumpCalcWindow
+  commentId: T:Global.JumpCalcWindow
+  href: JumpCalcWindow.html
+  name: JumpCalcWindow
+  nameWithType: JumpCalcWindow
+  fullName: JumpCalcWindow
+- uid: Global.AdvancedTypePopup
+  commentId: T:Global.AdvancedTypePopup
+  href: AdvancedTypePopup.html
+  name: AdvancedTypePopup
+  nameWithType: AdvancedTypePopup
+  fullName: AdvancedTypePopup
+- uid: Global.FileCreationHelpers
+  commentId: T:Global.FileCreationHelpers
+  href: FileCreationHelpers.html
+  name: FileCreationHelpers
+  nameWithType: FileCreationHelpers
+  fullName: FileCreationHelpers
+- uid: Global.HNSFHelper
+  commentId: T:Global.HNSFHelper
+  href: HNSFHelper.html
+  name: HNSFHelper
+  nameWithType: HNSFHelper
+  fullName: HNSFHelper
+- uid: Global.StateTimelineFramebar
+  commentId: T:Global.StateTimelineFramebar
+  href: StateTimelineFramebar.html
+  name: StateTimelineFramebar
+  nameWithType: StateTimelineFramebar
+  fullName: StateTimelineFramebar
+- uid: Global.ModifyHitstopSystem
+  commentId: T:Global.ModifyHitstopSystem
+  href: ModifyHitstopSystem.html
+  name: ModifyHitstopSystem
+  nameWithType: ModifyHitstopSystem
+  fullName: ModifyHitstopSystem
+- uid: Global.ModifyHitstopSystem.Filter
+  commentId: T:Global.ModifyHitstopSystem.Filter
+  href: ModifyHitstopSystem.html
+  name: ModifyHitstopSystem.Filter
+  nameWithType: ModifyHitstopSystem.Filter
+  fullName: ModifyHitstopSystem.Filter
+  spec.csharp:
+  - uid: Global.ModifyHitstopSystem
+    name: ModifyHitstopSystem
+    href: ModifyHitstopSystem.html
+  - name: .
+  - uid: Global.ModifyHitstopSystem.Filter
+    name: Filter
+    href: ModifyHitstopSystem.Filter.html
+  spec.vb:
+  - uid: Global.ModifyHitstopSystem
+    name: ModifyHitstopSystem
+    href: ModifyHitstopSystem.html
+  - name: .
+  - uid: Global.ModifyHitstopSystem.Filter
+    name: Filter
+    href: ModifyHitstopSystem.Filter.html
+- uid: Global.AddTypeMenuAttribute
+  commentId: T:Global.AddTypeMenuAttribute
+  href: AddTypeMenuAttribute.html
+  name: AddTypeMenuAttribute
+  nameWithType: AddTypeMenuAttribute
+  fullName: AddTypeMenuAttribute
+- uid: Global.FighterPassiveAuraGainSystem
+  commentId: T:Global.FighterPassiveAuraGainSystem
+  href: FighterPassiveAuraGainSystem.html
+  name: FighterPassiveAuraGainSystem
+  nameWithType: FighterPassiveAuraGainSystem
+  fullName: FighterPassiveAuraGainSystem
+- uid: Global.FighterPassiveAuraGainSystem.Filter
+  commentId: T:Global.FighterPassiveAuraGainSystem.Filter
+  href: FighterPassiveAuraGainSystem.html
+  name: FighterPassiveAuraGainSystem.Filter
+  nameWithType: FighterPassiveAuraGainSystem.Filter
+  fullName: FighterPassiveAuraGainSystem.Filter
+  spec.csharp:
+  - uid: Global.FighterPassiveAuraGainSystem
+    name: FighterPassiveAuraGainSystem
+    href: FighterPassiveAuraGainSystem.html
+  - name: .
+  - uid: Global.FighterPassiveAuraGainSystem.Filter
+    name: Filter
+    href: FighterPassiveAuraGainSystem.Filter.html
+  spec.vb:
+  - uid: Global.FighterPassiveAuraGainSystem
+    name: FighterPassiveAuraGainSystem
+    href: FighterPassiveAuraGainSystem.html
+  - name: .
+  - uid: Global.FighterPassiveAuraGainSystem.Filter
+    name: Filter
+    href: FighterPassiveAuraGainSystem.Filter.html
+- uid: Global.PhysicsExtensions
+  commentId: T:Global.PhysicsExtensions
+  href: PhysicsExtensions.html
+  name: PhysicsExtensions
+  nameWithType: PhysicsExtensions
+  fullName: PhysicsExtensions
+- uid: Global.HitboxResolveResult
+  commentId: T:Global.HitboxResolveResult
+  href: HitboxResolveResult.html
+  name: HitboxResolveResult
+  nameWithType: HitboxResolveResult
+  fullName: HitboxResolveResult
 - uid: Global.GroupVisualEffect
   commentId: T:Global.GroupVisualEffect
   href: GroupVisualEffect.html
@@ -1012,3 +1332,39 @@ references:
   name: FPConverter
   nameWithType: FPConverter
   fullName: FPConverter
+- uid: Global.UModModInfoAssetInspector
+  commentId: T:Global.UModModInfoAssetInspector
+  href: UModModInfoAssetInspector.html
+  name: UModModInfoAssetInspector
+  nameWithType: UModModInfoAssetInspector
+  fullName: UModModInfoAssetInspector
+- uid: Global.UModMapDefinition
+  commentId: T:Global.UModMapDefinition
+  href: UModMapDefinition.html
+  name: UModMapDefinition
+  nameWithType: UModMapDefinition
+  fullName: UModMapDefinition
+- uid: Global.UModModInfoAsset
+  commentId: T:Global.UModModInfoAsset
+  href: UModModInfoAsset.html
+  name: UModModInfoAsset
+  nameWithType: UModModInfoAsset
+  fullName: UModModInfoAsset
+- uid: Global.UModModLoader
+  commentId: T:Global.UModModLoader
+  href: UModModLoader.html
+  name: UModModLoader
+  nameWithType: UModModLoader
+  fullName: UModModLoader
+- uid: Global.UModLoadedModDefinition
+  commentId: T:Global.UModLoadedModDefinition
+  href: UModLoadedModDefinition.html
+  name: UModLoadedModDefinition
+  nameWithType: UModLoadedModDefinition
+  fullName: UModLoadedModDefinition
+- uid: Global.UModFighterDefinition
+  commentId: T:Global.UModFighterDefinition
+  href: UModFighterDefinition.html
+  name: UModFighterDefinition
+  nameWithType: UModFighterDefinition
+  fullName: UModFighterDefinition

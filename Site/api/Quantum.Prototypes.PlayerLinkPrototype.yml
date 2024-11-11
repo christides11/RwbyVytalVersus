@@ -1,0 +1,505 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.Prototypes.PlayerLinkPrototype
+  commentId: T:Quantum.Prototypes.PlayerLinkPrototype
+  id: PlayerLinkPrototype
+  parent: Quantum.Prototypes
+  children:
+  - Quantum.Prototypes.PlayerLinkPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  - Quantum.Prototypes.PlayerLinkPrototype.Materialize(Quantum.Frame,Quantum.PlayerLink@,Quantum.PrototypeMaterializationContext@)
+  - Quantum.Prototypes.PlayerLinkPrototype.Player
+  langs:
+  - csharp
+  - vb
+  name: PlayerLinkPrototype
+  nameWithType: PlayerLinkPrototype
+  fullName: Quantum.Prototypes.PlayerLinkPrototype
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PlayerLinkPrototype
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1525
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: >-
+      [Serializable]
+
+      [Prototype(typeof(PlayerLink))]
+
+      public class PlayerLinkPrototype : ComponentPrototype<PlayerLink>, IPrototype
+    content.vb: >-
+      <Serializable>
+
+      <Prototype(GetType(PlayerLink))>
+
+      Public Class PlayerLinkPrototype Inherits ComponentPrototype(Of PlayerLink) Implements IPrototype
+  inheritance:
+  - System.Object
+  - Quantum.ComponentPrototype
+  - Quantum.ComponentPrototype{Quantum.PlayerLink}
+  implements:
+  - Quantum.IPrototype
+  inheritedMembers:
+  - Quantum.ComponentPrototype{Quantum.PlayerLink}.ComponentType
+  - Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+  - Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  - Quantum.ComponentPrototype.ComponentTypeId
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  - type: Quantum.Prototypes.PrototypeAttribute
+    ctor: Quantum.Prototypes.PrototypeAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Quantum.PlayerLink
+- uid: Quantum.Prototypes.PlayerLinkPrototype.Player
+  commentId: F:Quantum.Prototypes.PlayerLinkPrototype.Player
+  id: Player
+  parent: Quantum.Prototypes.PlayerLinkPrototype
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: PlayerLinkPrototype.Player
+  fullName: Quantum.Prototypes.PlayerLinkPrototype.Player
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Player
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1528
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: public PlayerRef Player
+    return:
+      type: Quantum.PlayerRef
+    content.vb: Public Player As PlayerRef
+- uid: Quantum.Prototypes.PlayerLinkPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  commentId: M:Quantum.Prototypes.PlayerLinkPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  id: AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  parent: Quantum.Prototypes.PlayerLinkPrototype
+  langs:
+  - csharp
+  - vb
+  name: AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  nameWithType: PlayerLinkPrototype.AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  fullName: Quantum.Prototypes.PlayerLinkPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, in Quantum.PrototypeMaterializationContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddToEntity
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1530
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  example: []
+  syntax:
+    content: public override bool AddToEntity(FrameBase f, EntityRef entity, in PrototypeMaterializationContext context)
+    parameters:
+    - id: f
+      type: Quantum.Core.FrameBase
+    - id: entity
+      type: Quantum.EntityRef
+    - id: context
+      type: Quantum.PrototypeMaterializationContext
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function AddToEntity(f As FrameBase, entity As EntityRef, context As PrototypeMaterializationContext) As Boolean
+  overridden: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  overload: Quantum.Prototypes.PlayerLinkPrototype.AddToEntity*
+  nameWithType.vb: PlayerLinkPrototype.AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+  fullName.vb: Quantum.Prototypes.PlayerLinkPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.PrototypeMaterializationContext)
+  name.vb: AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+- uid: Quantum.Prototypes.PlayerLinkPrototype.Materialize(Quantum.Frame,Quantum.PlayerLink@,Quantum.PrototypeMaterializationContext@)
+  commentId: M:Quantum.Prototypes.PlayerLinkPrototype.Materialize(Quantum.Frame,Quantum.PlayerLink@,Quantum.PrototypeMaterializationContext@)
+  id: Materialize(Quantum.Frame,Quantum.PlayerLink@,Quantum.PrototypeMaterializationContext@)
+  parent: Quantum.Prototypes.PlayerLinkPrototype
+  langs:
+  - csharp
+  - vb
+  name: Materialize(Frame, ref PlayerLink, in PrototypeMaterializationContext)
+  nameWithType: PlayerLinkPrototype.Materialize(Frame, ref PlayerLink, in PrototypeMaterializationContext)
+  fullName: Quantum.Prototypes.PlayerLinkPrototype.Materialize(Quantum.Frame, ref Quantum.PlayerLink, in Quantum.PrototypeMaterializationContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Materialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1535
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: public void Materialize(Frame frame, ref PlayerLink result, in PrototypeMaterializationContext context = default)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: result
+      type: Quantum.PlayerLink
+    - id: context
+      type: Quantum.PrototypeMaterializationContext
+    content.vb: Public Sub Materialize(frame As Frame, result As PlayerLink, context As PrototypeMaterializationContext = Nothing)
+  overload: Quantum.Prototypes.PlayerLinkPrototype.Materialize*
+  nameWithType.vb: PlayerLinkPrototype.Materialize(Frame, PlayerLink, PrototypeMaterializationContext)
+  fullName.vb: Quantum.Prototypes.PlayerLinkPrototype.Materialize(Quantum.Frame, Quantum.PlayerLink, Quantum.PrototypeMaterializationContext)
+  name.vb: Materialize(Frame, PlayerLink, PrototypeMaterializationContext)
+references:
+- uid: Quantum.Prototypes
+  commentId: N:Quantum.Prototypes
+  href: Quantum.html
+  name: Quantum.Prototypes
+  nameWithType: Quantum.Prototypes
+  fullName: Quantum.Prototypes
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Prototypes
+    name: Prototypes
+    href: Quantum.Prototypes.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Prototypes
+    name: Prototypes
+    href: Quantum.Prototypes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.ComponentPrototype
+  commentId: T:Quantum.ComponentPrototype
+  parent: Quantum
+  isExternal: true
+  name: ComponentPrototype
+  nameWithType: ComponentPrototype
+  fullName: Quantum.ComponentPrototype
+- uid: Quantum.ComponentPrototype{Quantum.PlayerLink}
+  commentId: T:Quantum.ComponentPrototype{Quantum.PlayerLink}
+  parent: Quantum
+  definition: Quantum.ComponentPrototype`1
+  href: Quantum.PlayerLink.html
+  name: ComponentPrototype<PlayerLink>
+  nameWithType: ComponentPrototype<PlayerLink>
+  fullName: Quantum.ComponentPrototype<Quantum.PlayerLink>
+  nameWithType.vb: ComponentPrototype(Of PlayerLink)
+  fullName.vb: Quantum.ComponentPrototype(Of Quantum.PlayerLink)
+  name.vb: ComponentPrototype(Of PlayerLink)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: <
+  - uid: Quantum.PlayerLink
+    name: PlayerLink
+    href: Quantum.PlayerLink.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.PlayerLink
+    name: PlayerLink
+    href: Quantum.PlayerLink.html
+  - name: )
+- uid: Quantum.IPrototype
+  commentId: T:Quantum.IPrototype
+  parent: Quantum
+  isExternal: true
+  name: IPrototype
+  nameWithType: IPrototype
+  fullName: Quantum.IPrototype
+- uid: Quantum.ComponentPrototype{Quantum.PlayerLink}.ComponentType
+  commentId: P:Quantum.ComponentPrototype{Quantum.PlayerLink}.ComponentType
+  parent: Quantum.ComponentPrototype{Quantum.PlayerLink}
+  definition: Quantum.ComponentPrototype`1.ComponentType
+  name: ComponentType
+  nameWithType: ComponentPrototype<PlayerLink>.ComponentType
+  fullName: Quantum.ComponentPrototype<Quantum.PlayerLink>.ComponentType
+  nameWithType.vb: ComponentPrototype(Of PlayerLink).ComponentType
+  fullName.vb: Quantum.ComponentPrototype(Of Quantum.PlayerLink).ComponentType
+- uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+  commentId: M:Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  name: AddToEntity(FrameBase, EntityRef)
+  nameWithType: ComponentPrototype.AddToEntity(FrameBase, EntityRef)
+  fullName: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: )
+- uid: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  commentId: M:Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: PrototypeTypeToComponentType(Type)
+  nameWithType: ComponentPrototype.PrototypeTypeToComponentType(Type)
+  fullName: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+    name: PrototypeTypeToComponentType
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.ComponentPrototype.PrototypeTypeToComponentType(System.Type)
+    name: PrototypeTypeToComponentType
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.ComponentPrototype.ComponentTypeId
+  commentId: P:Quantum.ComponentPrototype.ComponentTypeId
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  name: ComponentTypeId
+  nameWithType: ComponentPrototype.ComponentTypeId
+  fullName: Quantum.ComponentPrototype.ComponentTypeId
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ComponentPrototype`1
+  commentId: T:Quantum.ComponentPrototype`1
+  isExternal: true
+  name: ComponentPrototype<T>
+  nameWithType: ComponentPrototype<T>
+  fullName: Quantum.ComponentPrototype<T>
+  nameWithType.vb: ComponentPrototype(Of T)
+  fullName.vb: Quantum.ComponentPrototype(Of T)
+  name.vb: ComponentPrototype(Of T)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ComponentPrototype`1
+    name: ComponentPrototype
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.ComponentPrototype`1.ComponentType
+  commentId: P:Quantum.ComponentPrototype`1.ComponentType
+  isExternal: true
+  name: ComponentType
+  nameWithType: ComponentPrototype<T>.ComponentType
+  fullName: Quantum.ComponentPrototype<T>.ComponentType
+  nameWithType.vb: ComponentPrototype(Of T).ComponentType
+  fullName.vb: Quantum.ComponentPrototype(Of T).ComponentType
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
+  parent: Quantum
+  isExternal: true
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef
+- uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  commentId: M:Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+  parent: Quantum.ComponentPrototype
+  isExternal: true
+  name: AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  nameWithType: ComponentPrototype.AddToEntity(FrameBase, EntityRef, in PrototypeMaterializationContext)
+  fullName: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, in Quantum.PrototypeMaterializationContext)
+  nameWithType.vb: ComponentPrototype.AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+  fullName.vb: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.PrototypeMaterializationContext)
+  name.vb: AddToEntity(FrameBase, EntityRef, PrototypeMaterializationContext)
+  spec.csharp:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: Quantum.PrototypeMaterializationContext
+    name: PrototypeMaterializationContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
+    name: AddToEntity
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.PrototypeMaterializationContext
+    name: PrototypeMaterializationContext
+    isExternal: true
+  - name: )
+- uid: Quantum.Prototypes.PlayerLinkPrototype.AddToEntity*
+  commentId: Overload:Quantum.Prototypes.PlayerLinkPrototype.AddToEntity
+  href: Quantum.Prototypes.PlayerLinkPrototype.html#Quantum_Prototypes_PlayerLinkPrototype_AddToEntity_Quantum_Core_FrameBase_Quantum_EntityRef_Quantum_PrototypeMaterializationContext__
+  name: AddToEntity
+  nameWithType: PlayerLinkPrototype.AddToEntity
+  fullName: Quantum.Prototypes.PlayerLinkPrototype.AddToEntity
+- uid: Quantum.Core.FrameBase
+  commentId: T:Quantum.Core.FrameBase
+  parent: Quantum.Core
+  isExternal: true
+  name: FrameBase
+  nameWithType: FrameBase
+  fullName: Quantum.Core.FrameBase
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.PrototypeMaterializationContext
+  commentId: T:Quantum.PrototypeMaterializationContext
+  parent: Quantum
+  isExternal: true
+  name: PrototypeMaterializationContext
+  nameWithType: PrototypeMaterializationContext
+  fullName: Quantum.PrototypeMaterializationContext
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Quantum.Core
+  commentId: N:Quantum.Core
+  href: Quantum.html
+  name: Quantum.Core
+  nameWithType: Quantum.Core
+  fullName: Quantum.Core
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+- uid: Quantum.Prototypes.PlayerLinkPrototype.Materialize*
+  commentId: Overload:Quantum.Prototypes.PlayerLinkPrototype.Materialize
+  href: Quantum.Prototypes.PlayerLinkPrototype.html#Quantum_Prototypes_PlayerLinkPrototype_Materialize_Quantum_Frame_Quantum_PlayerLink__Quantum_PrototypeMaterializationContext__
+  name: Materialize
+  nameWithType: PlayerLinkPrototype.Materialize
+  fullName: Quantum.Prototypes.PlayerLinkPrototype.Materialize
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.PlayerLink
+  commentId: T:Quantum.PlayerLink
+  parent: Quantum
+  href: Quantum.PlayerLink.html
+  name: PlayerLink
+  nameWithType: PlayerLink
+  fullName: Quantum.PlayerLink

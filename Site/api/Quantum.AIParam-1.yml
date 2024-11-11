@@ -1,0 +1,1410 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.AIParam`1
+  commentId: T:Quantum.AIParam`1
+  id: AIParam`1
+  parent: Quantum
+  children:
+  - Quantum.AIParam`1.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.AIContext@)
+  - Quantum.AIParam`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  langs:
+  - csharp
+  - vb
+  name: AIParam<T>
+  nameWithType: AIParam<T>
+  fullName: Quantum.AIParam<T>
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIParam.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AIParam
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIParam.cs
+    startLine: 2
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: 'public abstract class AIParam<T> : AIParamBase<T>'
+    typeParameters:
+    - id: T
+    content.vb: Public MustInherit Class AIParam(Of T) Inherits AIParamBase(Of T)
+  inheritance:
+  - System.Object
+  - Quantum.AIParamBase{{T}}
+  inheritedMembers:
+  - Quantum.AIParamBase{{T}}.Source
+  - Quantum.AIParamBase{{T}}.Key
+  - Quantum.AIParamBase{{T}}.DefaultValue
+  - Quantum.AIParamBase{{T}}.GetBlackboardValue(Quantum.BlackboardValue)
+  - Quantum.AIParamBase{{T}}.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  - Quantum.AIParamBase{{T}}.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  - Quantum.AIParamBase{{T}}.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  - Quantum.AIParamBase{{T}}.Resolve(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  - Quantum.AIParamBase{{T}}.ResolveBlackboard(Quantum.Core.FrameBase,Quantum.AIBlackboardComponent*)
+  - Quantum.AIParamBase{{T}}.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  - Quantum.AIParamBase{{T}}.ResolveConfig(Quantum.Core.FrameBase,Quantum.AIConfigBase)
+  - Quantum.AIParamBase{{T}}.ResolveConfig(Quantum.FrameThreadSafe,Quantum.AIConfigBase)
+  - Quantum.AIParamBase{{T}}.ResolveFunction(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIContext@)
+  - Quantum.AIParamBase{{T}}.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  nameWithType.vb: AIParam(Of T)
+  fullName.vb: Quantum.AIParam(Of T)
+  name.vb: AIParam(Of T)
+- uid: Quantum.AIParam`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIParam`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  id: GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  parent: Quantum.AIParam`1
+  langs:
+  - csharp
+  - vb
+  name: GetFunctionValue(FrameThreadSafe, EntityRef, ref AIContext)
+  nameWithType: AIParam<T>.GetFunctionValue(FrameThreadSafe, EntityRef, ref AIContext)
+  fullName: Quantum.AIParam<T>.GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.AIContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIParam.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetFunctionValue
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIParam.cs
+    startLine: 4
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: protected override T GetFunctionValue(FrameThreadSafe frame, EntityRef entity, ref AIContext aiContext)
+    parameters:
+    - id: frame
+      type: Quantum.FrameThreadSafe
+    - id: entity
+      type: Quantum.EntityRef
+    - id: aiContext
+      type: Quantum.AIContext
+    return:
+      type: '{T}'
+    content.vb: Protected Overrides Function GetFunctionValue(frame As FrameThreadSafe, entity As EntityRef, aiContext As AIContext) As T
+  overridden: Quantum.AIParamBase{{T}}.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  overload: Quantum.AIParam`1.GetFunctionValue*
+  nameWithType.vb: AIParam(Of T).GetFunctionValue(FrameThreadSafe, EntityRef, AIContext)
+  fullName.vb: Quantum.AIParam(Of T).GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: GetFunctionValue(FrameThreadSafe, EntityRef, AIContext)
+- uid: Quantum.AIParam`1.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIParam`1.GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.AIContext@)
+  id: GetFunctionValue(Quantum.Frame,Quantum.EntityRef,Quantum.AIContext@)
+  parent: Quantum.AIParam`1
+  langs:
+  - csharp
+  - vb
+  name: GetFunctionValue(Frame, EntityRef, ref AIContext)
+  nameWithType: AIParam<T>.GetFunctionValue(Frame, EntityRef, ref AIContext)
+  fullName: Quantum.AIParam<T>.GetFunctionValue(Quantum.Frame, Quantum.EntityRef, ref Quantum.AIContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIParam.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetFunctionValue
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/QuantumBotSDK/Simulation/Core/AIParam.cs
+    startLine: 9
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: protected virtual T GetFunctionValue(Frame frame, EntityRef entity, ref AIContext aiContext)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: entity
+      type: Quantum.EntityRef
+    - id: aiContext
+      type: Quantum.AIContext
+    return:
+      type: '{T}'
+    content.vb: Protected Overridable Function GetFunctionValue(frame As Frame, entity As EntityRef, aiContext As AIContext) As T
+  overload: Quantum.AIParam`1.GetFunctionValue*
+  nameWithType.vb: AIParam(Of T).GetFunctionValue(Frame, EntityRef, AIContext)
+  fullName.vb: Quantum.AIParam(Of T).GetFunctionValue(Quantum.Frame, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: GetFunctionValue(Frame, EntityRef, AIContext)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.AIParamBase{{T}}
+  commentId: T:Quantum.AIParamBase{`0}
+  parent: Quantum
+  definition: Quantum.AIParamBase`1
+  name: AIParamBase<T>
+  nameWithType: AIParamBase<T>
+  fullName: Quantum.AIParamBase<T>
+  nameWithType.vb: AIParamBase(Of T)
+  fullName.vb: Quantum.AIParamBase(Of T)
+  name.vb: AIParamBase(Of T)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1
+    name: AIParamBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AIParamBase`1
+    name: AIParamBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.Source
+  commentId: F:Quantum.AIParamBase{`0}.Source
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.Source
+  name: Source
+  nameWithType: AIParamBase<T>.Source
+  fullName: Quantum.AIParamBase<T>.Source
+  nameWithType.vb: AIParamBase(Of T).Source
+  fullName.vb: Quantum.AIParamBase(Of T).Source
+- uid: Quantum.AIParamBase{{T}}.Key
+  commentId: F:Quantum.AIParamBase{`0}.Key
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.Key
+  name: Key
+  nameWithType: AIParamBase<T>.Key
+  fullName: Quantum.AIParamBase<T>.Key
+  nameWithType.vb: AIParamBase(Of T).Key
+  fullName.vb: Quantum.AIParamBase(Of T).Key
+- uid: Quantum.AIParamBase{{T}}.DefaultValue
+  commentId: F:Quantum.AIParamBase{`0}.DefaultValue
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.DefaultValue
+  name: DefaultValue
+  nameWithType: AIParamBase<T>.DefaultValue
+  fullName: Quantum.AIParamBase<T>.DefaultValue
+  nameWithType.vb: AIParamBase(Of T).DefaultValue
+  fullName.vb: Quantum.AIParamBase(Of T).DefaultValue
+- uid: Quantum.AIParamBase{{T}}.GetBlackboardValue(Quantum.BlackboardValue)
+  commentId: M:Quantum.AIParamBase{`0}.GetBlackboardValue(Quantum.BlackboardValue)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.GetBlackboardValue(Quantum.BlackboardValue)
+  name: GetBlackboardValue(BlackboardValue)
+  nameWithType: AIParamBase<T>.GetBlackboardValue(BlackboardValue)
+  fullName: Quantum.AIParamBase<T>.GetBlackboardValue(Quantum.BlackboardValue)
+  nameWithType.vb: AIParamBase(Of T).GetBlackboardValue(BlackboardValue)
+  fullName.vb: Quantum.AIParamBase(Of T).GetBlackboardValue(Quantum.BlackboardValue)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.GetBlackboardValue(Quantum.BlackboardValue)
+    name: GetBlackboardValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.BlackboardValue
+    name: BlackboardValue
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.GetBlackboardValue(Quantum.BlackboardValue)
+    name: GetBlackboardValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.BlackboardValue
+    name: BlackboardValue
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  commentId: M:Quantum.AIParamBase{`0}.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  name: GetConfigValue(KeyValuePair)
+  nameWithType: AIParamBase<T>.GetConfigValue(AIConfigBase.KeyValuePair)
+  fullName: Quantum.AIParamBase<T>.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  nameWithType.vb: AIParamBase(Of T).GetConfigValue(AIConfigBase.KeyValuePair)
+  fullName.vb: Quantum.AIParamBase(Of T).GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+    name: GetConfigValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.AIConfigBase.KeyValuePair
+    name: KeyValuePair
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+    name: GetConfigValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.AIConfigBase.KeyValuePair
+    name: KeyValuePair
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  commentId: M:Quantum.AIParamBase{`0}.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  name: Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase)
+  nameWithType: AIParamBase<T>.Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase)
+  fullName: Quantum.AIParamBase<T>.Resolve(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase)
+  nameWithType.vb: AIParamBase(Of T).Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase)
+  fullName.vb: Quantum.AIParamBase(Of T).Resolve(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  commentId: M:Quantum.AIParamBase{`0}.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  name: Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase, ref AIContext)
+  nameWithType: AIParamBase<T>.Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase, ref AIContext)
+  fullName: Quantum.AIParamBase<T>.Resolve(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, ref Quantum.AIContext)
+  nameWithType.vb: AIParamBase(Of T).Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase, AIContext)
+  fullName.vb: Quantum.AIParamBase(Of T).Resolve(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, Quantum.AIContext)
+  name.vb: Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.Resolve(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  commentId: M:Quantum.AIParamBase{`0}.Resolve(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.Resolve(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  name: Resolve(FrameThreadSafe, EntityRef, AIBlackboardComponent*, AIConfigBase, ref AIContext)
+  nameWithType: AIParamBase<T>.Resolve(FrameThreadSafe, EntityRef, AIBlackboardComponent*, AIConfigBase, ref AIContext)
+  fullName: Quantum.AIParamBase<T>.Resolve(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, ref Quantum.AIContext)
+  nameWithType.vb: AIParamBase(Of T).Resolve(FrameThreadSafe, EntityRef, AIBlackboardComponent*, AIConfigBase, AIContext)
+  fullName.vb: Quantum.AIParamBase(Of T).Resolve(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, Quantum.AIContext)
+  name.vb: Resolve(FrameThreadSafe, EntityRef, AIBlackboardComponent*, AIConfigBase, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.Resolve(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.Resolve(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.ResolveBlackboard(Quantum.Core.FrameBase,Quantum.AIBlackboardComponent*)
+  commentId: M:Quantum.AIParamBase{`0}.ResolveBlackboard(Quantum.Core.FrameBase,Quantum.AIBlackboardComponent*)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.ResolveBlackboard(Quantum.Core.FrameBase,Quantum.AIBlackboardComponent*)
+  name: ResolveBlackboard(FrameBase, AIBlackboardComponent*)
+  nameWithType: AIParamBase<T>.ResolveBlackboard(FrameBase, AIBlackboardComponent*)
+  fullName: Quantum.AIParamBase<T>.ResolveBlackboard(Quantum.Core.FrameBase, Quantum.AIBlackboardComponent*)
+  nameWithType.vb: AIParamBase(Of T).ResolveBlackboard(FrameBase, AIBlackboardComponent*)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveBlackboard(Quantum.Core.FrameBase, Quantum.AIBlackboardComponent*)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.ResolveBlackboard(Quantum.Core.FrameBase,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.ResolveBlackboard(Quantum.Core.FrameBase,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  commentId: M:Quantum.AIParamBase{`0}.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  name: ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  nameWithType: AIParamBase<T>.ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  fullName: Quantum.AIParamBase<T>.ResolveBlackboard(Quantum.FrameThreadSafe, Quantum.AIBlackboardComponent*)
+  nameWithType.vb: AIParamBase(Of T).ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveBlackboard(Quantum.FrameThreadSafe, Quantum.AIBlackboardComponent*)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.ResolveConfig(Quantum.Core.FrameBase,Quantum.AIConfigBase)
+  commentId: M:Quantum.AIParamBase{`0}.ResolveConfig(Quantum.Core.FrameBase,Quantum.AIConfigBase)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.ResolveConfig(Quantum.Core.FrameBase,Quantum.AIConfigBase)
+  name: ResolveConfig(FrameBase, AIConfigBase)
+  nameWithType: AIParamBase<T>.ResolveConfig(FrameBase, AIConfigBase)
+  fullName: Quantum.AIParamBase<T>.ResolveConfig(Quantum.Core.FrameBase, Quantum.AIConfigBase)
+  nameWithType.vb: AIParamBase(Of T).ResolveConfig(FrameBase, AIConfigBase)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveConfig(Quantum.Core.FrameBase, Quantum.AIConfigBase)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.ResolveConfig(Quantum.Core.FrameBase,Quantum.AIConfigBase)
+    name: ResolveConfig
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.ResolveConfig(Quantum.Core.FrameBase,Quantum.AIConfigBase)
+    name: ResolveConfig
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.ResolveConfig(Quantum.FrameThreadSafe,Quantum.AIConfigBase)
+  commentId: M:Quantum.AIParamBase{`0}.ResolveConfig(Quantum.FrameThreadSafe,Quantum.AIConfigBase)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.ResolveConfig(Quantum.FrameThreadSafe,Quantum.AIConfigBase)
+  name: ResolveConfig(FrameThreadSafe, AIConfigBase)
+  nameWithType: AIParamBase<T>.ResolveConfig(FrameThreadSafe, AIConfigBase)
+  fullName: Quantum.AIParamBase<T>.ResolveConfig(Quantum.FrameThreadSafe, Quantum.AIConfigBase)
+  nameWithType.vb: AIParamBase(Of T).ResolveConfig(FrameThreadSafe, AIConfigBase)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveConfig(Quantum.FrameThreadSafe, Quantum.AIConfigBase)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.ResolveConfig(Quantum.FrameThreadSafe,Quantum.AIConfigBase)
+    name: ResolveConfig
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.ResolveConfig(Quantum.FrameThreadSafe,Quantum.AIConfigBase)
+    name: ResolveConfig
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.ResolveFunction(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIParamBase{`0}.ResolveFunction(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIContext@)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.ResolveFunction(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIContext@)
+  name: ResolveFunction(FrameBase, EntityRef, ref AIContext)
+  nameWithType: AIParamBase<T>.ResolveFunction(FrameBase, EntityRef, ref AIContext)
+  fullName: Quantum.AIParamBase<T>.ResolveFunction(Quantum.Core.FrameBase, Quantum.EntityRef, ref Quantum.AIContext)
+  nameWithType.vb: AIParamBase(Of T).ResolveFunction(FrameBase, EntityRef, AIContext)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveFunction(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: ResolveFunction(FrameBase, EntityRef, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.ResolveFunction(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIContext@)
+    name: ResolveFunction
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.ResolveFunction(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIContext@)
+    name: ResolveFunction
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIParamBase{`0}.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  name: ResolveFunction(FrameThreadSafe, EntityRef, ref AIContext)
+  nameWithType: AIParamBase<T>.ResolveFunction(FrameThreadSafe, EntityRef, ref AIContext)
+  fullName: Quantum.AIParamBase<T>.ResolveFunction(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.AIContext)
+  nameWithType.vb: AIParamBase(Of T).ResolveFunction(FrameThreadSafe, EntityRef, AIContext)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveFunction(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: ResolveFunction(FrameThreadSafe, EntityRef, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: ResolveFunction
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: ResolveFunction
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.AIParamBase`1
+  commentId: T:Quantum.AIParamBase`1
+  isExternal: true
+  name: AIParamBase<T>
+  nameWithType: AIParamBase<T>
+  fullName: Quantum.AIParamBase<T>
+  nameWithType.vb: AIParamBase(Of T)
+  fullName.vb: Quantum.AIParamBase(Of T)
+  name.vb: AIParamBase(Of T)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1
+    name: AIParamBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AIParamBase`1
+    name: AIParamBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.AIParamBase`1.Source
+  commentId: F:Quantum.AIParamBase`1.Source
+  isExternal: true
+  name: Source
+  nameWithType: AIParamBase<T>.Source
+  fullName: Quantum.AIParamBase<T>.Source
+  nameWithType.vb: AIParamBase(Of T).Source
+  fullName.vb: Quantum.AIParamBase(Of T).Source
+- uid: Quantum.AIParamBase`1.Key
+  commentId: F:Quantum.AIParamBase`1.Key
+  isExternal: true
+  name: Key
+  nameWithType: AIParamBase<T>.Key
+  fullName: Quantum.AIParamBase<T>.Key
+  nameWithType.vb: AIParamBase(Of T).Key
+  fullName.vb: Quantum.AIParamBase(Of T).Key
+- uid: Quantum.AIParamBase`1.DefaultValue
+  commentId: F:Quantum.AIParamBase`1.DefaultValue
+  isExternal: true
+  name: DefaultValue
+  nameWithType: AIParamBase<T>.DefaultValue
+  fullName: Quantum.AIParamBase<T>.DefaultValue
+  nameWithType.vb: AIParamBase(Of T).DefaultValue
+  fullName.vb: Quantum.AIParamBase(Of T).DefaultValue
+- uid: Quantum.AIParamBase`1.GetBlackboardValue(Quantum.BlackboardValue)
+  commentId: M:Quantum.AIParamBase`1.GetBlackboardValue(Quantum.BlackboardValue)
+  isExternal: true
+  name: GetBlackboardValue(BlackboardValue)
+  nameWithType: AIParamBase<T>.GetBlackboardValue(BlackboardValue)
+  fullName: Quantum.AIParamBase<T>.GetBlackboardValue(Quantum.BlackboardValue)
+  nameWithType.vb: AIParamBase(Of T).GetBlackboardValue(BlackboardValue)
+  fullName.vb: Quantum.AIParamBase(Of T).GetBlackboardValue(Quantum.BlackboardValue)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.GetBlackboardValue(Quantum.BlackboardValue)
+    name: GetBlackboardValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.BlackboardValue
+    name: BlackboardValue
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.GetBlackboardValue(Quantum.BlackboardValue)
+    name: GetBlackboardValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.BlackboardValue
+    name: BlackboardValue
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase`1.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  commentId: M:Quantum.AIParamBase`1.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  isExternal: true
+  name: GetConfigValue(KeyValuePair)
+  nameWithType: AIParamBase<T>.GetConfigValue(AIConfigBase.KeyValuePair)
+  fullName: Quantum.AIParamBase<T>.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  nameWithType.vb: AIParamBase(Of T).GetConfigValue(AIConfigBase.KeyValuePair)
+  fullName.vb: Quantum.AIParamBase(Of T).GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+    name: GetConfigValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.AIConfigBase.KeyValuePair
+    name: KeyValuePair
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.GetConfigValue(Quantum.AIConfigBase.KeyValuePair)
+    name: GetConfigValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.AIConfigBase.KeyValuePair
+    name: KeyValuePair
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase`1.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  commentId: M:Quantum.AIParamBase`1.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+  isExternal: true
+  name: Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase)
+  nameWithType: AIParamBase<T>.Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase)
+  fullName: Quantum.AIParamBase<T>.Resolve(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase)
+  nameWithType.vb: AIParamBase(Of T).Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase)
+  fullName.vb: Quantum.AIParamBase(Of T).Resolve(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase`1.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  commentId: M:Quantum.AIParamBase`1.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  isExternal: true
+  name: Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase, ref AIContext)
+  nameWithType: AIParamBase<T>.Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase, ref AIContext)
+  fullName: Quantum.AIParamBase<T>.Resolve(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, ref Quantum.AIContext)
+  nameWithType.vb: AIParamBase(Of T).Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase, AIContext)
+  fullName.vb: Quantum.AIParamBase(Of T).Resolve(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, Quantum.AIContext)
+  name.vb: Resolve(FrameBase, EntityRef, AIBlackboardComponent*, AIConfigBase, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.Resolve(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase`1.Resolve(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  commentId: M:Quantum.AIParamBase`1.Resolve(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+  isExternal: true
+  name: Resolve(FrameThreadSafe, EntityRef, AIBlackboardComponent*, AIConfigBase, ref AIContext)
+  nameWithType: AIParamBase<T>.Resolve(FrameThreadSafe, EntityRef, AIBlackboardComponent*, AIConfigBase, ref AIContext)
+  fullName: Quantum.AIParamBase<T>.Resolve(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, ref Quantum.AIContext)
+  nameWithType.vb: AIParamBase(Of T).Resolve(FrameThreadSafe, EntityRef, AIBlackboardComponent*, AIConfigBase, AIContext)
+  fullName.vb: Quantum.AIParamBase(Of T).Resolve(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, Quantum.AIContext)
+  name.vb: Resolve(FrameThreadSafe, EntityRef, AIBlackboardComponent*, AIConfigBase, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.Resolve(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.Resolve(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,Quantum.AIContext@)
+    name: Resolve
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase`1.ResolveBlackboard(Quantum.Core.FrameBase,Quantum.AIBlackboardComponent*)
+  commentId: M:Quantum.AIParamBase`1.ResolveBlackboard(Quantum.Core.FrameBase,Quantum.AIBlackboardComponent*)
+  isExternal: true
+  name: ResolveBlackboard(FrameBase, AIBlackboardComponent*)
+  nameWithType: AIParamBase<T>.ResolveBlackboard(FrameBase, AIBlackboardComponent*)
+  fullName: Quantum.AIParamBase<T>.ResolveBlackboard(Quantum.Core.FrameBase, Quantum.AIBlackboardComponent*)
+  nameWithType.vb: AIParamBase(Of T).ResolveBlackboard(FrameBase, AIBlackboardComponent*)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveBlackboard(Quantum.Core.FrameBase, Quantum.AIBlackboardComponent*)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.ResolveBlackboard(Quantum.Core.FrameBase,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.ResolveBlackboard(Quantum.Core.FrameBase,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.AIParamBase`1.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  commentId: M:Quantum.AIParamBase`1.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+  isExternal: true
+  name: ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  nameWithType: AIParamBase<T>.ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  fullName: Quantum.AIParamBase<T>.ResolveBlackboard(Quantum.FrameThreadSafe, Quantum.AIBlackboardComponent*)
+  nameWithType.vb: AIParamBase(Of T).ResolveBlackboard(FrameThreadSafe, AIBlackboardComponent*)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveBlackboard(Quantum.FrameThreadSafe, Quantum.AIBlackboardComponent*)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.ResolveBlackboard(Quantum.FrameThreadSafe,Quantum.AIBlackboardComponent*)
+    name: ResolveBlackboard
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIBlackboardComponent
+    name: AIBlackboardComponent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.AIParamBase`1.ResolveConfig(Quantum.Core.FrameBase,Quantum.AIConfigBase)
+  commentId: M:Quantum.AIParamBase`1.ResolveConfig(Quantum.Core.FrameBase,Quantum.AIConfigBase)
+  isExternal: true
+  name: ResolveConfig(FrameBase, AIConfigBase)
+  nameWithType: AIParamBase<T>.ResolveConfig(FrameBase, AIConfigBase)
+  fullName: Quantum.AIParamBase<T>.ResolveConfig(Quantum.Core.FrameBase, Quantum.AIConfigBase)
+  nameWithType.vb: AIParamBase(Of T).ResolveConfig(FrameBase, AIConfigBase)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveConfig(Quantum.Core.FrameBase, Quantum.AIConfigBase)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.ResolveConfig(Quantum.Core.FrameBase,Quantum.AIConfigBase)
+    name: ResolveConfig
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.ResolveConfig(Quantum.Core.FrameBase,Quantum.AIConfigBase)
+    name: ResolveConfig
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase`1.ResolveConfig(Quantum.FrameThreadSafe,Quantum.AIConfigBase)
+  commentId: M:Quantum.AIParamBase`1.ResolveConfig(Quantum.FrameThreadSafe,Quantum.AIConfigBase)
+  isExternal: true
+  name: ResolveConfig(FrameThreadSafe, AIConfigBase)
+  nameWithType: AIParamBase<T>.ResolveConfig(FrameThreadSafe, AIConfigBase)
+  fullName: Quantum.AIParamBase<T>.ResolveConfig(Quantum.FrameThreadSafe, Quantum.AIConfigBase)
+  nameWithType.vb: AIParamBase(Of T).ResolveConfig(FrameThreadSafe, AIConfigBase)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveConfig(Quantum.FrameThreadSafe, Quantum.AIConfigBase)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.ResolveConfig(Quantum.FrameThreadSafe,Quantum.AIConfigBase)
+    name: ResolveConfig
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.ResolveConfig(Quantum.FrameThreadSafe,Quantum.AIConfigBase)
+    name: ResolveConfig
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIConfigBase
+    name: AIConfigBase
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase`1.ResolveFunction(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIParamBase`1.ResolveFunction(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIContext@)
+  isExternal: true
+  name: ResolveFunction(FrameBase, EntityRef, ref AIContext)
+  nameWithType: AIParamBase<T>.ResolveFunction(FrameBase, EntityRef, ref AIContext)
+  fullName: Quantum.AIParamBase<T>.ResolveFunction(Quantum.Core.FrameBase, Quantum.EntityRef, ref Quantum.AIContext)
+  nameWithType.vb: AIParamBase(Of T).ResolveFunction(FrameBase, EntityRef, AIContext)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveFunction(Quantum.Core.FrameBase, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: ResolveFunction(FrameBase, EntityRef, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.ResolveFunction(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIContext@)
+    name: ResolveFunction
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.ResolveFunction(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.AIContext@)
+    name: ResolveFunction
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase`1.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIParamBase`1.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  isExternal: true
+  name: ResolveFunction(FrameThreadSafe, EntityRef, ref AIContext)
+  nameWithType: AIParamBase<T>.ResolveFunction(FrameThreadSafe, EntityRef, ref AIContext)
+  fullName: Quantum.AIParamBase<T>.ResolveFunction(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.AIContext)
+  nameWithType.vb: AIParamBase(Of T).ResolveFunction(FrameThreadSafe, EntityRef, AIContext)
+  fullName.vb: Quantum.AIParamBase(Of T).ResolveFunction(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: ResolveFunction(FrameThreadSafe, EntityRef, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: ResolveFunction
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.ResolveFunction(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: ResolveFunction
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParamBase{{T}}.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIParamBase{`0}.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  parent: Quantum.AIParamBase{{T}}
+  definition: Quantum.AIParamBase`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  name: GetFunctionValue(FrameThreadSafe, EntityRef, ref AIContext)
+  nameWithType: AIParamBase<T>.GetFunctionValue(FrameThreadSafe, EntityRef, ref AIContext)
+  fullName: Quantum.AIParamBase<T>.GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.AIContext)
+  nameWithType.vb: AIParamBase(Of T).GetFunctionValue(FrameThreadSafe, EntityRef, AIContext)
+  fullName.vb: Quantum.AIParamBase(Of T).GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: GetFunctionValue(FrameThreadSafe, EntityRef, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIParamBase{`0}.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: GetFunctionValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase{`0}.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: GetFunctionValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.AIParam`1.GetFunctionValue*
+  commentId: Overload:Quantum.AIParam`1.GetFunctionValue
+  href: Quantum.AIParam-1.html#Quantum_AIParam_1_GetFunctionValue_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_AIContext__
+  name: GetFunctionValue
+  nameWithType: AIParam<T>.GetFunctionValue
+  fullName: Quantum.AIParam<T>.GetFunctionValue
+  nameWithType.vb: AIParam(Of T).GetFunctionValue
+  fullName.vb: Quantum.AIParam(Of T).GetFunctionValue
+- uid: Quantum.FrameThreadSafe
+  commentId: T:Quantum.FrameThreadSafe
+  parent: Quantum
+  isExternal: true
+  name: FrameThreadSafe
+  nameWithType: FrameThreadSafe
+  fullName: Quantum.FrameThreadSafe
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.AIContext
+  commentId: T:Quantum.AIContext
+  parent: Quantum
+  isExternal: true
+  name: AIContext
+  nameWithType: AIContext
+  fullName: Quantum.AIContext
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Quantum.AIParamBase`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  commentId: M:Quantum.AIParamBase`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+  isExternal: true
+  name: GetFunctionValue(FrameThreadSafe, EntityRef, ref AIContext)
+  nameWithType: AIParamBase<T>.GetFunctionValue(FrameThreadSafe, EntityRef, ref AIContext)
+  fullName: Quantum.AIParamBase<T>.GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, ref Quantum.AIContext)
+  nameWithType.vb: AIParamBase(Of T).GetFunctionValue(FrameThreadSafe, EntityRef, AIContext)
+  fullName.vb: Quantum.AIParamBase(Of T).GetFunctionValue(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.AIContext)
+  name.vb: GetFunctionValue(FrameThreadSafe, EntityRef, AIContext)
+  spec.csharp:
+  - uid: Quantum.AIParamBase`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: GetFunctionValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AIParamBase`1.GetFunctionValue(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
+    name: GetFunctionValue
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame

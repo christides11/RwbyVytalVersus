@@ -1,0 +1,762 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.FrameContextUser
+  commentId: T:Quantum.FrameContextUser
+  id: FrameContextUser
+  parent: Quantum
+  children:
+  - Quantum.FrameContextUser.#ctor(Quantum.Core.FrameContext.Args)
+  - Quantum.FrameContextUser.Dispose
+  langs:
+  - csharp
+  - vb
+  name: FrameContextUser
+  nameWithType: FrameContextUser
+  fullName: Quantum.FrameContextUser
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/FrameContext.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FrameContextUser
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/FrameContext.User.cs
+    startLine: 1
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Use this class to extend the <xref href="Quantum.Core.FrameContext" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: 'public class FrameContextUser : FrameContext'
+    content.vb: Public Class FrameContextUser Inherits FrameContext
+  inheritance:
+  - System.Object
+  - Quantum.Core.FrameContext
+  inheritedMembers:
+  - Quantum.Core.FrameContext.IsLocalPlayer(Quantum.PlayerRef)
+  - Quantum.Core.FrameContext.OnGameStart(Photon.Deterministic.DeterministicFrame)
+  - Quantum.Core.FrameContext.OnSimulationBegin
+  - Quantum.Core.FrameContext.OnSimulationEnd
+  - Quantum.Core.FrameContext.OnFrameSimulationBegin(Quantum.Core.FrameBase)
+  - Quantum.Core.FrameContext.OnFrameSimulationEnd
+  - Quantum.Core.FrameContext.TempAllocate(System.Int32,System.Int32)
+  - Quantum.Core.FrameContext.TempAllocateAndClear(System.Int32,System.Int32)
+  - Quantum.Core.FrameContext.AcquireEvent``1(System.Int32)
+  - Quantum.Core.FrameContext.ReleaseEvent(Quantum.EventBase)
+  - Quantum.Core.FrameContext.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  - Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame,Photon.Deterministic.FPVector3)
+  - Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame,Photon.Deterministic.FPVector2)
+  - Quantum.Core.FrameContext.Physics2D
+  - Quantum.Core.FrameContext.Physics3D
+  - Quantum.Core.FrameContext.Allocator
+  - Quantum.Core.FrameContext.TaskContext
+  - Quantum.Core.FrameContext.ProfilerContext
+  - Quantum.Core.FrameContext.Events
+  - Quantum.Core.FrameContext.Culling
+  - Quantum.Core.FrameContext.CommandSerializer
+  - Quantum.Core.FrameContext.AssetSerializer
+  - Quantum.Core.FrameContext.ResourceManager
+  - Quantum.Core.FrameContext.AssetDB
+  - Quantum.Core.FrameContext.UseSharedChecksumSerializer
+  - Quantum.Core.FrameContext.SharedChecksumSerializer
+  - Quantum.Core.FrameContext.HeapTrackingMode
+  - Quantum.Core.FrameContext.HeapTracker
+  - Quantum.Core.FrameContext.PhysicsConfig
+  - Quantum.Core.FrameContext.IsServer
+  - Quantum.Core.FrameContext.PredictionAreaCenter
+  - Quantum.Core.FrameContext.PredictionAreaRadius
+- uid: Quantum.FrameContextUser.#ctor(Quantum.Core.FrameContext.Args)
+  commentId: M:Quantum.FrameContextUser.#ctor(Quantum.Core.FrameContext.Args)
+  id: '#ctor(Quantum.Core.FrameContext.Args)'
+  parent: Quantum.FrameContextUser
+  langs:
+  - csharp
+  - vb
+  name: FrameContextUser(Args)
+  nameWithType: FrameContextUser.FrameContextUser(FrameContext.Args)
+  fullName: Quantum.FrameContextUser.FrameContextUser(Quantum.Core.FrameContext.Args)
+  type: Constructor
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: .ctor
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 1582
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Frame context user constructor.
+  example: []
+  syntax:
+    content: public FrameContextUser(FrameContext.Args args)
+    parameters:
+    - id: args
+      type: Quantum.Core.FrameContext.Args
+    content.vb: Public Sub New(args As FrameContext.Args)
+  overload: Quantum.FrameContextUser.#ctor*
+  nameWithType.vb: FrameContextUser.New(FrameContext.Args)
+  fullName.vb: Quantum.FrameContextUser.New(Quantum.Core.FrameContext.Args)
+  name.vb: New(Args)
+- uid: Quantum.FrameContextUser.Dispose
+  commentId: M:Quantum.FrameContextUser.Dispose
+  id: Dispose
+  parent: Quantum.FrameContextUser
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: FrameContextUser.Dispose()
+  fullName: Quantum.FrameContextUser.Dispose()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Dispose
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 1590
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Dispose user systems and memory.
+  example: []
+  syntax:
+    content: public override sealed void Dispose()
+    content.vb: Public NotOverridable Overrides Sub Dispose()
+  overridden: Quantum.Core.FrameContext.Dispose
+  overload: Quantum.FrameContextUser.Dispose*
+references:
+- uid: Quantum.Core.FrameContext
+  commentId: T:Quantum.Core.FrameContext
+  parent: Quantum.Core
+  isExternal: true
+  name: FrameContext
+  nameWithType: FrameContext
+  fullName: Quantum.Core.FrameContext
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.Core.FrameContext.IsLocalPlayer(Quantum.PlayerRef)
+  commentId: M:Quantum.Core.FrameContext.IsLocalPlayer(Quantum.PlayerRef)
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: IsLocalPlayer(PlayerRef)
+  nameWithType: FrameContext.IsLocalPlayer(PlayerRef)
+  fullName: Quantum.Core.FrameContext.IsLocalPlayer(Quantum.PlayerRef)
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.IsLocalPlayer(Quantum.PlayerRef)
+    name: IsLocalPlayer
+    isExternal: true
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.IsLocalPlayer(Quantum.PlayerRef)
+    name: IsLocalPlayer
+    isExternal: true
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.FrameContext.OnGameStart(Photon.Deterministic.DeterministicFrame)
+  commentId: M:Quantum.Core.FrameContext.OnGameStart(Photon.Deterministic.DeterministicFrame)
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: OnGameStart(DeterministicFrame)
+  nameWithType: FrameContext.OnGameStart(DeterministicFrame)
+  fullName: Quantum.Core.FrameContext.OnGameStart(Photon.Deterministic.DeterministicFrame)
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.OnGameStart(Photon.Deterministic.DeterministicFrame)
+    name: OnGameStart
+    isExternal: true
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.OnGameStart(Photon.Deterministic.DeterministicFrame)
+    name: OnGameStart
+    isExternal: true
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.FrameContext.OnSimulationBegin
+  commentId: M:Quantum.Core.FrameContext.OnSimulationBegin
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: OnSimulationBegin()
+  nameWithType: FrameContext.OnSimulationBegin()
+  fullName: Quantum.Core.FrameContext.OnSimulationBegin()
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.OnSimulationBegin
+    name: OnSimulationBegin
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.OnSimulationBegin
+    name: OnSimulationBegin
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.Core.FrameContext.OnSimulationEnd
+  commentId: M:Quantum.Core.FrameContext.OnSimulationEnd
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: OnSimulationEnd()
+  nameWithType: FrameContext.OnSimulationEnd()
+  fullName: Quantum.Core.FrameContext.OnSimulationEnd()
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.OnSimulationEnd
+    name: OnSimulationEnd
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.OnSimulationEnd
+    name: OnSimulationEnd
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.Core.FrameContext.OnFrameSimulationBegin(Quantum.Core.FrameBase)
+  commentId: M:Quantum.Core.FrameContext.OnFrameSimulationBegin(Quantum.Core.FrameBase)
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: OnFrameSimulationBegin(FrameBase)
+  nameWithType: FrameContext.OnFrameSimulationBegin(FrameBase)
+  fullName: Quantum.Core.FrameContext.OnFrameSimulationBegin(Quantum.Core.FrameBase)
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.OnFrameSimulationBegin(Quantum.Core.FrameBase)
+    name: OnFrameSimulationBegin
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.OnFrameSimulationBegin(Quantum.Core.FrameBase)
+    name: OnFrameSimulationBegin
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.FrameContext.OnFrameSimulationEnd
+  commentId: M:Quantum.Core.FrameContext.OnFrameSimulationEnd
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: OnFrameSimulationEnd()
+  nameWithType: FrameContext.OnFrameSimulationEnd()
+  fullName: Quantum.Core.FrameContext.OnFrameSimulationEnd()
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.OnFrameSimulationEnd
+    name: OnFrameSimulationEnd
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.OnFrameSimulationEnd
+    name: OnFrameSimulationEnd
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.Core.FrameContext.TempAllocate(System.Int32,System.Int32)
+  commentId: M:Quantum.Core.FrameContext.TempAllocate(System.Int32,System.Int32)
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: TempAllocate(int, int)
+  nameWithType: FrameContext.TempAllocate(int, int)
+  fullName: Quantum.Core.FrameContext.TempAllocate(int, int)
+  nameWithType.vb: FrameContext.TempAllocate(Integer, Integer)
+  fullName.vb: Quantum.Core.FrameContext.TempAllocate(Integer, Integer)
+  name.vb: TempAllocate(Integer, Integer)
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.TempAllocate(System.Int32,System.Int32)
+    name: TempAllocate
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.TempAllocate(System.Int32,System.Int32)
+    name: TempAllocate
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Quantum.Core.FrameContext.TempAllocateAndClear(System.Int32,System.Int32)
+  commentId: M:Quantum.Core.FrameContext.TempAllocateAndClear(System.Int32,System.Int32)
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: TempAllocateAndClear(int, int)
+  nameWithType: FrameContext.TempAllocateAndClear(int, int)
+  fullName: Quantum.Core.FrameContext.TempAllocateAndClear(int, int)
+  nameWithType.vb: FrameContext.TempAllocateAndClear(Integer, Integer)
+  fullName.vb: Quantum.Core.FrameContext.TempAllocateAndClear(Integer, Integer)
+  name.vb: TempAllocateAndClear(Integer, Integer)
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.TempAllocateAndClear(System.Int32,System.Int32)
+    name: TempAllocateAndClear
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.TempAllocateAndClear(System.Int32,System.Int32)
+    name: TempAllocateAndClear
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Quantum.Core.FrameContext.AcquireEvent``1(System.Int32)
+  commentId: M:Quantum.Core.FrameContext.AcquireEvent``1(System.Int32)
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: AcquireEvent<T>(int)
+  nameWithType: FrameContext.AcquireEvent<T>(int)
+  fullName: Quantum.Core.FrameContext.AcquireEvent<T>(int)
+  nameWithType.vb: FrameContext.AcquireEvent(Of T)(Integer)
+  fullName.vb: Quantum.Core.FrameContext.AcquireEvent(Of T)(Integer)
+  name.vb: AcquireEvent(Of T)(Integer)
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.AcquireEvent``1(System.Int32)
+    name: AcquireEvent
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.AcquireEvent``1(System.Int32)
+    name: AcquireEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Quantum.Core.FrameContext.ReleaseEvent(Quantum.EventBase)
+  commentId: M:Quantum.Core.FrameContext.ReleaseEvent(Quantum.EventBase)
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: ReleaseEvent(EventBase)
+  nameWithType: FrameContext.ReleaseEvent(EventBase)
+  fullName: Quantum.Core.FrameContext.ReleaseEvent(Quantum.EventBase)
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.ReleaseEvent(Quantum.EventBase)
+    name: ReleaseEvent
+    isExternal: true
+  - name: (
+  - uid: Quantum.EventBase
+    name: EventBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.ReleaseEvent(Quantum.EventBase)
+    name: ReleaseEvent
+    isExternal: true
+  - name: (
+  - uid: Quantum.EventBase
+    name: EventBase
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.FrameContext.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  commentId: M:Quantum.Core.FrameContext.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: SetPredictionArea(FPVector3, FP)
+  nameWithType: FrameContext.SetPredictionArea(FPVector3, FP)
+  fullName: Quantum.Core.FrameContext.SetPredictionArea(Photon.Deterministic.FPVector3, Photon.Deterministic.FP)
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+    name: SetPredictionArea
+    isExternal: true
+  - name: (
+  - uid: Photon.Deterministic.FPVector3
+    name: FPVector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FP
+    name: FP
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.SetPredictionArea(Photon.Deterministic.FPVector3,Photon.Deterministic.FP)
+    name: SetPredictionArea
+    isExternal: true
+  - name: (
+  - uid: Photon.Deterministic.FPVector3
+    name: FPVector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FP
+    name: FP
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame,Photon.Deterministic.FPVector3)
+  commentId: M:Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame,Photon.Deterministic.FPVector3)
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: InPredictionArea(DeterministicFrame, FPVector3)
+  nameWithType: FrameContext.InPredictionArea(DeterministicFrame, FPVector3)
+  fullName: Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame, Photon.Deterministic.FPVector3)
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame,Photon.Deterministic.FPVector3)
+    name: InPredictionArea
+    isExternal: true
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FPVector3
+    name: FPVector3
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame,Photon.Deterministic.FPVector3)
+    name: InPredictionArea
+    isExternal: true
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FPVector3
+    name: FPVector3
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame,Photon.Deterministic.FPVector2)
+  commentId: M:Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame,Photon.Deterministic.FPVector2)
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: InPredictionArea(DeterministicFrame, FPVector2)
+  nameWithType: FrameContext.InPredictionArea(DeterministicFrame, FPVector2)
+  fullName: Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame, Photon.Deterministic.FPVector2)
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame,Photon.Deterministic.FPVector2)
+    name: InPredictionArea
+    isExternal: true
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FPVector2
+    name: FPVector2
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.InPredictionArea(Photon.Deterministic.DeterministicFrame,Photon.Deterministic.FPVector2)
+    name: InPredictionArea
+    isExternal: true
+  - name: (
+  - uid: Photon.Deterministic.DeterministicFrame
+    name: DeterministicFrame
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.FPVector2
+    name: FPVector2
+    isExternal: true
+  - name: )
+- uid: Quantum.Core.FrameContext.Physics2D
+  commentId: P:Quantum.Core.FrameContext.Physics2D
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: Physics2D
+  nameWithType: FrameContext.Physics2D
+  fullName: Quantum.Core.FrameContext.Physics2D
+- uid: Quantum.Core.FrameContext.Physics3D
+  commentId: P:Quantum.Core.FrameContext.Physics3D
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: Physics3D
+  nameWithType: FrameContext.Physics3D
+  fullName: Quantum.Core.FrameContext.Physics3D
+- uid: Quantum.Core.FrameContext.Allocator
+  commentId: P:Quantum.Core.FrameContext.Allocator
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: Allocator
+  nameWithType: FrameContext.Allocator
+  fullName: Quantum.Core.FrameContext.Allocator
+- uid: Quantum.Core.FrameContext.TaskContext
+  commentId: P:Quantum.Core.FrameContext.TaskContext
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: TaskContext
+  nameWithType: FrameContext.TaskContext
+  fullName: Quantum.Core.FrameContext.TaskContext
+- uid: Quantum.Core.FrameContext.ProfilerContext
+  commentId: P:Quantum.Core.FrameContext.ProfilerContext
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: ProfilerContext
+  nameWithType: FrameContext.ProfilerContext
+  fullName: Quantum.Core.FrameContext.ProfilerContext
+- uid: Quantum.Core.FrameContext.Events
+  commentId: P:Quantum.Core.FrameContext.Events
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: Events
+  nameWithType: FrameContext.Events
+  fullName: Quantum.Core.FrameContext.Events
+- uid: Quantum.Core.FrameContext.Culling
+  commentId: P:Quantum.Core.FrameContext.Culling
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: Culling
+  nameWithType: FrameContext.Culling
+  fullName: Quantum.Core.FrameContext.Culling
+- uid: Quantum.Core.FrameContext.CommandSerializer
+  commentId: P:Quantum.Core.FrameContext.CommandSerializer
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: CommandSerializer
+  nameWithType: FrameContext.CommandSerializer
+  fullName: Quantum.Core.FrameContext.CommandSerializer
+- uid: Quantum.Core.FrameContext.AssetSerializer
+  commentId: P:Quantum.Core.FrameContext.AssetSerializer
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: AssetSerializer
+  nameWithType: FrameContext.AssetSerializer
+  fullName: Quantum.Core.FrameContext.AssetSerializer
+- uid: Quantum.Core.FrameContext.ResourceManager
+  commentId: P:Quantum.Core.FrameContext.ResourceManager
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: ResourceManager
+  nameWithType: FrameContext.ResourceManager
+  fullName: Quantum.Core.FrameContext.ResourceManager
+- uid: Quantum.Core.FrameContext.AssetDB
+  commentId: P:Quantum.Core.FrameContext.AssetDB
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: AssetDB
+  nameWithType: FrameContext.AssetDB
+  fullName: Quantum.Core.FrameContext.AssetDB
+- uid: Quantum.Core.FrameContext.UseSharedChecksumSerializer
+  commentId: P:Quantum.Core.FrameContext.UseSharedChecksumSerializer
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: UseSharedChecksumSerializer
+  nameWithType: FrameContext.UseSharedChecksumSerializer
+  fullName: Quantum.Core.FrameContext.UseSharedChecksumSerializer
+- uid: Quantum.Core.FrameContext.SharedChecksumSerializer
+  commentId: P:Quantum.Core.FrameContext.SharedChecksumSerializer
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: SharedChecksumSerializer
+  nameWithType: FrameContext.SharedChecksumSerializer
+  fullName: Quantum.Core.FrameContext.SharedChecksumSerializer
+- uid: Quantum.Core.FrameContext.HeapTrackingMode
+  commentId: P:Quantum.Core.FrameContext.HeapTrackingMode
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: HeapTrackingMode
+  nameWithType: FrameContext.HeapTrackingMode
+  fullName: Quantum.Core.FrameContext.HeapTrackingMode
+- uid: Quantum.Core.FrameContext.HeapTracker
+  commentId: P:Quantum.Core.FrameContext.HeapTracker
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: HeapTracker
+  nameWithType: FrameContext.HeapTracker
+  fullName: Quantum.Core.FrameContext.HeapTracker
+- uid: Quantum.Core.FrameContext.PhysicsConfig
+  commentId: P:Quantum.Core.FrameContext.PhysicsConfig
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: PhysicsConfig
+  nameWithType: FrameContext.PhysicsConfig
+  fullName: Quantum.Core.FrameContext.PhysicsConfig
+- uid: Quantum.Core.FrameContext.IsServer
+  commentId: P:Quantum.Core.FrameContext.IsServer
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: IsServer
+  nameWithType: FrameContext.IsServer
+  fullName: Quantum.Core.FrameContext.IsServer
+- uid: Quantum.Core.FrameContext.PredictionAreaCenter
+  commentId: P:Quantum.Core.FrameContext.PredictionAreaCenter
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: PredictionAreaCenter
+  nameWithType: FrameContext.PredictionAreaCenter
+  fullName: Quantum.Core.FrameContext.PredictionAreaCenter
+- uid: Quantum.Core.FrameContext.PredictionAreaRadius
+  commentId: P:Quantum.Core.FrameContext.PredictionAreaRadius
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: PredictionAreaRadius
+  nameWithType: FrameContext.PredictionAreaRadius
+  fullName: Quantum.Core.FrameContext.PredictionAreaRadius
+- uid: Quantum.Core
+  commentId: N:Quantum.Core
+  href: Quantum.html
+  name: Quantum.Core
+  nameWithType: Quantum.Core
+  fullName: Quantum.Core
+  spec.csharp:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+  spec.vb:
+  - uid: Quantum
+    name: Quantum
+    href: Quantum.html
+  - name: .
+  - uid: Quantum.Core
+    name: Core
+    href: Quantum.Core.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.FrameContextUser.#ctor*
+  commentId: Overload:Quantum.FrameContextUser.#ctor
+  href: Quantum.FrameContextUser.html#Quantum_FrameContextUser__ctor_Quantum_Core_FrameContext_Args_
+  name: FrameContextUser
+  nameWithType: FrameContextUser.FrameContextUser
+  fullName: Quantum.FrameContextUser.FrameContextUser
+  nameWithType.vb: FrameContextUser.New
+  fullName.vb: Quantum.FrameContextUser.New
+  name.vb: New
+- uid: Quantum.Core.FrameContext.Args
+  commentId: T:Quantum.Core.FrameContext.Args
+  parent: Quantum.Core
+  isExternal: true
+  name: FrameContext.Args
+  nameWithType: FrameContext.Args
+  fullName: Quantum.Core.FrameContext.Args
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext
+    name: FrameContext
+    isExternal: true
+  - name: .
+  - uid: Quantum.Core.FrameContext.Args
+    name: Args
+    isExternal: true
+  spec.vb:
+  - uid: Quantum.Core.FrameContext
+    name: FrameContext
+    isExternal: true
+  - name: .
+  - uid: Quantum.Core.FrameContext.Args
+    name: Args
+    isExternal: true
+- uid: Quantum.Core.FrameContext.Dispose
+  commentId: M:Quantum.Core.FrameContext.Dispose
+  parent: Quantum.Core.FrameContext
+  isExternal: true
+  name: Dispose()
+  nameWithType: FrameContext.Dispose()
+  fullName: Quantum.Core.FrameContext.Dispose()
+  spec.csharp:
+  - uid: Quantum.Core.FrameContext.Dispose
+    name: Dispose
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.Core.FrameContext.Dispose
+    name: Dispose
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.FrameContextUser.Dispose*
+  commentId: Overload:Quantum.FrameContextUser.Dispose
+  href: Quantum.FrameContextUser.html#Quantum_FrameContextUser_Dispose
+  name: Dispose
+  nameWithType: FrameContextUser.Dispose
+  fullName: Quantum.FrameContextUser.Dispose

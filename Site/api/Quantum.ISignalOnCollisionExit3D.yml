@@ -1,0 +1,152 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.ISignalOnCollisionExit3D
+  commentId: T:Quantum.ISignalOnCollisionExit3D
+  id: ISignalOnCollisionExit3D
+  parent: Quantum
+  children:
+  - Quantum.ISignalOnCollisionExit3D.OnCollisionExit3D(Quantum.Frame,Quantum.ExitInfo3D)
+  langs:
+  - csharp
+  - vb
+  name: ISignalOnCollisionExit3D
+  nameWithType: ISignalOnCollisionExit3D
+  fullName: Quantum.ISignalOnCollisionExit3D
+  type: Interface
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ISignalOnCollisionExit3D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 276
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Interface for receiving callbacks once two non-trigger 3D colliders stop touching.
+
+    <remarks>At least one of the entities involved in a collision must have the respective <xref href="Quantum.CallbackFlags" data-throw-if-not-resolved="false"></xref> set for the callback to be called.</remarks><remarks>See <xref href="Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef%2cQuantum.CallbackFlags)" data-throw-if-not-resolved="false"></xref> for setting the callbacks flags to an entity.</remarks>
+  example: []
+  syntax:
+    content: 'public interface ISignalOnCollisionExit3D : ISignal'
+    content.vb: Public Interface ISignalOnCollisionExit3D Inherits ISignal
+  inheritedMembers:
+  - Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignalOnCollisionExit3D.OnCollisionExit3D(Quantum.Frame,Quantum.ExitInfo3D)
+  commentId: M:Quantum.ISignalOnCollisionExit3D.OnCollisionExit3D(Quantum.Frame,Quantum.ExitInfo3D)
+  id: OnCollisionExit3D(Quantum.Frame,Quantum.ExitInfo3D)
+  parent: Quantum.ISignalOnCollisionExit3D
+  langs:
+  - csharp
+  - vb
+  name: OnCollisionExit3D(Frame, ExitInfo3D)
+  nameWithType: ISignalOnCollisionExit3D.OnCollisionExit3D(Frame, ExitInfo3D)
+  fullName: Quantum.ISignalOnCollisionExit3D.OnCollisionExit3D(Quantum.Frame, Quantum.ExitInfo3D)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnCollisionExit3D
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 283
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Called once two non-trigger 3D colliders stop touching.
+  example: []
+  syntax:
+    content: void OnCollisionExit3D(Frame f, ExitInfo3D info)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame in which the entities stopped touching.
+    - id: info
+      type: Quantum.ExitInfo3D
+      description: The <xref href="Quantum.ExitInfo3D" data-throw-if-not-resolved="false"></xref> with the entities that were touching.
+    content.vb: Sub OnCollisionExit3D(f As Frame, info As ExitInfo3D)
+  overload: Quantum.ISignalOnCollisionExit3D.OnCollisionExit3D*
+references:
+- uid: Quantum.CallbackFlags
+  commentId: T:Quantum.CallbackFlags
+  isExternal: true
+  name: CallbackFlags
+  nameWithType: CallbackFlags
+  fullName: Quantum.CallbackFlags
+- uid: Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+  commentId: M:Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+  isExternal: true
+  name: SetCallbacks(EntityRef, CallbackFlags)
+  nameWithType: PhysicsEngine3D.Api.SetCallbacks(EntityRef, CallbackFlags)
+  fullName: Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef, Quantum.CallbackFlags)
+  spec.csharp:
+  - uid: Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+    name: SetCallbacks
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CallbackFlags
+    name: CallbackFlags
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.Physics3D.PhysicsEngine3D.Api.SetCallbacks(Quantum.EntityRef,Quantum.CallbackFlags)
+    name: SetCallbacks
+    isExternal: true
+  - name: (
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.CallbackFlags
+    name: CallbackFlags
+    isExternal: true
+  - name: )
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ISignal.RuntimeIndex
+  commentId: P:Quantum.ISignal.RuntimeIndex
+  parent: Quantum.ISignal
+  isExternal: true
+  name: RuntimeIndex
+  nameWithType: ISignal.RuntimeIndex
+  fullName: Quantum.ISignal.RuntimeIndex
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.ExitInfo3D
+  commentId: T:Quantum.ExitInfo3D
+  parent: Quantum
+  isExternal: true
+  name: ExitInfo3D
+  nameWithType: ExitInfo3D
+  fullName: Quantum.ExitInfo3D
+- uid: Quantum.ISignalOnCollisionExit3D.OnCollisionExit3D*
+  commentId: Overload:Quantum.ISignalOnCollisionExit3D.OnCollisionExit3D
+  href: Quantum.ISignalOnCollisionExit3D.html#Quantum_ISignalOnCollisionExit3D_OnCollisionExit3D_Quantum_Frame_Quantum_ExitInfo3D_
+  name: OnCollisionExit3D
+  nameWithType: ISignalOnCollisionExit3D.OnCollisionExit3D
+  fullName: Quantum.ISignalOnCollisionExit3D.OnCollisionExit3D
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame

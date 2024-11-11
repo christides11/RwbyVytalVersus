@@ -1,0 +1,1960 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  commentId: T:rwby.core.gamemodes.teamversus.TVTMatchHandler
+  id: TVTMatchHandler
+  parent: rwby.core.gamemodes.teamversus
+  children:
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.GetGamemodeSettings
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerCamera(Quantum.PlayerRef)
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerVirtualCam(Quantum.PlayerRef)
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.GlobalPlayerToLocalPlayer
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.LocalPlayerEntitys
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.PollInput(Quantum.CallbackPollInput)
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.SetBGM(rwby.BaseSongDefinition)
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.Setup
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.Teardown
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.cutsceneManager
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.entityViewUpdater
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.fighterEventManager
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.hudHandler
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.hudInstances
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerCams
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerEntitys
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerToGlobalPlayer
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.localSelectedCharacters
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.playerCamCamLayers
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.playerVirtualCamLayers
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.settingsAsset
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.soundManager
+  - rwby.core.gamemodes.teamversus.TVTMatchHandler.vfxManager
+  langs:
+  - csharp
+  - vb
+  name: TVTMatchHandler
+  nameWithType: TVTMatchHandler
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TVTMatchHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 10
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: 'public class TVTMatchHandler : MatchHandlerBase, ILocalEntityHolder'
+    content.vb: Public Class TVTMatchHandler Inherits MatchHandlerBase Implements ILocalEntityHolder
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - rwby.MatchHandlerBase
+  implements:
+  - rwby.ILocalEntityHolder
+  inheritedMembers:
+  - rwby.MatchHandlerBase.OnMatchEnded
+  - rwby.MatchHandlerBase.gameRunner
+  - rwby.MatchHandlerBase.gamemodeSystemConfig
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.soundManager
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.soundManager
+  id: soundManager
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: soundManager
+  nameWithType: TVTMatchHandler.soundManager
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.soundManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: soundManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 12
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public GlobalSoundManager soundManager
+    return:
+      type: Global.GlobalSoundManager
+    content.vb: Public soundManager As GlobalSoundManager
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.vfxManager
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.vfxManager
+  id: vfxManager
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: vfxManager
+  nameWithType: TVTMatchHandler.vfxManager
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.vfxManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: vfxManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 13
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public GlobalVFXManager vfxManager
+    return:
+      type: Global.GlobalVFXManager
+    content.vb: Public vfxManager As GlobalVFXManager
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.fighterEventManager
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.fighterEventManager
+  id: fighterEventManager
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: fighterEventManager
+  nameWithType: TVTMatchHandler.fighterEventManager
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.fighterEventManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: fighterEventManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 14
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public GlobalFighterEventManager fighterEventManager
+    return:
+      type: Global.GlobalFighterEventManager
+    content.vb: Public fighterEventManager As GlobalFighterEventManager
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.cutsceneManager
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.cutsceneManager
+  id: cutsceneManager
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: cutsceneManager
+  nameWithType: TVTMatchHandler.cutsceneManager
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.cutsceneManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: cutsceneManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 15
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public GlobalCutsceneManager cutsceneManager
+    return:
+      type: rwby.GlobalCutsceneManager
+    content.vb: Public cutsceneManager As GlobalCutsceneManager
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerToGlobalPlayer
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerToGlobalPlayer
+  id: localPlayerToGlobalPlayer
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: localPlayerToGlobalPlayer
+  nameWithType: TVTMatchHandler.localPlayerToGlobalPlayer
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerToGlobalPlayer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localPlayerToGlobalPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 20
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public Dictionary<int, PlayerRef> localPlayerToGlobalPlayer
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,Quantum.PlayerRef}
+    content.vb: Public localPlayerToGlobalPlayer As Dictionary(Of Integer, PlayerRef)
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.GlobalPlayerToLocalPlayer
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.GlobalPlayerToLocalPlayer
+  id: GlobalPlayerToLocalPlayer
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: GlobalPlayerToLocalPlayer
+  nameWithType: TVTMatchHandler.GlobalPlayerToLocalPlayer
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.GlobalPlayerToLocalPlayer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GlobalPlayerToLocalPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 21
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public Dictionary<PlayerRef, int> GlobalPlayerToLocalPlayer
+    return:
+      type: System.Collections.Generic.Dictionary{Quantum.PlayerRef,System.Int32}
+    content.vb: Public GlobalPlayerToLocalPlayer As Dictionary(Of PlayerRef, Integer)
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerCams
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerCams
+  id: localPlayerCams
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: localPlayerCams
+  nameWithType: TVTMatchHandler.localPlayerCams
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerCams
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localPlayerCams
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 22
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public Dictionary<int, (DummyCamera, TargetCameraManager)> localPlayerCams
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,System.ValueTuple{rwby.DummyCamera,rwby.TargetCameraManager}}
+    content.vb: Public localPlayerCams As Dictionary(Of Integer, (DummyCamera, TargetCameraManager))
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerEntitys
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerEntitys
+  id: localPlayerEntitys
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: localPlayerEntitys
+  nameWithType: TVTMatchHandler.localPlayerEntitys
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.localPlayerEntitys
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localPlayerEntitys
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 23
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public Dictionary<int, QuantumEntityView> localPlayerEntitys
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,Quantum.QuantumEntityView}
+    content.vb: Public localPlayerEntitys As Dictionary(Of Integer, QuantumEntityView)
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.LocalPlayerEntitys
+  commentId: P:rwby.core.gamemodes.teamversus.TVTMatchHandler.LocalPlayerEntitys
+  id: LocalPlayerEntitys
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: LocalPlayerEntitys
+  nameWithType: TVTMatchHandler.LocalPlayerEntitys
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.LocalPlayerEntitys
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LocalPlayerEntitys
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 25
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  example: []
+  syntax:
+    content: public override Dictionary<int, QuantumEntityView> LocalPlayerEntitys { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,Quantum.QuantumEntityView}
+    content.vb: Public Overrides ReadOnly Property LocalPlayerEntitys As Dictionary(Of Integer, QuantumEntityView)
+  overridden: rwby.MatchHandlerBase.LocalPlayerEntitys
+  overload: rwby.core.gamemodes.teamversus.TVTMatchHandler.LocalPlayerEntitys*
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.localSelectedCharacters
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.localSelectedCharacters
+  id: localSelectedCharacters
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: localSelectedCharacters
+  nameWithType: TVTMatchHandler.localSelectedCharacters
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.localSelectedCharacters
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localSelectedCharacters
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 27
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public List<IFighterDefinition> localSelectedCharacters
+    return:
+      type: System.Collections.Generic.List{IFighterDefinition}
+    content.vb: Public localSelectedCharacters As List(Of IFighterDefinition)
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.playerVirtualCamLayers
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.playerVirtualCamLayers
+  id: playerVirtualCamLayers
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: playerVirtualCamLayers
+  nameWithType: TVTMatchHandler.playerVirtualCamLayers
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.playerVirtualCamLayers
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playerVirtualCamLayers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 32
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: >-
+      [FormerlySerializedAs("playerCamLayers")]
+
+      public OutputChannels[] playerVirtualCamLayers
+    return:
+      type: Unity.Cinemachine.OutputChannels[]
+    content.vb: >-
+      <FormerlySerializedAs("playerCamLayers")>
+
+      Public playerVirtualCamLayers As OutputChannels()
+  attributes:
+  - type: UnityEngine.Serialization.FormerlySerializedAsAttribute
+    ctor: UnityEngine.Serialization.FormerlySerializedAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: playerCamLayers
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.playerCamCamLayers
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.playerCamCamLayers
+  id: playerCamCamLayers
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: playerCamCamLayers
+  nameWithType: TVTMatchHandler.playerCamCamLayers
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.playerCamCamLayers
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playerCamCamLayers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 33
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public OutputChannels[] playerCamCamLayers
+    return:
+      type: Unity.Cinemachine.OutputChannels[]
+    content.vb: Public playerCamCamLayers As OutputChannels()
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.entityViewUpdater
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.entityViewUpdater
+  id: entityViewUpdater
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: entityViewUpdater
+  nameWithType: TVTMatchHandler.entityViewUpdater
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.entityViewUpdater
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: entityViewUpdater
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 35
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public QuantumEntityViewUpdater entityViewUpdater
+    return:
+      type: Quantum.QuantumEntityViewUpdater
+    content.vb: Public entityViewUpdater As QuantumEntityViewUpdater
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.settingsAsset
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.settingsAsset
+  id: settingsAsset
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: settingsAsset
+  nameWithType: TVTMatchHandler.settingsAsset
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.settingsAsset
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: settingsAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 37
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public TeamVersusSettings settingsAsset
+    return:
+      type: Quantum.TeamVersusSettings
+    content.vb: Public settingsAsset As TeamVersusSettings
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.hudHandler
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.hudHandler
+  id: hudHandler
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: hudHandler
+  nameWithType: TVTMatchHandler.hudHandler
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.hudHandler
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hudHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 39
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public TVSHUDHandler hudHandler
+    return:
+      type: rwby.core.gamemodes.teamversus.TVSHUDHandler
+    content.vb: Public hudHandler As TVSHUDHandler
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.hudInstances
+  commentId: F:rwby.core.gamemodes.teamversus.TVTMatchHandler.hudInstances
+  id: hudInstances
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: hudInstances
+  nameWithType: TVTMatchHandler.hudInstances
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.hudInstances
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hudInstances
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 41
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public Dictionary<int, TVSHUDHandler> hudInstances
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,rwby.core.gamemodes.teamversus.TVSHUDHandler}
+    content.vb: Public hudInstances As Dictionary(Of Integer, TVSHUDHandler)
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.Setup
+  commentId: M:rwby.core.gamemodes.teamversus.TVTMatchHandler.Setup
+  id: Setup
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: TVTMatchHandler.Setup()
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.Setup()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Setup
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 75
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  example: []
+  syntax:
+    content: public override UniTask<bool> Setup()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Overrides Function Setup() As UniTask(Of Boolean)
+  overridden: rwby.MatchHandlerBase.Setup
+  overload: rwby.core.gamemodes.teamversus.TVTMatchHandler.Setup*
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.Teardown
+  commentId: M:rwby.core.gamemodes.teamversus.TVTMatchHandler.Teardown
+  id: Teardown
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: TVTMatchHandler.Teardown()
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.Teardown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Teardown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 82
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  example: []
+  syntax:
+    content: public override UniTask Teardown()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Overrides Function Teardown() As UniTask
+  overridden: rwby.MatchHandlerBase.Teardown
+  overload: rwby.core.gamemodes.teamversus.TVTMatchHandler.Teardown*
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetGamemodeSettings
+  commentId: M:rwby.core.gamemodes.teamversus.TVTMatchHandler.GetGamemodeSettings
+  id: GetGamemodeSettings
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: GetGamemodeSettings()
+  nameWithType: TVTMatchHandler.GetGamemodeSettings()
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetGamemodeSettings()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetGamemodeSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 115
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  example: []
+  syntax:
+    content: public override GamemodeSettingsBase GetGamemodeSettings()
+    return:
+      type: Quantum.GamemodeSettingsBase
+    content.vb: Public Overrides Function GetGamemodeSettings() As GamemodeSettingsBase
+  overridden: rwby.MatchHandlerBase.GetGamemodeSettings
+  overload: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetGamemodeSettings*
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
+  commentId: M:rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
+  id: SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: SetLocalPlayerCharacters(List<IFighterDefinition>)
+  nameWithType: TVTMatchHandler.SetLocalPlayerCharacters(List<IFighterDefinition>)
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerCharacters(System.Collections.Generic.List<IFighterDefinition>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetLocalPlayerCharacters
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 215
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  example: []
+  syntax:
+    content: public override void SetLocalPlayerCharacters(List<IFighterDefinition> fighterDefinitions)
+    parameters:
+    - id: fighterDefinitions
+      type: System.Collections.Generic.List{IFighterDefinition}
+    content.vb: Public Overrides Sub SetLocalPlayerCharacters(fighterDefinitions As List(Of IFighterDefinition))
+  overridden: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
+  overload: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerCharacters*
+  nameWithType.vb: TVTMatchHandler.SetLocalPlayerCharacters(List(Of IFighterDefinition))
+  fullName.vb: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerCharacters(System.Collections.Generic.List(Of IFighterDefinition))
+  name.vb: SetLocalPlayerCharacters(List(Of IFighterDefinition))
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
+  commentId: M:rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
+  id: SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: SetLocalPlayerSpecials(List<List<AssetRef<HNSFSpecialSet>>>)
+  nameWithType: TVTMatchHandler.SetLocalPlayerSpecials(List<List<AssetRef<HNSFSpecialSet>>>)
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerSpecials(System.Collections.Generic.List<System.Collections.Generic.List<Quantum.AssetRef<Quantum.HNSFSpecialSet>>>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetLocalPlayerSpecials
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 221
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  example: []
+  syntax:
+    content: public override void SetLocalPlayerSpecials(List<List<AssetRef<HNSFSpecialSet>>> fighterSpecials)
+    parameters:
+    - id: fighterSpecials
+      type: System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}}
+    content.vb: Public Overrides Sub SetLocalPlayerSpecials(fighterSpecials As List(Of List(Of AssetRef(Of HNSFSpecialSet))))
+  overridden: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
+  overload: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerSpecials*
+  nameWithType.vb: TVTMatchHandler.SetLocalPlayerSpecials(List(Of List(Of AssetRef(Of HNSFSpecialSet))))
+  fullName.vb: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerSpecials(System.Collections.Generic.List(Of System.Collections.Generic.List(Of Quantum.AssetRef(Of Quantum.HNSFSpecialSet))))
+  name.vb: SetLocalPlayerSpecials(List(Of List(Of AssetRef(Of HNSFSpecialSet))))
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
+  commentId: M:rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
+  id: SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: SetLocalPlayerTeams(List<int>)
+  nameWithType: TVTMatchHandler.SetLocalPlayerTeams(List<int>)
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerTeams(System.Collections.Generic.List<int>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetLocalPlayerTeams
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 227
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  example: []
+  syntax:
+    content: public override void SetLocalPlayerTeams(List<int> playerTeams)
+    parameters:
+    - id: playerTeams
+      type: System.Collections.Generic.List{System.Int32}
+    content.vb: Public Overrides Sub SetLocalPlayerTeams(playerTeams As List(Of Integer))
+  overridden: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
+  overload: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerTeams*
+  nameWithType.vb: TVTMatchHandler.SetLocalPlayerTeams(List(Of Integer))
+  fullName.vb: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerTeams(System.Collections.Generic.List(Of Integer))
+  name.vb: SetLocalPlayerTeams(List(Of Integer))
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetBGM(rwby.BaseSongDefinition)
+  commentId: M:rwby.core.gamemodes.teamversus.TVTMatchHandler.SetBGM(rwby.BaseSongDefinition)
+  id: SetBGM(rwby.BaseSongDefinition)
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: SetBGM(BaseSongDefinition)
+  nameWithType: TVTMatchHandler.SetBGM(BaseSongDefinition)
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetBGM(rwby.BaseSongDefinition)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetBGM
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 233
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  example: []
+  syntax:
+    content: public override void SetBGM(BaseSongDefinition songDefinition)
+    parameters:
+    - id: songDefinition
+      type: rwby.BaseSongDefinition
+    content.vb: Public Overrides Sub SetBGM(songDefinition As BaseSongDefinition)
+  overridden: rwby.MatchHandlerBase.SetBGM(rwby.BaseSongDefinition)
+  overload: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetBGM*
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerCamera(Quantum.PlayerRef)
+  commentId: M:rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerCamera(Quantum.PlayerRef)
+  id: GetLocalPlayerCamera(Quantum.PlayerRef)
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: GetLocalPlayerCamera(PlayerRef)
+  nameWithType: TVTMatchHandler.GetLocalPlayerCamera(PlayerRef)
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerCamera(Quantum.PlayerRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetLocalPlayerCamera
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 301
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  example: []
+  syntax:
+    content: public override DummyCamera GetLocalPlayerCamera(PlayerRef globalPlayer)
+    parameters:
+    - id: globalPlayer
+      type: Quantum.PlayerRef
+    return:
+      type: rwby.DummyCamera
+    content.vb: Public Overrides Function GetLocalPlayerCamera(globalPlayer As PlayerRef) As DummyCamera
+  overridden: rwby.MatchHandlerBase.GetLocalPlayerCamera(Quantum.PlayerRef)
+  overload: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerCamera*
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerVirtualCam(Quantum.PlayerRef)
+  commentId: M:rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerVirtualCam(Quantum.PlayerRef)
+  id: GetLocalPlayerVirtualCam(Quantum.PlayerRef)
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: GetLocalPlayerVirtualCam(PlayerRef)
+  nameWithType: TVTMatchHandler.GetLocalPlayerVirtualCam(PlayerRef)
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerVirtualCam(Quantum.PlayerRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetLocalPlayerVirtualCam
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 306
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  example: []
+  syntax:
+    content: public override TargetCameraManager GetLocalPlayerVirtualCam(PlayerRef globalPlayer)
+    parameters:
+    - id: globalPlayer
+      type: Quantum.PlayerRef
+    return:
+      type: rwby.TargetCameraManager
+    content.vb: Public Overrides Function GetLocalPlayerVirtualCam(globalPlayer As PlayerRef) As TargetCameraManager
+  overridden: rwby.MatchHandlerBase.GetLocalPlayerVirtualCam(Quantum.PlayerRef)
+  overload: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerVirtualCam*
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.PollInput(Quantum.CallbackPollInput)
+  commentId: M:rwby.core.gamemodes.teamversus.TVTMatchHandler.PollInput(Quantum.CallbackPollInput)
+  id: PollInput(Quantum.CallbackPollInput)
+  parent: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: PollInput(CallbackPollInput)
+  nameWithType: TVTMatchHandler.PollInput(CallbackPollInput)
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.PollInput(Quantum.CallbackPollInput)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PollInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVTMatchHandler.cs
+    startLine: 311
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public void PollInput(CallbackPollInput callback)
+    parameters:
+    - id: callback
+      type: Quantum.CallbackPollInput
+    content.vb: Public Sub PollInput(callback As CallbackPollInput)
+  overload: rwby.core.gamemodes.teamversus.TVTMatchHandler.PollInput*
+references:
+- uid: rwby.core.gamemodes.teamversus
+  commentId: N:rwby.core.gamemodes.teamversus
+  href: rwby.html
+  name: rwby.core.gamemodes.teamversus
+  nameWithType: rwby.core.gamemodes.teamversus
+  fullName: rwby.core.gamemodes.teamversus
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.gamemodes
+    name: gamemodes
+    href: rwby.core.gamemodes.html
+  - name: .
+  - uid: rwby.core.gamemodes.teamversus
+    name: teamversus
+    href: rwby.core.gamemodes.teamversus.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.gamemodes
+    name: gamemodes
+    href: rwby.core.gamemodes.html
+  - name: .
+  - uid: rwby.core.gamemodes.teamversus
+    name: teamversus
+    href: rwby.core.gamemodes.teamversus.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: rwby.MatchHandlerBase
+  commentId: T:rwby.MatchHandlerBase
+  parent: rwby
+  href: rwby.MatchHandlerBase.html
+  name: MatchHandlerBase
+  nameWithType: MatchHandlerBase
+  fullName: rwby.MatchHandlerBase
+- uid: rwby.ILocalEntityHolder
+  commentId: T:rwby.ILocalEntityHolder
+  parent: rwby
+  href: rwby.ILocalEntityHolder.html
+  name: ILocalEntityHolder
+  nameWithType: ILocalEntityHolder
+  fullName: rwby.ILocalEntityHolder
+- uid: rwby.MatchHandlerBase.OnMatchEnded
+  commentId: F:rwby.MatchHandlerBase.OnMatchEnded
+  parent: rwby.MatchHandlerBase
+  name: OnMatchEnded
+  nameWithType: MatchHandlerBase.OnMatchEnded
+  fullName: rwby.MatchHandlerBase.OnMatchEnded
+- uid: rwby.MatchHandlerBase.gameRunner
+  commentId: F:rwby.MatchHandlerBase.gameRunner
+  parent: rwby.MatchHandlerBase
+  name: gameRunner
+  nameWithType: MatchHandlerBase.gameRunner
+  fullName: rwby.MatchHandlerBase.gameRunner
+- uid: rwby.MatchHandlerBase.gamemodeSystemConfig
+  commentId: F:rwby.MatchHandlerBase.gamemodeSystemConfig
+  parent: rwby.MatchHandlerBase
+  name: gamemodeSystemConfig
+  nameWithType: MatchHandlerBase.gamemodeSystemConfig
+  fullName: rwby.MatchHandlerBase.gamemodeSystemConfig
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: Global.GlobalSoundManager
+  commentId: T:Global.GlobalSoundManager
+  href: GlobalSoundManager.html
+  name: GlobalSoundManager
+  nameWithType: GlobalSoundManager
+  fullName: GlobalSoundManager
+- uid: Global.GlobalVFXManager
+  commentId: T:Global.GlobalVFXManager
+  href: GlobalVFXManager.html
+  name: GlobalVFXManager
+  nameWithType: GlobalVFXManager
+  fullName: GlobalVFXManager
+- uid: Global.GlobalFighterEventManager
+  commentId: T:Global.GlobalFighterEventManager
+  href: GlobalFighterEventManager.html
+  name: GlobalFighterEventManager
+  nameWithType: GlobalFighterEventManager
+  fullName: GlobalFighterEventManager
+- uid: rwby.GlobalCutsceneManager
+  commentId: T:rwby.GlobalCutsceneManager
+  parent: rwby
+  href: rwby.GlobalCutsceneManager.html
+  name: GlobalCutsceneManager
+  nameWithType: GlobalCutsceneManager
+  fullName: rwby.GlobalCutsceneManager
+- uid: System.Collections.Generic.Dictionary{System.Int32,Quantum.PlayerRef}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,Quantum.PlayerRef}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<int, PlayerRef>
+  nameWithType: Dictionary<int, PlayerRef>
+  fullName: System.Collections.Generic.Dictionary<int, Quantum.PlayerRef>
+  nameWithType.vb: Dictionary(Of Integer, PlayerRef)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, Quantum.PlayerRef)
+  name.vb: Dictionary(Of Integer, PlayerRef)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.Dictionary{Quantum.PlayerRef,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{Quantum.PlayerRef,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<PlayerRef, int>
+  nameWithType: Dictionary<PlayerRef, int>
+  fullName: System.Collections.Generic.Dictionary<Quantum.PlayerRef, int>
+  nameWithType.vb: Dictionary(Of PlayerRef, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Quantum.PlayerRef, Integer)
+  name.vb: Dictionary(Of PlayerRef, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary{System.Int32,System.ValueTuple{rwby.DummyCamera,rwby.TargetCameraManager}}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,System.ValueTuple{rwby.DummyCamera,rwby.TargetCameraManager}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<int, (DummyCamera, TargetCameraManager)>
+  nameWithType: Dictionary<int, (DummyCamera, TargetCameraManager)>
+  fullName: System.Collections.Generic.Dictionary<int, (rwby.DummyCamera, rwby.TargetCameraManager)>
+  nameWithType.vb: Dictionary(Of Integer, (DummyCamera, TargetCameraManager))
+  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, (rwby.DummyCamera, rwby.TargetCameraManager))
+  name.vb: Dictionary(Of Integer, (DummyCamera, TargetCameraManager))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: rwby.DummyCamera
+    name: DummyCamera
+  - name: ','
+  - name: " "
+  - uid: rwby.TargetCameraManager
+    name: TargetCameraManager
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: rwby.DummyCamera
+    name: DummyCamera
+  - name: ','
+  - name: " "
+  - uid: rwby.TargetCameraManager
+    name: TargetCameraManager
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary{System.Int32,Quantum.QuantumEntityView}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,Quantum.QuantumEntityView}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<int, QuantumEntityView>
+  nameWithType: Dictionary<int, QuantumEntityView>
+  fullName: System.Collections.Generic.Dictionary<int, Quantum.QuantumEntityView>
+  nameWithType.vb: Dictionary(Of Integer, QuantumEntityView)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, Quantum.QuantumEntityView)
+  name.vb: Dictionary(Of Integer, QuantumEntityView)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.QuantumEntityView
+    name: QuantumEntityView
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.QuantumEntityView
+    name: QuantumEntityView
+  - name: )
+- uid: rwby.MatchHandlerBase.LocalPlayerEntitys
+  commentId: P:rwby.MatchHandlerBase.LocalPlayerEntitys
+  parent: rwby.MatchHandlerBase
+  name: LocalPlayerEntitys
+  nameWithType: MatchHandlerBase.LocalPlayerEntitys
+  fullName: rwby.MatchHandlerBase.LocalPlayerEntitys
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.LocalPlayerEntitys*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVTMatchHandler.LocalPlayerEntitys
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html#rwby_core_gamemodes_teamversus_TVTMatchHandler_LocalPlayerEntitys
+  name: LocalPlayerEntitys
+  nameWithType: TVTMatchHandler.LocalPlayerEntitys
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.LocalPlayerEntitys
+- uid: System.Collections.Generic.List{IFighterDefinition}
+  commentId: T:System.Collections.Generic.List{IFighterDefinition}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<IFighterDefinition>
+  nameWithType: List<IFighterDefinition>
+  fullName: System.Collections.Generic.List<IFighterDefinition>
+  nameWithType.vb: List(Of IFighterDefinition)
+  fullName.vb: System.Collections.Generic.List(Of IFighterDefinition)
+  name.vb: List(Of IFighterDefinition)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+    href: IFighterDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+    href: IFighterDefinition.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Unity.Cinemachine.OutputChannels[]
+  isExternal: true
+  name: OutputChannels[]
+  nameWithType: OutputChannels[]
+  fullName: Unity.Cinemachine.OutputChannels[]
+  nameWithType.vb: OutputChannels()
+  fullName.vb: Unity.Cinemachine.OutputChannels()
+  name.vb: OutputChannels()
+  spec.csharp:
+  - uid: Unity.Cinemachine.OutputChannels
+    name: OutputChannels
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Unity.Cinemachine.OutputChannels
+    name: OutputChannels
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.QuantumEntityViewUpdater
+  commentId: T:Quantum.QuantumEntityViewUpdater
+  parent: Quantum
+  name: QuantumEntityViewUpdater
+  nameWithType: QuantumEntityViewUpdater
+  fullName: Quantum.QuantumEntityViewUpdater
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.TeamVersusSettings
+  commentId: T:Quantum.TeamVersusSettings
+  parent: Quantum
+  href: Quantum.TeamVersusSettings.html
+  name: TeamVersusSettings
+  nameWithType: TeamVersusSettings
+  fullName: Quantum.TeamVersusSettings
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  commentId: T:rwby.core.gamemodes.teamversus.TVSHUDHandler
+  parent: rwby.core.gamemodes.teamversus
+  href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html
+  name: TVSHUDHandler
+  nameWithType: TVSHUDHandler
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler
+- uid: System.Collections.Generic.Dictionary{System.Int32,rwby.core.gamemodes.teamversus.TVSHUDHandler}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,rwby.core.gamemodes.teamversus.TVSHUDHandler}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<int, TVSHUDHandler>
+  nameWithType: Dictionary<int, TVSHUDHandler>
+  fullName: System.Collections.Generic.Dictionary<int, rwby.core.gamemodes.teamversus.TVSHUDHandler>
+  nameWithType.vb: Dictionary(Of Integer, TVSHUDHandler)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, rwby.core.gamemodes.teamversus.TVSHUDHandler)
+  name.vb: Dictionary(Of Integer, TVSHUDHandler)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: rwby.core.gamemodes.teamversus.TVSHUDHandler
+    name: TVSHUDHandler
+    href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: rwby.core.gamemodes.teamversus.TVSHUDHandler
+    name: TVSHUDHandler
+    href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html
+  - name: )
+- uid: rwby.MatchHandlerBase.Setup
+  commentId: M:rwby.MatchHandlerBase.Setup
+  parent: rwby.MatchHandlerBase
+  name: Setup()
+  nameWithType: MatchHandlerBase.Setup()
+  fullName: rwby.MatchHandlerBase.Setup()
+  spec.csharp:
+  - uid: rwby.MatchHandlerBase.Setup
+    name: Setup
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.MatchHandlerBase.Setup
+    name: Setup
+  - name: (
+  - name: )
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.Setup*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVTMatchHandler.Setup
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html#rwby_core_gamemodes_teamversus_TVTMatchHandler_Setup
+  name: Setup
+  nameWithType: TVTMatchHandler.Setup
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.Setup
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: rwby.MatchHandlerBase.Teardown
+  commentId: M:rwby.MatchHandlerBase.Teardown
+  parent: rwby.MatchHandlerBase
+  name: Teardown()
+  nameWithType: MatchHandlerBase.Teardown()
+  fullName: rwby.MatchHandlerBase.Teardown()
+  spec.csharp:
+  - uid: rwby.MatchHandlerBase.Teardown
+    name: Teardown
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.MatchHandlerBase.Teardown
+    name: Teardown
+  - name: (
+  - name: )
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.Teardown*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVTMatchHandler.Teardown
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html#rwby_core_gamemodes_teamversus_TVTMatchHandler_Teardown
+  name: Teardown
+  nameWithType: TVTMatchHandler.Teardown
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.Teardown
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: rwby.MatchHandlerBase.GetGamemodeSettings
+  commentId: M:rwby.MatchHandlerBase.GetGamemodeSettings
+  parent: rwby.MatchHandlerBase
+  name: GetGamemodeSettings()
+  nameWithType: MatchHandlerBase.GetGamemodeSettings()
+  fullName: rwby.MatchHandlerBase.GetGamemodeSettings()
+  spec.csharp:
+  - uid: rwby.MatchHandlerBase.GetGamemodeSettings
+    name: GetGamemodeSettings
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.MatchHandlerBase.GetGamemodeSettings
+    name: GetGamemodeSettings
+  - name: (
+  - name: )
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetGamemodeSettings*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVTMatchHandler.GetGamemodeSettings
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html#rwby_core_gamemodes_teamversus_TVTMatchHandler_GetGamemodeSettings
+  name: GetGamemodeSettings
+  nameWithType: TVTMatchHandler.GetGamemodeSettings
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetGamemodeSettings
+- uid: Quantum.GamemodeSettingsBase
+  commentId: T:Quantum.GamemodeSettingsBase
+  parent: Quantum
+  href: Quantum.GamemodeSettingsBase.html
+  name: GamemodeSettingsBase
+  nameWithType: GamemodeSettingsBase
+  fullName: Quantum.GamemodeSettingsBase
+- uid: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
+  commentId: M:rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
+  parent: rwby.MatchHandlerBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: SetLocalPlayerCharacters(List<IFighterDefinition>)
+  nameWithType: MatchHandlerBase.SetLocalPlayerCharacters(List<IFighterDefinition>)
+  fullName: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List<IFighterDefinition>)
+  nameWithType.vb: MatchHandlerBase.SetLocalPlayerCharacters(List(Of IFighterDefinition))
+  fullName.vb: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List(Of IFighterDefinition))
+  name.vb: SetLocalPlayerCharacters(List(Of IFighterDefinition))
+  spec.csharp:
+  - uid: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
+    name: SetLocalPlayerCharacters
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
+    name: SetLocalPlayerCharacters
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+  - name: )
+  - name: )
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerCharacters*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerCharacters
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html#rwby_core_gamemodes_teamversus_TVTMatchHandler_SetLocalPlayerCharacters_System_Collections_Generic_List_IFighterDefinition__
+  name: SetLocalPlayerCharacters
+  nameWithType: TVTMatchHandler.SetLocalPlayerCharacters
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerCharacters
+- uid: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
+  commentId: M:rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
+  parent: rwby.MatchHandlerBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: SetLocalPlayerSpecials(List<List<AssetRef<HNSFSpecialSet>>>)
+  nameWithType: MatchHandlerBase.SetLocalPlayerSpecials(List<List<AssetRef<HNSFSpecialSet>>>)
+  fullName: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List<System.Collections.Generic.List<Quantum.AssetRef<Quantum.HNSFSpecialSet>>>)
+  nameWithType.vb: MatchHandlerBase.SetLocalPlayerSpecials(List(Of List(Of AssetRef(Of HNSFSpecialSet))))
+  fullName.vb: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List(Of System.Collections.Generic.List(Of Quantum.AssetRef(Of Quantum.HNSFSpecialSet))))
+  name.vb: SetLocalPlayerSpecials(List(Of List(Of AssetRef(Of HNSFSpecialSet))))
+  spec.csharp:
+  - uid: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
+    name: SetLocalPlayerSpecials
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.HNSFSpecialSet
+    name: HNSFSpecialSet
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
+    name: SetLocalPlayerSpecials
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HNSFSpecialSet
+    name: HNSFSpecialSet
+  - name: )
+  - name: )
+  - name: )
+  - name: )
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerSpecials*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerSpecials
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html#rwby_core_gamemodes_teamversus_TVTMatchHandler_SetLocalPlayerSpecials_System_Collections_Generic_List_System_Collections_Generic_List_Quantum_AssetRef_Quantum_HNSFSpecialSet____
+  name: SetLocalPlayerSpecials
+  nameWithType: TVTMatchHandler.SetLocalPlayerSpecials
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerSpecials
+- uid: System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<List<AssetRef<HNSFSpecialSet>>>
+  nameWithType: List<List<AssetRef<HNSFSpecialSet>>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.List<Quantum.AssetRef<Quantum.HNSFSpecialSet>>>
+  nameWithType.vb: List(Of List(Of AssetRef(Of HNSFSpecialSet)))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.List(Of Quantum.AssetRef(Of Quantum.HNSFSpecialSet)))
+  name.vb: List(Of List(Of AssetRef(Of HNSFSpecialSet)))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.HNSFSpecialSet
+    name: HNSFSpecialSet
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HNSFSpecialSet
+    name: HNSFSpecialSet
+  - name: )
+  - name: )
+  - name: )
+- uid: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
+  commentId: M:rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
+  parent: rwby.MatchHandlerBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: SetLocalPlayerTeams(List<int>)
+  nameWithType: MatchHandlerBase.SetLocalPlayerTeams(List<int>)
+  fullName: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List<int>)
+  nameWithType.vb: MatchHandlerBase.SetLocalPlayerTeams(List(Of Integer))
+  fullName.vb: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List(Of Integer))
+  name.vb: SetLocalPlayerTeams(List(Of Integer))
+  spec.csharp:
+  - uid: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
+    name: SetLocalPlayerTeams
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
+    name: SetLocalPlayerTeams
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: )
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerTeams*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerTeams
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html#rwby_core_gamemodes_teamversus_TVTMatchHandler_SetLocalPlayerTeams_System_Collections_Generic_List_System_Int32__
+  name: SetLocalPlayerTeams
+  nameWithType: TVTMatchHandler.SetLocalPlayerTeams
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetLocalPlayerTeams
+- uid: System.Collections.Generic.List{System.Int32}
+  commentId: T:System.Collections.Generic.List{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<int>
+  nameWithType: List<int>
+  fullName: System.Collections.Generic.List<int>
+  nameWithType.vb: List(Of Integer)
+  fullName.vb: System.Collections.Generic.List(Of Integer)
+  name.vb: List(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: rwby.MatchHandlerBase.SetBGM(rwby.BaseSongDefinition)
+  commentId: M:rwby.MatchHandlerBase.SetBGM(rwby.BaseSongDefinition)
+  parent: rwby.MatchHandlerBase
+  name: SetBGM(BaseSongDefinition)
+  nameWithType: MatchHandlerBase.SetBGM(BaseSongDefinition)
+  fullName: rwby.MatchHandlerBase.SetBGM(rwby.BaseSongDefinition)
+  spec.csharp:
+  - uid: rwby.MatchHandlerBase.SetBGM(rwby.BaseSongDefinition)
+    name: SetBGM
+  - name: (
+  - uid: rwby.BaseSongDefinition
+    name: BaseSongDefinition
+  - name: )
+  spec.vb:
+  - uid: rwby.MatchHandlerBase.SetBGM(rwby.BaseSongDefinition)
+    name: SetBGM
+  - name: (
+  - uid: rwby.BaseSongDefinition
+    name: BaseSongDefinition
+  - name: )
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetBGM*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVTMatchHandler.SetBGM
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html#rwby_core_gamemodes_teamversus_TVTMatchHandler_SetBGM_rwby_BaseSongDefinition_
+  name: SetBGM
+  nameWithType: TVTMatchHandler.SetBGM
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.SetBGM
+- uid: rwby.BaseSongDefinition
+  commentId: T:rwby.BaseSongDefinition
+  parent: rwby
+  href: rwby.BaseSongDefinition.html
+  name: BaseSongDefinition
+  nameWithType: BaseSongDefinition
+  fullName: rwby.BaseSongDefinition
+- uid: rwby.MatchHandlerBase.GetLocalPlayerCamera(Quantum.PlayerRef)
+  commentId: M:rwby.MatchHandlerBase.GetLocalPlayerCamera(Quantum.PlayerRef)
+  parent: rwby.MatchHandlerBase
+  isExternal: true
+  name: GetLocalPlayerCamera(PlayerRef)
+  nameWithType: MatchHandlerBase.GetLocalPlayerCamera(PlayerRef)
+  fullName: rwby.MatchHandlerBase.GetLocalPlayerCamera(Quantum.PlayerRef)
+  spec.csharp:
+  - uid: rwby.MatchHandlerBase.GetLocalPlayerCamera(Quantum.PlayerRef)
+    name: GetLocalPlayerCamera
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: rwby.MatchHandlerBase.GetLocalPlayerCamera(Quantum.PlayerRef)
+    name: GetLocalPlayerCamera
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerCamera*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerCamera
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html#rwby_core_gamemodes_teamversus_TVTMatchHandler_GetLocalPlayerCamera_Quantum_PlayerRef_
+  name: GetLocalPlayerCamera
+  nameWithType: TVTMatchHandler.GetLocalPlayerCamera
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerCamera
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
+  parent: Quantum
+  isExternal: true
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef
+- uid: rwby.DummyCamera
+  commentId: T:rwby.DummyCamera
+  parent: rwby
+  href: rwby.DummyCamera.html
+  name: DummyCamera
+  nameWithType: DummyCamera
+  fullName: rwby.DummyCamera
+- uid: rwby.MatchHandlerBase.GetLocalPlayerVirtualCam(Quantum.PlayerRef)
+  commentId: M:rwby.MatchHandlerBase.GetLocalPlayerVirtualCam(Quantum.PlayerRef)
+  parent: rwby.MatchHandlerBase
+  isExternal: true
+  name: GetLocalPlayerVirtualCam(PlayerRef)
+  nameWithType: MatchHandlerBase.GetLocalPlayerVirtualCam(PlayerRef)
+  fullName: rwby.MatchHandlerBase.GetLocalPlayerVirtualCam(Quantum.PlayerRef)
+  spec.csharp:
+  - uid: rwby.MatchHandlerBase.GetLocalPlayerVirtualCam(Quantum.PlayerRef)
+    name: GetLocalPlayerVirtualCam
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: rwby.MatchHandlerBase.GetLocalPlayerVirtualCam(Quantum.PlayerRef)
+    name: GetLocalPlayerVirtualCam
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerVirtualCam*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerVirtualCam
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html#rwby_core_gamemodes_teamversus_TVTMatchHandler_GetLocalPlayerVirtualCam_Quantum_PlayerRef_
+  name: GetLocalPlayerVirtualCam
+  nameWithType: TVTMatchHandler.GetLocalPlayerVirtualCam
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.GetLocalPlayerVirtualCam
+- uid: rwby.TargetCameraManager
+  commentId: T:rwby.TargetCameraManager
+  parent: rwby
+  href: rwby.TargetCameraManager.html
+  name: TargetCameraManager
+  nameWithType: TargetCameraManager
+  fullName: rwby.TargetCameraManager
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler.PollInput*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVTMatchHandler.PollInput
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html#rwby_core_gamemodes_teamversus_TVTMatchHandler_PollInput_Quantum_CallbackPollInput_
+  name: PollInput
+  nameWithType: TVTMatchHandler.PollInput
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler.PollInput
+- uid: Quantum.CallbackPollInput
+  commentId: T:Quantum.CallbackPollInput
+  parent: Quantum
+  href: Quantum.CallbackPollInput.html
+  name: CallbackPollInput
+  nameWithType: CallbackPollInput
+  fullName: Quantum.CallbackPollInput

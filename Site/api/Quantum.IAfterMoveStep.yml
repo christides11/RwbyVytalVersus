@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.IAfterMoveStep
+  commentId: T:Quantum.IAfterMoveStep
+  id: IAfterMoveStep
+  parent: Quantum
+  children:
+  - Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  langs:
+  - csharp
+  - vb
+  name: IAfterMoveStep
+  nameWithType: IAfterMoveStep
+  fullName: Quantum.IAfterMoveStep
+  type: Interface
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/Callbacks/IAfterMoveStep.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IAfterMoveStep
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/Callbacks/IAfterMoveStep.cs
+    startLine: 2
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public interface IAfterMoveStep
+    content.vb: Public Interface IAfterMoveStep
+- uid: Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  commentId: M:Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  id: AfterMoveStep(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapInfo)
+  parent: Quantum.IAfterMoveStep
+  langs:
+  - csharp
+  - vb
+  name: AfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  nameWithType: IAfterMoveStep.AfterMoveStep(KCCContext, KCCProcessorInfo, KCCOverlapInfo)
+  fullName: Quantum.IAfterMoveStep.AfterMoveStep(Quantum.KCCContext, Quantum.KCCProcessorInfo, Quantum.KCCOverlapInfo)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/Callbacks/IAfterMoveStep.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AfterMoveStep
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/Callbacks/IAfterMoveStep.cs
+    startLine: 13
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    This callback is invoked after each KCC move step - this happens if the KCC
+
+    moves too fast and the continuous collision detection (CCD) algorithm splits translation vector into multiple smaller steps.
+
+    During CCD movement the KCCData.DeltaTime is scaled proportionally to size of the step.
+
+    Not called if KCC.IsActive is set to false.
+  example: []
+  syntax:
+    content: void AfterMoveStep(KCCContext context, KCCProcessorInfo processorInfo, KCCOverlapInfo overlapInfo)
+    parameters:
+    - id: context
+      type: Quantum.KCCContext
+      description: Reference to KCC context.
+    - id: processorInfo
+      type: Quantum.KCCProcessorInfo
+      description: Contains information about the processor registration source and a collider/entity that is referencing the processor.
+    - id: overlapInfo
+      type: Quantum.KCCOverlapInfo
+      description: Reference to all physics overlap hits in current move step and other metadata.
+    content.vb: Sub AfterMoveStep(context As KCCContext, processorInfo As KCCProcessorInfo, overlapInfo As KCCOverlapInfo)
+  overload: Quantum.IAfterMoveStep.AfterMoveStep*
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.IAfterMoveStep.AfterMoveStep*
+  commentId: Overload:Quantum.IAfterMoveStep.AfterMoveStep
+  href: Quantum.IAfterMoveStep.html#Quantum_IAfterMoveStep_AfterMoveStep_Quantum_KCCContext_Quantum_KCCProcessorInfo_Quantum_KCCOverlapInfo_
+  name: AfterMoveStep
+  nameWithType: IAfterMoveStep.AfterMoveStep
+  fullName: Quantum.IAfterMoveStep.AfterMoveStep
+- uid: Quantum.KCCContext
+  commentId: T:Quantum.KCCContext
+  parent: Quantum
+  href: Quantum.KCCContext.html
+  name: KCCContext
+  nameWithType: KCCContext
+  fullName: Quantum.KCCContext
+- uid: Quantum.KCCProcessorInfo
+  commentId: T:Quantum.KCCProcessorInfo
+  parent: Quantum
+  href: Quantum.KCCProcessorInfo.html
+  name: KCCProcessorInfo
+  nameWithType: KCCProcessorInfo
+  fullName: Quantum.KCCProcessorInfo
+- uid: Quantum.KCCOverlapInfo
+  commentId: T:Quantum.KCCOverlapInfo
+  parent: Quantum
+  href: Quantum.KCCOverlapInfo.html
+  name: KCCOverlapInfo
+  nameWithType: KCCOverlapInfo
+  fullName: Quantum.KCCOverlapInfo

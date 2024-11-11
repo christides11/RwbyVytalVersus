@@ -1,0 +1,749 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.core.systems.training.TrainingGeneralSystem
+  commentId: T:rwby.core.systems.training.TrainingGeneralSystem
+  id: TrainingGeneralSystem
+  parent: rwby.core.systems.training
+  children:
+  - rwby.core.systems.training.TrainingGeneralSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  - rwby.core.systems.training.TrainingGeneralSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  langs:
+  - csharp
+  - vb
+  name: TrainingGeneralSystem
+  nameWithType: TrainingGeneralSystem
+  fullName: rwby.core.systems.training.TrainingGeneralSystem
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingGeneralSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TrainingGeneralSystem
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingGeneralSystem.cs
+    startLine: 5
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems.training
+  syntax:
+    content: >-
+      [Preserve]
+
+      public class TrainingGeneralSystem : SystemSignalsOnly, ISignalOnComponentAdded<TrainingGlobals>, ISignalOnComponentRemoved<TrainingGlobals>, ISignal
+    content.vb: >-
+      <Preserve>
+
+      Public Class TrainingGeneralSystem Inherits SystemSignalsOnly Implements ISignalOnComponentAdded(Of TrainingGlobals), ISignalOnComponentRemoved(Of TrainingGlobals), ISignal
+  inheritance:
+  - System.Object
+  - Quantum.SystemBase
+  - Quantum.SystemSignalsOnly
+  implements:
+  - Quantum.ISignalOnComponentAdded{Quantum.TrainingGlobals}
+  - Quantum.ISignalOnComponentRemoved{Quantum.TrainingGlobals}
+  - Quantum.ISignal
+  inheritedMembers:
+  - Quantum.SystemSignalsOnly.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  - Quantum.SystemBase.RuntimeIndex
+  - Quantum.SystemBase.ParentSystem
+  - Quantum.SystemBase.ChildSystems
+  - Quantum.SystemBase.Hierarchy
+  - Quantum.SystemBase.StartEnabled
+  - Quantum.SystemBase.OnInit(Quantum.Frame)
+  - Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  - Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  attributes:
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
+- uid: rwby.core.systems.training.TrainingGeneralSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  commentId: M:rwby.core.systems.training.TrainingGeneralSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  id: OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  parent: rwby.core.systems.training.TrainingGeneralSystem
+  langs:
+  - csharp
+  - vb
+  name: OnAdded(Frame, EntityRef, TrainingGlobals*)
+  nameWithType: TrainingGeneralSystem.OnAdded(Frame, EntityRef, TrainingGlobals*)
+  fullName: rwby.core.systems.training.TrainingGeneralSystem.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.TrainingGlobals*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingGeneralSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnAdded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingGeneralSystem.cs
+    startLine: 8
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems.training
+  summary: The signal is called after a component of the desired type has been added to an entity.
+  example: []
+  syntax:
+    content: public void OnAdded(Frame f, EntityRef entity, TrainingGlobals* component)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was added to.
+    - id: component
+      type: Quantum.TrainingGlobals*
+      description: The component that was added.
+    content.vb: Public Sub OnAdded(f As Frame, entity As EntityRef, component As TrainingGlobals*)
+  overload: rwby.core.systems.training.TrainingGeneralSystem.OnAdded*
+  implements:
+  - Quantum.ISignalOnComponentAdded{Quantum.TrainingGlobals}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+- uid: rwby.core.systems.training.TrainingGeneralSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  commentId: M:rwby.core.systems.training.TrainingGeneralSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  id: OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  parent: rwby.core.systems.training.TrainingGeneralSystem
+  langs:
+  - csharp
+  - vb
+  name: OnRemoved(Frame, EntityRef, TrainingGlobals*)
+  nameWithType: TrainingGeneralSystem.OnRemoved(Frame, EntityRef, TrainingGlobals*)
+  fullName: rwby.core.systems.training.TrainingGeneralSystem.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.TrainingGlobals*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingGeneralSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnRemoved
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Scripts/Simulation/Gamemodes/Training/TrainingGeneralSystem.cs
+    startLine: 14
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems.training
+  summary: The signal is called after a component of the desired type has been removed from an entity.
+  example: []
+  syntax:
+    content: public void OnRemoved(Frame f, EntityRef entity, TrainingGlobals* component)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was removed from.
+    - id: component
+      type: Quantum.TrainingGlobals*
+      description: The component that was removed.
+    content.vb: Public Sub OnRemoved(f As Frame, entity As EntityRef, component As TrainingGlobals*)
+  overload: rwby.core.systems.training.TrainingGeneralSystem.OnRemoved*
+  implements:
+  - Quantum.ISignalOnComponentRemoved{Quantum.TrainingGlobals}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+references:
+- uid: rwby.core.systems.training
+  commentId: N:rwby.core.systems.training
+  href: rwby.html
+  name: rwby.core.systems.training
+  nameWithType: rwby.core.systems.training
+  fullName: rwby.core.systems.training
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.systems
+    name: systems
+    href: rwby.core.systems.html
+  - name: .
+  - uid: rwby.core.systems.training
+    name: training
+    href: rwby.core.systems.training.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.systems
+    name: systems
+    href: rwby.core.systems.html
+  - name: .
+  - uid: rwby.core.systems.training
+    name: training
+    href: rwby.core.systems.training.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.SystemBase
+  commentId: T:Quantum.SystemBase
+  parent: Quantum
+  href: Quantum.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: Quantum.SystemBase
+- uid: Quantum.SystemSignalsOnly
+  commentId: T:Quantum.SystemSignalsOnly
+  parent: Quantum
+  href: Quantum.SystemSignalsOnly.html
+  name: SystemSignalsOnly
+  nameWithType: SystemSignalsOnly
+  fullName: Quantum.SystemSignalsOnly
+- uid: Quantum.ISignalOnComponentAdded{Quantum.TrainingGlobals}
+  commentId: T:Quantum.ISignalOnComponentAdded{Quantum.TrainingGlobals}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentAdded`1
+  href: Quantum.ISignalOnComponentAdded-1.html
+  name: ISignalOnComponentAdded<TrainingGlobals>
+  nameWithType: ISignalOnComponentAdded<TrainingGlobals>
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.TrainingGlobals>
+  nameWithType.vb: ISignalOnComponentAdded(Of TrainingGlobals)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.TrainingGlobals)
+  name.vb: ISignalOnComponentAdded(Of TrainingGlobals)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: <
+  - uid: Quantum.TrainingGlobals
+    name: TrainingGlobals
+    href: Quantum.TrainingGlobals.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.TrainingGlobals
+    name: TrainingGlobals
+    href: Quantum.TrainingGlobals.html
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.TrainingGlobals}
+  commentId: T:Quantum.ISignalOnComponentRemoved{Quantum.TrainingGlobals}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentRemoved`1
+  href: Quantum.ISignalOnComponentRemoved-1.html
+  name: ISignalOnComponentRemoved<TrainingGlobals>
+  nameWithType: ISignalOnComponentRemoved<TrainingGlobals>
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.TrainingGlobals>
+  nameWithType.vb: ISignalOnComponentRemoved(Of TrainingGlobals)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.TrainingGlobals)
+  name.vb: ISignalOnComponentRemoved(Of TrainingGlobals)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: <
+  - uid: Quantum.TrainingGlobals
+    name: TrainingGlobals
+    href: Quantum.TrainingGlobals.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.TrainingGlobals
+    name: TrainingGlobals
+    href: Quantum.TrainingGlobals.html
+  - name: )
+- uid: Quantum.ISignal
+  commentId: T:Quantum.ISignal
+  parent: Quantum
+  isExternal: true
+  name: ISignal
+  nameWithType: ISignal
+  fullName: Quantum.ISignal
+- uid: Quantum.SystemSignalsOnly.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemSignalsOnly.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemSignalsOnly
+  isExternal: true
+  href: Quantum.SystemSignalsOnly.html#Quantum_SystemSignalsOnly_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: Schedule(Frame, TaskHandle)
+  nameWithType: SystemSignalsOnly.Schedule(Frame, TaskHandle)
+  fullName: Quantum.SystemSignalsOnly.Schedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemSignalsOnly.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemSignalsOnly.html#Quantum_SystemSignalsOnly_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemSignalsOnly.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: Schedule
+    href: Quantum.SystemSignalsOnly.html#Quantum_SystemSignalsOnly_Schedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: Quantum.SystemBase.RuntimeIndex
+  commentId: P:Quantum.SystemBase.RuntimeIndex
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_RuntimeIndex
+  name: RuntimeIndex
+  nameWithType: SystemBase.RuntimeIndex
+  fullName: Quantum.SystemBase.RuntimeIndex
+- uid: Quantum.SystemBase.ParentSystem
+  commentId: P:Quantum.SystemBase.ParentSystem
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ParentSystem
+  name: ParentSystem
+  nameWithType: SystemBase.ParentSystem
+  fullName: Quantum.SystemBase.ParentSystem
+- uid: Quantum.SystemBase.ChildSystems
+  commentId: P:Quantum.SystemBase.ChildSystems
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_ChildSystems
+  name: ChildSystems
+  nameWithType: SystemBase.ChildSystems
+  fullName: Quantum.SystemBase.ChildSystems
+- uid: Quantum.SystemBase.Hierarchy
+  commentId: P:Quantum.SystemBase.Hierarchy
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_Hierarchy
+  name: Hierarchy
+  nameWithType: SystemBase.Hierarchy
+  fullName: Quantum.SystemBase.Hierarchy
+- uid: Quantum.SystemBase.StartEnabled
+  commentId: P:Quantum.SystemBase.StartEnabled
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_StartEnabled
+  name: StartEnabled
+  nameWithType: SystemBase.StartEnabled
+  fullName: Quantum.SystemBase.StartEnabled
+- uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnInit(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  name: OnInit(Frame)
+  nameWithType: SystemBase.OnInit(Frame)
+  fullName: Quantum.SystemBase.OnInit(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnInit(Quantum.Frame)
+    name: OnInit
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnInit_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  name: OnEnabled(Frame)
+  nameWithType: SystemBase.OnEnabled(Frame)
+  fullName: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnEnabled(Quantum.Frame)
+    name: OnEnabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnEnabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  commentId: M:Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  parent: Quantum.SystemBase
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  name: OnDisabled(Frame)
+  nameWithType: SystemBase.OnDisabled(Frame)
+  fullName: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnDisabled(Quantum.Frame)
+    name: OnDisabled
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnDisabled_Quantum_Frame_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: )
+- uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  commentId: M:Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  parent: Quantum.SystemBase
+  isExternal: true
+  href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  name: OnSchedule(Frame, TaskHandle)
+  nameWithType: SystemBase.OnSchedule(Frame, TaskHandle)
+  fullName: Quantum.SystemBase.OnSchedule(Quantum.Frame, Quantum.Task.TaskHandle)
+  spec.csharp:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+    name: OnSchedule
+    href: Quantum.SystemBase.html#Quantum_SystemBase_OnSchedule_Quantum_Frame_Quantum_Task_TaskHandle_
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.Task.TaskHandle
+    name: TaskHandle
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.ISignalOnComponentAdded`1
+  commentId: T:Quantum.ISignalOnComponentAdded`1
+  href: Quantum.ISignalOnComponentAdded-1.html
+  name: ISignalOnComponentAdded<T>
+  nameWithType: ISignalOnComponentAdded<T>
+  fullName: Quantum.ISignalOnComponentAdded<T>
+  nameWithType.vb: ISignalOnComponentAdded(Of T)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of T)
+  name.vb: ISignalOnComponentAdded(Of T)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved`1
+  commentId: T:Quantum.ISignalOnComponentRemoved`1
+  href: Quantum.ISignalOnComponentRemoved-1.html
+  name: ISignalOnComponentRemoved<T>
+  nameWithType: ISignalOnComponentRemoved<T>
+  fullName: Quantum.ISignalOnComponentRemoved<T>
+  nameWithType.vb: ISignalOnComponentRemoved(Of T)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of T)
+  name.vb: ISignalOnComponentRemoved(Of T)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: rwby.core.systems.training.TrainingGeneralSystem.OnAdded*
+  commentId: Overload:rwby.core.systems.training.TrainingGeneralSystem.OnAdded
+  href: rwby.core.systems.training.TrainingGeneralSystem.html#rwby_core_systems_training_TrainingGeneralSystem_OnAdded_Quantum_Frame_Quantum_EntityRef_Quantum_TrainingGlobals__
+  name: OnAdded
+  nameWithType: TrainingGeneralSystem.OnAdded
+  fullName: rwby.core.systems.training.TrainingGeneralSystem.OnAdded
+- uid: Quantum.ISignalOnComponentAdded{Quantum.TrainingGlobals}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  commentId: M:Quantum.ISignalOnComponentAdded{Quantum.TrainingGlobals}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  parent: Quantum.ISignalOnComponentAdded{Quantum.TrainingGlobals}
+  definition: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnAdded(Frame, EntityRef, TrainingGlobals*)
+  nameWithType: ISignalOnComponentAdded<TrainingGlobals>.OnAdded(Frame, EntityRef, TrainingGlobals*)
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.TrainingGlobals>.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.TrainingGlobals*)
+  nameWithType.vb: ISignalOnComponentAdded(Of TrainingGlobals).OnAdded(Frame, EntityRef, TrainingGlobals*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.TrainingGlobals).OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.TrainingGlobals*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.TrainingGlobals}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TrainingGlobals
+    name: TrainingGlobals
+    href: Quantum.TrainingGlobals.html
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.TrainingGlobals}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TrainingGlobals
+    name: TrainingGlobals
+    href: Quantum.TrainingGlobals.html
+  - name: '*'
+  - name: )
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.TrainingGlobals*
+  isExternal: true
+  href: Quantum.TrainingGlobals.html
+  name: TrainingGlobals*
+  nameWithType: TrainingGlobals*
+  fullName: Quantum.TrainingGlobals*
+  spec.csharp:
+  - uid: Quantum.TrainingGlobals
+    name: TrainingGlobals
+    href: Quantum.TrainingGlobals.html
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.TrainingGlobals
+    name: TrainingGlobals
+    href: Quantum.TrainingGlobals.html
+  - name: '*'
+- uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  commentId: M:Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  isExternal: true
+  href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnAdded(Frame, EntityRef, T*)
+  nameWithType: ISignalOnComponentAdded<T>.OnAdded(Frame, EntityRef, T*)
+  fullName: Quantum.ISignalOnComponentAdded<T>.OnAdded(Quantum.Frame, Quantum.EntityRef, T*)
+  nameWithType.vb: ISignalOnComponentAdded(Of T).OnAdded(Frame, EntityRef, T*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of T).OnAdded(Quantum.Frame, Quantum.EntityRef, T*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+- uid: rwby.core.systems.training.TrainingGeneralSystem.OnRemoved*
+  commentId: Overload:rwby.core.systems.training.TrainingGeneralSystem.OnRemoved
+  href: rwby.core.systems.training.TrainingGeneralSystem.html#rwby_core_systems_training_TrainingGeneralSystem_OnRemoved_Quantum_Frame_Quantum_EntityRef_Quantum_TrainingGlobals__
+  name: OnRemoved
+  nameWithType: TrainingGeneralSystem.OnRemoved
+  fullName: rwby.core.systems.training.TrainingGeneralSystem.OnRemoved
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.TrainingGlobals}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  commentId: M:Quantum.ISignalOnComponentRemoved{Quantum.TrainingGlobals}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+  parent: Quantum.ISignalOnComponentRemoved{Quantum.TrainingGlobals}
+  definition: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnRemoved(Frame, EntityRef, TrainingGlobals*)
+  nameWithType: ISignalOnComponentRemoved<TrainingGlobals>.OnRemoved(Frame, EntityRef, TrainingGlobals*)
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.TrainingGlobals>.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.TrainingGlobals*)
+  nameWithType.vb: ISignalOnComponentRemoved(Of TrainingGlobals).OnRemoved(Frame, EntityRef, TrainingGlobals*)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.TrainingGlobals).OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.TrainingGlobals*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.TrainingGlobals}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TrainingGlobals
+    name: TrainingGlobals
+    href: Quantum.TrainingGlobals.html
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.TrainingGlobals}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrainingGlobals*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.TrainingGlobals
+    name: TrainingGlobals
+    href: Quantum.TrainingGlobals.html
+  - name: '*'
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  commentId: M:Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  isExternal: true
+  href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnRemoved(Frame, EntityRef, T*)
+  nameWithType: ISignalOnComponentRemoved<T>.OnRemoved(Frame, EntityRef, T*)
+  fullName: Quantum.ISignalOnComponentRemoved<T>.OnRemoved(Quantum.Frame, Quantum.EntityRef, T*)
+  nameWithType.vb: ISignalOnComponentRemoved(Of T).OnRemoved(Frame, EntityRef, T*)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of T).OnRemoved(Quantum.Frame, Quantum.EntityRef, T*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )

@@ -1,0 +1,443 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.IRunnerFactory
+  commentId: T:Quantum.IRunnerFactory
+  id: IRunnerFactory
+  parent: Quantum
+  children:
+  - Quantum.IRunnerFactory.CreateGame(Quantum.QuantumGameStartParameters)
+  - Quantum.IRunnerFactory.CreatePlaformInfo
+  - Quantum.IRunnerFactory.CreateProfiler(System.String,Photon.Deterministic.DeterministicSessionConfig,Photon.Deterministic.DeterministicPlatformInfo,Photon.Deterministic.IDeterministicGame)
+  - Quantum.IRunnerFactory.CreateRunner(Quantum.SessionRunner.Arguments)
+  - Quantum.IRunnerFactory.CreateTaskFactory
+  - Quantum.IRunnerFactory.UpdateDB
+  langs:
+  - csharp
+  - vb
+  name: IRunnerFactory
+  nameWithType: IRunnerFactory
+  fullName: Quantum.IRunnerFactory
+  type: Interface
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IRunnerFactory
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7138
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The interface for the runner factory. It creates platform specific objects to run the Quantum simulation.
+  example: []
+  syntax:
+    content: public interface IRunnerFactory
+    content.vb: Public Interface IRunnerFactory
+- uid: Quantum.IRunnerFactory.CreatePlaformInfo
+  commentId: P:Quantum.IRunnerFactory.CreatePlaformInfo
+  id: CreatePlaformInfo
+  parent: Quantum.IRunnerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreatePlaformInfo
+  nameWithType: IRunnerFactory.CreatePlaformInfo
+  fullName: Quantum.IRunnerFactory.CreatePlaformInfo
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreatePlaformInfo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7143
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Gather the platform information.
+
+    There is a spelling mistake in the method name, but it's considered a bigger annoyance to change the interface.
+  example: []
+  syntax:
+    content: DeterministicPlatformInfo CreatePlaformInfo { get; }
+    parameters: []
+    return:
+      type: Photon.Deterministic.DeterministicPlatformInfo
+    content.vb: ReadOnly Property CreatePlaformInfo As DeterministicPlatformInfo
+  overload: Quantum.IRunnerFactory.CreatePlaformInfo*
+- uid: Quantum.IRunnerFactory.CreateTaskFactory
+  commentId: P:Quantum.IRunnerFactory.CreateTaskFactory
+  id: CreateTaskFactory
+  parent: Quantum.IRunnerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateTaskFactory
+  nameWithType: IRunnerFactory.CreateTaskFactory
+  fullName: Quantum.IRunnerFactory.CreateTaskFactory
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateTaskFactory
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7147
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Create a Quantum task factory.
+  example: []
+  syntax:
+    content: TaskFactory CreateTaskFactory { get; }
+    parameters: []
+    return:
+      type: System.Threading.Tasks.TaskFactory
+    content.vb: ReadOnly Property CreateTaskFactory As TaskFactory
+  overload: Quantum.IRunnerFactory.CreateTaskFactory*
+- uid: Quantum.IRunnerFactory.CreateProfiler(System.String,Photon.Deterministic.DeterministicSessionConfig,Photon.Deterministic.DeterministicPlatformInfo,Photon.Deterministic.IDeterministicGame)
+  commentId: M:Quantum.IRunnerFactory.CreateProfiler(System.String,Photon.Deterministic.DeterministicSessionConfig,Photon.Deterministic.DeterministicPlatformInfo,Photon.Deterministic.IDeterministicGame)
+  id: CreateProfiler(System.String,Photon.Deterministic.DeterministicSessionConfig,Photon.Deterministic.DeterministicPlatformInfo,Photon.Deterministic.IDeterministicGame)
+  parent: Quantum.IRunnerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateProfiler(string, DeterministicSessionConfig, DeterministicPlatformInfo, IDeterministicGame)
+  nameWithType: IRunnerFactory.CreateProfiler(string, DeterministicSessionConfig, DeterministicPlatformInfo, IDeterministicGame)
+  fullName: Quantum.IRunnerFactory.CreateProfiler(string, Photon.Deterministic.DeterministicSessionConfig, Photon.Deterministic.DeterministicPlatformInfo, Photon.Deterministic.IDeterministicGame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateProfiler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7155
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The callback can be used to create and attach local profiler before the Quantum simulation has been started.
+  example: []
+  syntax:
+    content: void CreateProfiler(string clientId, DeterministicSessionConfig deterministicConfig, DeterministicPlatformInfo platformInfo, IDeterministicGame game)
+    parameters:
+    - id: clientId
+      type: System.String
+      description: Quantum client id
+    - id: deterministicConfig
+      type: Photon.Deterministic.DeterministicSessionConfig
+      description: Session config
+    - id: platformInfo
+      type: Photon.Deterministic.DeterministicPlatformInfo
+      description: Platform info
+    - id: game
+      type: Photon.Deterministic.IDeterministicGame
+      description: Game
+    content.vb: Sub CreateProfiler(clientId As String, deterministicConfig As DeterministicSessionConfig, platformInfo As DeterministicPlatformInfo, game As IDeterministicGame)
+  overload: Quantum.IRunnerFactory.CreateProfiler*
+  nameWithType.vb: IRunnerFactory.CreateProfiler(String, DeterministicSessionConfig, DeterministicPlatformInfo, IDeterministicGame)
+  fullName.vb: Quantum.IRunnerFactory.CreateProfiler(String, Photon.Deterministic.DeterministicSessionConfig, Photon.Deterministic.DeterministicPlatformInfo, Photon.Deterministic.IDeterministicGame)
+  name.vb: CreateProfiler(String, DeterministicSessionConfig, DeterministicPlatformInfo, IDeterministicGame)
+- uid: Quantum.IRunnerFactory.CreateGame(Quantum.QuantumGameStartParameters)
+  commentId: M:Quantum.IRunnerFactory.CreateGame(Quantum.QuantumGameStartParameters)
+  id: CreateGame(Quantum.QuantumGameStartParameters)
+  parent: Quantum.IRunnerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateGame(QuantumGameStartParameters)
+  nameWithType: IRunnerFactory.CreateGame(QuantumGameStartParameters)
+  fullName: Quantum.IRunnerFactory.CreateGame(Quantum.QuantumGameStartParameters)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateGame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7161
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Instantiate an implementation of the <xref href="Photon.Deterministic.IDeterministicGame" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: IDeterministicGame CreateGame(QuantumGameStartParameters startParameters)
+    parameters:
+    - id: startParameters
+      type: Quantum.QuantumGameStartParameters
+      description: Start parameters
+    return:
+      type: Photon.Deterministic.IDeterministicGame
+      description: Instance of IDeterministicGame
+    content.vb: Function CreateGame(startParameters As QuantumGameStartParameters) As IDeterministicGame
+  overload: Quantum.IRunnerFactory.CreateGame*
+- uid: Quantum.IRunnerFactory.UpdateDB
+  commentId: P:Quantum.IRunnerFactory.UpdateDB
+  id: UpdateDB
+  parent: Quantum.IRunnerFactory
+  langs:
+  - csharp
+  - vb
+  name: UpdateDB
+  nameWithType: IRunnerFactory.UpdateDB
+  fullName: Quantum.IRunnerFactory.UpdateDB
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateDB
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7165
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The action to when an update to the AssetDB is required.
+  example: []
+  syntax:
+    content: Action UpdateDB { get; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: ReadOnly Property UpdateDB As Action
+  overload: Quantum.IRunnerFactory.UpdateDB*
+- uid: Quantum.IRunnerFactory.CreateRunner(Quantum.SessionRunner.Arguments)
+  commentId: M:Quantum.IRunnerFactory.CreateRunner(Quantum.SessionRunner.Arguments)
+  id: CreateRunner(Quantum.SessionRunner.Arguments)
+  parent: Quantum.IRunnerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateRunner(Arguments)
+  nameWithType: IRunnerFactory.CreateRunner(SessionRunner.Arguments)
+  fullName: Quantum.IRunnerFactory.CreateRunner(Quantum.SessionRunner.Arguments)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateRunner
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 7172
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Create an object that the SessionRunner is running on.
+
+    For Unity it is wrapped in a MonoBehaviour.
+  example: []
+  syntax:
+    content: SessionRunner CreateRunner(SessionRunner.Arguments arguments)
+    parameters:
+    - id: arguments
+      type: Quantum.SessionRunner.Arguments
+      description: Session arguments
+    return:
+      type: Quantum.SessionRunner
+      description: A session runner
+    content.vb: Function CreateRunner(arguments As SessionRunner.Arguments) As SessionRunner
+  overload: Quantum.IRunnerFactory.CreateRunner*
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.IRunnerFactory.CreatePlaformInfo*
+  commentId: Overload:Quantum.IRunnerFactory.CreatePlaformInfo
+  href: Quantum.IRunnerFactory.html#Quantum_IRunnerFactory_CreatePlaformInfo
+  name: CreatePlaformInfo
+  nameWithType: IRunnerFactory.CreatePlaformInfo
+  fullName: Quantum.IRunnerFactory.CreatePlaformInfo
+- uid: Photon.Deterministic.DeterministicPlatformInfo
+  commentId: T:Photon.Deterministic.DeterministicPlatformInfo
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicPlatformInfo
+  nameWithType: DeterministicPlatformInfo
+  fullName: Photon.Deterministic.DeterministicPlatformInfo
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.IRunnerFactory.CreateTaskFactory*
+  commentId: Overload:Quantum.IRunnerFactory.CreateTaskFactory
+  href: Quantum.IRunnerFactory.html#Quantum_IRunnerFactory_CreateTaskFactory
+  name: CreateTaskFactory
+  nameWithType: IRunnerFactory.CreateTaskFactory
+  fullName: Quantum.IRunnerFactory.CreateTaskFactory
+- uid: System.Threading.Tasks.TaskFactory
+  commentId: T:System.Threading.Tasks.TaskFactory
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.taskfactory
+  name: TaskFactory
+  nameWithType: TaskFactory
+  fullName: System.Threading.Tasks.TaskFactory
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Quantum.IRunnerFactory.CreateProfiler*
+  commentId: Overload:Quantum.IRunnerFactory.CreateProfiler
+  href: Quantum.IRunnerFactory.html#Quantum_IRunnerFactory_CreateProfiler_System_String_Photon_Deterministic_DeterministicSessionConfig_Photon_Deterministic_DeterministicPlatformInfo_Photon_Deterministic_IDeterministicGame_
+  name: CreateProfiler
+  nameWithType: IRunnerFactory.CreateProfiler
+  fullName: Quantum.IRunnerFactory.CreateProfiler
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Photon.Deterministic.DeterministicSessionConfig
+  commentId: T:Photon.Deterministic.DeterministicSessionConfig
+  parent: Photon.Deterministic
+  isExternal: true
+  name: DeterministicSessionConfig
+  nameWithType: DeterministicSessionConfig
+  fullName: Photon.Deterministic.DeterministicSessionConfig
+- uid: Photon.Deterministic.IDeterministicGame
+  commentId: T:Photon.Deterministic.IDeterministicGame
+  parent: Photon.Deterministic
+  isExternal: true
+  name: IDeterministicGame
+  nameWithType: IDeterministicGame
+  fullName: Photon.Deterministic.IDeterministicGame
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.IRunnerFactory.CreateGame*
+  commentId: Overload:Quantum.IRunnerFactory.CreateGame
+  href: Quantum.IRunnerFactory.html#Quantum_IRunnerFactory_CreateGame_Quantum_QuantumGameStartParameters_
+  name: CreateGame
+  nameWithType: IRunnerFactory.CreateGame
+  fullName: Quantum.IRunnerFactory.CreateGame
+- uid: Quantum.QuantumGameStartParameters
+  commentId: T:Quantum.QuantumGameStartParameters
+  parent: Quantum
+  isExternal: true
+  name: QuantumGameStartParameters
+  nameWithType: QuantumGameStartParameters
+  fullName: Quantum.QuantumGameStartParameters
+- uid: Quantum.IRunnerFactory.UpdateDB*
+  commentId: Overload:Quantum.IRunnerFactory.UpdateDB
+  href: Quantum.IRunnerFactory.html#Quantum_IRunnerFactory_UpdateDB
+  name: UpdateDB
+  nameWithType: IRunnerFactory.UpdateDB
+  fullName: Quantum.IRunnerFactory.UpdateDB
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: Quantum.IRunnerFactory.CreateRunner*
+  commentId: Overload:Quantum.IRunnerFactory.CreateRunner
+  href: Quantum.IRunnerFactory.html#Quantum_IRunnerFactory_CreateRunner_Quantum_SessionRunner_Arguments_
+  name: CreateRunner
+  nameWithType: IRunnerFactory.CreateRunner
+  fullName: Quantum.IRunnerFactory.CreateRunner
+- uid: Quantum.SessionRunner.Arguments
+  commentId: T:Quantum.SessionRunner.Arguments
+  parent: Quantum
+  href: Quantum.SessionRunner.html
+  name: SessionRunner.Arguments
+  nameWithType: SessionRunner.Arguments
+  fullName: Quantum.SessionRunner.Arguments
+  spec.csharp:
+  - uid: Quantum.SessionRunner
+    name: SessionRunner
+    href: Quantum.SessionRunner.html
+  - name: .
+  - uid: Quantum.SessionRunner.Arguments
+    name: Arguments
+    href: Quantum.SessionRunner.Arguments.html
+  spec.vb:
+  - uid: Quantum.SessionRunner
+    name: SessionRunner
+    href: Quantum.SessionRunner.html
+  - name: .
+  - uid: Quantum.SessionRunner.Arguments
+    name: Arguments
+    href: Quantum.SessionRunner.Arguments.html
+- uid: Quantum.SessionRunner
+  commentId: T:Quantum.SessionRunner
+  parent: Quantum
+  href: Quantum.SessionRunner.html
+  name: SessionRunner
+  nameWithType: SessionRunner
+  fullName: Quantum.SessionRunner

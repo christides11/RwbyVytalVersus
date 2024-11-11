@@ -101,7 +101,7 @@ Class EntitySoundManager  <a class="header-action link-secondary" title="View so
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EntitySoundManager : QuantumEntityViewComponent</code></pre>
+    <pre><code class="lang-csharp hljs">public class EntitySoundManager : QuantumEntityViewComponent, IQuantumViewComponent</code></pre>
   </div>
 
 
@@ -123,8 +123,102 @@ Class EntitySoundManager  <a class="header-action link-secondary" title="View so
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IQuantumViewComponent</span></div>
+    </dd>
+  </dl>
 
 
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">QuantumEntityViewComponent&lt;IQuantumViewContext&gt;.Game</span>
+    </div>
+    <div>
+      <span class="xref">QuantumEntityViewComponent&lt;IQuantumViewContext&gt;.EntityRef</span>
+    </div>
+    <div>
+      <span class="xref">QuantumEntityViewComponent&lt;IQuantumViewContext&gt;.EntityView</span>
+    </div>
+    <div>
+      <span class="xref">QuantumEntityViewComponent&lt;IQuantumViewContext&gt;.HasPredictedQuantumComponent&lt;TComponent&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">QuantumEntityViewComponent&lt;IQuantumViewContext&gt;.HasVerifiedQuantumComponent&lt;TComponent&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">QuantumEntityViewComponent&lt;IQuantumViewContext&gt;.GetPredictedQuantumComponent&lt;TComponent&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">QuantumEntityViewComponent&lt;IQuantumViewContext&gt;.GetVerifiedQuantumComponent&lt;TComponent&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">QuantumEntityViewComponent&lt;IQuantumViewContext&gt;.TryGetPredictedQuantumComponent&lt;TComponent&gt;(out TComponent)</span>
+    </div>
+    <div>
+      <span class="xref">QuantumEntityViewComponent&lt;IQuantumViewContext&gt;.TryGetVerifiedQuantumComponent&lt;TComponent&gt;(out TComponent)</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.PredictedFrame</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.VerifiedFrame</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.PredictedPreviousFrame</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.ViewContext</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.IsActive</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.IsInitialized</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;._game</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;._entityView</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.OnInitialize()</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.OnActivate(Frame)</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.OnDeactivate()</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.OnLateUpdateView()</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.OnGameChanged()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">QuantumViewComponent&lt;IQuantumViewContext&gt;.Initialize(Dictionary&lt;Type, IQuantumViewContext&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.Activate(Frame, QuantumGame, QuantumEntityView)</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.Deactivate()</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.UpdateView()</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.LateUpdateView()</span>
+    </div>
+    <div>
+      <span class="xref">QuantumViewComponent&lt;IQuantumViewContext&gt;.GameChanged(QuantumGame)</span>
+    </div>
+  </dd></dl>
 
 
 
@@ -153,7 +247,7 @@ Class EntitySoundManager  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<span class="xref">Tag</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/AudioSource.html">AudioSource</a>&gt;&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="Quantum.Tag.html">Tag</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/AudioSource.html">AudioSource</a>&gt;&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -212,7 +306,7 @@ Class EntitySoundManager  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>soundEntry</code> <span class="xref">SoundEntry</span></dt>
+    <dt><code>soundEntry</code> <a class="xref" href="Quantum.SoundEntry.html">SoundEntry</a></dt>
     <dd></dd>
     <dt><code>parent</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a></dt>
     <dd></dd>
@@ -224,9 +318,9 @@ Class EntitySoundManager  <a class="header-action link-secondary" title="View so
     <dd></dd>
     <dt><code>pitch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd></dd>
-    <dt><code>tag</code> <span class="xref">Tag</span></dt>
+    <dt><code>tag</code> <a class="xref" href="Quantum.Tag.html">Tag</a></dt>
     <dd></dd>
-    <dt><code>audioSourceConfig</code> <span class="xref">AudioSourceConfig</span></dt>
+    <dt><code>audioSourceConfig</code> <a class="xref" href="Quantum.AudioSourceConfig.html">AudioSourceConfig</a></dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">EventKey</span></dt>
     <dd></dd>

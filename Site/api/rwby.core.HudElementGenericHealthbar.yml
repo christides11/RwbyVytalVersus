@@ -1,0 +1,780 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.core.HudElementGenericHealthbar
+  commentId: T:rwby.core.HudElementGenericHealthbar
+  id: HudElementGenericHealthbar
+  parent: rwby.core
+  children:
+  - rwby.core.HudElementGenericHealthbar.FighterDef
+  - rwby.core.HudElementGenericHealthbar.Initialize(System.Int32,System.Int32)
+  - rwby.core.HudElementGenericHealthbar.RootCanvas
+  - rwby.core.HudElementGenericHealthbar.Teardown
+  - rwby.core.HudElementGenericHealthbar.backBar
+  - rwby.core.HudElementGenericHealthbar.chipDelay
+  - rwby.core.HudElementGenericHealthbar.chipSpeed
+  - rwby.core.HudElementGenericHealthbar.fighterEntityView
+  - rwby.core.HudElementGenericHealthbar.frontBar
+  - rwby.core.HudElementGenericHealthbar.globalPlayerID
+  - rwby.core.HudElementGenericHealthbar.healthValue
+  - rwby.core.HudElementGenericHealthbar.healthbarHealthCurve
+  - rwby.core.HudElementGenericHealthbar.lerpTime
+  - rwby.core.HudElementGenericHealthbar.localPlayerID
+  - rwby.core.HudElementGenericHealthbar.maxHealthValue
+  langs:
+  - csharp
+  - vb
+  name: HudElementGenericHealthbar
+  nameWithType: HudElementGenericHealthbar
+  fullName: rwby.core.HudElementGenericHealthbar
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HudElementGenericHealthbar
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: 'public class HudElementGenericHealthbar : MonoBehaviour, IHUDElement, IFighterDefinitionUser'
+    content.vb: Public Class HudElementGenericHealthbar Inherits MonoBehaviour Implements IHUDElement, IFighterDefinitionUser
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  implements:
+  - rwby.IHUDElement
+  - rwby.IFighterDefinitionUser
+- uid: rwby.core.HudElementGenericHealthbar.FighterDef
+  commentId: P:rwby.core.HudElementGenericHealthbar.FighterDef
+  id: FighterDef
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: FighterDef
+  nameWithType: HudElementGenericHealthbar.FighterDef
+  fullName: rwby.core.HudElementGenericHealthbar.FighterDef
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FighterDef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public IFighterDefinition FighterDef { get; set; }
+    parameters: []
+    return:
+      type: Global.IFighterDefinition
+    content.vb: Public Property FighterDef As IFighterDefinition
+  overload: rwby.core.HudElementGenericHealthbar.FighterDef*
+  implements:
+  - rwby.IFighterDefinitionUser.FighterDef
+- uid: rwby.core.HudElementGenericHealthbar.globalPlayerID
+  commentId: F:rwby.core.HudElementGenericHealthbar.globalPlayerID
+  id: globalPlayerID
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: globalPlayerID
+  nameWithType: HudElementGenericHealthbar.globalPlayerID
+  fullName: rwby.core.HudElementGenericHealthbar.globalPlayerID
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: globalPlayerID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public int globalPlayerID
+    return:
+      type: System.Int32
+    content.vb: Public globalPlayerID As Integer
+- uid: rwby.core.HudElementGenericHealthbar.localPlayerID
+  commentId: F:rwby.core.HudElementGenericHealthbar.localPlayerID
+  id: localPlayerID
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: localPlayerID
+  nameWithType: HudElementGenericHealthbar.localPlayerID
+  fullName: rwby.core.HudElementGenericHealthbar.localPlayerID
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localPlayerID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public int localPlayerID
+    return:
+      type: System.Int32
+    content.vb: Public localPlayerID As Integer
+- uid: rwby.core.HudElementGenericHealthbar.fighterEntityView
+  commentId: F:rwby.core.HudElementGenericHealthbar.fighterEntityView
+  id: fighterEntityView
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: fighterEntityView
+  nameWithType: HudElementGenericHealthbar.fighterEntityView
+  fullName: rwby.core.HudElementGenericHealthbar.fighterEntityView
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: fighterEntityView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public QuantumEntityView fighterEntityView
+    return:
+      type: Quantum.QuantumEntityView
+    content.vb: Public fighterEntityView As QuantumEntityView
+- uid: rwby.core.HudElementGenericHealthbar.backBar
+  commentId: F:rwby.core.HudElementGenericHealthbar.backBar
+  id: backBar
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: backBar
+  nameWithType: HudElementGenericHealthbar.backBar
+  fullName: rwby.core.HudElementGenericHealthbar.backBar
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: backBar
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public Image backBar
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: Public backBar As Image
+- uid: rwby.core.HudElementGenericHealthbar.frontBar
+  commentId: F:rwby.core.HudElementGenericHealthbar.frontBar
+  id: frontBar
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: frontBar
+  nameWithType: HudElementGenericHealthbar.frontBar
+  fullName: rwby.core.HudElementGenericHealthbar.frontBar
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: frontBar
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public Image frontBar
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: Public frontBar As Image
+- uid: rwby.core.HudElementGenericHealthbar.healthValue
+  commentId: F:rwby.core.HudElementGenericHealthbar.healthValue
+  id: healthValue
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: healthValue
+  nameWithType: HudElementGenericHealthbar.healthValue
+  fullName: rwby.core.HudElementGenericHealthbar.healthValue
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: healthValue
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: >-
+      [ReadOnly]
+
+      public int healthValue
+    return:
+      type: System.Int32
+    content.vb: >-
+      <ReadOnly>
+
+      Public healthValue As Integer
+  attributes:
+  - type: Quantum.ReadOnlyAttribute
+    ctor: Quantum.ReadOnlyAttribute.#ctor
+    arguments: []
+- uid: rwby.core.HudElementGenericHealthbar.maxHealthValue
+  commentId: F:rwby.core.HudElementGenericHealthbar.maxHealthValue
+  id: maxHealthValue
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: maxHealthValue
+  nameWithType: HudElementGenericHealthbar.maxHealthValue
+  fullName: rwby.core.HudElementGenericHealthbar.maxHealthValue
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: maxHealthValue
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: >-
+      [ReadOnly]
+
+      public int maxHealthValue
+    return:
+      type: System.Int32
+    content.vb: >-
+      <ReadOnly>
+
+      Public maxHealthValue As Integer
+  attributes:
+  - type: Quantum.ReadOnlyAttribute
+    ctor: Quantum.ReadOnlyAttribute.#ctor
+    arguments: []
+- uid: rwby.core.HudElementGenericHealthbar.lerpTime
+  commentId: F:rwby.core.HudElementGenericHealthbar.lerpTime
+  id: lerpTime
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: lerpTime
+  nameWithType: HudElementGenericHealthbar.lerpTime
+  fullName: rwby.core.HudElementGenericHealthbar.lerpTime
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: lerpTime
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: >-
+      [ReadOnly]
+
+      public float lerpTime
+    return:
+      type: System.Single
+    content.vb: >-
+      <ReadOnly>
+
+      Public lerpTime As Single
+  attributes:
+  - type: Quantum.ReadOnlyAttribute
+    ctor: Quantum.ReadOnlyAttribute.#ctor
+    arguments: []
+- uid: rwby.core.HudElementGenericHealthbar.chipSpeed
+  commentId: F:rwby.core.HudElementGenericHealthbar.chipSpeed
+  id: chipSpeed
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: chipSpeed
+  nameWithType: HudElementGenericHealthbar.chipSpeed
+  fullName: rwby.core.HudElementGenericHealthbar.chipSpeed
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: chipSpeed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public float chipSpeed
+    return:
+      type: System.Single
+    content.vb: Public chipSpeed As Single
+- uid: rwby.core.HudElementGenericHealthbar.chipDelay
+  commentId: F:rwby.core.HudElementGenericHealthbar.chipDelay
+  id: chipDelay
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: chipDelay
+  nameWithType: HudElementGenericHealthbar.chipDelay
+  fullName: rwby.core.HudElementGenericHealthbar.chipDelay
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: chipDelay
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public float chipDelay
+    return:
+      type: System.Single
+    content.vb: Public chipDelay As Single
+- uid: rwby.core.HudElementGenericHealthbar.healthbarHealthCurve
+  commentId: F:rwby.core.HudElementGenericHealthbar.healthbarHealthCurve
+  id: healthbarHealthCurve
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: healthbarHealthCurve
+  nameWithType: HudElementGenericHealthbar.healthbarHealthCurve
+  fullName: rwby.core.HudElementGenericHealthbar.healthbarHealthCurve
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: healthbarHealthCurve
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public AnimationCurve healthbarHealthCurve
+    return:
+      type: UnityEngine.AnimationCurve
+    content.vb: Public healthbarHealthCurve As AnimationCurve
+- uid: rwby.core.HudElementGenericHealthbar.RootCanvas
+  commentId: P:rwby.core.HudElementGenericHealthbar.RootCanvas
+  id: RootCanvas
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: RootCanvas
+  nameWithType: HudElementGenericHealthbar.RootCanvas
+  fullName: rwby.core.HudElementGenericHealthbar.RootCanvas
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RootCanvas
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 29
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public Canvas RootCanvas { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Canvas
+    content.vb: Public Property RootCanvas As Canvas
+  overload: rwby.core.HudElementGenericHealthbar.RootCanvas*
+  implements:
+  - rwby.IHUDElement.RootCanvas
+- uid: rwby.core.HudElementGenericHealthbar.Initialize(System.Int32,System.Int32)
+  commentId: M:rwby.core.HudElementGenericHealthbar.Initialize(System.Int32,System.Int32)
+  id: Initialize(System.Int32,System.Int32)
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: Initialize(int, int)
+  nameWithType: HudElementGenericHealthbar.Initialize(int, int)
+  fullName: rwby.core.HudElementGenericHealthbar.Initialize(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 31
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Initialize(int localPlayerID, int networkPlayerID)
+    parameters:
+    - id: localPlayerID
+      type: System.Int32
+    - id: networkPlayerID
+      type: System.Int32
+    content.vb: Public Sub Initialize(localPlayerID As Integer, networkPlayerID As Integer)
+  overload: rwby.core.HudElementGenericHealthbar.Initialize*
+  implements:
+  - rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  nameWithType.vb: HudElementGenericHealthbar.Initialize(Integer, Integer)
+  fullName.vb: rwby.core.HudElementGenericHealthbar.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+- uid: rwby.core.HudElementGenericHealthbar.Teardown
+  commentId: M:rwby.core.HudElementGenericHealthbar.Teardown
+  id: Teardown
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: HudElementGenericHealthbar.Teardown()
+  fullName: rwby.core.HudElementGenericHealthbar.Teardown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Teardown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 89
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Teardown()
+    content.vb: Public Sub Teardown()
+  overload: rwby.core.HudElementGenericHealthbar.Teardown*
+  implements:
+  - rwby.IHUDElement.Teardown
+references:
+- uid: rwby.core
+  commentId: N:rwby.core
+  href: rwby.html
+  name: rwby.core
+  nameWithType: rwby.core
+  fullName: rwby.core
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: rwby.IHUDElement
+  commentId: T:rwby.IHUDElement
+  parent: rwby
+  href: rwby.IHUDElement.html
+  name: IHUDElement
+  nameWithType: IHUDElement
+  fullName: rwby.IHUDElement
+- uid: rwby.IFighterDefinitionUser
+  commentId: T:rwby.IFighterDefinitionUser
+  parent: rwby
+  href: rwby.IFighterDefinitionUser.html
+  name: IFighterDefinitionUser
+  nameWithType: IFighterDefinitionUser
+  fullName: rwby.IFighterDefinitionUser
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: rwby.core.HudElementGenericHealthbar.FighterDef*
+  commentId: Overload:rwby.core.HudElementGenericHealthbar.FighterDef
+  href: rwby.core.HudElementGenericHealthbar.html#rwby_core_HudElementGenericHealthbar_FighterDef
+  name: FighterDef
+  nameWithType: HudElementGenericHealthbar.FighterDef
+  fullName: rwby.core.HudElementGenericHealthbar.FighterDef
+- uid: rwby.IFighterDefinitionUser.FighterDef
+  commentId: P:rwby.IFighterDefinitionUser.FighterDef
+  parent: rwby.IFighterDefinitionUser
+  name: FighterDef
+  nameWithType: IFighterDefinitionUser.FighterDef
+  fullName: rwby.IFighterDefinitionUser.FighterDef
+- uid: Global.IFighterDefinition
+  commentId: T:Global.IFighterDefinition
+  href: IFighterDefinition.html
+  name: IFighterDefinition
+  nameWithType: IFighterDefinition
+  fullName: IFighterDefinition
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.QuantumEntityView
+  commentId: T:Quantum.QuantumEntityView
+  parent: Quantum
+  name: QuantumEntityView
+  nameWithType: QuantumEntityView
+  fullName: Quantum.QuantumEntityView
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: UnityEngine.UI.Image
+  commentId: T:UnityEngine.UI.Image
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: UnityEngine.UI.Image
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  isExternal: true
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    isExternal: true
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine.AnimationCurve
+  commentId: T:UnityEngine.AnimationCurve
+  parent: UnityEngine
+  isExternal: true
+  name: AnimationCurve
+  nameWithType: AnimationCurve
+  fullName: UnityEngine.AnimationCurve
+- uid: rwby.core.HudElementGenericHealthbar.RootCanvas*
+  commentId: Overload:rwby.core.HudElementGenericHealthbar.RootCanvas
+  href: rwby.core.HudElementGenericHealthbar.html#rwby_core_HudElementGenericHealthbar_RootCanvas
+  name: RootCanvas
+  nameWithType: HudElementGenericHealthbar.RootCanvas
+  fullName: rwby.core.HudElementGenericHealthbar.RootCanvas
+- uid: rwby.IHUDElement.RootCanvas
+  commentId: P:rwby.IHUDElement.RootCanvas
+  parent: rwby.IHUDElement
+  name: RootCanvas
+  nameWithType: IHUDElement.RootCanvas
+  fullName: rwby.IHUDElement.RootCanvas
+- uid: UnityEngine.Canvas
+  commentId: T:UnityEngine.Canvas
+  parent: UnityEngine
+  isExternal: true
+  name: Canvas
+  nameWithType: Canvas
+  fullName: UnityEngine.Canvas
+- uid: rwby.core.HudElementGenericHealthbar.Initialize*
+  commentId: Overload:rwby.core.HudElementGenericHealthbar.Initialize
+  href: rwby.core.HudElementGenericHealthbar.html#rwby_core_HudElementGenericHealthbar_Initialize_System_Int32_System_Int32_
+  name: Initialize
+  nameWithType: HudElementGenericHealthbar.Initialize
+  fullName: rwby.core.HudElementGenericHealthbar.Initialize
+- uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  commentId: M:rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  parent: rwby.IHUDElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Initialize(int, int)
+  nameWithType: IHUDElement.Initialize(int, int)
+  fullName: rwby.IHUDElement.Initialize(int, int)
+  nameWithType.vb: IHUDElement.Initialize(Integer, Integer)
+  fullName.vb: rwby.IHUDElement.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+  spec.csharp:
+  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+    name: Initialize
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+    name: Initialize
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: rwby.core.HudElementGenericHealthbar.Teardown*
+  commentId: Overload:rwby.core.HudElementGenericHealthbar.Teardown
+  href: rwby.core.HudElementGenericHealthbar.html#rwby_core_HudElementGenericHealthbar_Teardown
+  name: Teardown
+  nameWithType: HudElementGenericHealthbar.Teardown
+  fullName: rwby.core.HudElementGenericHealthbar.Teardown
+- uid: rwby.IHUDElement.Teardown
+  commentId: M:rwby.IHUDElement.Teardown
+  parent: rwby.IHUDElement
+  name: Teardown()
+  nameWithType: IHUDElement.Teardown()
+  fullName: rwby.IHUDElement.Teardown()
+  spec.csharp:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )

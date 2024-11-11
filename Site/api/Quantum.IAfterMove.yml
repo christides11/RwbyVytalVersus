@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.IAfterMove
+  commentId: T:Quantum.IAfterMove
+  id: IAfterMove
+  parent: Quantum
+  children:
+  - Quantum.IAfterMove.AfterMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  langs:
+  - csharp
+  - vb
+  name: IAfterMove
+  nameWithType: IAfterMove
+  fullName: Quantum.IAfterMove
+  type: Interface
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/Callbacks/IAfterMove.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IAfterMove
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/Callbacks/IAfterMove.cs
+    startLine: 2
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public interface IAfterMove
+    content.vb: Public Interface IAfterMove
+- uid: Quantum.IAfterMove.AfterMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  commentId: M:Quantum.IAfterMove.AfterMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  id: AfterMove(Quantum.KCCContext,Quantum.KCCProcessorInfo)
+  parent: Quantum.IAfterMove
+  langs:
+  - csharp
+  - vb
+  name: AfterMove(KCCContext, KCCProcessorInfo)
+  nameWithType: IAfterMove.AfterMove(KCCContext, KCCProcessorInfo)
+  fullName: Quantum.IAfterMove.AfterMove(Quantum.KCCContext, Quantum.KCCProcessorInfo)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/Callbacks/IAfterMove.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AfterMove
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/QuantumAddons/KCC/Simulation/Processors/Callbacks/IAfterMove.cs
+    startLine: 10
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    This callback is invoked after KCC movement - on the end of KCC.Update().
+
+    Not called if KCC.IsActive is set to false.
+  example: []
+  syntax:
+    content: void AfterMove(KCCContext context, KCCProcessorInfo processorInfo)
+    parameters:
+    - id: context
+      type: Quantum.KCCContext
+      description: Reference to KCC context.
+    - id: processorInfo
+      type: Quantum.KCCProcessorInfo
+      description: Contains information about the processor registration source and a collider/entity that is referencing the processor.
+    content.vb: Sub AfterMove(context As KCCContext, processorInfo As KCCProcessorInfo)
+  overload: Quantum.IAfterMove.AfterMove*
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.IAfterMove.AfterMove*
+  commentId: Overload:Quantum.IAfterMove.AfterMove
+  href: Quantum.IAfterMove.html#Quantum_IAfterMove_AfterMove_Quantum_KCCContext_Quantum_KCCProcessorInfo_
+  name: AfterMove
+  nameWithType: IAfterMove.AfterMove
+  fullName: Quantum.IAfterMove.AfterMove
+- uid: Quantum.KCCContext
+  commentId: T:Quantum.KCCContext
+  parent: Quantum
+  href: Quantum.KCCContext.html
+  name: KCCContext
+  nameWithType: KCCContext
+  fullName: Quantum.KCCContext
+- uid: Quantum.KCCProcessorInfo
+  commentId: T:Quantum.KCCProcessorInfo
+  parent: Quantum
+  href: Quantum.KCCProcessorInfo.html
+  name: KCCProcessorInfo
+  nameWithType: KCCProcessorInfo
+  fullName: Quantum.KCCProcessorInfo

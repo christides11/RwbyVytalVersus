@@ -1,0 +1,313 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.QuantumInputHistoryData
+  commentId: T:Quantum.QuantumInputHistoryData
+  id: QuantumInputHistoryData
+  parent: Quantum
+  children:
+  - Quantum.QuantumInputHistoryData.DeltaCompressed
+  - Quantum.QuantumInputHistoryData.DeltaCompressedLastTick
+  - Quantum.QuantumInputHistoryData.FullLegacy
+  langs:
+  - csharp
+  - vb
+  name: QuantumInputHistoryData
+  nameWithType: QuantumInputHistoryData
+  fullName: Quantum.QuantumInputHistoryData
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: QuantumInputHistoryData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6229
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    Input history wrapper to used to store on replay files.
+
+    Default way to save is DeltaCompressed in Json with compression to reduce the (Json) file size the most.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class QuantumInputHistoryData : QuantumJsonFriendlyDataBlob
+    content.vb: >-
+      <Serializable>
+
+      Public Class QuantumInputHistoryData Inherits QuantumJsonFriendlyDataBlob
+  inheritance:
+  - System.Object
+  - Quantum.QuantumJsonFriendlyDataBlob
+  inheritedMembers:
+  - Quantum.QuantumJsonFriendlyDataBlob.Binary
+  - Quantum.QuantumJsonFriendlyDataBlob.Base64
+  - Quantum.QuantumJsonFriendlyDataBlob.IsCompressed
+  - Quantum.QuantumJsonFriendlyDataBlob.Decode
+  - Quantum.QuantumJsonFriendlyDataBlob.Encode(System.Byte[],System.Boolean,System.Boolean)
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Quantum.QuantumInputHistoryData.DeltaCompressed
+  commentId: F:Quantum.QuantumInputHistoryData.DeltaCompressed
+  id: DeltaCompressed
+  parent: Quantum.QuantumInputHistoryData
+  langs:
+  - csharp
+  - vb
+  name: DeltaCompressed
+  nameWithType: QuantumInputHistoryData.DeltaCompressed
+  fullName: Quantum.QuantumInputHistoryData.DeltaCompressed
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeltaCompressed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6235
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    The delta compressed input history stream.
+
+    [length as int][data as int array][len][data][len][data]..
+  example: []
+  syntax:
+    content: public QuantumJsonFriendlyDataBlob DeltaCompressed
+    return:
+      type: Quantum.QuantumJsonFriendlyDataBlob
+    content.vb: Public DeltaCompressed As QuantumJsonFriendlyDataBlob
+- uid: Quantum.QuantumInputHistoryData.DeltaCompressedLastTick
+  commentId: F:Quantum.QuantumInputHistoryData.DeltaCompressedLastTick
+  id: DeltaCompressedLastTick
+  parent: Quantum.QuantumInputHistoryData
+  langs:
+  - csharp
+  - vb
+  name: DeltaCompressedLastTick
+  nameWithType: QuantumInputHistoryData.DeltaCompressedLastTick
+  fullName: Quantum.QuantumInputHistoryData.DeltaCompressedLastTick
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DeltaCompressedLastTick
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6239
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The last tick that the delta compressed input is available for, required when <xref href="Quantum.QuantumInputHistoryData.DeltaCompressed" data-throw-if-not-resolved="false"></xref> is used.
+  example: []
+  syntax:
+    content: public int DeltaCompressedLastTick
+    return:
+      type: System.Int32
+    content.vb: Public DeltaCompressedLastTick As Integer
+- uid: Quantum.QuantumInputHistoryData.FullLegacy
+  commentId: F:Quantum.QuantumInputHistoryData.FullLegacy
+  id: FullLegacy
+  parent: Quantum.QuantumInputHistoryData
+  langs:
+  - csharp
+  - vb
+  name: FullLegacy
+  nameWithType: QuantumInputHistoryData.FullLegacy
+  fullName: Quantum.QuantumInputHistoryData.FullLegacy
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FullLegacy
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6243
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The full verbose input history. This is replaced by <xref href="Quantum.QuantumInputHistoryData.DeltaCompressed" data-throw-if-not-resolved="false"></xref> in Quantum 3.0 but it's still functional.
+  example: []
+  syntax:
+    content: public DeterministicTickInputSet[] FullLegacy
+    return:
+      type: Photon.Deterministic.DeterministicTickInputSet[]
+    content.vb: Public FullLegacy As DeterministicTickInputSet()
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Quantum.QuantumJsonFriendlyDataBlob
+  commentId: T:Quantum.QuantumJsonFriendlyDataBlob
+  parent: Quantum
+  href: Quantum.QuantumJsonFriendlyDataBlob.html
+  name: QuantumJsonFriendlyDataBlob
+  nameWithType: QuantumJsonFriendlyDataBlob
+  fullName: Quantum.QuantumJsonFriendlyDataBlob
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Binary
+  commentId: F:Quantum.QuantumJsonFriendlyDataBlob.Binary
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Binary
+  name: Binary
+  nameWithType: QuantumJsonFriendlyDataBlob.Binary
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Binary
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Base64
+  commentId: F:Quantum.QuantumJsonFriendlyDataBlob.Base64
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Base64
+  name: Base64
+  nameWithType: QuantumJsonFriendlyDataBlob.Base64
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Base64
+- uid: Quantum.QuantumJsonFriendlyDataBlob.IsCompressed
+  commentId: F:Quantum.QuantumJsonFriendlyDataBlob.IsCompressed
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_IsCompressed
+  name: IsCompressed
+  nameWithType: QuantumJsonFriendlyDataBlob.IsCompressed
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.IsCompressed
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Decode
+  commentId: M:Quantum.QuantumJsonFriendlyDataBlob.Decode
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Decode
+  name: Decode()
+  nameWithType: QuantumJsonFriendlyDataBlob.Decode()
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Decode()
+  spec.csharp:
+  - uid: Quantum.QuantumJsonFriendlyDataBlob.Decode
+    name: Decode
+    href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Decode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumJsonFriendlyDataBlob.Decode
+    name: Decode
+    href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Decode
+  - name: (
+  - name: )
+- uid: Quantum.QuantumJsonFriendlyDataBlob.Encode(System.Byte[],System.Boolean,System.Boolean)
+  commentId: M:Quantum.QuantumJsonFriendlyDataBlob.Encode(System.Byte[],System.Boolean,System.Boolean)
+  parent: Quantum.QuantumJsonFriendlyDataBlob
+  isExternal: true
+  href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Encode_System_Byte___System_Boolean_System_Boolean_
+  name: Encode(byte[], bool, bool)
+  nameWithType: QuantumJsonFriendlyDataBlob.Encode(byte[], bool, bool)
+  fullName: Quantum.QuantumJsonFriendlyDataBlob.Encode(byte[], bool, bool)
+  nameWithType.vb: QuantumJsonFriendlyDataBlob.Encode(Byte(), Boolean, Boolean)
+  fullName.vb: Quantum.QuantumJsonFriendlyDataBlob.Encode(Byte(), Boolean, Boolean)
+  name.vb: Encode(Byte(), Boolean, Boolean)
+  spec.csharp:
+  - uid: Quantum.QuantumJsonFriendlyDataBlob.Encode(System.Byte[],System.Boolean,System.Boolean)
+    name: Encode
+    href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Encode_System_Byte___System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Quantum.QuantumJsonFriendlyDataBlob.Encode(System.Byte[],System.Boolean,System.Boolean)
+    name: Encode
+    href: Quantum.QuantumJsonFriendlyDataBlob.html#Quantum_QuantumJsonFriendlyDataBlob_Encode_System_Byte___System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Quantum.QuantumInputHistoryData.DeltaCompressed
+  commentId: F:Quantum.QuantumInputHistoryData.DeltaCompressed
+  href: Quantum.QuantumInputHistoryData.html#Quantum_QuantumInputHistoryData_DeltaCompressed
+  name: DeltaCompressed
+  nameWithType: QuantumInputHistoryData.DeltaCompressed
+  fullName: Quantum.QuantumInputHistoryData.DeltaCompressed
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Photon.Deterministic.DeterministicTickInputSet[]
+  isExternal: true
+  name: DeterministicTickInputSet[]
+  nameWithType: DeterministicTickInputSet[]
+  fullName: Photon.Deterministic.DeterministicTickInputSet[]
+  nameWithType.vb: DeterministicTickInputSet()
+  fullName.vb: Photon.Deterministic.DeterministicTickInputSet()
+  name.vb: DeterministicTickInputSet()
+  spec.csharp:
+  - uid: Photon.Deterministic.DeterministicTickInputSet
+    name: DeterministicTickInputSet
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Photon.Deterministic.DeterministicTickInputSet
+    name: DeterministicTickInputSet
+    isExternal: true
+  - name: (
+  - name: )
