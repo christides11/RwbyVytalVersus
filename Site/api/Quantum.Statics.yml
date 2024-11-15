@@ -7,6 +7,7 @@ items:
   children:
   - Quantum.Statics.EnsureNotStrippedGen
   - Quantum.Statics.Init
+  - Quantum.Statics.ReInit
   - Quantum.Statics.RegisterSimulationTypes(Quantum.TypeRegistry)
   - Quantum.Statics.SerializeAssetRef
   - Quantum.Statics.SerializeClashCombatPair
@@ -36,12 +37,12 @@ items:
   type: Class
   source:
     remote:
-      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      path: rwbyq_unity/Assets/Photon/Quantum/UserSimulation/StaticHelper.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Statics
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2298
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/UserSimulation/StaticHelper.cs
+    startLine: 11
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -609,7 +610,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Init
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2310
+    startLine: 2313
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -617,6 +618,32 @@ items:
     content: public static void Init()
     content.vb: Public Shared Sub Init()
   overload: Quantum.Statics.Init*
+- uid: Quantum.Statics.ReInit
+  commentId: M:Quantum.Statics.ReInit
+  id: ReInit
+  parent: Quantum.Statics
+  langs:
+  - csharp
+  - vb
+  name: ReInit()
+  nameWithType: Statics.ReInit()
+  fullName: Quantum.Statics.ReInit()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ReInit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2317
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public static void ReInit()
+    content.vb: Public Shared Sub ReInit()
+  overload: Quantum.Statics.ReInit*
 - uid: Quantum.Statics.RegisterSimulationTypes(Quantum.TypeRegistry)
   commentId: M:Quantum.Statics.RegisterSimulationTypes(Quantum.TypeRegistry)
   id: RegisterSimulationTypes(Quantum.TypeRegistry)
@@ -635,7 +662,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RegisterSimulationTypes
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2318
+    startLine: 2328
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -709,6 +736,12 @@ references:
   name: Init
   nameWithType: Statics.Init
   fullName: Quantum.Statics.Init
+- uid: Quantum.Statics.ReInit*
+  commentId: Overload:Quantum.Statics.ReInit
+  href: Quantum.Statics.html#Quantum_Statics_ReInit
+  name: ReInit
+  nameWithType: Statics.ReInit
+  fullName: Quantum.Statics.ReInit
 - uid: Quantum.Statics.RegisterSimulationTypesUser(Quantum.TypeRegistry)
   commentId: M:Quantum.Statics.RegisterSimulationTypesUser(Quantum.TypeRegistry)
   isExternal: true

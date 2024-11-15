@@ -8,7 +8,7 @@ items:
   - Quantum.HNSFStateAction.Copy(Quantum.HNSFStateAction)
   - Quantum.HNSFStateAction.Execute(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Photon.Deterministic.FP,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
   - Quantum.HNSFStateAction.Execute(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
-  - Quantum.HNSFStateAction.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  - Quantum.HNSFStateAction.Execute(Quantum.FrameThreadSafe@,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
   - Quantum.HNSFStateAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   - Quantum.HNSFStateAction.Label
   - Quantum.HNSFStateAction.actionDisabled
@@ -359,16 +359,16 @@ items:
       type: Quantum.HNSFStateAction
     content.vb: Public Overridable Sub Copy(target As HNSFStateAction)
   overload: Quantum.HNSFStateAction.Copy*
-- uid: Quantum.HNSFStateAction.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
-  commentId: M:Quantum.HNSFStateAction.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
-  id: Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+- uid: Quantum.HNSFStateAction.Execute(Quantum.FrameThreadSafe@,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  commentId: M:Quantum.HNSFStateAction.Execute(Quantum.FrameThreadSafe@,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
+  id: Execute(Quantum.FrameThreadSafe@,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})
   parent: Quantum.HNSFStateAction
   langs:
   - csharp
   - vb
-  name: Execute(FrameThreadSafe, EntityRef, HNSFStateAgentData*, ref HNSFStateContext, List<Type>, List<Type>)
-  nameWithType: HNSFStateAction.Execute(FrameThreadSafe, EntityRef, HNSFStateAgentData*, ref HNSFStateContext, List<Type>, List<Type>)
-  fullName: Quantum.HNSFStateAction.Execute(Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.HNSFStateAgentData*, ref Quantum.HNSFStateContext, System.Collections.Generic.List<System.Type>, System.Collections.Generic.List<System.Type>)
+  name: Execute(ref FrameThreadSafe, EntityRef, HNSFStateAgentData*, ref HNSFStateContext, List<Type>, List<Type>)
+  nameWithType: HNSFStateAction.Execute(ref FrameThreadSafe, EntityRef, HNSFStateAgentData*, ref HNSFStateContext, List<Type>, List<Type>)
+  fullName: Quantum.HNSFStateAction.Execute(ref Quantum.FrameThreadSafe, Quantum.EntityRef, Quantum.HNSFStateAgentData*, ref Quantum.HNSFStateContext, System.Collections.Generic.List<System.Type>, System.Collections.Generic.List<System.Type>)
   type: Method
   source:
     remote:
@@ -382,7 +382,7 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public bool Execute(FrameThreadSafe frame, EntityRef entity, HNSFStateAgentData* data, ref HNSFStateContext stateContext, List<Type> whitelist = null, List<Type> blacklist = null)
+    content: public bool Execute(ref FrameThreadSafe frame, EntityRef entity, HNSFStateAgentData* data, ref HNSFStateContext stateContext, List<Type> whitelist = null, List<Type> blacklist = null)
     parameters:
     - id: frame
       type: Quantum.FrameThreadSafe
@@ -1056,7 +1056,7 @@ references:
   fullName: Quantum.HNSFStateAction
 - uid: Quantum.HNSFStateAction.Execute*
   commentId: Overload:Quantum.HNSFStateAction.Execute
-  href: Quantum.HNSFStateAction.html#Quantum_HNSFStateAction_Execute_Quantum_FrameThreadSafe_Quantum_EntityRef_Quantum_HNSFStateAgentData__Quantum_HNSFStateContext__System_Collections_Generic_List_System_Type__System_Collections_Generic_List_System_Type__
+  href: Quantum.HNSFStateAction.html#Quantum_HNSFStateAction_Execute_Quantum_FrameThreadSafe__Quantum_EntityRef_Quantum_HNSFStateAgentData__Quantum_HNSFStateContext__System_Collections_Generic_List_System_Type__System_Collections_Generic_List_System_Type__
   name: Execute
   nameWithType: HNSFStateAction.Execute
   fullName: Quantum.HNSFStateAction.Execute

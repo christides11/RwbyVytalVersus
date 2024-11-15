@@ -5,13 +5,22 @@ items:
   id: UModFighterDefinition
   parent: Global
   children:
+  - Global.UModFighterDefinition.Aura
+  - Global.UModFighterDefinition.AuraGainPerFrame
+  - Global.UModFighterDefinition.Description
   - Global.UModFighterDefinition.GetCommandList
   - Global.UModFighterDefinition.GetFighter
   - Global.UModFighterDefinition.GetFighterQuantum
   - Global.UModFighterDefinition.GetHUDReferences
+  - Global.UModFighterDefinition.Health
+  - Global.UModFighterDefinition.Load(System.String)
   - Global.UModFighterDefinition.LoadAssets
+  - Global.UModFighterDefinition.Name
+  - Global.UModFighterDefinition.RegisterQuantumAsset
+  - Global.UModFighterDefinition.Selectable
   - Global.UModFighterDefinition.Unload
   - Global.UModFighterDefinition.UnloadAssets
+  - Global.UModFighterDefinition.UnregisterQuantumAsset
   langs:
   - csharp
   - vb
@@ -50,18 +59,9 @@ items:
   - Global.IContentDefinition
   - Global.IFighterDefinition
   inheritedMembers:
-  - Global.IFighterDefinition.Selectable
-  - Global.IFighterDefinition.Health
-  - Global.IFighterDefinition.Aura
-  - Global.IFighterDefinition.AuraGainPerFrame
   - Global.IContentDefinition.modDefinition
   - Global.IContentDefinition.ID
-  - Global.IContentDefinition.Name
-  - Global.IContentDefinition.Description
   - Global.IContentDefinition.Tags
-  - Global.IContentDefinition.Load(System.String)
-  - Global.IContentDefinition.RegisterQuantumAsset
-  - Global.IContentDefinition.UnregisterQuantumAsset
   attributes:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
@@ -73,6 +73,228 @@ items:
     - name: menuName
       type: System.String
       value: rwby/UMod/Content/Fighter Definition
+- uid: Global.UModFighterDefinition.Name
+  commentId: P:Global.UModFighterDefinition.Name
+  id: Name
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: UModFighterDefinition.Name
+  fullName: UModFighterDefinition.Name
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Name
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 12
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property Name As String
+  overridden: Global.IContentDefinition.Name
+  overload: Global.UModFighterDefinition.Name*
+- uid: Global.UModFighterDefinition.Description
+  commentId: P:Global.UModFighterDefinition.Description
+  id: Description
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: UModFighterDefinition.Description
+  fullName: UModFighterDefinition.Description
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Description
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 13
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override string Description { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property Description As String
+  overridden: Global.IContentDefinition.Description
+  overload: Global.UModFighterDefinition.Description*
+- uid: Global.UModFighterDefinition.Selectable
+  commentId: P:Global.UModFighterDefinition.Selectable
+  id: Selectable
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: Selectable
+  nameWithType: UModFighterDefinition.Selectable
+  fullName: UModFighterDefinition.Selectable
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Selectable
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 14
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override bool Selectable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property Selectable As Boolean
+  overridden: Global.IFighterDefinition.Selectable
+  overload: Global.UModFighterDefinition.Selectable*
+- uid: Global.UModFighterDefinition.Health
+  commentId: P:Global.UModFighterDefinition.Health
+  id: Health
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: Health
+  nameWithType: UModFighterDefinition.Health
+  fullName: UModFighterDefinition.Health
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Health
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 15
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override int Health { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overrides ReadOnly Property Health As Integer
+  overridden: Global.IFighterDefinition.Health
+  overload: Global.UModFighterDefinition.Health*
+- uid: Global.UModFighterDefinition.Aura
+  commentId: P:Global.UModFighterDefinition.Aura
+  id: Aura
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: Aura
+  nameWithType: UModFighterDefinition.Aura
+  fullName: UModFighterDefinition.Aura
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Aura
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 16
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override int Aura { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overrides ReadOnly Property Aura As Integer
+  overridden: Global.IFighterDefinition.Aura
+  overload: Global.UModFighterDefinition.Aura*
+- uid: Global.UModFighterDefinition.AuraGainPerFrame
+  commentId: P:Global.UModFighterDefinition.AuraGainPerFrame
+  id: AuraGainPerFrame
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: AuraGainPerFrame
+  nameWithType: UModFighterDefinition.AuraGainPerFrame
+  fullName: UModFighterDefinition.AuraGainPerFrame
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AuraGainPerFrame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 17
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override int AuraGainPerFrame { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overrides ReadOnly Property AuraGainPerFrame As Integer
+  overridden: Global.IFighterDefinition.AuraGainPerFrame
+  overload: Global.UModFighterDefinition.AuraGainPerFrame*
+- uid: Global.UModFighterDefinition.Load(System.String)
+  commentId: M:Global.UModFighterDefinition.Load(System.String)
+  id: Load(System.String)
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: Load(string)
+  nameWithType: UModFighterDefinition.Load(string)
+  fullName: UModFighterDefinition.Load(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Load
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 38
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override UniTask<bool> Load(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Overrides Function Load(id As String) As UniTask(Of Boolean)
+  overridden: Global.IContentDefinition.Load(System.String)
+  overload: Global.UModFighterDefinition.Load*
+  nameWithType.vb: UModFighterDefinition.Load(String)
+  fullName.vb: UModFighterDefinition.Load(String)
+  name.vb: Load(String)
 - uid: Global.UModFighterDefinition.LoadAssets
   commentId: M:Global.UModFighterDefinition.LoadAssets
   id: LoadAssets
@@ -91,7 +313,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadAssets
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
-    startLine: 14
+    startLine: 46
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -103,6 +325,34 @@ items:
     content.vb: Public Overrides Function LoadAssets() As UniTask(Of Boolean)
   overridden: Global.IContentDefinition.LoadAssets
   overload: Global.UModFighterDefinition.LoadAssets*
+- uid: Global.UModFighterDefinition.RegisterQuantumAsset
+  commentId: M:Global.UModFighterDefinition.RegisterQuantumAsset
+  id: RegisterQuantumAsset
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: RegisterQuantumAsset()
+  nameWithType: UModFighterDefinition.RegisterQuantumAsset()
+  fullName: UModFighterDefinition.RegisterQuantumAsset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RegisterQuantumAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 78
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void RegisterQuantumAsset()
+    content.vb: Public Overrides Sub RegisterQuantumAsset()
+  overridden: Global.IContentDefinition.RegisterQuantumAsset
+  overload: Global.UModFighterDefinition.RegisterQuantumAsset*
 - uid: Global.UModFighterDefinition.GetFighter
   commentId: M:Global.UModFighterDefinition.GetFighter
   id: GetFighter
@@ -121,7 +371,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetFighter
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
-    startLine: 24
+    startLine: 91
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -151,7 +401,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetFighterQuantum
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
-    startLine: 29
+    startLine: 104
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -181,7 +431,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHUDReferences
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
-    startLine: 34
+    startLine: 117
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -211,7 +461,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetCommandList
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
-    startLine: 39
+    startLine: 128
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -223,6 +473,34 @@ items:
     content.vb: Public Overrides Function GetCommandList() As BaseCommandListDefinition
   overridden: Global.IFighterDefinition.GetCommandList
   overload: Global.UModFighterDefinition.GetCommandList*
+- uid: Global.UModFighterDefinition.UnregisterQuantumAsset
+  commentId: M:Global.UModFighterDefinition.UnregisterQuantumAsset
+  id: UnregisterQuantumAsset
+  parent: Global.UModFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: UnregisterQuantumAsset()
+  nameWithType: UModFighterDefinition.UnregisterQuantumAsset()
+  fullName: UModFighterDefinition.UnregisterQuantumAsset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnregisterQuantumAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
+    startLine: 133
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void UnregisterQuantumAsset()
+    content.vb: Public Overrides Sub UnregisterQuantumAsset()
+  overridden: Global.IContentDefinition.UnregisterQuantumAsset
+  overload: Global.UModFighterDefinition.UnregisterQuantumAsset*
 - uid: Global.UModFighterDefinition.UnloadAssets
   commentId: M:Global.UModFighterDefinition.UnloadAssets
   id: UnloadAssets
@@ -241,7 +519,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnloadAssets
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
-    startLine: 44
+    startLine: 145
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -269,7 +547,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Unload
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs
-    startLine: 48
+    startLine: 153
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -318,34 +596,6 @@ references:
   name: IFighterDefinition
   nameWithType: IFighterDefinition
   fullName: IFighterDefinition
-- uid: Global.IFighterDefinition.Selectable
-  commentId: P:Global.IFighterDefinition.Selectable
-  parent: Global.IFighterDefinition
-  href: Global.IFighterDefinition.html#IFighterDefinition_Selectable
-  name: Selectable
-  nameWithType: IFighterDefinition.Selectable
-  fullName: IFighterDefinition.Selectable
-- uid: Global.IFighterDefinition.Health
-  commentId: P:Global.IFighterDefinition.Health
-  parent: Global.IFighterDefinition
-  href: Global.IFighterDefinition.html#IFighterDefinition_Health
-  name: Health
-  nameWithType: IFighterDefinition.Health
-  fullName: IFighterDefinition.Health
-- uid: Global.IFighterDefinition.Aura
-  commentId: P:Global.IFighterDefinition.Aura
-  parent: Global.IFighterDefinition
-  href: Global.IFighterDefinition.html#IFighterDefinition_Aura
-  name: Aura
-  nameWithType: IFighterDefinition.Aura
-  fullName: IFighterDefinition.Aura
-- uid: Global.IFighterDefinition.AuraGainPerFrame
-  commentId: P:Global.IFighterDefinition.AuraGainPerFrame
-  parent: Global.IFighterDefinition
-  href: Global.IFighterDefinition.html#IFighterDefinition_AuraGainPerFrame
-  name: AuraGainPerFrame
-  nameWithType: IFighterDefinition.AuraGainPerFrame
-  fullName: IFighterDefinition.AuraGainPerFrame
 - uid: Global.IContentDefinition.modDefinition
   commentId: P:Global.IContentDefinition.modDefinition
   parent: Global.IContentDefinition
@@ -360,20 +610,6 @@ references:
   name: ID
   nameWithType: IContentDefinition.ID
   fullName: IContentDefinition.ID
-- uid: Global.IContentDefinition.Name
-  commentId: P:Global.IContentDefinition.Name
-  parent: Global.IContentDefinition
-  href: Global.IContentDefinition.html#IContentDefinition_Name
-  name: Name
-  nameWithType: IContentDefinition.Name
-  fullName: IContentDefinition.Name
-- uid: Global.IContentDefinition.Description
-  commentId: P:Global.IContentDefinition.Description
-  parent: Global.IContentDefinition
-  href: Global.IContentDefinition.html#IContentDefinition_Description
-  name: Description
-  nameWithType: IContentDefinition.Description
-  fullName: IContentDefinition.Description
 - uid: Global.IContentDefinition.Tags
   commentId: P:Global.IContentDefinition.Tags
   parent: Global.IContentDefinition
@@ -381,6 +617,130 @@ references:
   name: Tags
   nameWithType: IContentDefinition.Tags
   fullName: IContentDefinition.Tags
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.IContentDefinition.Name
+  commentId: P:Global.IContentDefinition.Name
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Name
+  name: Name
+  nameWithType: IContentDefinition.Name
+  fullName: IContentDefinition.Name
+- uid: Global.UModFighterDefinition.Name*
+  commentId: Overload:Global.UModFighterDefinition.Name
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_Name
+  name: Name
+  nameWithType: UModFighterDefinition.Name
+  fullName: UModFighterDefinition.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.IContentDefinition.Description
+  commentId: P:Global.IContentDefinition.Description
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Description
+  name: Description
+  nameWithType: IContentDefinition.Description
+  fullName: IContentDefinition.Description
+- uid: Global.UModFighterDefinition.Description*
+  commentId: Overload:Global.UModFighterDefinition.Description
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_Description
+  name: Description
+  nameWithType: UModFighterDefinition.Description
+  fullName: UModFighterDefinition.Description
+- uid: Global.IFighterDefinition.Selectable
+  commentId: P:Global.IFighterDefinition.Selectable
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_Selectable
+  name: Selectable
+  nameWithType: IFighterDefinition.Selectable
+  fullName: IFighterDefinition.Selectable
+- uid: Global.UModFighterDefinition.Selectable*
+  commentId: Overload:Global.UModFighterDefinition.Selectable
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_Selectable
+  name: Selectable
+  nameWithType: UModFighterDefinition.Selectable
+  fullName: UModFighterDefinition.Selectable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Global.IFighterDefinition.Health
+  commentId: P:Global.IFighterDefinition.Health
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_Health
+  name: Health
+  nameWithType: IFighterDefinition.Health
+  fullName: IFighterDefinition.Health
+- uid: Global.UModFighterDefinition.Health*
+  commentId: Overload:Global.UModFighterDefinition.Health
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_Health
+  name: Health
+  nameWithType: UModFighterDefinition.Health
+  fullName: UModFighterDefinition.Health
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Global.IFighterDefinition.Aura
+  commentId: P:Global.IFighterDefinition.Aura
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_Aura
+  name: Aura
+  nameWithType: IFighterDefinition.Aura
+  fullName: IFighterDefinition.Aura
+- uid: Global.UModFighterDefinition.Aura*
+  commentId: Overload:Global.UModFighterDefinition.Aura
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_Aura
+  name: Aura
+  nameWithType: UModFighterDefinition.Aura
+  fullName: UModFighterDefinition.Aura
+- uid: Global.IFighterDefinition.AuraGainPerFrame
+  commentId: P:Global.IFighterDefinition.AuraGainPerFrame
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_AuraGainPerFrame
+  name: AuraGainPerFrame
+  nameWithType: IFighterDefinition.AuraGainPerFrame
+  fullName: IFighterDefinition.AuraGainPerFrame
+- uid: Global.UModFighterDefinition.AuraGainPerFrame*
+  commentId: Overload:Global.UModFighterDefinition.AuraGainPerFrame
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_AuraGainPerFrame
+  name: AuraGainPerFrame
+  nameWithType: UModFighterDefinition.AuraGainPerFrame
+  fullName: UModFighterDefinition.AuraGainPerFrame
 - uid: Global.IContentDefinition.Load(System.String)
   commentId: M:Global.IContentDefinition.Load(System.String)
   parent: Global.IContentDefinition
@@ -412,82 +772,12 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
-- uid: Global.IContentDefinition.RegisterQuantumAsset
-  commentId: M:Global.IContentDefinition.RegisterQuantumAsset
-  parent: Global.IContentDefinition
-  href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
-  name: RegisterQuantumAsset()
-  nameWithType: IContentDefinition.RegisterQuantumAsset()
-  fullName: IContentDefinition.RegisterQuantumAsset()
-  spec.csharp:
-  - uid: Global.IContentDefinition.RegisterQuantumAsset
-    name: RegisterQuantumAsset
-    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: Global.IContentDefinition.RegisterQuantumAsset
-    name: RegisterQuantumAsset
-    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
-  - name: (
-  - name: )
-- uid: Global.IContentDefinition.UnregisterQuantumAsset
-  commentId: M:Global.IContentDefinition.UnregisterQuantumAsset
-  parent: Global.IContentDefinition
-  href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
-  name: UnregisterQuantumAsset()
-  nameWithType: IContentDefinition.UnregisterQuantumAsset()
-  fullName: IContentDefinition.UnregisterQuantumAsset()
-  spec.csharp:
-  - uid: Global.IContentDefinition.UnregisterQuantumAsset
-    name: UnregisterQuantumAsset
-    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: Global.IContentDefinition.UnregisterQuantumAsset
-    name: UnregisterQuantumAsset
-    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
-  - name: (
-  - name: )
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
-- uid: Global.IContentDefinition.LoadAssets
-  commentId: M:Global.IContentDefinition.LoadAssets
-  parent: Global.IContentDefinition
-  href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
-  name: LoadAssets()
-  nameWithType: IContentDefinition.LoadAssets()
-  fullName: IContentDefinition.LoadAssets()
-  spec.csharp:
-  - uid: Global.IContentDefinition.LoadAssets
-    name: LoadAssets
-    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: Global.IContentDefinition.LoadAssets
-    name: LoadAssets
-    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
-  - name: (
-  - name: )
-- uid: Global.UModFighterDefinition.LoadAssets*
-  commentId: Overload:Global.UModFighterDefinition.LoadAssets
-  href: Global.UModFighterDefinition.html#UModFighterDefinition_LoadAssets
-  name: LoadAssets
-  nameWithType: UModFighterDefinition.LoadAssets
-  fullName: UModFighterDefinition.LoadAssets
+- uid: Global.UModFighterDefinition.Load*
+  commentId: Overload:Global.UModFighterDefinition.Load
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_Load_System_String_
+  name: Load
+  nameWithType: UModFighterDefinition.Load
+  fullName: UModFighterDefinition.Load
 - uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
   commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
   parent: Cysharp.Threading.Tasks
@@ -576,6 +866,56 @@ references:
   - uid: Cysharp.Threading.Tasks
     name: Tasks
     isExternal: true
+- uid: Global.IContentDefinition.LoadAssets
+  commentId: M:Global.IContentDefinition.LoadAssets
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  name: LoadAssets()
+  nameWithType: IContentDefinition.LoadAssets()
+  fullName: IContentDefinition.LoadAssets()
+  spec.csharp:
+  - uid: Global.IContentDefinition.LoadAssets
+    name: LoadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.LoadAssets
+    name: LoadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  - name: (
+  - name: )
+- uid: Global.UModFighterDefinition.LoadAssets*
+  commentId: Overload:Global.UModFighterDefinition.LoadAssets
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_LoadAssets
+  name: LoadAssets
+  nameWithType: UModFighterDefinition.LoadAssets
+  fullName: UModFighterDefinition.LoadAssets
+- uid: Global.IContentDefinition.RegisterQuantumAsset
+  commentId: M:Global.IContentDefinition.RegisterQuantumAsset
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  name: RegisterQuantumAsset()
+  nameWithType: IContentDefinition.RegisterQuantumAsset()
+  fullName: IContentDefinition.RegisterQuantumAsset()
+  spec.csharp:
+  - uid: Global.IContentDefinition.RegisterQuantumAsset
+    name: RegisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.RegisterQuantumAsset
+    name: RegisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  - name: (
+  - name: )
+- uid: Global.UModFighterDefinition.RegisterQuantumAsset*
+  commentId: Overload:Global.UModFighterDefinition.RegisterQuantumAsset
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_RegisterQuantumAsset
+  name: RegisterQuantumAsset
+  nameWithType: UModFighterDefinition.RegisterQuantumAsset
+  fullName: UModFighterDefinition.RegisterQuantumAsset
 - uid: Global.IFighterDefinition.GetFighter
   commentId: M:Global.IFighterDefinition.GetFighter
   parent: Global.IFighterDefinition
@@ -730,6 +1070,31 @@ references:
   name: rwby
   nameWithType: rwby
   fullName: rwby
+- uid: Global.IContentDefinition.UnregisterQuantumAsset
+  commentId: M:Global.IContentDefinition.UnregisterQuantumAsset
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  name: UnregisterQuantumAsset()
+  nameWithType: IContentDefinition.UnregisterQuantumAsset()
+  fullName: IContentDefinition.UnregisterQuantumAsset()
+  spec.csharp:
+  - uid: Global.IContentDefinition.UnregisterQuantumAsset
+    name: UnregisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.UnregisterQuantumAsset
+    name: UnregisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  - name: (
+  - name: )
+- uid: Global.UModFighterDefinition.UnregisterQuantumAsset*
+  commentId: Overload:Global.UModFighterDefinition.UnregisterQuantumAsset
+  href: Global.UModFighterDefinition.html#UModFighterDefinition_UnregisterQuantumAsset
+  name: UnregisterQuantumAsset
+  nameWithType: UModFighterDefinition.UnregisterQuantumAsset
+  fullName: UModFighterDefinition.UnregisterQuantumAsset
 - uid: Global.IContentDefinition.UnloadAssets
   commentId: M:Global.IContentDefinition.UnloadAssets
   parent: Global.IContentDefinition

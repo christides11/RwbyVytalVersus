@@ -11,6 +11,7 @@ items:
   - Global.ModAssetSoftReference.GetHashCode
   - Global.ModAssetSoftReference.ToString
   - Global.ModAssetSoftReference.assetID
+  - Global.ModAssetSoftReference.isFolder
   - Global.ModAssetSoftReference.mod
   - Global.ModAssetSoftReference.op_Equality(ModAssetSoftReference,ModAssetSoftReference)
   - Global.ModAssetSoftReference.op_Inequality(ModAssetSoftReference,ModAssetSoftReference)
@@ -28,6 +29,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ModAssetSoftReference
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
+    startLine: 2
   assemblies:
   - rwby
   namespace: Global
@@ -62,7 +64,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: mod
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
-    startLine: 3
+    startLine: 5
   assemblies:
   - rwby
   namespace: Global
@@ -89,7 +91,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: assetID
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - rwby
   namespace: Global
@@ -98,6 +100,33 @@ items:
     return:
       type: System.String
     content.vb: Public assetID As String
+- uid: Global.ModAssetSoftReference.isFolder
+  commentId: F:Global.ModAssetSoftReference.isFolder
+  id: isFolder
+  parent: Global.ModAssetSoftReference
+  langs:
+  - csharp
+  - vb
+  name: isFolder
+  nameWithType: ModAssetSoftReference.isFolder
+  fullName: ModAssetSoftReference.isFolder
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: isFolder
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
+    startLine: 7
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool isFolder
+    return:
+      type: System.Boolean
+    content.vb: Public isFolder As Boolean
 - uid: Global.ModAssetSoftReference.#ctor(IFighterDefinition)
   commentId: M:Global.ModAssetSoftReference.#ctor(IFighterDefinition)
   id: '#ctor(IFighterDefinition)'
@@ -116,7 +145,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - rwby
   namespace: Global
@@ -148,7 +177,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ToString
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
-    startLine: 12
+    startLine: 16
   assemblies:
   - rwby
   namespace: Global
@@ -178,7 +207,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Equals
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - rwby
   namespace: Global
@@ -210,7 +239,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Equals
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - rwby
   namespace: Global
@@ -246,7 +275,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHashCode
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
-    startLine: 27
+    startLine: 31
   assemblies:
   - rwby
   namespace: Global
@@ -276,7 +305,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: op_Equality
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
-    startLine: 32
+    startLine: 36
   assemblies:
   - rwby
   namespace: Global
@@ -312,7 +341,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: op_Inequality
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/ModAssetSoftReference.cs
-    startLine: 37
+    startLine: 41
   assemblies:
   - rwby
   namespace: Global
@@ -350,6 +379,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: Global.ModAssetSoftReference.#ctor*
   commentId: Overload:Global.ModAssetSoftReference.#ctor
   href: Global.ModAssetSoftReference.html#ModAssetSoftReference__ctor_IFighterDefinition_
@@ -413,17 +453,6 @@ references:
   name: ModAssetSoftReference
   nameWithType: ModAssetSoftReference
   fullName: ModAssetSoftReference
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: System.ValueType.Equals(System.Object)
   commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType

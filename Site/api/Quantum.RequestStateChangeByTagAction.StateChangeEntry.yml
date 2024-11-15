@@ -94,10 +94,10 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public AssetRef<HNSFStateDecision> condition
+    content: public AssetRef<HNSFStateDecision>[] condition
     return:
-      type: Quantum.AssetRef{Quantum.HNSFStateDecision}
-    content.vb: Public condition As AssetRef(Of HNSFStateDecision)
+      type: Quantum.AssetRef{Quantum.HNSFStateDecision}[]
+    content.vb: Public condition As AssetRef(Of HNSFStateDecision)()
 - uid: Quantum.RequestStateChangeByTagAction.StateChangeEntry.toStateTag
   commentId: F:Quantum.RequestStateChangeByTagAction.StateChangeEntry.toStateTag
   id: toStateTag
@@ -242,17 +242,15 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: Quantum.AssetRef{Quantum.HNSFStateDecision}
-  commentId: T:Quantum.AssetRef{Quantum.HNSFStateDecision}
-  parent: Quantum
-  definition: Quantum.AssetRef`1
+- uid: Quantum.AssetRef{Quantum.HNSFStateDecision}[]
+  isExternal: true
   href: Quantum.HNSFStateDecision.html
-  name: AssetRef<HNSFStateDecision>
-  nameWithType: AssetRef<HNSFStateDecision>
-  fullName: Quantum.AssetRef<Quantum.HNSFStateDecision>
-  nameWithType.vb: AssetRef(Of HNSFStateDecision)
-  fullName.vb: Quantum.AssetRef(Of Quantum.HNSFStateDecision)
-  name.vb: AssetRef(Of HNSFStateDecision)
+  name: AssetRef<HNSFStateDecision>[]
+  nameWithType: AssetRef<HNSFStateDecision>[]
+  fullName: Quantum.AssetRef<Quantum.HNSFStateDecision>[]
+  nameWithType.vb: AssetRef(Of HNSFStateDecision)()
+  fullName.vb: Quantum.AssetRef(Of Quantum.HNSFStateDecision)()
+  name.vb: AssetRef(Of HNSFStateDecision)()
   spec.csharp:
   - uid: Quantum.AssetRef`1
     name: AssetRef
@@ -262,6 +260,8 @@ references:
     name: HNSFStateDecision
     href: Quantum.HNSFStateDecision.html
   - name: '>'
+  - name: '['
+  - name: ']'
   spec.vb:
   - uid: Quantum.AssetRef`1
     name: AssetRef
@@ -273,30 +273,7 @@ references:
     name: HNSFStateDecision
     href: Quantum.HNSFStateDecision.html
   - name: )
-- uid: Quantum.AssetRef`1
-  commentId: T:Quantum.AssetRef`1
-  isExternal: true
-  name: AssetRef<T>
-  nameWithType: AssetRef<T>
-  fullName: Quantum.AssetRef<T>
-  nameWithType.vb: AssetRef(Of T)
-  fullName.vb: Quantum.AssetRef(Of T)
-  name.vb: AssetRef(Of T)
-  spec.csharp:
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
   - name: (
-  - name: Of
-  - name: " "
-  - name: T
   - name: )
 - uid: Quantum.AssetRef{Quantum.Tag}
   commentId: T:Quantum.AssetRef{Quantum.Tag}
@@ -328,6 +305,31 @@ references:
   - uid: Quantum.Tag
     name: Tag
     href: Quantum.Tag.html
+  - name: )
+- uid: Quantum.AssetRef`1
+  commentId: T:Quantum.AssetRef`1
+  isExternal: true
+  name: AssetRef<T>
+  nameWithType: AssetRef<T>
+  fullName: Quantum.AssetRef<T>
+  nameWithType.vb: AssetRef(Of T)
+  fullName.vb: Quantum.AssetRef(Of T)
+  name.vb: AssetRef(Of T)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
   - name: )
 - uid: System.Int32
   commentId: T:System.Int32

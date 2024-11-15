@@ -1,0 +1,619 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.UModSongDefinition
+  commentId: T:rwby.UModSongDefinition
+  id: UModSongDefinition
+  parent: rwby
+  children:
+  - rwby.UModSongDefinition.Description
+  - rwby.UModSongDefinition.GetSong
+  - rwby.UModSongDefinition.LoadAssets
+  - rwby.UModSongDefinition.Name
+  - rwby.UModSongDefinition.Unload
+  - rwby.UModSongDefinition.UnloadAssets
+  langs:
+  - csharp
+  - vb
+  name: UModSongDefinition
+  nameWithType: UModSongDefinition
+  fullName: rwby.UModSongDefinition
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UModSongDefinition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+    startLine: 6
+  assemblies:
+  - rwby.modding.umod
+  namespace: rwby
+  syntax:
+    content: >-
+      [CreateAssetMenu(menuName = "rwby/UMod/Content/Song Definition")]
+
+      public class UModSongDefinition : BaseSongDefinition
+    content.vb: >-
+      <CreateAssetMenu(menuName:="rwby/UMod/Content/Song Definition")>
+
+      Public Class UModSongDefinition Inherits BaseSongDefinition
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Global.IContentDefinition
+  - rwby.BaseSongDefinition
+  inheritedMembers:
+  - Global.IContentDefinition.modDefinition
+  - Global.IContentDefinition.ID
+  - Global.IContentDefinition.Tags
+  - Global.IContentDefinition.Load(System.String)
+  - Global.IContentDefinition.RegisterQuantumAsset
+  - Global.IContentDefinition.UnregisterQuantumAsset
+  attributes:
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: menuName
+      type: System.String
+      value: rwby/UMod/Content/Song Definition
+- uid: rwby.UModSongDefinition.Name
+  commentId: P:rwby.UModSongDefinition.Name
+  id: Name
+  parent: rwby.UModSongDefinition
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: UModSongDefinition.Name
+  fullName: rwby.UModSongDefinition.Name
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Name
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+    startLine: 9
+  assemblies:
+  - rwby.modding.umod
+  namespace: rwby
+  example: []
+  syntax:
+    content: public override string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property Name As String
+  overridden: Global.IContentDefinition.Name
+  overload: rwby.UModSongDefinition.Name*
+- uid: rwby.UModSongDefinition.Description
+  commentId: P:rwby.UModSongDefinition.Description
+  id: Description
+  parent: rwby.UModSongDefinition
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: UModSongDefinition.Description
+  fullName: rwby.UModSongDefinition.Description
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Description
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+    startLine: 10
+  assemblies:
+  - rwby.modding.umod
+  namespace: rwby
+  example: []
+  syntax:
+    content: public override string Description { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property Description As String
+  overridden: Global.IContentDefinition.Description
+  overload: rwby.UModSongDefinition.Description*
+- uid: rwby.UModSongDefinition.LoadAssets
+  commentId: M:rwby.UModSongDefinition.LoadAssets
+  id: LoadAssets
+  parent: rwby.UModSongDefinition
+  langs:
+  - csharp
+  - vb
+  name: LoadAssets()
+  nameWithType: UModSongDefinition.LoadAssets()
+  fullName: rwby.UModSongDefinition.LoadAssets()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadAssets
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+    startLine: 18
+  assemblies:
+  - rwby.modding.umod
+  namespace: rwby
+  example: []
+  syntax:
+    content: public override UniTask<bool> LoadAssets()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Overrides Function LoadAssets() As UniTask(Of Boolean)
+  overridden: Global.IContentDefinition.LoadAssets
+  overload: rwby.UModSongDefinition.LoadAssets*
+- uid: rwby.UModSongDefinition.GetSong
+  commentId: M:rwby.UModSongDefinition.GetSong
+  id: GetSong
+  parent: rwby.UModSongDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetSong()
+  nameWithType: UModSongDefinition.GetSong()
+  fullName: rwby.UModSongDefinition.GetSong()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetSong
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+    startLine: 37
+  assemblies:
+  - rwby.modding.umod
+  namespace: rwby
+  example: []
+  syntax:
+    content: public override SongAudio GetSong()
+    return:
+      type: rwby.SongAudio
+    content.vb: Public Overrides Function GetSong() As SongAudio
+  overridden: rwby.BaseSongDefinition.GetSong
+  overload: rwby.UModSongDefinition.GetSong*
+- uid: rwby.UModSongDefinition.UnloadAssets
+  commentId: M:rwby.UModSongDefinition.UnloadAssets
+  id: UnloadAssets
+  parent: rwby.UModSongDefinition
+  langs:
+  - csharp
+  - vb
+  name: UnloadAssets()
+  nameWithType: UModSongDefinition.UnloadAssets()
+  fullName: rwby.UModSongDefinition.UnloadAssets()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadAssets
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+    startLine: 42
+  assemblies:
+  - rwby.modding.umod
+  namespace: rwby
+  example: []
+  syntax:
+    content: public override void UnloadAssets()
+    content.vb: Public Overrides Sub UnloadAssets()
+  overridden: Global.IContentDefinition.UnloadAssets
+  overload: rwby.UModSongDefinition.UnloadAssets*
+- uid: rwby.UModSongDefinition.Unload
+  commentId: M:rwby.UModSongDefinition.Unload
+  id: Unload
+  parent: rwby.UModSongDefinition
+  langs:
+  - csharp
+  - vb
+  name: Unload()
+  nameWithType: UModSongDefinition.Unload()
+  fullName: rwby.UModSongDefinition.Unload()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Unload
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs
+    startLine: 47
+  assemblies:
+  - rwby.modding.umod
+  namespace: rwby
+  example: []
+  syntax:
+    content: public override void Unload()
+    content.vb: Public Overrides Sub Unload()
+  overridden: Global.IContentDefinition.Unload
+  overload: rwby.UModSongDefinition.Unload*
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Global.IContentDefinition
+  commentId: T:Global.IContentDefinition
+  href: IContentDefinition.html
+  name: IContentDefinition
+  nameWithType: IContentDefinition
+  fullName: IContentDefinition
+- uid: rwby.BaseSongDefinition
+  commentId: T:rwby.BaseSongDefinition
+  parent: rwby
+  href: rwby.BaseSongDefinition.html
+  name: BaseSongDefinition
+  nameWithType: BaseSongDefinition
+  fullName: rwby.BaseSongDefinition
+- uid: Global.IContentDefinition.modDefinition
+  commentId: P:Global.IContentDefinition.modDefinition
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_modDefinition
+  name: modDefinition
+  nameWithType: IContentDefinition.modDefinition
+  fullName: IContentDefinition.modDefinition
+- uid: Global.IContentDefinition.ID
+  commentId: P:Global.IContentDefinition.ID
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_ID
+  name: ID
+  nameWithType: IContentDefinition.ID
+  fullName: IContentDefinition.ID
+- uid: Global.IContentDefinition.Tags
+  commentId: P:Global.IContentDefinition.Tags
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Tags
+  name: Tags
+  nameWithType: IContentDefinition.Tags
+  fullName: IContentDefinition.Tags
+- uid: Global.IContentDefinition.Load(System.String)
+  commentId: M:Global.IContentDefinition.Load(System.String)
+  parent: Global.IContentDefinition
+  isExternal: true
+  href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  name: Load(string)
+  nameWithType: IContentDefinition.Load(string)
+  fullName: IContentDefinition.Load(string)
+  nameWithType.vb: IContentDefinition.Load(String)
+  fullName.vb: IContentDefinition.Load(String)
+  name.vb: Load(String)
+  spec.csharp:
+  - uid: Global.IContentDefinition.Load(System.String)
+    name: Load
+    href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.Load(System.String)
+    name: Load
+    href: Global.IContentDefinition.html#IContentDefinition_Load_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Global.IContentDefinition.RegisterQuantumAsset
+  commentId: M:Global.IContentDefinition.RegisterQuantumAsset
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  name: RegisterQuantumAsset()
+  nameWithType: IContentDefinition.RegisterQuantumAsset()
+  fullName: IContentDefinition.RegisterQuantumAsset()
+  spec.csharp:
+  - uid: Global.IContentDefinition.RegisterQuantumAsset
+    name: RegisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.RegisterQuantumAsset
+    name: RegisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_RegisterQuantumAsset
+  - name: (
+  - name: )
+- uid: Global.IContentDefinition.UnregisterQuantumAsset
+  commentId: M:Global.IContentDefinition.UnregisterQuantumAsset
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  name: UnregisterQuantumAsset()
+  nameWithType: IContentDefinition.UnregisterQuantumAsset()
+  fullName: IContentDefinition.UnregisterQuantumAsset()
+  spec.csharp:
+  - uid: Global.IContentDefinition.UnregisterQuantumAsset
+    name: UnregisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.UnregisterQuantumAsset
+    name: UnregisterQuantumAsset
+    href: Global.IContentDefinition.html#IContentDefinition_UnregisterQuantumAsset
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.IContentDefinition.Name
+  commentId: P:Global.IContentDefinition.Name
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Name
+  name: Name
+  nameWithType: IContentDefinition.Name
+  fullName: IContentDefinition.Name
+- uid: rwby.UModSongDefinition.Name*
+  commentId: Overload:rwby.UModSongDefinition.Name
+  href: rwby.UModSongDefinition.html#rwby_UModSongDefinition_Name
+  name: Name
+  nameWithType: UModSongDefinition.Name
+  fullName: rwby.UModSongDefinition.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.IContentDefinition.Description
+  commentId: P:Global.IContentDefinition.Description
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Description
+  name: Description
+  nameWithType: IContentDefinition.Description
+  fullName: IContentDefinition.Description
+- uid: rwby.UModSongDefinition.Description*
+  commentId: Overload:rwby.UModSongDefinition.Description
+  href: rwby.UModSongDefinition.html#rwby_UModSongDefinition_Description
+  name: Description
+  nameWithType: UModSongDefinition.Description
+  fullName: rwby.UModSongDefinition.Description
+- uid: Global.IContentDefinition.LoadAssets
+  commentId: M:Global.IContentDefinition.LoadAssets
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  name: LoadAssets()
+  nameWithType: IContentDefinition.LoadAssets()
+  fullName: IContentDefinition.LoadAssets()
+  spec.csharp:
+  - uid: Global.IContentDefinition.LoadAssets
+    name: LoadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.LoadAssets
+    name: LoadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_LoadAssets
+  - name: (
+  - name: )
+- uid: rwby.UModSongDefinition.LoadAssets*
+  commentId: Overload:rwby.UModSongDefinition.LoadAssets
+  href: rwby.UModSongDefinition.html#rwby_UModSongDefinition_LoadAssets
+  name: LoadAssets
+  nameWithType: UModSongDefinition.LoadAssets
+  fullName: rwby.UModSongDefinition.LoadAssets
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: rwby.BaseSongDefinition.GetSong
+  commentId: M:rwby.BaseSongDefinition.GetSong
+  parent: rwby.BaseSongDefinition
+  href: rwby.BaseSongDefinition.html#rwby_BaseSongDefinition_GetSong
+  name: GetSong()
+  nameWithType: BaseSongDefinition.GetSong()
+  fullName: rwby.BaseSongDefinition.GetSong()
+  spec.csharp:
+  - uid: rwby.BaseSongDefinition.GetSong
+    name: GetSong
+    href: rwby.BaseSongDefinition.html#rwby_BaseSongDefinition_GetSong
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.BaseSongDefinition.GetSong
+    name: GetSong
+    href: rwby.BaseSongDefinition.html#rwby_BaseSongDefinition_GetSong
+  - name: (
+  - name: )
+- uid: rwby.UModSongDefinition.GetSong*
+  commentId: Overload:rwby.UModSongDefinition.GetSong
+  href: rwby.UModSongDefinition.html#rwby_UModSongDefinition_GetSong
+  name: GetSong
+  nameWithType: UModSongDefinition.GetSong
+  fullName: rwby.UModSongDefinition.GetSong
+- uid: rwby.SongAudio
+  commentId: T:rwby.SongAudio
+  parent: rwby
+  href: rwby.SongAudio.html
+  name: SongAudio
+  nameWithType: SongAudio
+  fullName: rwby.SongAudio
+- uid: Global.IContentDefinition.UnloadAssets
+  commentId: M:Global.IContentDefinition.UnloadAssets
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  name: UnloadAssets()
+  nameWithType: IContentDefinition.UnloadAssets()
+  fullName: IContentDefinition.UnloadAssets()
+  spec.csharp:
+  - uid: Global.IContentDefinition.UnloadAssets
+    name: UnloadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.UnloadAssets
+    name: UnloadAssets
+    href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
+  - name: (
+  - name: )
+- uid: rwby.UModSongDefinition.UnloadAssets*
+  commentId: Overload:rwby.UModSongDefinition.UnloadAssets
+  href: rwby.UModSongDefinition.html#rwby_UModSongDefinition_UnloadAssets
+  name: UnloadAssets
+  nameWithType: UModSongDefinition.UnloadAssets
+  fullName: rwby.UModSongDefinition.UnloadAssets
+- uid: Global.IContentDefinition.Unload
+  commentId: M:Global.IContentDefinition.Unload
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_Unload
+  name: Unload()
+  nameWithType: IContentDefinition.Unload()
+  fullName: IContentDefinition.Unload()
+  spec.csharp:
+  - uid: Global.IContentDefinition.Unload
+    name: Unload
+    href: Global.IContentDefinition.html#IContentDefinition_Unload
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.Unload
+    name: Unload
+    href: Global.IContentDefinition.html#IContentDefinition_Unload
+  - name: (
+  - name: )
+- uid: rwby.UModSongDefinition.Unload*
+  commentId: Overload:rwby.UModSongDefinition.Unload
+  href: rwby.UModSongDefinition.html#rwby_UModSongDefinition_Unload
+  name: Unload
+  nameWithType: UModSongDefinition.Unload
+  fullName: rwby.UModSongDefinition.Unload
