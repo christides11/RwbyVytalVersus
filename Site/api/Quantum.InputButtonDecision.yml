@@ -6,6 +6,7 @@ items:
   parent: Quantum
   children:
   - Quantum.InputButtonDecision.Decide(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
+  - Quantum.InputButtonDecision.allowIgnoredButtons
   - Quantum.InputButtonDecision.buffer
   - Quantum.InputButtonDecision.button
   - Quantum.InputButtonDecision.buttonState
@@ -224,6 +225,33 @@ items:
     return:
       type: Quantum.ButtonDataCheckType
     content.vb: Public checkType As ButtonDataCheckType
+- uid: Quantum.InputButtonDecision.allowIgnoredButtons
+  commentId: F:Quantum.InputButtonDecision.allowIgnoredButtons
+  id: allowIgnoredButtons
+  parent: Quantum.InputButtonDecision
+  langs:
+  - csharp
+  - vb
+  name: allowIgnoredButtons
+  nameWithType: InputButtonDecision.allowIgnoredButtons
+  fullName: Quantum.InputButtonDecision.allowIgnoredButtons
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SDecisions/Input/InputButtonDecision.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: allowIgnoredButtons
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SDecisions/Input/InputButtonDecision.cs
+    startLine: 19
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public bool allowIgnoredButtons
+    return:
+      type: System.Boolean
+    content.vb: Public allowIgnoredButtons As Boolean
 - uid: Quantum.InputButtonDecision.Decide(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
   commentId: M:Quantum.InputButtonDecision.Decide(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
   id: Decide(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -242,7 +270,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Decide
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SDecisions/Input/InputButtonDecision.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Quantum.Simulation
   namespace: Quantum

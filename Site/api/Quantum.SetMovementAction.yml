@@ -159,10 +159,10 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public FP speed
+    content: public HNSFParamFP speed
     return:
-      type: Photon.Deterministic.FP
-    content.vb: Public speed As FP
+      type: Quantum.HNSFParamFP
+    content.vb: Public speed As HNSFParamFP
 - uid: Quantum.SetMovementAction.normalizeInput
   commentId: F:Quantum.SetMovementAction.normalizeInput
   id: normalizeInput
@@ -1088,35 +1088,13 @@ references:
     href: Quantum.SetMovementAction.InputSourceType.html
   - name: (
   - name: )
-- uid: Photon.Deterministic.FP
-  commentId: T:Photon.Deterministic.FP
-  parent: Photon.Deterministic
-  isExternal: true
-  name: FP
-  nameWithType: FP
-  fullName: Photon.Deterministic.FP
-- uid: Photon.Deterministic
-  commentId: N:Photon.Deterministic
-  isExternal: true
-  name: Photon.Deterministic
-  nameWithType: Photon.Deterministic
-  fullName: Photon.Deterministic
-  spec.csharp:
-  - uid: Photon
-    name: Photon
-    isExternal: true
-  - name: .
-  - uid: Photon.Deterministic
-    name: Deterministic
-    isExternal: true
-  spec.vb:
-  - uid: Photon
-    name: Photon
-    isExternal: true
-  - name: .
-  - uid: Photon.Deterministic
-    name: Deterministic
-    isExternal: true
+- uid: Quantum.HNSFParamFP
+  commentId: T:Quantum.HNSFParamFP
+  parent: Quantum
+  href: Quantum.HNSFParamFP.html
+  name: HNSFParamFP
+  nameWithType: HNSFParamFP
+  fullName: Quantum.HNSFParamFP
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -1227,6 +1205,13 @@ references:
   name: EntityRef
   nameWithType: EntityRef
   fullName: Quantum.EntityRef
+- uid: Photon.Deterministic.FP
+  commentId: T:Photon.Deterministic.FP
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FP
+  nameWithType: FP
+  fullName: Photon.Deterministic.FP
 - uid: Quantum.HNSFStateContext
   commentId: T:Quantum.HNSFStateContext
   parent: Quantum
@@ -1234,3 +1219,25 @@ references:
   name: HNSFStateContext
   nameWithType: HNSFStateContext
   fullName: Quantum.HNSFStateContext
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true

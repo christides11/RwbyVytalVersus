@@ -8,6 +8,7 @@ items:
   - Quantum.ApplyTractionAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   - Quantum.ApplyTractionAction.modifierType
   - Quantum.ApplyTractionAction.traction
+  - Quantum.ApplyTractionAction.tractionMulti
   - Quantum.ApplyTractionAction.tractionType
   langs:
   - csharp
@@ -160,6 +161,33 @@ items:
     return:
       type: Quantum.HNSFParamFP
     content.vb: Public traction As HNSFParamFP
+- uid: Quantum.ApplyTractionAction.tractionMulti
+  commentId: F:Quantum.ApplyTractionAction.tractionMulti
+  id: tractionMulti
+  parent: Quantum.ApplyTractionAction
+  langs:
+  - csharp
+  - vb
+  name: tractionMulti
+  nameWithType: ApplyTractionAction.tractionMulti
+  fullName: Quantum.ApplyTractionAction.tractionMulti
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyTractionAction.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tractionMulti
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyTractionAction.cs
+    startLine: 25
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public FP tractionMulti
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: Public tractionMulti As FP
 - uid: Quantum.ApplyTractionAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   commentId: M:Quantum.ApplyTractionAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   id: ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
@@ -178,7 +206,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ExecuteAction
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyTractionAction.cs
-    startLine: 26
+    startLine: 27
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1013,6 +1041,35 @@ references:
   name: HNSFParamFP
   nameWithType: HNSFParamFP
   fullName: Quantum.HNSFParamFP
+- uid: Photon.Deterministic.FP
+  commentId: T:Photon.Deterministic.FP
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FP
+  nameWithType: FP
+  fullName: Photon.Deterministic.FP
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
 - uid: Quantum.HNSFStateAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   commentId: M:Quantum.HNSFStateAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   parent: Quantum.HNSFStateAction
@@ -1094,13 +1151,6 @@ references:
   name: EntityRef
   nameWithType: EntityRef
   fullName: Quantum.EntityRef
-- uid: Photon.Deterministic.FP
-  commentId: T:Photon.Deterministic.FP
-  parent: Photon.Deterministic
-  isExternal: true
-  name: FP
-  nameWithType: FP
-  fullName: Photon.Deterministic.FP
 - uid: Quantum.HNSFStateContext
   commentId: T:Quantum.HNSFStateContext
   parent: Quantum
@@ -1119,25 +1169,3 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: Photon.Deterministic
-  commentId: N:Photon.Deterministic
-  isExternal: true
-  name: Photon.Deterministic
-  nameWithType: Photon.Deterministic
-  fullName: Photon.Deterministic
-  spec.csharp:
-  - uid: Photon
-    name: Photon
-    isExternal: true
-  - name: .
-  - uid: Photon.Deterministic
-    name: Deterministic
-    isExternal: true
-  spec.vb:
-  - uid: Photon
-    name: Photon
-    isExternal: true
-  - name: .
-  - uid: Photon.Deterministic
-    name: Deterministic
-    isExternal: true

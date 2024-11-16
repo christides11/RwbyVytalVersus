@@ -1,31 +1,26 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Quantum.ApplyGravityAction
-  commentId: T:Quantum.ApplyGravityAction
-  id: ApplyGravityAction
+- uid: Quantum.ClearInputFromBufferAction
+  commentId: T:Quantum.ClearInputFromBufferAction
+  id: ClearInputFromBufferAction
   parent: Quantum
   children:
-  - Quantum.ApplyGravityAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
-  - Quantum.ApplyGravityAction.applyCurve
-  - Quantum.ApplyGravityAction.gravity
-  - Quantum.ApplyGravityAction.gravityCurve
-  - Quantum.ApplyGravityAction.gravityMultiplier
-  - Quantum.ApplyGravityAction.maxFallSpeed
-  - Quantum.ApplyGravityAction.maxFallSpeedMultiplier
+  - Quantum.ClearInputFromBufferAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
+  - Quantum.ClearInputFromBufferAction.buttonsToDisable
   langs:
   - csharp
   - vb
-  name: ApplyGravityAction
-  nameWithType: ApplyGravityAction
-  fullName: Quantum.ApplyGravityAction
+  name: ClearInputFromBufferAction
+  nameWithType: ClearInputFromBufferAction
+  fullName: Quantum.ClearInputFromBufferAction
   type: Class
   source:
     remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Input/ClearInputFromBufferAction.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: ApplyGravityAction
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
+    id: ClearInputFromBufferAction
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Input/ClearInputFromBufferAction.cs
     startLine: 5
   assemblies:
   - Quantum.Simulation
@@ -34,15 +29,11 @@ items:
     content: >-
       [Serializable]
 
-      [AddTypeMenu("Fighter/Movement/Apply Gravity", 0)]
-
-      public class ApplyGravityAction : HNSFStateAction
+      public class ClearInputFromBufferAction : HNSFStateAction
     content.vb: >-
       <Serializable>
 
-      <AddTypeMenu("Fighter/Movement/Apply Gravity", 0)>
-
-      Public Class ApplyGravityAction Inherits HNSFStateAction
+      Public Class ClearInputFromBufferAction Inherits HNSFStateAction
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -75,194 +66,52 @@ items:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
     arguments: []
-  - type: Global.AddTypeMenuAttribute
-    ctor: Global.AddTypeMenuAttribute.#ctor(System.String,System.Int32)
-    arguments:
-    - type: System.String
-      value: Fighter/Movement/Apply Gravity
-    - type: System.Int32
-      value: 0
-- uid: Quantum.ApplyGravityAction.gravity
-  commentId: F:Quantum.ApplyGravityAction.gravity
-  id: gravity
-  parent: Quantum.ApplyGravityAction
+- uid: Quantum.ClearInputFromBufferAction.buttonsToDisable
+  commentId: F:Quantum.ClearInputFromBufferAction.buttonsToDisable
+  id: buttonsToDisable
+  parent: Quantum.ClearInputFromBufferAction
   langs:
   - csharp
   - vb
-  name: gravity
-  nameWithType: ApplyGravityAction.gravity
-  fullName: Quantum.ApplyGravityAction.gravity
+  name: buttonsToDisable
+  nameWithType: ClearInputFromBufferAction.buttonsToDisable
+  fullName: Quantum.ClearInputFromBufferAction.buttonsToDisable
   type: Field
   source:
     remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Input/ClearInputFromBufferAction.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: gravity
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-    startLine: 10
+    id: buttonsToDisable
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Input/ClearInputFromBufferAction.cs
+    startLine: 8
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public HNSFParamFP gravity
+    content: public PlayerInputButtonType buttonsToDisable
     return:
-      type: Quantum.HNSFParamFP
-    content.vb: Public gravity As HNSFParamFP
-- uid: Quantum.ApplyGravityAction.gravityMultiplier
-  commentId: F:Quantum.ApplyGravityAction.gravityMultiplier
-  id: gravityMultiplier
-  parent: Quantum.ApplyGravityAction
-  langs:
-  - csharp
-  - vb
-  name: gravityMultiplier
-  nameWithType: ApplyGravityAction.gravityMultiplier
-  fullName: Quantum.ApplyGravityAction.gravityMultiplier
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: gravityMultiplier
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-    startLine: 11
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public HNSFParamFP gravityMultiplier
-    return:
-      type: Quantum.HNSFParamFP
-    content.vb: Public gravityMultiplier As HNSFParamFP
-- uid: Quantum.ApplyGravityAction.maxFallSpeed
-  commentId: F:Quantum.ApplyGravityAction.maxFallSpeed
-  id: maxFallSpeed
-  parent: Quantum.ApplyGravityAction
-  langs:
-  - csharp
-  - vb
-  name: maxFallSpeed
-  nameWithType: ApplyGravityAction.maxFallSpeed
-  fullName: Quantum.ApplyGravityAction.maxFallSpeed
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: maxFallSpeed
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-    startLine: 12
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public HNSFParamFP maxFallSpeed
-    return:
-      type: Quantum.HNSFParamFP
-    content.vb: Public maxFallSpeed As HNSFParamFP
-- uid: Quantum.ApplyGravityAction.maxFallSpeedMultiplier
-  commentId: F:Quantum.ApplyGravityAction.maxFallSpeedMultiplier
-  id: maxFallSpeedMultiplier
-  parent: Quantum.ApplyGravityAction
-  langs:
-  - csharp
-  - vb
-  name: maxFallSpeedMultiplier
-  nameWithType: ApplyGravityAction.maxFallSpeedMultiplier
-  fullName: Quantum.ApplyGravityAction.maxFallSpeedMultiplier
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: maxFallSpeedMultiplier
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-    startLine: 13
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public HNSFParamFP maxFallSpeedMultiplier
-    return:
-      type: Quantum.HNSFParamFP
-    content.vb: Public maxFallSpeedMultiplier As HNSFParamFP
-- uid: Quantum.ApplyGravityAction.applyCurve
-  commentId: F:Quantum.ApplyGravityAction.applyCurve
-  id: applyCurve
-  parent: Quantum.ApplyGravityAction
-  langs:
-  - csharp
-  - vb
-  name: applyCurve
-  nameWithType: ApplyGravityAction.applyCurve
-  fullName: Quantum.ApplyGravityAction.applyCurve
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: applyCurve
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-    startLine: 14
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public bool applyCurve
-    return:
-      type: System.Boolean
-    content.vb: Public applyCurve As Boolean
-- uid: Quantum.ApplyGravityAction.gravityCurve
-  commentId: F:Quantum.ApplyGravityAction.gravityCurve
-  id: gravityCurve
-  parent: Quantum.ApplyGravityAction
-  langs:
-  - csharp
-  - vb
-  name: gravityCurve
-  nameWithType: ApplyGravityAction.gravityCurve
-  fullName: Quantum.ApplyGravityAction.gravityCurve
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: gravityCurve
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-    startLine: 15
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public AssetRef<AnimationCurveAsset> gravityCurve
-    return:
-      type: Quantum.AssetRef{Quantum.AnimationCurveAsset}
-    content.vb: Public gravityCurve As AssetRef(Of AnimationCurveAsset)
-- uid: Quantum.ApplyGravityAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
-  commentId: M:Quantum.ApplyGravityAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
+      type: Quantum.PlayerInputButtonType
+    content.vb: Public buttonsToDisable As PlayerInputButtonType
+- uid: Quantum.ClearInputFromBufferAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
+  commentId: M:Quantum.ClearInputFromBufferAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   id: ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
-  parent: Quantum.ApplyGravityAction
+  parent: Quantum.ClearInputFromBufferAction
   langs:
   - csharp
   - vb
   name: ExecuteAction(Frame, EntityRef, FP, ref HNSFStateContext)
-  nameWithType: ApplyGravityAction.ExecuteAction(Frame, EntityRef, FP, ref HNSFStateContext)
-  fullName: Quantum.ApplyGravityAction.ExecuteAction(Quantum.Frame, Quantum.EntityRef, Photon.Deterministic.FP, ref Quantum.HNSFStateContext)
+  nameWithType: ClearInputFromBufferAction.ExecuteAction(Frame, EntityRef, FP, ref HNSFStateContext)
+  fullName: Quantum.ClearInputFromBufferAction.ExecuteAction(Quantum.Frame, Quantum.EntityRef, Photon.Deterministic.FP, ref Quantum.HNSFStateContext)
   type: Method
   source:
     remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Input/ClearInputFromBufferAction.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ExecuteAction
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Forces/ApplyGravityAction.cs
-    startLine: 17
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Input/ClearInputFromBufferAction.cs
+    startLine: 10
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -282,9 +131,9 @@ items:
       type: System.Boolean
     content.vb: Public Overrides Function ExecuteAction(frame As Frame, entity As EntityRef, rangePercent As FP, stateContext As HNSFStateContext) As Boolean
   overridden: Quantum.HNSFStateAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
-  overload: Quantum.ApplyGravityAction.ExecuteAction*
-  nameWithType.vb: ApplyGravityAction.ExecuteAction(Frame, EntityRef, FP, HNSFStateContext)
-  fullName.vb: Quantum.ApplyGravityAction.ExecuteAction(Quantum.Frame, Quantum.EntityRef, Photon.Deterministic.FP, Quantum.HNSFStateContext)
+  overload: Quantum.ClearInputFromBufferAction.ExecuteAction*
+  nameWithType.vb: ClearInputFromBufferAction.ExecuteAction(Frame, EntityRef, FP, HNSFStateContext)
+  fullName.vb: Quantum.ClearInputFromBufferAction.ExecuteAction(Quantum.Frame, Quantum.EntityRef, Photon.Deterministic.FP, Quantum.HNSFStateContext)
   name.vb: ExecuteAction(Frame, EntityRef, FP, HNSFStateContext)
 references:
 - uid: Quantum
@@ -1044,80 +893,13 @@ references:
   - name: T
   - name: )
   - name: )
-- uid: Quantum.HNSFParamFP
-  commentId: T:Quantum.HNSFParamFP
+- uid: Quantum.PlayerInputButtonType
+  commentId: T:Quantum.PlayerInputButtonType
   parent: Quantum
-  href: Quantum.HNSFParamFP.html
-  name: HNSFParamFP
-  nameWithType: HNSFParamFP
-  fullName: Quantum.HNSFParamFP
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: Quantum.AssetRef{Quantum.AnimationCurveAsset}
-  commentId: T:Quantum.AssetRef{Quantum.AnimationCurveAsset}
-  parent: Quantum
-  definition: Quantum.AssetRef`1
-  href: Quantum.AnimationCurveAsset.html
-  name: AssetRef<AnimationCurveAsset>
-  nameWithType: AssetRef<AnimationCurveAsset>
-  fullName: Quantum.AssetRef<Quantum.AnimationCurveAsset>
-  nameWithType.vb: AssetRef(Of AnimationCurveAsset)
-  fullName.vb: Quantum.AssetRef(Of Quantum.AnimationCurveAsset)
-  name.vb: AssetRef(Of AnimationCurveAsset)
-  spec.csharp:
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
-  - name: <
-  - uid: Quantum.AnimationCurveAsset
-    name: AnimationCurveAsset
-    href: Quantum.AnimationCurveAsset.html
-  - name: '>'
-  spec.vb:
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Quantum.AnimationCurveAsset
-    name: AnimationCurveAsset
-    href: Quantum.AnimationCurveAsset.html
-  - name: )
-- uid: Quantum.AssetRef`1
-  commentId: T:Quantum.AssetRef`1
-  isExternal: true
-  name: AssetRef<T>
-  nameWithType: AssetRef<T>
-  fullName: Quantum.AssetRef<T>
-  nameWithType.vb: AssetRef(Of T)
-  fullName.vb: Quantum.AssetRef(Of T)
-  name.vb: AssetRef(Of T)
-  spec.csharp:
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
+  href: Quantum.PlayerInputButtonType.html
+  name: PlayerInputButtonType
+  nameWithType: PlayerInputButtonType
+  fullName: Quantum.PlayerInputButtonType
 - uid: Quantum.HNSFStateAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   commentId: M:Quantum.HNSFStateAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   parent: Quantum.HNSFStateAction
@@ -1179,12 +961,12 @@ references:
     name: HNSFStateContext
     href: Quantum.HNSFStateContext.html
   - name: )
-- uid: Quantum.ApplyGravityAction.ExecuteAction*
-  commentId: Overload:Quantum.ApplyGravityAction.ExecuteAction
-  href: Quantum.ApplyGravityAction.html#Quantum_ApplyGravityAction_ExecuteAction_Quantum_Frame_Quantum_EntityRef_Photon_Deterministic_FP_Quantum_HNSFStateContext__
+- uid: Quantum.ClearInputFromBufferAction.ExecuteAction*
+  commentId: Overload:Quantum.ClearInputFromBufferAction.ExecuteAction
+  href: Quantum.ClearInputFromBufferAction.html#Quantum_ClearInputFromBufferAction_ExecuteAction_Quantum_Frame_Quantum_EntityRef_Photon_Deterministic_FP_Quantum_HNSFStateContext__
   name: ExecuteAction
-  nameWithType: ApplyGravityAction.ExecuteAction
-  fullName: Quantum.ApplyGravityAction.ExecuteAction
+  nameWithType: ClearInputFromBufferAction.ExecuteAction
+  fullName: Quantum.ClearInputFromBufferAction.ExecuteAction
 - uid: Quantum.Frame
   commentId: T:Quantum.Frame
   parent: Quantum
@@ -1213,6 +995,17 @@ references:
   name: HNSFStateContext
   nameWithType: HNSFStateContext
   fullName: Quantum.HNSFStateContext
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: Photon.Deterministic
   commentId: N:Photon.Deterministic
   isExternal: true

@@ -5,7 +5,7 @@ items:
   id: StateTimelineFramebar
   parent: Global
   children:
-  - Global.StateTimelineFramebar.#ctor(Quantum.HNSFState,Quantum.HNSFStateAction)
+  - Global.StateTimelineFramebar.#ctor(Quantum.HNSFState,Quantum.HNSFState,Quantum.HNSFStateAction)
   - Global.StateTimelineFramebar.UpdateFramebar
   langs:
   - csharp
@@ -33,16 +33,16 @@ items:
   - UnityEngine.UIElements.CallbackEventHandler
   - UnityEngine.UIElements.Focusable
   - UnityEngine.UIElements.VisualElement
-- uid: Global.StateTimelineFramebar.#ctor(Quantum.HNSFState,Quantum.HNSFStateAction)
-  commentId: M:Global.StateTimelineFramebar.#ctor(Quantum.HNSFState,Quantum.HNSFStateAction)
-  id: '#ctor(Quantum.HNSFState,Quantum.HNSFStateAction)'
+- uid: Global.StateTimelineFramebar.#ctor(Quantum.HNSFState,Quantum.HNSFState,Quantum.HNSFStateAction)
+  commentId: M:Global.StateTimelineFramebar.#ctor(Quantum.HNSFState,Quantum.HNSFState,Quantum.HNSFStateAction)
+  id: '#ctor(Quantum.HNSFState,Quantum.HNSFState,Quantum.HNSFStateAction)'
   parent: Global.StateTimelineFramebar
   langs:
   - csharp
   - vb
-  name: StateTimelineFramebar(HNSFState, HNSFStateAction)
-  nameWithType: StateTimelineFramebar.StateTimelineFramebar(HNSFState, HNSFStateAction)
-  fullName: StateTimelineFramebar.StateTimelineFramebar(Quantum.HNSFState, Quantum.HNSFStateAction)
+  name: StateTimelineFramebar(HNSFState, HNSFState, HNSFStateAction)
+  nameWithType: StateTimelineFramebar.StateTimelineFramebar(HNSFState, HNSFState, HNSFStateAction)
+  fullName: StateTimelineFramebar.StateTimelineFramebar(Quantum.HNSFState, Quantum.HNSFState, Quantum.HNSFStateAction)
   type: Constructor
   source:
     remote:
@@ -51,22 +51,24 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimeline/StateTimelineFramebar.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - HNSF.Editor
   namespace: Global
   syntax:
-    content: public StateTimelineFramebar(HNSFState state, HNSFStateAction stateAction)
+    content: public StateTimelineFramebar(HNSFState topState, HNSFState state, HNSFStateAction stateAction)
     parameters:
+    - id: topState
+      type: Quantum.HNSFState
     - id: state
       type: Quantum.HNSFState
     - id: stateAction
       type: Quantum.HNSFStateAction
-    content.vb: Public Sub New(state As HNSFState, stateAction As HNSFStateAction)
+    content.vb: Public Sub New(topState As HNSFState, state As HNSFState, stateAction As HNSFStateAction)
   overload: Global.StateTimelineFramebar.#ctor*
-  nameWithType.vb: StateTimelineFramebar.New(HNSFState, HNSFStateAction)
-  fullName.vb: StateTimelineFramebar.New(Quantum.HNSFState, Quantum.HNSFStateAction)
-  name.vb: New(HNSFState, HNSFStateAction)
+  nameWithType.vb: StateTimelineFramebar.New(HNSFState, HNSFState, HNSFStateAction)
+  fullName.vb: StateTimelineFramebar.New(Quantum.HNSFState, Quantum.HNSFState, Quantum.HNSFStateAction)
+  name.vb: New(HNSFState, HNSFState, HNSFStateAction)
 - uid: Global.StateTimelineFramebar.UpdateFramebar
   commentId: M:Global.StateTimelineFramebar.UpdateFramebar
   id: UpdateFramebar
@@ -85,7 +87,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UpdateFramebar
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/3.HNSF/Editor/StateTimeline/StateTimelineFramebar.cs
-    startLine: 31
+    startLine: 33
   assemblies:
   - HNSF.Editor
   namespace: Global
@@ -158,7 +160,7 @@ references:
     isExternal: true
 - uid: Global.StateTimelineFramebar.#ctor*
   commentId: Overload:Global.StateTimelineFramebar.#ctor
-  href: Global.StateTimelineFramebar.html#StateTimelineFramebar__ctor_Quantum_HNSFState_Quantum_HNSFStateAction_
+  href: Global.StateTimelineFramebar.html#StateTimelineFramebar__ctor_Quantum_HNSFState_Quantum_HNSFState_Quantum_HNSFStateAction_
   name: StateTimelineFramebar
   nameWithType: StateTimelineFramebar.StateTimelineFramebar
   fullName: StateTimelineFramebar.StateTimelineFramebar
