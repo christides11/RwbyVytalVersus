@@ -28,11 +28,11 @@ items:
     content: >-
       [Serializable]
 
-      public class StateFunctionBool : HNSFStateFunction<bool>
+      public class StateFunctionBool : HNSFStateFunction<bool>, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class StateFunctionBool Inherits HNSFStateFunction(Of Boolean)
+      Public Class StateFunctionBool Inherits HNSFStateFunction(Of Boolean) Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -40,6 +40,10 @@ items:
   - Quantum.AssetObject
   - Quantum.HNSFStateFunction
   - Quantum.HNSFStateFunction{System.Boolean}
+  derivedClasses:
+  - Quantum.GetHitInfoBooleanFunction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{System.Boolean}.Label
   - Quantum.HNSFStateFunction{System.Boolean}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -176,6 +180,13 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{System.Boolean}.Label
   commentId: F:Quantum.HNSFStateFunction{System.Boolean}.Label
   parent: Quantum.HNSFStateFunction{System.Boolean}

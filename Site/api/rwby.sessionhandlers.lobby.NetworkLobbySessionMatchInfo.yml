@@ -5,16 +5,38 @@ items:
   id: NetworkLobbySessionMatchInfo
   parent: rwby.sessionhandlers.lobby
   children:
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GenerateMatchCode
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AddClientPlayerParticipant(rwby.ClientManager,System.Int32)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer(rwby.ClientManager,System.Int32,System.Boolean)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ChangeTeamForParticipant(System.Int32,System.Int32)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ConvertParticipantInfo
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientManagers
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerCharacterRefs
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerTeams
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetPlayerCharacterRefs
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId(rwby.ClientManager,System.Int32)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo(rwby.ClientManager,System.Int32)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerParticipantIdList
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences(System.Int32)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantIndexFromId(System.Int32)
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetTotalClientCount
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetTotalPlayerCount
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientInRoom(rwby.ClientManager)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientManagerRoomMasterClient(rwby.ClientManager)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientParticipant(rwby.ClientManager,System.Int32)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsValid
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnGamemodeRefChanged
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnGamemodeSettingsChanged
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnMapRefChanged
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveClientPlayers(rwby.ClientManager)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveParticipant(System.Int32)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetGamemode(ModAssetSoftReference,GamemodeTeamConfig[],GamemodeTeamTypeConfig[],System.String)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetMap(ModAssetSoftReference)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetParticipantCharacters(System.Int32,ModAssetSoftReference[])
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.TryGetGamemodeSettings
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UnreadyAll
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UpdateInfo(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.clientPlayerToParticipants
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.gamemodeName
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.gamemodeRef
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.gamemodeSettings
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.id
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.mapName
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.mapRef
@@ -22,16 +44,18 @@ items:
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.matchLocked
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.matchMasterClient
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.matchRegion
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.modGuid
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.participantIdCounter
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.participants
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.status
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.teamDefinitions
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.teams
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.teamsConfigurations
   langs:
   - csharp
   - vb
   name: NetworkLobbySessionMatchInfo
   nameWithType: NetworkLobbySessionMatchInfo
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
-  type: Struct
+  type: Class
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
@@ -39,7 +63,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: NetworkLobbySessionMatchInfo
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -47,14 +71,127 @@ items:
     content: >-
       [Serializable]
 
-      public struct NetworkLobbySessionMatchInfo
+      public class NetworkLobbySessionMatchInfo
     content.vb: >-
       <Serializable>
 
-      Public Structure NetworkLobbySessionMatchInfo
+      Public Class NetworkLobbySessionMatchInfo
+  inheritance:
+  - System.Object
   attributes:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnGamemodeRefChanged
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnGamemodeRefChanged
+  id: OnGamemodeRefChanged
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: OnGamemodeRefChanged
+  nameWithType: NetworkLobbySessionMatchInfo.OnGamemodeRefChanged
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnGamemodeRefChanged
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnGamemodeRefChanged
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 12
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public UnityEvent<NetworkLobbySessionMatchInfo, ModAssetSoftReference, ModAssetSoftReference> OnGamemodeRefChanged
+    return:
+      type: UnityEngine.Events.UnityEvent{rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo,ModAssetSoftReference,ModAssetSoftReference}
+    content.vb: >-
+      <NonSerialized>
+
+      Public OnGamemodeRefChanged As UnityEvent(Of NetworkLobbySessionMatchInfo, ModAssetSoftReference, ModAssetSoftReference)
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnMapRefChanged
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnMapRefChanged
+  id: OnMapRefChanged
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: OnMapRefChanged
+  nameWithType: NetworkLobbySessionMatchInfo.OnMapRefChanged
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnMapRefChanged
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnMapRefChanged
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 13
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public UnityEvent<NetworkLobbySessionMatchInfo, ModAssetSoftReference, ModAssetSoftReference> OnMapRefChanged
+    return:
+      type: UnityEngine.Events.UnityEvent{rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo,ModAssetSoftReference,ModAssetSoftReference}
+    content.vb: >-
+      <NonSerialized>
+
+      Public OnMapRefChanged As UnityEvent(Of NetworkLobbySessionMatchInfo, ModAssetSoftReference, ModAssetSoftReference)
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnGamemodeSettingsChanged
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnGamemodeSettingsChanged
+  id: OnGamemodeSettingsChanged
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: OnGamemodeSettingsChanged
+  nameWithType: NetworkLobbySessionMatchInfo.OnGamemodeSettingsChanged
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.OnGamemodeSettingsChanged
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnGamemodeSettingsChanged
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public UnityEvent<NetworkLobbySessionMatchInfo, string, string> OnGamemodeSettingsChanged
+    return:
+      type: UnityEngine.Events.UnityEvent{rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo,System.String,System.String}
+    content.vb: >-
+      <NonSerialized>
+
+      Public OnGamemodeSettingsChanged As UnityEvent(Of NetworkLobbySessionMatchInfo, String, String)
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
     arguments: []
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.id
   commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.id
@@ -74,7 +211,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: id
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 9
+    startLine: 16
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -101,15 +238,15 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: matchMasterClient
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 10
+    startLine: 17
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public int matchMasterClient
+    content: public ClientManager matchMasterClient
     return:
-      type: System.Int32
-    content.vb: Public matchMasterClient As Integer
+      type: rwby.ClientManager
+    content.vb: Public matchMasterClient As ClientManager
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.gamemodeName
   commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.gamemodeName
   id: gamemodeName
@@ -128,7 +265,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: gamemodeName
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 11
+    startLine: 18
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -155,7 +292,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: mapName
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 12
+    startLine: 19
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -182,7 +319,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: gamemodeRef
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 13
+    startLine: 20
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -209,7 +346,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: mapRef
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 14
+    startLine: 21
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -236,7 +373,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: teamDefinitions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 15
+    startLine: 22
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -245,60 +382,60 @@ items:
     return:
       type: Global.GamemodeTeamConfig[]
     content.vb: Public teamDefinitions As GamemodeTeamConfig()
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.teams
-  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.teams
-  id: teams
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.teamsConfigurations
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.teamsConfigurations
+  id: teamsConfigurations
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
   langs:
   - csharp
   - vb
-  name: teams
-  nameWithType: NetworkLobbySessionMatchInfo.teams
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.teams
+  name: teamsConfigurations
+  nameWithType: NetworkLobbySessionMatchInfo.teamsConfigurations
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.teamsConfigurations
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: teams
+    id: teamsConfigurations
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 16
+    startLine: 23
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public NetworkLobbySessionMatchTeam[] teams
+    content: public GamemodeTeamTypeConfig[] teamsConfigurations
     return:
-      type: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam[]
-    content.vb: Public teams As NetworkLobbySessionMatchTeam()
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.modGuid
-  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.modGuid
-  id: modGuid
+      type: Global.GamemodeTeamTypeConfig[]
+    content.vb: Public teamsConfigurations As GamemodeTeamTypeConfig()
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.participants
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.participants
+  id: participants
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
   langs:
   - csharp
   - vb
-  name: modGuid
-  nameWithType: NetworkLobbySessionMatchInfo.modGuid
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.modGuid
+  name: participants
+  nameWithType: NetworkLobbySessionMatchInfo.participants
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.participants
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: modGuid
+    id: participants
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 17
+    startLine: 24
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public Guid modGuid
+    content: public List<LobbyGamemodeParticipantInfo> participants
     return:
-      type: System.Guid
-    content.vb: Public modGuid As Guid
+      type: System.Collections.Generic.List{rwby.LobbyGamemodeParticipantInfo}
+    content.vb: Public participants As List(Of LobbyGamemodeParticipantInfo)
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.matchCode
   commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.matchCode
   id: matchCode
@@ -317,7 +454,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: matchCode
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 18
+    startLine: 25
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -344,7 +481,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: matchLocked
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 19
+    startLine: 26
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -371,7 +508,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: matchRegion
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 20
+    startLine: 27
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -380,6 +517,199 @@ items:
     return:
       type: System.String
     content.vb: Public matchRegion As String
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.status
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.status
+  id: status
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: status
+  nameWithType: NetworkLobbySessionMatchInfo.status
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.status
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: status
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 28
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public NetworkLobbySessionMatchStatus status
+    return:
+      type: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchStatus
+    content.vb: Public status As NetworkLobbySessionMatchStatus
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.participantIdCounter
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.participantIdCounter
+  id: participantIdCounter
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: participantIdCounter
+  nameWithType: NetworkLobbySessionMatchInfo.participantIdCounter
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.participantIdCounter
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: participantIdCounter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 30
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public int participantIdCounter
+    return:
+      type: System.Int32
+    content.vb: Public participantIdCounter As Integer
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.clientPlayerToParticipants
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.clientPlayerToParticipants
+  id: clientPlayerToParticipants
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: clientPlayerToParticipants
+  nameWithType: NetworkLobbySessionMatchInfo.clientPlayerToParticipants
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.clientPlayerToParticipants
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: clientPlayerToParticipants
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 32
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public List<NetworkVytalMatchLobbyClientParticipantDefinition> clientPlayerToParticipants
+    return:
+      type: System.Collections.Generic.List{rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition}
+    content.vb: Public clientPlayerToParticipants As List(Of NetworkVytalMatchLobbyClientParticipantDefinition)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.gamemodeSettings
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.gamemodeSettings
+  id: gamemodeSettings
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: gamemodeSettings
+  nameWithType: NetworkLobbySessionMatchInfo.gamemodeSettings
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.gamemodeSettings
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: gamemodeSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 34
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public string gamemodeSettings
+    return:
+      type: System.String
+    content.vb: Public gamemodeSettings As String
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UpdateInfo(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UpdateInfo(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
+  id: UpdateInfo(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: UpdateInfo(NetworkLobbySessionMatchInfo)
+  nameWithType: NetworkLobbySessionMatchInfo.UpdateInfo(NetworkLobbySessionMatchInfo)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UpdateInfo(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateInfo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 36
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void UpdateInfo(NetworkLobbySessionMatchInfo newInfo)
+    parameters:
+    - id: newInfo
+      type: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+    content.vb: Public Sub UpdateInfo(newInfo As NetworkLobbySessionMatchInfo)
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UpdateInfo*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.TryGetGamemodeSettings
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.TryGetGamemodeSettings
+  id: TryGetGamemodeSettings
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: TryGetGamemodeSettings()
+  nameWithType: NetworkLobbySessionMatchInfo.TryGetGamemodeSettings()
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.TryGetGamemodeSettings()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryGetGamemodeSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 68
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public UniTask<GamemodeSettingsBase> TryGetGamemodeSettings()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{Quantum.GamemodeSettingsBase}
+    content.vb: Public Function TryGetGamemodeSettings() As UniTask(Of GamemodeSettingsBase)
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.TryGetGamemodeSettings*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ConvertParticipantInfo
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ConvertParticipantInfo
+  id: ConvertParticipantInfo
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: ConvertParticipantInfo()
+  nameWithType: NetworkLobbySessionMatchInfo.ConvertParticipantInfo()
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ConvertParticipantInfo()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ConvertParticipantInfo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 80
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public GamemodeParticipantInfo[] ConvertParticipantInfo()
+    return:
+      type: Quantum.GamemodeParticipantInfo[]
+    content.vb: Public Function ConvertParticipantInfo() As GamemodeParticipantInfo()
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ConvertParticipantInfo*
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UnreadyAll
   commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UnreadyAll
   id: UnreadyAll
@@ -398,7 +728,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnreadyAll
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 22
+    startLine: 92
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -406,32 +736,247 @@ items:
     content: public void UnreadyAll()
     content.vb: Public Sub UnreadyAll()
   overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UnreadyAll*
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GenerateMatchCode
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GenerateMatchCode
-  id: GenerateMatchCode
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AddClientPlayerParticipant(rwby.ClientManager,System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AddClientPlayerParticipant(rwby.ClientManager,System.Int32)
+  id: AddClientPlayerParticipant(rwby.ClientManager,System.Int32)
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
   langs:
   - csharp
   - vb
-  name: GenerateMatchCode()
-  nameWithType: NetworkLobbySessionMatchInfo.GenerateMatchCode()
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GenerateMatchCode()
+  name: AddClientPlayerParticipant(ClientManager, int)
+  nameWithType: NetworkLobbySessionMatchInfo.AddClientPlayerParticipant(ClientManager, int)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AddClientPlayerParticipant(rwby.ClientManager, int)
   type: Method
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: GenerateMatchCode
+    id: AddClientPlayerParticipant
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 35
+    startLine: 102
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public void GenerateMatchCode()
-    content.vb: Public Sub GenerateMatchCode()
-  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GenerateMatchCode*
+    content: public bool AddClientPlayerParticipant(ClientManager client, int localPlayerId)
+    parameters:
+    - id: client
+      type: rwby.ClientManager
+    - id: localPlayerId
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function AddClientPlayerParticipant(client As ClientManager, localPlayerId As Integer) As Boolean
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AddClientPlayerParticipant*
+  nameWithType.vb: NetworkLobbySessionMatchInfo.AddClientPlayerParticipant(ClientManager, Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AddClientPlayerParticipant(rwby.ClientManager, Integer)
+  name.vb: AddClientPlayerParticipant(ClientManager, Integer)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer(rwby.ClientManager,System.Int32,System.Boolean)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer(rwby.ClientManager,System.Int32,System.Boolean)
+  id: AttemptSetReadyStateClientPlayer(rwby.ClientManager,System.Int32,System.Boolean)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: AttemptSetReadyStateClientPlayer(ClientManager, int, bool)
+  nameWithType: NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer(ClientManager, int, bool)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer(rwby.ClientManager, int, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AttemptSetReadyStateClientPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 116
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public bool AttemptSetReadyStateClientPlayer(ClientManager client, int localPlayerId, bool readyState)
+    parameters:
+    - id: client
+      type: rwby.ClientManager
+    - id: localPlayerId
+      type: System.Int32
+    - id: readyState
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Function AttemptSetReadyStateClientPlayer(client As ClientManager, localPlayerId As Integer, readyState As Boolean) As Boolean
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer*
+  nameWithType.vb: NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer(ClientManager, Integer, Boolean)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer(rwby.ClientManager, Integer, Boolean)
+  name.vb: AttemptSetReadyStateClientPlayer(ClientManager, Integer, Boolean)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo(rwby.ClientManager,System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo(rwby.ClientManager,System.Int32)
+  id: GetClientPlayerParticipantInfo(rwby.ClientManager,System.Int32)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: GetClientPlayerParticipantInfo(ClientManager, int)
+  nameWithType: NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo(ClientManager, int)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo(rwby.ClientManager, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetClientPlayerParticipantInfo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 127
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public LobbyGamemodeParticipantInfo GetClientPlayerParticipantInfo(ClientManager client, int localPlayerId)
+    parameters:
+    - id: client
+      type: rwby.ClientManager
+    - id: localPlayerId
+      type: System.Int32
+    return:
+      type: rwby.LobbyGamemodeParticipantInfo
+    content.vb: Public Function GetClientPlayerParticipantInfo(client As ClientManager, localPlayerId As Integer) As LobbyGamemodeParticipantInfo
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo*
+  nameWithType.vb: NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo(ClientManager, Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo(rwby.ClientManager, Integer)
+  name.vb: GetClientPlayerParticipantInfo(ClientManager, Integer)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId(rwby.ClientManager,System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId(rwby.ClientManager,System.Int32)
+  id: GetClientPlayerParticipantId(rwby.ClientManager,System.Int32)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: GetClientPlayerParticipantId(ClientManager, int)
+  nameWithType: NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId(ClientManager, int)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId(rwby.ClientManager, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetClientPlayerParticipantId
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 134
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public int GetClientPlayerParticipantId(ClientManager client, int localPlayerId)
+    parameters:
+    - id: client
+      type: rwby.ClientManager
+    - id: localPlayerId
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function GetClientPlayerParticipantId(client As ClientManager, localPlayerId As Integer) As Integer
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId*
+  nameWithType.vb: NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId(ClientManager, Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId(rwby.ClientManager, Integer)
+  name.vb: GetClientPlayerParticipantId(ClientManager, Integer)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantIndexFromId(System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantIndexFromId(System.Int32)
+  id: GetParticipantIndexFromId(System.Int32)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: GetParticipantIndexFromId(int)
+  nameWithType: NetworkLobbySessionMatchInfo.GetParticipantIndexFromId(int)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantIndexFromId(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetParticipantIndexFromId
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 144
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public int GetParticipantIndexFromId(int participantId)
+    parameters:
+    - id: participantId
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function GetParticipantIndexFromId(participantId As Integer) As Integer
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantIndexFromId*
+  nameWithType.vb: NetworkLobbySessionMatchInfo.GetParticipantIndexFromId(Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantIndexFromId(Integer)
+  name.vb: GetParticipantIndexFromId(Integer)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveClientPlayers(rwby.ClientManager)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveClientPlayers(rwby.ClientManager)
+  id: RemoveClientPlayers(rwby.ClientManager)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: RemoveClientPlayers(ClientManager)
+  nameWithType: NetworkLobbySessionMatchInfo.RemoveClientPlayers(ClientManager)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveClientPlayers(rwby.ClientManager)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemoveClientPlayers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 153
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void RemoveClientPlayers(ClientManager client)
+    parameters:
+    - id: client
+      type: rwby.ClientManager
+    content.vb: Public Sub RemoveClientPlayers(client As ClientManager)
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveClientPlayers*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveParticipant(System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveParticipant(System.Int32)
+  id: RemoveParticipant(System.Int32)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: RemoveParticipant(int)
+  nameWithType: NetworkLobbySessionMatchInfo.RemoveParticipant(int)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveParticipant(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemoveParticipant
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 163
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void RemoveParticipant(int participantId)
+    parameters:
+    - id: participantId
+      type: System.Int32
+    content.vb: Public Sub RemoveParticipant(participantId As Integer)
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveParticipant*
+  nameWithType.vb: NetworkLobbySessionMatchInfo.RemoveParticipant(Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveParticipant(Integer)
+  name.vb: RemoveParticipant(Integer)
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientManagers
   commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientManagers
   id: GetClientManagers
@@ -450,15 +995,15 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetClientManagers
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 51
+    startLine: 173
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public ClientManager[] GetClientManagers()
+    content: public HashSet<ClientManager> GetClientManagers()
     return:
-      type: rwby.ClientManager[]
-    content.vb: Public Function GetClientManagers() As ClientManager()
+      type: System.Collections.Generic.HashSet{rwby.ClientManager}
+    content.vb: Public Function GetClientManagers() As HashSet(Of ClientManager)
   overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientManagers*
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetTotalClientCount
   commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetTotalClientCount
@@ -478,7 +1023,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetTotalClientCount
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 67
+    startLine: 184
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -506,7 +1051,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetTotalPlayerCount
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 81
+    startLine: 195
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -516,90 +1061,357 @@ items:
       type: System.Int32
     content.vb: Public Function GetTotalPlayerCount() As Integer
   overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetTotalPlayerCount*
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetPlayerCharacterRefs
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetPlayerCharacterRefs
-  id: GetPlayerCharacterRefs
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences(System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences(System.Int32)
+  id: GetParticipantCharacterReferences(System.Int32)
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
   langs:
   - csharp
   - vb
-  name: GetPlayerCharacterRefs()
-  nameWithType: NetworkLobbySessionMatchInfo.GetPlayerCharacterRefs()
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetPlayerCharacterRefs()
+  name: GetParticipantCharacterReferences(int)
+  nameWithType: NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences(int)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences(int)
   type: Method
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: GetPlayerCharacterRefs
+    id: GetParticipantCharacterReferences
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 95
+    startLine: 200
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public ModAssetSoftReference[] GetPlayerCharacterRefs()
+    content: public ModAssetSoftReference[] GetParticipantCharacterReferences(int participantId)
+    parameters:
+    - id: participantId
+      type: System.Int32
     return:
       type: Global.ModAssetSoftReference[]
-    content.vb: Public Function GetPlayerCharacterRefs() As ModAssetSoftReference()
-  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetPlayerCharacterRefs*
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerCharacterRefs
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerCharacterRefs
-  id: GetLocalPlayerCharacterRefs
+    content.vb: Public Function GetParticipantCharacterReferences(participantId As Integer) As ModAssetSoftReference()
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences*
+  nameWithType.vb: NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences(Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences(Integer)
+  name.vb: GetParticipantCharacterReferences(Integer)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetParticipantCharacters(System.Int32,ModAssetSoftReference[])
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetParticipantCharacters(System.Int32,ModAssetSoftReference[])
+  id: SetParticipantCharacters(System.Int32,ModAssetSoftReference[])
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
   langs:
   - csharp
   - vb
-  name: GetLocalPlayerCharacterRefs()
-  nameWithType: NetworkLobbySessionMatchInfo.GetLocalPlayerCharacterRefs()
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerCharacterRefs()
+  name: SetParticipantCharacters(int, ModAssetSoftReference[])
+  nameWithType: NetworkLobbySessionMatchInfo.SetParticipantCharacters(int, ModAssetSoftReference[])
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetParticipantCharacters(int, ModAssetSoftReference[])
   type: Method
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: GetLocalPlayerCharacterRefs
+    id: SetParticipantCharacters
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 111
+    startLine: 220
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public ModAssetSoftReference[] GetLocalPlayerCharacterRefs()
+    content: public void SetParticipantCharacters(int participantId, ModAssetSoftReference[] characterRefs)
+    parameters:
+    - id: participantId
+      type: System.Int32
+    - id: characterRefs
+      type: Global.ModAssetSoftReference[]
+    content.vb: Public Sub SetParticipantCharacters(participantId As Integer, characterRefs As ModAssetSoftReference())
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetParticipantCharacters*
+  nameWithType.vb: NetworkLobbySessionMatchInfo.SetParticipantCharacters(Integer, ModAssetSoftReference())
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetParticipantCharacters(Integer, ModAssetSoftReference())
+  name.vb: SetParticipantCharacters(Integer, ModAssetSoftReference())
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences
+  id: GetParticipantCharacterReferences
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: GetParticipantCharacterReferences()
+  nameWithType: NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences()
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetParticipantCharacterReferences
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 230
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public ModAssetSoftReference[] GetParticipantCharacterReferences()
     return:
       type: Global.ModAssetSoftReference[]
-    content.vb: Public Function GetLocalPlayerCharacterRefs() As ModAssetSoftReference()
-  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerCharacterRefs*
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerTeams
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerTeams
-  id: GetLocalPlayerTeams
+    content.vb: Public Function GetParticipantCharacterReferences() As ModAssetSoftReference()
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetGamemode(ModAssetSoftReference,GamemodeTeamConfig[],GamemodeTeamTypeConfig[],System.String)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetGamemode(ModAssetSoftReference,GamemodeTeamConfig[],GamemodeTeamTypeConfig[],System.String)
+  id: SetGamemode(ModAssetSoftReference,GamemodeTeamConfig[],GamemodeTeamTypeConfig[],System.String)
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
   langs:
   - csharp
   - vb
-  name: GetLocalPlayerTeams()
-  nameWithType: NetworkLobbySessionMatchInfo.GetLocalPlayerTeams()
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerTeams()
+  name: SetGamemode(ModAssetSoftReference, GamemodeTeamConfig[], GamemodeTeamTypeConfig[], string)
+  nameWithType: NetworkLobbySessionMatchInfo.SetGamemode(ModAssetSoftReference, GamemodeTeamConfig[], GamemodeTeamTypeConfig[], string)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetGamemode(ModAssetSoftReference, GamemodeTeamConfig[], GamemodeTeamTypeConfig[], string)
   type: Method
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: GetLocalPlayerTeams
+    id: SetGamemode
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
-    startLine: 127
+    startLine: 247
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public int[] GetLocalPlayerTeams()
+    content: public void SetGamemode(ModAssetSoftReference gamemode, GamemodeTeamConfig[] teamConfigs, GamemodeTeamTypeConfig[] teamTypeConfigs, string gamemodeSettings)
+    parameters:
+    - id: gamemode
+      type: Global.ModAssetSoftReference
+    - id: teamConfigs
+      type: Global.GamemodeTeamConfig[]
+    - id: teamTypeConfigs
+      type: Global.GamemodeTeamTypeConfig[]
+    - id: gamemodeSettings
+      type: System.String
+    content.vb: Public Sub SetGamemode(gamemode As ModAssetSoftReference, teamConfigs As GamemodeTeamConfig(), teamTypeConfigs As GamemodeTeamTypeConfig(), gamemodeSettings As String)
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetGamemode*
+  nameWithType.vb: NetworkLobbySessionMatchInfo.SetGamemode(ModAssetSoftReference, GamemodeTeamConfig(), GamemodeTeamTypeConfig(), String)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetGamemode(ModAssetSoftReference, GamemodeTeamConfig(), GamemodeTeamTypeConfig(), String)
+  name.vb: SetGamemode(ModAssetSoftReference, GamemodeTeamConfig(), GamemodeTeamTypeConfig(), String)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetMap(ModAssetSoftReference)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetMap(ModAssetSoftReference)
+  id: SetMap(ModAssetSoftReference)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: SetMap(ModAssetSoftReference)
+  nameWithType: NetworkLobbySessionMatchInfo.SetMap(ModAssetSoftReference)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetMap(ModAssetSoftReference)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 255
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void SetMap(ModAssetSoftReference map)
+    parameters:
+    - id: map
+      type: Global.ModAssetSoftReference
+    content.vb: Public Sub SetMap(map As ModAssetSoftReference)
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetMap*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientManagerRoomMasterClient(rwby.ClientManager)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientManagerRoomMasterClient(rwby.ClientManager)
+  id: IsClientManagerRoomMasterClient(rwby.ClientManager)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: IsClientManagerRoomMasterClient(ClientManager)
+  nameWithType: NetworkLobbySessionMatchInfo.IsClientManagerRoomMasterClient(ClientManager)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientManagerRoomMasterClient(rwby.ClientManager)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IsClientManagerRoomMasterClient
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 260
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public bool IsClientManagerRoomMasterClient(ClientManager clientManager)
+    parameters:
+    - id: clientManager
+      type: rwby.ClientManager
     return:
-      type: System.Int32[]
-    content.vb: Public Function GetLocalPlayerTeams() As Integer()
-  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerTeams*
+      type: System.Boolean
+    content.vb: Public Function IsClientManagerRoomMasterClient(clientManager As ClientManager) As Boolean
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientManagerRoomMasterClient*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientInRoom(rwby.ClientManager)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientInRoom(rwby.ClientManager)
+  id: IsClientInRoom(rwby.ClientManager)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: IsClientInRoom(ClientManager)
+  nameWithType: NetworkLobbySessionMatchInfo.IsClientInRoom(ClientManager)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientInRoom(rwby.ClientManager)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IsClientInRoom
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 265
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public bool IsClientInRoom(ClientManager clientManager)
+    parameters:
+    - id: clientManager
+      type: rwby.ClientManager
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsClientInRoom(clientManager As ClientManager) As Boolean
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientInRoom*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientParticipant(rwby.ClientManager,System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientParticipant(rwby.ClientManager,System.Int32)
+  id: IsClientParticipant(rwby.ClientManager,System.Int32)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: IsClientParticipant(ClientManager, int)
+  nameWithType: NetworkLobbySessionMatchInfo.IsClientParticipant(ClientManager, int)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientParticipant(rwby.ClientManager, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IsClientParticipant
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 275
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public bool IsClientParticipant(ClientManager clientManager, int participantId)
+    parameters:
+    - id: clientManager
+      type: rwby.ClientManager
+    - id: participantId
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsClientParticipant(clientManager As ClientManager, participantId As Integer) As Boolean
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientParticipant*
+  nameWithType.vb: NetworkLobbySessionMatchInfo.IsClientParticipant(ClientManager, Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientParticipant(rwby.ClientManager, Integer)
+  name.vb: IsClientParticipant(ClientManager, Integer)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsValid
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsValid
+  id: IsValid
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: IsValid()
+  nameWithType: NetworkLobbySessionMatchInfo.IsValid()
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsValid()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: IsValid
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 286
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public bool IsValid()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsValid() As Boolean
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsValid*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ChangeTeamForParticipant(System.Int32,System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ChangeTeamForParticipant(System.Int32,System.Int32)
+  id: ChangeTeamForParticipant(System.Int32,System.Int32)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: ChangeTeamForParticipant(int, int)
+  nameWithType: NetworkLobbySessionMatchInfo.ChangeTeamForParticipant(int, int)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ChangeTeamForParticipant(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ChangeTeamForParticipant
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 291
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void ChangeTeamForParticipant(int messageParticipantId, int messageTeamId)
+    parameters:
+    - id: messageParticipantId
+      type: System.Int32
+    - id: messageTeamId
+      type: System.Int32
+    content.vb: Public Sub ChangeTeamForParticipant(messageParticipantId As Integer, messageTeamId As Integer)
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ChangeTeamForParticipant*
+  nameWithType.vb: NetworkLobbySessionMatchInfo.ChangeTeamForParticipant(Integer, Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ChangeTeamForParticipant(Integer, Integer)
+  name.vb: ChangeTeamForParticipant(Integer, Integer)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerParticipantIdList
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerParticipantIdList
+  id: GetLocalPlayerParticipantIdList
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  langs:
+  - csharp
+  - vb
+  name: GetLocalPlayerParticipantIdList()
+  nameWithType: NetworkLobbySessionMatchInfo.GetLocalPlayerParticipantIdList()
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerParticipantIdList()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetLocalPlayerParticipantIdList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionMatchInfo.cs
+    startLine: 302
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public List<int> GetLocalPlayerParticipantIdList()
+    return:
+      type: System.Collections.Generic.List{System.Int32}
+    content.vb: Public Function GetLocalPlayerParticipantIdList() As List(Of Integer)
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerParticipantIdList*
 references:
 - uid: rwby.sessionhandlers.lobby
   commentId: N:rwby.sessionhandlers.lobby
@@ -631,6 +1443,189 @@ references:
   - uid: rwby.sessionhandlers.lobby
     name: lobby
     href: rwby.sessionhandlers.lobby.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Events.UnityEvent{rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo,ModAssetSoftReference,ModAssetSoftReference}
+  commentId: T:UnityEngine.Events.UnityEvent{rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo,ModAssetSoftReference,ModAssetSoftReference}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityEvent`3
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html
+  name: UnityEvent<NetworkLobbySessionMatchInfo, ModAssetSoftReference, ModAssetSoftReference>
+  nameWithType: UnityEvent<NetworkLobbySessionMatchInfo, ModAssetSoftReference, ModAssetSoftReference>
+  fullName: UnityEngine.Events.UnityEvent<rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo, ModAssetSoftReference, ModAssetSoftReference>
+  nameWithType.vb: UnityEvent(Of NetworkLobbySessionMatchInfo, ModAssetSoftReference, ModAssetSoftReference)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo, ModAssetSoftReference, ModAssetSoftReference)
+  name.vb: UnityEvent(Of NetworkLobbySessionMatchInfo, ModAssetSoftReference, ModAssetSoftReference)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`3
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+    name: NetworkLobbySessionMatchInfo
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html
+  - name: ','
+  - name: " "
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: ','
+  - name: " "
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`3
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+    name: NetworkLobbySessionMatchInfo
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html
+  - name: ','
+  - name: " "
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: ','
+  - name: " "
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: )
+- uid: UnityEngine.Events.UnityEvent`3
+  commentId: T:UnityEngine.Events.UnityEvent`3
+  isExternal: true
+  name: UnityEvent<T0, T1, T2>
+  nameWithType: UnityEvent<T0, T1, T2>
+  fullName: UnityEngine.Events.UnityEvent<T0, T1, T2>
+  nameWithType.vb: UnityEvent(Of T0, T1, T2)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0, T1, T2)
+  name.vb: UnityEvent(Of T0, T1, T2)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`3
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - name: T0
+  - name: ','
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`3
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T0
+  - name: ','
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
+- uid: UnityEngine.Events.UnityEvent{rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo,System.String,System.String}
+  commentId: T:UnityEngine.Events.UnityEvent{rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo,System.String,System.String}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityEvent`3
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html
+  name: UnityEvent<NetworkLobbySessionMatchInfo, string, string>
+  nameWithType: UnityEvent<NetworkLobbySessionMatchInfo, string, string>
+  fullName: UnityEngine.Events.UnityEvent<rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo, string, string>
+  nameWithType.vb: UnityEvent(Of NetworkLobbySessionMatchInfo, String, String)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo, String, String)
+  name.vb: UnityEvent(Of NetworkLobbySessionMatchInfo, String, String)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`3
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+    name: NetworkLobbySessionMatchInfo
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`3
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+    name: NetworkLobbySessionMatchInfo
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -642,13 +1637,19 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
+- uid: rwby.ClientManager
+  commentId: T:rwby.ClientManager
+  parent: rwby
+  href: rwby.ClientManager.html
+  name: ClientManager
+  nameWithType: ClientManager
+  fullName: rwby.ClientManager
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -687,35 +1688,125 @@ references:
     href: GamemodeTeamConfig.html
   - name: (
   - name: )
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam[]
+- uid: Global.GamemodeTeamTypeConfig[]
   isExternal: true
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam.html
-  name: NetworkLobbySessionMatchTeam[]
-  nameWithType: NetworkLobbySessionMatchTeam[]
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam[]
-  nameWithType.vb: NetworkLobbySessionMatchTeam()
-  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam()
-  name.vb: NetworkLobbySessionMatchTeam()
+  href: GamemodeTeamTypeConfig.html
+  name: GamemodeTeamTypeConfig[]
+  nameWithType: GamemodeTeamTypeConfig[]
+  fullName: GamemodeTeamTypeConfig[]
+  nameWithType.vb: GamemodeTeamTypeConfig()
+  fullName.vb: GamemodeTeamTypeConfig()
+  name.vb: GamemodeTeamTypeConfig()
   spec.csharp:
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam
-    name: NetworkLobbySessionMatchTeam
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam.html
+  - uid: Global.GamemodeTeamTypeConfig
+    name: GamemodeTeamTypeConfig
+    href: GamemodeTeamTypeConfig.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam
-    name: NetworkLobbySessionMatchTeam
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam.html
+  - uid: Global.GamemodeTeamTypeConfig
+    name: GamemodeTeamTypeConfig
+    href: GamemodeTeamTypeConfig.html
   - name: (
   - name: )
-- uid: System.Guid
-  commentId: T:System.Guid
-  parent: System
+- uid: System.Collections.Generic.List{rwby.LobbyGamemodeParticipantInfo}
+  commentId: T:System.Collections.Generic.List{rwby.LobbyGamemodeParticipantInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<LobbyGamemodeParticipantInfo>
+  nameWithType: List<LobbyGamemodeParticipantInfo>
+  fullName: System.Collections.Generic.List<rwby.LobbyGamemodeParticipantInfo>
+  nameWithType.vb: List(Of LobbyGamemodeParticipantInfo)
+  fullName.vb: System.Collections.Generic.List(Of rwby.LobbyGamemodeParticipantInfo)
+  name.vb: List(Of LobbyGamemodeParticipantInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: rwby.LobbyGamemodeParticipantInfo
+    name: LobbyGamemodeParticipantInfo
+    href: rwby.LobbyGamemodeParticipantInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.LobbyGamemodeParticipantInfo
+    name: LobbyGamemodeParticipantInfo
+    href: rwby.LobbyGamemodeParticipantInfo.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.guid
-  name: Guid
-  nameWithType: Guid
-  fullName: System.Guid
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -727,44 +1818,299 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchStatus
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchStatus
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchStatus.html
+  name: NetworkLobbySessionMatchStatus
+  nameWithType: NetworkLobbySessionMatchStatus
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchStatus
+- uid: System.Collections.Generic.List{rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition}
+  commentId: T:System.Collections.Generic.List{rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<NetworkVytalMatchLobbyClientParticipantDefinition>
+  nameWithType: List<NetworkVytalMatchLobbyClientParticipantDefinition>
+  fullName: System.Collections.Generic.List<rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition>
+  nameWithType.vb: List(Of NetworkVytalMatchLobbyClientParticipantDefinition)
+  fullName.vb: System.Collections.Generic.List(Of rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition)
+  name.vb: List(Of NetworkVytalMatchLobbyClientParticipantDefinition)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition
+    name: NetworkVytalMatchLobbyClientParticipantDefinition
+    href: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition
+    name: NetworkVytalMatchLobbyClientParticipantDefinition
+    href: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition.html
+  - name: )
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UpdateInfo*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UpdateInfo
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_UpdateInfo_rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_
+  name: UpdateInfo
+  nameWithType: NetworkLobbySessionMatchInfo.UpdateInfo
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UpdateInfo
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html
+  name: NetworkLobbySessionMatchInfo
+  nameWithType: NetworkLobbySessionMatchInfo
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.TryGetGamemodeSettings*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.TryGetGamemodeSettings
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_TryGetGamemodeSettings
+  name: TryGetGamemodeSettings
+  nameWithType: NetworkLobbySessionMatchInfo.TryGetGamemodeSettings
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.TryGetGamemodeSettings
+- uid: Cysharp.Threading.Tasks.UniTask{Quantum.GamemodeSettingsBase}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{Quantum.GamemodeSettingsBase}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: Quantum.GamemodeSettingsBase.html
+  name: UniTask<GamemodeSettingsBase>
+  nameWithType: UniTask<GamemodeSettingsBase>
+  fullName: Cysharp.Threading.Tasks.UniTask<Quantum.GamemodeSettingsBase>
+  nameWithType.vb: UniTask(Of GamemodeSettingsBase)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Quantum.GamemodeSettingsBase)
+  name.vb: UniTask(Of GamemodeSettingsBase)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: Quantum.GamemodeSettingsBase
+    name: GamemodeSettingsBase
+    href: Quantum.GamemodeSettingsBase.html
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.GamemodeSettingsBase
+    name: GamemodeSettingsBase
+    href: Quantum.GamemodeSettingsBase.html
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ConvertParticipantInfo*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ConvertParticipantInfo
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_ConvertParticipantInfo
+  name: ConvertParticipantInfo
+  nameWithType: NetworkLobbySessionMatchInfo.ConvertParticipantInfo
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ConvertParticipantInfo
+- uid: Quantum.GamemodeParticipantInfo[]
+  isExternal: true
+  href: Quantum.GamemodeParticipantInfo.html
+  name: GamemodeParticipantInfo[]
+  nameWithType: GamemodeParticipantInfo[]
+  fullName: Quantum.GamemodeParticipantInfo[]
+  nameWithType.vb: GamemodeParticipantInfo()
+  fullName.vb: Quantum.GamemodeParticipantInfo()
+  name.vb: GamemodeParticipantInfo()
+  spec.csharp:
+  - uid: Quantum.GamemodeParticipantInfo
+    name: GamemodeParticipantInfo
+    href: Quantum.GamemodeParticipantInfo.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Quantum.GamemodeParticipantInfo
+    name: GamemodeParticipantInfo
+    href: Quantum.GamemodeParticipantInfo.html
+  - name: (
+  - name: )
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UnreadyAll*
   commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UnreadyAll
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_UnreadyAll
   name: UnreadyAll
   nameWithType: NetworkLobbySessionMatchInfo.UnreadyAll
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.UnreadyAll
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GenerateMatchCode*
-  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GenerateMatchCode
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_GenerateMatchCode
-  name: GenerateMatchCode
-  nameWithType: NetworkLobbySessionMatchInfo.GenerateMatchCode
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GenerateMatchCode
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AddClientPlayerParticipant*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AddClientPlayerParticipant
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_AddClientPlayerParticipant_rwby_ClientManager_System_Int32_
+  name: AddClientPlayerParticipant
+  nameWithType: NetworkLobbySessionMatchInfo.AddClientPlayerParticipant
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AddClientPlayerParticipant
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_AttemptSetReadyStateClientPlayer_rwby_ClientManager_System_Int32_System_Boolean_
+  name: AttemptSetReadyStateClientPlayer
+  nameWithType: NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.AttemptSetReadyStateClientPlayer
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_GetClientPlayerParticipantInfo_rwby_ClientManager_System_Int32_
+  name: GetClientPlayerParticipantInfo
+  nameWithType: NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantInfo
+- uid: rwby.LobbyGamemodeParticipantInfo
+  commentId: T:rwby.LobbyGamemodeParticipantInfo
+  parent: rwby
+  href: rwby.LobbyGamemodeParticipantInfo.html
+  name: LobbyGamemodeParticipantInfo
+  nameWithType: LobbyGamemodeParticipantInfo
+  fullName: rwby.LobbyGamemodeParticipantInfo
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_GetClientPlayerParticipantId_rwby_ClientManager_System_Int32_
+  name: GetClientPlayerParticipantId
+  nameWithType: NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientPlayerParticipantId
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantIndexFromId*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantIndexFromId
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_GetParticipantIndexFromId_System_Int32_
+  name: GetParticipantIndexFromId
+  nameWithType: NetworkLobbySessionMatchInfo.GetParticipantIndexFromId
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantIndexFromId
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveClientPlayers*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveClientPlayers
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_RemoveClientPlayers_rwby_ClientManager_
+  name: RemoveClientPlayers
+  nameWithType: NetworkLobbySessionMatchInfo.RemoveClientPlayers
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveClientPlayers
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveParticipant*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveParticipant
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_RemoveParticipant_System_Int32_
+  name: RemoveParticipant
+  nameWithType: NetworkLobbySessionMatchInfo.RemoveParticipant
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.RemoveParticipant
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientManagers*
   commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientManagers
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_GetClientManagers
   name: GetClientManagers
   nameWithType: NetworkLobbySessionMatchInfo.GetClientManagers
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetClientManagers
-- uid: rwby.ClientManager[]
-  isExternal: true
-  href: rwby.ClientManager.html
-  name: ClientManager[]
-  nameWithType: ClientManager[]
-  fullName: rwby.ClientManager[]
-  nameWithType.vb: ClientManager()
-  fullName.vb: rwby.ClientManager()
-  name.vb: ClientManager()
+- uid: System.Collections.Generic.HashSet{rwby.ClientManager}
+  commentId: T:System.Collections.Generic.HashSet{rwby.ClientManager}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<ClientManager>
+  nameWithType: HashSet<ClientManager>
+  fullName: System.Collections.Generic.HashSet<rwby.ClientManager>
+  nameWithType.vb: HashSet(Of ClientManager)
+  fullName.vb: System.Collections.Generic.HashSet(Of rwby.ClientManager)
+  name.vb: HashSet(Of ClientManager)
   spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
   - uid: rwby.ClientManager
     name: ClientManager
     href: rwby.ClientManager.html
-  - name: '['
-  - name: ']'
+  - name: '>'
   spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
   - uid: rwby.ClientManager
     name: ClientManager
     href: rwby.ClientManager.html
+  - name: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
   - name: (
+  - name: Of
+  - name: " "
+  - name: T
   - name: )
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetTotalClientCount*
   commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetTotalClientCount
@@ -778,12 +2124,12 @@ references:
   name: GetTotalPlayerCount
   nameWithType: NetworkLobbySessionMatchInfo.GetTotalPlayerCount
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetTotalPlayerCount
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetPlayerCharacterRefs*
-  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetPlayerCharacterRefs
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_GetPlayerCharacterRefs
-  name: GetPlayerCharacterRefs
-  nameWithType: NetworkLobbySessionMatchInfo.GetPlayerCharacterRefs
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetPlayerCharacterRefs
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_GetParticipantCharacterReferences_System_Int32_
+  name: GetParticipantCharacterReferences
+  nameWithType: NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetParticipantCharacterReferences
 - uid: Global.ModAssetSoftReference[]
   isExternal: true
   href: ModAssetSoftReference.html
@@ -805,38 +2151,92 @@ references:
     href: ModAssetSoftReference.html
   - name: (
   - name: )
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerCharacterRefs*
-  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerCharacterRefs
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_GetLocalPlayerCharacterRefs
-  name: GetLocalPlayerCharacterRefs
-  nameWithType: NetworkLobbySessionMatchInfo.GetLocalPlayerCharacterRefs
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerCharacterRefs
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerTeams*
-  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerTeams
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_GetLocalPlayerTeams
-  name: GetLocalPlayerTeams
-  nameWithType: NetworkLobbySessionMatchInfo.GetLocalPlayerTeams
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerTeams
-- uid: System.Int32[]
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int[]
-  nameWithType: int[]
-  fullName: int[]
-  nameWithType.vb: Integer()
-  fullName.vb: Integer()
-  name.vb: Integer()
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetParticipantCharacters*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetParticipantCharacters
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_SetParticipantCharacters_System_Int32_ModAssetSoftReference___
+  name: SetParticipantCharacters
+  nameWithType: NetworkLobbySessionMatchInfo.SetParticipantCharacters
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetParticipantCharacters
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetGamemode*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetGamemode
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_SetGamemode_ModAssetSoftReference_GamemodeTeamConfig___GamemodeTeamTypeConfig___System_String_
+  name: SetGamemode
+  nameWithType: NetworkLobbySessionMatchInfo.SetGamemode
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetGamemode
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetMap*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetMap
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_SetMap_ModAssetSoftReference_
+  name: SetMap
+  nameWithType: NetworkLobbySessionMatchInfo.SetMap
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.SetMap
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientManagerRoomMasterClient*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientManagerRoomMasterClient
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_IsClientManagerRoomMasterClient_rwby_ClientManager_
+  name: IsClientManagerRoomMasterClient
+  nameWithType: NetworkLobbySessionMatchInfo.IsClientManagerRoomMasterClient
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientManagerRoomMasterClient
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientInRoom*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientInRoom
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_IsClientInRoom_rwby_ClientManager_
+  name: IsClientInRoom
+  nameWithType: NetworkLobbySessionMatchInfo.IsClientInRoom
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientInRoom
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientParticipant*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientParticipant
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_IsClientParticipant_rwby_ClientManager_System_Int32_
+  name: IsClientParticipant
+  nameWithType: NetworkLobbySessionMatchInfo.IsClientParticipant
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsClientParticipant
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsValid*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsValid
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_IsValid
+  name: IsValid
+  nameWithType: NetworkLobbySessionMatchInfo.IsValid
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.IsValid
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ChangeTeamForParticipant*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ChangeTeamForParticipant
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_ChangeTeamForParticipant_System_Int32_System_Int32_
+  name: ChangeTeamForParticipant
+  nameWithType: NetworkLobbySessionMatchInfo.ChangeTeamForParticipant
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.ChangeTeamForParticipant
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerParticipantIdList*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerParticipantIdList
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_GetLocalPlayerParticipantIdList
+  name: GetLocalPlayerParticipantIdList
+  nameWithType: NetworkLobbySessionMatchInfo.GetLocalPlayerParticipantIdList
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.GetLocalPlayerParticipantIdList
+- uid: System.Collections.Generic.List{System.Int32}
+  commentId: T:System.Collections.Generic.List{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<int>
+  nameWithType: List<int>
+  fullName: System.Collections.Generic.List<int>
+  nameWithType.vb: List(Of Integer)
+  fullName.vb: System.Collections.Generic.List(Of Integer)
+  name.vb: List(Of Integer)
   spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
   - uid: System.Int32
     name: int
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: '['
-  - name: ']'
+  - name: '>'
   spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
   - uid: System.Int32
     name: Integer
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: (
   - name: )

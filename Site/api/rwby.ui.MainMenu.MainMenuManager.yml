@@ -6,22 +6,25 @@ items:
   parent: rwby.ui.MainMenu
   children:
   - rwby.ui.MainMenu.MainMenuManager.Back
-  - rwby.ui.MainMenu.MainMenuManager.Forward(System.Int32,System.Boolean)
+  - rwby.ui.MainMenu.MainMenuManager.Forward(rwby.ui.IMenu,System.Boolean)
   - rwby.ui.MainMenu.MainMenuManager.GetCurrentMenu
   - rwby.ui.MainMenu.MainMenuManager.GetHistory
   - rwby.ui.MainMenu.MainMenuManager.GetPreviousMenu
   - rwby.ui.MainMenu.MainMenuManager.HasSubmenuOpen
+  - rwby.ui.MainMenu.MainMenuManager.ResetAndForwardTo(rwby.ui.IMenu)
   - rwby.ui.MainMenu.MainMenuManager.Start
   - rwby.ui.MainMenu.MainMenuManager.createLobbyScreen
+  - rwby.ui.MainMenu.MainMenuManager.cutscenePlayer
   - rwby.ui.MainMenu.MainMenuManager.findLobbyScreen
+  - rwby.ui.MainMenu.MainMenuManager.localSceneSwitcher
+  - rwby.ui.MainMenu.MainMenuManager.localScreen
   - rwby.ui.MainMenu.MainMenuManager.mainMenuCamera
   - rwby.ui.MainMenu.MainMenuManager.mainScreen
-  - rwby.ui.MainMenu.MainMenuManager.menus
+  - rwby.ui.MainMenu.MainMenuManager.modsScreen
+  - rwby.ui.MainMenu.MainMenuManager.onlineScreen
   - rwby.ui.MainMenu.MainMenuManager.optionsScreen
   - rwby.ui.MainMenu.MainMenuManager.singleton
   - rwby.ui.MainMenu.MainMenuManager.skipTitleScreen
-  - rwby.ui.MainMenu.MainMenuManager.startingMenu
-  - rwby.ui.MainMenu.MainMenuManager.testUIScreen
   - rwby.ui.MainMenu.MainMenuManager.titleScreen
   langs:
   - csharp
@@ -37,7 +40,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: MainMenuManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -70,7 +73,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: singleton
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -79,60 +82,6 @@ items:
     return:
       type: rwby.ui.MainMenu.MainMenuManager
     content.vb: Public Shared singleton As MainMenuManager
-- uid: rwby.ui.MainMenu.MainMenuManager.menus
-  commentId: F:rwby.ui.MainMenu.MainMenuManager.menus
-  id: menus
-  parent: rwby.ui.MainMenu.MainMenuManager
-  langs:
-  - csharp
-  - vb
-  name: menus
-  nameWithType: MainMenuManager.menus
-  fullName: rwby.ui.MainMenu.MainMenuManager.menus
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: menus
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 22
-  assemblies:
-  - rwby
-  namespace: rwby.ui.MainMenu
-  syntax:
-    content: public Dictionary<int, MenuBase> menus
-    return:
-      type: System.Collections.Generic.Dictionary{System.Int32,rwby.ui.MenuBase}
-    content.vb: Public menus As Dictionary(Of Integer, MenuBase)
-- uid: rwby.ui.MainMenu.MainMenuManager.startingMenu
-  commentId: F:rwby.ui.MainMenu.MainMenuManager.startingMenu
-  id: startingMenu
-  parent: rwby.ui.MainMenu.MainMenuManager
-  langs:
-  - csharp
-  - vb
-  name: startingMenu
-  nameWithType: MainMenuManager.startingMenu
-  fullName: rwby.ui.MainMenu.MainMenuManager.startingMenu
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: startingMenu
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 25
-  assemblies:
-  - rwby
-  namespace: rwby.ui.MainMenu
-  syntax:
-    content: public MainMenuManager.MainMenuScreens startingMenu
-    return:
-      type: rwby.ui.MainMenu.MainMenuManager.MainMenuScreens
-    content.vb: Public startingMenu As MainMenuManager.MainMenuScreens
 - uid: rwby.ui.MainMenu.MainMenuManager.titleScreen
   commentId: F:rwby.ui.MainMenu.MainMenuManager.titleScreen
   id: titleScreen
@@ -151,7 +100,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: titleScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 27
+    startLine: 15
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -178,7 +127,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: mainScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 28
+    startLine: 16
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -187,6 +136,87 @@ items:
     return:
       type: rwby.ui.MenuBase
     content.vb: Public mainScreen As MenuBase
+- uid: rwby.ui.MainMenu.MainMenuManager.onlineScreen
+  commentId: F:rwby.ui.MainMenu.MainMenuManager.onlineScreen
+  id: onlineScreen
+  parent: rwby.ui.MainMenu.MainMenuManager
+  langs:
+  - csharp
+  - vb
+  name: onlineScreen
+  nameWithType: MainMenuManager.onlineScreen
+  fullName: rwby.ui.MainMenu.MainMenuManager.onlineScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onlineScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: rwby.ui.MainMenu
+  syntax:
+    content: public MenuBase onlineScreen
+    return:
+      type: rwby.ui.MenuBase
+    content.vb: Public onlineScreen As MenuBase
+- uid: rwby.ui.MainMenu.MainMenuManager.localScreen
+  commentId: F:rwby.ui.MainMenu.MainMenuManager.localScreen
+  id: localScreen
+  parent: rwby.ui.MainMenu.MainMenuManager
+  langs:
+  - csharp
+  - vb
+  name: localScreen
+  nameWithType: MainMenuManager.localScreen
+  fullName: rwby.ui.MainMenu.MainMenuManager.localScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+    startLine: 18
+  assemblies:
+  - rwby
+  namespace: rwby.ui.MainMenu
+  syntax:
+    content: public MenuBase localScreen
+    return:
+      type: rwby.ui.MenuBase
+    content.vb: Public localScreen As MenuBase
+- uid: rwby.ui.MainMenu.MainMenuManager.modsScreen
+  commentId: F:rwby.ui.MainMenu.MainMenuManager.modsScreen
+  id: modsScreen
+  parent: rwby.ui.MainMenu.MainMenuManager
+  langs:
+  - csharp
+  - vb
+  name: modsScreen
+  nameWithType: MainMenuManager.modsScreen
+  fullName: rwby.ui.MainMenu.MainMenuManager.modsScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: modsScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: rwby.ui.MainMenu
+  syntax:
+    content: public MenuBase modsScreen
+    return:
+      type: rwby.ui.MenuBase
+    content.vb: Public modsScreen As MenuBase
 - uid: rwby.ui.MainMenu.MainMenuManager.optionsScreen
   commentId: F:rwby.ui.MainMenu.MainMenuManager.optionsScreen
   id: optionsScreen
@@ -205,7 +235,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: optionsScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 29
+    startLine: 20
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -232,7 +262,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: findLobbyScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 30
+    startLine: 21
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -259,7 +289,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: createLobbyScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 31
+    startLine: 22
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -268,33 +298,6 @@ items:
     return:
       type: rwby.ui.MenuBase
     content.vb: Public createLobbyScreen As MenuBase
-- uid: rwby.ui.MainMenu.MainMenuManager.testUIScreen
-  commentId: F:rwby.ui.MainMenu.MainMenuManager.testUIScreen
-  id: testUIScreen
-  parent: rwby.ui.MainMenu.MainMenuManager
-  langs:
-  - csharp
-  - vb
-  name: testUIScreen
-  nameWithType: MainMenuManager.testUIScreen
-  fullName: rwby.ui.MainMenu.MainMenuManager.testUIScreen
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: testUIScreen
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 32
-  assemblies:
-  - rwby
-  namespace: rwby.ui.MainMenu
-  syntax:
-    content: public MenuBase testUIScreen
-    return:
-      type: rwby.ui.MenuBase
-    content.vb: Public testUIScreen As MenuBase
 - uid: rwby.ui.MainMenu.MainMenuManager.mainMenuCamera
   commentId: F:rwby.ui.MainMenu.MainMenuManager.mainMenuCamera
   id: mainMenuCamera
@@ -313,7 +316,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: mainMenuCamera
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 34
+    startLine: 24
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -340,7 +343,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: skipTitleScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 36
+    startLine: 26
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -349,6 +352,70 @@ items:
     return:
       type: System.Boolean
     content.vb: Public skipTitleScreen As Boolean
+- uid: rwby.ui.MainMenu.MainMenuManager.cutscenePlayer
+  commentId: F:rwby.ui.MainMenu.MainMenuManager.cutscenePlayer
+  id: cutscenePlayer
+  parent: rwby.ui.MainMenu.MainMenuManager
+  langs:
+  - csharp
+  - vb
+  name: cutscenePlayer
+  nameWithType: MainMenuManager.cutscenePlayer
+  fullName: rwby.ui.MainMenu.MainMenuManager.cutscenePlayer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: cutscenePlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+    startLine: 28
+  assemblies:
+  - rwby
+  namespace: rwby.ui.MainMenu
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public MenuCutscenePlayer cutscenePlayer
+    return:
+      type: Global.MenuCutscenePlayer
+    content.vb: >-
+      <NonSerialized>
+
+      Public cutscenePlayer As MenuCutscenePlayer
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.ui.MainMenu.MainMenuManager.localSceneSwitcher
+  commentId: F:rwby.ui.MainMenu.MainMenuManager.localSceneSwitcher
+  id: localSceneSwitcher
+  parent: rwby.ui.MainMenu.MainMenuManager
+  langs:
+  - csharp
+  - vb
+  name: localSceneSwitcher
+  nameWithType: MainMenuManager.localSceneSwitcher
+  fullName: rwby.ui.MainMenu.MainMenuManager.localSceneSwitcher
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localSceneSwitcher
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+    startLine: 30
+  assemblies:
+  - rwby
+  namespace: rwby.ui.MainMenu
+  syntax:
+    content: public MainMenuLocalSceneSwitcher localSceneSwitcher
+    return:
+      type: Global.MainMenuLocalSceneSwitcher
+    content.vb: Public localSceneSwitcher As MainMenuLocalSceneSwitcher
 - uid: rwby.ui.MainMenu.MainMenuManager.Start
   commentId: M:rwby.ui.MainMenu.MainMenuManager.Start
   id: Start
@@ -367,7 +434,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Start
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 43
+    startLine: 37
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -375,16 +442,45 @@ items:
     content: public void Start()
     content.vb: Public Sub Start()
   overload: rwby.ui.MainMenu.MainMenuManager.Start*
-- uid: rwby.ui.MainMenu.MainMenuManager.Forward(System.Int32,System.Boolean)
-  commentId: M:rwby.ui.MainMenu.MainMenuManager.Forward(System.Int32,System.Boolean)
-  id: Forward(System.Int32,System.Boolean)
+- uid: rwby.ui.MainMenu.MainMenuManager.ResetAndForwardTo(rwby.ui.IMenu)
+  commentId: M:rwby.ui.MainMenu.MainMenuManager.ResetAndForwardTo(rwby.ui.IMenu)
+  id: ResetAndForwardTo(rwby.ui.IMenu)
   parent: rwby.ui.MainMenu.MainMenuManager
   langs:
   - csharp
   - vb
-  name: Forward(int, bool)
-  nameWithType: MainMenuManager.Forward(int, bool)
-  fullName: rwby.ui.MainMenu.MainMenuManager.Forward(int, bool)
+  name: ResetAndForwardTo(IMenu)
+  nameWithType: MainMenuManager.ResetAndForwardTo(IMenu)
+  fullName: rwby.ui.MainMenu.MainMenuManager.ResetAndForwardTo(rwby.ui.IMenu)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ResetAndForwardTo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
+    startLine: 77
+  assemblies:
+  - rwby
+  namespace: rwby.ui.MainMenu
+  syntax:
+    content: public virtual void ResetAndForwardTo(IMenu menuToForwardTo)
+    parameters:
+    - id: menuToForwardTo
+      type: rwby.ui.IMenu
+    content.vb: Public Overridable Sub ResetAndForwardTo(menuToForwardTo As IMenu)
+  overload: rwby.ui.MainMenu.MainMenuManager.ResetAndForwardTo*
+- uid: rwby.ui.MainMenu.MainMenuManager.Forward(rwby.ui.IMenu,System.Boolean)
+  commentId: M:rwby.ui.MainMenu.MainMenuManager.Forward(rwby.ui.IMenu,System.Boolean)
+  id: Forward(rwby.ui.IMenu,System.Boolean)
+  parent: rwby.ui.MainMenu.MainMenuManager
+  langs:
+  - csharp
+  - vb
+  name: Forward(IMenu, bool)
+  nameWithType: MainMenuManager.Forward(IMenu, bool)
+  fullName: rwby.ui.MainMenu.MainMenuManager.Forward(rwby.ui.IMenu, bool)
   type: Method
   source:
     remote:
@@ -393,27 +489,27 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Forward
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 80
+    startLine: 87
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
   example: []
   syntax:
-    content: public bool Forward(int menu, bool autoClose = true)
+    content: public bool Forward(IMenu menu, bool autoClose = true)
     parameters:
     - id: menu
-      type: System.Int32
+      type: rwby.ui.IMenu
     - id: autoClose
       type: System.Boolean
     return:
       type: System.Boolean
-    content.vb: Public Function Forward(menu As Integer, autoClose As Boolean = True) As Boolean
+    content.vb: Public Function Forward(menu As IMenu, autoClose As Boolean = True) As Boolean
   overload: rwby.ui.MainMenu.MainMenuManager.Forward*
   implements:
-  - rwby.ui.IMenuHandler.Forward(System.Int32,System.Boolean)
-  nameWithType.vb: MainMenuManager.Forward(Integer, Boolean)
-  fullName.vb: rwby.ui.MainMenu.MainMenuManager.Forward(Integer, Boolean)
-  name.vb: Forward(Integer, Boolean)
+  - rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu,System.Boolean)
+  nameWithType.vb: MainMenuManager.Forward(IMenu, Boolean)
+  fullName.vb: rwby.ui.MainMenu.MainMenuManager.Forward(rwby.ui.IMenu, Boolean)
+  name.vb: Forward(IMenu, Boolean)
 - uid: rwby.ui.MainMenu.MainMenuManager.Back
   commentId: M:rwby.ui.MainMenu.MainMenuManager.Back
   id: Back
@@ -432,7 +528,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Back
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 91
+    startLine: 101
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -463,16 +559,16 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHistory
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 100
+    startLine: 114
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
   example: []
   syntax:
-    content: public IList GetHistory()
+    content: public List<IMenu> GetHistory()
     return:
-      type: System.Collections.IList
-    content.vb: Public Function GetHistory() As IList
+      type: System.Collections.Generic.List{rwby.ui.IMenu}
+    content.vb: Public Function GetHistory() As List(Of IMenu)
   overload: rwby.ui.MainMenu.MainMenuManager.GetHistory*
   implements:
   - rwby.ui.IMenuHandler.GetHistory
@@ -494,7 +590,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetPreviousMenu
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 105
+    startLine: 119
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -522,7 +618,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetCurrentMenu
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 111
+    startLine: 125
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -553,7 +649,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: HasSubmenuOpen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuManager.cs
-    startLine: 117
+    startLine: 131
   assemblies:
   - rwby
   namespace: rwby.ui.MainMenu
@@ -685,145 +781,6 @@ references:
   name: MainMenuManager
   nameWithType: MainMenuManager
   fullName: rwby.ui.MainMenu.MainMenuManager
-- uid: System.Collections.Generic.Dictionary{System.Int32,rwby.ui.MenuBase}
-  commentId: T:System.Collections.Generic.Dictionary{System.Int32,rwby.ui.MenuBase}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.Dictionary`2
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  name: Dictionary<int, MenuBase>
-  nameWithType: Dictionary<int, MenuBase>
-  fullName: System.Collections.Generic.Dictionary<int, rwby.ui.MenuBase>
-  nameWithType.vb: Dictionary(Of Integer, MenuBase)
-  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, rwby.ui.MenuBase)
-  name.vb: Dictionary(Of Integer, MenuBase)
-  spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  - name: <
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: rwby.ui.MenuBase
-    name: MenuBase
-    href: rwby.ui.MenuBase.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: rwby.ui.MenuBase
-    name: MenuBase
-    href: rwby.ui.MenuBase.html
-  - name: )
-- uid: System.Collections.Generic.Dictionary`2
-  commentId: T:System.Collections.Generic.Dictionary`2
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  name: Dictionary<TKey, TValue>
-  nameWithType: Dictionary<TKey, TValue>
-  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
-  nameWithType.vb: Dictionary(Of TKey, TValue)
-  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
-  name.vb: Dictionary(Of TKey, TValue)
-  spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  - name: <
-  - name: TKey
-  - name: ','
-  - name: " "
-  - name: TValue
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  - name: (
-  - name: Of
-  - name: " "
-  - name: TKey
-  - name: ','
-  - name: " "
-  - name: TValue
-  - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: rwby.ui.MainMenu.MainMenuManager.MainMenuScreens
-  commentId: T:rwby.ui.MainMenu.MainMenuManager.MainMenuScreens
-  parent: rwby.ui.MainMenu
-  href: rwby.ui.MainMenu.MainMenuManager.html
-  name: MainMenuManager.MainMenuScreens
-  nameWithType: MainMenuManager.MainMenuScreens
-  fullName: rwby.ui.MainMenu.MainMenuManager.MainMenuScreens
-  spec.csharp:
-  - uid: rwby.ui.MainMenu.MainMenuManager
-    name: MainMenuManager
-    href: rwby.ui.MainMenu.MainMenuManager.html
-  - name: .
-  - uid: rwby.ui.MainMenu.MainMenuManager.MainMenuScreens
-    name: MainMenuScreens
-    href: rwby.ui.MainMenu.MainMenuManager.MainMenuScreens.html
-  spec.vb:
-  - uid: rwby.ui.MainMenu.MainMenuManager
-    name: MainMenuManager
-    href: rwby.ui.MainMenu.MainMenuManager.html
-  - name: .
-  - uid: rwby.ui.MainMenu.MainMenuManager.MainMenuScreens
-    name: MainMenuScreens
-    href: rwby.ui.MainMenu.MainMenuManager.MainMenuScreens.html
 - uid: rwby.ui.MenuBase
   commentId: T:rwby.ui.MenuBase
   parent: rwby.ui
@@ -849,38 +806,62 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: Global.MenuCutscenePlayer
+  commentId: T:Global.MenuCutscenePlayer
+  href: MenuCutscenePlayer.html
+  name: MenuCutscenePlayer
+  nameWithType: MenuCutscenePlayer
+  fullName: MenuCutscenePlayer
+- uid: Global.MainMenuLocalSceneSwitcher
+  commentId: T:Global.MainMenuLocalSceneSwitcher
+  href: MainMenuLocalSceneSwitcher.html
+  name: MainMenuLocalSceneSwitcher
+  nameWithType: MainMenuLocalSceneSwitcher
+  fullName: MainMenuLocalSceneSwitcher
 - uid: rwby.ui.MainMenu.MainMenuManager.Start*
   commentId: Overload:rwby.ui.MainMenu.MainMenuManager.Start
   href: rwby.ui.MainMenu.MainMenuManager.html#rwby_ui_MainMenu_MainMenuManager_Start
   name: Start
   nameWithType: MainMenuManager.Start
   fullName: rwby.ui.MainMenu.MainMenuManager.Start
+- uid: rwby.ui.MainMenu.MainMenuManager.ResetAndForwardTo*
+  commentId: Overload:rwby.ui.MainMenu.MainMenuManager.ResetAndForwardTo
+  href: rwby.ui.MainMenu.MainMenuManager.html#rwby_ui_MainMenu_MainMenuManager_ResetAndForwardTo_rwby_ui_IMenu_
+  name: ResetAndForwardTo
+  nameWithType: MainMenuManager.ResetAndForwardTo
+  fullName: rwby.ui.MainMenu.MainMenuManager.ResetAndForwardTo
+- uid: rwby.ui.IMenu
+  commentId: T:rwby.ui.IMenu
+  parent: rwby.ui
+  href: rwby.ui.IMenu.html
+  name: IMenu
+  nameWithType: IMenu
+  fullName: rwby.ui.IMenu
 - uid: rwby.ui.MainMenu.MainMenuManager.Forward*
   commentId: Overload:rwby.ui.MainMenu.MainMenuManager.Forward
-  href: rwby.ui.MainMenu.MainMenuManager.html#rwby_ui_MainMenu_MainMenuManager_Forward_System_Int32_System_Boolean_
+  href: rwby.ui.MainMenu.MainMenuManager.html#rwby_ui_MainMenu_MainMenuManager_Forward_rwby_ui_IMenu_System_Boolean_
   name: Forward
   nameWithType: MainMenuManager.Forward
   fullName: rwby.ui.MainMenu.MainMenuManager.Forward
-- uid: rwby.ui.IMenuHandler.Forward(System.Int32,System.Boolean)
-  commentId: M:rwby.ui.IMenuHandler.Forward(System.Int32,System.Boolean)
+- uid: rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu,System.Boolean)
+  commentId: M:rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu,System.Boolean)
   parent: rwby.ui.IMenuHandler
   isExternal: true
-  href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_System_Int32_System_Boolean_
-  name: Forward(int, bool)
-  nameWithType: IMenuHandler.Forward(int, bool)
-  fullName: rwby.ui.IMenuHandler.Forward(int, bool)
-  nameWithType.vb: IMenuHandler.Forward(Integer, Boolean)
-  fullName.vb: rwby.ui.IMenuHandler.Forward(Integer, Boolean)
-  name.vb: Forward(Integer, Boolean)
+  href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_rwby_ui_IMenu_System_Boolean_
+  name: Forward(IMenu, bool)
+  nameWithType: IMenuHandler.Forward(IMenu, bool)
+  fullName: rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu, bool)
+  nameWithType.vb: IMenuHandler.Forward(IMenu, Boolean)
+  fullName.vb: rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu, Boolean)
+  name.vb: Forward(IMenu, Boolean)
   spec.csharp:
-  - uid: rwby.ui.IMenuHandler.Forward(System.Int32,System.Boolean)
+  - uid: rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu,System.Boolean)
     name: Forward
-    href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_System_Int32_System_Boolean_
+    href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_rwby_ui_IMenu_System_Boolean_
   - name: (
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
   - name: ','
   - name: " "
   - uid: System.Boolean
@@ -889,14 +870,13 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
   spec.vb:
-  - uid: rwby.ui.IMenuHandler.Forward(System.Int32,System.Boolean)
+  - uid: rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu,System.Boolean)
     name: Forward
-    href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_System_Int32_System_Boolean_
+    href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_rwby_ui_IMenu_System_Boolean_
   - name: (
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
   - name: ','
   - name: " "
   - uid: System.Boolean
@@ -904,17 +884,6 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: rwby.ui.MainMenu.MainMenuManager.Back*
   commentId: Overload:rwby.ui.MainMenu.MainMenuManager.Back
   href: rwby.ui.MainMenu.MainMenuManager.html#rwby_ui_MainMenu_MainMenuManager_Back
@@ -965,21 +934,74 @@ references:
     href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_GetHistory
   - name: (
   - name: )
-- uid: System.Collections.IList
-  commentId: T:System.Collections.IList
-  parent: System.Collections
+- uid: System.Collections.Generic.List{rwby.ui.IMenu}
+  commentId: T:System.Collections.Generic.List{rwby.ui.IMenu}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<IMenu>
+  nameWithType: List<IMenu>
+  fullName: System.Collections.Generic.List<rwby.ui.IMenu>
+  nameWithType.vb: List(Of IMenu)
+  fullName.vb: System.Collections.Generic.List(Of rwby.ui.IMenu)
+  name.vb: List(Of IMenu)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
-  name: IList
-  nameWithType: IList
-  fullName: System.Collections.IList
-- uid: System.Collections
-  commentId: N:System.Collections
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections
-  nameWithType: System.Collections
-  fullName: System.Collections
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
   spec.csharp:
   - uid: System
     name: System
@@ -990,6 +1012,11 @@ references:
     name: Collections
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
   spec.vb:
   - uid: System
     name: System
@@ -1000,19 +1027,17 @@ references:
     name: Collections
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: rwby.ui.MainMenu.MainMenuManager.GetPreviousMenu*
   commentId: Overload:rwby.ui.MainMenu.MainMenuManager.GetPreviousMenu
   href: rwby.ui.MainMenu.MainMenuManager.html#rwby_ui_MainMenu_MainMenuManager_GetPreviousMenu
   name: GetPreviousMenu
   nameWithType: MainMenuManager.GetPreviousMenu
   fullName: rwby.ui.MainMenu.MainMenuManager.GetPreviousMenu
-- uid: rwby.ui.IMenu
-  commentId: T:rwby.ui.IMenu
-  parent: rwby.ui
-  href: rwby.ui.IMenu.html
-  name: IMenu
-  nameWithType: IMenu
-  fullName: rwby.ui.IMenu
 - uid: rwby.ui.MainMenu.MainMenuManager.GetCurrentMenu*
   commentId: Overload:rwby.ui.MainMenu.MainMenuManager.GetCurrentMenu
   href: rwby.ui.MainMenu.MainMenuManager.html#rwby_ui_MainMenu_MainMenuManager_GetCurrentMenu

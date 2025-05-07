@@ -22,6 +22,7 @@ items:
   - rwby.UModModInfoAsset.ModDefinition
   - rwby.UModModInfoAsset.ModID
   - rwby.UModModInfoAsset.OnLoad
+  - rwby.UModModInfoAsset.OnUModPrebuild
   - rwby.UModModInfoAsset.OnUnload
   - rwby.UModModInfoAsset.RegisterQuantumAsset(System.String)
   - rwby.UModModInfoAsset.TryRegisterQuantumAsset(UnityEngine.Object,System.Boolean)
@@ -58,18 +59,20 @@ items:
 
       [Serializable]
 
-      public class UModModInfoAsset : BaseModInfoAsset
+      public class UModModInfoAsset : BaseModInfoAsset, IOnUModPrebuild
     content.vb: >-
       <CreateAssetMenu(menuName:="rwby/modding/UMod ModInfoAsset")>
 
       <Serializable>
 
-      Public Class UModModInfoAsset Inherits BaseModInfoAsset
+      Public Class UModModInfoAsset Inherits BaseModInfoAsset Implements IOnUModPrebuild
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Global.BaseModInfoAsset
+  implements:
+  - rwby.IOnUModPrebuild
   inheritedMembers:
   - Global.BaseModInfoAsset.ModVersion
   - Global.BaseModInfoAsset.OnlineRequirement
@@ -441,6 +444,35 @@ items:
     return:
       type: System.Collections.Generic.List{rwby.ExternalModAssetSoftReference}
     content.vb: Public excludedAssetsFromAutoCreation As List(Of ExternalModAssetSoftReference)
+- uid: rwby.UModModInfoAsset.OnUModPrebuild
+  commentId: M:rwby.UModModInfoAsset.OnUModPrebuild
+  id: OnUModPrebuild
+  parent: rwby.UModModInfoAsset
+  langs:
+  - csharp
+  - vb
+  name: OnUModPrebuild()
+  nameWithType: UModModInfoAsset.OnUModPrebuild()
+  fullName: rwby.UModModInfoAsset.OnUModPrebuild()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnUModPrebuild
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
+    startLine: 72
+  assemblies:
+  - rwby.modding.umod
+  namespace: rwby
+  example: []
+  syntax:
+    content: public void OnUModPrebuild()
+    content.vb: Public Sub OnUModPrebuild()
+  overload: rwby.UModModInfoAsset.OnUModPrebuild*
+  implements:
+  - rwby.IOnUModPrebuild.OnUModPrebuild
 - uid: rwby.UModModInfoAsset.OnLoad
   commentId: M:rwby.UModModInfoAsset.OnLoad
   id: OnLoad
@@ -459,7 +491,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnLoad
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 73
+    startLine: 77
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -488,7 +520,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnUnload
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 87
+    startLine: 91
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -517,7 +549,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetAssetList
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 95
+    startLine: 99
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -549,7 +581,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryRegisterQuantumAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 100
+    startLine: 104
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -585,7 +617,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryUnregisterQuantumAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 115
+    startLine: 119
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -621,7 +653,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RegisterQuantumAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 130
+    startLine: 134
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -656,7 +688,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnregisterQuantumAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 140
+    startLine: 144
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -691,7 +723,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetLoadedAssetListByType
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 150
+    startLine: 154
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -729,7 +761,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetLoadedAssetList
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 164
+    startLine: 168
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -761,7 +793,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: HasAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 172
+    startLine: 176
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -797,7 +829,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadAssetByID
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 199
+    startLine: 203
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -836,7 +868,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadAssetByIDAsync
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 228
+    startLine: 232
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -875,7 +907,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetAssetByID
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 259
+    startLine: 263
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -915,7 +947,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetAssetByID
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 264
+    startLine: 268
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -953,7 +985,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetAssetsByID
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 271
+    startLine: 275
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -987,7 +1019,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetLoadedAssetByPath
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 290
+    startLine: 294
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -1021,7 +1053,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetAssetsByType
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 295
+    startLine: 299
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -1059,7 +1091,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetAssetInfo
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 311
+    startLine: 315
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -1095,7 +1127,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnloadAssetByID
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 319
+    startLine: 323
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -1129,7 +1161,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnloadAssetsByType
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs
-    startLine: 323
+    startLine: 327
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -1185,6 +1217,13 @@ references:
   name: BaseModInfoAsset
   nameWithType: BaseModInfoAsset
   fullName: BaseModInfoAsset
+- uid: rwby.IOnUModPrebuild
+  commentId: T:rwby.IOnUModPrebuild
+  parent: rwby
+  href: rwby.IOnUModPrebuild.html
+  name: IOnUModPrebuild
+  nameWithType: IOnUModPrebuild
+  fullName: rwby.IOnUModPrebuild
 - uid: Global.BaseModInfoAsset.ModVersion
   commentId: P:Global.BaseModInfoAsset.ModVersion
   parent: Global.BaseModInfoAsset
@@ -1675,6 +1714,31 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: rwby.UModModInfoAsset.OnUModPrebuild*
+  commentId: Overload:rwby.UModModInfoAsset.OnUModPrebuild
+  href: rwby.UModModInfoAsset.html#rwby_UModModInfoAsset_OnUModPrebuild
+  name: OnUModPrebuild
+  nameWithType: UModModInfoAsset.OnUModPrebuild
+  fullName: rwby.UModModInfoAsset.OnUModPrebuild
+- uid: rwby.IOnUModPrebuild.OnUModPrebuild
+  commentId: M:rwby.IOnUModPrebuild.OnUModPrebuild
+  parent: rwby.IOnUModPrebuild
+  href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
+  name: OnUModPrebuild()
+  nameWithType: IOnUModPrebuild.OnUModPrebuild()
+  fullName: rwby.IOnUModPrebuild.OnUModPrebuild()
+  spec.csharp:
+  - uid: rwby.IOnUModPrebuild.OnUModPrebuild
+    name: OnUModPrebuild
+    href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.IOnUModPrebuild.OnUModPrebuild
+    name: OnUModPrebuild
+    href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
+  - name: (
+  - name: )
 - uid: Global.BaseModInfoAsset.OnLoad
   commentId: M:Global.BaseModInfoAsset.OnLoad
   parent: Global.BaseModInfoAsset

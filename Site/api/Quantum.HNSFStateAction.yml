@@ -36,8 +36,8 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public class HNSFStateAction : AssetObject'
-    content.vb: Public Class HNSFStateAction Inherits AssetObject
+    content: 'public class HNSFStateAction : AssetObject, ILogSource'
+    content.vb: Public Class HNSFStateAction Inherits AssetObject Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -60,11 +60,13 @@ items:
   - Quantum.ClearComboAction
   - Quantum.ClearHitEntitiesAction
   - Quantum.ClearInputFromBufferAction
+  - Quantum.ClearTouchedEntitiesAfterHitAction
   - Quantum.ClearTrackedStatesAction
   - Quantum.CreateOrUpdateCollisionbox
   - Quantum.CreateOrUpdateHitbox
   - Quantum.CreateOrUpdateHurtbox
   - Quantum.CreateOrUpdateThrowbox
+  - Quantum.CreateOrUpdateWarningbox
   - Quantum.DebugMessageAction
   - Quantum.DirectDamageAction
   - Quantum.DisableHardTargetingEntityAction
@@ -78,6 +80,7 @@ items:
   - Quantum.ModifyAuraAction
   - Quantum.ModifyBlackboardBoolAction
   - Quantum.ModifyBlackboardFPAction
+  - Quantum.ModifyBlackboardFPVector3Action
   - Quantum.ModifyBlackboardIntAction
   - Quantum.ModifyForcesAction
   - Quantum.ModifyGravityAction
@@ -86,15 +89,17 @@ items:
   - Quantum.ModifyInertiaAction
   - Quantum.ModifyPassiveAuraGainDelayAction
   - Quantum.ModifyPhysicsForcesAction
-  - Quantum.ModifySpecialPageAction
-  - Quantum.ModifySpecialPageSetAction
   - Quantum.ModifyStateFrameAction
   - Quantum.MoveTowardsPhysicsForceAction
   - Quantum.MultiplyForcesAction
+  - Quantum.PhysicsBodyClampGravity
+  - Quantum.PhysicsBodyModifyGravityAction
+  - Quantum.PhysicsBodyMoveTowardsPositionAction
   - Quantum.PlayEffectOnChargeLevelAction
   - Quantum.PlayRandomSoundAction
   - Quantum.PlaySoundAction
   - Quantum.PlayVisualEffectAction
+  - Quantum.RefreshValidSpecialsAction
   - Quantum.RegisterAttackToStringAction
   - Quantum.ReleaseThroweeAction
   - Quantum.RequestStateChangeAction
@@ -131,6 +136,8 @@ items:
   - Quantum.StopVisualEffectAction
   - Quantum.TeleportRelatedToTargetAction
   - Quantum.TrackStateAction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -160,7 +167,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Label
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 16
+    startLine: 21
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -187,7 +194,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: parent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 17
+    startLine: 22
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -214,7 +221,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: children
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 18
+    startLine: 23
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -241,7 +248,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: frameRanges
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 19
+    startLine: 24
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -268,7 +275,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: actionDisabled
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 20
+    startLine: 25
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -295,7 +302,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: decision
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 22
+    startLine: 27
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -322,7 +329,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: targetType
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 24
+    startLine: 29
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -349,7 +356,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Copy
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 26
+    startLine: 31
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -378,7 +385,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Execute
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 31
+    startLine: 36
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -422,7 +429,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Execute
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 38
+    startLine: 43
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -466,7 +473,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Execute
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 70
+    startLine: 75
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -512,7 +519,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ExecuteAction
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 96
+    startLine: 101
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -573,6 +580,13 @@ references:
   name: AssetObject
   nameWithType: AssetObject
   fullName: Quantum.AssetObject
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject

@@ -24,8 +24,8 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public class AIConfig : AIConfigBase'
-    content.vb: Public Class AIConfig Inherits AIConfigBase
+    content: 'public class AIConfig : AIConfigBase, ILogSource'
+    content.vb: Public Class AIConfig Inherits AIConfigBase Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -34,6 +34,8 @@ items:
   - Quantum.AIConfigBase
   derivedClasses:
   - Quantum.AIConfigUser
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AIConfigBase.DefaultConfig
   - Quantum.AIConfigBase.KeyValuePairs
@@ -96,6 +98,13 @@ references:
   name: AIConfigBase
   nameWithType: AIConfigBase
   fullName: Quantum.AIConfigBase
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AIConfigBase.DefaultConfig
   commentId: F:Quantum.AIConfigBase.DefaultConfig
   parent: Quantum.AIConfigBase

@@ -8,7 +8,7 @@ items:
   - rwby.CreateLobbyScreen.BUTTON_CreateLobby
   - rwby.CreateLobbyScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   - rwby.CreateLobbyScreen.TryClose(rwby.ui.MenuDirection,System.Boolean)
-  - rwby.CreateLobbyScreen.TryCreateLobby
+  - rwby.CreateLobbyScreen.canvasGroup
   - rwby.CreateLobbyScreen.lobbyMaxPlayerField
   - rwby.CreateLobbyScreen.lobbyNameField
   - rwby.CreateLobbyScreen.lobbyPasswordField
@@ -27,7 +27,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateLobbyScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - rwby
   namespace: rwby
@@ -44,7 +44,8 @@ items:
   implements:
   - rwby.ui.IMenu
   inheritedMembers:
-  - rwby.ui.MenuBase.currentHandler
+  - rwby.ui.MenuBase.MenuHandler
+  - rwby.ui.MenuBase.history
 - uid: rwby.CreateLobbyScreen.lobbyNameField
   commentId: F:rwby.CreateLobbyScreen.lobbyNameField
   id: lobbyNameField
@@ -63,7 +64,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lobbyNameField
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - rwby
   namespace: rwby
@@ -90,7 +91,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lobbyPasswordField
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - rwby
   namespace: rwby
@@ -117,7 +118,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lobbyMaxPlayerField
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - rwby
   namespace: rwby
@@ -144,7 +145,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: modStrictnessDropdown
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - rwby
   namespace: rwby
@@ -153,6 +154,33 @@ items:
     return:
       type: TMPro.TMP_Dropdown
     content.vb: Public modStrictnessDropdown As TMP_Dropdown
+- uid: rwby.CreateLobbyScreen.canvasGroup
+  commentId: F:rwby.CreateLobbyScreen.canvasGroup
+  id: canvasGroup
+  parent: rwby.CreateLobbyScreen
+  langs:
+  - csharp
+  - vb
+  name: canvasGroup
+  nameWithType: CreateLobbyScreen.canvasGroup
+  fullName: rwby.CreateLobbyScreen.canvasGroup
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: canvasGroup
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public CanvasGroup canvasGroup
+    return:
+      type: UnityEngine.CanvasGroup
+    content.vb: Public canvasGroup As CanvasGroup
 - uid: rwby.CreateLobbyScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   commentId: M:rwby.CreateLobbyScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   id: Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
@@ -171,7 +199,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Open
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - rwby
   namespace: rwby
@@ -204,7 +232,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryClose
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - rwby
   namespace: rwby
@@ -242,7 +270,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BUTTON_CreateLobby
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
-    startLine: 27
+    startLine: 32
   assemblies:
   - rwby
   namespace: rwby
@@ -250,34 +278,6 @@ items:
     content: public void BUTTON_CreateLobby()
     content.vb: Public Sub BUTTON_CreateLobby()
   overload: rwby.CreateLobbyScreen.BUTTON_CreateLobby*
-- uid: rwby.CreateLobbyScreen.TryCreateLobby
-  commentId: M:rwby.CreateLobbyScreen.TryCreateLobby
-  id: TryCreateLobby
-  parent: rwby.CreateLobbyScreen
-  langs:
-  - csharp
-  - vb
-  name: TryCreateLobby()
-  nameWithType: CreateLobbyScreen.TryCreateLobby()
-  fullName: rwby.CreateLobbyScreen.TryCreateLobby()
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: TryCreateLobby
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/CreateLobbyScreen.cs
-    startLine: 32
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public UniTask<bool> TryCreateLobby()
-    return:
-      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
-    content.vb: Public Function TryCreateLobby() As UniTask(Of Boolean)
-  overload: rwby.CreateLobbyScreen.TryCreateLobby*
 references:
 - uid: rwby
   commentId: N:rwby
@@ -338,13 +338,20 @@ references:
   name: IMenu
   nameWithType: IMenu
   fullName: rwby.ui.IMenu
-- uid: rwby.ui.MenuBase.currentHandler
-  commentId: F:rwby.ui.MenuBase.currentHandler
+- uid: rwby.ui.MenuBase.MenuHandler
+  commentId: P:rwby.ui.MenuBase.MenuHandler
   parent: rwby.ui.MenuBase
-  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_currentHandler
-  name: currentHandler
-  nameWithType: MenuBase.currentHandler
-  fullName: rwby.ui.MenuBase.currentHandler
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_MenuHandler
+  name: MenuHandler
+  nameWithType: MenuBase.MenuHandler
+  fullName: rwby.ui.MenuBase.MenuHandler
+- uid: rwby.ui.MenuBase.history
+  commentId: F:rwby.ui.MenuBase.history
+  parent: rwby.ui.MenuBase
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_history
+  name: history
+  nameWithType: MenuBase.history
+  fullName: rwby.ui.MenuBase.history
 - uid: System
   commentId: N:System
   isExternal: true
@@ -400,6 +407,13 @@ references:
   name: TMP_Dropdown
   nameWithType: TMP_Dropdown
   fullName: TMPro.TMP_Dropdown
+- uid: UnityEngine.CanvasGroup
+  commentId: T:UnityEngine.CanvasGroup
+  parent: UnityEngine
+  isExternal: true
+  name: CanvasGroup
+  nameWithType: CanvasGroup
+  fullName: UnityEngine.CanvasGroup
 - uid: rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   commentId: M:rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   parent: rwby.ui.MenuBase
@@ -519,97 +533,3 @@ references:
   name: BUTTON_CreateLobby
   nameWithType: CreateLobbyScreen.BUTTON_CreateLobby
   fullName: rwby.CreateLobbyScreen.BUTTON_CreateLobby
-- uid: rwby.CreateLobbyScreen.TryCreateLobby*
-  commentId: Overload:rwby.CreateLobbyScreen.TryCreateLobby
-  href: rwby.CreateLobbyScreen.html#rwby_CreateLobbyScreen_TryCreateLobby
-  name: TryCreateLobby
-  nameWithType: CreateLobbyScreen.TryCreateLobby
-  fullName: rwby.CreateLobbyScreen.TryCreateLobby
-- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
-  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
-  parent: Cysharp.Threading.Tasks
-  definition: Cysharp.Threading.Tasks.UniTask`1
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: UniTask<bool>
-  nameWithType: UniTask<bool>
-  fullName: Cysharp.Threading.Tasks.UniTask<bool>
-  nameWithType.vb: UniTask(Of Boolean)
-  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
-  name.vb: UniTask(Of Boolean)
-  spec.csharp:
-  - uid: Cysharp.Threading.Tasks.UniTask`1
-    name: UniTask
-    isExternal: true
-  - name: <
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: '>'
-  spec.vb:
-  - uid: Cysharp.Threading.Tasks.UniTask`1
-    name: UniTask
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
-- uid: Cysharp.Threading.Tasks.UniTask`1
-  commentId: T:Cysharp.Threading.Tasks.UniTask`1
-  isExternal: true
-  name: UniTask<T>
-  nameWithType: UniTask<T>
-  fullName: Cysharp.Threading.Tasks.UniTask<T>
-  nameWithType.vb: UniTask(Of T)
-  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
-  name.vb: UniTask(Of T)
-  spec.csharp:
-  - uid: Cysharp.Threading.Tasks.UniTask`1
-    name: UniTask
-    isExternal: true
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: Cysharp.Threading.Tasks.UniTask`1
-    name: UniTask
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: Cysharp.Threading.Tasks
-  commentId: N:Cysharp.Threading.Tasks
-  isExternal: true
-  name: Cysharp.Threading.Tasks
-  nameWithType: Cysharp.Threading.Tasks
-  fullName: Cysharp.Threading.Tasks
-  spec.csharp:
-  - uid: Cysharp
-    name: Cysharp
-    isExternal: true
-  - name: .
-  - uid: Cysharp.Threading
-    name: Threading
-    isExternal: true
-  - name: .
-  - uid: Cysharp.Threading.Tasks
-    name: Tasks
-    isExternal: true
-  spec.vb:
-  - uid: Cysharp
-    name: Cysharp
-    isExternal: true
-  - name: .
-  - uid: Cysharp.Threading
-    name: Threading
-    isExternal: true
-  - name: .
-  - uid: Cysharp.Threading.Tasks
-    name: Tasks
-    isExternal: true

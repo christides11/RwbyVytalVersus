@@ -5,15 +5,18 @@ items:
   id: InputActions.IUIActions
   parent: rwby
   children:
-  - rwby.InputActions.IUIActions.OnAlternative(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - rwby.InputActions.IUIActions.OnAlt1(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - rwby.InputActions.IUIActions.OnAlt2(UnityEngine.InputSystem.InputAction.CallbackContext)
   - rwby.InputActions.IUIActions.OnCancel(UnityEngine.InputSystem.InputAction.CallbackContext)
   - rwby.InputActions.IUIActions.OnClick(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - rwby.InputActions.IUIActions.OnExit(UnityEngine.InputSystem.InputAction.CallbackContext)
   - rwby.InputActions.IUIActions.OnMiddleClick(UnityEngine.InputSystem.InputAction.CallbackContext)
   - rwby.InputActions.IUIActions.OnNavigate(UnityEngine.InputSystem.InputAction.CallbackContext)
   - rwby.InputActions.IUIActions.OnPageLeft(UnityEngine.InputSystem.InputAction.CallbackContext)
   - rwby.InputActions.IUIActions.OnPageRight(UnityEngine.InputSystem.InputAction.CallbackContext)
   - rwby.InputActions.IUIActions.OnPause(UnityEngine.InputSystem.InputAction.CallbackContext)
   - rwby.InputActions.IUIActions.OnPoint(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - rwby.InputActions.IUIActions.OnRightClick(UnityEngine.InputSystem.InputAction.CallbackContext)
   - rwby.InputActions.IUIActions.OnScrollWheel(UnityEngine.InputSystem.InputAction.CallbackContext)
   - rwby.InputActions.IUIActions.OnSubmit(UnityEngine.InputSystem.InputAction.CallbackContext)
   langs:
@@ -30,13 +33,20 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: IUIActions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1902
+    startLine: 2421
   assemblies:
   - rwby
   namespace: rwby
+  summary: Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
+  example: []
   syntax:
     content: public interface InputActions.IUIActions
     content.vb: Public Interface InputActions.IUIActions
+  seealso:
+  - linkId: rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+    commentId: M:rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+  - linkId: rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+    commentId: M:rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
 - uid: rwby.InputActions.IUIActions.OnNavigate(UnityEngine.InputSystem.InputAction.CallbackContext)
   commentId: M:rwby.InputActions.IUIActions.OnNavigate(UnityEngine.InputSystem.InputAction.CallbackContext)
   id: OnNavigate(UnityEngine.InputSystem.InputAction.CallbackContext)
@@ -55,10 +65,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnNavigate
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1904
+    startLine: 2429
   assemblies:
   - rwby
   namespace: rwby
+  summary: Method invoked when associated input action "Navigate" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: void OnNavigate(InputAction.CallbackContext context)
     parameters:
@@ -66,93 +78,13 @@ items:
       type: UnityEngine.InputSystem.InputAction.CallbackContext
     content.vb: Sub OnNavigate(context As InputAction.CallbackContext)
   overload: rwby.InputActions.IUIActions.OnNavigate*
-- uid: rwby.InputActions.IUIActions.OnSubmit(UnityEngine.InputSystem.InputAction.CallbackContext)
-  commentId: M:rwby.InputActions.IUIActions.OnSubmit(UnityEngine.InputSystem.InputAction.CallbackContext)
-  id: OnSubmit(UnityEngine.InputSystem.InputAction.CallbackContext)
-  parent: rwby.InputActions.IUIActions
-  langs:
-  - csharp
-  - vb
-  name: OnSubmit(CallbackContext)
-  nameWithType: InputActions.IUIActions.OnSubmit(InputAction.CallbackContext)
-  fullName: rwby.InputActions.IUIActions.OnSubmit(UnityEngine.InputSystem.InputAction.CallbackContext)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: OnSubmit
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1905
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: void OnSubmit(InputAction.CallbackContext context)
-    parameters:
-    - id: context
-      type: UnityEngine.InputSystem.InputAction.CallbackContext
-    content.vb: Sub OnSubmit(context As InputAction.CallbackContext)
-  overload: rwby.InputActions.IUIActions.OnSubmit*
-- uid: rwby.InputActions.IUIActions.OnCancel(UnityEngine.InputSystem.InputAction.CallbackContext)
-  commentId: M:rwby.InputActions.IUIActions.OnCancel(UnityEngine.InputSystem.InputAction.CallbackContext)
-  id: OnCancel(UnityEngine.InputSystem.InputAction.CallbackContext)
-  parent: rwby.InputActions.IUIActions
-  langs:
-  - csharp
-  - vb
-  name: OnCancel(CallbackContext)
-  nameWithType: InputActions.IUIActions.OnCancel(InputAction.CallbackContext)
-  fullName: rwby.InputActions.IUIActions.OnCancel(UnityEngine.InputSystem.InputAction.CallbackContext)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: OnCancel
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1906
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: void OnCancel(InputAction.CallbackContext context)
-    parameters:
-    - id: context
-      type: UnityEngine.InputSystem.InputAction.CallbackContext
-    content.vb: Sub OnCancel(context As InputAction.CallbackContext)
-  overload: rwby.InputActions.IUIActions.OnCancel*
-- uid: rwby.InputActions.IUIActions.OnAlternative(UnityEngine.InputSystem.InputAction.CallbackContext)
-  commentId: M:rwby.InputActions.IUIActions.OnAlternative(UnityEngine.InputSystem.InputAction.CallbackContext)
-  id: OnAlternative(UnityEngine.InputSystem.InputAction.CallbackContext)
-  parent: rwby.InputActions.IUIActions
-  langs:
-  - csharp
-  - vb
-  name: OnAlternative(CallbackContext)
-  nameWithType: InputActions.IUIActions.OnAlternative(InputAction.CallbackContext)
-  fullName: rwby.InputActions.IUIActions.OnAlternative(UnityEngine.InputSystem.InputAction.CallbackContext)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: OnAlternative
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1907
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: void OnAlternative(InputAction.CallbackContext context)
-    parameters:
-    - id: context
-      type: UnityEngine.InputSystem.InputAction.CallbackContext
-    content.vb: Sub OnAlternative(context As InputAction.CallbackContext)
-  overload: rwby.InputActions.IUIActions.OnAlternative*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
 - uid: rwby.InputActions.IUIActions.OnPoint(UnityEngine.InputSystem.InputAction.CallbackContext)
   commentId: M:rwby.InputActions.IUIActions.OnPoint(UnityEngine.InputSystem.InputAction.CallbackContext)
   id: OnPoint(UnityEngine.InputSystem.InputAction.CallbackContext)
@@ -171,10 +103,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnPoint
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1908
+    startLine: 2436
   assemblies:
   - rwby
   namespace: rwby
+  summary: Method invoked when associated input action "Point" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: void OnPoint(InputAction.CallbackContext context)
     parameters:
@@ -182,6 +116,13 @@ items:
       type: UnityEngine.InputSystem.InputAction.CallbackContext
     content.vb: Sub OnPoint(context As InputAction.CallbackContext)
   overload: rwby.InputActions.IUIActions.OnPoint*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
 - uid: rwby.InputActions.IUIActions.OnClick(UnityEngine.InputSystem.InputAction.CallbackContext)
   commentId: M:rwby.InputActions.IUIActions.OnClick(UnityEngine.InputSystem.InputAction.CallbackContext)
   id: OnClick(UnityEngine.InputSystem.InputAction.CallbackContext)
@@ -200,10 +141,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnClick
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1909
+    startLine: 2443
   assemblies:
   - rwby
   namespace: rwby
+  summary: Method invoked when associated input action "Click" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: void OnClick(InputAction.CallbackContext context)
     parameters:
@@ -211,35 +154,13 @@ items:
       type: UnityEngine.InputSystem.InputAction.CallbackContext
     content.vb: Sub OnClick(context As InputAction.CallbackContext)
   overload: rwby.InputActions.IUIActions.OnClick*
-- uid: rwby.InputActions.IUIActions.OnScrollWheel(UnityEngine.InputSystem.InputAction.CallbackContext)
-  commentId: M:rwby.InputActions.IUIActions.OnScrollWheel(UnityEngine.InputSystem.InputAction.CallbackContext)
-  id: OnScrollWheel(UnityEngine.InputSystem.InputAction.CallbackContext)
-  parent: rwby.InputActions.IUIActions
-  langs:
-  - csharp
-  - vb
-  name: OnScrollWheel(CallbackContext)
-  nameWithType: InputActions.IUIActions.OnScrollWheel(InputAction.CallbackContext)
-  fullName: rwby.InputActions.IUIActions.OnScrollWheel(UnityEngine.InputSystem.InputAction.CallbackContext)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: OnScrollWheel
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1910
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: void OnScrollWheel(InputAction.CallbackContext context)
-    parameters:
-    - id: context
-      type: UnityEngine.InputSystem.InputAction.CallbackContext
-    content.vb: Sub OnScrollWheel(context As InputAction.CallbackContext)
-  overload: rwby.InputActions.IUIActions.OnScrollWheel*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
 - uid: rwby.InputActions.IUIActions.OnMiddleClick(UnityEngine.InputSystem.InputAction.CallbackContext)
   commentId: M:rwby.InputActions.IUIActions.OnMiddleClick(UnityEngine.InputSystem.InputAction.CallbackContext)
   id: OnMiddleClick(UnityEngine.InputSystem.InputAction.CallbackContext)
@@ -258,10 +179,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnMiddleClick
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1911
+    startLine: 2450
   assemblies:
   - rwby
   namespace: rwby
+  summary: Method invoked when associated input action "MiddleClick" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: void OnMiddleClick(InputAction.CallbackContext context)
     parameters:
@@ -269,35 +192,241 @@ items:
       type: UnityEngine.InputSystem.InputAction.CallbackContext
     content.vb: Sub OnMiddleClick(context As InputAction.CallbackContext)
   overload: rwby.InputActions.IUIActions.OnMiddleClick*
-- uid: rwby.InputActions.IUIActions.OnPause(UnityEngine.InputSystem.InputAction.CallbackContext)
-  commentId: M:rwby.InputActions.IUIActions.OnPause(UnityEngine.InputSystem.InputAction.CallbackContext)
-  id: OnPause(UnityEngine.InputSystem.InputAction.CallbackContext)
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
+- uid: rwby.InputActions.IUIActions.OnRightClick(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:rwby.InputActions.IUIActions.OnRightClick(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnRightClick(UnityEngine.InputSystem.InputAction.CallbackContext)
   parent: rwby.InputActions.IUIActions
   langs:
   - csharp
   - vb
-  name: OnPause(CallbackContext)
-  nameWithType: InputActions.IUIActions.OnPause(InputAction.CallbackContext)
-  fullName: rwby.InputActions.IUIActions.OnPause(UnityEngine.InputSystem.InputAction.CallbackContext)
+  name: OnRightClick(CallbackContext)
+  nameWithType: InputActions.IUIActions.OnRightClick(InputAction.CallbackContext)
+  fullName: rwby.InputActions.IUIActions.OnRightClick(UnityEngine.InputSystem.InputAction.CallbackContext)
   type: Method
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: OnPause
+    id: OnRightClick
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1912
+    startLine: 2457
   assemblies:
   - rwby
   namespace: rwby
+  summary: Method invoked when associated input action "RightClick" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
-    content: void OnPause(InputAction.CallbackContext context)
+    content: void OnRightClick(InputAction.CallbackContext context)
     parameters:
     - id: context
       type: UnityEngine.InputSystem.InputAction.CallbackContext
-    content.vb: Sub OnPause(context As InputAction.CallbackContext)
-  overload: rwby.InputActions.IUIActions.OnPause*
+    content.vb: Sub OnRightClick(context As InputAction.CallbackContext)
+  overload: rwby.InputActions.IUIActions.OnRightClick*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
+- uid: rwby.InputActions.IUIActions.OnScrollWheel(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:rwby.InputActions.IUIActions.OnScrollWheel(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnScrollWheel(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: rwby.InputActions.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnScrollWheel(CallbackContext)
+  nameWithType: InputActions.IUIActions.OnScrollWheel(InputAction.CallbackContext)
+  fullName: rwby.InputActions.IUIActions.OnScrollWheel(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnScrollWheel
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2464
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Method invoked when associated input action "ScrollWheel" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: void OnScrollWheel(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnScrollWheel(context As InputAction.CallbackContext)
+  overload: rwby.InputActions.IUIActions.OnScrollWheel*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
+- uid: rwby.InputActions.IUIActions.OnSubmit(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:rwby.InputActions.IUIActions.OnSubmit(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnSubmit(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: rwby.InputActions.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnSubmit(CallbackContext)
+  nameWithType: InputActions.IUIActions.OnSubmit(InputAction.CallbackContext)
+  fullName: rwby.InputActions.IUIActions.OnSubmit(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnSubmit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2471
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Method invoked when associated input action "Submit" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: void OnSubmit(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnSubmit(context As InputAction.CallbackContext)
+  overload: rwby.InputActions.IUIActions.OnSubmit*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
+- uid: rwby.InputActions.IUIActions.OnCancel(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:rwby.InputActions.IUIActions.OnCancel(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnCancel(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: rwby.InputActions.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnCancel(CallbackContext)
+  nameWithType: InputActions.IUIActions.OnCancel(InputAction.CallbackContext)
+  fullName: rwby.InputActions.IUIActions.OnCancel(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnCancel
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2478
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Method invoked when associated input action "Cancel" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: void OnCancel(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnCancel(context As InputAction.CallbackContext)
+  overload: rwby.InputActions.IUIActions.OnCancel*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
+- uid: rwby.InputActions.IUIActions.OnAlt1(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:rwby.InputActions.IUIActions.OnAlt1(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnAlt1(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: rwby.InputActions.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnAlt1(CallbackContext)
+  nameWithType: InputActions.IUIActions.OnAlt1(InputAction.CallbackContext)
+  fullName: rwby.InputActions.IUIActions.OnAlt1(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnAlt1
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2485
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Method invoked when associated input action "Alt 1" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: void OnAlt1(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnAlt1(context As InputAction.CallbackContext)
+  overload: rwby.InputActions.IUIActions.OnAlt1*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
+- uid: rwby.InputActions.IUIActions.OnAlt2(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:rwby.InputActions.IUIActions.OnAlt2(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnAlt2(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: rwby.InputActions.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnAlt2(CallbackContext)
+  nameWithType: InputActions.IUIActions.OnAlt2(InputAction.CallbackContext)
+  fullName: rwby.InputActions.IUIActions.OnAlt2(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnAlt2
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2492
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Method invoked when associated input action "Alt 2" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: void OnAlt2(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnAlt2(context As InputAction.CallbackContext)
+  overload: rwby.InputActions.IUIActions.OnAlt2*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
 - uid: rwby.InputActions.IUIActions.OnPageLeft(UnityEngine.InputSystem.InputAction.CallbackContext)
   commentId: M:rwby.InputActions.IUIActions.OnPageLeft(UnityEngine.InputSystem.InputAction.CallbackContext)
   id: OnPageLeft(UnityEngine.InputSystem.InputAction.CallbackContext)
@@ -316,10 +445,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnPageLeft
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1913
+    startLine: 2499
   assemblies:
   - rwby
   namespace: rwby
+  summary: Method invoked when associated input action "PageLeft" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: void OnPageLeft(InputAction.CallbackContext context)
     parameters:
@@ -327,6 +458,13 @@ items:
       type: UnityEngine.InputSystem.InputAction.CallbackContext
     content.vb: Sub OnPageLeft(context As InputAction.CallbackContext)
   overload: rwby.InputActions.IUIActions.OnPageLeft*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
 - uid: rwby.InputActions.IUIActions.OnPageRight(UnityEngine.InputSystem.InputAction.CallbackContext)
   commentId: M:rwby.InputActions.IUIActions.OnPageRight(UnityEngine.InputSystem.InputAction.CallbackContext)
   id: OnPageRight(UnityEngine.InputSystem.InputAction.CallbackContext)
@@ -345,10 +483,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnPageRight
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1914
+    startLine: 2506
   assemblies:
   - rwby
   namespace: rwby
+  summary: Method invoked when associated input action "PageRight" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: void OnPageRight(InputAction.CallbackContext context)
     parameters:
@@ -356,13 +496,162 @@ items:
       type: UnityEngine.InputSystem.InputAction.CallbackContext
     content.vb: Sub OnPageRight(context As InputAction.CallbackContext)
   overload: rwby.InputActions.IUIActions.OnPageRight*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
+- uid: rwby.InputActions.IUIActions.OnPause(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:rwby.InputActions.IUIActions.OnPause(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnPause(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: rwby.InputActions.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnPause(CallbackContext)
+  nameWithType: InputActions.IUIActions.OnPause(InputAction.CallbackContext)
+  fullName: rwby.InputActions.IUIActions.OnPause(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnPause
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2513
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Method invoked when associated input action "Pause" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: void OnPause(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnPause(context As InputAction.CallbackContext)
+  overload: rwby.InputActions.IUIActions.OnPause*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
+- uid: rwby.InputActions.IUIActions.OnExit(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:rwby.InputActions.IUIActions.OnExit(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnExit(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: rwby.InputActions.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnExit(CallbackContext)
+  nameWithType: InputActions.IUIActions.OnExit(InputAction.CallbackContext)
+  fullName: rwby.InputActions.IUIActions.OnExit(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnExit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2520
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Method invoked when associated input action "Exit" is either <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> or <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: void OnExit(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnExit(context As InputAction.CallbackContext)
+  overload: rwby.InputActions.IUIActions.OnExit*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputAction.started
+    commentId: E:UnityEngine.InputSystem.InputAction.started
+  - linkId: UnityEngine.InputSystem.InputAction.performed
+    commentId: E:UnityEngine.InputSystem.InputAction.performed
+  - linkId: UnityEngine.InputSystem.InputAction.canceled
+    commentId: E:UnityEngine.InputSystem.InputAction.canceled
 references:
+- uid: rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+  commentId: M:rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_AddCallbacks_rwby_InputActions_IUIActions_
+  name: AddCallbacks(IUIActions)
+  nameWithType: InputActions.UIActions.AddCallbacks(InputActions.IUIActions)
+  fullName: rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+  spec.csharp:
+  - uid: rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+    name: AddCallbacks
+    href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_AddCallbacks_rwby_InputActions_IUIActions_
+  - name: (
+  - uid: rwby.InputActions.IUIActions
+    name: IUIActions
+    href: rwby.InputActions.IUIActions.html
+  - name: )
+  spec.vb:
+  - uid: rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+    name: AddCallbacks
+    href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_AddCallbacks_rwby_InputActions_IUIActions_
+  - name: (
+  - uid: rwby.InputActions.IUIActions
+    name: IUIActions
+    href: rwby.InputActions.IUIActions.html
+  - name: )
+- uid: rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+  commentId: M:rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_RemoveCallbacks_rwby_InputActions_IUIActions_
+  name: RemoveCallbacks(IUIActions)
+  nameWithType: InputActions.UIActions.RemoveCallbacks(InputActions.IUIActions)
+  fullName: rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+  spec.csharp:
+  - uid: rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+    name: RemoveCallbacks
+    href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_RemoveCallbacks_rwby_InputActions_IUIActions_
+  - name: (
+  - uid: rwby.InputActions.IUIActions
+    name: IUIActions
+    href: rwby.InputActions.IUIActions.html
+  - name: )
+  spec.vb:
+  - uid: rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+    name: RemoveCallbacks
+    href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_RemoveCallbacks_rwby_InputActions_IUIActions_
+  - name: (
+  - uid: rwby.InputActions.IUIActions
+    name: IUIActions
+    href: rwby.InputActions.IUIActions.html
+  - name: )
 - uid: rwby
   commentId: N:rwby
   href: rwby.html
   name: rwby
   nameWithType: rwby
   fullName: rwby
+- uid: UnityEngine.InputSystem.InputAction.started
+  commentId: E:UnityEngine.InputSystem.InputAction.started
+  isExternal: true
+  name: started
+  nameWithType: InputAction.started
+  fullName: UnityEngine.InputSystem.InputAction.started
+- uid: UnityEngine.InputSystem.InputAction.performed
+  commentId: E:UnityEngine.InputSystem.InputAction.performed
+  isExternal: true
+  name: performed
+  nameWithType: InputAction.performed
+  fullName: UnityEngine.InputSystem.InputAction.performed
+- uid: UnityEngine.InputSystem.InputAction.canceled
+  commentId: E:UnityEngine.InputSystem.InputAction.canceled
+  isExternal: true
+  name: canceled
+  nameWithType: InputAction.canceled
+  fullName: UnityEngine.InputSystem.InputAction.canceled
 - uid: rwby.InputActions.IUIActions.OnNavigate*
   commentId: Overload:rwby.InputActions.IUIActions.OnNavigate
   href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnNavigate_UnityEngine_InputSystem_InputAction_CallbackContext_
@@ -414,24 +703,6 @@ references:
   - uid: UnityEngine.InputSystem
     name: InputSystem
     isExternal: true
-- uid: rwby.InputActions.IUIActions.OnSubmit*
-  commentId: Overload:rwby.InputActions.IUIActions.OnSubmit
-  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnSubmit_UnityEngine_InputSystem_InputAction_CallbackContext_
-  name: OnSubmit
-  nameWithType: InputActions.IUIActions.OnSubmit
-  fullName: rwby.InputActions.IUIActions.OnSubmit
-- uid: rwby.InputActions.IUIActions.OnCancel*
-  commentId: Overload:rwby.InputActions.IUIActions.OnCancel
-  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnCancel_UnityEngine_InputSystem_InputAction_CallbackContext_
-  name: OnCancel
-  nameWithType: InputActions.IUIActions.OnCancel
-  fullName: rwby.InputActions.IUIActions.OnCancel
-- uid: rwby.InputActions.IUIActions.OnAlternative*
-  commentId: Overload:rwby.InputActions.IUIActions.OnAlternative
-  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnAlternative_UnityEngine_InputSystem_InputAction_CallbackContext_
-  name: OnAlternative
-  nameWithType: InputActions.IUIActions.OnAlternative
-  fullName: rwby.InputActions.IUIActions.OnAlternative
 - uid: rwby.InputActions.IUIActions.OnPoint*
   commentId: Overload:rwby.InputActions.IUIActions.OnPoint
   href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnPoint_UnityEngine_InputSystem_InputAction_CallbackContext_
@@ -444,24 +715,48 @@ references:
   name: OnClick
   nameWithType: InputActions.IUIActions.OnClick
   fullName: rwby.InputActions.IUIActions.OnClick
-- uid: rwby.InputActions.IUIActions.OnScrollWheel*
-  commentId: Overload:rwby.InputActions.IUIActions.OnScrollWheel
-  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnScrollWheel_UnityEngine_InputSystem_InputAction_CallbackContext_
-  name: OnScrollWheel
-  nameWithType: InputActions.IUIActions.OnScrollWheel
-  fullName: rwby.InputActions.IUIActions.OnScrollWheel
 - uid: rwby.InputActions.IUIActions.OnMiddleClick*
   commentId: Overload:rwby.InputActions.IUIActions.OnMiddleClick
   href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnMiddleClick_UnityEngine_InputSystem_InputAction_CallbackContext_
   name: OnMiddleClick
   nameWithType: InputActions.IUIActions.OnMiddleClick
   fullName: rwby.InputActions.IUIActions.OnMiddleClick
-- uid: rwby.InputActions.IUIActions.OnPause*
-  commentId: Overload:rwby.InputActions.IUIActions.OnPause
-  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnPause_UnityEngine_InputSystem_InputAction_CallbackContext_
-  name: OnPause
-  nameWithType: InputActions.IUIActions.OnPause
-  fullName: rwby.InputActions.IUIActions.OnPause
+- uid: rwby.InputActions.IUIActions.OnRightClick*
+  commentId: Overload:rwby.InputActions.IUIActions.OnRightClick
+  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnRightClick_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: OnRightClick
+  nameWithType: InputActions.IUIActions.OnRightClick
+  fullName: rwby.InputActions.IUIActions.OnRightClick
+- uid: rwby.InputActions.IUIActions.OnScrollWheel*
+  commentId: Overload:rwby.InputActions.IUIActions.OnScrollWheel
+  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnScrollWheel_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: OnScrollWheel
+  nameWithType: InputActions.IUIActions.OnScrollWheel
+  fullName: rwby.InputActions.IUIActions.OnScrollWheel
+- uid: rwby.InputActions.IUIActions.OnSubmit*
+  commentId: Overload:rwby.InputActions.IUIActions.OnSubmit
+  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnSubmit_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: OnSubmit
+  nameWithType: InputActions.IUIActions.OnSubmit
+  fullName: rwby.InputActions.IUIActions.OnSubmit
+- uid: rwby.InputActions.IUIActions.OnCancel*
+  commentId: Overload:rwby.InputActions.IUIActions.OnCancel
+  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnCancel_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: OnCancel
+  nameWithType: InputActions.IUIActions.OnCancel
+  fullName: rwby.InputActions.IUIActions.OnCancel
+- uid: rwby.InputActions.IUIActions.OnAlt1*
+  commentId: Overload:rwby.InputActions.IUIActions.OnAlt1
+  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnAlt1_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: OnAlt1
+  nameWithType: InputActions.IUIActions.OnAlt1
+  fullName: rwby.InputActions.IUIActions.OnAlt1
+- uid: rwby.InputActions.IUIActions.OnAlt2*
+  commentId: Overload:rwby.InputActions.IUIActions.OnAlt2
+  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnAlt2_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: OnAlt2
+  nameWithType: InputActions.IUIActions.OnAlt2
+  fullName: rwby.InputActions.IUIActions.OnAlt2
 - uid: rwby.InputActions.IUIActions.OnPageLeft*
   commentId: Overload:rwby.InputActions.IUIActions.OnPageLeft
   href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnPageLeft_UnityEngine_InputSystem_InputAction_CallbackContext_
@@ -474,3 +769,15 @@ references:
   name: OnPageRight
   nameWithType: InputActions.IUIActions.OnPageRight
   fullName: rwby.InputActions.IUIActions.OnPageRight
+- uid: rwby.InputActions.IUIActions.OnPause*
+  commentId: Overload:rwby.InputActions.IUIActions.OnPause
+  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnPause_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: OnPause
+  nameWithType: InputActions.IUIActions.OnPause
+  fullName: rwby.InputActions.IUIActions.OnPause
+- uid: rwby.InputActions.IUIActions.OnExit*
+  commentId: Overload:rwby.InputActions.IUIActions.OnExit
+  href: rwby.InputActions.IUIActions.html#rwby_InputActions_IUIActions_OnExit_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: OnExit
+  nameWithType: InputActions.IUIActions.OnExit
+  fullName: rwby.InputActions.IUIActions.OnExit

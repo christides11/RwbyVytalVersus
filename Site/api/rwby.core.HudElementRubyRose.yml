@@ -5,15 +5,16 @@ items:
   id: HudElementRubyRose
   parent: rwby.core
   children:
+  - rwby.core.HudElementRubyRose.Bind(Quantum.PlayerRef,Quantum.EntityRef)
   - rwby.core.HudElementRubyRose.FighterDef
-  - rwby.core.HudElementRubyRose.Initialize(System.Int32,System.Int32)
+  - rwby.core.HudElementRubyRose.Initialize(Quantum.QuantumRunner)
   - rwby.core.HudElementRubyRose.RootCanvas
   - rwby.core.HudElementRubyRose.Teardown
   - rwby.core.HudElementRubyRose.aurabarHudElement
+  - rwby.core.HudElementRubyRose.fighterEntityRef
   - rwby.core.HudElementRubyRose.fighterEntityView
   - rwby.core.HudElementRubyRose.globalPlayerID
   - rwby.core.HudElementRubyRose.healthbarHudElement
-  - rwby.core.HudElementRubyRose.localPlayerID
   langs:
   - csharp
   - vb
@@ -99,37 +100,37 @@ items:
   - Assembly-CSharp
   namespace: rwby.core
   syntax:
-    content: public int globalPlayerID
+    content: public PlayerRef globalPlayerID
     return:
-      type: System.Int32
-    content.vb: Public globalPlayerID As Integer
-- uid: rwby.core.HudElementRubyRose.localPlayerID
-  commentId: F:rwby.core.HudElementRubyRose.localPlayerID
-  id: localPlayerID
+      type: Quantum.PlayerRef
+    content.vb: Public globalPlayerID As PlayerRef
+- uid: rwby.core.HudElementRubyRose.fighterEntityRef
+  commentId: F:rwby.core.HudElementRubyRose.fighterEntityRef
+  id: fighterEntityRef
   parent: rwby.core.HudElementRubyRose
   langs:
   - csharp
   - vb
-  name: localPlayerID
-  nameWithType: HudElementRubyRose.localPlayerID
-  fullName: rwby.core.HudElementRubyRose.localPlayerID
+  name: fighterEntityRef
+  nameWithType: HudElementRubyRose.fighterEntityRef
+  fullName: rwby.core.HudElementRubyRose.fighterEntityRef
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: localPlayerID
+    id: fighterEntityRef
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
     startLine: 14
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
   syntax:
-    content: public int localPlayerID
+    content: public EntityRef fighterEntityRef
     return:
-      type: System.Int32
-    content.vb: Public localPlayerID As Integer
+      type: Quantum.EntityRef
+    content.vb: Public fighterEntityRef As EntityRef
 - uid: rwby.core.HudElementRubyRose.fighterEntityView
   commentId: F:rwby.core.HudElementRubyRose.fighterEntityView
   id: fighterEntityView
@@ -243,16 +244,16 @@ items:
   overload: rwby.core.HudElementRubyRose.RootCanvas*
   implements:
   - rwby.IHUDElement.RootCanvas
-- uid: rwby.core.HudElementRubyRose.Initialize(System.Int32,System.Int32)
-  commentId: M:rwby.core.HudElementRubyRose.Initialize(System.Int32,System.Int32)
-  id: Initialize(System.Int32,System.Int32)
+- uid: rwby.core.HudElementRubyRose.Initialize(Quantum.QuantumRunner)
+  commentId: M:rwby.core.HudElementRubyRose.Initialize(Quantum.QuantumRunner)
+  id: Initialize(Quantum.QuantumRunner)
   parent: rwby.core.HudElementRubyRose
   langs:
   - csharp
   - vb
-  name: Initialize(int, int)
-  nameWithType: HudElementRubyRose.Initialize(int, int)
-  fullName: rwby.core.HudElementRubyRose.Initialize(int, int)
+  name: Initialize(QuantumRunner)
+  nameWithType: HudElementRubyRose.Initialize(QuantumRunner)
+  fullName: rwby.core.HudElementRubyRose.Initialize(Quantum.QuantumRunner)
   type: Method
   source:
     remote:
@@ -267,19 +268,48 @@ items:
   namespace: rwby.core
   example: []
   syntax:
-    content: public void Initialize(int localPlayerID, int networkPlayerID)
+    content: public void Initialize(QuantumRunner quantumRunner)
     parameters:
-    - id: localPlayerID
-      type: System.Int32
-    - id: networkPlayerID
-      type: System.Int32
-    content.vb: Public Sub Initialize(localPlayerID As Integer, networkPlayerID As Integer)
+    - id: quantumRunner
+      type: Quantum.QuantumRunner
+    content.vb: Public Sub Initialize(quantumRunner As QuantumRunner)
   overload: rwby.core.HudElementRubyRose.Initialize*
   implements:
-  - rwby.IHUDElement.Initialize(System.Int32,System.Int32)
-  nameWithType.vb: HudElementRubyRose.Initialize(Integer, Integer)
-  fullName.vb: rwby.core.HudElementRubyRose.Initialize(Integer, Integer)
-  name.vb: Initialize(Integer, Integer)
+  - rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+- uid: rwby.core.HudElementRubyRose.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  commentId: M:rwby.core.HudElementRubyRose.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  id: Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  parent: rwby.core.HudElementRubyRose
+  langs:
+  - csharp
+  - vb
+  name: Bind(PlayerRef, EntityRef)
+  nameWithType: HudElementRubyRose.Bind(PlayerRef, EntityRef)
+  fullName: rwby.core.HudElementRubyRose.Bind(Quantum.PlayerRef, Quantum.EntityRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Bind
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
+    startLine: 33
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Bind(PlayerRef playerRef, EntityRef entityRef)
+    parameters:
+    - id: playerRef
+      type: Quantum.PlayerRef
+    - id: entityRef
+      type: Quantum.EntityRef
+    content.vb: Public Sub Bind(playerRef As PlayerRef, entityRef As EntityRef)
+  overload: rwby.core.HudElementRubyRose.Bind*
+  implements:
+  - rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
 - uid: rwby.core.HudElementRubyRose.Teardown
   commentId: M:rwby.core.HudElementRubyRose.Teardown
   id: Teardown
@@ -298,7 +328,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Teardown
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/RubyRose/HudElementRubyRose.cs
-    startLine: 36
+    startLine: 41
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -422,29 +452,32 @@ references:
   name: IFighterDefinition
   nameWithType: IFighterDefinition
   fullName: IFighterDefinition
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: Quantum.QuantumEntityView
-  commentId: T:Quantum.QuantumEntityView
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
   parent: Quantum
-  name: QuantumEntityView
-  nameWithType: QuantumEntityView
-  fullName: Quantum.QuantumEntityView
+  isExternal: true
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef
 - uid: Quantum
   commentId: N:Quantum
   href: Quantum.html
   name: Quantum
   nameWithType: Quantum
   fullName: Quantum
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.QuantumEntityView
+  commentId: T:Quantum.QuantumEntityView
+  parent: Quantum
+  name: QuantumEntityView
+  nameWithType: QuantumEntityView
+  fullName: Quantum.QuantumEntityView
 - uid: rwby.core.HudElementGenericHealthbar
   commentId: T:rwby.core.HudElementGenericHealthbar
   parent: rwby.core
@@ -480,50 +513,74 @@ references:
   fullName: UnityEngine.Canvas
 - uid: rwby.core.HudElementRubyRose.Initialize*
   commentId: Overload:rwby.core.HudElementRubyRose.Initialize
-  href: rwby.core.HudElementRubyRose.html#rwby_core_HudElementRubyRose_Initialize_System_Int32_System_Int32_
+  href: rwby.core.HudElementRubyRose.html#rwby_core_HudElementRubyRose_Initialize_Quantum_QuantumRunner_
   name: Initialize
   nameWithType: HudElementRubyRose.Initialize
   fullName: rwby.core.HudElementRubyRose.Initialize
-- uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
-  commentId: M:rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+- uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+  commentId: M:rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
   parent: rwby.IHUDElement
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: Initialize(int, int)
-  nameWithType: IHUDElement.Initialize(int, int)
-  fullName: rwby.IHUDElement.Initialize(int, int)
-  nameWithType.vb: IHUDElement.Initialize(Integer, Integer)
-  fullName.vb: rwby.IHUDElement.Initialize(Integer, Integer)
-  name.vb: Initialize(Integer, Integer)
+  name: Initialize(QuantumRunner)
+  nameWithType: IHUDElement.Initialize(QuantumRunner)
+  fullName: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
   spec.csharp:
-  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  - uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
     name: Initialize
   - name: (
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - uid: Quantum.QuantumRunner
+    name: QuantumRunner
   - name: )
   spec.vb:
-  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  - uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
     name: Initialize
   - name: (
-  - uid: System.Int32
-    name: Integer
+  - uid: Quantum.QuantumRunner
+    name: QuantumRunner
+  - name: )
+- uid: Quantum.QuantumRunner
+  commentId: T:Quantum.QuantumRunner
+  parent: Quantum
+  name: QuantumRunner
+  nameWithType: QuantumRunner
+  fullName: Quantum.QuantumRunner
+- uid: rwby.core.HudElementRubyRose.Bind*
+  commentId: Overload:rwby.core.HudElementRubyRose.Bind
+  href: rwby.core.HudElementRubyRose.html#rwby_core_HudElementRubyRose_Bind_Quantum_PlayerRef_Quantum_EntityRef_
+  name: Bind
+  nameWithType: HudElementRubyRose.Bind
+  fullName: rwby.core.HudElementRubyRose.Bind
+- uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  commentId: M:rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  parent: rwby.IHUDElement
+  isExternal: true
+  name: Bind(PlayerRef, EntityRef)
+  nameWithType: IHUDElement.Bind(PlayerRef, EntityRef)
+  fullName: rwby.IHUDElement.Bind(Quantum.PlayerRef, Quantum.EntityRef)
+  spec.csharp:
+  - uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+    name: Bind
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
-  - uid: System.Int32
-    name: Integer
+  - uid: Quantum.EntityRef
+    name: EntityRef
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+    name: Bind
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
   - name: )
 - uid: rwby.core.HudElementRubyRose.Teardown*
   commentId: Overload:rwby.core.HudElementRubyRose.Teardown

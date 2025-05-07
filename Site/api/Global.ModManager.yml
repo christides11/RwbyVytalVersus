@@ -6,7 +6,9 @@ items:
   parent: Global
   children:
   - Global.ModManager.ApplyModProfile(ModProfile)
+  - Global.ModManager.CoreModIdentifier
   - Global.ModManager.GenerateModGuid(System.Boolean,System.Boolean)
+  - Global.ModManager.GetCoreMod
   - Global.ModManager.GetCurrentModProfile
   - Global.ModManager.GetMod(System.String)
   - Global.ModManager.GetModListByGuid(System.Boolean,System.Boolean)
@@ -49,7 +51,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ModManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - rwby
   namespace: Global
@@ -62,6 +64,33 @@ items:
   - UnityEngine.Component
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
+- uid: Global.ModManager.CoreModIdentifier
+  commentId: F:Global.ModManager.CoreModIdentifier
+  id: CoreModIdentifier
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: CoreModIdentifier
+  nameWithType: ModManager.CoreModIdentifier
+  fullName: ModManager.CoreModIdentifier
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CoreModIdentifier
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 15
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public static readonly string CoreModIdentifier
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly CoreModIdentifier As String
 - uid: Global.ModManager.ModProfilesFilename
   commentId: F:Global.ModManager.ModProfilesFilename
   id: ModProfilesFilename
@@ -80,7 +109,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ModProfilesFilename
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - rwby
   namespace: Global
@@ -107,7 +136,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ModDirectory
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - rwby
   namespace: Global
@@ -136,7 +165,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: PathToAvailableMod
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - rwby
   namespace: Global
@@ -163,7 +192,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: IdentifierToAvailableMod
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - rwby
   namespace: Global
@@ -190,15 +219,15 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: modLoaders
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 19
+    startLine: 21
   assemblies:
   - rwby
   namespace: Global
   syntax:
-    content: public Dictionary<ModLoaderType, BaseModLoader> modLoaders
+    content: public Dictionary<int, BaseModLoader> modLoaders
     return:
-      type: System.Collections.Generic.Dictionary{ModLoaderType,BaseModLoader}
-    content.vb: Public modLoaders As Dictionary(Of ModLoaderType, BaseModLoader)
+      type: System.Collections.Generic.Dictionary{System.Int32,BaseModLoader}
+    content.vb: Public modLoaders As Dictionary(Of Integer, BaseModLoader)
 - uid: Global.ModManager.availableMods
   commentId: F:Global.ModManager.availableMods
   id: availableMods
@@ -217,7 +246,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: availableMods
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - rwby
   namespace: Global
@@ -244,7 +273,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: currentlyLoadedMods
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 22
+    startLine: 24
   assemblies:
   - rwby
   namespace: Global
@@ -271,7 +300,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: modProfiles
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - rwby
   namespace: Global
@@ -298,7 +327,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: currentModProfileIndex
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - rwby
   namespace: Global
@@ -325,7 +354,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Init
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 27
+    startLine: 29
   assemblies:
   - rwby
   namespace: Global
@@ -353,7 +382,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnDestroy
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 50
+    startLine: 56
   assemblies:
   - rwby
   namespace: Global
@@ -379,7 +408,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadMod
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 122
+    startLine: 139
   assemblies:
   - rwby
   namespace: Global
@@ -410,7 +439,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadModByPath
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 136
+    startLine: 153
   assemblies:
   - rwby
   namespace: Global
@@ -444,7 +473,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadMods
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 142
+    startLine: 159
   assemblies:
   - rwby
   namespace: Global
@@ -478,7 +507,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadMods
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 150
+    startLine: 167
   assemblies:
   - rwby
   namespace: Global
@@ -512,7 +541,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnloadMod
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 159
+    startLine: 176
   assemblies:
   - rwby
   namespace: Global
@@ -543,7 +572,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnloadMods
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 166
+    startLine: 182
   assemblies:
   - rwby
   namespace: Global
@@ -575,7 +604,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadAllMods
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 177
+    startLine: 192
   assemblies:
   - rwby
   namespace: Global
@@ -603,7 +632,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnloadAllMods
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 185
+    startLine: 200
   assemblies:
   - rwby
   namespace: Global
@@ -635,7 +664,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetModsByIdentifiers
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 196
+    startLine: 211
   assemblies:
   - rwby
   namespace: Global
@@ -669,7 +698,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetMod
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 208
+    startLine: 223
   assemblies:
   - rwby
   namespace: Global
@@ -685,6 +714,34 @@ items:
   nameWithType.vb: ModManager.GetMod(String)
   fullName.vb: ModManager.GetMod(String)
   name.vb: GetMod(String)
+- uid: Global.ModManager.GetCoreMod
+  commentId: M:Global.ModManager.GetCoreMod
+  id: GetCoreMod
+  parent: Global.ModManager
+  langs:
+  - csharp
+  - vb
+  name: GetCoreMod()
+  nameWithType: ModManager.GetCoreMod()
+  fullName: ModManager.GetCoreMod()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetCoreMod
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
+    startLine: 228
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public AvailableModDefinition GetCoreMod()
+    return:
+      type: Global.AvailableModDefinition
+    content.vb: Public Function GetCoreMod() As AvailableModDefinition
+  overload: Global.ModManager.GetCoreMod*
 - uid: Global.ModManager.ApplyModProfile(ModProfile)
   commentId: M:Global.ModManager.ApplyModProfile(ModProfile)
   id: ApplyModProfile(ModProfile)
@@ -703,7 +760,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ApplyModProfile
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 213
+    startLine: 233
   assemblies:
   - rwby
   namespace: Global
@@ -734,7 +791,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadModProfiles
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 220
+    startLine: 240
   assemblies:
   - rwby
   namespace: Global
@@ -760,7 +817,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: IsModLoaded
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 230
+    startLine: 252
   assemblies:
   - rwby
   namespace: Global
@@ -794,7 +851,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetCurrentModProfile
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 235
+    startLine: 257
   assemblies:
   - rwby
   namespace: Global
@@ -822,7 +879,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryGetCurrentModProfile
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 241
+    startLine: 263
   assemblies:
   - rwby
   namespace: Global
@@ -856,7 +913,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SaveModProfiles
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 247
+    startLine: 269
   assemblies:
   - rwby
   namespace: Global
@@ -882,7 +939,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GenerateModGuid
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 252
+    startLine: 274
   assemblies:
   - rwby
   namespace: Global
@@ -918,7 +975,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetModListByGuid
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 274
+    startLine: 296
   assemblies:
   - rwby
   namespace: Global
@@ -954,7 +1011,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetModListByGuidAsStrings
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/ModManager.cs
-    startLine: 287
+    startLine: 309
   assemblies:
   - rwby
   namespace: Global
@@ -1159,26 +1216,27 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: System.Collections.Generic.Dictionary{ModLoaderType,BaseModLoader}
-  commentId: T:System.Collections.Generic.Dictionary{ModLoaderType,BaseModLoader}
+- uid: System.Collections.Generic.Dictionary{System.Int32,BaseModLoader}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,BaseModLoader}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.Dictionary`2
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  name: Dictionary<ModLoaderType, BaseModLoader>
-  nameWithType: Dictionary<ModLoaderType, BaseModLoader>
-  fullName: System.Collections.Generic.Dictionary<ModLoaderType, BaseModLoader>
-  nameWithType.vb: Dictionary(Of ModLoaderType, BaseModLoader)
-  fullName.vb: System.Collections.Generic.Dictionary(Of ModLoaderType, BaseModLoader)
-  name.vb: Dictionary(Of ModLoaderType, BaseModLoader)
+  name: Dictionary<int, BaseModLoader>
+  nameWithType: Dictionary<int, BaseModLoader>
+  fullName: System.Collections.Generic.Dictionary<int, BaseModLoader>
+  nameWithType.vb: Dictionary(Of Integer, BaseModLoader)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, BaseModLoader)
+  name.vb: Dictionary(Of Integer, BaseModLoader)
   spec.csharp:
   - uid: System.Collections.Generic.Dictionary`2
     name: Dictionary
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
   - name: <
-  - uid: Global.ModLoaderType
-    name: ModLoaderType
-    href: ModLoaderType.html
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
   - uid: Global.BaseModLoader
@@ -1193,9 +1251,10 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: Global.ModLoaderType
-    name: ModLoaderType
-    href: ModLoaderType.html
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
   - uid: Global.BaseModLoader
@@ -1568,6 +1627,12 @@ references:
   name: GetMod
   nameWithType: ModManager.GetMod
   fullName: ModManager.GetMod
+- uid: Global.ModManager.GetCoreMod*
+  commentId: Overload:Global.ModManager.GetCoreMod
+  href: Global.ModManager.html#ModManager_GetCoreMod
+  name: GetCoreMod
+  nameWithType: ModManager.GetCoreMod
+  fullName: ModManager.GetCoreMod
 - uid: Global.ModManager.ApplyModProfile*
   commentId: Overload:Global.ModManager.ApplyModProfile
   href: Global.ModManager.html#ModManager_ApplyModProfile_ModProfile_

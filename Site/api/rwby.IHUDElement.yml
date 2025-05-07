@@ -5,7 +5,8 @@ items:
   id: IHUDElement
   parent: rwby
   children:
-  - rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  - rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  - rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
   - rwby.IHUDElement.RootCanvas
   - rwby.IHUDElement.Teardown
   langs:
@@ -22,7 +23,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: IHUDElement
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/HudElements/IHUDElement.cs
-    startLine: 6
+    startLine: 5
   assemblies:
   - rwby
   namespace: rwby
@@ -47,7 +48,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RootCanvas
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/HudElements/IHUDElement.cs
-    startLine: 8
+    startLine: 7
   assemblies:
   - rwby
   namespace: rwby
@@ -58,16 +59,16 @@ items:
       type: UnityEngine.Canvas
     content.vb: Property RootCanvas As Canvas
   overload: rwby.IHUDElement.RootCanvas*
-- uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
-  commentId: M:rwby.IHUDElement.Initialize(System.Int32,System.Int32)
-  id: Initialize(System.Int32,System.Int32)
+- uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+  commentId: M:rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+  id: Initialize(Quantum.QuantumRunner)
   parent: rwby.IHUDElement
   langs:
   - csharp
   - vb
-  name: Initialize(int, int)
-  nameWithType: IHUDElement.Initialize(int, int)
-  fullName: rwby.IHUDElement.Initialize(int, int)
+  name: Initialize(QuantumRunner)
+  nameWithType: IHUDElement.Initialize(QuantumRunner)
+  fullName: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
   type: Method
   source:
     remote:
@@ -76,22 +77,48 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Initialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/HudElements/IHUDElement.cs
+    startLine: 8
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: void Initialize(QuantumRunner quantumRunner)
+    parameters:
+    - id: quantumRunner
+      type: Quantum.QuantumRunner
+    content.vb: Sub Initialize(quantumRunner As QuantumRunner)
+  overload: rwby.IHUDElement.Initialize*
+- uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  commentId: M:rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  id: Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  parent: rwby.IHUDElement
+  langs:
+  - csharp
+  - vb
+  name: Bind(PlayerRef, EntityRef)
+  nameWithType: IHUDElement.Bind(PlayerRef, EntityRef)
+  fullName: rwby.IHUDElement.Bind(Quantum.PlayerRef, Quantum.EntityRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/HudElements/IHUDElement.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Bind
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/HudElements/IHUDElement.cs
     startLine: 9
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: void Initialize(int localPlayerID, int networkPlayerID)
+    content: void Bind(PlayerRef playerRef, EntityRef entityRef)
     parameters:
-    - id: localPlayerID
-      type: System.Int32
-    - id: networkPlayerID
-      type: System.Int32
-    content.vb: Sub Initialize(localPlayerID As Integer, networkPlayerID As Integer)
-  overload: rwby.IHUDElement.Initialize*
-  nameWithType.vb: IHUDElement.Initialize(Integer, Integer)
-  fullName.vb: rwby.IHUDElement.Initialize(Integer, Integer)
-  name.vb: Initialize(Integer, Integer)
+    - id: playerRef
+      type: Quantum.PlayerRef
+    - id: entityRef
+      type: Quantum.EntityRef
+    content.vb: Sub Bind(playerRef As PlayerRef, entityRef As EntityRef)
+  overload: rwby.IHUDElement.Bind*
 - uid: rwby.IHUDElement.Teardown
   commentId: M:rwby.IHUDElement.Teardown
   id: Teardown
@@ -146,28 +173,42 @@ references:
   fullName: UnityEngine
 - uid: rwby.IHUDElement.Initialize*
   commentId: Overload:rwby.IHUDElement.Initialize
-  href: rwby.IHUDElement.html#rwby_IHUDElement_Initialize_System_Int32_System_Int32_
+  href: rwby.IHUDElement.html#rwby_IHUDElement_Initialize_Quantum_QuantumRunner_
   name: Initialize
   nameWithType: IHUDElement.Initialize
   fullName: rwby.IHUDElement.Initialize
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
+- uid: Quantum.QuantumRunner
+  commentId: T:Quantum.QuantumRunner
+  parent: Quantum
+  name: QuantumRunner
+  nameWithType: QuantumRunner
+  fullName: Quantum.QuantumRunner
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: rwby.IHUDElement.Bind*
+  commentId: Overload:rwby.IHUDElement.Bind
+  href: rwby.IHUDElement.html#rwby_IHUDElement_Bind_Quantum_PlayerRef_Quantum_EntityRef_
+  name: Bind
+  nameWithType: IHUDElement.Bind
+  fullName: rwby.IHUDElement.Bind
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
+  parent: Quantum
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: System
-  commentId: N:System
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
 - uid: rwby.IHUDElement.Teardown*
   commentId: Overload:rwby.IHUDElement.Teardown
   href: rwby.IHUDElement.html#rwby_IHUDElement_Teardown

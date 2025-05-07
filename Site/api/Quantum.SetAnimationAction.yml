@@ -32,17 +32,19 @@ items:
     content: >-
       [Serializable]
 
-      public class SetAnimationAction : HNSFStateAction
+      public class SetAnimationAction : HNSFStateAction, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class SetAnimationAction Inherits HNSFStateAction
+      Public Class SetAnimationAction Inherits HNSFStateAction Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.HNSFStateAction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateAction.Label
   - Quantum.HNSFStateAction.parent
@@ -265,6 +267,13 @@ references:
   name: HNSFStateAction
   nameWithType: HNSFStateAction
   fullName: Quantum.HNSFStateAction
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateAction.Label
   commentId: F:Quantum.HNSFStateAction.Label
   parent: Quantum.HNSFStateAction

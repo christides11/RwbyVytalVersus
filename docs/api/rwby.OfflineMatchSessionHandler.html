@@ -140,16 +140,17 @@ Class OfflineMatchSessionHandler  <a class="header-action link-secondary" title=
 
 
 
-  <h3 id="rwby_OfflineMatchSessionHandler_bgmIndex" data-uid="rwby.OfflineMatchSessionHandler.bgmIndex">
-  bgmIndex
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=28"><i class="bi bi-code-slash"></i></a>
+  <h3 id="rwby_OfflineMatchSessionHandler_CurrentRunner" data-uid="rwby.OfflineMatchSessionHandler.CurrentRunner">
+  CurrentRunner
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int bgmIndex</code></pre>
+    <pre><code class="lang-csharp hljs">[HideInInspector]
+public QuantumRunner CurrentRunner</code></pre>
   </div>
 
 
@@ -157,7 +158,37 @@ Class OfflineMatchSessionHandler  <a class="header-action link-secondary" title=
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><span class="xref">QuantumRunner</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_OfflineMatchSessionHandler_OnMatchEnded" data-uid="rwby.OfflineMatchSessionHandler.OnMatchEnded">
+  OnMatchEnded
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent&lt;string&gt; OnMatchEnded</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UnityEvent</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -172,7 +203,7 @@ Class OfflineMatchSessionHandler  <a class="header-action link-secondary" title=
 
   <h3 id="rwby_OfflineMatchSessionHandler_currentMatchHandler" data-uid="rwby.OfflineMatchSessionHandler.currentMatchHandler">
   currentMatchHandler
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -201,40 +232,9 @@ public MatchHandlerBase currentMatchHandler</code></pre>
 
 
 
-  <h3 id="rwby_OfflineMatchSessionHandler_currentRunner" data-uid="rwby.OfflineMatchSessionHandler.currentRunner">
-  currentRunner
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=19"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public QuantumRunner currentRunner</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">QuantumRunner</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
   <h3 id="rwby_OfflineMatchSessionHandler_defaultRuntimeConfig" data-uid="rwby.OfflineMatchSessionHandler.defaultRuntimeConfig">
   defaultRuntimeConfig
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -264,7 +264,7 @@ public QuantumRunner currentRunner</code></pre>
 
   <h3 id="rwby_OfflineMatchSessionHandler_gameManager" data-uid="rwby.OfflineMatchSessionHandler.gameManager">
   gameManager
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -293,9 +293,9 @@ public GameManager gameManager</code></pre>
 
 
 
-  <h3 id="rwby_OfflineMatchSessionHandler_localBGM" data-uid="rwby.OfflineMatchSessionHandler.localBGM">
-  localBGM
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=27"><i class="bi bi-code-slash"></i></a>
+  <h3 id="rwby_OfflineMatchSessionHandler_gamemodeSettings" data-uid="rwby.OfflineMatchSessionHandler.gamemodeSettings">
+  gamemodeSettings
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -303,7 +303,101 @@ public GameManager gameManager</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[NonSerialized]
-public BaseSongDefinition localBGM</code></pre>
+public GamemodeSettingsBase gamemodeSettings</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quantum.GamemodeSettingsBase.html">GamemodeSettingsBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_OfflineMatchSessionHandler_selectedGamemode" data-uid="rwby.OfflineMatchSessionHandler.selectedGamemode">
+  selectedGamemode
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Header(&quot;Match Info&quot;)]
+[NonSerialized]
+public BaseGamemodeDefinition selectedGamemode</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Global.BaseGamemodeDefinition.html">BaseGamemodeDefinition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_OfflineMatchSessionHandler_selectedMap" data-uid="rwby.OfflineMatchSessionHandler.selectedMap">
+  selectedMap
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public IMapDefinition selectedMap</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Global.IMapDefinition.html">IMapDefinition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_OfflineMatchSessionHandler_selectedSong" data-uid="rwby.OfflineMatchSessionHandler.selectedSong">
+  selectedSong
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public BaseSongDefinition selectedSong</code></pre>
   </div>
 
 
@@ -323,94 +417,28 @@ public BaseSongDefinition localBGM</code></pre>
 
 
 
-
-  <h3 id="rwby_OfflineMatchSessionHandler_mapIndex" data-uid="rwby.OfflineMatchSessionHandler.mapIndex">
-  mapIndex
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=26"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Match Info&quot;)]
-public int mapIndex</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="rwby_OfflineMatchSessionHandler_profiling" data-uid="rwby.OfflineMatchSessionHandler.profiling">
-  profiling
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=172"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool profiling</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
 
   <a id="rwby_OfflineMatchSessionHandler_BeginMatch_" data-uid="rwby.OfflineMatchSessionHandler.BeginMatch*"></a>
 
-  <h3 id="rwby_OfflineMatchSessionHandler_BeginMatch_ModAssetSoftReference_" data-uid="rwby.OfflineMatchSessionHandler.BeginMatch(ModAssetSoftReference)">
-  BeginMatch(ModAssetSoftReference)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=41"><i class="bi bi-code-slash"></i></a>
+  <h3 id="rwby_OfflineMatchSessionHandler_BeginMatch" data-uid="rwby.OfflineMatchSessionHandler.BeginMatch">
+  BeginMatch()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual UniTask BeginMatch(ModAssetSoftReference gamemodeReference)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual UniTask&lt;bool&gt; BeginMatch()</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>gamemodeReference</code> <a class="xref" href="Global.ModAssetSoftReference.html">ModAssetSoftReference</a></dt>
-    <dd></dd>
-  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">UniTask</span></dt>
+    <dt><span class="xref">UniTask</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -428,7 +456,7 @@ public int mapIndex</code></pre>
 
   <h3 id="rwby_OfflineMatchSessionHandler_Initialize" data-uid="rwby.OfflineMatchSessionHandler.Initialize">
   Initialize()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -455,11 +483,68 @@ public int mapIndex</code></pre>
 
 
 
+  <a id="rwby_OfflineMatchSessionHandler_InitializeSettingsAsset_" data-uid="rwby.OfflineMatchSessionHandler.InitializeSettingsAsset*"></a>
+
+  <h3 id="rwby_OfflineMatchSessionHandler_InitializeSettingsAsset" data-uid="rwby.OfflineMatchSessionHandler.InitializeSettingsAsset">
+  InitializeSettingsAsset()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InitializeSettingsAsset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="rwby_OfflineMatchSessionHandler_InstantiateGamemodeViewHandler_" data-uid="rwby.OfflineMatchSessionHandler.InstantiateGamemodeViewHandler*"></a>
+
+  <h3 id="rwby_OfflineMatchSessionHandler_InstantiateGamemodeViewHandler_System_Boolean_" data-uid="rwby.OfflineMatchSessionHandler.InstantiateGamemodeViewHandler(System.Boolean)">
+  InstantiateGamemodeViewHandler(bool)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InstantiateGamemodeViewHandler(bool recreate = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>recreate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="rwby_OfflineMatchSessionHandler_StartQuantumGame_" data-uid="rwby.OfflineMatchSessionHandler.StartQuantumGame*"></a>
 
   <h3 id="rwby_OfflineMatchSessionHandler_StartQuantumGame_Quantum_AssetGuid_System_Int32_" data-uid="rwby.OfflineMatchSessionHandler.StartQuantumGame(Quantum.AssetGuid,System.Int32)">
   StartQuantumGame(AssetGuid, int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -497,7 +582,7 @@ public int mapIndex</code></pre>
 
   <h3 id="rwby_OfflineMatchSessionHandler_Teardown" data-uid="rwby.OfflineMatchSessionHandler.Teardown">
   Teardown()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/OfflineMatchSessionHandler.cs&amp;version=GBdev&amp;line=39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

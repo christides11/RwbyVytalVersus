@@ -6,7 +6,7 @@ items:
   parent: rwby
   children:
   - rwby.GameConstants.dummyCamera
-  - rwby.GameConstants.localPlayerCamCamLayers
+  - rwby.GameConstants.localPlayerCineBrainChannels
   - rwby.GameConstants.localPlayerVirtualCamLayers
   - rwby.GameConstants.matchSessionHandler
   - rwby.GameConstants.messageHandler
@@ -23,6 +23,11 @@ items:
   - rwby.GameConstants.tag_CutscenePlayingEntityModelRoot
   - rwby.GameConstants.tag_Cutscene_GameManager
   - rwby.GameConstants.tag_Cutscene_MatchHandler
+  - rwby.GameConstants.tag_Scene_MainMenuScreenContainer
+  - rwby.GameConstants.tag_Scene_MainScreenContainer
+  - rwby.GameConstants.tag_Scene_QuickMatchScreenContainer
+  - rwby.GameConstants.tag_Scene_TitleScreenContainer
+  - rwby.GameConstants.tag_Scene_VytalMatchScreenContainer
   - rwby.GameConstants.tag_VirtualCam
   - rwby.GameConstants.targetCam
   - rwby.GameConstants.teamVersusModeSoftReference
@@ -270,33 +275,45 @@ items:
     return:
       type: Unity.Cinemachine.OutputChannels[]
     content.vb: Public localPlayerVirtualCamLayers As OutputChannels()
-- uid: rwby.GameConstants.localPlayerCamCamLayers
-  commentId: F:rwby.GameConstants.localPlayerCamCamLayers
-  id: localPlayerCamCamLayers
+- uid: rwby.GameConstants.localPlayerCineBrainChannels
+  commentId: F:rwby.GameConstants.localPlayerCineBrainChannels
+  id: localPlayerCineBrainChannels
   parent: rwby.GameConstants
   langs:
   - csharp
   - vb
-  name: localPlayerCamCamLayers
-  nameWithType: GameConstants.localPlayerCamCamLayers
-  fullName: rwby.GameConstants.localPlayerCamCamLayers
+  name: localPlayerCineBrainChannels
+  nameWithType: GameConstants.localPlayerCineBrainChannels
+  fullName: rwby.GameConstants.localPlayerCineBrainChannels
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: localPlayerCamCamLayers
+    id: localPlayerCineBrainChannels
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
     startLine: 20
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: public OutputChannels[] localPlayerCamCamLayers
+    content: >-
+      [FormerlySerializedAs("localPlayerCamCamLayers")]
+
+      public OutputChannels[] localPlayerCineBrainChannels
     return:
       type: Unity.Cinemachine.OutputChannels[]
-    content.vb: Public localPlayerCamCamLayers As OutputChannels()
+    content.vb: >-
+      <FormerlySerializedAs("localPlayerCamCamLayers")>
+
+      Public localPlayerCineBrainChannels As OutputChannels()
+  attributes:
+  - type: UnityEngine.Serialization.FormerlySerializedAsAttribute
+    ctor: UnityEngine.Serialization.FormerlySerializedAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: localPlayerCamCamLayers
 - uid: rwby.GameConstants.pipelineAsset
   commentId: F:rwby.GameConstants.pipelineAsset
   id: pipelineAsset
@@ -723,6 +740,151 @@ items:
     return:
       type: Quantum.Tag
     content.vb: Public tag_Cutscene_GameManager As Tag
+- uid: rwby.GameConstants.tag_Scene_MainMenuScreenContainer
+  commentId: F:rwby.GameConstants.tag_Scene_MainMenuScreenContainer
+  id: tag_Scene_MainMenuScreenContainer
+  parent: rwby.GameConstants
+  langs:
+  - csharp
+  - vb
+  name: tag_Scene_MainMenuScreenContainer
+  nameWithType: GameConstants.tag_Scene_MainMenuScreenContainer
+  fullName: rwby.GameConstants.tag_Scene_MainMenuScreenContainer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_Scene_MainMenuScreenContainer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
+    startLine: 45
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [Space]
+
+      public Tag tag_Scene_MainMenuScreenContainer
+    return:
+      type: Quantum.Tag
+    content.vb: >-
+      <Space>
+
+      Public tag_Scene_MainMenuScreenContainer As Tag
+  attributes:
+  - type: UnityEngine.SpaceAttribute
+    ctor: UnityEngine.SpaceAttribute.#ctor
+    arguments: []
+- uid: rwby.GameConstants.tag_Scene_TitleScreenContainer
+  commentId: F:rwby.GameConstants.tag_Scene_TitleScreenContainer
+  id: tag_Scene_TitleScreenContainer
+  parent: rwby.GameConstants
+  langs:
+  - csharp
+  - vb
+  name: tag_Scene_TitleScreenContainer
+  nameWithType: GameConstants.tag_Scene_TitleScreenContainer
+  fullName: rwby.GameConstants.tag_Scene_TitleScreenContainer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_Scene_TitleScreenContainer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
+    startLine: 46
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public Tag tag_Scene_TitleScreenContainer
+    return:
+      type: Quantum.Tag
+    content.vb: Public tag_Scene_TitleScreenContainer As Tag
+- uid: rwby.GameConstants.tag_Scene_MainScreenContainer
+  commentId: F:rwby.GameConstants.tag_Scene_MainScreenContainer
+  id: tag_Scene_MainScreenContainer
+  parent: rwby.GameConstants
+  langs:
+  - csharp
+  - vb
+  name: tag_Scene_MainScreenContainer
+  nameWithType: GameConstants.tag_Scene_MainScreenContainer
+  fullName: rwby.GameConstants.tag_Scene_MainScreenContainer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_Scene_MainScreenContainer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
+    startLine: 47
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public Tag tag_Scene_MainScreenContainer
+    return:
+      type: Quantum.Tag
+    content.vb: Public tag_Scene_MainScreenContainer As Tag
+- uid: rwby.GameConstants.tag_Scene_QuickMatchScreenContainer
+  commentId: F:rwby.GameConstants.tag_Scene_QuickMatchScreenContainer
+  id: tag_Scene_QuickMatchScreenContainer
+  parent: rwby.GameConstants
+  langs:
+  - csharp
+  - vb
+  name: tag_Scene_QuickMatchScreenContainer
+  nameWithType: GameConstants.tag_Scene_QuickMatchScreenContainer
+  fullName: rwby.GameConstants.tag_Scene_QuickMatchScreenContainer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_Scene_QuickMatchScreenContainer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
+    startLine: 48
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public Tag tag_Scene_QuickMatchScreenContainer
+    return:
+      type: Quantum.Tag
+    content.vb: Public tag_Scene_QuickMatchScreenContainer As Tag
+- uid: rwby.GameConstants.tag_Scene_VytalMatchScreenContainer
+  commentId: F:rwby.GameConstants.tag_Scene_VytalMatchScreenContainer
+  id: tag_Scene_VytalMatchScreenContainer
+  parent: rwby.GameConstants
+  langs:
+  - csharp
+  - vb
+  name: tag_Scene_VytalMatchScreenContainer
+  nameWithType: GameConstants.tag_Scene_VytalMatchScreenContainer
+  fullName: rwby.GameConstants.tag_Scene_VytalMatchScreenContainer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_Scene_VytalMatchScreenContainer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/GameConstants.cs
+    startLine: 49
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public Tag tag_Scene_VytalMatchScreenContainer
+    return:
+      type: Quantum.Tag
+    content.vb: Public tag_Scene_VytalMatchScreenContainer As Tag
 references:
 - uid: rwby
   commentId: N:rwby

@@ -1,0 +1,363 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.TweenSequenceContainer
+  commentId: T:Global.TweenSequenceContainer
+  id: TweenSequenceContainer
+  parent: Global
+  children:
+  - Global.TweenSequenceContainer.BuildSequence(System.Int32,System.Boolean,System.Boolean,System.Action)
+  - Global.TweenSequenceContainer.cycleMode
+  - Global.TweenSequenceContainer.ease
+  - Global.TweenSequenceContainer.parts
+  langs:
+  - csharp
+  - vb
+  name: TweenSequenceContainer
+  nameWithType: TweenSequenceContainer
+  fullName: TweenSequenceContainer
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Tween/TweenSequenceContainer.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TweenSequenceContainer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Tween/TweenSequenceContainer.cs
+    startLine: 5
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class TweenSequenceContainer
+    content.vb: >-
+      <Serializable>
+
+      Public Class TweenSequenceContainer
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Global.TweenSequenceContainer.parts
+  commentId: F:Global.TweenSequenceContainer.parts
+  id: parts
+  parent: Global.TweenSequenceContainer
+  langs:
+  - csharp
+  - vb
+  name: parts
+  nameWithType: TweenSequenceContainer.parts
+  fullName: TweenSequenceContainer.parts
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Tween/TweenSequenceContainer.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: parts
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Tween/TweenSequenceContainer.cs
+    startLine: 9
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: >-
+      [SerializeReference]
+
+      [SubclassSelector]
+
+      public List<TweenSequencePart> parts
+    return:
+      type: System.Collections.Generic.List{TweenSequencePart}
+    content.vb: >-
+      <SerializeReference>
+
+      <SubclassSelector>
+
+      Public parts As List(Of TweenSequencePart)
+  attributes:
+  - type: UnityEngine.SerializeReference
+    ctor: UnityEngine.SerializeReference.#ctor
+    arguments: []
+  - type: Global.SubclassSelectorAttribute
+    ctor: Global.SubclassSelectorAttribute.#ctor
+    arguments: []
+- uid: Global.TweenSequenceContainer.cycleMode
+  commentId: F:Global.TweenSequenceContainer.cycleMode
+  id: cycleMode
+  parent: Global.TweenSequenceContainer
+  langs:
+  - csharp
+  - vb
+  name: cycleMode
+  nameWithType: TweenSequenceContainer.cycleMode
+  fullName: TweenSequenceContainer.cycleMode
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Tween/TweenSequenceContainer.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: cycleMode
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Tween/TweenSequenceContainer.cs
+    startLine: 10
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public CycleMode cycleMode
+    return:
+      type: PrimeTween.CycleMode
+    content.vb: Public cycleMode As CycleMode
+- uid: Global.TweenSequenceContainer.ease
+  commentId: F:Global.TweenSequenceContainer.ease
+  id: ease
+  parent: Global.TweenSequenceContainer
+  langs:
+  - csharp
+  - vb
+  name: ease
+  nameWithType: TweenSequenceContainer.ease
+  fullName: TweenSequenceContainer.ease
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Tween/TweenSequenceContainer.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ease
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Tween/TweenSequenceContainer.cs
+    startLine: 11
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Ease ease
+    return:
+      type: PrimeTween.Ease
+    content.vb: Public ease As Ease
+- uid: Global.TweenSequenceContainer.BuildSequence(System.Int32,System.Boolean,System.Boolean,System.Action)
+  commentId: M:Global.TweenSequenceContainer.BuildSequence(System.Int32,System.Boolean,System.Boolean,System.Action)
+  id: BuildSequence(System.Int32,System.Boolean,System.Boolean,System.Action)
+  parent: Global.TweenSequenceContainer
+  langs:
+  - csharp
+  - vb
+  name: BuildSequence(int, bool, bool, Action)
+  nameWithType: TweenSequenceContainer.BuildSequence(int, bool, bool, Action)
+  fullName: TweenSequenceContainer.BuildSequence(int, bool, bool, System.Action)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Tween/TweenSequenceContainer.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BuildSequence
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Tween/TweenSequenceContainer.cs
+    startLine: 13
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Sequence BuildSequence(int cycles = 1, bool useUnscaledTime = false, bool useFixedUpdate = false, Action onComplete = null)
+    parameters:
+    - id: cycles
+      type: System.Int32
+    - id: useUnscaledTime
+      type: System.Boolean
+    - id: useFixedUpdate
+      type: System.Boolean
+    - id: onComplete
+      type: System.Action
+    return:
+      type: PrimeTween.Sequence
+    content.vb: Public Function BuildSequence(cycles As Integer = 1, useUnscaledTime As Boolean = False, useFixedUpdate As Boolean = False, onComplete As Action = Nothing) As Sequence
+  overload: Global.TweenSequenceContainer.BuildSequence*
+  nameWithType.vb: TweenSequenceContainer.BuildSequence(Integer, Boolean, Boolean, Action)
+  fullName.vb: TweenSequenceContainer.BuildSequence(Integer, Boolean, Boolean, System.Action)
+  name.vb: BuildSequence(Integer, Boolean, Boolean, Action)
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{TweenSequencePart}
+  commentId: T:System.Collections.Generic.List{TweenSequencePart}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<TweenSequencePart>
+  nameWithType: List<TweenSequencePart>
+  fullName: System.Collections.Generic.List<TweenSequencePart>
+  nameWithType.vb: List(Of TweenSequencePart)
+  fullName.vb: System.Collections.Generic.List(Of TweenSequencePart)
+  name.vb: List(Of TweenSequencePart)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Global.TweenSequencePart
+    name: TweenSequencePart
+    href: TweenSequencePart.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.TweenSequencePart
+    name: TweenSequencePart
+    href: TweenSequencePart.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: PrimeTween.CycleMode
+  commentId: T:PrimeTween.CycleMode
+  parent: PrimeTween
+  isExternal: true
+  name: CycleMode
+  nameWithType: CycleMode
+  fullName: PrimeTween.CycleMode
+- uid: PrimeTween
+  commentId: N:PrimeTween
+  isExternal: true
+  name: PrimeTween
+  nameWithType: PrimeTween
+  fullName: PrimeTween
+- uid: PrimeTween.Ease
+  commentId: T:PrimeTween.Ease
+  parent: PrimeTween
+  isExternal: true
+  name: Ease
+  nameWithType: Ease
+  fullName: PrimeTween.Ease
+- uid: Global.TweenSequenceContainer.BuildSequence*
+  commentId: Overload:Global.TweenSequenceContainer.BuildSequence
+  href: Global.TweenSequenceContainer.html#TweenSequenceContainer_BuildSequence_System_Int32_System_Boolean_System_Boolean_System_Action_
+  name: BuildSequence
+  nameWithType: TweenSequenceContainer.BuildSequence
+  fullName: TweenSequenceContainer.BuildSequence
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: PrimeTween.Sequence
+  commentId: T:PrimeTween.Sequence
+  parent: PrimeTween
+  isExternal: true
+  name: Sequence
+  nameWithType: Sequence
+  fullName: PrimeTween.Sequence

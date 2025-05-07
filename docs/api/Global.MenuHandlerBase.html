@@ -129,6 +129,8 @@ Class MenuHandlerBase  <a class="header-action link-secondary" title="View sourc
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
+      <div><a class="xref" href="rwby.QuickMatchScreenManager.html">QuickMatchScreenManager</a></div>
+      <div><a class="xref" href="rwby.VytalMatchSceneScreenManager.html">VytalMatchSceneScreenManager</a></div>
       <div><a class="xref" href="rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.html">NetworkLobbySessionMenuHandler</a></div>
     </dd>
   </dl>
@@ -154,7 +156,7 @@ Class MenuHandlerBase  <a class="header-action link-secondary" title="View sourc
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[SerializeField]
-protected List&lt;int&gt; history</code></pre>
+protected List&lt;IMenu&gt; history</code></pre>
   </div>
 
 
@@ -162,7 +164,7 @@ protected List&lt;int&gt; history</code></pre>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="rwby.ui.IMenu.html">IMenu</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -184,7 +186,7 @@ protected List&lt;int&gt; history</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Dictionary&lt;int, MenuBase&gt; menus</code></pre>
+    <pre><code class="lang-csharp hljs">protected List&lt;IMenu&gt; menus</code></pre>
   </div>
 
 
@@ -192,7 +194,7 @@ protected List&lt;int&gt; history</code></pre>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="rwby.ui.MenuBase.html">MenuBase</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="rwby.ui.IMenu.html">IMenu</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -212,7 +214,7 @@ protected List&lt;int&gt; history</code></pre>
 
   <h3 id="Global_MenuHandlerBase_Back" data-uid="Global.MenuHandlerBase.Back">
   Back()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -241,8 +243,8 @@ protected List&lt;int&gt; history</code></pre>
 
   <a id="Global_MenuHandlerBase_Forward_" data-uid="Global.MenuHandlerBase.Forward*"></a>
 
-  <h3 id="Global_MenuHandlerBase_Forward_System_Int32_System_Boolean_" data-uid="Global.MenuHandlerBase.Forward(System.Int32,System.Boolean)">
-  Forward(int, bool)
+  <h3 id="Global_MenuHandlerBase_Forward_rwby_ui_IMenu_System_Boolean_" data-uid="Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)">
+  Forward(IMenu, bool)
   <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -250,12 +252,12 @@ protected List&lt;int&gt; history</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool Forward(int menu, bool autoClose = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool Forward(IMenu menu, bool autoClose = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>menu</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>menu</code> <a class="xref" href="rwby.ui.IMenu.html">IMenu</a></dt>
     <dd></dd>
     <dt><code>autoClose</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
@@ -281,7 +283,7 @@ protected List&lt;int&gt; history</code></pre>
 
   <h3 id="Global_MenuHandlerBase_GetCurrentMenu" data-uid="Global.MenuHandlerBase.GetCurrentMenu">
   GetCurrentMenu()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -312,20 +314,20 @@ protected List&lt;int&gt; history</code></pre>
 
   <h3 id="Global_MenuHandlerBase_GetHistory" data-uid="Global.MenuHandlerBase.GetHistory">
   GetHistory()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IList GetHistory()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual List&lt;IMenu&gt; GetHistory()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ilist">IList</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="rwby.ui.IMenu.html">IMenu</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -343,7 +345,7 @@ protected List&lt;int&gt; history</code></pre>
 
   <h3 id="Global_MenuHandlerBase_GetPreviousMenu" data-uid="Global.MenuHandlerBase.GetPreviousMenu">
   GetPreviousMenu()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -374,7 +376,7 @@ protected List&lt;int&gt; history</code></pre>
 
   <h3 id="Global_MenuHandlerBase_HasSubmenuOpen" data-uid="Global.MenuHandlerBase.HasSubmenuOpen">
   HasSubmenuOpen()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -403,8 +405,8 @@ protected List&lt;int&gt; history</code></pre>
 
   <a id="Global_MenuHandlerBase_ResetAndForwardTo_" data-uid="Global.MenuHandlerBase.ResetAndForwardTo*"></a>
 
-  <h3 id="Global_MenuHandlerBase_ResetAndForwardTo_System_Int32_" data-uid="Global.MenuHandlerBase.ResetAndForwardTo(System.Int32)">
-  ResetAndForwardTo(int)
+  <h3 id="Global_MenuHandlerBase_ResetAndForwardTo_rwby_ui_IMenu_" data-uid="Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)">
+  ResetAndForwardTo(IMenu)
   <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs&amp;version=GBdev&amp;line=13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -412,12 +414,12 @@ protected List&lt;int&gt; history</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void ResetAndForwardTo(int menuToForwardTo)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void ResetAndForwardTo(IMenu menuToForwardTo)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>menuToForwardTo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>menuToForwardTo</code> <a class="xref" href="rwby.ui.IMenu.html">IMenu</a></dt>
     <dd></dd>
   </dl>
 

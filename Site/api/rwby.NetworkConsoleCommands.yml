@@ -6,7 +6,7 @@ items:
   parent: rwby
   children:
   - rwby.NetworkConsoleCommands.CreateLobby(System.String,System.UInt32,System.String,System.String)
-  - rwby.NetworkConsoleCommands.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
+  - rwby.NetworkConsoleCommands.JoinLobby(System.String,Epic.OnlineServices.Lobby.LobbyDetails)
   - rwby.NetworkConsoleCommands.StartLocalTrainingMode
   - rwby.NetworkConsoleCommands.StartLocalVersusMode
   langs:
@@ -78,16 +78,16 @@ items:
   nameWithType.vb: NetworkConsoleCommands.CreateLobby(String, UInteger, String, String)
   fullName.vb: rwby.NetworkConsoleCommands.CreateLobby(String, UInteger, String, String)
   name.vb: CreateLobby(String, UInteger, String, String)
-- uid: rwby.NetworkConsoleCommands.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
-  commentId: M:rwby.NetworkConsoleCommands.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
-  id: JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
+- uid: rwby.NetworkConsoleCommands.JoinLobby(System.String,Epic.OnlineServices.Lobby.LobbyDetails)
+  commentId: M:rwby.NetworkConsoleCommands.JoinLobby(System.String,Epic.OnlineServices.Lobby.LobbyDetails)
+  id: JoinLobby(System.String,Epic.OnlineServices.Lobby.LobbyDetails)
   parent: rwby.NetworkConsoleCommands
   langs:
   - csharp
   - vb
-  name: JoinLobby(LobbyDetails)
-  nameWithType: NetworkConsoleCommands.JoinLobby(LobbyDetails)
-  fullName: rwby.NetworkConsoleCommands.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
+  name: JoinLobby(string, LobbyDetails)
+  nameWithType: NetworkConsoleCommands.JoinLobby(string, LobbyDetails)
+  fullName: rwby.NetworkConsoleCommands.JoinLobby(string, Epic.OnlineServices.Lobby.LobbyDetails)
   type: Method
   source:
     remote:
@@ -101,14 +101,19 @@ items:
   - rwby
   namespace: rwby
   syntax:
-    content: public static UniTask<bool> JoinLobby(LobbyDetails lobbyDetails)
+    content: public static UniTask<bool> JoinLobby(string lobbyId, LobbyDetails lobbyDetails)
     parameters:
+    - id: lobbyId
+      type: System.String
     - id: lobbyDetails
       type: Epic.OnlineServices.Lobby.LobbyDetails
     return:
       type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
-    content.vb: Public Shared Function JoinLobby(lobbyDetails As LobbyDetails) As UniTask(Of Boolean)
+    content.vb: Public Shared Function JoinLobby(lobbyId As String, lobbyDetails As LobbyDetails) As UniTask(Of Boolean)
   overload: rwby.NetworkConsoleCommands.JoinLobby*
+  nameWithType.vb: NetworkConsoleCommands.JoinLobby(String, LobbyDetails)
+  fullName.vb: rwby.NetworkConsoleCommands.JoinLobby(String, Epic.OnlineServices.Lobby.LobbyDetails)
+  name.vb: JoinLobby(String, LobbyDetails)
 - uid: rwby.NetworkConsoleCommands.StartLocalTrainingMode
   commentId: M:rwby.NetworkConsoleCommands.StartLocalTrainingMode
   id: StartLocalTrainingMode
@@ -155,7 +160,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: StartLocalVersusMode
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Console/Commands/NetworkConsoleCommands.cs
-    startLine: 64
+    startLine: 65
   assemblies:
   - rwby
   namespace: rwby
@@ -308,39 +313,47 @@ references:
     isExternal: true
 - uid: rwby.NetworkConsoleCommands.JoinLobby*
   commentId: Overload:rwby.NetworkConsoleCommands.JoinLobby
-  href: rwby.NetworkConsoleCommands.html#rwby_NetworkConsoleCommands_JoinLobby_Epic_OnlineServices_Lobby_LobbyDetails_
+  href: rwby.NetworkConsoleCommands.html#rwby_NetworkConsoleCommands_JoinLobby_System_String_Epic_OnlineServices_Lobby_LobbyDetails_
   name: JoinLobby
   nameWithType: NetworkConsoleCommands.JoinLobby
   fullName: rwby.NetworkConsoleCommands.JoinLobby
 - uid: Epic.OnlineServices.Lobby.LobbyDetails
   commentId: T:Epic.OnlineServices.Lobby.LobbyDetails
   parent: Epic.OnlineServices.Lobby
+  isExternal: true
   name: LobbyDetails
   nameWithType: LobbyDetails
   fullName: Epic.OnlineServices.Lobby.LobbyDetails
 - uid: Epic.OnlineServices.Lobby
   commentId: N:Epic.OnlineServices.Lobby
+  isExternal: true
   name: Epic.OnlineServices.Lobby
   nameWithType: Epic.OnlineServices.Lobby
   fullName: Epic.OnlineServices.Lobby
   spec.csharp:
   - uid: Epic
     name: Epic
+    isExternal: true
   - name: .
   - uid: Epic.OnlineServices
     name: OnlineServices
+    isExternal: true
   - name: .
   - uid: Epic.OnlineServices.Lobby
     name: Lobby
+    isExternal: true
   spec.vb:
   - uid: Epic
     name: Epic
+    isExternal: true
   - name: .
   - uid: Epic.OnlineServices
     name: OnlineServices
+    isExternal: true
   - name: .
   - uid: Epic.OnlineServices.Lobby
     name: Lobby
+    isExternal: true
 - uid: rwby.NetworkConsoleCommands.StartLocalTrainingMode*
   commentId: Overload:rwby.NetworkConsoleCommands.StartLocalTrainingMode
   href: rwby.NetworkConsoleCommands.html#rwby_NetworkConsoleCommands_StartLocalTrainingMode

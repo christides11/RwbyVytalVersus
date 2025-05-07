@@ -8,8 +8,13 @@ items:
   - Global.SplitScreenManager.Activate
   - Global.SplitScreenManager.Clear
   - Global.SplitScreenManager.Deactivate
+  - Global.SplitScreenManager.GetView(System.Int32)
   - Global.SplitScreenManager.Init
+  - Global.SplitScreenManager.OnScreenRegistered
   - Global.SplitScreenManager.RegisterCamera(UnityEngine.Camera)
+  - Global.SplitScreenManager.SetCameraRect(UnityEngine.Camera,UnityEngine.Rect)
+  - Global.SplitScreenManager.SetCameraTargetDisplay(UnityEngine.Camera,System.Int32)
+  - Global.SplitScreenManager.SetView(System.Int32,UnityEngine.Camera)
   - Global.SplitScreenManager.UnregisterCamera(UnityEngine.Camera)
   - Global.SplitScreenManager.UpdateView
   - Global.SplitScreenManager.backgroundCamera
@@ -30,7 +35,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SplitScreenManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 6
+    startLine: 5
   assemblies:
   - rwby
   namespace: Global
@@ -43,6 +48,33 @@ items:
   - UnityEngine.Component
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
+- uid: Global.SplitScreenManager.OnScreenRegistered
+  commentId: F:Global.SplitScreenManager.OnScreenRegistered
+  id: OnScreenRegistered
+  parent: Global.SplitScreenManager
+  langs:
+  - csharp
+  - vb
+  name: OnScreenRegistered
+  nameWithType: SplitScreenManager.OnScreenRegistered
+  fullName: SplitScreenManager.OnScreenRegistered
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnScreenRegistered
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
+    startLine: 8
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public SplitScreenManager.ScreenDelegate OnScreenRegistered
+    return:
+      type: Global.SplitScreenManager.ScreenDelegate
+    content.vb: Public OnScreenRegistered As SplitScreenManager.ScreenDelegate
 - uid: Global.SplitScreenManager.settingsManager
   commentId: F:Global.SplitScreenManager.settingsManager
   id: settingsManager
@@ -61,7 +93,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: settingsManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - rwby
   namespace: Global
@@ -88,7 +120,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: shouldUpdateView
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - rwby
   namespace: Global
@@ -115,7 +147,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: backgroundCamera
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 19
+    startLine: 21
   assemblies:
   - rwby
   namespace: Global
@@ -142,7 +174,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: splitscreenRects
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - rwby
   namespace: Global
@@ -169,7 +201,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Init
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - rwby
   namespace: Global
@@ -195,7 +227,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Activate
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 28
+    startLine: 30
   assemblies:
   - rwby
   namespace: Global
@@ -221,7 +253,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Deactivate
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 34
+    startLine: 36
   assemblies:
   - rwby
   namespace: Global
@@ -247,7 +279,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RegisterCamera
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 39
+    startLine: 41
   assemblies:
   - rwby
   namespace: Global
@@ -276,7 +308,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnregisterCamera
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 45
+    startLine: 48
   assemblies:
   - rwby
   namespace: Global
@@ -305,7 +337,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Clear
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 51
+    startLine: 54
   assemblies:
   - rwby
   namespace: Global
@@ -313,6 +345,76 @@ items:
     content: public void Clear()
     content.vb: Public Sub Clear()
   overload: Global.SplitScreenManager.Clear*
+- uid: Global.SplitScreenManager.GetView(System.Int32)
+  commentId: M:Global.SplitScreenManager.GetView(System.Int32)
+  id: GetView(System.Int32)
+  parent: Global.SplitScreenManager
+  langs:
+  - csharp
+  - vb
+  name: GetView(int)
+  nameWithType: SplitScreenManager.GetView(int)
+  fullName: SplitScreenManager.GetView(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
+    startLine: 60
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Camera GetView(int ind)
+    parameters:
+    - id: ind
+      type: System.Int32
+    return:
+      type: UnityEngine.Camera
+    content.vb: Public Function GetView(ind As Integer) As Camera
+  overload: Global.SplitScreenManager.GetView*
+  nameWithType.vb: SplitScreenManager.GetView(Integer)
+  fullName.vb: SplitScreenManager.GetView(Integer)
+  name.vb: GetView(Integer)
+- uid: Global.SplitScreenManager.SetView(System.Int32,UnityEngine.Camera)
+  commentId: M:Global.SplitScreenManager.SetView(System.Int32,UnityEngine.Camera)
+  id: SetView(System.Int32,UnityEngine.Camera)
+  parent: Global.SplitScreenManager
+  langs:
+  - csharp
+  - vb
+  name: SetView(int, Camera)
+  nameWithType: SplitScreenManager.SetView(int, Camera)
+  fullName: SplitScreenManager.SetView(int, UnityEngine.Camera)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
+    startLine: 66
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool SetView(int index, Camera camera)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: camera
+      type: UnityEngine.Camera
+    return:
+      type: System.Boolean
+    content.vb: Public Function SetView(index As Integer, camera As Camera) As Boolean
+  overload: Global.SplitScreenManager.SetView*
+  nameWithType.vb: SplitScreenManager.SetView(Integer, Camera)
+  fullName.vb: SplitScreenManager.SetView(Integer, UnityEngine.Camera)
+  name.vb: SetView(Integer, Camera)
 - uid: Global.SplitScreenManager.UpdateView
   commentId: M:Global.SplitScreenManager.UpdateView
   id: UpdateView
@@ -331,7 +433,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UpdateView
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
-    startLine: 57
+    startLine: 74
   assemblies:
   - rwby
   namespace: Global
@@ -339,6 +441,71 @@ items:
     content: public void UpdateView()
     content.vb: Public Sub UpdateView()
   overload: Global.SplitScreenManager.UpdateView*
+- uid: Global.SplitScreenManager.SetCameraTargetDisplay(UnityEngine.Camera,System.Int32)
+  commentId: M:Global.SplitScreenManager.SetCameraTargetDisplay(UnityEngine.Camera,System.Int32)
+  id: SetCameraTargetDisplay(UnityEngine.Camera,System.Int32)
+  parent: Global.SplitScreenManager
+  langs:
+  - csharp
+  - vb
+  name: SetCameraTargetDisplay(Camera, int)
+  nameWithType: SplitScreenManager.SetCameraTargetDisplay(Camera, int)
+  fullName: SplitScreenManager.SetCameraTargetDisplay(UnityEngine.Camera, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetCameraTargetDisplay
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
+    startLine: 117
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void SetCameraTargetDisplay(Camera cam, int displayIndex)
+    parameters:
+    - id: cam
+      type: UnityEngine.Camera
+    - id: displayIndex
+      type: System.Int32
+    content.vb: Public Sub SetCameraTargetDisplay(cam As Camera, displayIndex As Integer)
+  overload: Global.SplitScreenManager.SetCameraTargetDisplay*
+  nameWithType.vb: SplitScreenManager.SetCameraTargetDisplay(Camera, Integer)
+  fullName.vb: SplitScreenManager.SetCameraTargetDisplay(UnityEngine.Camera, Integer)
+  name.vb: SetCameraTargetDisplay(Camera, Integer)
+- uid: Global.SplitScreenManager.SetCameraRect(UnityEngine.Camera,UnityEngine.Rect)
+  commentId: M:Global.SplitScreenManager.SetCameraRect(UnityEngine.Camera,UnityEngine.Rect)
+  id: SetCameraRect(UnityEngine.Camera,UnityEngine.Rect)
+  parent: Global.SplitScreenManager
+  langs:
+  - csharp
+  - vb
+  name: SetCameraRect(Camera, Rect)
+  nameWithType: SplitScreenManager.SetCameraRect(Camera, Rect)
+  fullName: SplitScreenManager.SetCameraRect(UnityEngine.Camera, UnityEngine.Rect)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetCameraRect
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/SplitScreenManager.cs
+    startLine: 130
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void SetCameraRect(Camera cam, Rect rect)
+    parameters:
+    - id: cam
+      type: UnityEngine.Camera
+    - id: rect
+      type: UnityEngine.Rect
+    content.vb: Public Sub SetCameraRect(cam As Camera, rect As Rect)
+  overload: Global.SplitScreenManager.SetCameraRect*
 references:
 - uid: Global
 - uid: System.Object
@@ -393,6 +560,28 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: Global.SplitScreenManager.ScreenDelegate
+  commentId: T:Global.SplitScreenManager.ScreenDelegate
+  href: SplitScreenManager.html
+  name: SplitScreenManager.ScreenDelegate
+  nameWithType: SplitScreenManager.ScreenDelegate
+  fullName: SplitScreenManager.ScreenDelegate
+  spec.csharp:
+  - uid: Global.SplitScreenManager
+    name: SplitScreenManager
+    href: SplitScreenManager.html
+  - name: .
+  - uid: Global.SplitScreenManager.ScreenDelegate
+    name: ScreenDelegate
+    href: SplitScreenManager.ScreenDelegate.html
+  spec.vb:
+  - uid: Global.SplitScreenManager
+    name: SplitScreenManager
+    href: SplitScreenManager.html
+  - name: .
+  - uid: Global.SplitScreenManager.ScreenDelegate
+    name: ScreenDelegate
+    href: SplitScreenManager.ScreenDelegate.html
 - uid: rwby.SettingsManager
   commentId: T:rwby.SettingsManager
   parent: rwby
@@ -566,9 +755,51 @@ references:
   name: Clear
   nameWithType: SplitScreenManager.Clear
   fullName: SplitScreenManager.Clear
+- uid: Global.SplitScreenManager.GetView*
+  commentId: Overload:Global.SplitScreenManager.GetView
+  href: Global.SplitScreenManager.html#SplitScreenManager_GetView_System_Int32_
+  name: GetView
+  nameWithType: SplitScreenManager.GetView
+  fullName: SplitScreenManager.GetView
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Global.SplitScreenManager.SetView*
+  commentId: Overload:Global.SplitScreenManager.SetView
+  href: Global.SplitScreenManager.html#SplitScreenManager_SetView_System_Int32_UnityEngine_Camera_
+  name: SetView
+  nameWithType: SplitScreenManager.SetView
+  fullName: SplitScreenManager.SetView
 - uid: Global.SplitScreenManager.UpdateView*
   commentId: Overload:Global.SplitScreenManager.UpdateView
   href: Global.SplitScreenManager.html#SplitScreenManager_UpdateView
   name: UpdateView
   nameWithType: SplitScreenManager.UpdateView
   fullName: SplitScreenManager.UpdateView
+- uid: Global.SplitScreenManager.SetCameraTargetDisplay*
+  commentId: Overload:Global.SplitScreenManager.SetCameraTargetDisplay
+  href: Global.SplitScreenManager.html#SplitScreenManager_SetCameraTargetDisplay_UnityEngine_Camera_System_Int32_
+  name: SetCameraTargetDisplay
+  nameWithType: SplitScreenManager.SetCameraTargetDisplay
+  fullName: SplitScreenManager.SetCameraTargetDisplay
+- uid: Global.SplitScreenManager.SetCameraRect*
+  commentId: Overload:Global.SplitScreenManager.SetCameraRect
+  href: Global.SplitScreenManager.html#SplitScreenManager_SetCameraRect_UnityEngine_Camera_UnityEngine_Rect_
+  name: SetCameraRect
+  nameWithType: SplitScreenManager.SetCameraRect
+  fullName: SplitScreenManager.SetCameraRect
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect

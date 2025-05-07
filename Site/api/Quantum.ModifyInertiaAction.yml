@@ -32,19 +32,21 @@ items:
 
       [AddTypeMenu("Fighter/Movement/Modify Intertia", 0)]
 
-      public class ModifyInertiaAction : HNSFStateAction
+      public class ModifyInertiaAction : HNSFStateAction, ILogSource
     content.vb: >-
       <Serializable>
 
       <AddTypeMenu("Fighter/Movement/Modify Intertia", 0)>
 
-      Public Class ModifyInertiaAction Inherits HNSFStateAction
+      Public Class ModifyInertiaAction Inherits HNSFStateAction Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.HNSFStateAction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateAction.Label
   - Quantum.HNSFStateAction.parent
@@ -238,6 +240,13 @@ references:
   name: HNSFStateAction
   nameWithType: HNSFStateAction
   fullName: Quantum.HNSFStateAction
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateAction.Label
   commentId: F:Quantum.HNSFStateAction.Label
   parent: Quantum.HNSFStateAction

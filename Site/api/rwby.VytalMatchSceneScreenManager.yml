@@ -1,0 +1,848 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.VytalMatchSceneScreenManager
+  commentId: T:rwby.VytalMatchSceneScreenManager
+  id: VytalMatchSceneScreenManager
+  parent: rwby
+  children:
+  - rwby.VytalMatchSceneScreenManager.Initialize
+  - rwby.VytalMatchSceneScreenManager.OpenCssForParticipant(System.Int32)
+  - rwby.VytalMatchSceneScreenManager.OpenFestivalSelectScreen
+  - rwby.VytalMatchSceneScreenManager.OpenMapSelectScreen
+  - rwby.VytalMatchSceneScreenManager.addParticipantButtonPrefab
+  - rwby.VytalMatchSceneScreenManager.festivalSelectScreen
+  - rwby.VytalMatchSceneScreenManager.gamemodeSettingsScreen
+  - rwby.VytalMatchSceneScreenManager.instanceManager
+  - rwby.VytalMatchSceneScreenManager.mainScreen
+  - rwby.VytalMatchSceneScreenManager.mapSelectScreen
+  - rwby.VytalMatchSceneScreenManager.participantViewItemPrefab
+  - rwby.VytalMatchSceneScreenManager.participantsScrollRect
+  - rwby.VytalMatchSceneScreenManager.readyScreen
+  - rwby.VytalMatchSceneScreenManager.sceneManager
+  langs:
+  - csharp
+  - vb
+  name: VytalMatchSceneScreenManager
+  nameWithType: VytalMatchSceneScreenManager
+  fullName: rwby.VytalMatchSceneScreenManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: VytalMatchSceneScreenManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 9
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: 'public class VytalMatchSceneScreenManager : MenuHandlerBase, IMenuHandler'
+    content.vb: Public Class VytalMatchSceneScreenManager Inherits MenuHandlerBase Implements IMenuHandler
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - Global.MenuHandlerBase
+  implements:
+  - rwby.ui.IMenuHandler
+  inheritedMembers:
+  - Global.MenuHandlerBase.menus
+  - Global.MenuHandlerBase.history
+  - Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+  - Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+  - Global.MenuHandlerBase.Back
+  - Global.MenuHandlerBase.GetHistory
+  - Global.MenuHandlerBase.GetPreviousMenu
+  - Global.MenuHandlerBase.GetCurrentMenu
+  - Global.MenuHandlerBase.HasSubmenuOpen
+- uid: rwby.VytalMatchSceneScreenManager.sceneManager
+  commentId: F:rwby.VytalMatchSceneScreenManager.sceneManager
+  id: sceneManager
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: sceneManager
+  nameWithType: VytalMatchSceneScreenManager.sceneManager
+  fullName: rwby.VytalMatchSceneScreenManager.sceneManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: sceneManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 11
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public VytalMatchSceneManager sceneManager
+    return:
+      type: rwby.VytalMatchSceneManager
+    content.vb: Public sceneManager As VytalMatchSceneManager
+- uid: rwby.VytalMatchSceneScreenManager.instanceManager
+  commentId: F:rwby.VytalMatchSceneScreenManager.instanceManager
+  id: instanceManager
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: instanceManager
+  nameWithType: VytalMatchSceneScreenManager.instanceManager
+  fullName: rwby.VytalMatchSceneScreenManager.instanceManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: instanceManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 12
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public VytalMatchSceneInstanceManager instanceManager
+    return:
+      type: rwby.VytalMatchSceneInstanceManager
+    content.vb: Public instanceManager As VytalMatchSceneInstanceManager
+- uid: rwby.VytalMatchSceneScreenManager.participantViewItemPrefab
+  commentId: F:rwby.VytalMatchSceneScreenManager.participantViewItemPrefab
+  id: participantViewItemPrefab
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: participantViewItemPrefab
+  nameWithType: VytalMatchSceneScreenManager.participantViewItemPrefab
+  fullName: rwby.VytalMatchSceneScreenManager.participantViewItemPrefab
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: participantViewItemPrefab
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public VytalMatchSceneParticipantViewItem participantViewItemPrefab
+    return:
+      type: rwby.VytalMatchSceneParticipantViewItem
+    content.vb: Public participantViewItemPrefab As VytalMatchSceneParticipantViewItem
+- uid: rwby.VytalMatchSceneScreenManager.addParticipantButtonPrefab
+  commentId: F:rwby.VytalMatchSceneScreenManager.addParticipantButtonPrefab
+  id: addParticipantButtonPrefab
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: addParticipantButtonPrefab
+  nameWithType: VytalMatchSceneScreenManager.addParticipantButtonPrefab
+  fullName: rwby.VytalMatchSceneScreenManager.addParticipantButtonPrefab
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: addParticipantButtonPrefab
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 15
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public ExButton addParticipantButtonPrefab
+    return:
+      type: Global.ExButton
+    content.vb: Public addParticipantButtonPrefab As ExButton
+- uid: rwby.VytalMatchSceneScreenManager.participantsScrollRect
+  commentId: F:rwby.VytalMatchSceneScreenManager.participantsScrollRect
+  id: participantsScrollRect
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: participantsScrollRect
+  nameWithType: VytalMatchSceneScreenManager.participantsScrollRect
+  fullName: rwby.VytalMatchSceneScreenManager.participantsScrollRect
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: participantsScrollRect
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public ScrollRect participantsScrollRect
+    return:
+      type: UnityEngine.UI.ScrollRect
+    content.vb: Public participantsScrollRect As ScrollRect
+- uid: rwby.VytalMatchSceneScreenManager.mainScreen
+  commentId: F:rwby.VytalMatchSceneScreenManager.mainScreen
+  id: mainScreen
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: mainScreen
+  nameWithType: VytalMatchSceneScreenManager.mainScreen
+  fullName: rwby.VytalMatchSceneScreenManager.mainScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: mainScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 20
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [Header("Menus")]
+
+      public VytalMatchSceneMainScreen mainScreen
+    return:
+      type: rwby.VytalMatchSceneMainScreen
+    content.vb: >-
+      <Header("Menus")>
+
+      Public mainScreen As VytalMatchSceneMainScreen
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Menus
+- uid: rwby.VytalMatchSceneScreenManager.festivalSelectScreen
+  commentId: F:rwby.VytalMatchSceneScreenManager.festivalSelectScreen
+  id: festivalSelectScreen
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: festivalSelectScreen
+  nameWithType: VytalMatchSceneScreenManager.festivalSelectScreen
+  fullName: rwby.VytalMatchSceneScreenManager.festivalSelectScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: festivalSelectScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 21
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public VytalMatchSceneFestivalSelectScreen festivalSelectScreen
+    return:
+      type: rwby.VytalMatchSceneFestivalSelectScreen
+    content.vb: Public festivalSelectScreen As VytalMatchSceneFestivalSelectScreen
+- uid: rwby.VytalMatchSceneScreenManager.mapSelectScreen
+  commentId: F:rwby.VytalMatchSceneScreenManager.mapSelectScreen
+  id: mapSelectScreen
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: mapSelectScreen
+  nameWithType: VytalMatchSceneScreenManager.mapSelectScreen
+  fullName: rwby.VytalMatchSceneScreenManager.mapSelectScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: mapSelectScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 22
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public VytalMatchSceneMapSelectScreen mapSelectScreen
+    return:
+      type: rwby.VytalMatchSceneMapSelectScreen
+    content.vb: Public mapSelectScreen As VytalMatchSceneMapSelectScreen
+- uid: rwby.VytalMatchSceneScreenManager.gamemodeSettingsScreen
+  commentId: F:rwby.VytalMatchSceneScreenManager.gamemodeSettingsScreen
+  id: gamemodeSettingsScreen
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: gamemodeSettingsScreen
+  nameWithType: VytalMatchSceneScreenManager.gamemodeSettingsScreen
+  fullName: rwby.VytalMatchSceneScreenManager.gamemodeSettingsScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: gamemodeSettingsScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public VytalMatchSceneGamemodeSettingsScreen gamemodeSettingsScreen
+    return:
+      type: rwby.VytalMatchSceneGamemodeSettingsScreen
+    content.vb: Public gamemodeSettingsScreen As VytalMatchSceneGamemodeSettingsScreen
+- uid: rwby.VytalMatchSceneScreenManager.readyScreen
+  commentId: F:rwby.VytalMatchSceneScreenManager.readyScreen
+  id: readyScreen
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: readyScreen
+  nameWithType: VytalMatchSceneScreenManager.readyScreen
+  fullName: rwby.VytalMatchSceneScreenManager.readyScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: readyScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 24
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public VytalMatchSceneReadyScreen readyScreen
+    return:
+      type: rwby.VytalMatchSceneReadyScreen
+    content.vb: Public readyScreen As VytalMatchSceneReadyScreen
+- uid: rwby.VytalMatchSceneScreenManager.Initialize
+  commentId: M:rwby.VytalMatchSceneScreenManager.Initialize
+  id: Initialize
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: VytalMatchSceneScreenManager.Initialize()
+  fullName: rwby.VytalMatchSceneScreenManager.Initialize()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 29
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void Initialize()
+    content.vb: Public Sub Initialize()
+  overload: rwby.VytalMatchSceneScreenManager.Initialize*
+- uid: rwby.VytalMatchSceneScreenManager.OpenCssForParticipant(System.Int32)
+  commentId: M:rwby.VytalMatchSceneScreenManager.OpenCssForParticipant(System.Int32)
+  id: OpenCssForParticipant(System.Int32)
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: OpenCssForParticipant(int)
+  nameWithType: VytalMatchSceneScreenManager.OpenCssForParticipant(int)
+  fullName: rwby.VytalMatchSceneScreenManager.OpenCssForParticipant(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OpenCssForParticipant
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 40
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void OpenCssForParticipant(int participantId)
+    parameters:
+    - id: participantId
+      type: System.Int32
+    content.vb: Public Sub OpenCssForParticipant(participantId As Integer)
+  overload: rwby.VytalMatchSceneScreenManager.OpenCssForParticipant*
+  nameWithType.vb: VytalMatchSceneScreenManager.OpenCssForParticipant(Integer)
+  fullName.vb: rwby.VytalMatchSceneScreenManager.OpenCssForParticipant(Integer)
+  name.vb: OpenCssForParticipant(Integer)
+- uid: rwby.VytalMatchSceneScreenManager.OpenFestivalSelectScreen
+  commentId: M:rwby.VytalMatchSceneScreenManager.OpenFestivalSelectScreen
+  id: OpenFestivalSelectScreen
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: OpenFestivalSelectScreen()
+  nameWithType: VytalMatchSceneScreenManager.OpenFestivalSelectScreen()
+  fullName: rwby.VytalMatchSceneScreenManager.OpenFestivalSelectScreen()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OpenFestivalSelectScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 123
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void OpenFestivalSelectScreen()
+    content.vb: Public Sub OpenFestivalSelectScreen()
+  overload: rwby.VytalMatchSceneScreenManager.OpenFestivalSelectScreen*
+- uid: rwby.VytalMatchSceneScreenManager.OpenMapSelectScreen
+  commentId: M:rwby.VytalMatchSceneScreenManager.OpenMapSelectScreen
+  id: OpenMapSelectScreen
+  parent: rwby.VytalMatchSceneScreenManager
+  langs:
+  - csharp
+  - vb
+  name: OpenMapSelectScreen()
+  nameWithType: VytalMatchSceneScreenManager.OpenMapSelectScreen()
+  fullName: rwby.VytalMatchSceneScreenManager.OpenMapSelectScreen()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OpenMapSelectScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/VytalMatchSceneScreenManager.cs
+    startLine: 134
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void OpenMapSelectScreen()
+    content.vb: Public Sub OpenMapSelectScreen()
+  overload: rwby.VytalMatchSceneScreenManager.OpenMapSelectScreen*
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: Global.MenuHandlerBase
+  commentId: T:Global.MenuHandlerBase
+  href: MenuHandlerBase.html
+  name: MenuHandlerBase
+  nameWithType: MenuHandlerBase
+  fullName: MenuHandlerBase
+- uid: rwby.ui.IMenuHandler
+  commentId: T:rwby.ui.IMenuHandler
+  parent: rwby.ui
+  href: rwby.ui.IMenuHandler.html
+  name: IMenuHandler
+  nameWithType: IMenuHandler
+  fullName: rwby.ui.IMenuHandler
+- uid: Global.MenuHandlerBase.menus
+  commentId: F:Global.MenuHandlerBase.menus
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_menus
+  name: menus
+  nameWithType: MenuHandlerBase.menus
+  fullName: MenuHandlerBase.menus
+- uid: Global.MenuHandlerBase.history
+  commentId: F:Global.MenuHandlerBase.history
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_history
+  name: history
+  nameWithType: MenuHandlerBase.history
+  fullName: MenuHandlerBase.history
+- uid: Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+  commentId: M:Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_ResetAndForwardTo_rwby_ui_IMenu_
+  name: ResetAndForwardTo(IMenu)
+  nameWithType: MenuHandlerBase.ResetAndForwardTo(IMenu)
+  fullName: MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+    name: ResetAndForwardTo
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_ResetAndForwardTo_rwby_ui_IMenu_
+  - name: (
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+    name: ResetAndForwardTo
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_ResetAndForwardTo_rwby_ui_IMenu_
+  - name: (
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: )
+- uid: Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+  commentId: M:Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+  parent: Global.MenuHandlerBase
+  isExternal: true
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_Forward_rwby_ui_IMenu_System_Boolean_
+  name: Forward(IMenu, bool)
+  nameWithType: MenuHandlerBase.Forward(IMenu, bool)
+  fullName: MenuHandlerBase.Forward(rwby.ui.IMenu, bool)
+  nameWithType.vb: MenuHandlerBase.Forward(IMenu, Boolean)
+  fullName.vb: MenuHandlerBase.Forward(rwby.ui.IMenu, Boolean)
+  name.vb: Forward(IMenu, Boolean)
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+    name: Forward
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_Forward_rwby_ui_IMenu_System_Boolean_
+  - name: (
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+    name: Forward
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_Forward_rwby_ui_IMenu_System_Boolean_
+  - name: (
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Global.MenuHandlerBase.Back
+  commentId: M:Global.MenuHandlerBase.Back
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_Back
+  name: Back()
+  nameWithType: MenuHandlerBase.Back()
+  fullName: MenuHandlerBase.Back()
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.Back
+    name: Back
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_Back
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.Back
+    name: Back
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_Back
+  - name: (
+  - name: )
+- uid: Global.MenuHandlerBase.GetHistory
+  commentId: M:Global.MenuHandlerBase.GetHistory
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_GetHistory
+  name: GetHistory()
+  nameWithType: MenuHandlerBase.GetHistory()
+  fullName: MenuHandlerBase.GetHistory()
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.GetHistory
+    name: GetHistory
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetHistory
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.GetHistory
+    name: GetHistory
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetHistory
+  - name: (
+  - name: )
+- uid: Global.MenuHandlerBase.GetPreviousMenu
+  commentId: M:Global.MenuHandlerBase.GetPreviousMenu
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_GetPreviousMenu
+  name: GetPreviousMenu()
+  nameWithType: MenuHandlerBase.GetPreviousMenu()
+  fullName: MenuHandlerBase.GetPreviousMenu()
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.GetPreviousMenu
+    name: GetPreviousMenu
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetPreviousMenu
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.GetPreviousMenu
+    name: GetPreviousMenu
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetPreviousMenu
+  - name: (
+  - name: )
+- uid: Global.MenuHandlerBase.GetCurrentMenu
+  commentId: M:Global.MenuHandlerBase.GetCurrentMenu
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_GetCurrentMenu
+  name: GetCurrentMenu()
+  nameWithType: MenuHandlerBase.GetCurrentMenu()
+  fullName: MenuHandlerBase.GetCurrentMenu()
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.GetCurrentMenu
+    name: GetCurrentMenu
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetCurrentMenu
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.GetCurrentMenu
+    name: GetCurrentMenu
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetCurrentMenu
+  - name: (
+  - name: )
+- uid: Global.MenuHandlerBase.HasSubmenuOpen
+  commentId: M:Global.MenuHandlerBase.HasSubmenuOpen
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_HasSubmenuOpen
+  name: HasSubmenuOpen()
+  nameWithType: MenuHandlerBase.HasSubmenuOpen()
+  fullName: MenuHandlerBase.HasSubmenuOpen()
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.HasSubmenuOpen
+    name: HasSubmenuOpen
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_HasSubmenuOpen
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.HasSubmenuOpen
+    name: HasSubmenuOpen
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_HasSubmenuOpen
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby.ui
+  commentId: N:rwby.ui
+  href: rwby.html
+  name: rwby.ui
+  nameWithType: rwby.ui
+  fullName: rwby.ui
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.ui
+    name: ui
+    href: rwby.ui.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.ui
+    name: ui
+    href: rwby.ui.html
+- uid: rwby.VytalMatchSceneManager
+  commentId: T:rwby.VytalMatchSceneManager
+  parent: rwby
+  href: rwby.VytalMatchSceneManager.html
+  name: VytalMatchSceneManager
+  nameWithType: VytalMatchSceneManager
+  fullName: rwby.VytalMatchSceneManager
+- uid: rwby.VytalMatchSceneInstanceManager
+  commentId: T:rwby.VytalMatchSceneInstanceManager
+  parent: rwby
+  href: rwby.VytalMatchSceneInstanceManager.html
+  name: VytalMatchSceneInstanceManager
+  nameWithType: VytalMatchSceneInstanceManager
+  fullName: rwby.VytalMatchSceneInstanceManager
+- uid: rwby.VytalMatchSceneParticipantViewItem
+  commentId: T:rwby.VytalMatchSceneParticipantViewItem
+  parent: rwby
+  href: rwby.VytalMatchSceneParticipantViewItem.html
+  name: VytalMatchSceneParticipantViewItem
+  nameWithType: VytalMatchSceneParticipantViewItem
+  fullName: rwby.VytalMatchSceneParticipantViewItem
+- uid: Global.ExButton
+  commentId: T:Global.ExButton
+  href: ExButton.html
+  name: ExButton
+  nameWithType: ExButton
+  fullName: ExButton
+- uid: UnityEngine.UI.ScrollRect
+  commentId: T:UnityEngine.UI.ScrollRect
+  parent: UnityEngine.UI
+  isExternal: true
+  name: ScrollRect
+  nameWithType: ScrollRect
+  fullName: UnityEngine.UI.ScrollRect
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  isExternal: true
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UI
+    name: UI
+    isExternal: true
+- uid: rwby.VytalMatchSceneMainScreen
+  commentId: T:rwby.VytalMatchSceneMainScreen
+  parent: rwby
+  href: rwby.VytalMatchSceneMainScreen.html
+  name: VytalMatchSceneMainScreen
+  nameWithType: VytalMatchSceneMainScreen
+  fullName: rwby.VytalMatchSceneMainScreen
+- uid: rwby.VytalMatchSceneFestivalSelectScreen
+  commentId: T:rwby.VytalMatchSceneFestivalSelectScreen
+  parent: rwby
+  href: rwby.VytalMatchSceneFestivalSelectScreen.html
+  name: VytalMatchSceneFestivalSelectScreen
+  nameWithType: VytalMatchSceneFestivalSelectScreen
+  fullName: rwby.VytalMatchSceneFestivalSelectScreen
+- uid: rwby.VytalMatchSceneMapSelectScreen
+  commentId: T:rwby.VytalMatchSceneMapSelectScreen
+  parent: rwby
+  href: rwby.VytalMatchSceneMapSelectScreen.html
+  name: VytalMatchSceneMapSelectScreen
+  nameWithType: VytalMatchSceneMapSelectScreen
+  fullName: rwby.VytalMatchSceneMapSelectScreen
+- uid: rwby.VytalMatchSceneGamemodeSettingsScreen
+  commentId: T:rwby.VytalMatchSceneGamemodeSettingsScreen
+  parent: rwby
+  href: rwby.VytalMatchSceneGamemodeSettingsScreen.html
+  name: VytalMatchSceneGamemodeSettingsScreen
+  nameWithType: VytalMatchSceneGamemodeSettingsScreen
+  fullName: rwby.VytalMatchSceneGamemodeSettingsScreen
+- uid: rwby.VytalMatchSceneReadyScreen
+  commentId: T:rwby.VytalMatchSceneReadyScreen
+  parent: rwby
+  href: rwby.VytalMatchSceneReadyScreen.html
+  name: VytalMatchSceneReadyScreen
+  nameWithType: VytalMatchSceneReadyScreen
+  fullName: rwby.VytalMatchSceneReadyScreen
+- uid: rwby.VytalMatchSceneScreenManager.Initialize*
+  commentId: Overload:rwby.VytalMatchSceneScreenManager.Initialize
+  href: rwby.VytalMatchSceneScreenManager.html#rwby_VytalMatchSceneScreenManager_Initialize
+  name: Initialize
+  nameWithType: VytalMatchSceneScreenManager.Initialize
+  fullName: rwby.VytalMatchSceneScreenManager.Initialize
+- uid: rwby.VytalMatchSceneScreenManager.OpenCssForParticipant*
+  commentId: Overload:rwby.VytalMatchSceneScreenManager.OpenCssForParticipant
+  href: rwby.VytalMatchSceneScreenManager.html#rwby_VytalMatchSceneScreenManager_OpenCssForParticipant_System_Int32_
+  name: OpenCssForParticipant
+  nameWithType: VytalMatchSceneScreenManager.OpenCssForParticipant
+  fullName: rwby.VytalMatchSceneScreenManager.OpenCssForParticipant
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: rwby.VytalMatchSceneScreenManager.OpenFestivalSelectScreen*
+  commentId: Overload:rwby.VytalMatchSceneScreenManager.OpenFestivalSelectScreen
+  href: rwby.VytalMatchSceneScreenManager.html#rwby_VytalMatchSceneScreenManager_OpenFestivalSelectScreen
+  name: OpenFestivalSelectScreen
+  nameWithType: VytalMatchSceneScreenManager.OpenFestivalSelectScreen
+  fullName: rwby.VytalMatchSceneScreenManager.OpenFestivalSelectScreen
+- uid: rwby.VytalMatchSceneScreenManager.OpenMapSelectScreen*
+  commentId: Overload:rwby.VytalMatchSceneScreenManager.OpenMapSelectScreen
+  href: rwby.VytalMatchSceneScreenManager.html#rwby_VytalMatchSceneScreenManager_OpenMapSelectScreen
+  name: OpenMapSelectScreen
+  nameWithType: VytalMatchSceneScreenManager.OpenMapSelectScreen
+  fullName: rwby.VytalMatchSceneScreenManager.OpenMapSelectScreen

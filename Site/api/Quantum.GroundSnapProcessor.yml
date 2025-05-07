@@ -29,8 +29,8 @@ items:
   summary: This processor snaps character down after losing grounded state.
   example: []
   syntax:
-    content: 'public class GroundSnapProcessor : KCCProcessor, IAfterMoveStep'
-    content.vb: Public Class GroundSnapProcessor Inherits KCCProcessor Implements IAfterMoveStep
+    content: 'public class GroundSnapProcessor : KCCProcessor, ILogSource, IAfterMoveStep'
+    content.vb: Public Class GroundSnapProcessor Inherits KCCProcessor Implements ILogSource, IAfterMoveStep
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -38,6 +38,7 @@ items:
   - Quantum.AssetObject
   - Quantum.KCCProcessor
   implements:
+  - Quantum.ILogSource
   - Quantum.IAfterMoveStep
   inheritedMembers:
   - Quantum.KCCProcessor.OnEnter(Quantum.KCCContext,Quantum.KCCProcessorInfo,Quantum.KCCOverlapHit)
@@ -223,6 +224,13 @@ references:
   name: KCCProcessor
   nameWithType: KCCProcessor
   fullName: Quantum.KCCProcessor
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.IAfterMoveStep
   commentId: T:Quantum.IAfterMoveStep
   parent: Quantum

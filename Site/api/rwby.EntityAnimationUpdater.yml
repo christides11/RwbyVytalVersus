@@ -5,9 +5,12 @@ items:
   id: EntityAnimationUpdater
   parent: rwby
   children:
+  - rwby.EntityAnimationUpdater.OnUModPrebuild
   - rwby.EntityAnimationUpdater.Reset
   - rwby.EntityAnimationUpdater.animancer
   - rwby.EntityAnimationUpdater.animationGroupAsset
+  - rwby.EntityAnimationUpdater.animationGroupAssetRef
+  - rwby.EntityAnimationUpdater.animationGroupAssetReference
   - rwby.EntityAnimationUpdater.customEntityView
   - rwby.EntityAnimationUpdater.disabled
   - rwby.EntityAnimationUpdater.lMixers
@@ -33,14 +36,16 @@ items:
   - rwby
   namespace: rwby
   syntax:
-    content: 'public class EntityAnimationUpdater : MonoBehaviour'
-    content.vb: Public Class EntityAnimationUpdater Inherits MonoBehaviour
+    content: 'public class EntityAnimationUpdater : MonoBehaviour, IOnUModPrebuild'
+    content.vb: Public Class EntityAnimationUpdater Inherits MonoBehaviour Implements IOnUModPrebuild
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.Component
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
+  implements:
+  - rwby.IOnUModPrebuild
 - uid: rwby.EntityAnimationUpdater.mixers
   commentId: F:rwby.EntityAnimationUpdater.mixers
   id: mixers
@@ -176,6 +181,70 @@ items:
     return:
       type: Quantum.AnimationGroupDefinitions
     content.vb: Public animationGroupAsset As AnimationGroupDefinitions
+- uid: rwby.EntityAnimationUpdater.animationGroupAssetReference
+  commentId: F:rwby.EntityAnimationUpdater.animationGroupAssetReference
+  id: animationGroupAssetReference
+  parent: rwby.EntityAnimationUpdater
+  langs:
+  - csharp
+  - vb
+  name: animationGroupAssetReference
+  nameWithType: EntityAnimationUpdater.animationGroupAssetReference
+  fullName: rwby.EntityAnimationUpdater.animationGroupAssetReference
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/EntityView/EntityAnimationUpdater.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: animationGroupAssetReference
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/EntityView/EntityAnimationUpdater.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public ExternalModAssetSoftReference animationGroupAssetReference
+    return:
+      type: rwby.ExternalModAssetSoftReference
+    content.vb: Public animationGroupAssetReference As ExternalModAssetSoftReference
+- uid: rwby.EntityAnimationUpdater.animationGroupAssetRef
+  commentId: F:rwby.EntityAnimationUpdater.animationGroupAssetRef
+  id: animationGroupAssetRef
+  parent: rwby.EntityAnimationUpdater
+  langs:
+  - csharp
+  - vb
+  name: animationGroupAssetRef
+  nameWithType: EntityAnimationUpdater.animationGroupAssetRef
+  fullName: rwby.EntityAnimationUpdater.animationGroupAssetRef
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/EntityView/EntityAnimationUpdater.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: animationGroupAssetRef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/EntityView/EntityAnimationUpdater.cs
+    startLine: 18
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public ModAssetSoftReference animationGroupAssetRef
+    return:
+      type: Global.ModAssetSoftReference
+    content.vb: >-
+      <HideInInspector>
+
+      Public animationGroupAssetRef As ModAssetSoftReference
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
 - uid: rwby.EntityAnimationUpdater.modelRoot
   commentId: F:rwby.EntityAnimationUpdater.modelRoot
   id: modelRoot
@@ -194,7 +263,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: modelRoot
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/EntityView/EntityAnimationUpdater.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - rwby
   namespace: rwby
@@ -221,7 +290,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: disabled
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/EntityView/EntityAnimationUpdater.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - rwby
   namespace: rwby
@@ -230,6 +299,35 @@ items:
     return:
       type: System.Boolean
     content.vb: Public disabled As Boolean
+- uid: rwby.EntityAnimationUpdater.OnUModPrebuild
+  commentId: M:rwby.EntityAnimationUpdater.OnUModPrebuild
+  id: OnUModPrebuild
+  parent: rwby.EntityAnimationUpdater
+  langs:
+  - csharp
+  - vb
+  name: OnUModPrebuild()
+  nameWithType: EntityAnimationUpdater.OnUModPrebuild()
+  fullName: rwby.EntityAnimationUpdater.OnUModPrebuild()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/EntityView/EntityAnimationUpdater.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnUModPrebuild
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/EntityView/EntityAnimationUpdater.cs
+    startLine: 36
+  assemblies:
+  - rwby
+  namespace: rwby
+  example: []
+  syntax:
+    content: public void OnUModPrebuild()
+    content.vb: Public Sub OnUModPrebuild()
+  overload: rwby.EntityAnimationUpdater.OnUModPrebuild*
+  implements:
+  - rwby.IOnUModPrebuild.OnUModPrebuild
 - uid: rwby.EntityAnimationUpdater.Reset
   commentId: M:rwby.EntityAnimationUpdater.Reset
   id: Reset
@@ -248,7 +346,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Reset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/EntityView/EntityAnimationUpdater.cs
-    startLine: 100
+    startLine: 115
   assemblies:
   - rwby
   namespace: rwby
@@ -274,7 +372,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: wantedFadeDuration
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/EntityView/EntityAnimationUpdater.cs
-    startLine: 197
+    startLine: 212
   assemblies:
   - rwby
   namespace: rwby
@@ -329,6 +427,13 @@ references:
   name: MonoBehaviour
   nameWithType: MonoBehaviour
   fullName: UnityEngine.MonoBehaviour
+- uid: rwby.IOnUModPrebuild
+  commentId: T:rwby.IOnUModPrebuild
+  parent: rwby
+  href: rwby.IOnUModPrebuild.html
+  name: IOnUModPrebuild
+  nameWithType: IOnUModPrebuild
+  fullName: rwby.IOnUModPrebuild
 - uid: System
   commentId: N:System
   isExternal: true
@@ -365,6 +470,7 @@ references:
   - name: <
   - uid: Quantum.AnimationEntry
     name: AnimationEntry
+    href: Quantum.AnimationEntry.html
   - name: '>'
   - name: ','
   - name: " "
@@ -392,6 +498,7 @@ references:
   - name: " "
   - uid: Quantum.AnimationEntry
     name: AnimationEntry
+    href: Quantum.AnimationEntry.html
   - name: )
   - name: ','
   - name: " "
@@ -499,6 +606,7 @@ references:
   - name: <
   - uid: Quantum.AnimationEntry
     name: AnimationEntry
+    href: Quantum.AnimationEntry.html
   - name: '>'
   - name: ','
   - name: " "
@@ -527,6 +635,7 @@ references:
   - name: " "
   - uid: Quantum.AnimationEntry
     name: AnimationEntry
+    href: Quantum.AnimationEntry.html
   - name: )
   - name: ','
   - name: " "
@@ -572,6 +681,19 @@ references:
   name: Quantum
   nameWithType: Quantum
   fullName: Quantum
+- uid: rwby.ExternalModAssetSoftReference
+  commentId: T:rwby.ExternalModAssetSoftReference
+  parent: rwby
+  href: rwby.ExternalModAssetSoftReference.html
+  name: ExternalModAssetSoftReference
+  nameWithType: ExternalModAssetSoftReference
+  fullName: rwby.ExternalModAssetSoftReference
+- uid: Global.ModAssetSoftReference
+  commentId: T:Global.ModAssetSoftReference
+  href: ModAssetSoftReference.html
+  name: ModAssetSoftReference
+  nameWithType: ModAssetSoftReference
+  fullName: ModAssetSoftReference
 - uid: UnityEngine.GameObject
   commentId: T:UnityEngine.GameObject
   parent: UnityEngine
@@ -590,6 +712,31 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: rwby.EntityAnimationUpdater.OnUModPrebuild*
+  commentId: Overload:rwby.EntityAnimationUpdater.OnUModPrebuild
+  href: rwby.EntityAnimationUpdater.html#rwby_EntityAnimationUpdater_OnUModPrebuild
+  name: OnUModPrebuild
+  nameWithType: EntityAnimationUpdater.OnUModPrebuild
+  fullName: rwby.EntityAnimationUpdater.OnUModPrebuild
+- uid: rwby.IOnUModPrebuild.OnUModPrebuild
+  commentId: M:rwby.IOnUModPrebuild.OnUModPrebuild
+  parent: rwby.IOnUModPrebuild
+  href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
+  name: OnUModPrebuild()
+  nameWithType: IOnUModPrebuild.OnUModPrebuild()
+  fullName: rwby.IOnUModPrebuild.OnUModPrebuild()
+  spec.csharp:
+  - uid: rwby.IOnUModPrebuild.OnUModPrebuild
+    name: OnUModPrebuild
+    href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.IOnUModPrebuild.OnUModPrebuild
+    name: OnUModPrebuild
+    href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
+  - name: (
+  - name: )
 - uid: rwby.EntityAnimationUpdater.Reset*
   commentId: Overload:rwby.EntityAnimationUpdater.Reset
   href: rwby.EntityAnimationUpdater.html#rwby_EntityAnimationUpdater_Reset

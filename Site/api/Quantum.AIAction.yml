@@ -26,8 +26,8 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public abstract class AIAction : AIActionBase'
-    content.vb: Public MustInherit Class AIAction Inherits AIActionBase
+    content: 'public abstract class AIAction : AIActionBase, ILogSource'
+    content.vb: Public MustInherit Class AIAction Inherits AIActionBase Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -38,6 +38,8 @@ items:
   - Quantum.ExecuteIfConditionAction
   - Quantum.FindEnemyAction
   - Quantum.HFSMFindDangerSourceAction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AIActionBase.Label
   - Quantum.AssetObject.Identifier
@@ -170,6 +172,13 @@ references:
   name: AIActionBase
   nameWithType: AIActionBase
   fullName: Quantum.AIActionBase
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AIActionBase.Label
   commentId: F:Quantum.AIActionBase.Label
   parent: Quantum.AIActionBase

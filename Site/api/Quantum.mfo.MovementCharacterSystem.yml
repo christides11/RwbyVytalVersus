@@ -20,13 +20,19 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: MovementCharacterSystem
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/MovementCharacterSystem.cs
-    startLine: 10
+    startLine: 4
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.mfo
   syntax:
-    content: 'public class MovementCharacterSystem : SystemMainThreadFilter<MovementCharacterSystem.Filter>'
-    content.vb: Public Class MovementCharacterSystem Inherits SystemMainThreadFilter(Of MovementCharacterSystem.Filter)
+    content: >-
+      [Preserve]
+
+      public class MovementCharacterSystem : SystemMainThreadFilter<MovementCharacterSystem.Filter>
+    content.vb: >-
+      <Preserve>
+
+      Public Class MovementCharacterSystem Inherits SystemMainThreadFilter(Of MovementCharacterSystem.Filter)
   inheritance:
   - System.Object
   - Quantum.SystemBase
@@ -48,6 +54,10 @@ items:
   - Quantum.SystemBase.OnEnabled(Quantum.Frame)
   - Quantum.SystemBase.OnDisabled(Quantum.Frame)
   - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  attributes:
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
 - uid: Quantum.mfo.MovementCharacterSystem.Update(Quantum.Frame,Quantum.mfo.MovementCharacterSystem.Filter@)
   commentId: M:Quantum.mfo.MovementCharacterSystem.Update(Quantum.Frame,Quantum.mfo.MovementCharacterSystem.Filter@)
   id: Update(Quantum.Frame,Quantum.mfo.MovementCharacterSystem.Filter@)
@@ -66,7 +76,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Update
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/MovementCharacterSystem.cs
-    startLine: 22
+    startLine: 17
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.mfo

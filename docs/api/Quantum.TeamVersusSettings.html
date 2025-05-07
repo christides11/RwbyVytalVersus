@@ -101,7 +101,8 @@ Class TeamVersusSettings  <a class="header-action link-secondary" title="View so
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TeamVersusSettings : GamemodeSettingsBase</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class TeamVersusSettings : GamemodeSettingsBase, ILogSource</code></pre>
   </div>
 
 
@@ -119,11 +120,32 @@ Class TeamVersusSettings  <a class="header-action link-secondary" title="View so
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ILogSource</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_teamTypes">GamemodeSettingsBase.teamTypes</a>
+    </div>
+    <div>
+      <a class="xref" href="Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_teamConfigs">GamemodeSettingsBase.teamConfigs</a>
+    </div>
+    <div>
+      <a class="xref" href="Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_fightersPerPlayer">GamemodeSettingsBase.fightersPerPlayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_initialParticipantsInfo">GamemodeSettingsBase.initialParticipantsInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_FillBaseSettings_Quantum_GamemodeSettingsBase_">GamemodeSettingsBase.FillBaseSettings(GamemodeSettingsBase)</a>
+    </div>
     <div>
       <span class="xref">AssetObject.Identifier</span>
     </div>
@@ -168,7 +190,7 @@ Class TeamVersusSettings  <a class="header-action link-secondary" title="View so
 
   <h3 id="Quantum_TeamVersusSettings_matchLength" data-uid="Quantum.TeamVersusSettings.matchLength">
   matchLength
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusSettings.cs&amp;version=GBdev&amp;line=7"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusSettings.cs&amp;version=GBdev&amp;line=8"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -198,7 +220,7 @@ Class TeamVersusSettings  <a class="header-action link-secondary" title="View so
 
   <h3 id="Quantum_TeamVersusSettings_pointsToWin" data-uid="Quantum.TeamVersusSettings.pointsToWin">
   pointsToWin
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusSettings.cs&amp;version=GBdev&amp;line=8"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusSettings.cs&amp;version=GBdev&amp;line=9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -216,6 +238,41 @@ Class TeamVersusSettings  <a class="header-action link-secondary" title="View so
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quantum_TeamVersusSettings_CreateSettingsAsset_" data-uid="Quantum.TeamVersusSettings.CreateSettingsAsset*"></a>
+
+  <h3 id="Quantum_TeamVersusSettings_CreateSettingsAsset" data-uid="Quantum.TeamVersusSettings.CreateSettingsAsset">
+  CreateSettingsAsset()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusSettings.cs&amp;version=GBdev&amp;line=11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override GamemodeSettingsBase CreateSettingsAsset()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quantum.GamemodeSettingsBase.html">GamemodeSettingsBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
 
 
 

@@ -12,14 +12,17 @@ items:
   - Global.AddressablesFighterDefinition.GetFighter
   - Global.AddressablesFighterDefinition.GetFighterQuantum
   - Global.AddressablesFighterDefinition.GetHUDReferences
+  - Global.AddressablesFighterDefinition.GetVisualRepresentation
   - Global.AddressablesFighterDefinition.Health
   - Global.AddressablesFighterDefinition.Load(System.String)
   - Global.AddressablesFighterDefinition.LoadAssets
+  - Global.AddressablesFighterDefinition.LoadVisualRepresentation
   - Global.AddressablesFighterDefinition.Name
   - Global.AddressablesFighterDefinition.RegisterQuantumAsset
   - Global.AddressablesFighterDefinition.Selectable
   - Global.AddressablesFighterDefinition.Unload
   - Global.AddressablesFighterDefinition.UnloadAssets
+  - Global.AddressablesFighterDefinition.UnloadVisualRepresentation
   - Global.AddressablesFighterDefinition.UnregisterQuantumAsset
   langs:
   - csharp
@@ -62,6 +65,7 @@ items:
   - Global.IContentDefinition.modDefinition
   - Global.IContentDefinition.ID
   - Global.IContentDefinition.Tags
+  - Global.IContentDefinition.GetAssetSoftReference
   attributes:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
@@ -277,7 +281,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Load
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
-    startLine: 38
+    startLine: 40
   assemblies:
   - rwby
   namespace: Global
@@ -313,7 +317,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadAssets
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
-    startLine: 66
+    startLine: 68
   assemblies:
   - rwby
   namespace: Global
@@ -343,7 +347,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RegisterQuantumAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
-    startLine: 104
+    startLine: 106
   assemblies:
   - rwby
   namespace: Global
@@ -353,6 +357,94 @@ items:
     content.vb: Public Overrides Sub RegisterQuantumAsset()
   overridden: Global.IContentDefinition.RegisterQuantumAsset
   overload: Global.AddressablesFighterDefinition.RegisterQuantumAsset*
+- uid: Global.AddressablesFighterDefinition.LoadVisualRepresentation
+  commentId: M:Global.AddressablesFighterDefinition.LoadVisualRepresentation
+  id: LoadVisualRepresentation
+  parent: Global.AddressablesFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: LoadVisualRepresentation()
+  nameWithType: AddressablesFighterDefinition.LoadVisualRepresentation()
+  fullName: AddressablesFighterDefinition.LoadVisualRepresentation()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadVisualRepresentation
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
+    startLine: 119
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override UniTask<bool> LoadVisualRepresentation()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Overrides Function LoadVisualRepresentation() As UniTask(Of Boolean)
+  overridden: Global.IFighterDefinition.LoadVisualRepresentation
+  overload: Global.AddressablesFighterDefinition.LoadVisualRepresentation*
+- uid: Global.AddressablesFighterDefinition.GetVisualRepresentation
+  commentId: M:Global.AddressablesFighterDefinition.GetVisualRepresentation
+  id: GetVisualRepresentation
+  parent: Global.AddressablesFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetVisualRepresentation()
+  nameWithType: AddressablesFighterDefinition.GetVisualRepresentation()
+  fullName: AddressablesFighterDefinition.GetVisualRepresentation()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetVisualRepresentation
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
+    startLine: 135
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override GameObject GetVisualRepresentation()
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public Overrides Function GetVisualRepresentation() As GameObject
+  overridden: Global.IFighterDefinition.GetVisualRepresentation
+  overload: Global.AddressablesFighterDefinition.GetVisualRepresentation*
+- uid: Global.AddressablesFighterDefinition.UnloadVisualRepresentation
+  commentId: M:Global.AddressablesFighterDefinition.UnloadVisualRepresentation
+  id: UnloadVisualRepresentation
+  parent: Global.AddressablesFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: UnloadVisualRepresentation()
+  nameWithType: AddressablesFighterDefinition.UnloadVisualRepresentation()
+  fullName: AddressablesFighterDefinition.UnloadVisualRepresentation()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadVisualRepresentation
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
+    startLine: 140
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void UnloadVisualRepresentation()
+    content.vb: Public Overrides Sub UnloadVisualRepresentation()
+  overridden: Global.IFighterDefinition.UnloadVisualRepresentation
+  overload: Global.AddressablesFighterDefinition.UnloadVisualRepresentation*
 - uid: Global.AddressablesFighterDefinition.GetFighter
   commentId: M:Global.AddressablesFighterDefinition.GetFighter
   id: GetFighter
@@ -371,7 +463,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetFighter
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
-    startLine: 117
+    startLine: 147
   assemblies:
   - rwby
   namespace: Global
@@ -401,7 +493,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetFighterQuantum
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
-    startLine: 122
+    startLine: 152
   assemblies:
   - rwby
   namespace: Global
@@ -431,7 +523,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHUDReferences
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
-    startLine: 127
+    startLine: 157
   assemblies:
   - rwby
   namespace: Global
@@ -461,7 +553,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetCommandList
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
-    startLine: 138
+    startLine: 168
   assemblies:
   - rwby
   namespace: Global
@@ -491,7 +583,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnregisterQuantumAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
-    startLine: 143
+    startLine: 173
   assemblies:
   - rwby
   namespace: Global
@@ -519,7 +611,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnloadAssets
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
-    startLine: 149
+    startLine: 179
   assemblies:
   - rwby
   namespace: Global
@@ -547,7 +639,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Unload
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesFighterDefinition.cs
-    startLine: 161
+    startLine: 191
   assemblies:
   - rwby
   namespace: Global
@@ -617,6 +709,25 @@ references:
   name: Tags
   nameWithType: IContentDefinition.Tags
   fullName: IContentDefinition.Tags
+- uid: Global.IContentDefinition.GetAssetSoftReference
+  commentId: M:Global.IContentDefinition.GetAssetSoftReference
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  name: GetAssetSoftReference()
+  nameWithType: IContentDefinition.GetAssetSoftReference()
+  fullName: IContentDefinition.GetAssetSoftReference()
+  spec.csharp:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -916,6 +1027,88 @@ references:
   name: RegisterQuantumAsset
   nameWithType: AddressablesFighterDefinition.RegisterQuantumAsset
   fullName: AddressablesFighterDefinition.RegisterQuantumAsset
+- uid: Global.IFighterDefinition.LoadVisualRepresentation
+  commentId: M:Global.IFighterDefinition.LoadVisualRepresentation
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_LoadVisualRepresentation
+  name: LoadVisualRepresentation()
+  nameWithType: IFighterDefinition.LoadVisualRepresentation()
+  fullName: IFighterDefinition.LoadVisualRepresentation()
+  spec.csharp:
+  - uid: Global.IFighterDefinition.LoadVisualRepresentation
+    name: LoadVisualRepresentation
+    href: Global.IFighterDefinition.html#IFighterDefinition_LoadVisualRepresentation
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IFighterDefinition.LoadVisualRepresentation
+    name: LoadVisualRepresentation
+    href: Global.IFighterDefinition.html#IFighterDefinition_LoadVisualRepresentation
+  - name: (
+  - name: )
+- uid: Global.AddressablesFighterDefinition.LoadVisualRepresentation*
+  commentId: Overload:Global.AddressablesFighterDefinition.LoadVisualRepresentation
+  href: Global.AddressablesFighterDefinition.html#AddressablesFighterDefinition_LoadVisualRepresentation
+  name: LoadVisualRepresentation
+  nameWithType: AddressablesFighterDefinition.LoadVisualRepresentation
+  fullName: AddressablesFighterDefinition.LoadVisualRepresentation
+- uid: Global.IFighterDefinition.GetVisualRepresentation
+  commentId: M:Global.IFighterDefinition.GetVisualRepresentation
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_GetVisualRepresentation
+  name: GetVisualRepresentation()
+  nameWithType: IFighterDefinition.GetVisualRepresentation()
+  fullName: IFighterDefinition.GetVisualRepresentation()
+  spec.csharp:
+  - uid: Global.IFighterDefinition.GetVisualRepresentation
+    name: GetVisualRepresentation
+    href: Global.IFighterDefinition.html#IFighterDefinition_GetVisualRepresentation
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IFighterDefinition.GetVisualRepresentation
+    name: GetVisualRepresentation
+    href: Global.IFighterDefinition.html#IFighterDefinition_GetVisualRepresentation
+  - name: (
+  - name: )
+- uid: Global.AddressablesFighterDefinition.GetVisualRepresentation*
+  commentId: Overload:Global.AddressablesFighterDefinition.GetVisualRepresentation
+  href: Global.AddressablesFighterDefinition.html#AddressablesFighterDefinition_GetVisualRepresentation
+  name: GetVisualRepresentation
+  nameWithType: AddressablesFighterDefinition.GetVisualRepresentation
+  fullName: AddressablesFighterDefinition.GetVisualRepresentation
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: Global.IFighterDefinition.UnloadVisualRepresentation
+  commentId: M:Global.IFighterDefinition.UnloadVisualRepresentation
+  parent: Global.IFighterDefinition
+  href: Global.IFighterDefinition.html#IFighterDefinition_UnloadVisualRepresentation
+  name: UnloadVisualRepresentation()
+  nameWithType: IFighterDefinition.UnloadVisualRepresentation()
+  fullName: IFighterDefinition.UnloadVisualRepresentation()
+  spec.csharp:
+  - uid: Global.IFighterDefinition.UnloadVisualRepresentation
+    name: UnloadVisualRepresentation
+    href: Global.IFighterDefinition.html#IFighterDefinition_UnloadVisualRepresentation
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IFighterDefinition.UnloadVisualRepresentation
+    name: UnloadVisualRepresentation
+    href: Global.IFighterDefinition.html#IFighterDefinition_UnloadVisualRepresentation
+  - name: (
+  - name: )
+- uid: Global.AddressablesFighterDefinition.UnloadVisualRepresentation*
+  commentId: Overload:Global.AddressablesFighterDefinition.UnloadVisualRepresentation
+  href: Global.AddressablesFighterDefinition.html#AddressablesFighterDefinition_UnloadVisualRepresentation
+  name: UnloadVisualRepresentation
+  nameWithType: AddressablesFighterDefinition.UnloadVisualRepresentation
+  fullName: AddressablesFighterDefinition.UnloadVisualRepresentation
 - uid: Global.IFighterDefinition.GetFighter
   commentId: M:Global.IFighterDefinition.GetFighter
   parent: Global.IFighterDefinition
@@ -941,13 +1134,6 @@ references:
   name: GetFighter
   nameWithType: AddressablesFighterDefinition.GetFighter
   fullName: AddressablesFighterDefinition.GetFighter
-- uid: UnityEngine.GameObject
-  commentId: T:UnityEngine.GameObject
-  parent: UnityEngine
-  isExternal: true
-  name: GameObject
-  nameWithType: GameObject
-  fullName: UnityEngine.GameObject
 - uid: Global.IFighterDefinition.GetFighterQuantum
   commentId: M:Global.IFighterDefinition.GetFighterQuantum
   parent: Global.IFighterDefinition

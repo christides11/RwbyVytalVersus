@@ -89,7 +89,7 @@
 
 
   <h1 id="Global_OptionsScreen" data-uid="Global.OptionsScreen" class="text-break">
-Class OptionsScreen  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=7"><i class="bi bi-code-slash"></i></a>
+Class OptionsScreen  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=5"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class OptionsScreen  <a class="header-action link-secondary" title="View source"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OptionsScreen : MenuBase, IMenu, IMenuHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class OptionsScreen : MenuHandlerAndMenuBase, IMenu, IMenuHandler</code></pre>
   </div>
 
 
@@ -116,6 +116,7 @@ Class OptionsScreen  <a class="header-action link-secondary" title="View source"
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour.html">Behaviour</a></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></div>
       <div><a class="xref" href="rwby.ui.MenuBase.html">MenuBase</a></div>
+      <div><a class="xref" href="Global.MenuHandlerAndMenuBase.html">MenuHandlerAndMenuBase</a></div>
       <div><span class="xref">OptionsScreen</span></div>
     </dd>
   </dl>
@@ -133,7 +134,31 @@ Class OptionsScreen  <a class="header-action link-secondary" title="View source"
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="rwby.ui.MenuBase.html#rwby_ui_MenuBase_currentHandler">MenuBase.currentHandler</a>
+      <a class="xref" href="Global.MenuHandlerAndMenuBase.html#Global_MenuHandlerAndMenuBase_menus">MenuHandlerAndMenuBase.menus</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.MenuHandlerAndMenuBase.html#Global_MenuHandlerAndMenuBase_history">MenuHandlerAndMenuBase.history</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.MenuHandlerAndMenuBase.html#Global_MenuHandlerAndMenuBase_ResetAndForwardTo_rwby_ui_IMenu_">MenuHandlerAndMenuBase.ResetAndForwardTo(IMenu)</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.MenuHandlerAndMenuBase.html#Global_MenuHandlerAndMenuBase_Forward_rwby_ui_IMenu_System_Boolean_">MenuHandlerAndMenuBase.Forward(IMenu, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.MenuHandlerAndMenuBase.html#Global_MenuHandlerAndMenuBase_Back">MenuHandlerAndMenuBase.Back()</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.MenuHandlerAndMenuBase.html#Global_MenuHandlerAndMenuBase_GetHistory">MenuHandlerAndMenuBase.GetHistory()</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.MenuHandlerAndMenuBase.html#Global_MenuHandlerAndMenuBase_GetCurrentMenu">MenuHandlerAndMenuBase.GetCurrentMenu()</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.MenuHandlerAndMenuBase.html#Global_MenuHandlerAndMenuBase_HasSubmenuOpen">MenuHandlerAndMenuBase.HasSubmenuOpen()</a>
+    </div>
+    <div>
+      <a class="xref" href="rwby.ui.MenuBase.html#rwby_ui_MenuBase_MenuHandler">MenuBase.MenuHandler</a>
     </div>
   </dd></dl>
 
@@ -147,16 +172,17 @@ Class OptionsScreen  <a class="header-action link-secondary" title="View source"
 
 
 
-  <h3 id="Global_OptionsScreen_menus" data-uid="Global.OptionsScreen.menus">
-  menus
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Global_OptionsScreen_actingPlayerManager" data-uid="Global.OptionsScreen.actingPlayerManager">
+  actingPlayerManager
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=7"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Dictionary&lt;int, MenuBase&gt; menus</code></pre>
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public InputPlayerManager actingPlayerManager</code></pre>
   </div>
 
 
@@ -164,7 +190,7 @@ Class OptionsScreen  <a class="header-action link-secondary" title="View source"
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="rwby.ui.MenuBase.html">MenuBase</a>&gt;</dt>
+    <dt><a class="xref" href="Global.InputPlayerManager.html">InputPlayerManager</a></dt>
     <dd></dd>
   </dl>
 
@@ -177,16 +203,16 @@ Class OptionsScreen  <a class="header-action link-secondary" title="View source"
 
 
 
-  <h3 id="Global_OptionsScreen_startMenu" data-uid="Global.OptionsScreen.startMenu">
-  startMenu
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=21"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Global_OptionsScreen_optionsMainScreen" data-uid="Global.OptionsScreen.optionsMainScreen">
+  optionsMainScreen
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OptionsScreen.OptionsScreenMenus startMenu</code></pre>
+    <pre><code class="lang-csharp hljs">public OptionsMainScreen optionsMainScreen</code></pre>
   </div>
 
 
@@ -194,7 +220,7 @@ Class OptionsScreen  <a class="header-action link-secondary" title="View source"
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="OptionsScreen.html">OptionsScreen</a>.<a class="xref" href="OptionsScreen.OptionsScreenMenus.html">OptionsScreenMenus</a></dt>
+    <dt><a class="xref" href="Global.OptionsMainScreen.html">OptionsMainScreen</a></dt>
     <dd></dd>
   </dl>
 
@@ -210,173 +236,11 @@ Class OptionsScreen  <a class="header-action link-secondary" title="View source"
 </h2>
 
 
-  <a id="Global_OptionsScreen_Back_" data-uid="Global.OptionsScreen.Back*"></a>
-
-  <h3 id="Global_OptionsScreen_Back" data-uid="Global.OptionsScreen.Back">
-  Back()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=48"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Back()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Global_OptionsScreen_Forward_" data-uid="Global.OptionsScreen.Forward*"></a>
-
-  <h3 id="Global_OptionsScreen_Forward_System_Int32_System_Boolean_" data-uid="Global.OptionsScreen.Forward(System.Int32,System.Boolean)">
-  Forward(int, bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=37"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Forward(int menu, bool autoClose = true)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>menu</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>autoClose</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Global_OptionsScreen_GetCurrentMenu_" data-uid="Global.OptionsScreen.GetCurrentMenu*"></a>
-
-  <h3 id="Global_OptionsScreen_GetCurrentMenu" data-uid="Global.OptionsScreen.GetCurrentMenu">
-  GetCurrentMenu()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=62"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IMenu GetCurrentMenu()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="rwby.ui.IMenu.html">IMenu</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Global_OptionsScreen_GetHistory_" data-uid="Global.OptionsScreen.GetHistory*"></a>
-
-  <h3 id="Global_OptionsScreen_GetHistory" data-uid="Global.OptionsScreen.GetHistory">
-  GetHistory()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=57"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IList GetHistory()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ilist">IList</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Global_OptionsScreen_HasSubmenuOpen_" data-uid="Global.OptionsScreen.HasSubmenuOpen*"></a>
-
-  <h3 id="Global_OptionsScreen_HasSubmenuOpen" data-uid="Global.OptionsScreen.HasSubmenuOpen">
-  HasSubmenuOpen()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=68"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasSubmenuOpen()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="Global_OptionsScreen_Open_" data-uid="Global.OptionsScreen.Open*"></a>
 
   <h3 id="Global_OptionsScreen_Open_rwby_ui_MenuDirection_rwby_ui_IMenuHandler_" data-uid="Global.OptionsScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)">
   Open(MenuDirection, IMenuHandler)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -409,7 +273,7 @@ Class OptionsScreen  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Global_OptionsScreen_TryClose_rwby_ui_MenuDirection_System_Boolean_" data-uid="Global.OptionsScreen.TryClose(rwby.ui.MenuDirection,System.Boolean)">
   TryClose(MenuDirection, bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -447,7 +311,7 @@ Class OptionsScreen  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=7" class="edit-link">Edit this page</a>
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsScreen.cs&amp;version=GBdev&amp;line=5" class="edit-link">Edit this page</a>
         </div>
 
 

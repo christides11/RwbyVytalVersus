@@ -89,7 +89,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: QuantumGame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5281
+    startLine: 5329
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -121,7 +121,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ProfilerSampleGenerated
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2803
+    startLine: 2815
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -131,10 +131,33 @@ items:
     It uses the <xref href="Quantum.Core.FrameContext.ProfilerContext" data-throw-if-not-resolved="false"></xref> to create a report.
   example: []
   syntax:
-    content: public event Action<ProfilerContextData> ProfilerSampleGenerated
+    content: >-
+      [Obsolete("Non functional, use CallbackTaskProfilerReportGenerated instead", true)]
+
+      [LastSupportedVersion("3.0")]
+
+      public event Action<ProfilerContextData> ProfilerSampleGenerated
     return:
       type: System.Action{Quantum.Profiling.ProfilerContextData}
-    content.vb: Public Event ProfilerSampleGenerated As Action(Of ProfilerContextData)
+    content.vb: >-
+      <Obsolete("Non functional, use CallbackTaskProfilerReportGenerated instead", True)>
+
+      <LastSupportedVersion("3.0")>
+
+      Public Event ProfilerSampleGenerated As Action(Of ProfilerContextData)
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: Non functional, use CallbackTaskProfilerReportGenerated instead
+    - type: System.Boolean
+      value: true
+  - type: Quantum.LastSupportedVersionAttribute
+    ctor: Quantum.LastSupportedVersionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: "3.0"
 - uid: Quantum.QuantumGame.Frames
   commentId: P:Quantum.QuantumGame.Frames
   id: Frames
@@ -153,7 +176,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Frames
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2847
+    startLine: 2864
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -184,7 +207,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Configurations
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2852
+    startLine: 2869
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -218,7 +241,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Session
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2856
+    startLine: 2873
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -249,7 +272,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: InterpolationFactor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2860
+    startLine: 2877
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -280,7 +303,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: InstantReplayConfig
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2864
+    startLine: 2881
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -311,7 +334,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AssetSerializer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2868
+    startLine: 2885
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -342,7 +365,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ResourceManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2872
+    startLine: 2889
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -373,7 +396,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: HeapExtraCount
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2876
+    startLine: 2893
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -404,7 +427,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GameFlags
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2881
+    startLine: 2898
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -438,7 +461,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2905
+    startLine: 2922
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -473,11 +496,14 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetLocalPlayers
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2933
+    startLine: 2951
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
-  summary: Returns an array that is unique on every client and represents the global player indices that the local client controls in the Quantum simulation.
+  summary: >-
+    Returns an array that is unique on every client and represents the global player indices that the local client controls in the Quantum simulation.
+
+    <p>Caveat: This method will behave differently in replays, read the replay online documentation for more information.</p>
   example: []
   syntax:
     content: public List<PlayerRef> GetLocalPlayers()
@@ -504,11 +530,14 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetLocalPlayerSlots
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2941
+    startLine: 2960
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
-  summary: Returns an array that is unique on every client and represents the player slots that the local client controls in the Quantum simulation.
+  summary: >-
+    Returns an array that is unique on every client and represents the player slots that the local client controls in the Quantum simulation.
+
+    <p>Caveat: This method will behave differently in replays, read the replay online documentation for more information.</p>
   example: []
   syntax:
     content: public List<int> GetLocalPlayerSlots()
@@ -535,11 +564,11 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: PlayerIsLocal
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2950
+    startLine: 2970
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
-  summary: Helps to decide if a PlayerRef is associated with the local player.
+  summary: " Helps to decide if a PlayerRef is associated with the local player.\r\n<p>Caveat: This method will behave differently in replays, read the replay online documentation for more information.</p>"
   example: []
   syntax:
     content: public bool PlayerIsLocal(PlayerRef playerRef)
@@ -570,7 +599,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SendCommand
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2968
+    startLine: 2988
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -610,7 +639,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SendCommand
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2979
+    startLine: 2999
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -650,7 +679,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AddPlayer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2990
+    startLine: 3010
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -685,7 +714,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AddPlayer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3001
+    startLine: 3021
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -723,7 +752,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RemovePlayer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3008
+    startLine: 3028
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -751,7 +780,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RemovePlayer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3016
+    startLine: 3036
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -786,7 +815,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RemoveAllPlayers
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3023
+    startLine: 3043
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -814,7 +843,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnDestroy
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3030
+    startLine: 3050
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -842,7 +871,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateFrame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3040
+    startLine: 3060
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -873,7 +902,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetVerifiedFrame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3070
+    startLine: 3090
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -911,7 +940,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateFrameContext
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3086
+    startLine: 3106
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -946,7 +975,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SetPredictionArea
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3187
+    startLine: 3206
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -981,7 +1010,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SetPredictionArea
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3196
+    startLine: 3215
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1016,7 +1045,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnGameEnded
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3203
+    startLine: 3222
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1044,7 +1073,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnGameStart
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3211
+    startLine: 3230
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1076,7 +1105,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnGameResync
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3239
+    startLine: 3258
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1104,7 +1133,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnLocalInput
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3268
+    startLine: 3287
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1145,7 +1174,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnSerializedInput
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3301
+    startLine: 3320
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1183,7 +1212,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnSimulate
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3316
+    startLine: 3335
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1215,7 +1244,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnSimulateFinished
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3388
+    startLine: 3412
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1247,7 +1276,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnUpdateDone
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3396
+    startLine: 3420
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1275,7 +1304,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AssignSession
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3415
+    startLine: 3439
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1307,7 +1336,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnChecksumError
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3441
+    startLine: 3465
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1345,7 +1374,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnChecksumComputed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3450
+    startLine: 3474
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1383,7 +1412,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnSimulationBegin
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3458
+    startLine: 3482
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1411,7 +1440,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnSimulationEnd
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3466
+    startLine: 3490
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1439,7 +1468,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnInputConfirmed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3474
+    startLine: 3498
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1471,7 +1500,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnInputSetConfirmed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3485
+    startLine: 3509
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1512,7 +1541,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnChecksumErrorFrameDump
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3498
+    startLine: 3522
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1562,7 +1591,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnPluginDisconnect
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3506
+    startLine: 3530
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1597,7 +1626,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnLocalPlayerAddConfirmed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3517
+    startLine: 3541
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1638,7 +1667,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnLocalPlayerRemoveConfirmed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3528
+    startLine: 3552
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1679,7 +1708,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnLocalPlayerAddFailed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3537
+    startLine: 3561
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1717,7 +1746,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnLocalPlayerRemoveFailed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3546
+    startLine: 3570
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1755,7 +1784,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetInputInMemorySize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3554
+    startLine: 3578
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1786,7 +1815,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetInputSerializedFixedSize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3562
+    startLine: 3586
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1817,7 +1846,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: DeserializeInputInto
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3620
+    startLine: 3644
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1861,7 +1890,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetExtraErrorFrameDumpData
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3678
+    startLine: 3698
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1896,7 +1925,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CheckTrackedHeapAllocations
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3692
+    startLine: 3712
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1928,7 +1957,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: EventWaitingForConfirmationCount
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3735
+    startLine: 3755
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1959,7 +1988,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RecordedInputs
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3838
+    startLine: 3858
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1997,7 +2026,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RecordedChecksums
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3845
+    startLine: 3865
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2035,7 +2064,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RecordInputStream
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3851
+    startLine: 3871
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2073,7 +2102,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetInstantReplaySnapshot
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3860
+    startLine: 3880
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2111,7 +2140,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetInstantReplaySnapshots
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3888
+    startLine: 3908
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2152,7 +2181,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateSavegame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3915
+    startLine: 3935
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2190,7 +2219,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetRecordedReplay
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 3948
+    startLine: 3969
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2243,7 +2272,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: StartRecordingInput
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 4038
+    startLine: 4060
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2285,7 +2314,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: StartRecordingChecksums
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 4065
+    startLine: 4087
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2313,7 +2342,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: StartVerifyingChecksums
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 4076
+    startLine: 4098
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2345,7 +2374,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: StartRecordingInstantReplaySnapshots
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 4087
+    startLine: 4109
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2376,7 +2405,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: InitCallbacks
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 4982
+    startLine: 5026
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2404,7 +2433,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5282
+    startLine: 5330
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2448,7 +2477,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5285
+    startLine: 5333
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2498,7 +2527,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SendPlayerData
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5294
+    startLine: 5342
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -2539,7 +2568,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SendPlayerData
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5299
+    startLine: 5347
   assemblies:
   - Quantum.Simulation
   namespace: Quantum

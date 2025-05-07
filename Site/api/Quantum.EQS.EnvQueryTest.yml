@@ -36,11 +36,11 @@ items:
     content: >-
       [Serializable]
 
-      public class EnvQueryTest : AssetObject
+      public class EnvQueryTest : AssetObject, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class EnvQueryTest Inherits AssetObject
+      Public Class EnvQueryTest Inherits AssetObject Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -50,6 +50,8 @@ items:
   - Quantum.EQS.EnvQueryTestDistance
   - Quantum.EQS.EnvQueryTestDot
   - Quantum.EQS.EnvQueryTestTrace
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -414,6 +416,13 @@ references:
   name: AssetObject
   nameWithType: AssetObject
   fullName: Quantum.AssetObject
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject

@@ -6,14 +6,22 @@ items:
   parent: Quantum
   children:
   - Quantum.CharaStateMachines.ALIGNMENT
+  - Quantum.CharaStateMachines.AllCurrentSpecialsAreInvalid
   - Quantum.CharaStateMachines.ClearPointers(Quantum.Core.FrameBase,Quantum.EntityRef)
   - Quantum.CharaStateMachines.GetHashCode
+  - Quantum.CharaStateMachines.GetValidSpecialSetsIndexesForMoveset(Quantum.Frame,Quantum.AssetRef{Quantum.HNSFState})
   - Quantum.CharaStateMachines.OnRemoved(Quantum.Core.FrameBase,Quantum.EntityRef,System.Void*)
+  - Quantum.CharaStateMachines.PageBackSpecials(Quantum.Frame)
+  - Quantum.CharaStateMachines.PageForwardSpecials(Quantum.Frame)
   - Quantum.CharaStateMachines.SIZE
   - Quantum.CharaStateMachines.Serialize(System.Void*,Quantum.FrameSerializer)
+  - Quantum.CharaStateMachines.Setup(Quantum.Frame)
+  - Quantum.CharaStateMachines.UpdateCurrentSpecials(Quantum.Frame)
+  - Quantum.CharaStateMachines.UpdateCurrentSpecials(System.Collections.Generic.List{System.Int32})
   - Quantum.CharaStateMachines.blackboard
   - Quantum.CharaStateMachines.blackboardInitializer
   - Quantum.CharaStateMachines.config
+  - Quantum.CharaStateMachines.currentSpecialsIndex
   - Quantum.CharaStateMachines.disableAutoUpdates
   - Quantum.CharaStateMachines.specials
   - Quantum.CharaStateMachines.specialsPage
@@ -28,12 +36,12 @@ items:
   type: Struct
   source:
     remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CharaStateMachines
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1675
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+    startLine: 4
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -60,15 +68,15 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SIZE
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1677
+    startLine: 1970
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public const int SIZE = 192
+    content: public const int SIZE = 208
     return:
       type: System.Int32
-    content.vb: Public Const SIZE As Integer = 192
+    content.vb: Public Const SIZE As Integer = 208
 - uid: Quantum.CharaStateMachines.ALIGNMENT
   commentId: F:Quantum.CharaStateMachines.ALIGNMENT
   id: ALIGNMENT
@@ -87,7 +95,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ALIGNMENT
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1678
+    startLine: 1971
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -114,7 +122,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: disableAutoUpdates
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1680
+    startLine: 1973
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -141,7 +149,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: stateAgent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1682
+    startLine: 1975
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -168,7 +176,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: blackboard
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1684
+    startLine: 1977
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -195,7 +203,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: blackboardInitializer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1686
+    startLine: 1979
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -222,7 +230,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: config
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1688
+    startLine: 1981
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -249,7 +257,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: specials
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1690
+    startLine: 1983
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -276,7 +284,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: specialsPage
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1692
+    startLine: 1985
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -285,6 +293,33 @@ items:
     return:
       type: System.Int32
     content.vb: Public specialsPage As Integer
+- uid: Quantum.CharaStateMachines.currentSpecialsIndex
+  commentId: F:Quantum.CharaStateMachines.currentSpecialsIndex
+  id: currentSpecialsIndex
+  parent: Quantum.CharaStateMachines
+  langs:
+  - csharp
+  - vb
+  name: currentSpecialsIndex
+  nameWithType: CharaStateMachines.currentSpecialsIndex
+  fullName: Quantum.CharaStateMachines.currentSpecialsIndex
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentSpecialsIndex
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 1987
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int* currentSpecialsIndex
+    return:
+      type: System.Int32*
+    content.vb: Public currentSpecialsIndex As Integer*
 - uid: Quantum.CharaStateMachines.taggedStates
   commentId: F:Quantum.CharaStateMachines.taggedStates
   id: taggedStates
@@ -303,7 +338,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: taggedStates
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1694
+    startLine: 1989
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -330,7 +365,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHashCode
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1695
+    startLine: 1990
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -360,7 +395,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ClearPointers
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1709
+    startLine: 2005
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -391,7 +426,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnRemoved
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1712
+    startLine: 2008
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -427,7 +462,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Serialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 1716
+    startLine: 2012
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -443,6 +478,218 @@ items:
   nameWithType.vb: CharaStateMachines.Serialize(Void*, FrameSerializer)
   fullName.vb: Quantum.CharaStateMachines.Serialize(Void*, Quantum.FrameSerializer)
   name.vb: Serialize(Void*, FrameSerializer)
+- uid: Quantum.CharaStateMachines.Setup(Quantum.Frame)
+  commentId: M:Quantum.CharaStateMachines.Setup(Quantum.Frame)
+  id: Setup(Quantum.Frame)
+  parent: Quantum.CharaStateMachines
+  langs:
+  - csharp
+  - vb
+  name: Setup(Frame)
+  nameWithType: CharaStateMachines.Setup(Frame)
+  fullName: Quantum.CharaStateMachines.Setup(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Setup
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+    startLine: 6
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void Setup(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    content.vb: Public Sub Setup(frame As Frame)
+  overload: Quantum.CharaStateMachines.Setup*
+- uid: Quantum.CharaStateMachines.GetValidSpecialSetsIndexesForMoveset(Quantum.Frame,Quantum.AssetRef{Quantum.HNSFState})
+  commentId: M:Quantum.CharaStateMachines.GetValidSpecialSetsIndexesForMoveset(Quantum.Frame,Quantum.AssetRef{Quantum.HNSFState})
+  id: GetValidSpecialSetsIndexesForMoveset(Quantum.Frame,Quantum.AssetRef{Quantum.HNSFState})
+  parent: Quantum.CharaStateMachines
+  langs:
+  - csharp
+  - vb
+  name: GetValidSpecialSetsIndexesForMoveset(Frame, AssetRef<HNSFState>)
+  nameWithType: CharaStateMachines.GetValidSpecialSetsIndexesForMoveset(Frame, AssetRef<HNSFState>)
+  fullName: Quantum.CharaStateMachines.GetValidSpecialSetsIndexesForMoveset(Quantum.Frame, Quantum.AssetRef<Quantum.HNSFState>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetValidSpecialSetsIndexesForMoveset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+    startLine: 11
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public List<int> GetValidSpecialSetsIndexesForMoveset(Frame frame, AssetRef<HNSFState> moveset)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: moveset
+      type: Quantum.AssetRef{Quantum.HNSFState}
+    return:
+      type: System.Collections.Generic.List{System.Int32}
+    content.vb: Public Function GetValidSpecialSetsIndexesForMoveset(frame As Frame, moveset As AssetRef(Of HNSFState)) As List(Of Integer)
+  overload: Quantum.CharaStateMachines.GetValidSpecialSetsIndexesForMoveset*
+  nameWithType.vb: CharaStateMachines.GetValidSpecialSetsIndexesForMoveset(Frame, AssetRef(Of HNSFState))
+  fullName.vb: Quantum.CharaStateMachines.GetValidSpecialSetsIndexesForMoveset(Quantum.Frame, Quantum.AssetRef(Of Quantum.HNSFState))
+  name.vb: GetValidSpecialSetsIndexesForMoveset(Frame, AssetRef(Of HNSFState))
+- uid: Quantum.CharaStateMachines.PageBackSpecials(Quantum.Frame)
+  commentId: M:Quantum.CharaStateMachines.PageBackSpecials(Quantum.Frame)
+  id: PageBackSpecials(Quantum.Frame)
+  parent: Quantum.CharaStateMachines
+  langs:
+  - csharp
+  - vb
+  name: PageBackSpecials(Frame)
+  nameWithType: CharaStateMachines.PageBackSpecials(Frame)
+  fullName: Quantum.CharaStateMachines.PageBackSpecials(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PageBackSpecials
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+    startLine: 25
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void PageBackSpecials(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    content.vb: Public Sub PageBackSpecials(frame As Frame)
+  overload: Quantum.CharaStateMachines.PageBackSpecials*
+- uid: Quantum.CharaStateMachines.PageForwardSpecials(Quantum.Frame)
+  commentId: M:Quantum.CharaStateMachines.PageForwardSpecials(Quantum.Frame)
+  id: PageForwardSpecials(Quantum.Frame)
+  parent: Quantum.CharaStateMachines
+  langs:
+  - csharp
+  - vb
+  name: PageForwardSpecials(Frame)
+  nameWithType: CharaStateMachines.PageForwardSpecials(Frame)
+  fullName: Quantum.CharaStateMachines.PageForwardSpecials(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PageForwardSpecials
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+    startLine: 48
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void PageForwardSpecials(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    content.vb: Public Sub PageForwardSpecials(frame As Frame)
+  overload: Quantum.CharaStateMachines.PageForwardSpecials*
+- uid: Quantum.CharaStateMachines.UpdateCurrentSpecials(Quantum.Frame)
+  commentId: M:Quantum.CharaStateMachines.UpdateCurrentSpecials(Quantum.Frame)
+  id: UpdateCurrentSpecials(Quantum.Frame)
+  parent: Quantum.CharaStateMachines
+  langs:
+  - csharp
+  - vb
+  name: UpdateCurrentSpecials(Frame)
+  nameWithType: CharaStateMachines.UpdateCurrentSpecials(Frame)
+  fullName: Quantum.CharaStateMachines.UpdateCurrentSpecials(Quantum.Frame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateCurrentSpecials
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+    startLine: 70
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void UpdateCurrentSpecials(Frame frame)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    content.vb: Public Sub UpdateCurrentSpecials(frame As Frame)
+  overload: Quantum.CharaStateMachines.UpdateCurrentSpecials*
+- uid: Quantum.CharaStateMachines.UpdateCurrentSpecials(System.Collections.Generic.List{System.Int32})
+  commentId: M:Quantum.CharaStateMachines.UpdateCurrentSpecials(System.Collections.Generic.List{System.Int32})
+  id: UpdateCurrentSpecials(System.Collections.Generic.List{System.Int32})
+  parent: Quantum.CharaStateMachines
+  langs:
+  - csharp
+  - vb
+  name: UpdateCurrentSpecials(List<int>)
+  nameWithType: CharaStateMachines.UpdateCurrentSpecials(List<int>)
+  fullName: Quantum.CharaStateMachines.UpdateCurrentSpecials(System.Collections.Generic.List<int>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateCurrentSpecials
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+    startLine: 77
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void UpdateCurrentSpecials(List<int> validSpecialSetIndexes)
+    parameters:
+    - id: validSpecialSetIndexes
+      type: System.Collections.Generic.List{System.Int32}
+    content.vb: Public Sub UpdateCurrentSpecials(validSpecialSetIndexes As List(Of Integer))
+  overload: Quantum.CharaStateMachines.UpdateCurrentSpecials*
+  nameWithType.vb: CharaStateMachines.UpdateCurrentSpecials(List(Of Integer))
+  fullName.vb: Quantum.CharaStateMachines.UpdateCurrentSpecials(System.Collections.Generic.List(Of Integer))
+  name.vb: UpdateCurrentSpecials(List(Of Integer))
+- uid: Quantum.CharaStateMachines.AllCurrentSpecialsAreInvalid
+  commentId: M:Quantum.CharaStateMachines.AllCurrentSpecialsAreInvalid
+  id: AllCurrentSpecialsAreInvalid
+  parent: Quantum.CharaStateMachines
+  langs:
+  - csharp
+  - vb
+  name: AllCurrentSpecialsAreInvalid()
+  nameWithType: CharaStateMachines.AllCurrentSpecialsAreInvalid()
+  fullName: Quantum.CharaStateMachines.AllCurrentSpecialsAreInvalid()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AllCurrentSpecialsAreInvalid
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/CharaComponents/CharaStateMachines.cs
+    startLine: 97
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public bool AllCurrentSpecialsAreInvalid()
+    return:
+      type: System.Boolean
+    content.vb: Public Function AllCurrentSpecialsAreInvalid() As Boolean
+  overload: Quantum.CharaStateMachines.AllCurrentSpecialsAreInvalid*
 references:
 - uid: Quantum
   commentId: N:Quantum
@@ -671,6 +918,27 @@ references:
   - uid: Quantum.Collections
     name: Collections
     isExternal: true
+- uid: System.Int32*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int*
+  nameWithType: int*
+  fullName: int*
+  nameWithType.vb: Integer*
+  fullName.vb: Integer*
+  name.vb: Integer*
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '*'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '*'
 - uid: Quantum.AssetRef{Quantum.HNSFTaggedStatesAsset}
   commentId: T:Quantum.AssetRef{Quantum.HNSFTaggedStatesAsset}
   parent: Quantum
@@ -820,3 +1088,188 @@ references:
   name: FrameSerializer
   nameWithType: FrameSerializer
   fullName: Quantum.FrameSerializer
+- uid: Quantum.CharaStateMachines.Setup*
+  commentId: Overload:Quantum.CharaStateMachines.Setup
+  href: Quantum.CharaStateMachines.html#Quantum_CharaStateMachines_Setup_Quantum_Frame_
+  name: Setup
+  nameWithType: CharaStateMachines.Setup
+  fullName: Quantum.CharaStateMachines.Setup
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.CharaStateMachines.GetValidSpecialSetsIndexesForMoveset*
+  commentId: Overload:Quantum.CharaStateMachines.GetValidSpecialSetsIndexesForMoveset
+  href: Quantum.CharaStateMachines.html#Quantum_CharaStateMachines_GetValidSpecialSetsIndexesForMoveset_Quantum_Frame_Quantum_AssetRef_Quantum_HNSFState__
+  name: GetValidSpecialSetsIndexesForMoveset
+  nameWithType: CharaStateMachines.GetValidSpecialSetsIndexesForMoveset
+  fullName: Quantum.CharaStateMachines.GetValidSpecialSetsIndexesForMoveset
+- uid: Quantum.AssetRef{Quantum.HNSFState}
+  commentId: T:Quantum.AssetRef{Quantum.HNSFState}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.HNSFState.html
+  name: AssetRef<HNSFState>
+  nameWithType: AssetRef<HNSFState>
+  fullName: Quantum.AssetRef<Quantum.HNSFState>
+  nameWithType.vb: AssetRef(Of HNSFState)
+  fullName.vb: Quantum.AssetRef(Of Quantum.HNSFState)
+  name.vb: AssetRef(Of HNSFState)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.HNSFState
+    name: HNSFState
+    href: Quantum.HNSFState.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HNSFState
+    name: HNSFState
+    href: Quantum.HNSFState.html
+  - name: )
+- uid: System.Collections.Generic.List{System.Int32}
+  commentId: T:System.Collections.Generic.List{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<int>
+  nameWithType: List<int>
+  fullName: System.Collections.Generic.List<int>
+  nameWithType.vb: List(Of Integer)
+  fullName.vb: System.Collections.Generic.List(Of Integer)
+  name.vb: List(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Quantum.CharaStateMachines.PageBackSpecials*
+  commentId: Overload:Quantum.CharaStateMachines.PageBackSpecials
+  href: Quantum.CharaStateMachines.html#Quantum_CharaStateMachines_PageBackSpecials_Quantum_Frame_
+  name: PageBackSpecials
+  nameWithType: CharaStateMachines.PageBackSpecials
+  fullName: Quantum.CharaStateMachines.PageBackSpecials
+- uid: Quantum.CharaStateMachines.PageForwardSpecials*
+  commentId: Overload:Quantum.CharaStateMachines.PageForwardSpecials
+  href: Quantum.CharaStateMachines.html#Quantum_CharaStateMachines_PageForwardSpecials_Quantum_Frame_
+  name: PageForwardSpecials
+  nameWithType: CharaStateMachines.PageForwardSpecials
+  fullName: Quantum.CharaStateMachines.PageForwardSpecials
+- uid: Quantum.CharaStateMachines.UpdateCurrentSpecials*
+  commentId: Overload:Quantum.CharaStateMachines.UpdateCurrentSpecials
+  href: Quantum.CharaStateMachines.html#Quantum_CharaStateMachines_UpdateCurrentSpecials_Quantum_Frame_
+  name: UpdateCurrentSpecials
+  nameWithType: CharaStateMachines.UpdateCurrentSpecials
+  fullName: Quantum.CharaStateMachines.UpdateCurrentSpecials
+- uid: Quantum.CharaStateMachines.AllCurrentSpecialsAreInvalid*
+  commentId: Overload:Quantum.CharaStateMachines.AllCurrentSpecialsAreInvalid
+  href: Quantum.CharaStateMachines.html#Quantum_CharaStateMachines_AllCurrentSpecialsAreInvalid
+  name: AllCurrentSpecialsAreInvalid
+  nameWithType: CharaStateMachines.AllCurrentSpecialsAreInvalid
+  fullName: Quantum.CharaStateMachines.AllCurrentSpecialsAreInvalid
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

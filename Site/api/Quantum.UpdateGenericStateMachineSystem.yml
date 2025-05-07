@@ -5,13 +5,11 @@ items:
   id: UpdateGenericStateMachineSystem
   parent: Quantum
   children:
-  - Quantum.UpdateGenericStateMachineSystem.ChangeState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,System.Boolean)
   - Quantum.UpdateGenericStateMachineSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
   - Quantum.UpdateGenericStateMachineSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
   - Quantum.UpdateGenericStateMachineSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GenericStateAgent*)
   - Quantum.UpdateGenericStateMachineSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.TrackedStates*)
   - Quantum.UpdateGenericStateMachineSystem.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
-  - Quantum.UpdateGenericStateMachineSystem.UpdateState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
   langs:
   - csharp
   - vb
@@ -26,13 +24,19 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UpdateGenericStateMachineSystem
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
-    startLine: 2
+    startLine: 5
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public class UpdateGenericStateMachineSystem : SystemMainThreadFilter<UpdateGenericStateMachineSystem.Filter>, ISignalOnComponentAdded<GenericStateAgent>, ISignalOnComponentRemoved<GenericStateAgent>, ISignalOnComponentAdded<TrackedStates>, ISignalOnComponentRemoved<TrackedStates>, ISignal'
-    content.vb: Public Class UpdateGenericStateMachineSystem Inherits SystemMainThreadFilter(Of UpdateGenericStateMachineSystem.Filter) Implements ISignalOnComponentAdded(Of GenericStateAgent), ISignalOnComponentRemoved(Of GenericStateAgent), ISignalOnComponentAdded(Of TrackedStates), ISignalOnComponentRemoved(Of TrackedStates), ISignal
+    content: >-
+      [Preserve]
+
+      public class UpdateGenericStateMachineSystem : SystemMainThreadFilter<UpdateGenericStateMachineSystem.Filter>, ISignalOnComponentAdded<GenericStateAgent>, ISignalOnComponentRemoved<GenericStateAgent>, ISignalOnComponentAdded<TrackedStates>, ISignalOnComponentRemoved<TrackedStates>, ISignal
+    content.vb: >-
+      <Preserve>
+
+      Public Class UpdateGenericStateMachineSystem Inherits SystemMainThreadFilter(Of UpdateGenericStateMachineSystem.Filter) Implements ISignalOnComponentAdded(Of GenericStateAgent), ISignalOnComponentRemoved(Of GenericStateAgent), ISignalOnComponentAdded(Of TrackedStates), ISignalOnComponentRemoved(Of TrackedStates), ISignal
   inheritance:
   - System.Object
   - Quantum.SystemBase
@@ -60,85 +64,10 @@ items:
   - Quantum.SystemBase.OnEnabled(Quantum.Frame)
   - Quantum.SystemBase.OnDisabled(Quantum.Frame)
   - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
-- uid: Quantum.UpdateGenericStateMachineSystem.UpdateState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
-  commentId: M:Quantum.UpdateGenericStateMachineSystem.UpdateState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
-  id: UpdateState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase)
-  parent: Quantum.UpdateGenericStateMachineSystem
-  langs:
-  - csharp
-  - vb
-  name: UpdateState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase)
-  nameWithType: UpdateGenericStateMachineSystem.UpdateState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase)
-  fullName: Quantum.UpdateGenericStateMachineSystem.UpdateState(Quantum.Frame, Quantum.HNSFStateAgentData*, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: UpdateState
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
-    startLine: 12
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public virtual void UpdateState(Frame frame, HNSFStateAgentData* agentData, EntityRef entity, AIBlackboardComponent* blackboard, AIConfigBase aiConfig)
-    parameters:
-    - id: frame
-      type: Quantum.Frame
-    - id: agentData
-      type: Quantum.HNSFStateAgentData*
-    - id: entity
-      type: Quantum.EntityRef
-    - id: blackboard
-      type: Quantum.AIBlackboardComponent*
-    - id: aiConfig
-      type: Quantum.AIConfigBase
-    content.vb: Public Overridable Sub UpdateState(frame As Frame, agentData As HNSFStateAgentData*, entity As EntityRef, blackboard As AIBlackboardComponent*, aiConfig As AIConfigBase)
-  overload: Quantum.UpdateGenericStateMachineSystem.UpdateState*
-- uid: Quantum.UpdateGenericStateMachineSystem.ChangeState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,System.Boolean)
-  commentId: M:Quantum.UpdateGenericStateMachineSystem.ChangeState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,System.Boolean)
-  id: ChangeState(Quantum.Frame,Quantum.HNSFStateAgentData*,Quantum.EntityRef,Quantum.AIBlackboardComponent*,Quantum.AIConfigBase,System.Boolean)
-  parent: Quantum.UpdateGenericStateMachineSystem
-  langs:
-  - csharp
-  - vb
-  name: ChangeState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase, bool)
-  nameWithType: UpdateGenericStateMachineSystem.ChangeState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase, bool)
-  fullName: Quantum.UpdateGenericStateMachineSystem.ChangeState(Quantum.Frame, Quantum.HNSFStateAgentData*, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, bool)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: ChangeState
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
-    startLine: 49
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public virtual void ChangeState(Frame frame, HNSFStateAgentData* stateData, EntityRef entity, AIBlackboardComponent* blackboard, AIConfigBase config, bool cleanup = false)
-    parameters:
-    - id: frame
-      type: Quantum.Frame
-    - id: stateData
-      type: Quantum.HNSFStateAgentData*
-    - id: entity
-      type: Quantum.EntityRef
-    - id: blackboard
-      type: Quantum.AIBlackboardComponent*
-    - id: config
-      type: Quantum.AIConfigBase
-    - id: cleanup
-      type: System.Boolean
-    content.vb: Public Overridable Sub ChangeState(frame As Frame, stateData As HNSFStateAgentData*, entity As EntityRef, blackboard As AIBlackboardComponent*, config As AIConfigBase, cleanup As Boolean = False)
-  overload: Quantum.UpdateGenericStateMachineSystem.ChangeState*
-  nameWithType.vb: UpdateGenericStateMachineSystem.ChangeState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase, Boolean)
-  fullName.vb: Quantum.UpdateGenericStateMachineSystem.ChangeState(Quantum.Frame, Quantum.HNSFStateAgentData*, Quantum.EntityRef, Quantum.AIBlackboardComponent*, Quantum.AIConfigBase, Boolean)
-  name.vb: ChangeState(Frame, HNSFStateAgentData*, EntityRef, AIBlackboardComponent*, AIConfigBase, Boolean)
+  attributes:
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
 - uid: Quantum.UpdateGenericStateMachineSystem.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
   commentId: M:Quantum.UpdateGenericStateMachineSystem.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
   id: Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
@@ -157,7 +86,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Update
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
-    startLine: 60
+    startLine: 16
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -195,7 +124,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnAdded
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
-    startLine: 77
+    startLine: 38
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -234,7 +163,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnRemoved
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
-    startLine: 84
+    startLine: 45
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -273,7 +202,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnAdded
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
-    startLine: 90
+    startLine: 51
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -313,7 +242,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnRemoved
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateGenericStateMachineSystem.cs
-    startLine: 95
+    startLine: 56
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -945,81 +874,6 @@ references:
     name: Frame
     href: Quantum.Frame.html
   - name: )
-- uid: Quantum.UpdateGenericStateMachineSystem.UpdateState*
-  commentId: Overload:Quantum.UpdateGenericStateMachineSystem.UpdateState
-  href: Quantum.UpdateGenericStateMachineSystem.html#Quantum_UpdateGenericStateMachineSystem_UpdateState_Quantum_Frame_Quantum_HNSFStateAgentData__Quantum_EntityRef_Quantum_AIBlackboardComponent__Quantum_AIConfigBase_
-  name: UpdateState
-  nameWithType: UpdateGenericStateMachineSystem.UpdateState
-  fullName: Quantum.UpdateGenericStateMachineSystem.UpdateState
-- uid: Quantum.Frame
-  commentId: T:Quantum.Frame
-  parent: Quantum
-  href: Quantum.Frame.html
-  name: Frame
-  nameWithType: Frame
-  fullName: Quantum.Frame
-- uid: Quantum.HNSFStateAgentData*
-  isExternal: true
-  href: Quantum.HNSFStateAgentData.html
-  name: HNSFStateAgentData*
-  nameWithType: HNSFStateAgentData*
-  fullName: Quantum.HNSFStateAgentData*
-  spec.csharp:
-  - uid: Quantum.HNSFStateAgentData
-    name: HNSFStateAgentData
-    href: Quantum.HNSFStateAgentData.html
-  - name: '*'
-  spec.vb:
-  - uid: Quantum.HNSFStateAgentData
-    name: HNSFStateAgentData
-    href: Quantum.HNSFStateAgentData.html
-  - name: '*'
-- uid: Quantum.EntityRef
-  commentId: T:Quantum.EntityRef
-  parent: Quantum
-  isExternal: true
-  name: EntityRef
-  nameWithType: EntityRef
-  fullName: Quantum.EntityRef
-- uid: Quantum.AIBlackboardComponent*
-  isExternal: true
-  name: AIBlackboardComponent*
-  nameWithType: AIBlackboardComponent*
-  fullName: Quantum.AIBlackboardComponent*
-  spec.csharp:
-  - uid: Quantum.AIBlackboardComponent
-    name: AIBlackboardComponent
-    isExternal: true
-  - name: '*'
-  spec.vb:
-  - uid: Quantum.AIBlackboardComponent
-    name: AIBlackboardComponent
-    isExternal: true
-  - name: '*'
-- uid: Quantum.AIConfigBase
-  commentId: T:Quantum.AIConfigBase
-  parent: Quantum
-  isExternal: true
-  name: AIConfigBase
-  nameWithType: AIConfigBase
-  fullName: Quantum.AIConfigBase
-- uid: Quantum.UpdateGenericStateMachineSystem.ChangeState*
-  commentId: Overload:Quantum.UpdateGenericStateMachineSystem.ChangeState
-  href: Quantum.UpdateGenericStateMachineSystem.html#Quantum_UpdateGenericStateMachineSystem_ChangeState_Quantum_Frame_Quantum_HNSFStateAgentData__Quantum_EntityRef_Quantum_AIBlackboardComponent__Quantum_AIConfigBase_System_Boolean_
-  name: ChangeState
-  nameWithType: UpdateGenericStateMachineSystem.ChangeState
-  fullName: Quantum.UpdateGenericStateMachineSystem.ChangeState
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
   commentId: M:Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}.Update(Quantum.Frame,Quantum.UpdateGenericStateMachineSystem.Filter@)
   parent: Quantum.SystemMainThreadFilter{Quantum.UpdateGenericStateMachineSystem.Filter}
@@ -1067,6 +921,13 @@ references:
   name: Update
   nameWithType: UpdateGenericStateMachineSystem.Update
   fullName: Quantum.UpdateGenericStateMachineSystem.Update
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
 - uid: Quantum.UpdateGenericStateMachineSystem.Filter
   commentId: T:Quantum.UpdateGenericStateMachineSystem.Filter
   parent: Quantum
@@ -1181,6 +1042,13 @@ references:
     href: Quantum.GenericStateAgent.html
   - name: '*'
   - name: )
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
 - uid: Quantum.GenericStateAgent*
   isExternal: true
   href: Quantum.GenericStateAgent.html

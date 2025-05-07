@@ -5,21 +5,25 @@ items:
   id: LobbySessionNetworkMessageHandler
   parent: rwby.sessionhandlers.lobby
   children:
-  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(System.Int32)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync(System.Int32)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode(System.Int32,ModAssetSoftReference,GamemodeTeamTypeConfig[],GamemodeTeamConfig[],Quantum.GamemodeSettingsBase)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap(System.Int32,ModAssetSoftReference)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant(System.Int32,System.Int32,System.Int32)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_LeaveRoom
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync(System.Int32,System.Int32)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync(ModAssetSoftReference[],System.Int32)
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
-  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(System.Int32,System.Int32,System.Int32,System.Int32)
-  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference,System.Int32)
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready(System.Int32)
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnClientReportHasAsset
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnClientSetCharacterResponse
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnJoinMatchGetResponse
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchCreationOrUpdateResult
-  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchListUpdated
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.RegisterNetworkMessages
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerOnPlayerReadyStateChanged
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerStartMatch(System.Int32)
-  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList
+  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage)
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.lobbySessionHandler
   langs:
   - csharp
@@ -35,7 +39,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LobbySessionNetworkMessageHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerReadyCheck.cs
-    startLine: 10
+    startLine: 9
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -62,7 +66,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ServerStartMatch
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatchStart.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -94,7 +98,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lobbySessionHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
-    startLine: 9
+    startLine: 8
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -103,33 +107,6 @@ items:
     return:
       type: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
     content.vb: Public lobbySessionHandler As NetworkLobbySessionHandler
-- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchListUpdated
-  commentId: F:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchListUpdated
-  id: OnMatchListUpdated
-  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
-  langs:
-  - csharp
-  - vb
-  name: OnMatchListUpdated
-  nameWithType: LobbySessionNetworkMessageHandler.OnMatchListUpdated
-  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchListUpdated
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: OnMatchListUpdated
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
-    startLine: 17
-  assemblies:
-  - rwby
-  namespace: rwby.sessionhandlers.lobby
-  syntax:
-    content: public LobbySessionNetworkMessageHandler.EmptyEvent OnMatchListUpdated
-    return:
-      type: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
-    content.vb: Public OnMatchListUpdated As LobbySessionNetworkMessageHandler.EmptyEvent
 - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchCreationOrUpdateResult
   commentId: F:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.OnMatchCreationOrUpdateResult
   id: OnMatchCreationOrUpdateResult
@@ -148,7 +125,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnMatchCreationOrUpdateResult
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
-    startLine: 18
+    startLine: 15
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -175,7 +152,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnJoinMatchGetResponse
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
-    startLine: 19
+    startLine: 16
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -202,7 +179,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnClientReportHasAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
-    startLine: 20
+    startLine: 17
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -229,7 +206,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnClientSetCharacterResponse
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
-    startLine: 21
+    startLine: 18
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -256,7 +233,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ServerOnPlayerReadyStateChanged
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
-    startLine: 22
+    startLine: 19
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -283,7 +260,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RegisterNetworkMessages
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs
-    startLine: 24
+    startLine: 21
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -291,52 +268,88 @@ items:
     content: public void RegisterNetworkMessages()
     content.vb: Public Sub RegisterNetworkMessages()
   overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.RegisterNetworkMessages*
-- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference,System.Int32)
-  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference,System.Int32)
-  id: ClientTrySetCharacterAsync(ModAssetSoftReference,System.Int32)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync(ModAssetSoftReference[],System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync(ModAssetSoftReference[],System.Int32)
+  id: CLIENT_TrySetParticipantCharactersAsync(ModAssetSoftReference[],System.Int32)
   parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
   langs:
   - csharp
   - vb
-  name: ClientTrySetCharacterAsync(ModAssetSoftReference, int)
-  nameWithType: LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference, int)
-  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference, int)
+  name: CLIENT_TrySetParticipantCharactersAsync(ModAssetSoftReference[], int)
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync(ModAssetSoftReference[], int)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync(ModAssetSoftReference[], int)
   type: Method
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerClientInfo.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: ClientTrySetCharacterAsync
+    id: CLIENT_TrySetParticipantCharactersAsync
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerClientInfo.cs
-    startLine: 84
+    startLine: 88
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public UniTask<bool> ClientTrySetCharacterAsync(ModAssetSoftReference characterRef, int localPlayerID)
+    content: public UniTask<bool> CLIENT_TrySetParticipantCharactersAsync(ModAssetSoftReference[] characterRefs, int localPlayerID)
     parameters:
-    - id: characterRef
-      type: Global.ModAssetSoftReference
+    - id: characterRefs
+      type: Global.ModAssetSoftReference[]
     - id: localPlayerID
       type: System.Int32
     return:
       type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
-    content.vb: Public Function ClientTrySetCharacterAsync(characterRef As ModAssetSoftReference, localPlayerID As Integer) As UniTask(Of Boolean)
-  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync*
-  nameWithType.vb: LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference, Integer)
-  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync(ModAssetSoftReference, Integer)
-  name.vb: ClientTrySetCharacterAsync(ModAssetSoftReference, Integer)
-- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
-  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
-  id: ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
+    content.vb: Public Function CLIENT_TrySetParticipantCharactersAsync(characterRefs As ModAssetSoftReference(), localPlayerID As Integer) As UniTask(Of Boolean)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync*
+  nameWithType.vb: LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync(ModAssetSoftReference(), Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync(ModAssetSoftReference(), Integer)
+  name.vb: CLIENT_TrySetParticipantCharactersAsync(ModAssetSoftReference(), Integer)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant(System.Int32,System.Int32,System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant(System.Int32,System.Int32,System.Int32)
+  id: CLIENT_ChangeTeamForParticipant(System.Int32,System.Int32,System.Int32)
   parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
   langs:
   - csharp
   - vb
-  name: ServerUpdateClientMatchList(NetworkConnectionToClient, RequestMatchListMessage)
-  nameWithType: LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(NetworkConnectionToClient, NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
-  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient, rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
+  name: CLIENT_ChangeTeamForParticipant(int, int, int)
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant(int, int, int)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant(int, int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerClientInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CLIENT_ChangeTeamForParticipant
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerClientInfo.cs
+    startLine: 127
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void CLIENT_ChangeTeamForParticipant(int localPlayerId, int participantId, int teamId)
+    parameters:
+    - id: localPlayerId
+      type: System.Int32
+    - id: participantId
+      type: System.Int32
+    - id: teamId
+      type: System.Int32
+    content.vb: Public Sub CLIENT_ChangeTeamForParticipant(localPlayerId As Integer, participantId As Integer, teamId As Integer)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant*
+  nameWithType.vb: LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant(Integer, Integer, Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant(Integer, Integer, Integer)
+  name.vb: CLIENT_ChangeTeamForParticipant(Integer, Integer, Integer)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList
+  id: ServerUpdateClientMatchList
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: ServerUpdateClientMatchList()
+  nameWithType: LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList()
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList()
   type: Method
   source:
     remote:
@@ -345,18 +358,44 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ServerUpdateClientMatchList
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
-    startLine: 11
+    startLine: 10
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public void ServerUpdateClientMatchList(NetworkConnectionToClient requester, NetworkLobbySessionHandlerMessages.RequestMatchListMessage msg)
+    content: public void ServerUpdateClientMatchList()
+    content.vb: Public Sub ServerUpdateClientMatchList()
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList*
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage)
+  id: ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient,rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage)
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: ServerUpdateClientMatchList(NetworkConnectionToClient, RequestLobbyInfoMessage)
+  nameWithType: LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(NetworkConnectionToClient, NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList(Mirror.NetworkConnectionToClient, rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ServerUpdateClientMatchList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void ServerUpdateClientMatchList(NetworkConnectionToClient requester, NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage msg)
     parameters:
     - id: requester
       type: Mirror.NetworkConnectionToClient
     - id: msg
-      type: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
-    content.vb: Public Sub ServerUpdateClientMatchList(requester As NetworkConnectionToClient, msg As NetworkLobbySessionHandlerMessages.RequestMatchListMessage)
+      type: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
+    content.vb: Public Sub ServerUpdateClientMatchList(requester As NetworkConnectionToClient, msg As NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage)
   overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList*
 - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
   commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
@@ -376,7 +415,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ClientTryAddNewMatchAsync
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
-    startLine: 125
+    startLine: 131
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -389,46 +428,68 @@ items:
       type: Cysharp.Threading.Tasks.UniTask{System.ValueTuple{System.Boolean,System.Int32}}
     content.vb: Public Function ClientTryAddNewMatchAsync(matchInfo As NetworkLobbySessionMatchInfo) As UniTask(Of (Boolean, Integer))
   overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryAddNewMatchAsync*
-- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(System.Int32,System.Int32,System.Int32,System.Int32)
-  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(System.Int32,System.Int32,System.Int32,System.Int32)
-  id: ClientTryJoinMatchAsync(System.Int32,System.Int32,System.Int32,System.Int32)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync(System.Int32,System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync(System.Int32,System.Int32)
+  id: CLIENT_TryJoinRoomAsync(System.Int32,System.Int32)
   parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
   langs:
   - csharp
   - vb
-  name: ClientTryJoinMatchAsync(int, int, int, int)
-  nameWithType: LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(int, int, int, int)
-  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(int, int, int, int)
+  name: CLIENT_TryJoinRoomAsync(int, int)
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync(int, int)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync(int, int)
   type: Method
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: ClientTryJoinMatchAsync
+    id: CLIENT_TryJoinRoomAsync
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
-    startLine: 155
+    startLine: 167
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public UniTask<bool> ClientTryJoinMatchAsync(int matchID, int team, int slot, int localPlayerID)
+    content: public UniTask<bool> CLIENT_TryJoinRoomAsync(int matchID, int localPlayerID)
     parameters:
     - id: matchID
-      type: System.Int32
-    - id: team
-      type: System.Int32
-    - id: slot
       type: System.Int32
     - id: localPlayerID
       type: System.Int32
     return:
       type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
-    content.vb: Public Function ClientTryJoinMatchAsync(matchID As Integer, team As Integer, slot As Integer, localPlayerID As Integer) As UniTask(Of Boolean)
-  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync*
-  nameWithType.vb: LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(Integer, Integer, Integer, Integer)
-  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync(Integer, Integer, Integer, Integer)
-  name.vb: ClientTryJoinMatchAsync(Integer, Integer, Integer, Integer)
+    content.vb: Public Function CLIENT_TryJoinRoomAsync(matchID As Integer, localPlayerID As Integer) As UniTask(Of Boolean)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync*
+  nameWithType.vb: LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync(Integer, Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync(Integer, Integer)
+  name.vb: CLIENT_TryJoinRoomAsync(Integer, Integer)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_LeaveRoom
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_LeaveRoom
+  id: CLIENT_LeaveRoom
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: CLIENT_LeaveRoom()
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_LeaveRoom()
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_LeaveRoom()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CLIENT_LeaveRoom
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
+    startLine: 202
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void CLIENT_LeaveRoom()
+    content.vb: Public Sub CLIENT_LeaveRoom()
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_LeaveRoom*
 - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList
   commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList
   id: ClientRequestMatchList
@@ -447,7 +508,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ClientRequestMatchList
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatch.cs
-    startLine: 184
+    startLine: 207
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -455,40 +516,118 @@ items:
     content: public void ClientRequestMatchList()
     content.vb: Public Sub ClientRequestMatchList()
   overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList*
-- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(System.Int32)
-  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(System.Int32)
-  id: ClientAttemptReadyUpAsync(System.Int32)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode(System.Int32,ModAssetSoftReference,GamemodeTeamTypeConfig[],GamemodeTeamConfig[],Quantum.GamemodeSettingsBase)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode(System.Int32,ModAssetSoftReference,GamemodeTeamTypeConfig[],GamemodeTeamConfig[],Quantum.GamemodeSettingsBase)
+  id: CLIENT_AttemptSetMatchGamemode(System.Int32,ModAssetSoftReference,GamemodeTeamTypeConfig[],GamemodeTeamConfig[],Quantum.GamemodeSettingsBase)
   parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
   langs:
   - csharp
   - vb
-  name: ClientAttemptReadyUpAsync(int)
-  nameWithType: LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(int)
-  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(int)
+  name: CLIENT_AttemptSetMatchGamemode(int, ModAssetSoftReference, GamemodeTeamTypeConfig[], GamemodeTeamConfig[], GamemodeSettingsBase)
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode(int, ModAssetSoftReference, GamemodeTeamTypeConfig[], GamemodeTeamConfig[], GamemodeSettingsBase)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode(int, ModAssetSoftReference, GamemodeTeamTypeConfig[], GamemodeTeamConfig[], Quantum.GamemodeSettingsBase)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CLIENT_AttemptSetMatchGamemode
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatchInfo.cs
+    startLine: 98
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public UniTask<bool> CLIENT_AttemptSetMatchGamemode(int matchId, ModAssetSoftReference gamemodeReference, GamemodeTeamTypeConfig[] teamTypeConfigs, GamemodeTeamConfig[] teamConfigs, GamemodeSettingsBase gamemodeSettings)
+    parameters:
+    - id: matchId
+      type: System.Int32
+    - id: gamemodeReference
+      type: Global.ModAssetSoftReference
+    - id: teamTypeConfigs
+      type: Global.GamemodeTeamTypeConfig[]
+    - id: teamConfigs
+      type: Global.GamemodeTeamConfig[]
+    - id: gamemodeSettings
+      type: Quantum.GamemodeSettingsBase
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Function CLIENT_AttemptSetMatchGamemode(matchId As Integer, gamemodeReference As ModAssetSoftReference, teamTypeConfigs As GamemodeTeamTypeConfig(), teamConfigs As GamemodeTeamConfig(), gamemodeSettings As GamemodeSettingsBase) As UniTask(Of Boolean)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode*
+  nameWithType.vb: LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode(Integer, ModAssetSoftReference, GamemodeTeamTypeConfig(), GamemodeTeamConfig(), GamemodeSettingsBase)
+  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode(Integer, ModAssetSoftReference, GamemodeTeamTypeConfig(), GamemodeTeamConfig(), Quantum.GamemodeSettingsBase)
+  name.vb: CLIENT_AttemptSetMatchGamemode(Integer, ModAssetSoftReference, GamemodeTeamTypeConfig(), GamemodeTeamConfig(), GamemodeSettingsBase)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap(System.Int32,ModAssetSoftReference)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap(System.Int32,ModAssetSoftReference)
+  id: CLIENT_AttemptSetMatchMap(System.Int32,ModAssetSoftReference)
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: CLIENT_AttemptSetMatchMap(int, ModAssetSoftReference)
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap(int, ModAssetSoftReference)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap(int, ModAssetSoftReference)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatchInfo.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CLIENT_AttemptSetMatchMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerMatchInfo.cs
+    startLine: 111
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public UniTask<bool> CLIENT_AttemptSetMatchMap(int matchId, ModAssetSoftReference mapReference)
+    parameters:
+    - id: matchId
+      type: System.Int32
+    - id: mapReference
+      type: Global.ModAssetSoftReference
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public Function CLIENT_AttemptSetMatchMap(matchId As Integer, mapReference As ModAssetSoftReference) As UniTask(Of Boolean)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap*
+  nameWithType.vb: LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap(Integer, ModAssetSoftReference)
+  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap(Integer, ModAssetSoftReference)
+  name.vb: CLIENT_AttemptSetMatchMap(Integer, ModAssetSoftReference)
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync(System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync(System.Int32)
+  id: CLIENT_AttemptReadyUpAsync(System.Int32)
+  parent: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
+  langs:
+  - csharp
+  - vb
+  name: CLIENT_AttemptReadyUpAsync(int)
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync(int)
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync(int)
   type: Method
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerReadyCheck.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: ClientAttemptReadyUpAsync
+    id: CLIENT_AttemptReadyUpAsync
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerReadyCheck.cs
-    startLine: 134
+    startLine: 103
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public UniTask<bool> ClientAttemptReadyUpAsync(int localPlayerID)
+    content: public UniTask<bool> CLIENT_AttemptReadyUpAsync(int localPlayerID)
     parameters:
     - id: localPlayerID
       type: System.Int32
     return:
       type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
-    content.vb: Public Function ClientAttemptReadyUpAsync(localPlayerID As Integer) As UniTask(Of Boolean)
-  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync*
-  nameWithType.vb: LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(Integer)
-  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync(Integer)
-  name.vb: ClientAttemptReadyUpAsync(Integer)
+    content.vb: Public Function CLIENT_AttemptReadyUpAsync(localPlayerID As Integer) As UniTask(Of Boolean)
+  overload: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync*
+  nameWithType.vb: LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync(Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync(Integer)
+  name.vb: CLIENT_AttemptReadyUpAsync(Integer)
 - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready(System.Int32)
   commentId: M:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready(System.Int32)
   id: ClientUnready(System.Int32)
@@ -507,7 +646,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ClientUnready
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandlerReadyCheck.cs
-    startLine: 144
+    startLine: 113
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -594,29 +733,6 @@ references:
   name: NetworkLobbySessionHandler
   nameWithType: NetworkLobbySessionHandler
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
-- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
-  commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
-  parent: rwby.sessionhandlers.lobby
-  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
-  name: LobbySessionNetworkMessageHandler.EmptyEvent
-  nameWithType: LobbySessionNetworkMessageHandler.EmptyEvent
-  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
-  spec.csharp:
-  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
-    name: LobbySessionNetworkMessageHandler
-    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
-  - name: .
-  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
-    name: EmptyEvent
-    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent.html
-  spec.vb:
-  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
-    name: LobbySessionNetworkMessageHandler
-    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
-  - name: .
-  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
-    name: EmptyEvent
-    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent.html
 - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
   commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
   parent: rwby.sessionhandlers.lobby
@@ -738,18 +854,33 @@ references:
   name: RegisterNetworkMessages
   nameWithType: LobbySessionNetworkMessageHandler.RegisterNetworkMessages
   fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.RegisterNetworkMessages
-- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync*
-  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync
-  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientTrySetCharacterAsync_ModAssetSoftReference_System_Int32_
-  name: ClientTrySetCharacterAsync
-  nameWithType: LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync
-  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTrySetCharacterAsync
-- uid: Global.ModAssetSoftReference
-  commentId: T:Global.ModAssetSoftReference
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_CLIENT_TrySetParticipantCharactersAsync_ModAssetSoftReference___System_Int32_
+  name: CLIENT_TrySetParticipantCharactersAsync
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TrySetParticipantCharactersAsync
+- uid: Global.ModAssetSoftReference[]
+  isExternal: true
   href: ModAssetSoftReference.html
-  name: ModAssetSoftReference
-  nameWithType: ModAssetSoftReference
-  fullName: ModAssetSoftReference
+  name: ModAssetSoftReference[]
+  nameWithType: ModAssetSoftReference[]
+  fullName: ModAssetSoftReference[]
+  nameWithType.vb: ModAssetSoftReference()
+  fullName.vb: ModAssetSoftReference()
+  name.vb: ModAssetSoftReference()
+  spec.csharp:
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: (
+  - name: )
 - uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
   commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
   parent: Cysharp.Threading.Tasks
@@ -838,9 +969,15 @@ references:
   - uid: Cysharp.Threading.Tasks
     name: Tasks
     isExternal: true
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_CLIENT_ChangeTeamForParticipant_System_Int32_System_Int32_System_Int32_
+  name: CLIENT_ChangeTeamForParticipant
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_ChangeTeamForParticipant
 - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList*
   commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList
-  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ServerUpdateClientMatchList_Mirror_NetworkConnectionToClient_rwby_sessionhandlers_lobby_NetworkLobbySessionHandlerMessages_RequestMatchListMessage_
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ServerUpdateClientMatchList
   name: ServerUpdateClientMatchList
   nameWithType: LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList
   fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ServerUpdateClientMatchList
@@ -850,29 +987,29 @@ references:
   name: NetworkConnectionToClient
   nameWithType: NetworkConnectionToClient
   fullName: Mirror.NetworkConnectionToClient
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
-  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
   parent: rwby.sessionhandlers.lobby
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
-  name: NetworkLobbySessionHandlerMessages.RequestMatchListMessage
-  nameWithType: NetworkLobbySessionHandlerMessages.RequestMatchListMessage
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+  name: NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
+  nameWithType: NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
   spec.csharp:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
     name: NetworkLobbySessionHandlerMessages
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
   - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
-    name: RequestMatchListMessage
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage.html
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
+    name: RequestLobbyInfoMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage.html
   spec.vb:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
     name: NetworkLobbySessionHandlerMessages
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
   - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
-    name: RequestMatchListMessage
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage.html
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
+    name: RequestLobbyInfoMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage.html
 - uid: Mirror
   commentId: N:Mirror
   name: Mirror
@@ -940,24 +1077,103 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
   - name: )
-- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync*
-  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync
-  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientTryJoinMatchAsync_System_Int32_System_Int32_System_Int32_System_Int32_
-  name: ClientTryJoinMatchAsync
-  nameWithType: LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync
-  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientTryJoinMatchAsync
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_CLIENT_TryJoinRoomAsync_System_Int32_System_Int32_
+  name: CLIENT_TryJoinRoomAsync
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_TryJoinRoomAsync
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_LeaveRoom*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_LeaveRoom
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_CLIENT_LeaveRoom
+  name: CLIENT_LeaveRoom
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_LeaveRoom
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_LeaveRoom
 - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList*
   commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList
   href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientRequestMatchList
   name: ClientRequestMatchList
   nameWithType: LobbySessionNetworkMessageHandler.ClientRequestMatchList
   fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientRequestMatchList
-- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync*
-  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync
-  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientAttemptReadyUpAsync_System_Int32_
-  name: ClientAttemptReadyUpAsync
-  nameWithType: LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync
-  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAttemptReadyUpAsync
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_CLIENT_AttemptSetMatchGamemode_System_Int32_ModAssetSoftReference_GamemodeTeamTypeConfig___GamemodeTeamConfig___Quantum_GamemodeSettingsBase_
+  name: CLIENT_AttemptSetMatchGamemode
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchGamemode
+- uid: Global.ModAssetSoftReference
+  commentId: T:Global.ModAssetSoftReference
+  href: ModAssetSoftReference.html
+  name: ModAssetSoftReference
+  nameWithType: ModAssetSoftReference
+  fullName: ModAssetSoftReference
+- uid: Global.GamemodeTeamTypeConfig[]
+  isExternal: true
+  href: GamemodeTeamTypeConfig.html
+  name: GamemodeTeamTypeConfig[]
+  nameWithType: GamemodeTeamTypeConfig[]
+  fullName: GamemodeTeamTypeConfig[]
+  nameWithType.vb: GamemodeTeamTypeConfig()
+  fullName.vb: GamemodeTeamTypeConfig()
+  name.vb: GamemodeTeamTypeConfig()
+  spec.csharp:
+  - uid: Global.GamemodeTeamTypeConfig
+    name: GamemodeTeamTypeConfig
+    href: GamemodeTeamTypeConfig.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.GamemodeTeamTypeConfig
+    name: GamemodeTeamTypeConfig
+    href: GamemodeTeamTypeConfig.html
+  - name: (
+  - name: )
+- uid: Global.GamemodeTeamConfig[]
+  isExternal: true
+  href: GamemodeTeamConfig.html
+  name: GamemodeTeamConfig[]
+  nameWithType: GamemodeTeamConfig[]
+  fullName: GamemodeTeamConfig[]
+  nameWithType.vb: GamemodeTeamConfig()
+  fullName.vb: GamemodeTeamConfig()
+  name.vb: GamemodeTeamConfig()
+  spec.csharp:
+  - uid: Global.GamemodeTeamConfig
+    name: GamemodeTeamConfig
+    href: GamemodeTeamConfig.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.GamemodeTeamConfig
+    name: GamemodeTeamConfig
+    href: GamemodeTeamConfig.html
+  - name: (
+  - name: )
+- uid: Quantum.GamemodeSettingsBase
+  commentId: T:Quantum.GamemodeSettingsBase
+  parent: Quantum
+  href: Quantum.GamemodeSettingsBase.html
+  name: GamemodeSettingsBase
+  nameWithType: GamemodeSettingsBase
+  fullName: Quantum.GamemodeSettingsBase
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_CLIENT_AttemptSetMatchMap_System_Int32_ModAssetSoftReference_
+  name: CLIENT_AttemptSetMatchMap
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptSetMatchMap
+- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync*
+  commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync
+  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_CLIENT_AttemptReadyUpAsync_System_Int32_
+  name: CLIENT_AttemptReadyUpAsync
+  nameWithType: LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync
+  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.CLIENT_AttemptReadyUpAsync
 - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready*
   commentId: Overload:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientUnready
   href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html#rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientUnready_System_Int32_

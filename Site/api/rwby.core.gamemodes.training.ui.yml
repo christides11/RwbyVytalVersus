@@ -8,11 +8,11 @@ items:
   - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen
   - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.OnFighterSelected
   - rwby.core.gamemodes.training.ui.DummySettingsMainScreen
-  - rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler
-  - rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.MenuType
-  - rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
-  - rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.MenuTypes
-  - rwby.core.gamemodes.training.ui.PauseMenuEnvironmentSettingsHandler
+  - rwby.core.gamemodes.training.ui.GamemodeTrainingSettingsUIHandler
+  - rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu
+  - rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.MenuType
+  - rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
+  - rwby.core.gamemodes.training.ui.PauseMenuHandlerEnvironmentSettingsMenu
   - rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
   - rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler.SubmenuType
   langs:
@@ -25,6 +25,36 @@ items:
   assemblies:
   - Assembly-CSharp
 references:
+- uid: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu
+  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu
+  parent: rwby.core.gamemodes.training.ui
+  href: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.html
+  name: PauseMenuHandlerBasicSettingsMenu
+  nameWithType: PauseMenuHandlerBasicSettingsMenu
+  fullName: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu
+- uid: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.MenuType
+  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.MenuType
+  parent: rwby.core.gamemodes.training.ui
+  href: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.html
+  name: PauseMenuHandlerBasicSettingsMenu.MenuType
+  nameWithType: PauseMenuHandlerBasicSettingsMenu.MenuType
+  fullName: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.MenuType
+  spec.csharp:
+  - uid: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu
+    name: PauseMenuHandlerBasicSettingsMenu
+    href: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.html
+  - name: .
+  - uid: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.MenuType
+    name: MenuType
+    href: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.MenuType.html
+  spec.vb:
+  - uid: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu
+    name: PauseMenuHandlerBasicSettingsMenu
+    href: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.html
+  - name: .
+  - uid: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.MenuType
+    name: MenuType
+    href: rwby.core.gamemodes.training.ui.PauseMenuHandlerBasicSettingsMenu.MenuType.html
 - uid: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen
   commentId: T:rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen
   parent: rwby.core.gamemodes.training.ui
@@ -55,36 +85,27 @@ references:
   - uid: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.OnFighterSelected
     name: OnFighterSelected
     href: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.OnFighterSelected.html
-- uid: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
-  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
+- uid: rwby.core.gamemodes.training.ui.PauseMenuHandlerEnvironmentSettingsMenu
+  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuHandlerEnvironmentSettingsMenu
   parent: rwby.core.gamemodes.training.ui
-  href: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.html
-  name: PauseMenuDummySettingsHandler
-  nameWithType: PauseMenuDummySettingsHandler
-  fullName: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
-- uid: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.MenuTypes
-  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.MenuTypes
+  href: rwby.core.gamemodes.training.ui.PauseMenuHandlerEnvironmentSettingsMenu.html
+  name: PauseMenuHandlerEnvironmentSettingsMenu
+  nameWithType: PauseMenuHandlerEnvironmentSettingsMenu
+  fullName: rwby.core.gamemodes.training.ui.PauseMenuHandlerEnvironmentSettingsMenu
+- uid: rwby.core.gamemodes.training.ui.GamemodeTrainingSettingsUIHandler
+  commentId: T:rwby.core.gamemodes.training.ui.GamemodeTrainingSettingsUIHandler
   parent: rwby.core.gamemodes.training.ui
-  href: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.html
-  name: PauseMenuDummySettingsHandler.MenuTypes
-  nameWithType: PauseMenuDummySettingsHandler.MenuTypes
-  fullName: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.MenuTypes
-  spec.csharp:
-  - uid: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
-    name: PauseMenuDummySettingsHandler
-    href: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.html
-  - name: .
-  - uid: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.MenuTypes
-    name: MenuTypes
-    href: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.MenuTypes.html
-  spec.vb:
-  - uid: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
-    name: PauseMenuDummySettingsHandler
-    href: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.html
-  - name: .
-  - uid: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.MenuTypes
-    name: MenuTypes
-    href: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.MenuTypes.html
+  href: rwby.core.gamemodes.training.ui.GamemodeTrainingSettingsUIHandler.html
+  name: GamemodeTrainingSettingsUIHandler
+  nameWithType: GamemodeTrainingSettingsUIHandler
+  fullName: rwby.core.gamemodes.training.ui.GamemodeTrainingSettingsUIHandler
+- uid: rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
+  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
+  parent: rwby.core.gamemodes.training.ui
+  href: rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu.html
+  name: PauseMenuHandlerDummySettingsMenu
+  nameWithType: PauseMenuHandlerDummySettingsMenu
+  fullName: rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
 - uid: rwby.core.gamemodes.training.ui.DummySettingsMainScreen
   commentId: T:rwby.core.gamemodes.training.ui.DummySettingsMainScreen
   parent: rwby.core.gamemodes.training.ui
@@ -92,43 +113,6 @@ references:
   name: DummySettingsMainScreen
   nameWithType: DummySettingsMainScreen
   fullName: rwby.core.gamemodes.training.ui.DummySettingsMainScreen
-- uid: rwby.core.gamemodes.training.ui.PauseMenuEnvironmentSettingsHandler
-  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuEnvironmentSettingsHandler
-  parent: rwby.core.gamemodes.training.ui
-  href: rwby.core.gamemodes.training.ui.PauseMenuEnvironmentSettingsHandler.html
-  name: PauseMenuEnvironmentSettingsHandler
-  nameWithType: PauseMenuEnvironmentSettingsHandler
-  fullName: rwby.core.gamemodes.training.ui.PauseMenuEnvironmentSettingsHandler
-- uid: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler
-  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler
-  parent: rwby.core.gamemodes.training.ui
-  href: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.html
-  name: PauseMenuBasicSettingsHandler
-  nameWithType: PauseMenuBasicSettingsHandler
-  fullName: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler
-- uid: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.MenuType
-  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.MenuType
-  parent: rwby.core.gamemodes.training.ui
-  href: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.html
-  name: PauseMenuBasicSettingsHandler.MenuType
-  nameWithType: PauseMenuBasicSettingsHandler.MenuType
-  fullName: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.MenuType
-  spec.csharp:
-  - uid: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler
-    name: PauseMenuBasicSettingsHandler
-    href: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.html
-  - name: .
-  - uid: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.MenuType
-    name: MenuType
-    href: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.MenuType.html
-  spec.vb:
-  - uid: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler
-    name: PauseMenuBasicSettingsHandler
-    href: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.html
-  - name: .
-  - uid: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.MenuType
-    name: MenuType
-    href: rwby.core.gamemodes.training.ui.PauseMenuBasicSettingsHandler.MenuType.html
 - uid: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
   commentId: T:rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
   parent: rwby.core.gamemodes.training.ui

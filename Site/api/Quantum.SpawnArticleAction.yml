@@ -7,6 +7,7 @@ items:
   children:
   - Quantum.SpawnArticleAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   - Quantum.SpawnArticleAction.articleOnSameTeam
+  - Quantum.SpawnArticleAction.articleOwner
   - Quantum.SpawnArticleAction.offset
   - Quantum.SpawnArticleAction.projectilePrototypeRef
   - Quantum.SpawnArticleAction.setSameTargetAsOwner
@@ -32,17 +33,19 @@ items:
     content: >-
       [Serializable]
 
-      public class SpawnArticleAction : HNSFStateAction
+      public class SpawnArticleAction : HNSFStateAction, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class SpawnArticleAction Inherits HNSFStateAction
+      Public Class SpawnArticleAction Inherits HNSFStateAction Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.HNSFStateAction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateAction.Label
   - Quantum.HNSFStateAction.parent
@@ -177,6 +180,33 @@ items:
     return:
       type: System.Boolean
     content.vb: Public setSameTargetAsOwner As Boolean
+- uid: Quantum.SpawnArticleAction.articleOwner
+  commentId: F:Quantum.SpawnArticleAction.articleOwner
+  id: articleOwner
+  parent: Quantum.SpawnArticleAction
+  langs:
+  - csharp
+  - vb
+  name: articleOwner
+  nameWithType: SpawnArticleAction.articleOwner
+  fullName: Quantum.SpawnArticleAction.articleOwner
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Articles/SpawnArticleAction.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: articleOwner
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Articles/SpawnArticleAction.cs
+    startLine: 13
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public HNSFStateAction.TargetType articleOwner
+    return:
+      type: Quantum.HNSFStateAction.TargetType
+    content.vb: Public articleOwner As HNSFStateAction.TargetType
 - uid: Quantum.SpawnArticleAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   commentId: M:Quantum.SpawnArticleAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   id: ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
@@ -195,7 +225,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ExecuteAction
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Articles/SpawnArticleAction.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -265,6 +295,13 @@ references:
   name: HNSFStateAction
   nameWithType: HNSFStateAction
   fullName: Quantum.HNSFStateAction
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateAction.Label
   commentId: F:Quantum.HNSFStateAction.Label
   parent: Quantum.HNSFStateAction
@@ -1072,6 +1109,29 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: Quantum.HNSFStateAction.TargetType
+  commentId: T:Quantum.HNSFStateAction.TargetType
+  parent: Quantum
+  href: Quantum.HNSFStateAction.html
+  name: HNSFStateAction.TargetType
+  nameWithType: HNSFStateAction.TargetType
+  fullName: Quantum.HNSFStateAction.TargetType
+  spec.csharp:
+  - uid: Quantum.HNSFStateAction
+    name: HNSFStateAction
+    href: Quantum.HNSFStateAction.html
+  - name: .
+  - uid: Quantum.HNSFStateAction.TargetType
+    name: TargetType
+    href: Quantum.HNSFStateAction.TargetType.html
+  spec.vb:
+  - uid: Quantum.HNSFStateAction
+    name: HNSFStateAction
+    href: Quantum.HNSFStateAction.html
+  - name: .
+  - uid: Quantum.HNSFStateAction.TargetType
+    name: TargetType
+    href: Quantum.HNSFStateAction.TargetType.html
 - uid: Quantum.HNSFStateAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   commentId: M:Quantum.HNSFStateAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   parent: Quantum.HNSFStateAction

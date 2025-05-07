@@ -5,9 +5,10 @@ items:
   id: OverheadHUDHandler
   parent: rwby.core
   children:
+  - rwby.core.OverheadHUDHandler.Bind(Quantum.PlayerRef,Quantum.EntityRef)
   - rwby.core.OverheadHUDHandler.DeleteElement(rwby.core.OverheadHUDElement)
   - rwby.core.OverheadHUDHandler.FighterDef
-  - rwby.core.OverheadHUDHandler.Initialize(System.Int32,System.Int32)
+  - rwby.core.OverheadHUDHandler.Initialize(Quantum.QuantumRunner)
   - rwby.core.OverheadHUDHandler.RootCanvas
   - rwby.core.OverheadHUDHandler.Teardown
   - rwby.core.OverheadHUDHandler.checkLayerMask
@@ -15,7 +16,6 @@ items:
   - rwby.core.OverheadHUDHandler.entityViewtoHUDElement
   - rwby.core.OverheadHUDHandler.fighterEntityView
   - rwby.core.OverheadHUDHandler.globalPlayerID
-  - rwby.core.OverheadHUDHandler.localPlayerID
   - rwby.core.OverheadHUDHandler.updateRate
   langs:
   - csharp
@@ -102,37 +102,10 @@ items:
   - Assembly-CSharp
   namespace: rwby.core
   syntax:
-    content: public int globalPlayerID
+    content: public PlayerRef globalPlayerID
     return:
-      type: System.Int32
-    content.vb: Public globalPlayerID As Integer
-- uid: rwby.core.OverheadHUDHandler.localPlayerID
-  commentId: F:rwby.core.OverheadHUDHandler.localPlayerID
-  id: localPlayerID
-  parent: rwby.core.OverheadHUDHandler
-  langs:
-  - csharp
-  - vb
-  name: localPlayerID
-  nameWithType: OverheadHUDHandler.localPlayerID
-  fullName: rwby.core.OverheadHUDHandler.localPlayerID
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: localPlayerID
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
-    startLine: 14
-  assemblies:
-  - Assembly-CSharp
-  namespace: rwby.core
-  syntax:
-    content: public int localPlayerID
-    return:
-      type: System.Int32
-    content.vb: Public localPlayerID As Integer
+      type: Quantum.PlayerRef
+    content.vb: Public globalPlayerID As PlayerRef
 - uid: rwby.core.OverheadHUDHandler.fighterEntityView
   commentId: F:rwby.core.OverheadHUDHandler.fighterEntityView
   id: fighterEntityView
@@ -151,7 +124,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: fighterEntityView
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
-    startLine: 16
+    startLine: 15
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -178,7 +151,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: updateRate
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
-    startLine: 18
+    startLine: 17
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -205,7 +178,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: elementPrefab
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
-    startLine: 21
+    startLine: 19
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -232,7 +205,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: checkLayerMask
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
-    startLine: 23
+    startLine: 21
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -259,7 +232,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: entityViewtoHUDElement
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
-    startLine: 25
+    startLine: 23
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -286,7 +259,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RootCanvas
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
-    startLine: 27
+    startLine: 25
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -300,16 +273,16 @@ items:
   overload: rwby.core.OverheadHUDHandler.RootCanvas*
   implements:
   - rwby.IHUDElement.RootCanvas
-- uid: rwby.core.OverheadHUDHandler.Initialize(System.Int32,System.Int32)
-  commentId: M:rwby.core.OverheadHUDHandler.Initialize(System.Int32,System.Int32)
-  id: Initialize(System.Int32,System.Int32)
+- uid: rwby.core.OverheadHUDHandler.Initialize(Quantum.QuantumRunner)
+  commentId: M:rwby.core.OverheadHUDHandler.Initialize(Quantum.QuantumRunner)
+  id: Initialize(Quantum.QuantumRunner)
   parent: rwby.core.OverheadHUDHandler
   langs:
   - csharp
   - vb
-  name: Initialize(int, int)
-  nameWithType: OverheadHUDHandler.Initialize(int, int)
-  fullName: rwby.core.OverheadHUDHandler.Initialize(int, int)
+  name: Initialize(QuantumRunner)
+  nameWithType: OverheadHUDHandler.Initialize(QuantumRunner)
+  fullName: rwby.core.OverheadHUDHandler.Initialize(Quantum.QuantumRunner)
   type: Method
   source:
     remote:
@@ -324,19 +297,48 @@ items:
   namespace: rwby.core
   example: []
   syntax:
-    content: public void Initialize(int localPlayerID, int networkPlayerID)
+    content: public void Initialize(QuantumRunner quantumRunner)
     parameters:
-    - id: localPlayerID
-      type: System.Int32
-    - id: networkPlayerID
-      type: System.Int32
-    content.vb: Public Sub Initialize(localPlayerID As Integer, networkPlayerID As Integer)
+    - id: quantumRunner
+      type: Quantum.QuantumRunner
+    content.vb: Public Sub Initialize(quantumRunner As QuantumRunner)
   overload: rwby.core.OverheadHUDHandler.Initialize*
   implements:
-  - rwby.IHUDElement.Initialize(System.Int32,System.Int32)
-  nameWithType.vb: OverheadHUDHandler.Initialize(Integer, Integer)
-  fullName.vb: rwby.core.OverheadHUDHandler.Initialize(Integer, Integer)
-  name.vb: Initialize(Integer, Integer)
+  - rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+- uid: rwby.core.OverheadHUDHandler.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  commentId: M:rwby.core.OverheadHUDHandler.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  id: Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  parent: rwby.core.OverheadHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: Bind(PlayerRef, EntityRef)
+  nameWithType: OverheadHUDHandler.Bind(PlayerRef, EntityRef)
+  fullName: rwby.core.OverheadHUDHandler.Bind(Quantum.PlayerRef, Quantum.EntityRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Bind
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
+    startLine: 36
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Bind(PlayerRef playerRef, EntityRef entityRef)
+    parameters:
+    - id: playerRef
+      type: Quantum.PlayerRef
+    - id: entityRef
+      type: Quantum.EntityRef
+    content.vb: Public Sub Bind(playerRef As PlayerRef, entityRef As EntityRef)
+  overload: rwby.core.OverheadHUDHandler.Bind*
+  implements:
+  - rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
 - uid: rwby.core.OverheadHUDHandler.DeleteElement(rwby.core.OverheadHUDElement)
   commentId: M:rwby.core.OverheadHUDHandler.DeleteElement(rwby.core.OverheadHUDElement)
   id: DeleteElement(rwby.core.OverheadHUDElement)
@@ -355,7 +357,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: DeleteElement
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
-    startLine: 88
+    startLine: 93
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -384,7 +386,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Teardown
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/OverheadInfo/OverheadHUDHandler.cs
-    startLine: 96
+    startLine: 101
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -508,6 +510,25 @@ references:
   name: IFighterDefinition
   nameWithType: IFighterDefinition
   fullName: IFighterDefinition
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
+  parent: Quantum
+  isExternal: true
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Quantum.QuantumEntityView
+  commentId: T:Quantum.QuantumEntityView
+  parent: Quantum
+  name: QuantumEntityView
+  nameWithType: QuantumEntityView
+  fullName: Quantum.QuantumEntityView
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -519,18 +540,6 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: Quantum.QuantumEntityView
-  commentId: T:Quantum.QuantumEntityView
-  parent: Quantum
-  name: QuantumEntityView
-  nameWithType: QuantumEntityView
-  fullName: Quantum.QuantumEntityView
-- uid: Quantum
-  commentId: N:Quantum
-  href: Quantum.html
-  name: Quantum
-  nameWithType: Quantum
-  fullName: Quantum
 - uid: UnityEngine.GameObject
   commentId: T:UnityEngine.GameObject
   parent: UnityEngine
@@ -680,51 +689,82 @@ references:
   fullName: UnityEngine.Canvas
 - uid: rwby.core.OverheadHUDHandler.Initialize*
   commentId: Overload:rwby.core.OverheadHUDHandler.Initialize
-  href: rwby.core.OverheadHUDHandler.html#rwby_core_OverheadHUDHandler_Initialize_System_Int32_System_Int32_
+  href: rwby.core.OverheadHUDHandler.html#rwby_core_OverheadHUDHandler_Initialize_Quantum_QuantumRunner_
   name: Initialize
   nameWithType: OverheadHUDHandler.Initialize
   fullName: rwby.core.OverheadHUDHandler.Initialize
-- uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
-  commentId: M:rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+- uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+  commentId: M:rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
   parent: rwby.IHUDElement
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: Initialize(int, int)
-  nameWithType: IHUDElement.Initialize(int, int)
-  fullName: rwby.IHUDElement.Initialize(int, int)
-  nameWithType.vb: IHUDElement.Initialize(Integer, Integer)
-  fullName.vb: rwby.IHUDElement.Initialize(Integer, Integer)
-  name.vb: Initialize(Integer, Integer)
+  name: Initialize(QuantumRunner)
+  nameWithType: IHUDElement.Initialize(QuantumRunner)
+  fullName: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
   spec.csharp:
-  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  - uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
     name: Initialize
   - name: (
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - uid: Quantum.QuantumRunner
+    name: QuantumRunner
   - name: )
   spec.vb:
-  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  - uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
     name: Initialize
   - name: (
-  - uid: System.Int32
-    name: Integer
+  - uid: Quantum.QuantumRunner
+    name: QuantumRunner
+  - name: )
+- uid: Quantum.QuantumRunner
+  commentId: T:Quantum.QuantumRunner
+  parent: Quantum
+  name: QuantumRunner
+  nameWithType: QuantumRunner
+  fullName: Quantum.QuantumRunner
+- uid: rwby.core.OverheadHUDHandler.Bind*
+  commentId: Overload:rwby.core.OverheadHUDHandler.Bind
+  href: rwby.core.OverheadHUDHandler.html#rwby_core_OverheadHUDHandler_Bind_Quantum_PlayerRef_Quantum_EntityRef_
+  name: Bind
+  nameWithType: OverheadHUDHandler.Bind
+  fullName: rwby.core.OverheadHUDHandler.Bind
+- uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  commentId: M:rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  parent: rwby.IHUDElement
+  isExternal: true
+  name: Bind(PlayerRef, EntityRef)
+  nameWithType: IHUDElement.Bind(PlayerRef, EntityRef)
+  fullName: rwby.IHUDElement.Bind(Quantum.PlayerRef, Quantum.EntityRef)
+  spec.csharp:
+  - uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+    name: Bind
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
-  - uid: System.Int32
-    name: Integer
+  - uid: Quantum.EntityRef
+    name: EntityRef
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+    name: Bind
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: )
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
 - uid: rwby.core.OverheadHUDHandler.DeleteElement*
   commentId: Overload:rwby.core.OverheadHUDHandler.DeleteElement
   href: rwby.core.OverheadHUDHandler.html#rwby_core_OverheadHUDHandler_DeleteElement_rwby_core_OverheadHUDElement_

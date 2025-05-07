@@ -10,12 +10,16 @@ items:
   - Quantum.EventPlayEffectEvent.Game
   - Quantum.EventPlayEffectEvent.GetHashCode
   - Quantum.EventPlayEffectEvent.ID
+  - Quantum.EventPlayEffectEvent.atClosestBodyPosition
   - Quantum.EventPlayEffectEvent.parent
+  - Quantum.EventPlayEffectEvent.parentBoneTag
   - Quantum.EventPlayEffectEvent.parented
   - Quantum.EventPlayEffectEvent.position
   - Quantum.EventPlayEffectEvent.positionAsOffset
   - Quantum.EventPlayEffectEvent.rotation
   - Quantum.EventPlayEffectEvent.rotationAsOffset
+  - Quantum.EventPlayEffectEvent.setRotationToForceDir
+  - Quantum.EventPlayEffectEvent.sourcePosition
   - Quantum.EventPlayEffectEvent.visualEffectRef
   langs:
   - csharp
@@ -31,7 +35,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: EventPlayEffectEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 616
+    startLine: 689
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -68,15 +72,15 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ID
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 617
+    startLine: 690
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public const int ID = 15
+    content: public const int ID = 17
     return:
       type: System.Int32
-    content.vb: Public Const ID As Integer = 15
+    content.vb: Public Const ID As Integer = 17
 - uid: Quantum.EventPlayEffectEvent.visualEffectRef
   commentId: F:Quantum.EventPlayEffectEvent.visualEffectRef
   id: visualEffectRef
@@ -95,7 +99,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: visualEffectRef
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 618
+    startLine: 691
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -122,7 +126,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: parent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 619
+    startLine: 692
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -149,7 +153,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: parented
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 620
+    startLine: 693
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -176,7 +180,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: positionAsOffset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 621
+    startLine: 694
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -203,7 +207,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: position
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 622
+    startLine: 695
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -230,7 +234,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: rotationAsOffset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 623
+    startLine: 696
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -257,7 +261,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: rotation
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 624
+    startLine: 697
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -266,6 +270,114 @@ items:
     return:
       type: Photon.Deterministic.FPVector3
     content.vb: Public rotation As FPVector3
+- uid: Quantum.EventPlayEffectEvent.atClosestBodyPosition
+  commentId: F:Quantum.EventPlayEffectEvent.atClosestBodyPosition
+  id: atClosestBodyPosition
+  parent: Quantum.EventPlayEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: atClosestBodyPosition
+  nameWithType: EventPlayEffectEvent.atClosestBodyPosition
+  fullName: Quantum.EventPlayEffectEvent.atClosestBodyPosition
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: atClosestBodyPosition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+    startLine: 698
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QBoolean atClosestBodyPosition
+    return:
+      type: Quantum.QBoolean
+    content.vb: Public atClosestBodyPosition As QBoolean
+- uid: Quantum.EventPlayEffectEvent.sourcePosition
+  commentId: F:Quantum.EventPlayEffectEvent.sourcePosition
+  id: sourcePosition
+  parent: Quantum.EventPlayEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: sourcePosition
+  nameWithType: EventPlayEffectEvent.sourcePosition
+  fullName: Quantum.EventPlayEffectEvent.sourcePosition
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: sourcePosition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+    startLine: 699
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public FPVector3 sourcePosition
+    return:
+      type: Photon.Deterministic.FPVector3
+    content.vb: Public sourcePosition As FPVector3
+- uid: Quantum.EventPlayEffectEvent.setRotationToForceDir
+  commentId: F:Quantum.EventPlayEffectEvent.setRotationToForceDir
+  id: setRotationToForceDir
+  parent: Quantum.EventPlayEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: setRotationToForceDir
+  nameWithType: EventPlayEffectEvent.setRotationToForceDir
+  fullName: Quantum.EventPlayEffectEvent.setRotationToForceDir
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: setRotationToForceDir
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+    startLine: 700
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QBoolean setRotationToForceDir
+    return:
+      type: Quantum.QBoolean
+    content.vb: Public setRotationToForceDir As QBoolean
+- uid: Quantum.EventPlayEffectEvent.parentBoneTag
+  commentId: F:Quantum.EventPlayEffectEvent.parentBoneTag
+  id: parentBoneTag
+  parent: Quantum.EventPlayEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: parentBoneTag
+  nameWithType: EventPlayEffectEvent.parentBoneTag
+  fullName: Quantum.EventPlayEffectEvent.parentBoneTag
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: parentBoneTag
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+    startLine: 701
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<Tag> parentBoneTag
+    return:
+      type: Quantum.AssetRef{Quantum.Tag}
+    content.vb: Public parentBoneTag As AssetRef(Of Tag)
 - uid: Quantum.EventPlayEffectEvent.#ctor(System.Int32,Quantum.EventFlags)
   commentId: M:Quantum.EventPlayEffectEvent.#ctor(System.Int32,Quantum.EventFlags)
   id: '#ctor(System.Int32,Quantum.EventFlags)'
@@ -284,7 +396,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 625
+    startLine: 702
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -318,7 +430,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 628
+    startLine: 705
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -347,7 +459,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Game
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 631
+    startLine: 708
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -376,7 +488,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHashCode
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 639
+    startLine: 716
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -591,6 +703,37 @@ references:
   - uid: Photon.Deterministic
     name: Deterministic
     isExternal: true
+- uid: Quantum.AssetRef{Quantum.Tag}
+  commentId: T:Quantum.AssetRef{Quantum.Tag}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.Tag.html
+  name: AssetRef<Tag>
+  nameWithType: AssetRef<Tag>
+  fullName: Quantum.AssetRef<Quantum.Tag>
+  nameWithType.vb: AssetRef(Of Tag)
+  fullName.vb: Quantum.AssetRef(Of Quantum.Tag)
+  name.vb: AssetRef(Of Tag)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.Tag
+    name: Tag
+    href: Quantum.Tag.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.Tag
+    name: Tag
+    href: Quantum.Tag.html
+  - name: )
 - uid: Quantum.EventPlayEffectEvent.#ctor*
   commentId: Overload:Quantum.EventPlayEffectEvent.#ctor
   href: Quantum.EventPlayEffectEvent.html#Quantum_EventPlayEffectEvent__ctor_System_Int32_Quantum_EventFlags_

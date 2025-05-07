@@ -24,14 +24,16 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public class AIFunction : AIFunctionBase'
-    content.vb: Public Class AIFunction Inherits AIFunctionBase
+    content: 'public class AIFunction : AIFunctionBase, ILogSource'
+    content.vb: Public Class AIFunction Inherits AIFunctionBase Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.AIFunctionBase
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -89,6 +91,13 @@ references:
   name: AIFunctionBase
   nameWithType: AIFunctionBase
   fullName: Quantum.AIFunctionBase
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject

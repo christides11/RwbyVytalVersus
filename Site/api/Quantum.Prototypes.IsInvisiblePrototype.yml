@@ -7,7 +7,7 @@ items:
   children:
   - Quantum.Prototypes.IsInvisiblePrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   - Quantum.Prototypes.IsInvisiblePrototype.Materialize(Quantum.Frame,Quantum.IsInvisible@,Quantum.PrototypeMaterializationContext@)
-  - Quantum.Prototypes.IsInvisiblePrototype._empty_prototype_dummy_field_
+  - Quantum.Prototypes.IsInvisiblePrototype.invisibleTo
   langs:
   - csharp
   - vb
@@ -22,7 +22,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: IsInvisiblePrototype
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1287
+    startLine: 1476
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -59,33 +59,33 @@ items:
     arguments:
     - type: System.Type
       value: Quantum.IsInvisible
-- uid: Quantum.Prototypes.IsInvisiblePrototype._empty_prototype_dummy_field_
-  commentId: F:Quantum.Prototypes.IsInvisiblePrototype._empty_prototype_dummy_field_
-  id: _empty_prototype_dummy_field_
+- uid: Quantum.Prototypes.IsInvisiblePrototype.invisibleTo
+  commentId: F:Quantum.Prototypes.IsInvisiblePrototype.invisibleTo
+  id: invisibleTo
   parent: Quantum.Prototypes.IsInvisiblePrototype
   langs:
   - csharp
   - vb
-  name: _empty_prototype_dummy_field_
-  nameWithType: IsInvisiblePrototype._empty_prototype_dummy_field_
-  fullName: Quantum.Prototypes.IsInvisiblePrototype._empty_prototype_dummy_field_
+  name: invisibleTo
+  nameWithType: IsInvisiblePrototype.invisibleTo
+  fullName: Quantum.Prototypes.IsInvisiblePrototype.invisibleTo
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: _empty_prototype_dummy_field_
+    id: invisibleTo
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1291
+    startLine: 1479
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
   syntax:
-    content: public int _empty_prototype_dummy_field_
+    content: public QEnum32<InvisibilityType> invisibleTo
     return:
-      type: System.Int32
-    content.vb: Public _empty_prototype_dummy_field_ As Integer
+      type: Quantum.QEnum32{Quantum.InvisibilityType}
+    content.vb: Public invisibleTo As QEnum32(Of InvisibilityType)
 - uid: Quantum.Prototypes.IsInvisiblePrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   commentId: M:Quantum.Prototypes.IsInvisiblePrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   id: AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
@@ -104,7 +104,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AddToEntity
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1293
+    startLine: 1481
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -144,7 +144,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Materialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1298
+    startLine: 1486
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -366,17 +366,62 @@ references:
   fullName: Quantum.ComponentPrototype<T>.ComponentType
   nameWithType.vb: ComponentPrototype(Of T).ComponentType
   fullName.vb: Quantum.ComponentPrototype(Of T).ComponentType
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
+- uid: Quantum.QEnum32{Quantum.InvisibilityType}
+  commentId: T:Quantum.QEnum32{Quantum.InvisibilityType}
+  parent: Quantum
+  definition: Quantum.QEnum32`1
+  href: Quantum.InvisibilityType.html
+  name: QEnum32<InvisibilityType>
+  nameWithType: QEnum32<InvisibilityType>
+  fullName: Quantum.QEnum32<Quantum.InvisibilityType>
+  nameWithType.vb: QEnum32(Of InvisibilityType)
+  fullName.vb: Quantum.QEnum32(Of Quantum.InvisibilityType)
+  name.vb: QEnum32(Of InvisibilityType)
+  spec.csharp:
+  - uid: Quantum.QEnum32`1
+    name: QEnum32
+    isExternal: true
+  - name: <
+  - uid: Quantum.InvisibilityType
+    name: InvisibilityType
+    href: Quantum.InvisibilityType.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.QEnum32`1
+    name: QEnum32
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.InvisibilityType
+    name: InvisibilityType
+    href: Quantum.InvisibilityType.html
+  - name: )
+- uid: Quantum.QEnum32`1
+  commentId: T:Quantum.QEnum32`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: QEnum32<T>
+  nameWithType: QEnum32<T>
+  fullName: Quantum.QEnum32<T>
+  nameWithType.vb: QEnum32(Of T)
+  fullName.vb: Quantum.QEnum32(Of T)
+  name.vb: QEnum32(Of T)
+  spec.csharp:
+  - uid: Quantum.QEnum32`1
+    name: QEnum32
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.QEnum32`1
+    name: QEnum32
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   commentId: M:Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   parent: Quantum.ComponentPrototype

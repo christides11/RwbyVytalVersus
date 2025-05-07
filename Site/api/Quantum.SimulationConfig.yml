@@ -21,7 +21,12 @@ items:
   - Quantum.SimulationConfig.ThreadCount
   - Quantum.SimulationConfig.tag_CharacterEntry
   - Quantum.SimulationConfig.tag_CharacterEntryWait
+  - Quantum.SimulationConfig.tag_CharacterState_Group_Attack
+  - Quantum.SimulationConfig.tag_CharacterState_Group_Movement
+  - Quantum.SimulationConfig.tag_CharacterState_Group_Recovery
   - Quantum.SimulationConfig.tag_CharacterState_Idle
+  - Quantum.SimulationConfig.tag_CharacterState_MatchDefeat
+  - Quantum.SimulationConfig.tag_CharacterState_MatchVictory
   langs:
   - csharp
   - vb
@@ -43,13 +48,15 @@ items:
   summary: The SimulationConfig holds parameters used in the ECS layer and inside core systems like physics and navigation.
   example: []
   syntax:
-    content: 'public class SimulationConfig : AssetObject'
-    content.vb: Public Class SimulationConfig Inherits AssetObject
+    content: 'public class SimulationConfig : AssetObject, ILogSource'
+    content.vb: Public Class SimulationConfig Inherits AssetObject Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -321,7 +328,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ThreadCount
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
-    startLine: 83
+    startLine: 84
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -331,17 +338,32 @@ items:
     content: >-
       [InlineHelp]
 
+      [ErrorIf("ThreadCount", 0, "Thread Count must be greater than 0.", CompareOperator.LessOrEqual)]
+
       public int ThreadCount
     return:
       type: System.Int32
     content.vb: >-
       <InlineHelp>
 
+      <ErrorIf("ThreadCount", 0, "Thread Count must be greater than 0.", CompareOperator.LessOrEqual)>
+
       Public ThreadCount As Integer
   attributes:
   - type: Quantum.InlineHelpAttribute
     ctor: Quantum.InlineHelpAttribute.#ctor
     arguments: []
+  - type: Quantum.ErrorIfAttribute
+    ctor: Quantum.ErrorIfAttribute.#ctor(System.String,System.Int64,System.String,Quantum.CompareOperator)
+    arguments:
+    - type: System.String
+      value: ThreadCount
+    - type: System.Int64
+      value: "0"
+    - type: System.String
+      value: Thread Count must be greater than 0.
+    - type: Quantum.CompareOperator
+      value: 3
 - uid: Quantum.SimulationConfig.ChecksumSnapshotHistoryLengthSeconds
   commentId: F:Quantum.SimulationConfig.ChecksumSnapshotHistoryLengthSeconds
   id: ChecksumSnapshotHistoryLengthSeconds
@@ -360,7 +382,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ChecksumSnapshotHistoryLengthSeconds
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
-    startLine: 89
+    startLine: 90
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -399,7 +421,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ChecksumErrorDumpOptions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
-    startLine: 95
+    startLine: 96
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -438,7 +460,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: HeapTrackingMode
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
-    startLine: 104
+    startLine: 105
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -482,7 +504,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: HeapPageShift
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
-    startLine: 112
+    startLine: 113
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -522,7 +544,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: HeapPageCount
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
-    startLine: 119
+    startLine: 120
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -562,7 +584,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: HeapExtraCount
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
-    startLine: 127
+    startLine: 128
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -606,7 +628,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Loaded
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs
-    startLine: 134
+    startLine: 135
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -678,6 +700,60 @@ items:
     return:
       type: Quantum.AssetRef{Quantum.Tag}
     content.vb: Public tag_CharacterEntry As AssetRef(Of Tag)
+- uid: Quantum.SimulationConfig.tag_CharacterState_MatchVictory
+  commentId: F:Quantum.SimulationConfig.tag_CharacterState_MatchVictory
+  id: tag_CharacterState_MatchVictory
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: tag_CharacterState_MatchVictory
+  nameWithType: SimulationConfig.tag_CharacterState_MatchVictory
+  fullName: Quantum.SimulationConfig.tag_CharacterState_MatchVictory
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_CharacterState_MatchVictory
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+    startLine: 5
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<Tag> tag_CharacterState_MatchVictory
+    return:
+      type: Quantum.AssetRef{Quantum.Tag}
+    content.vb: Public tag_CharacterState_MatchVictory As AssetRef(Of Tag)
+- uid: Quantum.SimulationConfig.tag_CharacterState_MatchDefeat
+  commentId: F:Quantum.SimulationConfig.tag_CharacterState_MatchDefeat
+  id: tag_CharacterState_MatchDefeat
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: tag_CharacterState_MatchDefeat
+  nameWithType: SimulationConfig.tag_CharacterState_MatchDefeat
+  fullName: Quantum.SimulationConfig.tag_CharacterState_MatchDefeat
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_CharacterState_MatchDefeat
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+    startLine: 6
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<Tag> tag_CharacterState_MatchDefeat
+    return:
+      type: Quantum.AssetRef{Quantum.Tag}
+    content.vb: Public tag_CharacterState_MatchDefeat As AssetRef(Of Tag)
 - uid: Quantum.SimulationConfig.tag_CharacterState_Idle
   commentId: F:Quantum.SimulationConfig.tag_CharacterState_Idle
   id: tag_CharacterState_Idle
@@ -696,7 +772,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: tag_CharacterState_Idle
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -705,6 +781,87 @@ items:
     return:
       type: Quantum.AssetRef{Quantum.Tag}
     content.vb: Public tag_CharacterState_Idle As AssetRef(Of Tag)
+- uid: Quantum.SimulationConfig.tag_CharacterState_Group_Movement
+  commentId: F:Quantum.SimulationConfig.tag_CharacterState_Group_Movement
+  id: tag_CharacterState_Group_Movement
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: tag_CharacterState_Group_Movement
+  nameWithType: SimulationConfig.tag_CharacterState_Group_Movement
+  fullName: Quantum.SimulationConfig.tag_CharacterState_Group_Movement
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_CharacterState_Group_Movement
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+    startLine: 8
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<Tag> tag_CharacterState_Group_Movement
+    return:
+      type: Quantum.AssetRef{Quantum.Tag}
+    content.vb: Public tag_CharacterState_Group_Movement As AssetRef(Of Tag)
+- uid: Quantum.SimulationConfig.tag_CharacterState_Group_Attack
+  commentId: F:Quantum.SimulationConfig.tag_CharacterState_Group_Attack
+  id: tag_CharacterState_Group_Attack
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: tag_CharacterState_Group_Attack
+  nameWithType: SimulationConfig.tag_CharacterState_Group_Attack
+  fullName: Quantum.SimulationConfig.tag_CharacterState_Group_Attack
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_CharacterState_Group_Attack
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+    startLine: 9
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<Tag> tag_CharacterState_Group_Attack
+    return:
+      type: Quantum.AssetRef{Quantum.Tag}
+    content.vb: Public tag_CharacterState_Group_Attack As AssetRef(Of Tag)
+- uid: Quantum.SimulationConfig.tag_CharacterState_Group_Recovery
+  commentId: F:Quantum.SimulationConfig.tag_CharacterState_Group_Recovery
+  id: tag_CharacterState_Group_Recovery
+  parent: Quantum.SimulationConfig
+  langs:
+  - csharp
+  - vb
+  name: tag_CharacterState_Group_Recovery
+  nameWithType: SimulationConfig.tag_CharacterState_Group_Recovery
+  fullName: Quantum.SimulationConfig.tag_CharacterState_Group_Recovery
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_CharacterState_Group_Recovery
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs
+    startLine: 10
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<Tag> tag_CharacterState_Group_Recovery
+    return:
+      type: Quantum.AssetRef{Quantum.Tag}
+    content.vb: Public tag_CharacterState_Group_Recovery As AssetRef(Of Tag)
 references:
 - uid: Quantum
   commentId: N:Quantum
@@ -744,6 +901,13 @@ references:
   name: AssetObject
   nameWithType: AssetObject
   fullName: Quantum.AssetObject
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject

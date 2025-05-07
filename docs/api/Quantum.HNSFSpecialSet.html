@@ -89,7 +89,7 @@
 
 
   <h1 id="Quantum_HNSFSpecialSet" data-uid="Quantum.HNSFSpecialSet" class="text-break">
-Class HNSFSpecialSet  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs&amp;version=GBdev&amp;line=3"><i class="bi bi-code-slash"></i></a>
+Class HNSFSpecialSet  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs&amp;version=GBdev&amp;line=5"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class HNSFSpecialSet  <a class="header-action link-secondary" title="View source
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HNSFSpecialSet : AssetObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class HNSFSpecialSet : AssetObject, ILogSource</code></pre>
   </div>
 
 
@@ -118,6 +118,12 @@ Class HNSFSpecialSet  <a class="header-action link-secondary" title="View source
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ILogSource</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -167,7 +173,7 @@ Class HNSFSpecialSet  <a class="header-action link-secondary" title="View source
 
   <h3 id="Quantum_HNSFSpecialSet_states" data-uid="Quantum.HNSFSpecialSet.states">
   states
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs&amp;version=GBdev&amp;line=15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -194,6 +200,36 @@ Class HNSFSpecialSet  <a class="header-action link-secondary" title="View source
 
 
 
+
+  <h3 id="Quantum_HNSFSpecialSet_validMovesetsForUsage" data-uid="Quantum.HNSFSpecialSet.validMovesetsForUsage">
+  validMovesetsForUsage
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs&amp;version=GBdev&amp;line=17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetRef&lt;HNSFState&gt;[] validMovesetsForUsage</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AssetRef</span>&lt;<a class="xref" href="Quantum.HNSFState.html">HNSFState</a>&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -202,7 +238,7 @@ Class HNSFSpecialSet  <a class="header-action link-secondary" title="View source
 
   <h3 id="Quantum_HNSFSpecialSet_GetBestState_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateContext__" data-uid="Quantum.HNSFSpecialSet.GetBestState(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)">
   GetBestState(Frame, EntityRef, ref HNSFStateContext)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs&amp;version=GBdev&amp;line=17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs&amp;version=GBdev&amp;line=29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -238,11 +274,47 @@ Class HNSFSpecialSet  <a class="header-action link-secondary" title="View source
 
 
 
+  <a id="Quantum_HNSFSpecialSet_IsMovesetValidForSpecialUsage_" data-uid="Quantum.HNSFSpecialSet.IsMovesetValidForSpecialUsage*"></a>
+
+  <h3 id="Quantum_HNSFSpecialSet_IsMovesetValidForSpecialUsage_Quantum_AssetRef_Quantum_HNSFState__" data-uid="Quantum.HNSFSpecialSet.IsMovesetValidForSpecialUsage(Quantum.AssetRef{Quantum.HNSFState})">
+  IsMovesetValidForSpecialUsage(AssetRef&lt;HNSFState&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs&amp;version=GBdev&amp;line=20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMovesetValidForSpecialUsage(AssetRef&lt;HNSFState&gt; moveset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>moveset</code> <span class="xref">AssetRef</span>&lt;<a class="xref" href="Quantum.HNSFState.html">HNSFState</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs&amp;version=GBdev&amp;line=3" class="edit-link">Edit this page</a>
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs&amp;version=GBdev&amp;line=5" class="edit-link">Edit this page</a>
         </div>
 
 

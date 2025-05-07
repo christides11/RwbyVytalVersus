@@ -7,11 +7,13 @@ items:
   children:
   - rwby.InputActions.UIActions.#ctor(rwby.InputActions)
   - rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
-  - rwby.InputActions.UIActions.Alternative
+  - rwby.InputActions.UIActions.Alt1
+  - rwby.InputActions.UIActions.Alt2
   - rwby.InputActions.UIActions.Cancel
   - rwby.InputActions.UIActions.Click
   - rwby.InputActions.UIActions.Disable
   - rwby.InputActions.UIActions.Enable
+  - rwby.InputActions.UIActions.Exit
   - rwby.InputActions.UIActions.Get
   - rwby.InputActions.UIActions.MiddleClick
   - rwby.InputActions.UIActions.Navigate
@@ -20,6 +22,7 @@ items:
   - rwby.InputActions.UIActions.Pause
   - rwby.InputActions.UIActions.Point
   - rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+  - rwby.InputActions.UIActions.RightClick
   - rwby.InputActions.UIActions.ScrollWheel
   - rwby.InputActions.UIActions.SetCallbacks(rwby.InputActions.IUIActions)
   - rwby.InputActions.UIActions.Submit
@@ -39,10 +42,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UIActions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1749
+    startLine: 2017
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to input actions defined in input action map "UI".
+  example: []
   syntax:
     content: public struct InputActions.UIActions
     content.vb: Public Structure InputActions.UIActions
@@ -64,10 +69,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1752
+    startLine: 2024
   assemblies:
   - rwby
   namespace: rwby
+  summary: Construct a new instance of the input action map wrapper class.
+  example: []
   syntax:
     content: public UIActions(InputActions wrapper)
     parameters:
@@ -96,10 +103,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Navigate
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1753
+    startLine: 2028
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to the underlying input action "UI/Navigate".
+  example: []
   syntax:
     content: public InputAction Navigate { get; }
     parameters: []
@@ -107,93 +116,6 @@ items:
       type: UnityEngine.InputSystem.InputAction
     content.vb: Public ReadOnly Property Navigate As InputAction
   overload: rwby.InputActions.UIActions.Navigate*
-- uid: rwby.InputActions.UIActions.Submit
-  commentId: P:rwby.InputActions.UIActions.Submit
-  id: Submit
-  parent: rwby.InputActions.UIActions
-  langs:
-  - csharp
-  - vb
-  name: Submit
-  nameWithType: InputActions.UIActions.Submit
-  fullName: rwby.InputActions.UIActions.Submit
-  type: Property
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: Submit
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1754
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public InputAction Submit { get; }
-    parameters: []
-    return:
-      type: UnityEngine.InputSystem.InputAction
-    content.vb: Public ReadOnly Property Submit As InputAction
-  overload: rwby.InputActions.UIActions.Submit*
-- uid: rwby.InputActions.UIActions.Cancel
-  commentId: P:rwby.InputActions.UIActions.Cancel
-  id: Cancel
-  parent: rwby.InputActions.UIActions
-  langs:
-  - csharp
-  - vb
-  name: Cancel
-  nameWithType: InputActions.UIActions.Cancel
-  fullName: rwby.InputActions.UIActions.Cancel
-  type: Property
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: Cancel
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1755
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public InputAction Cancel { get; }
-    parameters: []
-    return:
-      type: UnityEngine.InputSystem.InputAction
-    content.vb: Public ReadOnly Property Cancel As InputAction
-  overload: rwby.InputActions.UIActions.Cancel*
-- uid: rwby.InputActions.UIActions.Alternative
-  commentId: P:rwby.InputActions.UIActions.Alternative
-  id: Alternative
-  parent: rwby.InputActions.UIActions
-  langs:
-  - csharp
-  - vb
-  name: Alternative
-  nameWithType: InputActions.UIActions.Alternative
-  fullName: rwby.InputActions.UIActions.Alternative
-  type: Property
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: Alternative
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1756
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public InputAction Alternative { get; }
-    parameters: []
-    return:
-      type: UnityEngine.InputSystem.InputAction
-    content.vb: Public ReadOnly Property Alternative As InputAction
-  overload: rwby.InputActions.UIActions.Alternative*
 - uid: rwby.InputActions.UIActions.Point
   commentId: P:rwby.InputActions.UIActions.Point
   id: Point
@@ -212,10 +134,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Point
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1757
+    startLine: 2032
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to the underlying input action "UI/Point".
+  example: []
   syntax:
     content: public InputAction Point { get; }
     parameters: []
@@ -241,10 +165,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Click
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1758
+    startLine: 2036
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to the underlying input action "UI/Click".
+  example: []
   syntax:
     content: public InputAction Click { get; }
     parameters: []
@@ -252,35 +178,6 @@ items:
       type: UnityEngine.InputSystem.InputAction
     content.vb: Public ReadOnly Property Click As InputAction
   overload: rwby.InputActions.UIActions.Click*
-- uid: rwby.InputActions.UIActions.ScrollWheel
-  commentId: P:rwby.InputActions.UIActions.ScrollWheel
-  id: ScrollWheel
-  parent: rwby.InputActions.UIActions
-  langs:
-  - csharp
-  - vb
-  name: ScrollWheel
-  nameWithType: InputActions.UIActions.ScrollWheel
-  fullName: rwby.InputActions.UIActions.ScrollWheel
-  type: Property
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: ScrollWheel
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1759
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public InputAction ScrollWheel { get; }
-    parameters: []
-    return:
-      type: UnityEngine.InputSystem.InputAction
-    content.vb: Public ReadOnly Property ScrollWheel As InputAction
-  overload: rwby.InputActions.UIActions.ScrollWheel*
 - uid: rwby.InputActions.UIActions.MiddleClick
   commentId: P:rwby.InputActions.UIActions.MiddleClick
   id: MiddleClick
@@ -299,10 +196,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: MiddleClick
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1760
+    startLine: 2040
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to the underlying input action "UI/MiddleClick".
+  example: []
   syntax:
     content: public InputAction MiddleClick { get; }
     parameters: []
@@ -310,35 +209,192 @@ items:
       type: UnityEngine.InputSystem.InputAction
     content.vb: Public ReadOnly Property MiddleClick As InputAction
   overload: rwby.InputActions.UIActions.MiddleClick*
-- uid: rwby.InputActions.UIActions.Pause
-  commentId: P:rwby.InputActions.UIActions.Pause
-  id: Pause
+- uid: rwby.InputActions.UIActions.RightClick
+  commentId: P:rwby.InputActions.UIActions.RightClick
+  id: RightClick
   parent: rwby.InputActions.UIActions
   langs:
   - csharp
   - vb
-  name: Pause
-  nameWithType: InputActions.UIActions.Pause
-  fullName: rwby.InputActions.UIActions.Pause
+  name: RightClick
+  nameWithType: InputActions.UIActions.RightClick
+  fullName: rwby.InputActions.UIActions.RightClick
   type: Property
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: Pause
+    id: RightClick
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1761
+    startLine: 2044
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to the underlying input action "UI/RightClick".
+  example: []
   syntax:
-    content: public InputAction Pause { get; }
+    content: public InputAction RightClick { get; }
     parameters: []
     return:
       type: UnityEngine.InputSystem.InputAction
-    content.vb: Public ReadOnly Property Pause As InputAction
-  overload: rwby.InputActions.UIActions.Pause*
+    content.vb: Public ReadOnly Property RightClick As InputAction
+  overload: rwby.InputActions.UIActions.RightClick*
+- uid: rwby.InputActions.UIActions.ScrollWheel
+  commentId: P:rwby.InputActions.UIActions.ScrollWheel
+  id: ScrollWheel
+  parent: rwby.InputActions.UIActions
+  langs:
+  - csharp
+  - vb
+  name: ScrollWheel
+  nameWithType: InputActions.UIActions.ScrollWheel
+  fullName: rwby.InputActions.UIActions.ScrollWheel
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ScrollWheel
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2048
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Provides access to the underlying input action "UI/ScrollWheel".
+  example: []
+  syntax:
+    content: public InputAction ScrollWheel { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property ScrollWheel As InputAction
+  overload: rwby.InputActions.UIActions.ScrollWheel*
+- uid: rwby.InputActions.UIActions.Submit
+  commentId: P:rwby.InputActions.UIActions.Submit
+  id: Submit
+  parent: rwby.InputActions.UIActions
+  langs:
+  - csharp
+  - vb
+  name: Submit
+  nameWithType: InputActions.UIActions.Submit
+  fullName: rwby.InputActions.UIActions.Submit
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Submit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2052
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Provides access to the underlying input action "UI/Submit".
+  example: []
+  syntax:
+    content: public InputAction Submit { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property Submit As InputAction
+  overload: rwby.InputActions.UIActions.Submit*
+- uid: rwby.InputActions.UIActions.Cancel
+  commentId: P:rwby.InputActions.UIActions.Cancel
+  id: Cancel
+  parent: rwby.InputActions.UIActions
+  langs:
+  - csharp
+  - vb
+  name: Cancel
+  nameWithType: InputActions.UIActions.Cancel
+  fullName: rwby.InputActions.UIActions.Cancel
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Cancel
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2056
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Provides access to the underlying input action "UI/Cancel".
+  example: []
+  syntax:
+    content: public InputAction Cancel { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property Cancel As InputAction
+  overload: rwby.InputActions.UIActions.Cancel*
+- uid: rwby.InputActions.UIActions.Alt1
+  commentId: P:rwby.InputActions.UIActions.Alt1
+  id: Alt1
+  parent: rwby.InputActions.UIActions
+  langs:
+  - csharp
+  - vb
+  name: Alt1
+  nameWithType: InputActions.UIActions.Alt1
+  fullName: rwby.InputActions.UIActions.Alt1
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Alt1
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2060
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Provides access to the underlying input action "UI/Alt1".
+  example: []
+  syntax:
+    content: public InputAction Alt1 { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property Alt1 As InputAction
+  overload: rwby.InputActions.UIActions.Alt1*
+- uid: rwby.InputActions.UIActions.Alt2
+  commentId: P:rwby.InputActions.UIActions.Alt2
+  id: Alt2
+  parent: rwby.InputActions.UIActions
+  langs:
+  - csharp
+  - vb
+  name: Alt2
+  nameWithType: InputActions.UIActions.Alt2
+  fullName: rwby.InputActions.UIActions.Alt2
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Alt2
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2064
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Provides access to the underlying input action "UI/Alt2".
+  example: []
+  syntax:
+    content: public InputAction Alt2 { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property Alt2 As InputAction
+  overload: rwby.InputActions.UIActions.Alt2*
 - uid: rwby.InputActions.UIActions.PageLeft
   commentId: P:rwby.InputActions.UIActions.PageLeft
   id: PageLeft
@@ -357,10 +413,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: PageLeft
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1762
+    startLine: 2068
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to the underlying input action "UI/PageLeft".
+  example: []
   syntax:
     content: public InputAction PageLeft { get; }
     parameters: []
@@ -386,10 +444,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: PageRight
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1763
+    startLine: 2072
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to the underlying input action "UI/PageRight".
+  example: []
   syntax:
     content: public InputAction PageRight { get; }
     parameters: []
@@ -397,6 +457,68 @@ items:
       type: UnityEngine.InputSystem.InputAction
     content.vb: Public ReadOnly Property PageRight As InputAction
   overload: rwby.InputActions.UIActions.PageRight*
+- uid: rwby.InputActions.UIActions.Pause
+  commentId: P:rwby.InputActions.UIActions.Pause
+  id: Pause
+  parent: rwby.InputActions.UIActions
+  langs:
+  - csharp
+  - vb
+  name: Pause
+  nameWithType: InputActions.UIActions.Pause
+  fullName: rwby.InputActions.UIActions.Pause
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Pause
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2076
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Provides access to the underlying input action "UI/Pause".
+  example: []
+  syntax:
+    content: public InputAction Pause { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property Pause As InputAction
+  overload: rwby.InputActions.UIActions.Pause*
+- uid: rwby.InputActions.UIActions.Exit
+  commentId: P:rwby.InputActions.UIActions.Exit
+  id: Exit
+  parent: rwby.InputActions.UIActions
+  langs:
+  - csharp
+  - vb
+  name: Exit
+  nameWithType: InputActions.UIActions.Exit
+  fullName: rwby.InputActions.UIActions.Exit
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Exit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
+    startLine: 2080
+  assemblies:
+  - rwby
+  namespace: rwby
+  summary: Provides access to the underlying input action "UI/Exit".
+  example: []
+  syntax:
+    content: public InputAction Exit { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property [Exit] As InputAction
+  overload: rwby.InputActions.UIActions.Exit*
 - uid: rwby.InputActions.UIActions.Get
   commentId: M:rwby.InputActions.UIActions.Get
   id: Get
@@ -415,10 +537,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Get
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1764
+    startLine: 2084
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to the underlying input action map instance.
+  example: []
   syntax:
     content: public InputActionMap Get()
     return:
@@ -443,10 +567,11 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Enable
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1765
+    startLine: 2086
   assemblies:
   - rwby
   namespace: rwby
+  example: []
   syntax:
     content: public void Enable()
     content.vb: Public Sub Enable()
@@ -469,10 +594,11 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Disable
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1766
+    startLine: 2088
   assemblies:
   - rwby
   namespace: rwby
+  example: []
   syntax:
     content: public void Disable()
     content.vb: Public Sub Disable()
@@ -495,10 +621,11 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: enabled
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1767
+    startLine: 2090
   assemblies:
   - rwby
   namespace: rwby
+  example: []
   syntax:
     content: public bool enabled { get; }
     parameters: []
@@ -524,10 +651,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: op_Implicit
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1768
+    startLine: 2094
   assemblies:
   - rwby
   namespace: rwby
+  summary: Implicitly converts an <see ref="UIActions"></see> to an <see ref="InputActionMap"></see> instance.
+  example: []
   syntax:
     content: public static implicit operator InputActionMap(InputActions.UIActions set)
     parameters:
@@ -558,17 +687,24 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AddCallbacks
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1769
+    startLine: 2103
   assemblies:
   - rwby
   namespace: rwby
+  summary: Adds <xref href="UnityEngine.InputSystem.InputAction.started" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction.performed" data-throw-if-not-resolved="false"></xref> and <xref href="UnityEngine.InputSystem.InputAction.canceled" data-throw-if-not-resolved="false"></xref> callbacks provided via <param cref="!:instance" /> on all input actions contained in this map.
+  remarks: If <code class="paramref">instance</code> is <code>null</code> or <code class="paramref">instance</code> have already been added this method does nothing.
+  example: []
   syntax:
     content: public void AddCallbacks(InputActions.IUIActions instance)
     parameters:
     - id: instance
       type: rwby.InputActions.IUIActions
+      description: Callback instance.
     content.vb: Public Sub AddCallbacks(instance As InputActions.IUIActions)
   overload: rwby.InputActions.UIActions.AddCallbacks*
+  seealso:
+  - linkId: rwby.InputActions.UIActions
+    commentId: T:rwby.InputActions.UIActions
 - uid: rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
   commentId: M:rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
   id: RemoveCallbacks(rwby.InputActions.IUIActions)
@@ -587,10 +723,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RemoveCallbacks
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1845
+    startLine: 2208
   assemblies:
   - rwby
   namespace: rwby
+  summary: Unregisters <param cref="!:instance" /> and unregisters all input action callbacks via <xref href="rwby.InputActions.UIActions.UnregisterCallbacks(rwby.InputActions.IUIActions)" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public void RemoveCallbacks(InputActions.IUIActions instance)
     parameters:
@@ -598,6 +736,9 @@ items:
       type: rwby.InputActions.IUIActions
     content.vb: Public Sub RemoveCallbacks(instance As InputActions.IUIActions)
   overload: rwby.InputActions.UIActions.RemoveCallbacks*
+  seealso:
+  - linkId: rwby.InputActions.UIActions.UnregisterCallbacks(rwby.InputActions.IUIActions)
+    commentId: M:rwby.InputActions.UIActions.UnregisterCallbacks(rwby.InputActions.IUIActions)
 - uid: rwby.InputActions.UIActions.SetCallbacks(rwby.InputActions.IUIActions)
   commentId: M:rwby.InputActions.UIActions.SetCallbacks(rwby.InputActions.IUIActions)
   id: SetCallbacks(rwby.InputActions.IUIActions)
@@ -616,10 +757,13 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SetCallbacks
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1851
+    startLine: 2223
   assemblies:
   - rwby
   namespace: rwby
+  summary: Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="!:instance" />.
+  remarks: If <code class="paramref">instance</code> is <code>null</code>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+  example: []
   syntax:
     content: public void SetCallbacks(InputActions.IUIActions instance)
     parameters:
@@ -627,6 +771,13 @@ items:
       type: rwby.InputActions.IUIActions
     content.vb: Public Sub SetCallbacks(instance As InputActions.IUIActions)
   overload: rwby.InputActions.UIActions.SetCallbacks*
+  seealso:
+  - linkId: rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+    commentId: M:rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+  - linkId: rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+    commentId: M:rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+  - linkId: rwby.InputActions.UIActions.UnregisterCallbacks(rwby.InputActions.IUIActions)
+    commentId: M:rwby.InputActions.UIActions.UnregisterCallbacks(rwby.InputActions.IUIActions)
 references:
 - uid: rwby
   commentId: N:rwby
@@ -685,24 +836,6 @@ references:
   - uid: UnityEngine.InputSystem
     name: InputSystem
     isExternal: true
-- uid: rwby.InputActions.UIActions.Submit*
-  commentId: Overload:rwby.InputActions.UIActions.Submit
-  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Submit
-  name: Submit
-  nameWithType: InputActions.UIActions.Submit
-  fullName: rwby.InputActions.UIActions.Submit
-- uid: rwby.InputActions.UIActions.Cancel*
-  commentId: Overload:rwby.InputActions.UIActions.Cancel
-  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Cancel
-  name: Cancel
-  nameWithType: InputActions.UIActions.Cancel
-  fullName: rwby.InputActions.UIActions.Cancel
-- uid: rwby.InputActions.UIActions.Alternative*
-  commentId: Overload:rwby.InputActions.UIActions.Alternative
-  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Alternative
-  name: Alternative
-  nameWithType: InputActions.UIActions.Alternative
-  fullName: rwby.InputActions.UIActions.Alternative
 - uid: rwby.InputActions.UIActions.Point*
   commentId: Overload:rwby.InputActions.UIActions.Point
   href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Point
@@ -715,24 +848,48 @@ references:
   name: Click
   nameWithType: InputActions.UIActions.Click
   fullName: rwby.InputActions.UIActions.Click
-- uid: rwby.InputActions.UIActions.ScrollWheel*
-  commentId: Overload:rwby.InputActions.UIActions.ScrollWheel
-  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_ScrollWheel
-  name: ScrollWheel
-  nameWithType: InputActions.UIActions.ScrollWheel
-  fullName: rwby.InputActions.UIActions.ScrollWheel
 - uid: rwby.InputActions.UIActions.MiddleClick*
   commentId: Overload:rwby.InputActions.UIActions.MiddleClick
   href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_MiddleClick
   name: MiddleClick
   nameWithType: InputActions.UIActions.MiddleClick
   fullName: rwby.InputActions.UIActions.MiddleClick
-- uid: rwby.InputActions.UIActions.Pause*
-  commentId: Overload:rwby.InputActions.UIActions.Pause
-  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Pause
-  name: Pause
-  nameWithType: InputActions.UIActions.Pause
-  fullName: rwby.InputActions.UIActions.Pause
+- uid: rwby.InputActions.UIActions.RightClick*
+  commentId: Overload:rwby.InputActions.UIActions.RightClick
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_RightClick
+  name: RightClick
+  nameWithType: InputActions.UIActions.RightClick
+  fullName: rwby.InputActions.UIActions.RightClick
+- uid: rwby.InputActions.UIActions.ScrollWheel*
+  commentId: Overload:rwby.InputActions.UIActions.ScrollWheel
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_ScrollWheel
+  name: ScrollWheel
+  nameWithType: InputActions.UIActions.ScrollWheel
+  fullName: rwby.InputActions.UIActions.ScrollWheel
+- uid: rwby.InputActions.UIActions.Submit*
+  commentId: Overload:rwby.InputActions.UIActions.Submit
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Submit
+  name: Submit
+  nameWithType: InputActions.UIActions.Submit
+  fullName: rwby.InputActions.UIActions.Submit
+- uid: rwby.InputActions.UIActions.Cancel*
+  commentId: Overload:rwby.InputActions.UIActions.Cancel
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Cancel
+  name: Cancel
+  nameWithType: InputActions.UIActions.Cancel
+  fullName: rwby.InputActions.UIActions.Cancel
+- uid: rwby.InputActions.UIActions.Alt1*
+  commentId: Overload:rwby.InputActions.UIActions.Alt1
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Alt1
+  name: Alt1
+  nameWithType: InputActions.UIActions.Alt1
+  fullName: rwby.InputActions.UIActions.Alt1
+- uid: rwby.InputActions.UIActions.Alt2*
+  commentId: Overload:rwby.InputActions.UIActions.Alt2
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Alt2
+  name: Alt2
+  nameWithType: InputActions.UIActions.Alt2
+  fullName: rwby.InputActions.UIActions.Alt2
 - uid: rwby.InputActions.UIActions.PageLeft*
   commentId: Overload:rwby.InputActions.UIActions.PageLeft
   href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_PageLeft
@@ -745,6 +902,18 @@ references:
   name: PageRight
   nameWithType: InputActions.UIActions.PageRight
   fullName: rwby.InputActions.UIActions.PageRight
+- uid: rwby.InputActions.UIActions.Pause*
+  commentId: Overload:rwby.InputActions.UIActions.Pause
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Pause
+  name: Pause
+  nameWithType: InputActions.UIActions.Pause
+  fullName: rwby.InputActions.UIActions.Pause
+- uid: rwby.InputActions.UIActions.Exit*
+  commentId: Overload:rwby.InputActions.UIActions.Exit
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Exit
+  name: Exit
+  nameWithType: InputActions.UIActions.Exit
+  fullName: rwby.InputActions.UIActions.Exit
 - uid: rwby.InputActions.UIActions.Get*
   commentId: Overload:rwby.InputActions.UIActions.Get
   href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_Get
@@ -829,6 +998,24 @@ references:
   - uid: rwby.InputActions.UIActions
     name: UIActions
     href: rwby.InputActions.UIActions.html
+- uid: UnityEngine.InputSystem.InputAction.started
+  commentId: E:UnityEngine.InputSystem.InputAction.started
+  isExternal: true
+  name: started
+  nameWithType: InputAction.started
+  fullName: UnityEngine.InputSystem.InputAction.started
+- uid: UnityEngine.InputSystem.InputAction.performed
+  commentId: E:UnityEngine.InputSystem.InputAction.performed
+  isExternal: true
+  name: performed
+  nameWithType: InputAction.performed
+  fullName: UnityEngine.InputSystem.InputAction.performed
+- uid: UnityEngine.InputSystem.InputAction.canceled
+  commentId: E:UnityEngine.InputSystem.InputAction.canceled
+  isExternal: true
+  name: canceled
+  nameWithType: InputAction.canceled
+  fullName: UnityEngine.InputSystem.InputAction.canceled
 - uid: rwby.InputActions.UIActions.AddCallbacks*
   commentId: Overload:rwby.InputActions.UIActions.AddCallbacks
   href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_AddCallbacks_rwby_InputActions_IUIActions_
@@ -858,12 +1045,84 @@ references:
   - uid: rwby.InputActions.IUIActions
     name: IUIActions
     href: rwby.InputActions.IUIActions.html
+- uid: rwby.InputActions.UIActions.UnregisterCallbacks(rwby.InputActions.IUIActions)
+  commentId: M:rwby.InputActions.UIActions.UnregisterCallbacks(rwby.InputActions.IUIActions)
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_UnregisterCallbacks_rwby_InputActions_IUIActions_
+  name: UnregisterCallbacks(IUIActions)
+  nameWithType: InputActions.UIActions.UnregisterCallbacks(InputActions.IUIActions)
+  fullName: rwby.InputActions.UIActions.UnregisterCallbacks(rwby.InputActions.IUIActions)
+  spec.csharp:
+  - uid: rwby.InputActions.UIActions.UnregisterCallbacks(rwby.InputActions.IUIActions)
+    name: UnregisterCallbacks
+    href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_UnregisterCallbacks_rwby_InputActions_IUIActions_
+  - name: (
+  - uid: rwby.InputActions.IUIActions
+    name: IUIActions
+    href: rwby.InputActions.IUIActions.html
+  - name: )
+  spec.vb:
+  - uid: rwby.InputActions.UIActions.UnregisterCallbacks(rwby.InputActions.IUIActions)
+    name: UnregisterCallbacks
+    href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_UnregisterCallbacks_rwby_InputActions_IUIActions_
+  - name: (
+  - uid: rwby.InputActions.IUIActions
+    name: IUIActions
+    href: rwby.InputActions.IUIActions.html
+  - name: )
 - uid: rwby.InputActions.UIActions.RemoveCallbacks*
   commentId: Overload:rwby.InputActions.UIActions.RemoveCallbacks
   href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_RemoveCallbacks_rwby_InputActions_IUIActions_
   name: RemoveCallbacks
   nameWithType: InputActions.UIActions.RemoveCallbacks
   fullName: rwby.InputActions.UIActions.RemoveCallbacks
+- uid: rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+  commentId: M:rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_AddCallbacks_rwby_InputActions_IUIActions_
+  name: AddCallbacks(IUIActions)
+  nameWithType: InputActions.UIActions.AddCallbacks(InputActions.IUIActions)
+  fullName: rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+  spec.csharp:
+  - uid: rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+    name: AddCallbacks
+    href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_AddCallbacks_rwby_InputActions_IUIActions_
+  - name: (
+  - uid: rwby.InputActions.IUIActions
+    name: IUIActions
+    href: rwby.InputActions.IUIActions.html
+  - name: )
+  spec.vb:
+  - uid: rwby.InputActions.UIActions.AddCallbacks(rwby.InputActions.IUIActions)
+    name: AddCallbacks
+    href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_AddCallbacks_rwby_InputActions_IUIActions_
+  - name: (
+  - uid: rwby.InputActions.IUIActions
+    name: IUIActions
+    href: rwby.InputActions.IUIActions.html
+  - name: )
+- uid: rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+  commentId: M:rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+  href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_RemoveCallbacks_rwby_InputActions_IUIActions_
+  name: RemoveCallbacks(IUIActions)
+  nameWithType: InputActions.UIActions.RemoveCallbacks(InputActions.IUIActions)
+  fullName: rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+  spec.csharp:
+  - uid: rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+    name: RemoveCallbacks
+    href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_RemoveCallbacks_rwby_InputActions_IUIActions_
+  - name: (
+  - uid: rwby.InputActions.IUIActions
+    name: IUIActions
+    href: rwby.InputActions.IUIActions.html
+  - name: )
+  spec.vb:
+  - uid: rwby.InputActions.UIActions.RemoveCallbacks(rwby.InputActions.IUIActions)
+    name: RemoveCallbacks
+    href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_RemoveCallbacks_rwby_InputActions_IUIActions_
+  - name: (
+  - uid: rwby.InputActions.IUIActions
+    name: IUIActions
+    href: rwby.InputActions.IUIActions.html
+  - name: )
 - uid: rwby.InputActions.UIActions.SetCallbacks*
   commentId: Overload:rwby.InputActions.UIActions.SetCallbacks
   href: rwby.InputActions.UIActions.html#rwby_InputActions_UIActions_SetCallbacks_rwby_InputActions_IUIActions_

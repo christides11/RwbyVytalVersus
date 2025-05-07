@@ -102,7 +102,7 @@ Class CombatHitDetectionSystem  <a class="header-action link-secondary" title="V
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Preserve]
-public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdded&lt;BoxCombatant&gt;, ISignalOnComponentRemoved&lt;BoxCombatant&gt;, ISignalOnComponentAdded&lt;CombatHitDetectionInfo&gt;, ISignalOnComponentRemoved&lt;CombatHitDetectionInfo&gt;, ISignalOnComponentAdded&lt;Fighter&gt;, ISignalOnComponentRemoved&lt;Fighter&gt;, ISignalOnComponentAdded&lt;FighterArticles&gt;, ISignalOnComponentRemoved&lt;FighterArticles&gt;, ISignal</code></pre>
+public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdded&lt;BoxCombatant&gt;, ISignalOnComponentRemoved&lt;BoxCombatant&gt;, ISignalOnComponentAdded&lt;CombatHitDetectionInfo&gt;, ISignalOnComponentRemoved&lt;CombatHitDetectionInfo&gt;, ISignalOnComponentAdded&lt;Fighter&gt;, ISignalOnComponentRemoved&lt;Fighter&gt;, ISignalOnComponentAdded&lt;ArticlesOwner&gt;, ISignalOnComponentRemoved&lt;ArticlesOwner&gt;, ISignal</code></pre>
   </div>
 
 
@@ -127,8 +127,8 @@ public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdde
       <div><a class="xref" href="Quantum.ISignalOnComponentRemoved-1.html">ISignalOnComponentRemoved</a>&lt;<a class="xref" href="Quantum.CombatHitDetectionInfo.html">CombatHitDetectionInfo</a>&gt;</div>
       <div><a class="xref" href="Quantum.ISignalOnComponentAdded-1.html">ISignalOnComponentAdded</a>&lt;<a class="xref" href="Quantum.Fighter.html">Fighter</a>&gt;</div>
       <div><a class="xref" href="Quantum.ISignalOnComponentRemoved-1.html">ISignalOnComponentRemoved</a>&lt;<a class="xref" href="Quantum.Fighter.html">Fighter</a>&gt;</div>
-      <div><a class="xref" href="Quantum.ISignalOnComponentAdded-1.html">ISignalOnComponentAdded</a>&lt;<a class="xref" href="Quantum.FighterArticles.html">FighterArticles</a>&gt;</div>
-      <div><a class="xref" href="Quantum.ISignalOnComponentRemoved-1.html">ISignalOnComponentRemoved</a>&lt;<a class="xref" href="Quantum.FighterArticles.html">FighterArticles</a>&gt;</div>
+      <div><a class="xref" href="Quantum.ISignalOnComponentAdded-1.html">ISignalOnComponentAdded</a>&lt;<a class="xref" href="Quantum.ArticlesOwner.html">ArticlesOwner</a>&gt;</div>
+      <div><a class="xref" href="Quantum.ISignalOnComponentRemoved-1.html">ISignalOnComponentRemoved</a>&lt;<a class="xref" href="Quantum.ArticlesOwner.html">ArticlesOwner</a>&gt;</div>
       <div><span class="xref">ISignal</span></div>
     </dd>
   </dl>
@@ -183,6 +183,45 @@ public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdde
 
   <a id="Quantum_CombatHitDetectionSystem_OnAdded_" data-uid="Quantum.CombatHitDetectionSystem.OnAdded*"></a>
 
+  <h3 id="Quantum_CombatHitDetectionSystem_OnAdded_Quantum_Frame_Quantum_EntityRef_Quantum_ArticlesOwner__" data-uid="Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)">
+  OnAdded(Frame, EntityRef, ArticlesOwner*)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The signal is called after a component of the desired type has been added to an entity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnAdded(Frame f, EntityRef entity, ArticlesOwner* component)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>f</code> <a class="xref" href="Quantum.Frame.html">Frame</a></dt>
+    <dd><p>The frame reference.</p>
+</dd>
+    <dt><code>entity</code> <span class="xref">EntityRef</span></dt>
+    <dd><p>The entity that the component was added to.</p>
+</dd>
+    <dt><code>component</code> <a class="xref" href="Quantum.ArticlesOwner.html">ArticlesOwner</a>*</dt>
+    <dd><p>The component that was added.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_CombatHitDetectionSystem_OnAdded_" data-uid="Quantum.CombatHitDetectionSystem.OnAdded*"></a>
+
   <h3 id="Quantum_CombatHitDetectionSystem_OnAdded_Quantum_Frame_Quantum_EntityRef_Quantum_BoxCombatant__" data-uid="Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.BoxCombatant*)">
   OnAdded(Frame, EntityRef, BoxCombatant*)
   <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=238"><i class="bi bi-code-slash"></i></a>
@@ -224,7 +263,7 @@ public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdde
 
   <h3 id="Quantum_CombatHitDetectionSystem_OnAdded_Quantum_Frame_Quantum_EntityRef_Quantum_CombatHitDetectionInfo__" data-uid="Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.CombatHitDetectionInfo*)">
   OnAdded(Frame, EntityRef, CombatHitDetectionInfo*)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=266"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=270"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The signal is called after a component of the desired type has been added to an entity.</p>
@@ -263,7 +302,7 @@ public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdde
 
   <h3 id="Quantum_CombatHitDetectionSystem_OnAdded_Quantum_Frame_Quantum_EntityRef_Quantum_Fighter__" data-uid="Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.Fighter*)">
   OnAdded(Frame, EntityRef, Fighter*)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=287"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=291"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The signal is called after a component of the desired type has been added to an entity.</p>
@@ -298,19 +337,19 @@ public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdde
 
 
 
-  <a id="Quantum_CombatHitDetectionSystem_OnAdded_" data-uid="Quantum.CombatHitDetectionSystem.OnAdded*"></a>
+  <a id="Quantum_CombatHitDetectionSystem_OnRemoved_" data-uid="Quantum.CombatHitDetectionSystem.OnRemoved*"></a>
 
-  <h3 id="Quantum_CombatHitDetectionSystem_OnAdded_Quantum_Frame_Quantum_EntityRef_Quantum_FighterArticles__" data-uid="Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)">
-  OnAdded(Frame, EntityRef, FighterArticles*)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=298"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Quantum_CombatHitDetectionSystem_OnRemoved_Quantum_Frame_Quantum_EntityRef_Quantum_ArticlesOwner__" data-uid="Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)">
+  OnRemoved(Frame, EntityRef, ArticlesOwner*)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=308"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The signal is called after a component of the desired type has been added to an entity.</p>
+  <div class="markdown level1 summary"><p>The signal is called after a component of the desired type has been removed from an entity.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnAdded(Frame f, EntityRef entity, FighterArticles* component)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnRemoved(Frame f, EntityRef entity, ArticlesOwner* component)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -319,10 +358,10 @@ public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdde
     <dd><p>The frame reference.</p>
 </dd>
     <dt><code>entity</code> <span class="xref">EntityRef</span></dt>
-    <dd><p>The entity that the component was added to.</p>
+    <dd><p>The entity that the component was removed from.</p>
 </dd>
-    <dt><code>component</code> <a class="xref" href="Quantum.FighterArticles.html">FighterArticles</a>*</dt>
-    <dd><p>The component that was added.</p>
+    <dt><code>component</code> <a class="xref" href="Quantum.ArticlesOwner.html">ArticlesOwner</a>*</dt>
+    <dd><p>The component that was removed.</p>
 </dd>
   </dl>
 
@@ -341,7 +380,7 @@ public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdde
 
   <h3 id="Quantum_CombatHitDetectionSystem_OnRemoved_Quantum_Frame_Quantum_EntityRef_Quantum_BoxCombatant__" data-uid="Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.BoxCombatant*)">
   OnRemoved(Frame, EntityRef, BoxCombatant*)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=248"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=249"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The signal is called after a component of the desired type has been removed from an entity.</p>
@@ -380,7 +419,7 @@ public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdde
 
   <h3 id="Quantum_CombatHitDetectionSystem_OnRemoved_Quantum_Frame_Quantum_EntityRef_Quantum_CombatHitDetectionInfo__" data-uid="Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.CombatHitDetectionInfo*)">
   OnRemoved(Frame, EntityRef, CombatHitDetectionInfo*)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=274"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=278"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The signal is called after a component of the desired type has been removed from an entity.</p>
@@ -419,7 +458,7 @@ public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdde
 
   <h3 id="Quantum_CombatHitDetectionSystem_OnRemoved_Quantum_Frame_Quantum_EntityRef_Quantum_Fighter__" data-uid="Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.Fighter*)">
   OnRemoved(Frame, EntityRef, Fighter*)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=292"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=296"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The signal is called after a component of the desired type has been removed from an entity.</p>
@@ -439,45 +478,6 @@ public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdde
     <dd><p>The entity that the component was removed from.</p>
 </dd>
     <dt><code>component</code> <a class="xref" href="Quantum.Fighter.html">Fighter</a>*</dt>
-    <dd><p>The component that was removed.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Quantum_CombatHitDetectionSystem_OnRemoved_" data-uid="Quantum.CombatHitDetectionSystem.OnRemoved*"></a>
-
-  <h3 id="Quantum_CombatHitDetectionSystem_OnRemoved_Quantum_Frame_Quantum_EntityRef_Quantum_FighterArticles__" data-uid="Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)">
-  OnRemoved(Frame, EntityRef, FighterArticles*)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs&amp;version=GBdev&amp;line=304"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The signal is called after a component of the desired type has been removed from an entity.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnRemoved(Frame f, EntityRef entity, FighterArticles* component)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>f</code> <a class="xref" href="Quantum.Frame.html">Frame</a></dt>
-    <dd><p>The frame reference.</p>
-</dd>
-    <dt><code>entity</code> <span class="xref">EntityRef</span></dt>
-    <dd><p>The entity that the component was removed from.</p>
-</dd>
-    <dt><code>component</code> <a class="xref" href="Quantum.FighterArticles.html">FighterArticles</a>*</dt>
     <dd><p>The component that was removed.</p>
 </dd>
   </dl>

@@ -14,6 +14,7 @@ items:
   - Quantum.QuantumReplayFile.InputHistoryDeltaCompressed
   - Quantum.QuantumReplayFile.InputHistoryLegacy
   - Quantum.QuantumReplayFile.LastTick
+  - Quantum.QuantumReplayFile.LocalActorNumber
   - Quantum.QuantumReplayFile.RuntimeConfigData
   langs:
   - csharp
@@ -29,7 +30,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: QuantumReplayFile
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6357
+    startLine: 6423
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -75,7 +76,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: InputHistoryDeltaCompressed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6362
+    startLine: 6428
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -104,7 +105,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: InputHistoryLegacy
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6366
+    startLine: 6432
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -133,7 +134,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RuntimeConfigData
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6371
+    startLine: 6437
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -165,7 +166,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: DeterministicConfig
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6375
+    startLine: 6441
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -194,7 +195,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LastTick
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6379
+    startLine: 6445
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -223,7 +224,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: InitialTick
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6386
+    startLine: 6452
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -252,7 +253,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: InitialFrameData
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6390
+    startLine: 6456
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -281,7 +282,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Checksums
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6394
+    startLine: 6460
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -310,7 +311,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AssetDatabaseData
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6399
+    startLine: 6465
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -324,6 +325,48 @@ items:
     return:
       type: Quantum.QuantumJsonFriendlyDataBlob
     content.vb: Public AssetDatabaseData As QuantumJsonFriendlyDataBlob
+- uid: Quantum.QuantumReplayFile.LocalActorNumber
+  commentId: F:Quantum.QuantumReplayFile.LocalActorNumber
+  id: LocalActorNumber
+  parent: Quantum.QuantumReplayFile
+  langs:
+  - csharp
+  - vb
+  name: LocalActorNumber
+  nameWithType: QuantumReplayFile.LocalActorNumber
+  fullName: Quantum.QuantumReplayFile.LocalActorNumber
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LocalActorNumber
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6475
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: >-
+    The actor number of the local player that the replay was recorded from.
+
+    `0` means refers to clients in a local game.
+
+    Online clients will start with actor number `1`.
+
+    Setting the actor number will make <xref href="Photon.Deterministic.DeterministicSession.IsLocalPlayer(Quantum.PlayerRef)" data-throw-if-not-resolved="false"></xref> work for replays similar to normal game sessions.
+
+    This is automatically set when using QuantumGame.GetRecordedReplay(), but needs to be explicitly set when running a replay captured by webhooks.
+
+    The current actor number can be retrieved by <xref href="Photon.Deterministic.DeterministicSession.GetActorNumber" data-throw-if-not-resolved="false"></xref>.
+
+    The actor number can only be set once in the beginning of the replay simulation.
+  example: []
+  syntax:
+    content: public int LocalActorNumber
+    return:
+      type: System.Int32
+    content.vb: Public LocalActorNumber As Integer
 - uid: Quantum.QuantumReplayFile.CreateInputProvider
   commentId: M:Quantum.QuantumReplayFile.CreateInputProvider
   id: CreateInputProvider
@@ -342,7 +385,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateInputProvider
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6405
+    startLine: 6481
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -491,6 +534,48 @@ references:
   name: ChecksumFile
   nameWithType: ChecksumFile
   fullName: Quantum.ChecksumFile
+- uid: Photon.Deterministic.DeterministicSession.IsLocalPlayer(Quantum.PlayerRef)
+  commentId: M:Photon.Deterministic.DeterministicSession.IsLocalPlayer(Quantum.PlayerRef)
+  isExternal: true
+  name: IsLocalPlayer(PlayerRef)
+  nameWithType: DeterministicSession.IsLocalPlayer(PlayerRef)
+  fullName: Photon.Deterministic.DeterministicSession.IsLocalPlayer(Quantum.PlayerRef)
+  spec.csharp:
+  - uid: Photon.Deterministic.DeterministicSession.IsLocalPlayer(Quantum.PlayerRef)
+    name: IsLocalPlayer
+    isExternal: true
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Photon.Deterministic.DeterministicSession.IsLocalPlayer(Quantum.PlayerRef)
+    name: IsLocalPlayer
+    isExternal: true
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: )
+- uid: Photon.Deterministic.DeterministicSession.GetActorNumber
+  commentId: M:Photon.Deterministic.DeterministicSession.GetActorNumber
+  isExternal: true
+  name: GetActorNumber()
+  nameWithType: DeterministicSession.GetActorNumber()
+  fullName: Photon.Deterministic.DeterministicSession.GetActorNumber()
+  spec.csharp:
+  - uid: Photon.Deterministic.DeterministicSession.GetActorNumber
+    name: GetActorNumber
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Photon.Deterministic.DeterministicSession.GetActorNumber
+    name: GetActorNumber
+    isExternal: true
+  - name: (
+  - name: )
 - uid: Quantum.SessionRunner.Arguments.ReplayProvider
   commentId: F:Quantum.SessionRunner.Arguments.ReplayProvider
   href: Quantum.SessionRunner.Arguments.html#Quantum_SessionRunner_Arguments_ReplayProvider

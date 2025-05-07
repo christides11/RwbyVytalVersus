@@ -7,9 +7,9 @@ items:
   children:
   - Quantum.Prototypes.TrainingGlobalsPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   - Quantum.Prototypes.TrainingGlobalsPrototype.Materialize(Quantum.Frame,Quantum.TrainingGlobals@,Quantum.PrototypeMaterializationContext@)
-  - Quantum.Prototypes.TrainingGlobalsPrototype.dummies
-  - Quantum.Prototypes.TrainingGlobalsPrototype.playerData
-  - Quantum.Prototypes.TrainingGlobalsPrototype.playersRequestingRespawn
+  - Quantum.Prototypes.TrainingGlobalsPrototype.participantData
+  - Quantum.Prototypes.TrainingGlobalsPrototype.playerReadyStatus
+  - Quantum.Prototypes.TrainingGlobalsPrototype.timer
   langs:
   - csharp
   - vb
@@ -24,7 +24,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TrainingGlobalsPrototype
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1679
+    startLine: 1925
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -61,25 +61,25 @@ items:
     arguments:
     - type: System.Type
       value: Quantum.TrainingGlobals
-- uid: Quantum.Prototypes.TrainingGlobalsPrototype.playerData
-  commentId: F:Quantum.Prototypes.TrainingGlobalsPrototype.playerData
-  id: playerData
+- uid: Quantum.Prototypes.TrainingGlobalsPrototype.playerReadyStatus
+  commentId: F:Quantum.Prototypes.TrainingGlobalsPrototype.playerReadyStatus
+  id: playerReadyStatus
   parent: Quantum.Prototypes.TrainingGlobalsPrototype
   langs:
   - csharp
   - vb
-  name: playerData
-  nameWithType: TrainingGlobalsPrototype.playerData
-  fullName: Quantum.Prototypes.TrainingGlobalsPrototype.playerData
+  name: playerReadyStatus
+  nameWithType: TrainingGlobalsPrototype.playerReadyStatus
+  fullName: Quantum.Prototypes.TrainingGlobalsPrototype.playerReadyStatus
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: playerData
+    id: playerReadyStatus
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1684
+    startLine: 1930
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -89,15 +89,15 @@ items:
 
       [DynamicCollection]
 
-      public DictionaryEntry_Int32_TrainingPlayerData[] playerData
+      public DictionaryEntry_Int32_QBoolean[] playerReadyStatus
     return:
-      type: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData[]
+      type: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean[]
     content.vb: >-
       <Dictionary>
 
       <DynamicCollection>
 
-      Public playerData As DictionaryEntry_Int32_TrainingPlayerData()
+      Public playerReadyStatus As DictionaryEntry_Int32_QBoolean()
   attributes:
   - type: Quantum.DictionaryAttribute
     ctor: Quantum.DictionaryAttribute.#ctor
@@ -105,25 +105,25 @@ items:
   - type: Quantum.DynamicCollectionAttribute
     ctor: Quantum.DynamicCollectionAttribute.#ctor
     arguments: []
-- uid: Quantum.Prototypes.TrainingGlobalsPrototype.playersRequestingRespawn
-  commentId: F:Quantum.Prototypes.TrainingGlobalsPrototype.playersRequestingRespawn
-  id: playersRequestingRespawn
+- uid: Quantum.Prototypes.TrainingGlobalsPrototype.participantData
+  commentId: F:Quantum.Prototypes.TrainingGlobalsPrototype.participantData
+  id: participantData
   parent: Quantum.Prototypes.TrainingGlobalsPrototype
   langs:
   - csharp
   - vb
-  name: playersRequestingRespawn
-  nameWithType: TrainingGlobalsPrototype.playersRequestingRespawn
-  fullName: Quantum.Prototypes.TrainingGlobalsPrototype.playersRequestingRespawn
+  name: participantData
+  nameWithType: TrainingGlobalsPrototype.participantData
+  fullName: Quantum.Prototypes.TrainingGlobalsPrototype.participantData
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: playersRequestingRespawn
+    id: participantData
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1687
+    startLine: 1933
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -133,15 +133,15 @@ items:
 
       [DynamicCollection]
 
-      public DictionaryEntry_PlayerRef_Int32[] playersRequestingRespawn
+      public DictionaryEntry_Int32_TrainingParticipantData[] participantData
     return:
-      type: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32[]
+      type: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData[]
     content.vb: >-
       <Dictionary>
 
       <DynamicCollection>
 
-      Public playersRequestingRespawn As DictionaryEntry_PlayerRef_Int32()
+      Public participantData As DictionaryEntry_Int32_TrainingParticipantData()
   attributes:
   - type: Quantum.DictionaryAttribute
     ctor: Quantum.DictionaryAttribute.#ctor
@@ -149,45 +149,33 @@ items:
   - type: Quantum.DynamicCollectionAttribute
     ctor: Quantum.DynamicCollectionAttribute.#ctor
     arguments: []
-- uid: Quantum.Prototypes.TrainingGlobalsPrototype.dummies
-  commentId: F:Quantum.Prototypes.TrainingGlobalsPrototype.dummies
-  id: dummies
+- uid: Quantum.Prototypes.TrainingGlobalsPrototype.timer
+  commentId: F:Quantum.Prototypes.TrainingGlobalsPrototype.timer
+  id: timer
   parent: Quantum.Prototypes.TrainingGlobalsPrototype
   langs:
   - csharp
   - vb
-  name: dummies
-  nameWithType: TrainingGlobalsPrototype.dummies
-  fullName: Quantum.Prototypes.TrainingGlobalsPrototype.dummies
+  name: timer
+  nameWithType: TrainingGlobalsPrototype.timer
+  fullName: Quantum.Prototypes.TrainingGlobalsPrototype.timer
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: dummies
+    id: timer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1689
+    startLine: 1934
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
   syntax:
-    content: >-
-      [ArrayLength(5)]
-
-      public MapEntityId[] dummies
+    content: public FrameTimerPrototype timer
     return:
-      type: Quantum.MapEntityId[]
-    content.vb: >-
-      <ArrayLength(5)>
-
-      Public dummies As MapEntityId()
-  attributes:
-  - type: Quantum.ArrayLengthAttribute
-    ctor: Quantum.ArrayLengthAttribute.#ctor(System.Int32)
-    arguments:
-    - type: System.Int32
-      value: 5
+      type: Quantum.Prototypes.FrameTimerPrototype
+    content.vb: Public timer As FrameTimerPrototype
 - uid: Quantum.Prototypes.TrainingGlobalsPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   commentId: M:Quantum.Prototypes.TrainingGlobalsPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   id: AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
@@ -206,7 +194,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AddToEntity
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1690
+    startLine: 1935
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -246,7 +234,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Materialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1695
+    startLine: 1940
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -468,68 +456,55 @@ references:
   fullName: Quantum.ComponentPrototype<T>.ComponentType
   nameWithType.vb: ComponentPrototype(Of T).ComponentType
   fullName.vb: Quantum.ComponentPrototype(Of T).ComponentType
-- uid: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData[]
+- uid: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean[]
   isExternal: true
-  href: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData.html
-  name: DictionaryEntry_Int32_TrainingPlayerData[]
-  nameWithType: DictionaryEntry_Int32_TrainingPlayerData[]
-  fullName: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData[]
-  nameWithType.vb: DictionaryEntry_Int32_TrainingPlayerData()
-  fullName.vb: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData()
-  name.vb: DictionaryEntry_Int32_TrainingPlayerData()
+  href: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean.html
+  name: DictionaryEntry_Int32_QBoolean[]
+  nameWithType: DictionaryEntry_Int32_QBoolean[]
+  fullName: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean[]
+  nameWithType.vb: DictionaryEntry_Int32_QBoolean()
+  fullName.vb: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean()
+  name.vb: DictionaryEntry_Int32_QBoolean()
   spec.csharp:
-  - uid: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData
-    name: DictionaryEntry_Int32_TrainingPlayerData
-    href: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData.html
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean
+    name: DictionaryEntry_Int32_QBoolean
+    href: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData
-    name: DictionaryEntry_Int32_TrainingPlayerData
-    href: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData.html
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean
+    name: DictionaryEntry_Int32_QBoolean
+    href: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean.html
   - name: (
   - name: )
-- uid: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32[]
+- uid: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData[]
   isExternal: true
-  href: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32.html
-  name: DictionaryEntry_PlayerRef_Int32[]
-  nameWithType: DictionaryEntry_PlayerRef_Int32[]
-  fullName: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32[]
-  nameWithType.vb: DictionaryEntry_PlayerRef_Int32()
-  fullName.vb: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32()
-  name.vb: DictionaryEntry_PlayerRef_Int32()
+  href: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData.html
+  name: DictionaryEntry_Int32_TrainingParticipantData[]
+  nameWithType: DictionaryEntry_Int32_TrainingParticipantData[]
+  fullName: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData[]
+  nameWithType.vb: DictionaryEntry_Int32_TrainingParticipantData()
+  fullName.vb: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData()
+  name.vb: DictionaryEntry_Int32_TrainingParticipantData()
   spec.csharp:
-  - uid: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32
-    name: DictionaryEntry_PlayerRef_Int32
-    href: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32.html
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData
+    name: DictionaryEntry_Int32_TrainingParticipantData
+    href: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32
-    name: DictionaryEntry_PlayerRef_Int32
-    href: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32.html
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData
+    name: DictionaryEntry_Int32_TrainingParticipantData
+    href: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData.html
   - name: (
   - name: )
-- uid: Quantum.MapEntityId[]
+- uid: Quantum.Prototypes.FrameTimerPrototype
+  commentId: T:Quantum.Prototypes.FrameTimerPrototype
+  parent: Quantum.Prototypes
   isExternal: true
-  name: MapEntityId[]
-  nameWithType: MapEntityId[]
-  fullName: Quantum.MapEntityId[]
-  nameWithType.vb: MapEntityId()
-  fullName.vb: Quantum.MapEntityId()
-  name.vb: MapEntityId()
-  spec.csharp:
-  - uid: Quantum.MapEntityId
-    name: MapEntityId
-    isExternal: true
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: Quantum.MapEntityId
-    name: MapEntityId
-    isExternal: true
-  - name: (
-  - name: )
+  name: FrameTimerPrototype
+  nameWithType: FrameTimerPrototype
+  fullName: Quantum.Prototypes.FrameTimerPrototype
 - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   commentId: M:Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   parent: Quantum.ComponentPrototype

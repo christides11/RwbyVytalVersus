@@ -11,6 +11,7 @@ items:
   - Quantum.RuntimePlayer.PlayerNickname
   - Quantum.RuntimePlayer.Serialize(Photon.Deterministic.BitStream)
   - Quantum.RuntimePlayer.ToByteArray(Quantum.RuntimePlayer)
+  - Quantum.RuntimePlayer.participantId
   - Quantum.RuntimePlayer.specials
   - Quantum.RuntimePlayer.team
   langs:
@@ -27,7 +28,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RuntimePlayer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2254
+    startLine: 2260
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -48,6 +49,33 @@ items:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
     arguments: []
+- uid: Quantum.RuntimePlayer.participantId
+  commentId: F:Quantum.RuntimePlayer.participantId
+  id: participantId
+  parent: Quantum.RuntimePlayer
+  langs:
+  - csharp
+  - vb
+  name: participantId
+  nameWithType: RuntimePlayer.participantId
+  fullName: Quantum.RuntimePlayer.participantId
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/RuntimePlayer.User.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: participantId
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/RuntimePlayer.User.cs
+    startLine: 6
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int participantId
+    return:
+      type: System.Int32
+    content.vb: Public participantId As Integer
 - uid: Quantum.RuntimePlayer.CharacterDefinition
   commentId: F:Quantum.RuntimePlayer.CharacterDefinition
   id: CharacterDefinition
@@ -66,7 +94,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CharacterDefinition
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/RuntimePlayer.User.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -93,7 +121,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: team
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/RuntimePlayer.User.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -120,7 +148,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: specials
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/RuntimePlayer.User.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -147,7 +175,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: PlayerAvatar
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2259
+    startLine: 2265
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -176,7 +204,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: PlayerNickname
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2263
+    startLine: 2269
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -205,7 +233,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Serialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2267
+    startLine: 2273
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -246,7 +274,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ToByteArray
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2274
+    startLine: 2280
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -289,7 +317,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: FromByteArray
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2279
+    startLine: 2285
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -349,6 +377,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: Quantum.AssetRef{Quantum.CharaDefinitionAsset}
   commentId: T:Quantum.AssetRef{Quantum.CharaDefinitionAsset}
   parent: Quantum
@@ -405,17 +444,6 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}
   commentId: T:System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}
   parent: System.Collections.Generic

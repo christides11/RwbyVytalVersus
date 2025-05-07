@@ -103,7 +103,7 @@ Class UModFighterDefinition  <a class="header-action link-secondary" title="View
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
 [CreateAssetMenu(menuName = &quot;rwby/UMod/Content/Fighter Definition&quot;)]
-public class UModFighterDefinition : IFighterDefinition</code></pre>
+public class UModFighterDefinition : IFighterDefinition, IOnUModPrebuild</code></pre>
   </div>
 
 
@@ -121,6 +121,12 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="rwby.IOnUModPrebuild.html">IOnUModPrebuild</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -134,6 +140,9 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
     </div>
     <div>
       <a class="xref" href="Global.IContentDefinition.html#Global_IContentDefinition_Tags">IContentDefinition.Tags</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.IContentDefinition.html#Global_IContentDefinition_GetAssetSoftReference">IContentDefinition.GetAssetSoftReference()</a>
     </div>
   </dd></dl>
 
@@ -340,7 +349,7 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
 
   <h3 id="Global_UModFighterDefinition_GetCommandList" data-uid="Global.UModFighterDefinition.GetCommandList">
   GetCommandList()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -371,7 +380,7 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
 
   <h3 id="Global_UModFighterDefinition_GetFighter" data-uid="Global.UModFighterDefinition.GetFighter">
   GetFighter()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=137"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -402,7 +411,7 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
 
   <h3 id="Global_UModFighterDefinition_GetFighterQuantum" data-uid="Global.UModFighterDefinition.GetFighterQuantum">
   GetFighterQuantum()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -433,7 +442,7 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
 
   <h3 id="Global_UModFighterDefinition_GetHUDReferences" data-uid="Global.UModFighterDefinition.GetHUDReferences">
   GetHUDReferences()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=118"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -460,11 +469,42 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
 
 
 
+  <a id="Global_UModFighterDefinition_GetVisualRepresentation_" data-uid="Global.UModFighterDefinition.GetVisualRepresentation*"></a>
+
+  <h3 id="Global_UModFighterDefinition_GetVisualRepresentation" data-uid="Global.UModFighterDefinition.GetVisualRepresentation">
+  GetVisualRepresentation()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override GameObject GetVisualRepresentation()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Global_UModFighterDefinition_Load_" data-uid="Global.UModFighterDefinition.Load*"></a>
 
   <h3 id="Global_UModFighterDefinition_Load_System_String_" data-uid="Global.UModFighterDefinition.Load(System.String)">
   Load(string)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -500,7 +540,7 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
 
   <h3 id="Global_UModFighterDefinition_LoadAssets" data-uid="Global.UModFighterDefinition.LoadAssets">
   LoadAssets()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -527,11 +567,68 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
 
 
 
+  <a id="Global_UModFighterDefinition_LoadVisualRepresentation_" data-uid="Global.UModFighterDefinition.LoadVisualRepresentation*"></a>
+
+  <h3 id="Global_UModFighterDefinition_LoadVisualRepresentation" data-uid="Global.UModFighterDefinition.LoadVisualRepresentation">
+  LoadVisualRepresentation()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UniTask&lt;bool&gt; LoadVisualRepresentation()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Global_UModFighterDefinition_OnUModPrebuild_" data-uid="Global.UModFighterDefinition.OnUModPrebuild*"></a>
+
+  <h3 id="Global_UModFighterDefinition_OnUModPrebuild" data-uid="Global.UModFighterDefinition.OnUModPrebuild">
+  OnUModPrebuild()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnUModPrebuild()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Global_UModFighterDefinition_RegisterQuantumAsset_" data-uid="Global.UModFighterDefinition.RegisterQuantumAsset*"></a>
 
   <h3 id="Global_UModFighterDefinition_RegisterQuantumAsset" data-uid="Global.UModFighterDefinition.RegisterQuantumAsset">
   RegisterQuantumAsset()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -557,7 +654,7 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
 
   <h3 id="Global_UModFighterDefinition_Unload" data-uid="Global.UModFighterDefinition.Unload">
   Unload()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=193"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -583,7 +680,7 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
 
   <h3 id="Global_UModFighterDefinition_UnloadAssets" data-uid="Global.UModFighterDefinition.UnloadAssets">
   UnloadAssets()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -605,11 +702,37 @@ public class UModFighterDefinition : IFighterDefinition</code></pre>
 
 
 
+  <a id="Global_UModFighterDefinition_UnloadVisualRepresentation_" data-uid="Global.UModFighterDefinition.UnloadVisualRepresentation*"></a>
+
+  <h3 id="Global_UModFighterDefinition_UnloadVisualRepresentation" data-uid="Global.UModFighterDefinition.UnloadVisualRepresentation">
+  UnloadVisualRepresentation()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UnloadVisualRepresentation()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Global_UModFighterDefinition_UnregisterQuantumAsset_" data-uid="Global.UModFighterDefinition.UnregisterQuantumAsset*"></a>
 
   <h3 id="Global_UModFighterDefinition_UnregisterQuantumAsset" data-uid="Global.UModFighterDefinition.UnregisterQuantumAsset">
   UnregisterQuantumAsset()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinition.cs&amp;version=GBdev&amp;line=173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

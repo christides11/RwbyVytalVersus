@@ -103,7 +103,7 @@ Class UModModInfoAsset  <a class="header-action link-secondary" title="View sour
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[CreateAssetMenu(menuName = &quot;rwby/modding/UMod ModInfoAsset&quot;)]
 [Serializable]
-public class UModModInfoAsset : BaseModInfoAsset</code></pre>
+public class UModModInfoAsset : BaseModInfoAsset, IOnUModPrebuild</code></pre>
   </div>
 
 
@@ -120,6 +120,12 @@ public class UModModInfoAsset : BaseModInfoAsset</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="rwby.IOnUModPrebuild.html">IOnUModPrebuild</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -453,7 +459,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_GetAssetByID_System_String_System_Boolean_" data-uid="rwby.UModModInfoAsset.GetAssetByID(System.String,System.Boolean)">
   GetAssetByID(string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=265"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=269"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -491,7 +497,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_GetAssetByID__1_System_String_System_Boolean_" data-uid="rwby.UModModInfoAsset.GetAssetByID``1(System.String,System.Boolean)">
   GetAssetByID&lt;T&gt;(string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=260"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -534,7 +540,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_GetAssetInfo_System_String_" data-uid="rwby.UModModInfoAsset.GetAssetInfo(System.String)">
   GetAssetInfo(string)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=312"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=316"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -570,7 +576,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_GetAssetList" data-uid="rwby.UModModInfoAsset.GetAssetList">
   GetAssetList()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a list of all content (loaded or not) in this mod.</p>
@@ -603,7 +609,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_GetAssetsByID_System_String_" data-uid="rwby.UModModInfoAsset.GetAssetsByID(System.String)">
   GetAssetsByID(string)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=272"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -639,7 +645,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_GetAssetsByType__1_System_Boolean_" data-uid="rwby.UModModInfoAsset.GetAssetsByType``1(System.Boolean)">
   GetAssetsByType&lt;T&gt;(bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=296"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=300"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -680,7 +686,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_GetLoadedAssetByPath_System_String_" data-uid="rwby.UModModInfoAsset.GetLoadedAssetByPath(System.String)">
   GetLoadedAssetByPath(string)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=291"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=295"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -716,7 +722,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_GetLoadedAssetList" data-uid="rwby.UModModInfoAsset.GetLoadedAssetList">
   GetLoadedAssetList()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=165"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a list of all loaded content in this mod.</p>
@@ -749,7 +755,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_GetLoadedAssetListByType__1" data-uid="rwby.UModModInfoAsset.GetLoadedAssetListByType``1">
   GetLoadedAssetListByType&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a list of all loaded content in the mod with the given type.</p>
@@ -788,7 +794,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_HasAsset_System_String_" data-uid="rwby.UModModInfoAsset.HasAsset(System.String)">
   HasAsset(string)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=177"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -824,7 +830,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_LoadAssetByID_System_String_" data-uid="rwby.UModModInfoAsset.LoadAssetByID(System.String)">
   LoadAssetByID(string)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=200"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Loads an asset by the ID given.</p>
@@ -863,7 +869,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_LoadAssetByIDAsync_System_String_" data-uid="rwby.UModModInfoAsset.LoadAssetByIDAsync(System.String)">
   LoadAssetByIDAsync(string)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Loads an asset by the ID given asynchronously.</p>
@@ -902,7 +908,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_OnLoad" data-uid="rwby.UModModInfoAsset.OnLoad">
   OnLoad()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called right when the mod this ModInfoAsset belongs to loads.</p>
@@ -925,11 +931,37 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
 
 
+  <a id="rwby_UModModInfoAsset_OnUModPrebuild_" data-uid="rwby.UModModInfoAsset.OnUModPrebuild*"></a>
+
+  <h3 id="rwby_UModModInfoAsset_OnUModPrebuild" data-uid="rwby.UModModInfoAsset.OnUModPrebuild">
+  OnUModPrebuild()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnUModPrebuild()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="rwby_UModModInfoAsset_OnUnload_" data-uid="rwby.UModModInfoAsset.OnUnload*"></a>
 
   <h3 id="rwby_UModModInfoAsset_OnUnload" data-uid="rwby.UModModInfoAsset.OnUnload">
   OnUnload()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called right before the mod this ModInfoAsset belongs to unloads.</p>
@@ -956,7 +988,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_RegisterQuantumAsset_System_String_" data-uid="rwby.UModModInfoAsset.RegisterQuantumAsset(System.String)">
   RegisterQuantumAsset(string)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Registers an asset to the quantum database.</p>
@@ -988,7 +1020,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_TryRegisterQuantumAsset_UnityEngine_Object_System_Boolean_" data-uid="rwby.UModModInfoAsset.TryRegisterQuantumAsset(UnityEngine.Object,System.Boolean)">
   TryRegisterQuantumAsset(Object, bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1026,7 +1058,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_TryUnregisterQuantumAsset_UnityEngine_Object_System_Boolean_" data-uid="rwby.UModModInfoAsset.TryUnregisterQuantumAsset(UnityEngine.Object,System.Boolean)">
   TryUnregisterQuantumAsset(Object, bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1064,7 +1096,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_UnloadAssetByID_System_String_" data-uid="rwby.UModModInfoAsset.UnloadAssetByID(System.String)">
   UnloadAssetByID(string)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=320"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1095,7 +1127,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_UnloadAssetsByType__1_System_Boolean_" data-uid="rwby.UModModInfoAsset.UnloadAssetsByType``1(System.Boolean)">
   UnloadAssetsByType&lt;T&gt;(bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=324"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=328"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1131,7 +1163,7 @@ public SerializedDictionary&lt;string, ExternalModAssetSoftReference&gt; guidToA
 
   <h3 id="rwby_UModModInfoAsset_UnregisterQuantumAsset_System_String_" data-uid="rwby.UModModInfoAsset.UnregisterQuantumAsset(System.String)">
   UnregisterQuantumAsset(string)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/UModModInfoAsset.cs&amp;version=GBdev&amp;line=145"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deregisters an asset from the quantum database.</p>

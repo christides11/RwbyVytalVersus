@@ -34,11 +34,11 @@ items:
     content: >-
       [Serializable]
 
-      public class EnvQueryGenerator : AssetObject
+      public class EnvQueryGenerator : AssetObject, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class EnvQueryGenerator Inherits AssetObject
+      Public Class EnvQueryGenerator Inherits AssetObject Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -48,6 +48,8 @@ items:
   - Quantum.EQS.EnvQueryGeneratorComposite
   - Quantum.EQS.EnvQueryGeneratorPointCircle
   - Quantum.EQS.EnvQueryGeneratorPointGrid
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -360,6 +362,13 @@ references:
   name: AssetObject
   nameWithType: AssetObject
   fullName: Quantum.AssetObject
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject

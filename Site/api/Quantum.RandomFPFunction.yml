@@ -28,11 +28,11 @@ items:
     content: >-
       [Serializable]
 
-      public class RandomFPFunction : StateFunctionFP
+      public class RandomFPFunction : StateFunctionFP, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class RandomFPFunction Inherits StateFunctionFP
+      Public Class RandomFPFunction Inherits StateFunctionFP Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -41,6 +41,8 @@ items:
   - Quantum.HNSFStateFunction
   - Quantum.HNSFStateFunction{Photon.Deterministic.FP}
   - Quantum.StateFunctionFP
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{Photon.Deterministic.FP}.Label
   - Quantum.HNSFStateFunction{Photon.Deterministic.FP}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -182,6 +184,13 @@ references:
   name: StateFunctionFP
   nameWithType: StateFunctionFP
   fullName: Quantum.StateFunctionFP
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{Photon.Deterministic.FP}.Label
   commentId: F:Quantum.HNSFStateFunction{Photon.Deterministic.FP}.Label
   parent: Quantum.HNSFStateFunction{Photon.Deterministic.FP}

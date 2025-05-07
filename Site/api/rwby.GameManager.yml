@@ -5,14 +5,16 @@ items:
   id: GameManager
   parent: rwby
   children:
+  - rwby.GameManager.AttemptEosLogin
   - rwby.GameManager.Initialize
+  - rwby.GameManager.OnEosLoginFailed
+  - rwby.GameManager.OnEosLoginSuccessful
+  - rwby.GameManager.StartLoginWithLoginTypeAndTokenCallback(Epic.OnlineServices.Auth.LoginCallbackInfo)
   - rwby.GameManager.audioListenerManager
   - rwby.GameManager.consoleWindow
   - rwby.GameManager.constants
   - rwby.GameManager.contentManager
   - rwby.GameManager.devicePickerUtility
-  - rwby.GameManager.eosLobby
-  - rwby.GameManager.eosSdk
   - rwby.GameManager.forceRenderRate
   - rwby.GameManager.glyphDatabase
   - rwby.GameManager.inputManager
@@ -52,6 +54,80 @@ items:
   - UnityEngine.Component
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
+- uid: rwby.GameManager.OnEosLoginSuccessful
+  commentId: F:rwby.GameManager.OnEosLoginSuccessful
+  id: OnEosLoginSuccessful
+  parent: rwby.GameManager
+  langs:
+  - csharp
+  - vb
+  name: OnEosLoginSuccessful
+  nameWithType: GameManager.OnEosLoginSuccessful
+  fullName: rwby.GameManager.OnEosLoginSuccessful
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnEosLoginSuccessful
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public UnityEvent OnEosLoginSuccessful
+    return:
+      type: UnityEngine.Events.UnityEvent
+    content.vb: >-
+      <NonSerialized>
+
+      Public OnEosLoginSuccessful As UnityEvent
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.GameManager.OnEosLoginFailed
+  commentId: F:rwby.GameManager.OnEosLoginFailed
+  id: OnEosLoginFailed
+  parent: rwby.GameManager
+  langs:
+  - csharp
+  - vb
+  name: OnEosLoginFailed
+  nameWithType: GameManager.OnEosLoginFailed
+  fullName: rwby.GameManager.OnEosLoginFailed
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnEosLoginFailed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
+    startLine: 18
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public UnityEvent OnEosLoginFailed
+    return:
+      type: UnityEngine.Events.UnityEvent
+    content.vb: >-
+      <NonSerialized>
+
+      Public OnEosLoginFailed As UnityEvent
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
 - uid: rwby.GameManager.instance
   commentId: F:rwby.GameManager.instance
   id: instance
@@ -70,7 +146,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: instance
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - rwby
   namespace: rwby
@@ -97,7 +173,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: constants
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - rwby
   namespace: rwby
@@ -124,7 +200,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: saveManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - rwby
   namespace: rwby
@@ -151,7 +227,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: inputManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - rwby
   namespace: rwby
@@ -178,7 +254,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: consoleWindow
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 22
+    startLine: 25
   assemblies:
   - rwby
   namespace: rwby
@@ -205,7 +281,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: networkManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - rwby
   namespace: rwby
@@ -232,7 +308,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: profilesManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 24
+    startLine: 27
   assemblies:
   - rwby
   namespace: rwby
@@ -259,7 +335,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: devicePickerUtility
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 25
+    startLine: 28
   assemblies:
   - rwby
   namespace: rwby
@@ -286,7 +362,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: glyphDatabase
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 26
+    startLine: 29
   assemblies:
   - rwby
   namespace: rwby
@@ -313,7 +389,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: splitScreenManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 27
+    startLine: 30
   assemblies:
   - rwby
   namespace: rwby
@@ -340,7 +416,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: modManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - rwby
   namespace: rwby
@@ -367,7 +443,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: contentManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 29
+    startLine: 32
   assemblies:
   - rwby
   namespace: rwby
@@ -394,7 +470,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: musicManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - rwby
   namespace: rwby
@@ -403,60 +479,6 @@ items:
     return:
       type: rwby.MusicManager
     content.vb: Public musicManager As MusicManager
-- uid: rwby.GameManager.eosSdk
-  commentId: F:rwby.GameManager.eosSdk
-  id: eosSdk
-  parent: rwby.GameManager
-  langs:
-  - csharp
-  - vb
-  name: eosSdk
-  nameWithType: GameManager.eosSdk
-  fullName: rwby.GameManager.eosSdk
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: eosSdk
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 31
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public EOSSDKComponent eosSdk
-    return:
-      type: EpicTransport.EOSSDKComponent
-    content.vb: Public eosSdk As EOSSDKComponent
-- uid: rwby.GameManager.eosLobby
-  commentId: F:rwby.GameManager.eosLobby
-  id: eosLobby
-  parent: rwby.GameManager
-  langs:
-  - csharp
-  - vb
-  name: eosLobby
-  nameWithType: GameManager.eosLobby
-  fullName: rwby.GameManager.eosLobby
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: eosLobby
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 32
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public EOSLobby eosLobby
-    return:
-      type: Global.EOSLobby
-    content.vb: Public eosLobby As EOSLobby
 - uid: rwby.GameManager.audioListenerManager
   commentId: F:rwby.GameManager.audioListenerManager
   id: audioListenerManager
@@ -475,7 +497,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: audioListenerManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 33
+    startLine: 34
   assemblies:
   - rwby
   namespace: rwby
@@ -502,7 +524,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: forceRenderRate
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 34
+    startLine: 35
   assemblies:
   - rwby
   namespace: rwby
@@ -529,7 +551,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: settingsManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 35
+    startLine: 36
   assemblies:
   - rwby
   namespace: rwby
@@ -556,7 +578,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: loadingScreenManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 36
+    startLine: 37
   assemblies:
   - rwby
   namespace: rwby
@@ -595,7 +617,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Initialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
-    startLine: 38
+    startLine: 39
   assemblies:
   - rwby
   namespace: rwby
@@ -605,6 +627,61 @@ items:
       type: Cysharp.Threading.Tasks.UniTask
     content.vb: Public Function Initialize() As UniTask
   overload: rwby.GameManager.Initialize*
+- uid: rwby.GameManager.AttemptEosLogin
+  commentId: M:rwby.GameManager.AttemptEosLogin
+  id: AttemptEosLogin
+  parent: rwby.GameManager
+  langs:
+  - csharp
+  - vb
+  name: AttemptEosLogin()
+  nameWithType: GameManager.AttemptEosLogin()
+  fullName: rwby.GameManager.AttemptEosLogin()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AttemptEosLogin
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
+    startLine: 52
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void AttemptEosLogin()
+    content.vb: Public Sub AttemptEosLogin()
+  overload: rwby.GameManager.AttemptEosLogin*
+- uid: rwby.GameManager.StartLoginWithLoginTypeAndTokenCallback(Epic.OnlineServices.Auth.LoginCallbackInfo)
+  commentId: M:rwby.GameManager.StartLoginWithLoginTypeAndTokenCallback(Epic.OnlineServices.Auth.LoginCallbackInfo)
+  id: StartLoginWithLoginTypeAndTokenCallback(Epic.OnlineServices.Auth.LoginCallbackInfo)
+  parent: rwby.GameManager
+  langs:
+  - csharp
+  - vb
+  name: StartLoginWithLoginTypeAndTokenCallback(LoginCallbackInfo)
+  nameWithType: GameManager.StartLoginWithLoginTypeAndTokenCallback(LoginCallbackInfo)
+  fullName: rwby.GameManager.StartLoginWithLoginTypeAndTokenCallback(Epic.OnlineServices.Auth.LoginCallbackInfo)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: StartLoginWithLoginTypeAndTokenCallback
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/GameManager.cs
+    startLine: 94
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void StartLoginWithLoginTypeAndTokenCallback(LoginCallbackInfo loginCallbackInfo)
+    parameters:
+    - id: loginCallbackInfo
+      type: Epic.OnlineServices.Auth.LoginCallbackInfo
+    content.vb: Public Sub StartLoginWithLoginTypeAndTokenCallback(loginCallbackInfo As LoginCallbackInfo)
+  overload: rwby.GameManager.StartLoginWithLoginTypeAndTokenCallback*
 references:
 - uid: rwby
   commentId: N:rwby
@@ -664,6 +741,35 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: UnityEngine.Events.UnityEvent
+  commentId: T:UnityEngine.Events.UnityEvent
+  parent: UnityEngine.Events
+  isExternal: true
+  name: UnityEvent
+  nameWithType: UnityEvent
+  fullName: UnityEngine.Events.UnityEvent
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
 - uid: rwby.GameManager
   commentId: T:rwby.GameManager
   parent: rwby
@@ -771,22 +877,6 @@ references:
   name: MusicManager
   nameWithType: MusicManager
   fullName: rwby.MusicManager
-- uid: EpicTransport.EOSSDKComponent
-  commentId: T:EpicTransport.EOSSDKComponent
-  parent: EpicTransport
-  name: EOSSDKComponent
-  nameWithType: EOSSDKComponent
-  fullName: EpicTransport.EOSSDKComponent
-- uid: EpicTransport
-  commentId: N:EpicTransport
-  name: EpicTransport
-  nameWithType: EpicTransport
-  fullName: EpicTransport
-- uid: Global.EOSLobby
-  commentId: T:Global.EOSLobby
-  name: EOSLobby
-  nameWithType: EOSLobby
-  fullName: EOSLobby
 - uid: rwby.AudioListenerManager
   commentId: T:rwby.AudioListenerManager
   parent: rwby
@@ -857,4 +947,53 @@ references:
   - name: .
   - uid: Cysharp.Threading.Tasks
     name: Tasks
+    isExternal: true
+- uid: rwby.GameManager.AttemptEosLogin*
+  commentId: Overload:rwby.GameManager.AttemptEosLogin
+  href: rwby.GameManager.html#rwby_GameManager_AttemptEosLogin
+  name: AttemptEosLogin
+  nameWithType: GameManager.AttemptEosLogin
+  fullName: rwby.GameManager.AttemptEosLogin
+- uid: rwby.GameManager.StartLoginWithLoginTypeAndTokenCallback*
+  commentId: Overload:rwby.GameManager.StartLoginWithLoginTypeAndTokenCallback
+  href: rwby.GameManager.html#rwby_GameManager_StartLoginWithLoginTypeAndTokenCallback_Epic_OnlineServices_Auth_LoginCallbackInfo_
+  name: StartLoginWithLoginTypeAndTokenCallback
+  nameWithType: GameManager.StartLoginWithLoginTypeAndTokenCallback
+  fullName: rwby.GameManager.StartLoginWithLoginTypeAndTokenCallback
+- uid: Epic.OnlineServices.Auth.LoginCallbackInfo
+  commentId: T:Epic.OnlineServices.Auth.LoginCallbackInfo
+  parent: Epic.OnlineServices.Auth
+  isExternal: true
+  name: LoginCallbackInfo
+  nameWithType: LoginCallbackInfo
+  fullName: Epic.OnlineServices.Auth.LoginCallbackInfo
+- uid: Epic.OnlineServices.Auth
+  commentId: N:Epic.OnlineServices.Auth
+  isExternal: true
+  name: Epic.OnlineServices.Auth
+  nameWithType: Epic.OnlineServices.Auth
+  fullName: Epic.OnlineServices.Auth
+  spec.csharp:
+  - uid: Epic
+    name: Epic
+    isExternal: true
+  - name: .
+  - uid: Epic.OnlineServices
+    name: OnlineServices
+    isExternal: true
+  - name: .
+  - uid: Epic.OnlineServices.Auth
+    name: Auth
+    isExternal: true
+  spec.vb:
+  - uid: Epic
+    name: Epic
+    isExternal: true
+  - name: .
+  - uid: Epic.OnlineServices
+    name: OnlineServices
+    isExternal: true
+  - name: .
+  - uid: Epic.OnlineServices.Auth
+    name: Auth
     isExternal: true

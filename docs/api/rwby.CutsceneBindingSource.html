@@ -102,7 +102,7 @@ Class CutsceneBindingSource  <a class="header-action link-secondary" title="View
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class CutsceneBindingSource</code></pre>
+public class CutsceneBindingSource : ITimelineDirectorBindingSource</code></pre>
   </div>
 
 
@@ -116,6 +116,12 @@ public class CutsceneBindingSource</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="rwby.ITimelineDirectorBindingSource.html">ITimelineDirectorBindingSource</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist derived">
     <dt>Derived</dt>
@@ -137,7 +143,7 @@ public class CutsceneBindingSource</code></pre>
 
   <h3 id="rwby_CutsceneBindingSource_mappings" data-uid="rwby.CutsceneBindingSource.mappings">
   mappings
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBindingSource.cs&amp;version=GBdev&amp;line=11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBindingSource.cs&amp;version=GBdev&amp;line=13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -167,7 +173,7 @@ public class CutsceneBindingSource</code></pre>
 
   <h3 id="rwby_CutsceneBindingSource_parent" data-uid="rwby.CutsceneBindingSource.parent">
   parent
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBindingSource.cs&amp;version=GBdev&amp;line=10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBindingSource.cs&amp;version=GBdev&amp;line=12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -194,6 +200,41 @@ public class CutsceneBindingSource</code></pre>
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="rwby_CutsceneBindingSource_ParentSource_" data-uid="rwby.CutsceneBindingSource.ParentSource*"></a>
+
+  <h3 id="rwby_CutsceneBindingSource_ParentSource" data-uid="rwby.CutsceneBindingSource.ParentSource">
+  ParentSource
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBindingSource.cs&amp;version=GBdev&amp;line=10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITimelineDirectorBindingSource ParentSource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="rwby.ITimelineDirectorBindingSource.html">ITimelineDirectorBindingSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -202,7 +243,7 @@ public class CutsceneBindingSource</code></pre>
 
   <h3 id="rwby_CutsceneBindingSource_GetMapping_Quantum_AssetRef_Quantum_Tag__" data-uid="rwby.CutsceneBindingSource.GetMapping(Quantum.AssetRef{Quantum.Tag})">
   GetMapping(AssetRef&lt;Tag&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBindingSource.cs&amp;version=GBdev&amp;line=13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBindingSource.cs&amp;version=GBdev&amp;line=15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -238,7 +279,7 @@ public class CutsceneBindingSource</code></pre>
 
   <h3 id="rwby_CutsceneBindingSource_TryGetMapping_Quantum_AssetRef_Quantum_Tag__System_Collections_Generic_List_rwby_CutsceneBindingSourceCondition__UnityEngine_Object__" data-uid="rwby.CutsceneBindingSource.TryGetMapping(Quantum.AssetRef{Quantum.Tag},System.Collections.Generic.List{rwby.CutsceneBindingSourceCondition},UnityEngine.Object@)">
   TryGetMapping(AssetRef&lt;Tag&gt;, List&lt;CutsceneBindingSourceCondition&gt;, out Object)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBindingSource.cs&amp;version=GBdev&amp;line=23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBindingSource.cs&amp;version=GBdev&amp;line=25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -278,7 +319,7 @@ public class CutsceneBindingSource</code></pre>
 
   <h3 id="rwby_CutsceneBindingSource_TryGetMapping_Quantum_AssetRef_Quantum_Tag__UnityEngine_Object__" data-uid="rwby.CutsceneBindingSource.TryGetMapping(Quantum.AssetRef{Quantum.Tag},UnityEngine.Object@)">
   TryGetMapping(AssetRef&lt;Tag&gt;, out Object)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBindingSource.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBindingSource.cs&amp;version=GBdev&amp;line=20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

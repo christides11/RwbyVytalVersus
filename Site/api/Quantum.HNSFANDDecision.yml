@@ -29,17 +29,19 @@ items:
     content: >-
       [Serializable]
 
-      public class HNSFANDDecision : HNSFStateDecision
+      public class HNSFANDDecision : HNSFStateDecision, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class HNSFANDDecision Inherits HNSFStateDecision
+      Public Class HNSFANDDecision Inherits HNSFStateDecision Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.HNSFStateDecision
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateDecision.Label
   - Quantum.HNSFStateDecision.DecideThreadSafe(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -170,6 +172,13 @@ references:
   name: HNSFStateDecision
   nameWithType: HNSFStateDecision
   fullName: Quantum.HNSFStateDecision
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateDecision.Label
   commentId: F:Quantum.HNSFStateDecision.Label
   parent: Quantum.HNSFStateDecision

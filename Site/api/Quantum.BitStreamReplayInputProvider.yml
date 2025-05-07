@@ -5,13 +5,14 @@ items:
   id: BitStreamReplayInputProvider
   parent: Quantum
   children:
-  - Quantum.BitStreamReplayInputProvider.#ctor(Photon.Deterministic.BitStream,System.Int32)
+  - Quantum.BitStreamReplayInputProvider.#ctor(Photon.Deterministic.BitStream,System.Int32,System.Int32)
   - Quantum.BitStreamReplayInputProvider.AddRpc(System.Int32,System.Byte[],System.Boolean)
   - Quantum.BitStreamReplayInputProvider.BeginReadFrame(System.Int32)
   - Quantum.BitStreamReplayInputProvider.CanSimulate(System.Int32)
   - Quantum.BitStreamReplayInputProvider.CompleteReadFrame(System.Int32,System.Int32,System.Byte[]@)
   - Quantum.BitStreamReplayInputProvider.GetInput(System.Int32,System.Int32)
   - Quantum.BitStreamReplayInputProvider.GetRpc(System.Int32,System.Int32)
+  - Quantum.BitStreamReplayInputProvider.LocalActorNumber
   - Quantum.BitStreamReplayInputProvider.MaxFrame
   - Quantum.BitStreamReplayInputProvider.Reset
   langs:
@@ -28,7 +29,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BitStreamReplayInputProvider
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5584
+    startLine: 5632
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -60,7 +61,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: MaxFrame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5591
+    startLine: 5640
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -73,16 +74,47 @@ items:
       type: System.Int32
     content.vb: Public ReadOnly Property MaxFrame As Integer
   overload: Quantum.BitStreamReplayInputProvider.MaxFrame*
-- uid: Quantum.BitStreamReplayInputProvider.#ctor(Photon.Deterministic.BitStream,System.Int32)
-  commentId: M:Quantum.BitStreamReplayInputProvider.#ctor(Photon.Deterministic.BitStream,System.Int32)
-  id: '#ctor(Photon.Deterministic.BitStream,System.Int32)'
+- uid: Quantum.BitStreamReplayInputProvider.LocalActorNumber
+  commentId: P:Quantum.BitStreamReplayInputProvider.LocalActorNumber
+  id: LocalActorNumber
   parent: Quantum.BitStreamReplayInputProvider
   langs:
   - csharp
   - vb
-  name: BitStreamReplayInputProvider(BitStream, int)
-  nameWithType: BitStreamReplayInputProvider.BitStreamReplayInputProvider(BitStream, int)
-  fullName: Quantum.BitStreamReplayInputProvider.BitStreamReplayInputProvider(Photon.Deterministic.BitStream, int)
+  name: LocalActorNumber
+  nameWithType: BitStreamReplayInputProvider.LocalActorNumber
+  fullName: Quantum.BitStreamReplayInputProvider.LocalActorNumber
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LocalActorNumber
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 5645
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The actor number of the client that recoded the replay.
+  example: []
+  syntax:
+    content: public int LocalActorNumber { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LocalActorNumber As Integer
+  overload: Quantum.BitStreamReplayInputProvider.LocalActorNumber*
+- uid: Quantum.BitStreamReplayInputProvider.#ctor(Photon.Deterministic.BitStream,System.Int32,System.Int32)
+  commentId: M:Quantum.BitStreamReplayInputProvider.#ctor(Photon.Deterministic.BitStream,System.Int32,System.Int32)
+  id: '#ctor(Photon.Deterministic.BitStream,System.Int32,System.Int32)'
+  parent: Quantum.BitStreamReplayInputProvider
+  langs:
+  - csharp
+  - vb
+  name: BitStreamReplayInputProvider(BitStream, int, int)
+  nameWithType: BitStreamReplayInputProvider.BitStreamReplayInputProvider(BitStream, int, int)
+  fullName: Quantum.BitStreamReplayInputProvider.BitStreamReplayInputProvider(Photon.Deterministic.BitStream, int, int)
   type: Constructor
   source:
     remote:
@@ -91,14 +123,14 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5598
+    startLine: 5653
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   summary: Create input provider.
   example: []
   syntax:
-    content: public BitStreamReplayInputProvider(BitStream inputStream, int maxFrame)
+    content: public BitStreamReplayInputProvider(BitStream inputStream, int maxFrame, int localActorNumber = 0)
     parameters:
     - id: inputStream
       type: Photon.Deterministic.BitStream
@@ -106,11 +138,14 @@ items:
     - id: maxFrame
       type: System.Int32
       description: The max frame of the recorded replay
-    content.vb: Public Sub New(inputStream As BitStream, maxFrame As Integer)
+    - id: localActorNumber
+      type: System.Int32
+      description: The actor number of the client that recorded the replay
+    content.vb: Public Sub New(inputStream As BitStream, maxFrame As Integer, localActorNumber As Integer = 0)
   overload: Quantum.BitStreamReplayInputProvider.#ctor*
-  nameWithType.vb: BitStreamReplayInputProvider.New(BitStream, Integer)
-  fullName.vb: Quantum.BitStreamReplayInputProvider.New(Photon.Deterministic.BitStream, Integer)
-  name.vb: New(BitStream, Integer)
+  nameWithType.vb: BitStreamReplayInputProvider.New(BitStream, Integer, Integer)
+  fullName.vb: Quantum.BitStreamReplayInputProvider.New(Photon.Deterministic.BitStream, Integer, Integer)
+  name.vb: New(BitStream, Integer, Integer)
 - uid: Quantum.BitStreamReplayInputProvider.Reset
   commentId: M:Quantum.BitStreamReplayInputProvider.Reset
   id: Reset
@@ -129,7 +164,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Reset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5606
+    startLine: 5662
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -157,7 +192,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CanSimulate
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5615
+    startLine: 5671
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -195,7 +230,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BeginReadFrame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5625
+    startLine: 5681
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -236,7 +271,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CompleteReadFrame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5635
+    startLine: 5691
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -277,7 +312,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetInput
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5642
+    startLine: 5698
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -315,7 +350,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AddRpc
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5650
+    startLine: 5706
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -353,7 +388,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetRpc
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 5657
+    startLine: 5713
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -450,9 +485,15 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: Quantum.BitStreamReplayInputProvider.LocalActorNumber*
+  commentId: Overload:Quantum.BitStreamReplayInputProvider.LocalActorNumber
+  href: Quantum.BitStreamReplayInputProvider.html#Quantum_BitStreamReplayInputProvider_LocalActorNumber
+  name: LocalActorNumber
+  nameWithType: BitStreamReplayInputProvider.LocalActorNumber
+  fullName: Quantum.BitStreamReplayInputProvider.LocalActorNumber
 - uid: Quantum.BitStreamReplayInputProvider.#ctor*
   commentId: Overload:Quantum.BitStreamReplayInputProvider.#ctor
-  href: Quantum.BitStreamReplayInputProvider.html#Quantum_BitStreamReplayInputProvider__ctor_Photon_Deterministic_BitStream_System_Int32_
+  href: Quantum.BitStreamReplayInputProvider.html#Quantum_BitStreamReplayInputProvider__ctor_Photon_Deterministic_BitStream_System_Int32_System_Int32_
   name: BitStreamReplayInputProvider
   nameWithType: BitStreamReplayInputProvider.BitStreamReplayInputProvider
   fullName: Quantum.BitStreamReplayInputProvider.BitStreamReplayInputProvider

@@ -5,18 +5,26 @@ items:
   id: TVSHUDHandler
   parent: rwby.core.gamemodes.teamversus
   children:
-  - rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,System.Int32,System.Int32)
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.DisableAllUI
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,Quantum.PlayerRef)
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.SetCamera(UnityEngine.Camera)
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.SetUITarget(Quantum.QuantumGame,Quantum.EntityRef)
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.Setup
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.SetupCharactersUI(IFighterDefinition[])
   - rwby.core.gamemodes.teamversus.TVSHUDHandler.Teardown
-  - rwby.core.gamemodes.teamversus.TVSHUDHandler.canvas
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.UpdateUITarget(Quantum.QuantumGame)
   - rwby.core.gamemodes.teamversus.TVSHUDHandler.comboRecipeHUDHandler
   - rwby.core.gamemodes.teamversus.TVSHUDHandler.countdownDirector
-  - rwby.core.gamemodes.teamversus.TVSHUDHandler.globalPlayerID
-  - rwby.core.gamemodes.teamversus.TVSHUDHandler.hudCanvasGroup
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.hudElementsByFighterDef
   - rwby.core.gamemodes.teamversus.TVSHUDHandler.localPlayer
-  - rwby.core.gamemodes.teamversus.TVSHUDHandler.localPlayerID
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.mainCanvas
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.mainCanvasGroup
   - rwby.core.gamemodes.teamversus.TVSHUDHandler.matchHandler
   - rwby.core.gamemodes.teamversus.TVSHUDHandler.outroGameOverDirector
   - rwby.core.gamemodes.teamversus.TVSHUDHandler.overheadHudReference
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.participantId
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.pauseMenuCanvas
+  - rwby.core.gamemodes.teamversus.TVSHUDHandler.playerRef
   - rwby.core.gamemodes.teamversus.TVSHUDHandler.teamScoreElementPrefab
   - rwby.core.gamemodes.teamversus.TVSHUDHandler.teamScoreElements
   - rwby.core.gamemodes.teamversus.TVSHUDHandler.teamScoresContainer
@@ -35,7 +43,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TVSHUDHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
@@ -48,6 +56,138 @@ items:
   - UnityEngine.Component
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.mainCanvas
+  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.mainCanvas
+  id: mainCanvas
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: mainCanvas
+  nameWithType: TVSHUDHandler.mainCanvas
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.mainCanvas
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: mainCanvas
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 14
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: >-
+      [FormerlySerializedAs("canvas")]
+
+      public Canvas mainCanvas
+    return:
+      type: UnityEngine.Canvas
+    content.vb: >-
+      <FormerlySerializedAs("canvas")>
+
+      Public mainCanvas As Canvas
+  attributes:
+  - type: UnityEngine.Serialization.FormerlySerializedAsAttribute
+    ctor: UnityEngine.Serialization.FormerlySerializedAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: canvas
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.mainCanvasGroup
+  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.mainCanvasGroup
+  id: mainCanvasGroup
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: mainCanvasGroup
+  nameWithType: TVSHUDHandler.mainCanvasGroup
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.mainCanvasGroup
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: mainCanvasGroup
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 15
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: >-
+      [FormerlySerializedAs("hudCanvasGroup")]
+
+      public CanvasGroup mainCanvasGroup
+    return:
+      type: UnityEngine.CanvasGroup
+    content.vb: >-
+      <FormerlySerializedAs("hudCanvasGroup")>
+
+      Public mainCanvasGroup As CanvasGroup
+  attributes:
+  - type: UnityEngine.Serialization.FormerlySerializedAsAttribute
+    ctor: UnityEngine.Serialization.FormerlySerializedAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: hudCanvasGroup
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.pauseMenuCanvas
+  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.pauseMenuCanvas
+  id: pauseMenuCanvas
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: pauseMenuCanvas
+  nameWithType: TVSHUDHandler.pauseMenuCanvas
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.pauseMenuCanvas
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: pauseMenuCanvas
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 16
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public Canvas pauseMenuCanvas
+    return:
+      type: UnityEngine.Canvas
+    content.vb: Public pauseMenuCanvas As Canvas
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.localPlayer
+  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.localPlayer
+  id: localPlayer
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: localPlayer
+  nameWithType: TVSHUDHandler.localPlayer
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.localPlayer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: localPlayer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 19
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public InputPlayerManager localPlayer
+    return:
+      type: Global.InputPlayerManager
+    content.vb: Public localPlayer As InputPlayerManager
 - uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.teamScoreElements
   commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.teamScoreElements
   id: teamScoreElements
@@ -66,7 +206,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: teamScoreElements
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 12
+    startLine: 21
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
@@ -93,7 +233,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: teamScoresContainer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 14
+    startLine: 23
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
@@ -120,7 +260,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: teamScoreElementPrefab
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 15
+    startLine: 24
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
@@ -147,7 +287,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: timer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 16
+    startLine: 25
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
@@ -156,141 +296,6 @@ items:
     return:
       type: TMPro.TextMeshProUGUI
     content.vb: Public timer As TextMeshProUGUI
-- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.canvas
-  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.canvas
-  id: canvas
-  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
-  langs:
-  - csharp
-  - vb
-  name: canvas
-  nameWithType: TVSHUDHandler.canvas
-  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.canvas
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: canvas
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 18
-  assemblies:
-  - rwby.core.view
-  namespace: rwby.core.gamemodes.teamversus
-  syntax:
-    content: public Canvas canvas
-    return:
-      type: UnityEngine.Canvas
-    content.vb: Public canvas As Canvas
-- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.hudCanvasGroup
-  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.hudCanvasGroup
-  id: hudCanvasGroup
-  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
-  langs:
-  - csharp
-  - vb
-  name: hudCanvasGroup
-  nameWithType: TVSHUDHandler.hudCanvasGroup
-  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.hudCanvasGroup
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: hudCanvasGroup
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 19
-  assemblies:
-  - rwby.core.view
-  namespace: rwby.core.gamemodes.teamversus
-  syntax:
-    content: public CanvasGroup hudCanvasGroup
-    return:
-      type: UnityEngine.CanvasGroup
-    content.vb: Public hudCanvasGroup As CanvasGroup
-- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.localPlayer
-  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.localPlayer
-  id: localPlayer
-  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
-  langs:
-  - csharp
-  - vb
-  name: localPlayer
-  nameWithType: TVSHUDHandler.localPlayer
-  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.localPlayer
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: localPlayer
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 21
-  assemblies:
-  - rwby.core.view
-  namespace: rwby.core.gamemodes.teamversus
-  syntax:
-    content: public InputPlayerManager localPlayer
-    return:
-      type: Global.InputPlayerManager
-    content.vb: Public localPlayer As InputPlayerManager
-- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.globalPlayerID
-  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.globalPlayerID
-  id: globalPlayerID
-  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
-  langs:
-  - csharp
-  - vb
-  name: globalPlayerID
-  nameWithType: TVSHUDHandler.globalPlayerID
-  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.globalPlayerID
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: globalPlayerID
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 22
-  assemblies:
-  - rwby.core.view
-  namespace: rwby.core.gamemodes.teamversus
-  syntax:
-    content: public int globalPlayerID
-    return:
-      type: System.Int32
-    content.vb: Public globalPlayerID As Integer
-- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.localPlayerID
-  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.localPlayerID
-  id: localPlayerID
-  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
-  langs:
-  - csharp
-  - vb
-  name: localPlayerID
-  nameWithType: TVSHUDHandler.localPlayerID
-  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.localPlayerID
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: localPlayerID
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 23
-  assemblies:
-  - rwby.core.view
-  namespace: rwby.core.gamemodes.teamversus
-  syntax:
-    content: public int localPlayerID
-    return:
-      type: System.Int32
-    content.vb: Public localPlayerID As Integer
 - uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.matchHandler
   commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.matchHandler
   id: matchHandler
@@ -309,7 +314,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: matchHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
@@ -318,6 +323,107 @@ items:
     return:
       type: rwby.core.gamemodes.teamversus.TVTMatchHandler
     content.vb: Public matchHandler As TVTMatchHandler
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.participantId
+  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.participantId
+  id: participantId
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: participantId
+  nameWithType: TVSHUDHandler.participantId
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.participantId
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: participantId
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 29
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public int participantId
+    return:
+      type: System.Int32
+    content.vb: >-
+      <NonSerialized>
+
+      Public participantId As Integer
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.playerRef
+  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.playerRef
+  id: playerRef
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: playerRef
+  nameWithType: TVSHUDHandler.playerRef
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.playerRef
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playerRef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 30
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public PlayerRef playerRef
+    return:
+      type: Quantum.PlayerRef
+    content.vb: >-
+      <NonSerialized>
+
+      Public playerRef As PlayerRef
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.hudElementsByFighterDef
+  commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.hudElementsByFighterDef
+  id: hudElementsByFighterDef
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: hudElementsByFighterDef
+  nameWithType: TVSHUDHandler.hudElementsByFighterDef
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.hudElementsByFighterDef
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hudElementsByFighterDef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 32
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public Dictionary<IFighterDefinition, List<GameObject>> hudElementsByFighterDef
+    return:
+      type: System.Collections.Generic.Dictionary{IFighterDefinition,System.Collections.Generic.List{UnityEngine.GameObject}}
+    content.vb: Public hudElementsByFighterDef As Dictionary(Of IFighterDefinition, List(Of GameObject))
 - uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.countdownDirector
   commentId: F:rwby.core.gamemodes.teamversus.TVSHUDHandler.countdownDirector
   id: countdownDirector
@@ -336,7 +442,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: countdownDirector
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 29
+    startLine: 36
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
@@ -363,7 +469,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: outroGameOverDirector
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 30
+    startLine: 37
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
@@ -390,7 +496,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: overheadHudReference
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 32
+    startLine: 39
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
@@ -417,7 +523,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: comboRecipeHUDHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 33
+    startLine: 40
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
@@ -426,16 +532,47 @@ items:
     return:
       type: rwby.core.gamemodes.teamversus.ComboRecipeHUDHandler
     content.vb: Public comboRecipeHUDHandler As ComboRecipeHUDHandler
-- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,System.Int32,System.Int32)
-  commentId: M:rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,System.Int32,System.Int32)
-  id: Initialize(UnityEngine.Camera,InputPlayerManager,System.Int32,System.Int32)
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.Setup
+  commentId: M:rwby.core.gamemodes.teamversus.TVSHUDHandler.Setup
+  id: Setup
   parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
   langs:
   - csharp
   - vb
-  name: Initialize(Camera, InputPlayerManager, int, int)
-  nameWithType: TVSHUDHandler.Initialize(Camera, InputPlayerManager, int, int)
-  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize(UnityEngine.Camera, InputPlayerManager, int, int)
+  name: Setup()
+  nameWithType: TVSHUDHandler.Setup()
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.Setup()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Setup
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 46
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  summary: Load needed assets before the quantum game starts.
+  example: []
+  syntax:
+    content: public UniTask<bool> Setup()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+      description: ''
+    content.vb: Public Function Setup() As UniTask(Of Boolean)
+  overload: rwby.core.gamemodes.teamversus.TVSHUDHandler.Setup*
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,Quantum.PlayerRef)
+  commentId: M:rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,Quantum.PlayerRef)
+  id: Initialize(UnityEngine.Camera,InputPlayerManager,Quantum.PlayerRef)
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: Initialize(Camera, InputPlayerManager, PlayerRef)
+  nameWithType: TVSHUDHandler.Initialize(Camera, InputPlayerManager, PlayerRef)
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize(UnityEngine.Camera, InputPlayerManager, Quantum.PlayerRef)
   type: Method
   source:
     remote:
@@ -444,26 +581,168 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Initialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 35
+    startLine: 56
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
   syntax:
-    content: public void Initialize(Camera cam, InputPlayerManager inputPlayer, int localPlayerID, int globalPlayerID)
+    content: public void Initialize(Camera cam, InputPlayerManager inputPlayer, PlayerRef player)
     parameters:
     - id: cam
       type: UnityEngine.Camera
     - id: inputPlayer
       type: Global.InputPlayerManager
-    - id: localPlayerID
-      type: System.Int32
-    - id: globalPlayerID
-      type: System.Int32
-    content.vb: Public Sub Initialize(cam As Camera, inputPlayer As InputPlayerManager, localPlayerID As Integer, globalPlayerID As Integer)
+    - id: player
+      type: Quantum.PlayerRef
+    content.vb: Public Sub Initialize(cam As Camera, inputPlayer As InputPlayerManager, player As PlayerRef)
   overload: rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize*
-  nameWithType.vb: TVSHUDHandler.Initialize(Camera, InputPlayerManager, Integer, Integer)
-  fullName.vb: rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize(UnityEngine.Camera, InputPlayerManager, Integer, Integer)
-  name.vb: Initialize(Camera, InputPlayerManager, Integer, Integer)
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetCamera(UnityEngine.Camera)
+  commentId: M:rwby.core.gamemodes.teamversus.TVSHUDHandler.SetCamera(UnityEngine.Camera)
+  id: SetCamera(UnityEngine.Camera)
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: SetCamera(Camera)
+  nameWithType: TVSHUDHandler.SetCamera(Camera)
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetCamera(UnityEngine.Camera)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetCamera
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 89
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public void SetCamera(Camera cam)
+    parameters:
+    - id: cam
+      type: UnityEngine.Camera
+    content.vb: Public Sub SetCamera(cam As Camera)
+  overload: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetCamera*
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetupCharactersUI(IFighterDefinition[])
+  commentId: M:rwby.core.gamemodes.teamversus.TVSHUDHandler.SetupCharactersUI(IFighterDefinition[])
+  id: SetupCharactersUI(IFighterDefinition[])
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: SetupCharactersUI(IFighterDefinition[])
+  nameWithType: TVSHUDHandler.SetupCharactersUI(IFighterDefinition[])
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetupCharactersUI(IFighterDefinition[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetupCharactersUI
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 95
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public void SetupCharactersUI(IFighterDefinition[] fighterDefinitions)
+    parameters:
+    - id: fighterDefinitions
+      type: Global.IFighterDefinition[]
+    content.vb: Public Sub SetupCharactersUI(fighterDefinitions As IFighterDefinition())
+  overload: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetupCharactersUI*
+  nameWithType.vb: TVSHUDHandler.SetupCharactersUI(IFighterDefinition())
+  fullName.vb: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetupCharactersUI(IFighterDefinition())
+  name.vb: SetupCharactersUI(IFighterDefinition())
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.UpdateUITarget(Quantum.QuantumGame)
+  commentId: M:rwby.core.gamemodes.teamversus.TVSHUDHandler.UpdateUITarget(Quantum.QuantumGame)
+  id: UpdateUITarget(Quantum.QuantumGame)
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: UpdateUITarget(QuantumGame)
+  nameWithType: TVSHUDHandler.UpdateUITarget(QuantumGame)
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.UpdateUITarget(Quantum.QuantumGame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateUITarget
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 140
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public void UpdateUITarget(QuantumGame game)
+    parameters:
+    - id: game
+      type: Quantum.QuantumGame
+    content.vb: Public Sub UpdateUITarget(game As QuantumGame)
+  overload: rwby.core.gamemodes.teamversus.TVSHUDHandler.UpdateUITarget*
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetUITarget(Quantum.QuantumGame,Quantum.EntityRef)
+  commentId: M:rwby.core.gamemodes.teamversus.TVSHUDHandler.SetUITarget(Quantum.QuantumGame,Quantum.EntityRef)
+  id: SetUITarget(Quantum.QuantumGame,Quantum.EntityRef)
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: SetUITarget(QuantumGame, EntityRef)
+  nameWithType: TVSHUDHandler.SetUITarget(QuantumGame, EntityRef)
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetUITarget(Quantum.QuantumGame, Quantum.EntityRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetUITarget
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 152
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public void SetUITarget(QuantumGame game, EntityRef entityRef)
+    parameters:
+    - id: game
+      type: Quantum.QuantumGame
+    - id: entityRef
+      type: Quantum.EntityRef
+    content.vb: Public Sub SetUITarget(game As QuantumGame, entityRef As EntityRef)
+  overload: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetUITarget*
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.DisableAllUI
+  commentId: M:rwby.core.gamemodes.teamversus.TVSHUDHandler.DisableAllUI
+  id: DisableAllUI
+  parent: rwby.core.gamemodes.teamversus.TVSHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: DisableAllUI()
+  nameWithType: TVSHUDHandler.DisableAllUI()
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.DisableAllUI()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DisableAllUI
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
+    startLine: 178
+  assemblies:
+  - rwby.core.view
+  namespace: rwby.core.gamemodes.teamversus
+  syntax:
+    content: public void DisableAllUI()
+    content.vb: Public Sub DisableAllUI()
+  overload: rwby.core.gamemodes.teamversus.TVSHUDHandler.DisableAllUI*
 - uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.Teardown
   commentId: M:rwby.core.gamemodes.teamversus.TVSHUDHandler.Teardown
   id: Teardown
@@ -482,7 +761,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Teardown
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/TeamVersus/View/TVSHUDHandler.cs
-    startLine: 99
+    startLine: 204
   assemblies:
   - rwby.core.view
   namespace: rwby.core.gamemodes.teamversus
@@ -581,6 +860,26 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: UnityEngine.Canvas
+  commentId: T:UnityEngine.Canvas
+  parent: UnityEngine
+  isExternal: true
+  name: Canvas
+  nameWithType: Canvas
+  fullName: UnityEngine.Canvas
+- uid: UnityEngine.CanvasGroup
+  commentId: T:UnityEngine.CanvasGroup
+  parent: UnityEngine
+  isExternal: true
+  name: CanvasGroup
+  nameWithType: CanvasGroup
+  fullName: UnityEngine.CanvasGroup
+- uid: Global.InputPlayerManager
+  commentId: T:Global.InputPlayerManager
+  href: InputPlayerManager.html
+  name: InputPlayerManager
+  nameWithType: InputPlayerManager
+  fullName: InputPlayerManager
 - uid: System.Collections.Generic.Dictionary{System.Int32,rwby.core.gamemodes.teamversus.TeamScoreElement}
   commentId: T:System.Collections.Generic.Dictionary{System.Int32,rwby.core.gamemodes.teamversus.TeamScoreElement}
   parent: System.Collections.Generic
@@ -724,26 +1023,13 @@ references:
   name: TMPro
   nameWithType: TMPro
   fullName: TMPro
-- uid: UnityEngine.Canvas
-  commentId: T:UnityEngine.Canvas
-  parent: UnityEngine
-  isExternal: true
-  name: Canvas
-  nameWithType: Canvas
-  fullName: UnityEngine.Canvas
-- uid: UnityEngine.CanvasGroup
-  commentId: T:UnityEngine.CanvasGroup
-  parent: UnityEngine
-  isExternal: true
-  name: CanvasGroup
-  nameWithType: CanvasGroup
-  fullName: UnityEngine.CanvasGroup
-- uid: Global.InputPlayerManager
-  commentId: T:Global.InputPlayerManager
-  href: InputPlayerManager.html
-  name: InputPlayerManager
-  nameWithType: InputPlayerManager
-  fullName: InputPlayerManager
+- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler
+  commentId: T:rwby.core.gamemodes.teamversus.TVTMatchHandler
+  parent: rwby.core.gamemodes.teamversus
+  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html
+  name: TVTMatchHandler
+  nameWithType: TVTMatchHandler
+  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -755,13 +1041,74 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: rwby.core.gamemodes.teamversus.TVTMatchHandler
-  commentId: T:rwby.core.gamemodes.teamversus.TVTMatchHandler
-  parent: rwby.core.gamemodes.teamversus
-  href: rwby.core.gamemodes.teamversus.TVTMatchHandler.html
-  name: TVTMatchHandler
-  nameWithType: TVTMatchHandler
-  fullName: rwby.core.gamemodes.teamversus.TVTMatchHandler
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
+  parent: Quantum
+  isExternal: true
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Collections.Generic.Dictionary{IFighterDefinition,System.Collections.Generic.List{UnityEngine.GameObject}}
+  commentId: T:System.Collections.Generic.Dictionary{IFighterDefinition,System.Collections.Generic.List{UnityEngine.GameObject}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<IFighterDefinition, List<GameObject>>
+  nameWithType: Dictionary<IFighterDefinition, List<GameObject>>
+  fullName: System.Collections.Generic.Dictionary<IFighterDefinition, System.Collections.Generic.List<UnityEngine.GameObject>>
+  nameWithType.vb: Dictionary(Of IFighterDefinition, List(Of GameObject))
+  fullName.vb: System.Collections.Generic.Dictionary(Of IFighterDefinition, System.Collections.Generic.List(Of UnityEngine.GameObject))
+  name.vb: Dictionary(Of IFighterDefinition, List(Of GameObject))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+  - name: )
 - uid: UnityEngine.Playables.PlayableDirector
   commentId: T:UnityEngine.Playables.PlayableDirector
   parent: UnityEngine.Playables
@@ -811,9 +1158,103 @@ references:
   name: ComboRecipeHUDHandler
   nameWithType: ComboRecipeHUDHandler
   fullName: rwby.core.gamemodes.teamversus.ComboRecipeHUDHandler
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.Setup*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVSHUDHandler.Setup
+  href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html#rwby_core_gamemodes_teamversus_TVSHUDHandler_Setup
+  name: Setup
+  nameWithType: TVSHUDHandler.Setup
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.Setup
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
 - uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize*
   commentId: Overload:rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize
-  href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html#rwby_core_gamemodes_teamversus_TVSHUDHandler_Initialize_UnityEngine_Camera_InputPlayerManager_System_Int32_System_Int32_
+  href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html#rwby_core_gamemodes_teamversus_TVSHUDHandler_Initialize_UnityEngine_Camera_InputPlayerManager_Quantum_PlayerRef_
   name: Initialize
   nameWithType: TVSHUDHandler.Initialize
   fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.Initialize
@@ -824,6 +1265,71 @@ references:
   name: Camera
   nameWithType: Camera
   fullName: UnityEngine.Camera
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetCamera*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVSHUDHandler.SetCamera
+  href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html#rwby_core_gamemodes_teamversus_TVSHUDHandler_SetCamera_UnityEngine_Camera_
+  name: SetCamera
+  nameWithType: TVSHUDHandler.SetCamera
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetCamera
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetupCharactersUI*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVSHUDHandler.SetupCharactersUI
+  href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html#rwby_core_gamemodes_teamversus_TVSHUDHandler_SetupCharactersUI_IFighterDefinition___
+  name: SetupCharactersUI
+  nameWithType: TVSHUDHandler.SetupCharactersUI
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetupCharactersUI
+- uid: Global.IFighterDefinition[]
+  isExternal: true
+  href: IFighterDefinition.html
+  name: IFighterDefinition[]
+  nameWithType: IFighterDefinition[]
+  fullName: IFighterDefinition[]
+  nameWithType.vb: IFighterDefinition()
+  fullName.vb: IFighterDefinition()
+  name.vb: IFighterDefinition()
+  spec.csharp:
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+    href: IFighterDefinition.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+    href: IFighterDefinition.html
+  - name: (
+  - name: )
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.UpdateUITarget*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVSHUDHandler.UpdateUITarget
+  href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html#rwby_core_gamemodes_teamversus_TVSHUDHandler_UpdateUITarget_Quantum_QuantumGame_
+  name: UpdateUITarget
+  nameWithType: TVSHUDHandler.UpdateUITarget
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.UpdateUITarget
+- uid: Quantum.QuantumGame
+  commentId: T:Quantum.QuantumGame
+  parent: Quantum
+  href: Quantum.QuantumGame.html
+  name: QuantumGame
+  nameWithType: QuantumGame
+  fullName: Quantum.QuantumGame
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetUITarget*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVSHUDHandler.SetUITarget
+  href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html#rwby_core_gamemodes_teamversus_TVSHUDHandler_SetUITarget_Quantum_QuantumGame_Quantum_EntityRef_
+  name: SetUITarget
+  nameWithType: TVSHUDHandler.SetUITarget
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.SetUITarget
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.DisableAllUI*
+  commentId: Overload:rwby.core.gamemodes.teamversus.TVSHUDHandler.DisableAllUI
+  href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html#rwby_core_gamemodes_teamversus_TVSHUDHandler_DisableAllUI
+  name: DisableAllUI
+  nameWithType: TVSHUDHandler.DisableAllUI
+  fullName: rwby.core.gamemodes.teamversus.TVSHUDHandler.DisableAllUI
 - uid: rwby.core.gamemodes.teamversus.TVSHUDHandler.Teardown*
   commentId: Overload:rwby.core.gamemodes.teamversus.TVSHUDHandler.Teardown
   href: rwby.core.gamemodes.teamversus.TVSHUDHandler.html#rwby_core_gamemodes_teamversus_TVSHUDHandler_Teardown

@@ -5,9 +5,13 @@ items:
   id: BaseGamemodeDefinition
   parent: Global
   children:
+  - Global.BaseGamemodeDefinition.DefaultSettings
+  - Global.BaseGamemodeDefinition.GetDefaultTeamConfig
+  - Global.BaseGamemodeDefinition.GetGamemodeTeamTypes
   - Global.BaseGamemodeDefinition.GetMatchHandler
   - Global.BaseGamemodeDefinition.GetQuantumDataAsset
-  - Global.BaseGamemodeDefinition.GetTeamConfig
+  - Global.BaseGamemodeDefinition.MaximumPlayers
+  - Global.BaseGamemodeDefinition.MinimumPlayers
   langs:
   - csharp
   - vb
@@ -55,38 +59,154 @@ items:
   - Global.IContentDefinition.UnregisterQuantumAsset
   - Global.IContentDefinition.UnloadAssets
   - Global.IContentDefinition.Unload
+  - Global.IContentDefinition.GetAssetSoftReference
   attributes:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
     arguments: []
-- uid: Global.BaseGamemodeDefinition.GetTeamConfig
-  commentId: M:Global.BaseGamemodeDefinition.GetTeamConfig
-  id: GetTeamConfig
+- uid: Global.BaseGamemodeDefinition.DefaultSettings
+  commentId: P:Global.BaseGamemodeDefinition.DefaultSettings
+  id: DefaultSettings
   parent: Global.BaseGamemodeDefinition
   langs:
   - csharp
   - vb
-  name: GetTeamConfig()
-  nameWithType: BaseGamemodeDefinition.GetTeamConfig()
-  fullName: BaseGamemodeDefinition.GetTeamConfig()
-  type: Method
+  name: DefaultSettings
+  nameWithType: BaseGamemodeDefinition.DefaultSettings
+  fullName: BaseGamemodeDefinition.DefaultSettings
+  type: Property
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: GetTeamConfig
+    id: DefaultSettings
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
     startLine: 7
   assemblies:
   - rwby
   namespace: Global
   syntax:
-    content: public abstract GamemodeTeamConfig[] GetTeamConfig()
+    content: public abstract GamemodeSettingsBase DefaultSettings { get; protected set; }
+    parameters: []
+    return:
+      type: Quantum.GamemodeSettingsBase
+    content.vb: Public MustOverride Property DefaultSettings As GamemodeSettingsBase
+  overload: Global.BaseGamemodeDefinition.DefaultSettings*
+- uid: Global.BaseGamemodeDefinition.MinimumPlayers
+  commentId: P:Global.BaseGamemodeDefinition.MinimumPlayers
+  id: MinimumPlayers
+  parent: Global.BaseGamemodeDefinition
+  langs:
+  - csharp
+  - vb
+  name: MinimumPlayers
+  nameWithType: BaseGamemodeDefinition.MinimumPlayers
+  fullName: BaseGamemodeDefinition.MinimumPlayers
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: MinimumPlayers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
+    startLine: 8
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public abstract int MinimumPlayers { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public MustOverride Property MinimumPlayers As Integer
+  overload: Global.BaseGamemodeDefinition.MinimumPlayers*
+- uid: Global.BaseGamemodeDefinition.MaximumPlayers
+  commentId: P:Global.BaseGamemodeDefinition.MaximumPlayers
+  id: MaximumPlayers
+  parent: Global.BaseGamemodeDefinition
+  langs:
+  - csharp
+  - vb
+  name: MaximumPlayers
+  nameWithType: BaseGamemodeDefinition.MaximumPlayers
+  fullName: BaseGamemodeDefinition.MaximumPlayers
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: MaximumPlayers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
+    startLine: 9
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public abstract int MaximumPlayers { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public MustOverride Property MaximumPlayers As Integer
+  overload: Global.BaseGamemodeDefinition.MaximumPlayers*
+- uid: Global.BaseGamemodeDefinition.GetGamemodeTeamTypes
+  commentId: M:Global.BaseGamemodeDefinition.GetGamemodeTeamTypes
+  id: GetGamemodeTeamTypes
+  parent: Global.BaseGamemodeDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetGamemodeTeamTypes()
+  nameWithType: BaseGamemodeDefinition.GetGamemodeTeamTypes()
+  fullName: BaseGamemodeDefinition.GetGamemodeTeamTypes()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetGamemodeTeamTypes
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
+    startLine: 10
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public abstract GamemodeTeamTypeConfig[] GetGamemodeTeamTypes()
+    return:
+      type: Global.GamemodeTeamTypeConfig[]
+    content.vb: Public MustOverride Function GetGamemodeTeamTypes() As GamemodeTeamTypeConfig()
+  overload: Global.BaseGamemodeDefinition.GetGamemodeTeamTypes*
+- uid: Global.BaseGamemodeDefinition.GetDefaultTeamConfig
+  commentId: M:Global.BaseGamemodeDefinition.GetDefaultTeamConfig
+  id: GetDefaultTeamConfig
+  parent: Global.BaseGamemodeDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultTeamConfig()
+  nameWithType: BaseGamemodeDefinition.GetDefaultTeamConfig()
+  fullName: BaseGamemodeDefinition.GetDefaultTeamConfig()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetDefaultTeamConfig
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
+    startLine: 11
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public abstract GamemodeTeamConfig[] GetDefaultTeamConfig()
     return:
       type: Global.GamemodeTeamConfig[]
-    content.vb: Public MustOverride Function GetTeamConfig() As GamemodeTeamConfig()
-  overload: Global.BaseGamemodeDefinition.GetTeamConfig*
+    content.vb: Public MustOverride Function GetDefaultTeamConfig() As GamemodeTeamConfig()
+  overload: Global.BaseGamemodeDefinition.GetDefaultTeamConfig*
 - uid: Global.BaseGamemodeDefinition.GetMatchHandler
   commentId: M:Global.BaseGamemodeDefinition.GetMatchHandler
   id: GetMatchHandler
@@ -105,7 +225,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetMatchHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - rwby
   namespace: Global
@@ -133,7 +253,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetQuantumDataAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Gamemodes/BaseGamemodeDefinition.cs
-    startLine: 9
+    startLine: 13
   assemblies:
   - rwby
   namespace: Global
@@ -337,6 +457,25 @@ references:
     href: Global.IContentDefinition.html#IContentDefinition_Unload
   - name: (
   - name: )
+- uid: Global.IContentDefinition.GetAssetSoftReference
+  commentId: M:Global.IContentDefinition.GetAssetSoftReference
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  name: GetAssetSoftReference()
+  nameWithType: IContentDefinition.GetAssetSoftReference()
+  fullName: IContentDefinition.GetAssetSoftReference()
+  spec.csharp:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -350,12 +489,81 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
-- uid: Global.BaseGamemodeDefinition.GetTeamConfig*
-  commentId: Overload:Global.BaseGamemodeDefinition.GetTeamConfig
-  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetTeamConfig
-  name: GetTeamConfig
-  nameWithType: BaseGamemodeDefinition.GetTeamConfig
-  fullName: BaseGamemodeDefinition.GetTeamConfig
+- uid: Global.BaseGamemodeDefinition.DefaultSettings*
+  commentId: Overload:Global.BaseGamemodeDefinition.DefaultSettings
+  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_DefaultSettings
+  name: DefaultSettings
+  nameWithType: BaseGamemodeDefinition.DefaultSettings
+  fullName: BaseGamemodeDefinition.DefaultSettings
+- uid: Quantum.GamemodeSettingsBase
+  commentId: T:Quantum.GamemodeSettingsBase
+  parent: Quantum
+  href: Quantum.GamemodeSettingsBase.html
+  name: GamemodeSettingsBase
+  nameWithType: GamemodeSettingsBase
+  fullName: Quantum.GamemodeSettingsBase
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Global.BaseGamemodeDefinition.MinimumPlayers*
+  commentId: Overload:Global.BaseGamemodeDefinition.MinimumPlayers
+  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_MinimumPlayers
+  name: MinimumPlayers
+  nameWithType: BaseGamemodeDefinition.MinimumPlayers
+  fullName: BaseGamemodeDefinition.MinimumPlayers
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Global.BaseGamemodeDefinition.MaximumPlayers*
+  commentId: Overload:Global.BaseGamemodeDefinition.MaximumPlayers
+  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_MaximumPlayers
+  name: MaximumPlayers
+  nameWithType: BaseGamemodeDefinition.MaximumPlayers
+  fullName: BaseGamemodeDefinition.MaximumPlayers
+- uid: Global.BaseGamemodeDefinition.GetGamemodeTeamTypes*
+  commentId: Overload:Global.BaseGamemodeDefinition.GetGamemodeTeamTypes
+  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetGamemodeTeamTypes
+  name: GetGamemodeTeamTypes
+  nameWithType: BaseGamemodeDefinition.GetGamemodeTeamTypes
+  fullName: BaseGamemodeDefinition.GetGamemodeTeamTypes
+- uid: Global.GamemodeTeamTypeConfig[]
+  isExternal: true
+  href: GamemodeTeamTypeConfig.html
+  name: GamemodeTeamTypeConfig[]
+  nameWithType: GamemodeTeamTypeConfig[]
+  fullName: GamemodeTeamTypeConfig[]
+  nameWithType.vb: GamemodeTeamTypeConfig()
+  fullName.vb: GamemodeTeamTypeConfig()
+  name.vb: GamemodeTeamTypeConfig()
+  spec.csharp:
+  - uid: Global.GamemodeTeamTypeConfig
+    name: GamemodeTeamTypeConfig
+    href: GamemodeTeamTypeConfig.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.GamemodeTeamTypeConfig
+    name: GamemodeTeamTypeConfig
+    href: GamemodeTeamTypeConfig.html
+  - name: (
+  - name: )
+- uid: Global.BaseGamemodeDefinition.GetDefaultTeamConfig*
+  commentId: Overload:Global.BaseGamemodeDefinition.GetDefaultTeamConfig
+  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetDefaultTeamConfig
+  name: GetDefaultTeamConfig
+  nameWithType: BaseGamemodeDefinition.GetDefaultTeamConfig
+  fullName: BaseGamemodeDefinition.GetDefaultTeamConfig
 - uid: Global.GamemodeTeamConfig[]
   isExternal: true
   href: GamemodeTeamConfig.html
@@ -403,9 +611,3 @@ references:
   name: GamemodeQuantumData
   nameWithType: GamemodeQuantumData
   fullName: Quantum.GamemodeQuantumData
-- uid: Quantum
-  commentId: N:Quantum
-  href: Quantum.html
-  name: Quantum
-  nameWithType: Quantum
-  fullName: Quantum

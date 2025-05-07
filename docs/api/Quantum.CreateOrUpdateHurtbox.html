@@ -102,7 +102,7 @@ Class CreateOrUpdateHurtbox  <a class="header-action link-secondary" title="View
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class CreateOrUpdateHurtbox : HNSFStateAction</code></pre>
+public class CreateOrUpdateHurtbox : HNSFStateAction, ILogSource</code></pre>
   </div>
 
 
@@ -120,6 +120,12 @@ public class CreateOrUpdateHurtbox : HNSFStateAction</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ILogSource</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -232,14 +238,15 @@ public class CreateOrUpdateHurtbox : HNSFStateAction</code></pre>
 
   <h3 id="Quantum_CreateOrUpdateHurtbox_boxExtents" data-uid="Quantum.CreateOrUpdateHurtbox.boxExtents">
   boxExtents
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs&amp;version=GBdev&amp;line=15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs&amp;version=GBdev&amp;line=17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FPVector3 boxExtents</code></pre>
+    <pre><code class="lang-csharp hljs">[DrawIf(&quot;shapeType&quot;, 2, CompareOperator.Equal, DrawIfMode.ReadOnly)]
+public FPVector3 boxExtents</code></pre>
   </div>
 
 
@@ -292,7 +299,7 @@ public class CreateOrUpdateHurtbox : HNSFStateAction</code></pre>
 
   <h3 id="Quantum_CreateOrUpdateHurtbox_offset" data-uid="Quantum.CreateOrUpdateHurtbox.offset">
   offset
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs&amp;version=GBdev&amp;line=16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -352,14 +359,15 @@ public class CreateOrUpdateHurtbox : HNSFStateAction</code></pre>
 
   <h3 id="Quantum_CreateOrUpdateHurtbox_radius" data-uid="Quantum.CreateOrUpdateHurtbox.radius">
   radius
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs&amp;version=GBdev&amp;line=14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs&amp;version=GBdev&amp;line=15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FP radius</code></pre>
+    <pre><code class="lang-csharp hljs">[DrawIf(&quot;shapeType&quot;, 1, CompareOperator.Equal, DrawIfMode.ReadOnly)]
+public FP radius</code></pre>
   </div>
 
 
@@ -447,7 +455,7 @@ public class CreateOrUpdateHurtbox : HNSFStateAction</code></pre>
 
   <h3 id="Quantum_CreateOrUpdateHurtbox_ExecuteAction_Quantum_Frame_Quantum_EntityRef_Photon_Deterministic_FP_Quantum_HNSFStateContext__" data-uid="Quantum.CreateOrUpdateHurtbox.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)">
   ExecuteAction(Frame, EntityRef, FP, ref HNSFStateContext)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs&amp;version=GBdev&amp;line=20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

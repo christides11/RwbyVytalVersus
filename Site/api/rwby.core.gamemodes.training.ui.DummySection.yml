@@ -19,12 +19,13 @@ items:
   - rwby.core.gamemodes.training.ui.DummySection.controlsElement
   - rwby.core.gamemodes.training.ui.DummySection.counterElement
   - rwby.core.gamemodes.training.ui.DummySection.dummyIndex
+  - rwby.core.gamemodes.training.ui.DummySection.fighterSelectScreen
   - rwby.core.gamemodes.training.ui.DummySection.fighterSpawnLabel
   - rwby.core.gamemodes.training.ui.DummySection.framesHoldBlockAfterStunOver
   - rwby.core.gamemodes.training.ui.DummySection.groundRecovery
   - rwby.core.gamemodes.training.ui.DummySection.groundRecoveryDelay
   - rwby.core.gamemodes.training.ui.DummySection.label
-  - rwby.core.gamemodes.training.ui.DummySection.menu
+  - rwby.core.gamemodes.training.ui.DummySection.menuHandler
   - rwby.core.gamemodes.training.ui.DummySection.techRollDirection
   - rwby.core.gamemodes.training.ui.DummySection.throwEscape
   langs:
@@ -41,7 +42,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: DummySection
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -72,7 +73,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: dummyIndex
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -81,33 +82,45 @@ items:
     return:
       type: System.Byte
     content.vb: Public dummyIndex As Byte
-- uid: rwby.core.gamemodes.training.ui.DummySection.menu
-  commentId: F:rwby.core.gamemodes.training.ui.DummySection.menu
-  id: menu
+- uid: rwby.core.gamemodes.training.ui.DummySection.menuHandler
+  commentId: F:rwby.core.gamemodes.training.ui.DummySection.menuHandler
+  id: menuHandler
   parent: rwby.core.gamemodes.training.ui.DummySection
   langs:
   - csharp
   - vb
-  name: menu
-  nameWithType: DummySection.menu
-  fullName: rwby.core.gamemodes.training.ui.DummySection.menu
+  name: menuHandler
+  nameWithType: DummySection.menuHandler
+  fullName: rwby.core.gamemodes.training.ui.DummySection.menuHandler
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: menu
+    id: menuHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
   syntax:
-    content: public PauseMenuDummySettingsHandler menu
+    content: >-
+      [FormerlySerializedAs("menu")]
+
+      public PauseMenuHandlerDummySettingsMenu menuHandler
     return:
-      type: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
-    content.vb: Public menu As PauseMenuDummySettingsHandler
+      type: rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
+    content.vb: >-
+      <FormerlySerializedAs("menu")>
+
+      Public menuHandler As PauseMenuHandlerDummySettingsMenu
+  attributes:
+  - type: UnityEngine.Serialization.FormerlySerializedAsAttribute
+    ctor: UnityEngine.Serialization.FormerlySerializedAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: menu
 - uid: rwby.core.gamemodes.training.ui.DummySection.label
   commentId: F:rwby.core.gamemodes.training.ui.DummySection.label
   id: label
@@ -126,7 +139,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: label
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -165,7 +178,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: fighterSpawnLabel
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -192,7 +205,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: controlsElement
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -219,7 +232,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: behaviourElement
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -246,7 +259,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: counterElement
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -273,7 +286,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: blockBehaviour
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -300,7 +313,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: blockCount
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -327,7 +340,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: framesHoldBlockAfterStunOver
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -354,7 +367,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: blockDirection
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -381,7 +394,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: throwEscape
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -408,7 +421,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: groundRecovery
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 26
+    startLine: 27
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -435,7 +448,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: groundRecoveryDelay
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 27
+    startLine: 28
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -462,7 +475,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: techRollDirection
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 28
+    startLine: 29
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -489,7 +502,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: aerialRecovery
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -516,7 +529,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: aerialRecoveryDirection
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -525,6 +538,45 @@ items:
     return:
       type: rwby.ui.MenuLabelOptionElement
     content.vb: Public aerialRecoveryDirection As MenuLabelOptionElement
+- uid: rwby.core.gamemodes.training.ui.DummySection.fighterSelectScreen
+  commentId: F:rwby.core.gamemodes.training.ui.DummySection.fighterSelectScreen
+  id: fighterSelectScreen
+  parent: rwby.core.gamemodes.training.ui.DummySection
+  langs:
+  - csharp
+  - vb
+  name: fighterSelectScreen
+  nameWithType: DummySection.fighterSelectScreen
+  fullName: rwby.core.gamemodes.training.ui.DummySection.fighterSelectScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: fighterSelectScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
+    startLine: 34
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training.ui
+  syntax:
+    content: >-
+      [Header("Screens")]
+
+      public DummySettingsFighterSelectScreen fighterSelectScreen
+    return:
+      type: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen
+    content.vb: >-
+      <Header("Screens")>
+
+      Public fighterSelectScreen As DummySettingsFighterSelectScreen
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Screens
 - uid: rwby.core.gamemodes.training.ui.DummySection.Initialize(rwby.core.gamemodes.training.TrainingMatchHandler,System.Byte)
   commentId: M:rwby.core.gamemodes.training.ui.DummySection.Initialize(rwby.core.gamemodes.training.TrainingMatchHandler,System.Byte)
   id: Initialize(rwby.core.gamemodes.training.TrainingMatchHandler,System.Byte)
@@ -543,7 +595,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Initialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 32
+    startLine: 36
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -577,7 +629,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UpdateSettings
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 69
+    startLine: 73
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -603,7 +655,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SetSettings
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 96
+    startLine: 101
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -629,7 +681,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BUTTON_SelectFighter
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 114
+    startLine: 119
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -655,7 +707,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BUTTON_Apply
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySection.cs
-    startLine: 123
+    startLine: 128
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -773,13 +825,13 @@ references:
   nameWithType.vb: Byte
   fullName.vb: Byte
   name.vb: Byte
-- uid: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
-  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
+- uid: rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
+  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
   parent: rwby.core.gamemodes.training.ui
-  href: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.html
-  name: PauseMenuDummySettingsHandler
-  nameWithType: PauseMenuDummySettingsHandler
-  fullName: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
+  href: rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu.html
+  name: PauseMenuHandlerDummySettingsMenu
+  nameWithType: PauseMenuHandlerDummySettingsMenu
+  fullName: rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
 - uid: TMPro.TextMeshProUGUI
   commentId: T:TMPro.TextMeshProUGUI
   parent: TMPro
@@ -829,6 +881,13 @@ references:
   name: MenuLabelFloatSliderElement
   nameWithType: MenuLabelFloatSliderElement
   fullName: rwby.ui.MenuLabelFloatSliderElement
+- uid: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen
+  commentId: T:rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen
+  parent: rwby.core.gamemodes.training.ui
+  href: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.html
+  name: DummySettingsFighterSelectScreen
+  nameWithType: DummySettingsFighterSelectScreen
+  fullName: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen
 - uid: rwby.core.gamemodes.training.ui.DummySection.Initialize*
   commentId: Overload:rwby.core.gamemodes.training.ui.DummySection.Initialize
   href: rwby.core.gamemodes.training.ui.DummySection.html#rwby_core_gamemodes_training_ui_DummySection_Initialize_rwby_core_gamemodes_training_TrainingMatchHandler_System_Byte_

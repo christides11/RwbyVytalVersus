@@ -20,13 +20,19 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UpdateParentedTransformSystem
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateParentedTransformSystem.cs
-    startLine: 2
+    startLine: 4
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public class UpdateParentedTransformSystem : SystemMainThreadFilter<UpdateParentedTransformSystem.Filter>'
-    content.vb: Public Class UpdateParentedTransformSystem Inherits SystemMainThreadFilter(Of UpdateParentedTransformSystem.Filter)
+    content: >-
+      [Preserve]
+
+      public class UpdateParentedTransformSystem : SystemMainThreadFilter<UpdateParentedTransformSystem.Filter>
+    content.vb: >-
+      <Preserve>
+
+      Public Class UpdateParentedTransformSystem Inherits SystemMainThreadFilter(Of UpdateParentedTransformSystem.Filter)
   inheritance:
   - System.Object
   - Quantum.SystemBase
@@ -48,6 +54,10 @@ items:
   - Quantum.SystemBase.OnEnabled(Quantum.Frame)
   - Quantum.SystemBase.OnDisabled(Quantum.Frame)
   - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  attributes:
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
 - uid: Quantum.UpdateParentedTransformSystem.Update(Quantum.Frame,Quantum.UpdateParentedTransformSystem.Filter@)
   commentId: M:Quantum.UpdateParentedTransformSystem.Update(Quantum.Frame,Quantum.UpdateParentedTransformSystem.Filter@)
   id: Update(Quantum.Frame,Quantum.UpdateParentedTransformSystem.Filter@)
@@ -66,7 +76,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Update
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateParentedTransformSystem.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - Quantum.Simulation
   namespace: Quantum

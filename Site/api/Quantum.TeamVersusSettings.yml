@@ -5,6 +5,7 @@ items:
   id: TeamVersusSettings
   parent: Quantum
   children:
+  - Quantum.TeamVersusSettings.CreateSettingsAsset
   - Quantum.TeamVersusSettings.matchLength
   - Quantum.TeamVersusSettings.pointsToWin
   langs:
@@ -26,15 +27,28 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public class TeamVersusSettings : GamemodeSettingsBase'
-    content.vb: Public Class TeamVersusSettings Inherits GamemodeSettingsBase
+    content: >-
+      [Serializable]
+
+      public class TeamVersusSettings : GamemodeSettingsBase, ILogSource
+    content.vb: >-
+      <Serializable>
+
+      Public Class TeamVersusSettings Inherits GamemodeSettingsBase Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.GamemodeSettingsBase
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
+  - Quantum.GamemodeSettingsBase.teamTypes
+  - Quantum.GamemodeSettingsBase.teamConfigs
+  - Quantum.GamemodeSettingsBase.fightersPerPlayer
+  - Quantum.GamemodeSettingsBase.initialParticipantsInfo
+  - Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
   - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -45,6 +59,10 @@ items:
   - Quantum.AssetObject.Guid
   - Quantum.AssetObject.Path
   - Quantum.AssetObject.Settings
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
 - uid: Quantum.TeamVersusSettings.matchLength
   commentId: F:Quantum.TeamVersusSettings.matchLength
   id: matchLength
@@ -63,7 +81,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: matchLength
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusSettings.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -90,7 +108,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: pointsToWin
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusSettings.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -99,6 +117,36 @@ items:
     return:
       type: System.Int32
     content.vb: Public pointsToWin As Integer
+- uid: Quantum.TeamVersusSettings.CreateSettingsAsset
+  commentId: M:Quantum.TeamVersusSettings.CreateSettingsAsset
+  id: CreateSettingsAsset
+  parent: Quantum.TeamVersusSettings
+  langs:
+  - csharp
+  - vb
+  name: CreateSettingsAsset()
+  nameWithType: TeamVersusSettings.CreateSettingsAsset()
+  fullName: Quantum.TeamVersusSettings.CreateSettingsAsset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusSettings.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateSettingsAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusSettings.cs
+    startLine: 10
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: public override GamemodeSettingsBase CreateSettingsAsset()
+    return:
+      type: Quantum.GamemodeSettingsBase
+    content.vb: Public Overrides Function CreateSettingsAsset() As GamemodeSettingsBase
+  overridden: Quantum.GamemodeSettingsBase.CreateSettingsAsset
+  overload: Quantum.TeamVersusSettings.CreateSettingsAsset*
 references:
 - uid: Quantum
   commentId: N:Quantum
@@ -145,6 +193,66 @@ references:
   name: GamemodeSettingsBase
   nameWithType: GamemodeSettingsBase
   fullName: Quantum.GamemodeSettingsBase
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
+- uid: Quantum.GamemodeSettingsBase.teamTypes
+  commentId: F:Quantum.GamemodeSettingsBase.teamTypes
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_teamTypes
+  name: teamTypes
+  nameWithType: GamemodeSettingsBase.teamTypes
+  fullName: Quantum.GamemodeSettingsBase.teamTypes
+- uid: Quantum.GamemodeSettingsBase.teamConfigs
+  commentId: F:Quantum.GamemodeSettingsBase.teamConfigs
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_teamConfigs
+  name: teamConfigs
+  nameWithType: GamemodeSettingsBase.teamConfigs
+  fullName: Quantum.GamemodeSettingsBase.teamConfigs
+- uid: Quantum.GamemodeSettingsBase.fightersPerPlayer
+  commentId: F:Quantum.GamemodeSettingsBase.fightersPerPlayer
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_fightersPerPlayer
+  name: fightersPerPlayer
+  nameWithType: GamemodeSettingsBase.fightersPerPlayer
+  fullName: Quantum.GamemodeSettingsBase.fightersPerPlayer
+- uid: Quantum.GamemodeSettingsBase.initialParticipantsInfo
+  commentId: F:Quantum.GamemodeSettingsBase.initialParticipantsInfo
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_initialParticipantsInfo
+  name: initialParticipantsInfo
+  nameWithType: GamemodeSettingsBase.initialParticipantsInfo
+  fullName: Quantum.GamemodeSettingsBase.initialParticipantsInfo
+- uid: Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
+  commentId: M:Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_FillBaseSettings_Quantum_GamemodeSettingsBase_
+  name: FillBaseSettings(GamemodeSettingsBase)
+  nameWithType: GamemodeSettingsBase.FillBaseSettings(GamemodeSettingsBase)
+  fullName: Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
+  spec.csharp:
+  - uid: Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
+    name: FillBaseSettings
+    href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_FillBaseSettings_Quantum_GamemodeSettingsBase_
+  - name: (
+  - uid: Quantum.GamemodeSettingsBase
+    name: GamemodeSettingsBase
+    href: Quantum.GamemodeSettingsBase.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
+    name: FillBaseSettings
+    href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_FillBaseSettings_Quantum_GamemodeSettingsBase_
+  - name: (
+  - uid: Quantum.GamemodeSettingsBase
+    name: GamemodeSettingsBase
+    href: Quantum.GamemodeSettingsBase.html
+  - name: )
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject
@@ -466,3 +574,28 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: Quantum.GamemodeSettingsBase.CreateSettingsAsset
+  commentId: M:Quantum.GamemodeSettingsBase.CreateSettingsAsset
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_CreateSettingsAsset
+  name: CreateSettingsAsset()
+  nameWithType: GamemodeSettingsBase.CreateSettingsAsset()
+  fullName: Quantum.GamemodeSettingsBase.CreateSettingsAsset()
+  spec.csharp:
+  - uid: Quantum.GamemodeSettingsBase.CreateSettingsAsset
+    name: CreateSettingsAsset
+    href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_CreateSettingsAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.GamemodeSettingsBase.CreateSettingsAsset
+    name: CreateSettingsAsset
+    href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_CreateSettingsAsset
+  - name: (
+  - name: )
+- uid: Quantum.TeamVersusSettings.CreateSettingsAsset*
+  commentId: Overload:Quantum.TeamVersusSettings.CreateSettingsAsset
+  href: Quantum.TeamVersusSettings.html#Quantum_TeamVersusSettings_CreateSettingsAsset
+  name: CreateSettingsAsset
+  nameWithType: TeamVersusSettings.CreateSettingsAsset
+  fullName: Quantum.TeamVersusSettings.CreateSettingsAsset

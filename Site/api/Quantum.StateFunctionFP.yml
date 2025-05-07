@@ -28,11 +28,11 @@ items:
     content: >-
       [Serializable]
 
-      public class StateFunctionFP : HNSFStateFunction<FP>
+      public class StateFunctionFP : HNSFStateFunction<FP>, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class StateFunctionFP Inherits HNSFStateFunction(Of FP)
+      Public Class StateFunctionFP Inherits HNSFStateFunction(Of FP) Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -48,6 +48,8 @@ items:
   - Quantum.GetHitboxHitCountFunction
   - Quantum.RandomFPFunction
   - Quantum.RemapFPFunction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{Photon.Deterministic.FP}.Label
   - Quantum.HNSFStateFunction{Photon.Deterministic.FP}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -182,6 +184,13 @@ references:
     name: FP
     isExternal: true
   - name: )
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{Photon.Deterministic.FP}.Label
   commentId: F:Quantum.HNSFStateFunction{Photon.Deterministic.FP}.Label
   parent: Quantum.HNSFStateFunction{Photon.Deterministic.FP}

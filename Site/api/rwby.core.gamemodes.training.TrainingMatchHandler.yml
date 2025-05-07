@@ -5,6 +5,7 @@ items:
   id: TrainingMatchHandler
   parent: rwby.core.gamemodes.training
   children:
+  - rwby.core.gamemodes.training.TrainingMatchHandler.ApplyGamemodeSettingsFromSettingsScreen(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
   - rwby.core.gamemodes.training.TrainingMatchHandler.GetGamemodeSettings
   - rwby.core.gamemodes.training.TrainingMatchHandler.GetLocalPlayerCamera(Quantum.PlayerRef)
   - rwby.core.gamemodes.training.TrainingMatchHandler.GetLocalPlayerVirtualCam(Quantum.PlayerRef)
@@ -12,11 +13,9 @@ items:
   - rwby.core.gamemodes.training.TrainingMatchHandler.LocalPlayerEntitys
   - rwby.core.gamemodes.training.TrainingMatchHandler.PollInput(Quantum.CallbackPollInput)
   - rwby.core.gamemodes.training.TrainingMatchHandler.SetBGM(rwby.BaseSongDefinition)
-  - rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
-  - rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
-  - rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
-  - rwby.core.gamemodes.training.TrainingMatchHandler.Setup
+  - rwby.core.gamemodes.training.TrainingMatchHandler.Setup(Quantum.RuntimeConfig)
   - rwby.core.gamemodes.training.TrainingMatchHandler.Teardown
+  - rwby.core.gamemodes.training.TrainingMatchHandler.UI_FillGamemodeSettings(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
   - rwby.core.gamemodes.training.TrainingMatchHandler.entityViewUpdater
   - rwby.core.gamemodes.training.TrainingMatchHandler.fighterEventManager
   - rwby.core.gamemodes.training.TrainingMatchHandler.hudHandler
@@ -24,9 +23,8 @@ items:
   - rwby.core.gamemodes.training.TrainingMatchHandler.localPlayerCams
   - rwby.core.gamemodes.training.TrainingMatchHandler.localPlayerEntitys
   - rwby.core.gamemodes.training.TrainingMatchHandler.localPlayerToGlobalPlayer
-  - rwby.core.gamemodes.training.TrainingMatchHandler.localSelectedCharacters
-  - rwby.core.gamemodes.training.TrainingMatchHandler.playerCamLayers
   - rwby.core.gamemodes.training.TrainingMatchHandler.settingsAsset
+  - rwby.core.gamemodes.training.TrainingMatchHandler.settingsUiHandler
   - rwby.core.gamemodes.training.TrainingMatchHandler.soundManager
   - rwby.core.gamemodes.training.TrainingMatchHandler.vfxManager
   langs:
@@ -60,9 +58,11 @@ items:
   implements:
   - rwby.ILocalEntityHolder
   inheritedMembers:
+  - rwby.MatchHandlerBase.OnQuitMatchRequested
   - rwby.MatchHandlerBase.OnMatchEnded
   - rwby.MatchHandlerBase.gameRunner
   - rwby.MatchHandlerBase.gamemodeSystemConfig
+  - rwby.MatchHandlerBase.localPlayerParticipantIds
 - uid: rwby.core.gamemodes.training.TrainingMatchHandler.soundManager
   commentId: F:rwby.core.gamemodes.training.TrainingMatchHandler.soundManager
   id: soundManager
@@ -283,60 +283,6 @@ items:
     content.vb: Public Overrides ReadOnly Property LocalPlayerEntitys As Dictionary(Of Integer, QuantumEntityView)
   overridden: rwby.MatchHandlerBase.LocalPlayerEntitys
   overload: rwby.core.gamemodes.training.TrainingMatchHandler.LocalPlayerEntitys*
-- uid: rwby.core.gamemodes.training.TrainingMatchHandler.localSelectedCharacters
-  commentId: F:rwby.core.gamemodes.training.TrainingMatchHandler.localSelectedCharacters
-  id: localSelectedCharacters
-  parent: rwby.core.gamemodes.training.TrainingMatchHandler
-  langs:
-  - csharp
-  - vb
-  name: localSelectedCharacters
-  nameWithType: TrainingMatchHandler.localSelectedCharacters
-  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.localSelectedCharacters
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: localSelectedCharacters
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 25
-  assemblies:
-  - Assembly-CSharp
-  namespace: rwby.core.gamemodes.training
-  syntax:
-    content: public List<IFighterDefinition> localSelectedCharacters
-    return:
-      type: System.Collections.Generic.List{IFighterDefinition}
-    content.vb: Public localSelectedCharacters As List(Of IFighterDefinition)
-- uid: rwby.core.gamemodes.training.TrainingMatchHandler.playerCamLayers
-  commentId: F:rwby.core.gamemodes.training.TrainingMatchHandler.playerCamLayers
-  id: playerCamLayers
-  parent: rwby.core.gamemodes.training.TrainingMatchHandler
-  langs:
-  - csharp
-  - vb
-  name: playerCamLayers
-  nameWithType: TrainingMatchHandler.playerCamLayers
-  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.playerCamLayers
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: playerCamLayers
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 30
-  assemblies:
-  - Assembly-CSharp
-  namespace: rwby.core.gamemodes.training
-  syntax:
-    content: public string[] playerCamLayers
-    return:
-      type: System.String[]
-    content.vb: Public playerCamLayers As String()
 - uid: rwby.core.gamemodes.training.TrainingMatchHandler.entityViewUpdater
   commentId: F:rwby.core.gamemodes.training.TrainingMatchHandler.entityViewUpdater
   id: entityViewUpdater
@@ -355,7 +301,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: entityViewUpdater
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 32
+    startLine: 27
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -382,7 +328,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: settingsAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 34
+    startLine: 29
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -409,7 +355,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hudHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 36
+    startLine: 31
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -418,6 +364,33 @@ items:
     return:
       type: rwby.core.gamemodes.training.TrainingHUDHandler
     content.vb: Public hudHandler As TrainingHUDHandler
+- uid: rwby.core.gamemodes.training.TrainingMatchHandler.settingsUiHandler
+  commentId: F:rwby.core.gamemodes.training.TrainingMatchHandler.settingsUiHandler
+  id: settingsUiHandler
+  parent: rwby.core.gamemodes.training.TrainingMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: settingsUiHandler
+  nameWithType: TrainingMatchHandler.settingsUiHandler
+  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.settingsUiHandler
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: settingsUiHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
+    startLine: 32
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  syntax:
+    content: public GamemodeTrainingSettingsUIHandler settingsUiHandler
+    return:
+      type: rwby.core.gamemodes.training.ui.GamemodeTrainingSettingsUIHandler
+    content.vb: Public settingsUiHandler As GamemodeTrainingSettingsUIHandler
 - uid: rwby.core.gamemodes.training.TrainingMatchHandler.hudInstances
   commentId: F:rwby.core.gamemodes.training.TrainingMatchHandler.hudInstances
   id: hudInstances
@@ -436,7 +409,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hudInstances
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 38
+    startLine: 34
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -445,16 +418,16 @@ items:
     return:
       type: System.Collections.Generic.Dictionary{System.Int32,rwby.core.gamemodes.training.TrainingHUDHandler}
     content.vb: Public hudInstances As Dictionary(Of Integer, TrainingHUDHandler)
-- uid: rwby.core.gamemodes.training.TrainingMatchHandler.Setup
-  commentId: M:rwby.core.gamemodes.training.TrainingMatchHandler.Setup
-  id: Setup
+- uid: rwby.core.gamemodes.training.TrainingMatchHandler.Setup(Quantum.RuntimeConfig)
+  commentId: M:rwby.core.gamemodes.training.TrainingMatchHandler.Setup(Quantum.RuntimeConfig)
+  id: Setup(Quantum.RuntimeConfig)
   parent: rwby.core.gamemodes.training.TrainingMatchHandler
   langs:
   - csharp
   - vb
-  name: Setup()
-  nameWithType: TrainingMatchHandler.Setup()
-  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.Setup()
+  name: Setup(RuntimeConfig)
+  nameWithType: TrainingMatchHandler.Setup(RuntimeConfig)
+  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.Setup(Quantum.RuntimeConfig)
   type: Method
   source:
     remote:
@@ -463,17 +436,20 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Setup
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 64
+    startLine: 60
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
   example: []
   syntax:
-    content: public override UniTask<bool> Setup()
+    content: public override UniTask<bool> Setup(RuntimeConfig runtimeConfig)
+    parameters:
+    - id: runtimeConfig
+      type: Quantum.RuntimeConfig
     return:
       type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
-    content.vb: Public Overrides Function Setup() As UniTask(Of Boolean)
-  overridden: rwby.MatchHandlerBase.Setup
+    content.vb: Public Overrides Function Setup(runtimeConfig As RuntimeConfig) As UniTask(Of Boolean)
+  overridden: rwby.MatchHandlerBase.Setup(Quantum.RuntimeConfig)
   overload: rwby.core.gamemodes.training.TrainingMatchHandler.Setup*
 - uid: rwby.core.gamemodes.training.TrainingMatchHandler.Teardown
   commentId: M:rwby.core.gamemodes.training.TrainingMatchHandler.Teardown
@@ -493,7 +469,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Teardown
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 71
+    startLine: 116
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -523,7 +499,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetGamemodeSettings
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 104
+    startLine: 148
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -535,108 +511,6 @@ items:
     content.vb: Public Overrides Function GetGamemodeSettings() As GamemodeSettingsBase
   overridden: rwby.MatchHandlerBase.GetGamemodeSettings
   overload: rwby.core.gamemodes.training.TrainingMatchHandler.GetGamemodeSettings*
-- uid: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
-  commentId: M:rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
-  id: SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
-  parent: rwby.core.gamemodes.training.TrainingMatchHandler
-  langs:
-  - csharp
-  - vb
-  name: SetLocalPlayerCharacters(List<IFighterDefinition>)
-  nameWithType: TrainingMatchHandler.SetLocalPlayerCharacters(List<IFighterDefinition>)
-  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerCharacters(System.Collections.Generic.List<IFighterDefinition>)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: SetLocalPlayerCharacters
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 181
-  assemblies:
-  - Assembly-CSharp
-  namespace: rwby.core.gamemodes.training
-  example: []
-  syntax:
-    content: public override void SetLocalPlayerCharacters(List<IFighterDefinition> fighterDefinitions)
-    parameters:
-    - id: fighterDefinitions
-      type: System.Collections.Generic.List{IFighterDefinition}
-    content.vb: Public Overrides Sub SetLocalPlayerCharacters(fighterDefinitions As List(Of IFighterDefinition))
-  overridden: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
-  overload: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerCharacters*
-  nameWithType.vb: TrainingMatchHandler.SetLocalPlayerCharacters(List(Of IFighterDefinition))
-  fullName.vb: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerCharacters(System.Collections.Generic.List(Of IFighterDefinition))
-  name.vb: SetLocalPlayerCharacters(List(Of IFighterDefinition))
-- uid: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
-  commentId: M:rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
-  id: SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
-  parent: rwby.core.gamemodes.training.TrainingMatchHandler
-  langs:
-  - csharp
-  - vb
-  name: SetLocalPlayerSpecials(List<List<AssetRef<HNSFSpecialSet>>>)
-  nameWithType: TrainingMatchHandler.SetLocalPlayerSpecials(List<List<AssetRef<HNSFSpecialSet>>>)
-  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerSpecials(System.Collections.Generic.List<System.Collections.Generic.List<Quantum.AssetRef<Quantum.HNSFSpecialSet>>>)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: SetLocalPlayerSpecials
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 187
-  assemblies:
-  - Assembly-CSharp
-  namespace: rwby.core.gamemodes.training
-  example: []
-  syntax:
-    content: public override void SetLocalPlayerSpecials(List<List<AssetRef<HNSFSpecialSet>>> fighterSpecials)
-    parameters:
-    - id: fighterSpecials
-      type: System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}}
-    content.vb: Public Overrides Sub SetLocalPlayerSpecials(fighterSpecials As List(Of List(Of AssetRef(Of HNSFSpecialSet))))
-  overridden: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
-  overload: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerSpecials*
-  nameWithType.vb: TrainingMatchHandler.SetLocalPlayerSpecials(List(Of List(Of AssetRef(Of HNSFSpecialSet))))
-  fullName.vb: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerSpecials(System.Collections.Generic.List(Of System.Collections.Generic.List(Of Quantum.AssetRef(Of Quantum.HNSFSpecialSet))))
-  name.vb: SetLocalPlayerSpecials(List(Of List(Of AssetRef(Of HNSFSpecialSet))))
-- uid: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
-  commentId: M:rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
-  id: SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
-  parent: rwby.core.gamemodes.training.TrainingMatchHandler
-  langs:
-  - csharp
-  - vb
-  name: SetLocalPlayerTeams(List<int>)
-  nameWithType: TrainingMatchHandler.SetLocalPlayerTeams(List<int>)
-  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerTeams(System.Collections.Generic.List<int>)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: SetLocalPlayerTeams
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 193
-  assemblies:
-  - Assembly-CSharp
-  namespace: rwby.core.gamemodes.training
-  example: []
-  syntax:
-    content: public override void SetLocalPlayerTeams(List<int> playerTeams)
-    parameters:
-    - id: playerTeams
-      type: System.Collections.Generic.List{System.Int32}
-    content.vb: Public Overrides Sub SetLocalPlayerTeams(playerTeams As List(Of Integer))
-  overridden: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
-  overload: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerTeams*
-  nameWithType.vb: TrainingMatchHandler.SetLocalPlayerTeams(List(Of Integer))
-  fullName.vb: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerTeams(System.Collections.Generic.List(Of Integer))
-  name.vb: SetLocalPlayerTeams(List(Of Integer))
 - uid: rwby.core.gamemodes.training.TrainingMatchHandler.SetBGM(rwby.BaseSongDefinition)
   commentId: M:rwby.core.gamemodes.training.TrainingMatchHandler.SetBGM(rwby.BaseSongDefinition)
   id: SetBGM(rwby.BaseSongDefinition)
@@ -655,7 +529,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SetBGM
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 199
+    startLine: 214
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -686,7 +560,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetLocalPlayerCamera
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 267
+    startLine: 329
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -719,7 +593,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetLocalPlayerVirtualCam
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 272
+    startLine: 334
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -752,7 +626,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: PollInput
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
-    startLine: 286
+    startLine: 339
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -763,6 +637,72 @@ items:
       type: Quantum.CallbackPollInput
     content.vb: Public Sub PollInput(callback As CallbackPollInput)
   overload: rwby.core.gamemodes.training.TrainingMatchHandler.PollInput*
+- uid: rwby.core.gamemodes.training.TrainingMatchHandler.UI_FillGamemodeSettings(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  commentId: M:rwby.core.gamemodes.training.TrainingMatchHandler.UI_FillGamemodeSettings(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  id: UI_FillGamemodeSettings(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  parent: rwby.core.gamemodes.training.TrainingMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: UI_FillGamemodeSettings(VytalMatchSceneGamemodeSettingsScreen, GamemodeSettingsBase)
+  nameWithType: TrainingMatchHandler.UI_FillGamemodeSettings(VytalMatchSceneGamemodeSettingsScreen, GamemodeSettingsBase)
+  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.UI_FillGamemodeSettings(rwby.VytalMatchSceneGamemodeSettingsScreen, Quantum.GamemodeSettingsBase)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UI_FillGamemodeSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
+    startLine: 380
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  example: []
+  syntax:
+    content: public override void UI_FillGamemodeSettings(VytalMatchSceneGamemodeSettingsScreen settingsScreen, GamemodeSettingsBase gamemodeSettings)
+    parameters:
+    - id: settingsScreen
+      type: rwby.VytalMatchSceneGamemodeSettingsScreen
+    - id: gamemodeSettings
+      type: Quantum.GamemodeSettingsBase
+    content.vb: Public Overrides Sub UI_FillGamemodeSettings(settingsScreen As VytalMatchSceneGamemodeSettingsScreen, gamemodeSettings As GamemodeSettingsBase)
+  overridden: rwby.MatchHandlerBase.UI_FillGamemodeSettings(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  overload: rwby.core.gamemodes.training.TrainingMatchHandler.UI_FillGamemodeSettings*
+- uid: rwby.core.gamemodes.training.TrainingMatchHandler.ApplyGamemodeSettingsFromSettingsScreen(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  commentId: M:rwby.core.gamemodes.training.TrainingMatchHandler.ApplyGamemodeSettingsFromSettingsScreen(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  id: ApplyGamemodeSettingsFromSettingsScreen(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  parent: rwby.core.gamemodes.training.TrainingMatchHandler
+  langs:
+  - csharp
+  - vb
+  name: ApplyGamemodeSettingsFromSettingsScreen(VytalMatchSceneGamemodeSettingsScreen, GamemodeSettingsBase)
+  nameWithType: TrainingMatchHandler.ApplyGamemodeSettingsFromSettingsScreen(VytalMatchSceneGamemodeSettingsScreen, GamemodeSettingsBase)
+  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.ApplyGamemodeSettingsFromSettingsScreen(rwby.VytalMatchSceneGamemodeSettingsScreen, Quantum.GamemodeSettingsBase)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ApplyGamemodeSettingsFromSettingsScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingMatchHandler.cs
+    startLine: 386
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  example: []
+  syntax:
+    content: public override void ApplyGamemodeSettingsFromSettingsScreen(VytalMatchSceneGamemodeSettingsScreen settingsScreen, GamemodeSettingsBase gamemodeSettings)
+    parameters:
+    - id: settingsScreen
+      type: rwby.VytalMatchSceneGamemodeSettingsScreen
+    - id: gamemodeSettings
+      type: Quantum.GamemodeSettingsBase
+    content.vb: Public Overrides Sub ApplyGamemodeSettingsFromSettingsScreen(settingsScreen As VytalMatchSceneGamemodeSettingsScreen, gamemodeSettings As GamemodeSettingsBase)
+  overridden: rwby.MatchHandlerBase.ApplyGamemodeSettingsFromSettingsScreen(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  overload: rwby.core.gamemodes.training.TrainingMatchHandler.ApplyGamemodeSettingsFromSettingsScreen*
 references:
 - uid: rwby.core.gamemodes.training
   commentId: N:rwby.core.gamemodes.training
@@ -855,6 +795,12 @@ references:
   name: ILocalEntityHolder
   nameWithType: ILocalEntityHolder
   fullName: rwby.ILocalEntityHolder
+- uid: rwby.MatchHandlerBase.OnQuitMatchRequested
+  commentId: F:rwby.MatchHandlerBase.OnQuitMatchRequested
+  parent: rwby.MatchHandlerBase
+  name: OnQuitMatchRequested
+  nameWithType: MatchHandlerBase.OnQuitMatchRequested
+  fullName: rwby.MatchHandlerBase.OnQuitMatchRequested
 - uid: rwby.MatchHandlerBase.OnMatchEnded
   commentId: F:rwby.MatchHandlerBase.OnMatchEnded
   parent: rwby.MatchHandlerBase
@@ -873,6 +819,12 @@ references:
   name: gamemodeSystemConfig
   nameWithType: MatchHandlerBase.gamemodeSystemConfig
   fullName: rwby.MatchHandlerBase.gamemodeSystemConfig
+- uid: rwby.MatchHandlerBase.localPlayerParticipantIds
+  commentId: F:rwby.MatchHandlerBase.localPlayerParticipantIds
+  parent: rwby.MatchHandlerBase
+  name: localPlayerParticipantIds
+  nameWithType: MatchHandlerBase.localPlayerParticipantIds
+  fullName: rwby.MatchHandlerBase.localPlayerParticipantIds
 - uid: System
   commentId: N:System
   isExternal: true
@@ -1181,90 +1133,6 @@ references:
   name: LocalPlayerEntitys
   nameWithType: TrainingMatchHandler.LocalPlayerEntitys
   fullName: rwby.core.gamemodes.training.TrainingMatchHandler.LocalPlayerEntitys
-- uid: System.Collections.Generic.List{IFighterDefinition}
-  commentId: T:System.Collections.Generic.List{IFighterDefinition}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<IFighterDefinition>
-  nameWithType: List<IFighterDefinition>
-  fullName: System.Collections.Generic.List<IFighterDefinition>
-  nameWithType.vb: List(Of IFighterDefinition)
-  fullName.vb: System.Collections.Generic.List(Of IFighterDefinition)
-  name.vb: List(Of IFighterDefinition)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: Global.IFighterDefinition
-    name: IFighterDefinition
-    href: IFighterDefinition.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Global.IFighterDefinition
-    name: IFighterDefinition
-    href: IFighterDefinition.html
-  - name: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: System.String[]
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string[]
-  nameWithType: string[]
-  fullName: string[]
-  nameWithType.vb: String()
-  fullName.vb: String()
-  name.vb: String()
-  spec.csharp:
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: (
-  - name: )
 - uid: Quantum.QuantumEntityViewUpdater
   commentId: T:Quantum.QuantumEntityViewUpdater
   parent: Quantum
@@ -1291,6 +1159,59 @@ references:
   name: TrainingHUDHandler
   nameWithType: TrainingHUDHandler
   fullName: rwby.core.gamemodes.training.TrainingHUDHandler
+- uid: rwby.core.gamemodes.training.ui.GamemodeTrainingSettingsUIHandler
+  commentId: T:rwby.core.gamemodes.training.ui.GamemodeTrainingSettingsUIHandler
+  parent: rwby.core.gamemodes.training.ui
+  href: rwby.core.gamemodes.training.ui.GamemodeTrainingSettingsUIHandler.html
+  name: GamemodeTrainingSettingsUIHandler
+  nameWithType: GamemodeTrainingSettingsUIHandler
+  fullName: rwby.core.gamemodes.training.ui.GamemodeTrainingSettingsUIHandler
+- uid: rwby.core.gamemodes.training.ui
+  commentId: N:rwby.core.gamemodes.training.ui
+  href: rwby.html
+  name: rwby.core.gamemodes.training.ui
+  nameWithType: rwby.core.gamemodes.training.ui
+  fullName: rwby.core.gamemodes.training.ui
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.gamemodes
+    name: gamemodes
+    href: rwby.core.gamemodes.html
+  - name: .
+  - uid: rwby.core.gamemodes.training
+    name: training
+    href: rwby.core.gamemodes.training.html
+  - name: .
+  - uid: rwby.core.gamemodes.training.ui
+    name: ui
+    href: rwby.core.gamemodes.training.ui.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  - name: .
+  - uid: rwby.core.gamemodes
+    name: gamemodes
+    href: rwby.core.gamemodes.html
+  - name: .
+  - uid: rwby.core.gamemodes.training
+    name: training
+    href: rwby.core.gamemodes.training.html
+  - name: .
+  - uid: rwby.core.gamemodes.training.ui
+    name: ui
+    href: rwby.core.gamemodes.training.ui.html
 - uid: System.Collections.Generic.Dictionary{System.Int32,rwby.core.gamemodes.training.TrainingHUDHandler}
   commentId: T:System.Collections.Generic.Dictionary{System.Int32,rwby.core.gamemodes.training.TrainingHUDHandler}
   parent: System.Collections.Generic
@@ -1336,28 +1257,42 @@ references:
     name: TrainingHUDHandler
     href: rwby.core.gamemodes.training.TrainingHUDHandler.html
   - name: )
-- uid: rwby.MatchHandlerBase.Setup
-  commentId: M:rwby.MatchHandlerBase.Setup
+- uid: rwby.MatchHandlerBase.Setup(Quantum.RuntimeConfig)
+  commentId: M:rwby.MatchHandlerBase.Setup(Quantum.RuntimeConfig)
   parent: rwby.MatchHandlerBase
-  name: Setup()
-  nameWithType: MatchHandlerBase.Setup()
-  fullName: rwby.MatchHandlerBase.Setup()
+  href: Quantum.RuntimeConfig.html
+  name: Setup(RuntimeConfig)
+  nameWithType: MatchHandlerBase.Setup(RuntimeConfig)
+  fullName: rwby.MatchHandlerBase.Setup(Quantum.RuntimeConfig)
   spec.csharp:
-  - uid: rwby.MatchHandlerBase.Setup
+  - uid: rwby.MatchHandlerBase.Setup(Quantum.RuntimeConfig)
     name: Setup
   - name: (
+  - uid: Quantum.RuntimeConfig
+    name: RuntimeConfig
+    href: Quantum.RuntimeConfig.html
   - name: )
   spec.vb:
-  - uid: rwby.MatchHandlerBase.Setup
+  - uid: rwby.MatchHandlerBase.Setup(Quantum.RuntimeConfig)
     name: Setup
   - name: (
+  - uid: Quantum.RuntimeConfig
+    name: RuntimeConfig
+    href: Quantum.RuntimeConfig.html
   - name: )
 - uid: rwby.core.gamemodes.training.TrainingMatchHandler.Setup*
   commentId: Overload:rwby.core.gamemodes.training.TrainingMatchHandler.Setup
-  href: rwby.core.gamemodes.training.TrainingMatchHandler.html#rwby_core_gamemodes_training_TrainingMatchHandler_Setup
+  href: rwby.core.gamemodes.training.TrainingMatchHandler.html#rwby_core_gamemodes_training_TrainingMatchHandler_Setup_Quantum_RuntimeConfig_
   name: Setup
   nameWithType: TrainingMatchHandler.Setup
   fullName: rwby.core.gamemodes.training.TrainingMatchHandler.Setup
+- uid: Quantum.RuntimeConfig
+  commentId: T:Quantum.RuntimeConfig
+  parent: Quantum
+  href: Quantum.RuntimeConfig.html
+  name: RuntimeConfig
+  nameWithType: RuntimeConfig
+  fullName: Quantum.RuntimeConfig
 - uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
   commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
   parent: Cysharp.Threading.Tasks
@@ -1504,263 +1439,6 @@ references:
   name: GamemodeSettingsBase
   nameWithType: GamemodeSettingsBase
   fullName: Quantum.GamemodeSettingsBase
-- uid: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
-  commentId: M:rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
-  parent: rwby.MatchHandlerBase
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: SetLocalPlayerCharacters(List<IFighterDefinition>)
-  nameWithType: MatchHandlerBase.SetLocalPlayerCharacters(List<IFighterDefinition>)
-  fullName: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List<IFighterDefinition>)
-  nameWithType.vb: MatchHandlerBase.SetLocalPlayerCharacters(List(Of IFighterDefinition))
-  fullName.vb: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List(Of IFighterDefinition))
-  name.vb: SetLocalPlayerCharacters(List(Of IFighterDefinition))
-  spec.csharp:
-  - uid: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
-    name: SetLocalPlayerCharacters
-  - name: (
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: Global.IFighterDefinition
-    name: IFighterDefinition
-  - name: '>'
-  - name: )
-  spec.vb:
-  - uid: rwby.MatchHandlerBase.SetLocalPlayerCharacters(System.Collections.Generic.List{IFighterDefinition})
-    name: SetLocalPlayerCharacters
-  - name: (
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Global.IFighterDefinition
-    name: IFighterDefinition
-  - name: )
-  - name: )
-- uid: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerCharacters*
-  commentId: Overload:rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerCharacters
-  href: rwby.core.gamemodes.training.TrainingMatchHandler.html#rwby_core_gamemodes_training_TrainingMatchHandler_SetLocalPlayerCharacters_System_Collections_Generic_List_IFighterDefinition__
-  name: SetLocalPlayerCharacters
-  nameWithType: TrainingMatchHandler.SetLocalPlayerCharacters
-  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerCharacters
-- uid: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
-  commentId: M:rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
-  parent: rwby.MatchHandlerBase
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: SetLocalPlayerSpecials(List<List<AssetRef<HNSFSpecialSet>>>)
-  nameWithType: MatchHandlerBase.SetLocalPlayerSpecials(List<List<AssetRef<HNSFSpecialSet>>>)
-  fullName: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List<System.Collections.Generic.List<Quantum.AssetRef<Quantum.HNSFSpecialSet>>>)
-  nameWithType.vb: MatchHandlerBase.SetLocalPlayerSpecials(List(Of List(Of AssetRef(Of HNSFSpecialSet))))
-  fullName.vb: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List(Of System.Collections.Generic.List(Of Quantum.AssetRef(Of Quantum.HNSFSpecialSet))))
-  name.vb: SetLocalPlayerSpecials(List(Of List(Of AssetRef(Of HNSFSpecialSet))))
-  spec.csharp:
-  - uid: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
-    name: SetLocalPlayerSpecials
-  - name: (
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
-  - name: <
-  - uid: Quantum.HNSFSpecialSet
-    name: HNSFSpecialSet
-  - name: '>'
-  - name: '>'
-  - name: '>'
-  - name: )
-  spec.vb:
-  - uid: rwby.MatchHandlerBase.SetLocalPlayerSpecials(System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}})
-    name: SetLocalPlayerSpecials
-  - name: (
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Quantum.HNSFSpecialSet
-    name: HNSFSpecialSet
-  - name: )
-  - name: )
-  - name: )
-  - name: )
-- uid: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerSpecials*
-  commentId: Overload:rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerSpecials
-  href: rwby.core.gamemodes.training.TrainingMatchHandler.html#rwby_core_gamemodes_training_TrainingMatchHandler_SetLocalPlayerSpecials_System_Collections_Generic_List_System_Collections_Generic_List_Quantum_AssetRef_Quantum_HNSFSpecialSet____
-  name: SetLocalPlayerSpecials
-  nameWithType: TrainingMatchHandler.SetLocalPlayerSpecials
-  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerSpecials
-- uid: System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}}
-  commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{Quantum.AssetRef{Quantum.HNSFSpecialSet}}}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<List<AssetRef<HNSFSpecialSet>>>
-  nameWithType: List<List<AssetRef<HNSFSpecialSet>>>
-  fullName: System.Collections.Generic.List<System.Collections.Generic.List<Quantum.AssetRef<Quantum.HNSFSpecialSet>>>
-  nameWithType.vb: List(Of List(Of AssetRef(Of HNSFSpecialSet)))
-  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.List(Of Quantum.AssetRef(Of Quantum.HNSFSpecialSet)))
-  name.vb: List(Of List(Of AssetRef(Of HNSFSpecialSet)))
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
-  - name: <
-  - uid: Quantum.HNSFSpecialSet
-    name: HNSFSpecialSet
-  - name: '>'
-  - name: '>'
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Quantum.HNSFSpecialSet
-    name: HNSFSpecialSet
-  - name: )
-  - name: )
-  - name: )
-- uid: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
-  commentId: M:rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
-  parent: rwby.MatchHandlerBase
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: SetLocalPlayerTeams(List<int>)
-  nameWithType: MatchHandlerBase.SetLocalPlayerTeams(List<int>)
-  fullName: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List<int>)
-  nameWithType.vb: MatchHandlerBase.SetLocalPlayerTeams(List(Of Integer))
-  fullName.vb: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List(Of Integer))
-  name.vb: SetLocalPlayerTeams(List(Of Integer))
-  spec.csharp:
-  - uid: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
-    name: SetLocalPlayerTeams
-  - name: (
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: '>'
-  - name: )
-  spec.vb:
-  - uid: rwby.MatchHandlerBase.SetLocalPlayerTeams(System.Collections.Generic.List{System.Int32})
-    name: SetLocalPlayerTeams
-  - name: (
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-  - name: )
-- uid: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerTeams*
-  commentId: Overload:rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerTeams
-  href: rwby.core.gamemodes.training.TrainingMatchHandler.html#rwby_core_gamemodes_training_TrainingMatchHandler_SetLocalPlayerTeams_System_Collections_Generic_List_System_Int32__
-  name: SetLocalPlayerTeams
-  nameWithType: TrainingMatchHandler.SetLocalPlayerTeams
-  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.SetLocalPlayerTeams
-- uid: System.Collections.Generic.List{System.Int32}
-  commentId: T:System.Collections.Generic.List{System.Int32}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<int>
-  nameWithType: List<int>
-  fullName: System.Collections.Generic.List<int>
-  nameWithType.vb: List(Of Integer)
-  fullName.vb: System.Collections.Generic.List(Of Integer)
-  name.vb: List(Of Integer)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
 - uid: rwby.MatchHandlerBase.SetBGM(rwby.BaseSongDefinition)
   commentId: M:rwby.MatchHandlerBase.SetBGM(rwby.BaseSongDefinition)
   parent: rwby.MatchHandlerBase
@@ -1886,3 +1564,84 @@ references:
   name: CallbackPollInput
   nameWithType: CallbackPollInput
   fullName: Quantum.CallbackPollInput
+- uid: rwby.MatchHandlerBase.UI_FillGamemodeSettings(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  commentId: M:rwby.MatchHandlerBase.UI_FillGamemodeSettings(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  parent: rwby.MatchHandlerBase
+  href: Quantum.GamemodeSettingsBase.html
+  name: UI_FillGamemodeSettings(VytalMatchSceneGamemodeSettingsScreen, GamemodeSettingsBase)
+  nameWithType: MatchHandlerBase.UI_FillGamemodeSettings(VytalMatchSceneGamemodeSettingsScreen, GamemodeSettingsBase)
+  fullName: rwby.MatchHandlerBase.UI_FillGamemodeSettings(rwby.VytalMatchSceneGamemodeSettingsScreen, Quantum.GamemodeSettingsBase)
+  spec.csharp:
+  - uid: rwby.MatchHandlerBase.UI_FillGamemodeSettings(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+    name: UI_FillGamemodeSettings
+  - name: (
+  - uid: rwby.VytalMatchSceneGamemodeSettingsScreen
+    name: VytalMatchSceneGamemodeSettingsScreen
+  - name: ','
+  - name: " "
+  - uid: Quantum.GamemodeSettingsBase
+    name: GamemodeSettingsBase
+    href: Quantum.GamemodeSettingsBase.html
+  - name: )
+  spec.vb:
+  - uid: rwby.MatchHandlerBase.UI_FillGamemodeSettings(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+    name: UI_FillGamemodeSettings
+  - name: (
+  - uid: rwby.VytalMatchSceneGamemodeSettingsScreen
+    name: VytalMatchSceneGamemodeSettingsScreen
+  - name: ','
+  - name: " "
+  - uid: Quantum.GamemodeSettingsBase
+    name: GamemodeSettingsBase
+    href: Quantum.GamemodeSettingsBase.html
+  - name: )
+- uid: rwby.core.gamemodes.training.TrainingMatchHandler.UI_FillGamemodeSettings*
+  commentId: Overload:rwby.core.gamemodes.training.TrainingMatchHandler.UI_FillGamemodeSettings
+  href: rwby.core.gamemodes.training.TrainingMatchHandler.html#rwby_core_gamemodes_training_TrainingMatchHandler_UI_FillGamemodeSettings_rwby_VytalMatchSceneGamemodeSettingsScreen_Quantum_GamemodeSettingsBase_
+  name: UI_FillGamemodeSettings
+  nameWithType: TrainingMatchHandler.UI_FillGamemodeSettings
+  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.UI_FillGamemodeSettings
+- uid: rwby.VytalMatchSceneGamemodeSettingsScreen
+  commentId: T:rwby.VytalMatchSceneGamemodeSettingsScreen
+  parent: rwby
+  href: rwby.VytalMatchSceneGamemodeSettingsScreen.html
+  name: VytalMatchSceneGamemodeSettingsScreen
+  nameWithType: VytalMatchSceneGamemodeSettingsScreen
+  fullName: rwby.VytalMatchSceneGamemodeSettingsScreen
+- uid: rwby.MatchHandlerBase.ApplyGamemodeSettingsFromSettingsScreen(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  commentId: M:rwby.MatchHandlerBase.ApplyGamemodeSettingsFromSettingsScreen(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+  parent: rwby.MatchHandlerBase
+  href: Quantum.GamemodeSettingsBase.html
+  name: ApplyGamemodeSettingsFromSettingsScreen(VytalMatchSceneGamemodeSettingsScreen, GamemodeSettingsBase)
+  nameWithType: MatchHandlerBase.ApplyGamemodeSettingsFromSettingsScreen(VytalMatchSceneGamemodeSettingsScreen, GamemodeSettingsBase)
+  fullName: rwby.MatchHandlerBase.ApplyGamemodeSettingsFromSettingsScreen(rwby.VytalMatchSceneGamemodeSettingsScreen, Quantum.GamemodeSettingsBase)
+  spec.csharp:
+  - uid: rwby.MatchHandlerBase.ApplyGamemodeSettingsFromSettingsScreen(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+    name: ApplyGamemodeSettingsFromSettingsScreen
+  - name: (
+  - uid: rwby.VytalMatchSceneGamemodeSettingsScreen
+    name: VytalMatchSceneGamemodeSettingsScreen
+  - name: ','
+  - name: " "
+  - uid: Quantum.GamemodeSettingsBase
+    name: GamemodeSettingsBase
+    href: Quantum.GamemodeSettingsBase.html
+  - name: )
+  spec.vb:
+  - uid: rwby.MatchHandlerBase.ApplyGamemodeSettingsFromSettingsScreen(rwby.VytalMatchSceneGamemodeSettingsScreen,Quantum.GamemodeSettingsBase)
+    name: ApplyGamemodeSettingsFromSettingsScreen
+  - name: (
+  - uid: rwby.VytalMatchSceneGamemodeSettingsScreen
+    name: VytalMatchSceneGamemodeSettingsScreen
+  - name: ','
+  - name: " "
+  - uid: Quantum.GamemodeSettingsBase
+    name: GamemodeSettingsBase
+    href: Quantum.GamemodeSettingsBase.html
+  - name: )
+- uid: rwby.core.gamemodes.training.TrainingMatchHandler.ApplyGamemodeSettingsFromSettingsScreen*
+  commentId: Overload:rwby.core.gamemodes.training.TrainingMatchHandler.ApplyGamemodeSettingsFromSettingsScreen
+  href: rwby.core.gamemodes.training.TrainingMatchHandler.html#rwby_core_gamemodes_training_TrainingMatchHandler_ApplyGamemodeSettingsFromSettingsScreen_rwby_VytalMatchSceneGamemodeSettingsScreen_Quantum_GamemodeSettingsBase_
+  name: ApplyGamemodeSettingsFromSettingsScreen
+  nameWithType: TrainingMatchHandler.ApplyGamemodeSettingsFromSettingsScreen
+  fullName: rwby.core.gamemodes.training.TrainingMatchHandler.ApplyGamemodeSettingsFromSettingsScreen

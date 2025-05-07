@@ -6,6 +6,7 @@ items:
   parent: Global
   children:
   - Global.IContentDefinition.Description
+  - Global.IContentDefinition.GetAssetSoftReference
   - Global.IContentDefinition.ID
   - Global.IContentDefinition.Load(System.String)
   - Global.IContentDefinition.LoadAssets
@@ -375,6 +376,34 @@ items:
     content: public virtual void Unload()
     content.vb: Public Overridable Sub Unload()
   overload: Global.IContentDefinition.Unload*
+- uid: Global.IContentDefinition.GetAssetSoftReference
+  commentId: M:Global.IContentDefinition.GetAssetSoftReference
+  id: GetAssetSoftReference
+  parent: Global.IContentDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetAssetSoftReference()
+  nameWithType: IContentDefinition.GetAssetSoftReference()
+  fullName: IContentDefinition.GetAssetSoftReference()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetAssetSoftReference
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/IContentDefinition.cs
+    startLine: 57
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public ModAssetSoftReference GetAssetSoftReference()
+    return:
+      type: Global.ModAssetSoftReference
+    content.vb: Public Function GetAssetSoftReference() As ModAssetSoftReference
+  overload: Global.IContentDefinition.GetAssetSoftReference*
 references:
 - uid: Global
 - uid: System.Object
@@ -686,3 +715,15 @@ references:
   name: Unload
   nameWithType: IContentDefinition.Unload
   fullName: IContentDefinition.Unload
+- uid: Global.IContentDefinition.GetAssetSoftReference*
+  commentId: Overload:Global.IContentDefinition.GetAssetSoftReference
+  href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  name: GetAssetSoftReference
+  nameWithType: IContentDefinition.GetAssetSoftReference
+  fullName: IContentDefinition.GetAssetSoftReference
+- uid: Global.ModAssetSoftReference
+  commentId: T:Global.ModAssetSoftReference
+  href: ModAssetSoftReference.html
+  name: ModAssetSoftReference
+  nameWithType: ModAssetSoftReference
+  fullName: ModAssetSoftReference

@@ -1,0 +1,1397 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.GetInRangeOfTargetLeaf
+  commentId: T:Quantum.GetInRangeOfTargetLeaf
+  id: GetInRangeOfTargetLeaf
+  parent: Quantum
+  children:
+  - Quantum.GetInRangeOfTargetLeaf.Init(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.GetInRangeOfTargetLeaf.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.GetInRangeOfTargetLeaf.paramGoToPosition
+  - Quantum.GetInRangeOfTargetLeaf.paramLastFrameCalculatedGoToPosition
+  - Quantum.GetInRangeOfTargetLeaf.targetBlackboardKey
+  - Quantum.GetInRangeOfTargetLeaf.timeoutAfter
+  - Quantum.GetInRangeOfTargetLeaf.validRange
+  langs:
+  - csharp
+  - vb
+  name: GetInRangeOfTargetLeaf
+  nameWithType: GetInRangeOfTargetLeaf
+  fullName: Quantum.GetInRangeOfTargetLeaf
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetInRangeOfTargetLeaf
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+    startLine: 4
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class GetInRangeOfTargetLeaf : BTLeaf, ILogSource
+    content.vb: >-
+      <Serializable>
+
+      Public Class GetInRangeOfTargetLeaf Inherits BTLeaf Implements ILogSource
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Quantum.AssetObject
+  - Quantum.BTNode
+  - Quantum.BTLeaf
+  implements:
+  - Quantum.ILogSource
+  inheritedMembers:
+  - Quantum.BTLeaf.Services
+  - Quantum.BTLeaf._serviceInstances
+  - Quantum.BTLeaf.OnStartedRunning(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.BTLeaf.OnEnter(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.BTLeaf.OnExit(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.BTLeaf.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.BTLeaf.ServiceInstances
+  - Quantum.BTLeaf.NodeType
+  - Quantum.BTNode.Label
+  - Quantum.BTNode.Id
+  - Quantum.BTNode.OnAbort(Quantum.BTParams,Quantum.AIContext@,Quantum.BTAbort)
+  - Quantum.BTNode.OnReset(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.BTNode.CheckConditions(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.BTNode.OnDynamicRun(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.BTNode.ChildCompletedRunning(Quantum.BTParams,Quantum.BTStatus)
+  - Quantum.BTNode.GetStatus(Quantum.Core.FrameBase,Quantum.BTAgent*)
+  - Quantum.BTNode.SetStatus(Quantum.Core.FrameBase,Quantum.BTStatus,Quantum.BTAgent*)
+  - Quantum.BTNode.GetStatus(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  - Quantum.BTNode.SetStatus(Quantum.FrameThreadSafe,Quantum.BTStatus,Quantum.BTAgent*)
+  - Quantum.BTNode.EvaluateAbortNode(Quantum.BTParams)
+  - Quantum.BTNode.Execute(Quantum.BTParams,Quantum.AIContext@,System.Boolean)
+  - Quantum.AssetObject.Identifier
+  - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Create``1
+  - Quantum.AssetObject.Create(System.Type)
+  - Quantum.AssetObject.Create``1(System.Action{{T}})
+  - Quantum.AssetObject.Reset
+  - Quantum.AssetObject.Guid
+  - Quantum.AssetObject.Path
+  - Quantum.AssetObject.Settings
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Quantum.GetInRangeOfTargetLeaf.targetBlackboardKey
+  commentId: F:Quantum.GetInRangeOfTargetLeaf.targetBlackboardKey
+  id: targetBlackboardKey
+  parent: Quantum.GetInRangeOfTargetLeaf
+  langs:
+  - csharp
+  - vb
+  name: targetBlackboardKey
+  nameWithType: GetInRangeOfTargetLeaf.targetBlackboardKey
+  fullName: Quantum.GetInRangeOfTargetLeaf.targetBlackboardKey
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: targetBlackboardKey
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+    startLine: 7
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AIBlackboardValueKey targetBlackboardKey
+    return:
+      type: Quantum.AIBlackboardValueKey
+    content.vb: Public targetBlackboardKey As AIBlackboardValueKey
+- uid: Quantum.GetInRangeOfTargetLeaf.paramGoToPosition
+  commentId: F:Quantum.GetInRangeOfTargetLeaf.paramGoToPosition
+  id: paramGoToPosition
+  parent: Quantum.GetInRangeOfTargetLeaf
+  langs:
+  - csharp
+  - vb
+  name: paramGoToPosition
+  nameWithType: GetInRangeOfTargetLeaf.paramGoToPosition
+  fullName: Quantum.GetInRangeOfTargetLeaf.paramGoToPosition
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: paramGoToPosition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+    startLine: 8
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AIBlackboardValueKey paramGoToPosition
+    return:
+      type: Quantum.AIBlackboardValueKey
+    content.vb: Public paramGoToPosition As AIBlackboardValueKey
+- uid: Quantum.GetInRangeOfTargetLeaf.paramLastFrameCalculatedGoToPosition
+  commentId: F:Quantum.GetInRangeOfTargetLeaf.paramLastFrameCalculatedGoToPosition
+  id: paramLastFrameCalculatedGoToPosition
+  parent: Quantum.GetInRangeOfTargetLeaf
+  langs:
+  - csharp
+  - vb
+  name: paramLastFrameCalculatedGoToPosition
+  nameWithType: GetInRangeOfTargetLeaf.paramLastFrameCalculatedGoToPosition
+  fullName: Quantum.GetInRangeOfTargetLeaf.paramLastFrameCalculatedGoToPosition
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: paramLastFrameCalculatedGoToPosition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+    startLine: 9
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AIBlackboardValueKey paramLastFrameCalculatedGoToPosition
+    return:
+      type: Quantum.AIBlackboardValueKey
+    content.vb: Public paramLastFrameCalculatedGoToPosition As AIBlackboardValueKey
+- uid: Quantum.GetInRangeOfTargetLeaf.validRange
+  commentId: F:Quantum.GetInRangeOfTargetLeaf.validRange
+  id: validRange
+  parent: Quantum.GetInRangeOfTargetLeaf
+  langs:
+  - csharp
+  - vb
+  name: validRange
+  nameWithType: GetInRangeOfTargetLeaf.validRange
+  fullName: Quantum.GetInRangeOfTargetLeaf.validRange
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: validRange
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+    startLine: 10
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public FP validRange
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: Public validRange As FP
+- uid: Quantum.GetInRangeOfTargetLeaf.timeoutAfter
+  commentId: F:Quantum.GetInRangeOfTargetLeaf.timeoutAfter
+  id: timeoutAfter
+  parent: Quantum.GetInRangeOfTargetLeaf
+  langs:
+  - csharp
+  - vb
+  name: timeoutAfter
+  nameWithType: GetInRangeOfTargetLeaf.timeoutAfter
+  fullName: Quantum.GetInRangeOfTargetLeaf.timeoutAfter
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: timeoutAfter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+    startLine: 11
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public FP timeoutAfter
+    return:
+      type: Photon.Deterministic.FP
+    content.vb: Public timeoutAfter As FP
+- uid: Quantum.GetInRangeOfTargetLeaf.Init(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.GetInRangeOfTargetLeaf.Init(Quantum.BTParams,Quantum.AIContext@)
+  id: Init(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.GetInRangeOfTargetLeaf
+  langs:
+  - csharp
+  - vb
+  name: Init(BTParams, ref AIContext)
+  nameWithType: GetInRangeOfTargetLeaf.Init(BTParams, ref AIContext)
+  fullName: Quantum.GetInRangeOfTargetLeaf.Init(Quantum.BTParams, ref Quantum.AIContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Init
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+    startLine: 13
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: public override void Init(BTParams btParams, ref AIContext aiContext)
+    parameters:
+    - id: btParams
+      type: Quantum.BTParams
+    - id: aiContext
+      type: Quantum.AIContext
+    content.vb: Public Overrides Sub Init(btParams As BTParams, aiContext As AIContext)
+  overridden: Quantum.BTNode.Init(Quantum.BTParams,Quantum.AIContext@)
+  overload: Quantum.GetInRangeOfTargetLeaf.Init*
+  nameWithType.vb: GetInRangeOfTargetLeaf.Init(BTParams, AIContext)
+  fullName.vb: Quantum.GetInRangeOfTargetLeaf.Init(Quantum.BTParams, Quantum.AIContext)
+  name.vb: Init(BTParams, AIContext)
+- uid: Quantum.GetInRangeOfTargetLeaf.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.GetInRangeOfTargetLeaf.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  id: OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.GetInRangeOfTargetLeaf
+  langs:
+  - csharp
+  - vb
+  name: OnUpdate(BTParams, ref AIContext)
+  nameWithType: GetInRangeOfTargetLeaf.OnUpdate(BTParams, ref AIContext)
+  fullName: Quantum.GetInRangeOfTargetLeaf.OnUpdate(Quantum.BTParams, ref Quantum.AIContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnUpdate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/GetInRangeOfTargetLeaf.cs
+    startLine: 18
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: protected override BTStatus OnUpdate(BTParams btParams, ref AIContext aiContext)
+    parameters:
+    - id: btParams
+      type: Quantum.BTParams
+    - id: aiContext
+      type: Quantum.AIContext
+    return:
+      type: Quantum.BTStatus
+    content.vb: Protected Overrides Function OnUpdate(btParams As BTParams, aiContext As AIContext) As BTStatus
+  overridden: Quantum.BTNode.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  overload: Quantum.GetInRangeOfTargetLeaf.OnUpdate*
+  nameWithType.vb: GetInRangeOfTargetLeaf.OnUpdate(BTParams, AIContext)
+  fullName.vb: Quantum.GetInRangeOfTargetLeaf.OnUpdate(Quantum.BTParams, Quantum.AIContext)
+  name.vb: OnUpdate(BTParams, AIContext)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Quantum.AssetObject
+  commentId: T:Quantum.AssetObject
+  parent: Quantum
+  isExternal: true
+  name: AssetObject
+  nameWithType: AssetObject
+  fullName: Quantum.AssetObject
+- uid: Quantum.BTNode
+  commentId: T:Quantum.BTNode
+  parent: Quantum
+  isExternal: true
+  name: BTNode
+  nameWithType: BTNode
+  fullName: Quantum.BTNode
+- uid: Quantum.BTLeaf
+  commentId: T:Quantum.BTLeaf
+  parent: Quantum
+  isExternal: true
+  name: BTLeaf
+  nameWithType: BTLeaf
+  fullName: Quantum.BTLeaf
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
+- uid: Quantum.BTLeaf.Services
+  commentId: F:Quantum.BTLeaf.Services
+  parent: Quantum.BTLeaf
+  isExternal: true
+  name: Services
+  nameWithType: BTLeaf.Services
+  fullName: Quantum.BTLeaf.Services
+- uid: Quantum.BTLeaf._serviceInstances
+  commentId: F:Quantum.BTLeaf._serviceInstances
+  parent: Quantum.BTLeaf
+  isExternal: true
+  name: _serviceInstances
+  nameWithType: BTLeaf._serviceInstances
+  fullName: Quantum.BTLeaf._serviceInstances
+- uid: Quantum.BTLeaf.OnStartedRunning(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTLeaf.OnStartedRunning(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTLeaf
+  isExternal: true
+  name: OnStartedRunning(BTParams, ref AIContext)
+  nameWithType: BTLeaf.OnStartedRunning(BTParams, ref AIContext)
+  fullName: Quantum.BTLeaf.OnStartedRunning(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTLeaf.OnStartedRunning(BTParams, AIContext)
+  fullName.vb: Quantum.BTLeaf.OnStartedRunning(Quantum.BTParams, Quantum.AIContext)
+  name.vb: OnStartedRunning(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTLeaf.OnStartedRunning(Quantum.BTParams,Quantum.AIContext@)
+    name: OnStartedRunning
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTLeaf.OnStartedRunning(Quantum.BTParams,Quantum.AIContext@)
+    name: OnStartedRunning
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.BTLeaf.OnEnter(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTLeaf.OnEnter(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTLeaf
+  isExternal: true
+  name: OnEnter(BTParams, ref AIContext)
+  nameWithType: BTLeaf.OnEnter(BTParams, ref AIContext)
+  fullName: Quantum.BTLeaf.OnEnter(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTLeaf.OnEnter(BTParams, AIContext)
+  fullName.vb: Quantum.BTLeaf.OnEnter(Quantum.BTParams, Quantum.AIContext)
+  name.vb: OnEnter(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTLeaf.OnEnter(Quantum.BTParams,Quantum.AIContext@)
+    name: OnEnter
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTLeaf.OnEnter(Quantum.BTParams,Quantum.AIContext@)
+    name: OnEnter
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.BTLeaf.OnExit(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTLeaf.OnExit(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTLeaf
+  isExternal: true
+  name: OnExit(BTParams, ref AIContext)
+  nameWithType: BTLeaf.OnExit(BTParams, ref AIContext)
+  fullName: Quantum.BTLeaf.OnExit(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTLeaf.OnExit(BTParams, AIContext)
+  fullName.vb: Quantum.BTLeaf.OnExit(Quantum.BTParams, Quantum.AIContext)
+  name.vb: OnExit(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTLeaf.OnExit(Quantum.BTParams,Quantum.AIContext@)
+    name: OnExit
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTLeaf.OnExit(Quantum.BTParams,Quantum.AIContext@)
+    name: OnExit
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.BTLeaf.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.BTLeaf.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.BTLeaf
+  isExternal: true
+  name: Loaded(IResourceManager, Allocator)
+  nameWithType: BTLeaf.Loaded(IResourceManager, Native.Allocator)
+  fullName: Quantum.BTLeaf.Loaded(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.BTLeaf.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTLeaf.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.BTLeaf.ServiceInstances
+  commentId: P:Quantum.BTLeaf.ServiceInstances
+  parent: Quantum.BTLeaf
+  isExternal: true
+  name: ServiceInstances
+  nameWithType: BTLeaf.ServiceInstances
+  fullName: Quantum.BTLeaf.ServiceInstances
+- uid: Quantum.BTLeaf.NodeType
+  commentId: P:Quantum.BTLeaf.NodeType
+  parent: Quantum.BTLeaf
+  isExternal: true
+  name: NodeType
+  nameWithType: BTLeaf.NodeType
+  fullName: Quantum.BTLeaf.NodeType
+- uid: Quantum.BTNode.Label
+  commentId: F:Quantum.BTNode.Label
+  parent: Quantum.BTNode
+  isExternal: true
+  name: Label
+  nameWithType: BTNode.Label
+  fullName: Quantum.BTNode.Label
+- uid: Quantum.BTNode.Id
+  commentId: F:Quantum.BTNode.Id
+  parent: Quantum.BTNode
+  isExternal: true
+  name: Id
+  nameWithType: BTNode.Id
+  fullName: Quantum.BTNode.Id
+- uid: Quantum.BTNode.OnAbort(Quantum.BTParams,Quantum.AIContext@,Quantum.BTAbort)
+  commentId: M:Quantum.BTNode.OnAbort(Quantum.BTParams,Quantum.AIContext@,Quantum.BTAbort)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: OnAbort(BTParams, ref AIContext, BTAbort)
+  nameWithType: BTNode.OnAbort(BTParams, ref AIContext, BTAbort)
+  fullName: Quantum.BTNode.OnAbort(Quantum.BTParams, ref Quantum.AIContext, Quantum.BTAbort)
+  nameWithType.vb: BTNode.OnAbort(BTParams, AIContext, BTAbort)
+  fullName.vb: Quantum.BTNode.OnAbort(Quantum.BTParams, Quantum.AIContext, Quantum.BTAbort)
+  name.vb: OnAbort(BTParams, AIContext, BTAbort)
+  spec.csharp:
+  - uid: Quantum.BTNode.OnAbort(Quantum.BTParams,Quantum.AIContext@,Quantum.BTAbort)
+    name: OnAbort
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAbort
+    name: BTAbort
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.OnAbort(Quantum.BTParams,Quantum.AIContext@,Quantum.BTAbort)
+    name: OnAbort
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAbort
+    name: BTAbort
+    isExternal: true
+  - name: )
+- uid: Quantum.BTNode.OnReset(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTNode.OnReset(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: OnReset(BTParams, ref AIContext)
+  nameWithType: BTNode.OnReset(BTParams, ref AIContext)
+  fullName: Quantum.BTNode.OnReset(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTNode.OnReset(BTParams, AIContext)
+  fullName.vb: Quantum.BTNode.OnReset(Quantum.BTParams, Quantum.AIContext)
+  name.vb: OnReset(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTNode.OnReset(Quantum.BTParams,Quantum.AIContext@)
+    name: OnReset
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.OnReset(Quantum.BTParams,Quantum.AIContext@)
+    name: OnReset
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.BTNode.CheckConditions(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTNode.CheckConditions(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: CheckConditions(BTParams, ref AIContext)
+  nameWithType: BTNode.CheckConditions(BTParams, ref AIContext)
+  fullName: Quantum.BTNode.CheckConditions(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTNode.CheckConditions(BTParams, AIContext)
+  fullName.vb: Quantum.BTNode.CheckConditions(Quantum.BTParams, Quantum.AIContext)
+  name.vb: CheckConditions(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTNode.CheckConditions(Quantum.BTParams,Quantum.AIContext@)
+    name: CheckConditions
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.CheckConditions(Quantum.BTParams,Quantum.AIContext@)
+    name: CheckConditions
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.BTNode.OnDynamicRun(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTNode.OnDynamicRun(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: OnDynamicRun(BTParams, ref AIContext)
+  nameWithType: BTNode.OnDynamicRun(BTParams, ref AIContext)
+  fullName: Quantum.BTNode.OnDynamicRun(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTNode.OnDynamicRun(BTParams, AIContext)
+  fullName.vb: Quantum.BTNode.OnDynamicRun(Quantum.BTParams, Quantum.AIContext)
+  name.vb: OnDynamicRun(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTNode.OnDynamicRun(Quantum.BTParams,Quantum.AIContext@)
+    name: OnDynamicRun
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.OnDynamicRun(Quantum.BTParams,Quantum.AIContext@)
+    name: OnDynamicRun
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.BTNode.ChildCompletedRunning(Quantum.BTParams,Quantum.BTStatus)
+  commentId: M:Quantum.BTNode.ChildCompletedRunning(Quantum.BTParams,Quantum.BTStatus)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: ChildCompletedRunning(BTParams, BTStatus)
+  nameWithType: BTNode.ChildCompletedRunning(BTParams, BTStatus)
+  fullName: Quantum.BTNode.ChildCompletedRunning(Quantum.BTParams, Quantum.BTStatus)
+  spec.csharp:
+  - uid: Quantum.BTNode.ChildCompletedRunning(Quantum.BTParams,Quantum.BTStatus)
+    name: ChildCompletedRunning
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTStatus
+    name: BTStatus
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.ChildCompletedRunning(Quantum.BTParams,Quantum.BTStatus)
+    name: ChildCompletedRunning
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTStatus
+    name: BTStatus
+    isExternal: true
+  - name: )
+- uid: Quantum.BTNode.GetStatus(Quantum.Core.FrameBase,Quantum.BTAgent*)
+  commentId: M:Quantum.BTNode.GetStatus(Quantum.Core.FrameBase,Quantum.BTAgent*)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: GetStatus(FrameBase, BTAgent*)
+  nameWithType: BTNode.GetStatus(FrameBase, BTAgent*)
+  fullName: Quantum.BTNode.GetStatus(Quantum.Core.FrameBase, Quantum.BTAgent*)
+  spec.csharp:
+  - uid: Quantum.BTNode.GetStatus(Quantum.Core.FrameBase,Quantum.BTAgent*)
+    name: GetStatus
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.GetStatus(Quantum.Core.FrameBase,Quantum.BTAgent*)
+    name: GetStatus
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.BTNode.SetStatus(Quantum.Core.FrameBase,Quantum.BTStatus,Quantum.BTAgent*)
+  commentId: M:Quantum.BTNode.SetStatus(Quantum.Core.FrameBase,Quantum.BTStatus,Quantum.BTAgent*)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: SetStatus(FrameBase, BTStatus, BTAgent*)
+  nameWithType: BTNode.SetStatus(FrameBase, BTStatus, BTAgent*)
+  fullName: Quantum.BTNode.SetStatus(Quantum.Core.FrameBase, Quantum.BTStatus, Quantum.BTAgent*)
+  spec.csharp:
+  - uid: Quantum.BTNode.SetStatus(Quantum.Core.FrameBase,Quantum.BTStatus,Quantum.BTAgent*)
+    name: SetStatus
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTStatus
+    name: BTStatus
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.SetStatus(Quantum.Core.FrameBase,Quantum.BTStatus,Quantum.BTAgent*)
+    name: SetStatus
+    isExternal: true
+  - name: (
+  - uid: Quantum.Core.FrameBase
+    name: FrameBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTStatus
+    name: BTStatus
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.BTNode.GetStatus(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  commentId: M:Quantum.BTNode.GetStatus(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: GetStatus(FrameThreadSafe, BTAgent*)
+  nameWithType: BTNode.GetStatus(FrameThreadSafe, BTAgent*)
+  fullName: Quantum.BTNode.GetStatus(Quantum.FrameThreadSafe, Quantum.BTAgent*)
+  spec.csharp:
+  - uid: Quantum.BTNode.GetStatus(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+    name: GetStatus
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.GetStatus(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+    name: GetStatus
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.BTNode.SetStatus(Quantum.FrameThreadSafe,Quantum.BTStatus,Quantum.BTAgent*)
+  commentId: M:Quantum.BTNode.SetStatus(Quantum.FrameThreadSafe,Quantum.BTStatus,Quantum.BTAgent*)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: SetStatus(FrameThreadSafe, BTStatus, BTAgent*)
+  nameWithType: BTNode.SetStatus(FrameThreadSafe, BTStatus, BTAgent*)
+  fullName: Quantum.BTNode.SetStatus(Quantum.FrameThreadSafe, Quantum.BTStatus, Quantum.BTAgent*)
+  spec.csharp:
+  - uid: Quantum.BTNode.SetStatus(Quantum.FrameThreadSafe,Quantum.BTStatus,Quantum.BTAgent*)
+    name: SetStatus
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTStatus
+    name: BTStatus
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.SetStatus(Quantum.FrameThreadSafe,Quantum.BTStatus,Quantum.BTAgent*)
+    name: SetStatus
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTStatus
+    name: BTStatus
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.BTNode.EvaluateAbortNode(Quantum.BTParams)
+  commentId: M:Quantum.BTNode.EvaluateAbortNode(Quantum.BTParams)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: EvaluateAbortNode(BTParams)
+  nameWithType: BTNode.EvaluateAbortNode(BTParams)
+  fullName: Quantum.BTNode.EvaluateAbortNode(Quantum.BTParams)
+  spec.csharp:
+  - uid: Quantum.BTNode.EvaluateAbortNode(Quantum.BTParams)
+    name: EvaluateAbortNode
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.EvaluateAbortNode(Quantum.BTParams)
+    name: EvaluateAbortNode
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: )
+- uid: Quantum.BTNode.Execute(Quantum.BTParams,Quantum.AIContext@,System.Boolean)
+  commentId: M:Quantum.BTNode.Execute(Quantum.BTParams,Quantum.AIContext@,System.Boolean)
+  parent: Quantum.BTNode
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Execute(BTParams, ref AIContext, bool)
+  nameWithType: BTNode.Execute(BTParams, ref AIContext, bool)
+  fullName: Quantum.BTNode.Execute(Quantum.BTParams, ref Quantum.AIContext, bool)
+  nameWithType.vb: BTNode.Execute(BTParams, AIContext, Boolean)
+  fullName.vb: Quantum.BTNode.Execute(Quantum.BTParams, Quantum.AIContext, Boolean)
+  name.vb: Execute(BTParams, AIContext, Boolean)
+  spec.csharp:
+  - uid: Quantum.BTNode.Execute(Quantum.BTParams,Quantum.AIContext@,System.Boolean)
+    name: Execute
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.Execute(Quantum.BTParams,Quantum.AIContext@,System.Boolean)
+    name: Execute
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Quantum.AssetObject.Identifier
+  commentId: F:Quantum.AssetObject.Identifier
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Identifier
+  nameWithType: AssetObject.Identifier
+  fullName: Quantum.AssetObject.Identifier
+- uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Disposed(IResourceManager, Allocator)
+  nameWithType: AssetObject.Disposed(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Disposed(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Create``1
+  commentId: M:Quantum.AssetObject.Create``1
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Create<T>()
+  nameWithType: AssetObject.Create<T>()
+  fullName: Quantum.AssetObject.Create<T>()
+  nameWithType.vb: AssetObject.Create(Of T)()
+  fullName.vb: Quantum.AssetObject.Create(Of T)()
+  name.vb: Create(Of T)()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Create(System.Type)
+  commentId: M:Quantum.AssetObject.Create(System.Type)
+  parent: Quantum.AssetObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Create(Type)
+  nameWithType: AssetObject.Create(Type)
+  fullName: Quantum.AssetObject.Create(System.Type)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.AssetObject.Create``1(System.Action{{T}})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  parent: Quantum.AssetObject
+  definition: Quantum.AssetObject.Create``1(System.Action{``0})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.AssetObject.Reset
+  commentId: M:Quantum.AssetObject.Reset
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Reset()
+  nameWithType: AssetObject.Reset()
+  fullName: Quantum.AssetObject.Reset()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Guid
+  commentId: P:Quantum.AssetObject.Guid
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Guid
+  nameWithType: AssetObject.Guid
+  fullName: Quantum.AssetObject.Guid
+- uid: Quantum.AssetObject.Path
+  commentId: P:Quantum.AssetObject.Path
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Path
+  nameWithType: AssetObject.Path
+  fullName: Quantum.AssetObject.Path
+- uid: Quantum.AssetObject.Settings
+  commentId: P:Quantum.AssetObject.Settings
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Settings
+  nameWithType: AssetObject.Settings
+  fullName: Quantum.AssetObject.Settings
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Quantum.AssetObject.Create``1(System.Action{``0})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.AIBlackboardValueKey
+  commentId: T:Quantum.AIBlackboardValueKey
+  parent: Quantum
+  isExternal: true
+  name: AIBlackboardValueKey
+  nameWithType: AIBlackboardValueKey
+  fullName: Quantum.AIBlackboardValueKey
+- uid: Photon.Deterministic.FP
+  commentId: T:Photon.Deterministic.FP
+  parent: Photon.Deterministic
+  isExternal: true
+  name: FP
+  nameWithType: FP
+  fullName: Photon.Deterministic.FP
+- uid: Photon.Deterministic
+  commentId: N:Photon.Deterministic
+  isExternal: true
+  name: Photon.Deterministic
+  nameWithType: Photon.Deterministic
+  fullName: Photon.Deterministic
+  spec.csharp:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+  spec.vb:
+  - uid: Photon
+    name: Photon
+    isExternal: true
+  - name: .
+  - uid: Photon.Deterministic
+    name: Deterministic
+    isExternal: true
+- uid: Quantum.BTNode.Init(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTNode.Init(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: Init(BTParams, ref AIContext)
+  nameWithType: BTNode.Init(BTParams, ref AIContext)
+  fullName: Quantum.BTNode.Init(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTNode.Init(BTParams, AIContext)
+  fullName.vb: Quantum.BTNode.Init(Quantum.BTParams, Quantum.AIContext)
+  name.vb: Init(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTNode.Init(Quantum.BTParams,Quantum.AIContext@)
+    name: Init
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.Init(Quantum.BTParams,Quantum.AIContext@)
+    name: Init
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.GetInRangeOfTargetLeaf.Init*
+  commentId: Overload:Quantum.GetInRangeOfTargetLeaf.Init
+  href: Quantum.GetInRangeOfTargetLeaf.html#Quantum_GetInRangeOfTargetLeaf_Init_Quantum_BTParams_Quantum_AIContext__
+  name: Init
+  nameWithType: GetInRangeOfTargetLeaf.Init
+  fullName: Quantum.GetInRangeOfTargetLeaf.Init
+- uid: Quantum.BTParams
+  commentId: T:Quantum.BTParams
+  parent: Quantum
+  isExternal: true
+  name: BTParams
+  nameWithType: BTParams
+  fullName: Quantum.BTParams
+- uid: Quantum.AIContext
+  commentId: T:Quantum.AIContext
+  parent: Quantum
+  isExternal: true
+  name: AIContext
+  nameWithType: AIContext
+  fullName: Quantum.AIContext
+- uid: Quantum.BTNode.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTNode.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTNode
+  isExternal: true
+  name: OnUpdate(BTParams, ref AIContext)
+  nameWithType: BTNode.OnUpdate(BTParams, ref AIContext)
+  fullName: Quantum.BTNode.OnUpdate(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTNode.OnUpdate(BTParams, AIContext)
+  fullName.vb: Quantum.BTNode.OnUpdate(Quantum.BTParams, Quantum.AIContext)
+  name.vb: OnUpdate(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTNode.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+    name: OnUpdate
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTNode.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+    name: OnUpdate
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.GetInRangeOfTargetLeaf.OnUpdate*
+  commentId: Overload:Quantum.GetInRangeOfTargetLeaf.OnUpdate
+  href: Quantum.GetInRangeOfTargetLeaf.html#Quantum_GetInRangeOfTargetLeaf_OnUpdate_Quantum_BTParams_Quantum_AIContext__
+  name: OnUpdate
+  nameWithType: GetInRangeOfTargetLeaf.OnUpdate
+  fullName: Quantum.GetInRangeOfTargetLeaf.OnUpdate
+- uid: Quantum.BTStatus
+  commentId: T:Quantum.BTStatus
+  parent: Quantum
+  isExternal: true
+  name: BTStatus
+  nameWithType: BTStatus
+  fullName: Quantum.BTStatus

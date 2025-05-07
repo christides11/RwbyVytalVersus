@@ -1,0 +1,1071 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.MainMenuLocalScreen
+  commentId: T:rwby.MainMenuLocalScreen
+  id: MainMenuLocalScreen
+  parent: rwby
+  children:
+  - rwby.MainMenuLocalScreen.ApplyMenuImmediate
+  - rwby.MainMenuLocalScreen.MenuRight
+  - rwby.MainMenuLocalScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
+  - rwby.MainMenuLocalScreen.SetMenu(rwby.MainMenuLocalScreen.EnumMenuOptions)
+  - rwby.MainMenuLocalScreen.TryClose(rwby.ui.MenuDirection,System.Boolean)
+  - rwby.MainMenuLocalScreen.changeOptionTweenSequenceLeft
+  - rwby.MainMenuLocalScreen.changeOptionTweenSequenceRight
+  - rwby.MainMenuLocalScreen.currentMenuOption
+  - rwby.MainMenuLocalScreen.currentMenuOptionDescription
+  - rwby.MainMenuLocalScreen.currentMenuOptionText
+  - rwby.MainMenuLocalScreen.fairytalesDescription
+  - rwby.MainMenuLocalScreen.gameManager
+  - rwby.MainMenuLocalScreen.mainMenuManager
+  - rwby.MainMenuLocalScreen.menuOptionFairytales
+  - rwby.MainMenuLocalScreen.menuOptionTrainingMode
+  - rwby.MainMenuLocalScreen.menuOptionTutorial
+  - rwby.MainMenuLocalScreen.menuOptionVytalMatch
+  - rwby.MainMenuLocalScreen.menuOptionsRectTransform
+  - rwby.MainMenuLocalScreen.tag_Cutscene_MainScreenToLocalScreen
+  - rwby.MainMenuLocalScreen.trainingModeDescription
+  - rwby.MainMenuLocalScreen.tutorialDescription
+  - rwby.MainMenuLocalScreen.vytalMatchDescription
+  langs:
+  - csharp
+  - vb
+  name: MainMenuLocalScreen
+  nameWithType: MainMenuLocalScreen
+  fullName: rwby.MainMenuLocalScreen
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: MainMenuLocalScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 11
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: 'public class MainMenuLocalScreen : MenuBase, IMenu'
+    content.vb: Public Class MainMenuLocalScreen Inherits MenuBase Implements IMenu
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - rwby.ui.MenuBase
+  implements:
+  - rwby.ui.IMenu
+  inheritedMembers:
+  - rwby.ui.MenuBase.MenuHandler
+  - rwby.ui.MenuBase.history
+- uid: rwby.MainMenuLocalScreen.gameManager
+  commentId: F:rwby.MainMenuLocalScreen.gameManager
+  id: gameManager
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: gameManager
+  nameWithType: MainMenuLocalScreen.gameManager
+  fullName: rwby.MainMenuLocalScreen.gameManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: gameManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 21
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public GameManager gameManager
+    return:
+      type: rwby.GameManager
+    content.vb: >-
+      <NonSerialized>
+
+      Public gameManager As GameManager
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.MainMenuLocalScreen.mainMenuManager
+  commentId: F:rwby.MainMenuLocalScreen.mainMenuManager
+  id: mainMenuManager
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: mainMenuManager
+  nameWithType: MainMenuLocalScreen.mainMenuManager
+  fullName: rwby.MainMenuLocalScreen.mainMenuManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: mainMenuManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public MainMenuManager mainMenuManager
+    return:
+      type: rwby.ui.MainMenu.MainMenuManager
+    content.vb: Public mainMenuManager As MainMenuManager
+- uid: rwby.MainMenuLocalScreen.currentMenuOption
+  commentId: F:rwby.MainMenuLocalScreen.currentMenuOption
+  id: currentMenuOption
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: currentMenuOption
+  nameWithType: MainMenuLocalScreen.currentMenuOption
+  fullName: rwby.MainMenuLocalScreen.currentMenuOption
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentMenuOption
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 25
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public MainMenuLocalScreen.EnumMenuOptions currentMenuOption
+    return:
+      type: rwby.MainMenuLocalScreen.EnumMenuOptions
+    content.vb: Public currentMenuOption As MainMenuLocalScreen.EnumMenuOptions
+- uid: rwby.MainMenuLocalScreen.menuOptionFairytales
+  commentId: F:rwby.MainMenuLocalScreen.menuOptionFairytales
+  id: menuOptionFairytales
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: menuOptionFairytales
+  nameWithType: MainMenuLocalScreen.menuOptionFairytales
+  fullName: rwby.MainMenuLocalScreen.menuOptionFairytales
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: menuOptionFairytales
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 27
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public GameObject menuOptionFairytales
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public menuOptionFairytales As GameObject
+- uid: rwby.MainMenuLocalScreen.menuOptionVytalMatch
+  commentId: F:rwby.MainMenuLocalScreen.menuOptionVytalMatch
+  id: menuOptionVytalMatch
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: menuOptionVytalMatch
+  nameWithType: MainMenuLocalScreen.menuOptionVytalMatch
+  fullName: rwby.MainMenuLocalScreen.menuOptionVytalMatch
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: menuOptionVytalMatch
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 28
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public GameObject menuOptionVytalMatch
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public menuOptionVytalMatch As GameObject
+- uid: rwby.MainMenuLocalScreen.menuOptionTutorial
+  commentId: F:rwby.MainMenuLocalScreen.menuOptionTutorial
+  id: menuOptionTutorial
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: menuOptionTutorial
+  nameWithType: MainMenuLocalScreen.menuOptionTutorial
+  fullName: rwby.MainMenuLocalScreen.menuOptionTutorial
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: menuOptionTutorial
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 29
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public GameObject menuOptionTutorial
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public menuOptionTutorial As GameObject
+- uid: rwby.MainMenuLocalScreen.menuOptionTrainingMode
+  commentId: F:rwby.MainMenuLocalScreen.menuOptionTrainingMode
+  id: menuOptionTrainingMode
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: menuOptionTrainingMode
+  nameWithType: MainMenuLocalScreen.menuOptionTrainingMode
+  fullName: rwby.MainMenuLocalScreen.menuOptionTrainingMode
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: menuOptionTrainingMode
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 30
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public GameObject menuOptionTrainingMode
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public menuOptionTrainingMode As GameObject
+- uid: rwby.MainMenuLocalScreen.currentMenuOptionText
+  commentId: F:rwby.MainMenuLocalScreen.currentMenuOptionText
+  id: currentMenuOptionText
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: currentMenuOptionText
+  nameWithType: MainMenuLocalScreen.currentMenuOptionText
+  fullName: rwby.MainMenuLocalScreen.currentMenuOptionText
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentMenuOptionText
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 32
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public TextMeshProUGUI currentMenuOptionText
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public currentMenuOptionText As TextMeshProUGUI
+- uid: rwby.MainMenuLocalScreen.currentMenuOptionDescription
+  commentId: F:rwby.MainMenuLocalScreen.currentMenuOptionDescription
+  id: currentMenuOptionDescription
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: currentMenuOptionDescription
+  nameWithType: MainMenuLocalScreen.currentMenuOptionDescription
+  fullName: rwby.MainMenuLocalScreen.currentMenuOptionDescription
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentMenuOptionDescription
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 33
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public TextMeshProUGUI currentMenuOptionDescription
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public currentMenuOptionDescription As TextMeshProUGUI
+- uid: rwby.MainMenuLocalScreen.changeOptionTweenSequenceRight
+  commentId: F:rwby.MainMenuLocalScreen.changeOptionTweenSequenceRight
+  id: changeOptionTweenSequenceRight
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: changeOptionTweenSequenceRight
+  nameWithType: MainMenuLocalScreen.changeOptionTweenSequenceRight
+  fullName: rwby.MainMenuLocalScreen.changeOptionTweenSequenceRight
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: changeOptionTweenSequenceRight
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 35
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public TweenSequenceContainer changeOptionTweenSequenceRight
+    return:
+      type: Global.TweenSequenceContainer
+    content.vb: Public changeOptionTweenSequenceRight As TweenSequenceContainer
+- uid: rwby.MainMenuLocalScreen.changeOptionTweenSequenceLeft
+  commentId: F:rwby.MainMenuLocalScreen.changeOptionTweenSequenceLeft
+  id: changeOptionTweenSequenceLeft
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: changeOptionTweenSequenceLeft
+  nameWithType: MainMenuLocalScreen.changeOptionTweenSequenceLeft
+  fullName: rwby.MainMenuLocalScreen.changeOptionTweenSequenceLeft
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: changeOptionTweenSequenceLeft
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 36
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public TweenSequenceContainer changeOptionTweenSequenceLeft
+    return:
+      type: Global.TweenSequenceContainer
+    content.vb: Public changeOptionTweenSequenceLeft As TweenSequenceContainer
+- uid: rwby.MainMenuLocalScreen.menuOptionsRectTransform
+  commentId: F:rwby.MainMenuLocalScreen.menuOptionsRectTransform
+  id: menuOptionsRectTransform
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: menuOptionsRectTransform
+  nameWithType: MainMenuLocalScreen.menuOptionsRectTransform
+  fullName: rwby.MainMenuLocalScreen.menuOptionsRectTransform
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: menuOptionsRectTransform
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 38
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public RectTransform menuOptionsRectTransform
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: Public menuOptionsRectTransform As RectTransform
+- uid: rwby.MainMenuLocalScreen.fairytalesDescription
+  commentId: F:rwby.MainMenuLocalScreen.fairytalesDescription
+  id: fairytalesDescription
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: fairytalesDescription
+  nameWithType: MainMenuLocalScreen.fairytalesDescription
+  fullName: rwby.MainMenuLocalScreen.fairytalesDescription
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: fairytalesDescription
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 43
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [Header("Descriptions")]
+
+      public string fairytalesDescription
+    return:
+      type: System.String
+    content.vb: >-
+      <Header("Descriptions")>
+
+      Public fairytalesDescription As String
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Descriptions
+- uid: rwby.MainMenuLocalScreen.vytalMatchDescription
+  commentId: F:rwby.MainMenuLocalScreen.vytalMatchDescription
+  id: vytalMatchDescription
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: vytalMatchDescription
+  nameWithType: MainMenuLocalScreen.vytalMatchDescription
+  fullName: rwby.MainMenuLocalScreen.vytalMatchDescription
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: vytalMatchDescription
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 44
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public string vytalMatchDescription
+    return:
+      type: System.String
+    content.vb: Public vytalMatchDescription As String
+- uid: rwby.MainMenuLocalScreen.tutorialDescription
+  commentId: F:rwby.MainMenuLocalScreen.tutorialDescription
+  id: tutorialDescription
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: tutorialDescription
+  nameWithType: MainMenuLocalScreen.tutorialDescription
+  fullName: rwby.MainMenuLocalScreen.tutorialDescription
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tutorialDescription
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 45
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public string tutorialDescription
+    return:
+      type: System.String
+    content.vb: Public tutorialDescription As String
+- uid: rwby.MainMenuLocalScreen.trainingModeDescription
+  commentId: F:rwby.MainMenuLocalScreen.trainingModeDescription
+  id: trainingModeDescription
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: trainingModeDescription
+  nameWithType: MainMenuLocalScreen.trainingModeDescription
+  fullName: rwby.MainMenuLocalScreen.trainingModeDescription
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: trainingModeDescription
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 46
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public string trainingModeDescription
+    return:
+      type: System.String
+    content.vb: Public trainingModeDescription As String
+- uid: rwby.MainMenuLocalScreen.tag_Cutscene_MainScreenToLocalScreen
+  commentId: F:rwby.MainMenuLocalScreen.tag_Cutscene_MainScreenToLocalScreen
+  id: tag_Cutscene_MainScreenToLocalScreen
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: tag_Cutscene_MainScreenToLocalScreen
+  nameWithType: MainMenuLocalScreen.tag_Cutscene_MainScreenToLocalScreen
+  fullName: rwby.MainMenuLocalScreen.tag_Cutscene_MainScreenToLocalScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_Cutscene_MainScreenToLocalScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 49
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [Header("Transition Animators")]
+
+      public Tag tag_Cutscene_MainScreenToLocalScreen
+    return:
+      type: Quantum.Tag
+    content.vb: >-
+      <Header("Transition Animators")>
+
+      Public tag_Cutscene_MainScreenToLocalScreen As Tag
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Transition Animators
+- uid: rwby.MainMenuLocalScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
+  commentId: M:rwby.MainMenuLocalScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
+  id: Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: Open(MenuDirection, IMenuHandler)
+  nameWithType: MainMenuLocalScreen.Open(MenuDirection, IMenuHandler)
+  fullName: rwby.MainMenuLocalScreen.Open(rwby.ui.MenuDirection, rwby.ui.IMenuHandler)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Open
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 51
+  assemblies:
+  - rwby
+  namespace: rwby
+  example: []
+  syntax:
+    content: public override void Open(MenuDirection direction, IMenuHandler menuHandler)
+    parameters:
+    - id: direction
+      type: rwby.ui.MenuDirection
+    - id: menuHandler
+      type: rwby.ui.IMenuHandler
+    content.vb: Public Overrides Sub Open(direction As MenuDirection, menuHandler As IMenuHandler)
+  overridden: rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
+  overload: rwby.MainMenuLocalScreen.Open*
+- uid: rwby.MainMenuLocalScreen.TryClose(rwby.ui.MenuDirection,System.Boolean)
+  commentId: M:rwby.MainMenuLocalScreen.TryClose(rwby.ui.MenuDirection,System.Boolean)
+  id: TryClose(rwby.ui.MenuDirection,System.Boolean)
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: TryClose(MenuDirection, bool)
+  nameWithType: MainMenuLocalScreen.TryClose(MenuDirection, bool)
+  fullName: rwby.MainMenuLocalScreen.TryClose(rwby.ui.MenuDirection, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryClose
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 60
+  assemblies:
+  - rwby
+  namespace: rwby
+  example: []
+  syntax:
+    content: public override bool TryClose(MenuDirection direction, bool forceClose = false)
+    parameters:
+    - id: direction
+      type: rwby.ui.MenuDirection
+    - id: forceClose
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function TryClose(direction As MenuDirection, forceClose As Boolean = False) As Boolean
+  overridden: rwby.ui.MenuBase.TryClose(rwby.ui.MenuDirection,System.Boolean)
+  overload: rwby.MainMenuLocalScreen.TryClose*
+  nameWithType.vb: MainMenuLocalScreen.TryClose(MenuDirection, Boolean)
+  fullName.vb: rwby.MainMenuLocalScreen.TryClose(rwby.ui.MenuDirection, Boolean)
+  name.vb: TryClose(MenuDirection, Boolean)
+- uid: rwby.MainMenuLocalScreen.MenuRight
+  commentId: M:rwby.MainMenuLocalScreen.MenuRight
+  id: MenuRight
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: MenuRight()
+  nameWithType: MainMenuLocalScreen.MenuRight()
+  fullName: rwby.MainMenuLocalScreen.MenuRight()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: MenuRight
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 189
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void MenuRight()
+    content.vb: Public Sub MenuRight()
+  overload: rwby.MainMenuLocalScreen.MenuRight*
+- uid: rwby.MainMenuLocalScreen.SetMenu(rwby.MainMenuLocalScreen.EnumMenuOptions)
+  commentId: M:rwby.MainMenuLocalScreen.SetMenu(rwby.MainMenuLocalScreen.EnumMenuOptions)
+  id: SetMenu(rwby.MainMenuLocalScreen.EnumMenuOptions)
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: SetMenu(EnumMenuOptions)
+  nameWithType: MainMenuLocalScreen.SetMenu(MainMenuLocalScreen.EnumMenuOptions)
+  fullName: rwby.MainMenuLocalScreen.SetMenu(rwby.MainMenuLocalScreen.EnumMenuOptions)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetMenu
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 224
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void SetMenu(MainMenuLocalScreen.EnumMenuOptions menuOption)
+    parameters:
+    - id: menuOption
+      type: rwby.MainMenuLocalScreen.EnumMenuOptions
+    content.vb: Public Sub SetMenu(menuOption As MainMenuLocalScreen.EnumMenuOptions)
+  overload: rwby.MainMenuLocalScreen.SetMenu*
+- uid: rwby.MainMenuLocalScreen.ApplyMenuImmediate
+  commentId: M:rwby.MainMenuLocalScreen.ApplyMenuImmediate
+  id: ApplyMenuImmediate
+  parent: rwby.MainMenuLocalScreen
+  langs:
+  - csharp
+  - vb
+  name: ApplyMenuImmediate()
+  nameWithType: MainMenuLocalScreen.ApplyMenuImmediate()
+  fullName: rwby.MainMenuLocalScreen.ApplyMenuImmediate()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ApplyMenuImmediate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/MainMenuLocalScreen.cs
+    startLine: 229
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void ApplyMenuImmediate()
+    content.vb: Public Sub ApplyMenuImmediate()
+  overload: rwby.MainMenuLocalScreen.ApplyMenuImmediate*
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: rwby.ui.MenuBase
+  commentId: T:rwby.ui.MenuBase
+  parent: rwby.ui
+  href: rwby.ui.MenuBase.html
+  name: MenuBase
+  nameWithType: MenuBase
+  fullName: rwby.ui.MenuBase
+- uid: rwby.ui.IMenu
+  commentId: T:rwby.ui.IMenu
+  parent: rwby.ui
+  href: rwby.ui.IMenu.html
+  name: IMenu
+  nameWithType: IMenu
+  fullName: rwby.ui.IMenu
+- uid: rwby.ui.MenuBase.MenuHandler
+  commentId: P:rwby.ui.MenuBase.MenuHandler
+  parent: rwby.ui.MenuBase
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_MenuHandler
+  name: MenuHandler
+  nameWithType: MenuBase.MenuHandler
+  fullName: rwby.ui.MenuBase.MenuHandler
+- uid: rwby.ui.MenuBase.history
+  commentId: F:rwby.ui.MenuBase.history
+  parent: rwby.ui.MenuBase
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_history
+  name: history
+  nameWithType: MenuBase.history
+  fullName: rwby.ui.MenuBase.history
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby.ui
+  commentId: N:rwby.ui
+  href: rwby.html
+  name: rwby.ui
+  nameWithType: rwby.ui
+  fullName: rwby.ui
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.ui
+    name: ui
+    href: rwby.ui.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.ui
+    name: ui
+    href: rwby.ui.html
+- uid: rwby.GameManager
+  commentId: T:rwby.GameManager
+  parent: rwby
+  href: rwby.GameManager.html
+  name: GameManager
+  nameWithType: GameManager
+  fullName: rwby.GameManager
+- uid: rwby.ui.MainMenu.MainMenuManager
+  commentId: T:rwby.ui.MainMenu.MainMenuManager
+  parent: rwby.ui.MainMenu
+  href: rwby.ui.MainMenu.MainMenuManager.html
+  name: MainMenuManager
+  nameWithType: MainMenuManager
+  fullName: rwby.ui.MainMenu.MainMenuManager
+- uid: rwby.ui.MainMenu
+  commentId: N:rwby.ui.MainMenu
+  href: rwby.html
+  name: rwby.ui.MainMenu
+  nameWithType: rwby.ui.MainMenu
+  fullName: rwby.ui.MainMenu
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.ui
+    name: ui
+    href: rwby.ui.html
+  - name: .
+  - uid: rwby.ui.MainMenu
+    name: MainMenu
+    href: rwby.ui.MainMenu.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.ui
+    name: ui
+    href: rwby.ui.html
+  - name: .
+  - uid: rwby.ui.MainMenu
+    name: MainMenu
+    href: rwby.ui.MainMenu.html
+- uid: rwby.MainMenuLocalScreen.EnumMenuOptions
+  commentId: T:rwby.MainMenuLocalScreen.EnumMenuOptions
+  parent: rwby
+  href: rwby.MainMenuLocalScreen.html
+  name: MainMenuLocalScreen.EnumMenuOptions
+  nameWithType: MainMenuLocalScreen.EnumMenuOptions
+  fullName: rwby.MainMenuLocalScreen.EnumMenuOptions
+  spec.csharp:
+  - uid: rwby.MainMenuLocalScreen
+    name: MainMenuLocalScreen
+    href: rwby.MainMenuLocalScreen.html
+  - name: .
+  - uid: rwby.MainMenuLocalScreen.EnumMenuOptions
+    name: EnumMenuOptions
+    href: rwby.MainMenuLocalScreen.EnumMenuOptions.html
+  spec.vb:
+  - uid: rwby.MainMenuLocalScreen
+    name: MainMenuLocalScreen
+    href: rwby.MainMenuLocalScreen.html
+  - name: .
+  - uid: rwby.MainMenuLocalScreen.EnumMenuOptions
+    name: EnumMenuOptions
+    href: rwby.MainMenuLocalScreen.EnumMenuOptions.html
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: TMPro.TextMeshProUGUI
+  commentId: T:TMPro.TextMeshProUGUI
+  parent: TMPro
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TMPro.TextMeshProUGUI
+- uid: TMPro
+  commentId: N:TMPro
+  isExternal: true
+  name: TMPro
+  nameWithType: TMPro
+  fullName: TMPro
+- uid: Global.TweenSequenceContainer
+  commentId: T:Global.TweenSequenceContainer
+  href: TweenSequenceContainer.html
+  name: TweenSequenceContainer
+  nameWithType: TweenSequenceContainer
+  fullName: TweenSequenceContainer
+- uid: UnityEngine.RectTransform
+  commentId: T:UnityEngine.RectTransform
+  parent: UnityEngine
+  isExternal: true
+  name: RectTransform
+  nameWithType: RectTransform
+  fullName: UnityEngine.RectTransform
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Quantum.Tag
+  commentId: T:Quantum.Tag
+  parent: Quantum
+  href: Quantum.Tag.html
+  name: Tag
+  nameWithType: Tag
+  fullName: Quantum.Tag
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
+  commentId: M:rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
+  parent: rwby.ui.MenuBase
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_Open_rwby_ui_MenuDirection_rwby_ui_IMenuHandler_
+  name: Open(MenuDirection, IMenuHandler)
+  nameWithType: MenuBase.Open(MenuDirection, IMenuHandler)
+  fullName: rwby.ui.MenuBase.Open(rwby.ui.MenuDirection, rwby.ui.IMenuHandler)
+  spec.csharp:
+  - uid: rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
+    name: Open
+    href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_Open_rwby_ui_MenuDirection_rwby_ui_IMenuHandler_
+  - name: (
+  - uid: rwby.ui.MenuDirection
+    name: MenuDirection
+    href: rwby.ui.MenuDirection.html
+  - name: ','
+  - name: " "
+  - uid: rwby.ui.IMenuHandler
+    name: IMenuHandler
+    href: rwby.ui.IMenuHandler.html
+  - name: )
+  spec.vb:
+  - uid: rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
+    name: Open
+    href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_Open_rwby_ui_MenuDirection_rwby_ui_IMenuHandler_
+  - name: (
+  - uid: rwby.ui.MenuDirection
+    name: MenuDirection
+    href: rwby.ui.MenuDirection.html
+  - name: ','
+  - name: " "
+  - uid: rwby.ui.IMenuHandler
+    name: IMenuHandler
+    href: rwby.ui.IMenuHandler.html
+  - name: )
+- uid: rwby.MainMenuLocalScreen.Open*
+  commentId: Overload:rwby.MainMenuLocalScreen.Open
+  href: rwby.MainMenuLocalScreen.html#rwby_MainMenuLocalScreen_Open_rwby_ui_MenuDirection_rwby_ui_IMenuHandler_
+  name: Open
+  nameWithType: MainMenuLocalScreen.Open
+  fullName: rwby.MainMenuLocalScreen.Open
+- uid: rwby.ui.MenuDirection
+  commentId: T:rwby.ui.MenuDirection
+  parent: rwby.ui
+  href: rwby.ui.MenuDirection.html
+  name: MenuDirection
+  nameWithType: MenuDirection
+  fullName: rwby.ui.MenuDirection
+- uid: rwby.ui.IMenuHandler
+  commentId: T:rwby.ui.IMenuHandler
+  parent: rwby.ui
+  href: rwby.ui.IMenuHandler.html
+  name: IMenuHandler
+  nameWithType: IMenuHandler
+  fullName: rwby.ui.IMenuHandler
+- uid: rwby.ui.MenuBase.TryClose(rwby.ui.MenuDirection,System.Boolean)
+  commentId: M:rwby.ui.MenuBase.TryClose(rwby.ui.MenuDirection,System.Boolean)
+  parent: rwby.ui.MenuBase
+  isExternal: true
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_TryClose_rwby_ui_MenuDirection_System_Boolean_
+  name: TryClose(MenuDirection, bool)
+  nameWithType: MenuBase.TryClose(MenuDirection, bool)
+  fullName: rwby.ui.MenuBase.TryClose(rwby.ui.MenuDirection, bool)
+  nameWithType.vb: MenuBase.TryClose(MenuDirection, Boolean)
+  fullName.vb: rwby.ui.MenuBase.TryClose(rwby.ui.MenuDirection, Boolean)
+  name.vb: TryClose(MenuDirection, Boolean)
+  spec.csharp:
+  - uid: rwby.ui.MenuBase.TryClose(rwby.ui.MenuDirection,System.Boolean)
+    name: TryClose
+    href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_TryClose_rwby_ui_MenuDirection_System_Boolean_
+  - name: (
+  - uid: rwby.ui.MenuDirection
+    name: MenuDirection
+    href: rwby.ui.MenuDirection.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: rwby.ui.MenuBase.TryClose(rwby.ui.MenuDirection,System.Boolean)
+    name: TryClose
+    href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_TryClose_rwby_ui_MenuDirection_System_Boolean_
+  - name: (
+  - uid: rwby.ui.MenuDirection
+    name: MenuDirection
+    href: rwby.ui.MenuDirection.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: rwby.MainMenuLocalScreen.TryClose*
+  commentId: Overload:rwby.MainMenuLocalScreen.TryClose
+  href: rwby.MainMenuLocalScreen.html#rwby_MainMenuLocalScreen_TryClose_rwby_ui_MenuDirection_System_Boolean_
+  name: TryClose
+  nameWithType: MainMenuLocalScreen.TryClose
+  fullName: rwby.MainMenuLocalScreen.TryClose
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: rwby.MainMenuLocalScreen.MenuRight*
+  commentId: Overload:rwby.MainMenuLocalScreen.MenuRight
+  href: rwby.MainMenuLocalScreen.html#rwby_MainMenuLocalScreen_MenuRight
+  name: MenuRight
+  nameWithType: MainMenuLocalScreen.MenuRight
+  fullName: rwby.MainMenuLocalScreen.MenuRight
+- uid: rwby.MainMenuLocalScreen.SetMenu*
+  commentId: Overload:rwby.MainMenuLocalScreen.SetMenu
+  href: rwby.MainMenuLocalScreen.html#rwby_MainMenuLocalScreen_SetMenu_rwby_MainMenuLocalScreen_EnumMenuOptions_
+  name: SetMenu
+  nameWithType: MainMenuLocalScreen.SetMenu
+  fullName: rwby.MainMenuLocalScreen.SetMenu
+- uid: rwby.MainMenuLocalScreen.ApplyMenuImmediate*
+  commentId: Overload:rwby.MainMenuLocalScreen.ApplyMenuImmediate
+  href: rwby.MainMenuLocalScreen.html#rwby_MainMenuLocalScreen_ApplyMenuImmediate
+  name: ApplyMenuImmediate
+  nameWithType: MainMenuLocalScreen.ApplyMenuImmediate
+  fullName: rwby.MainMenuLocalScreen.ApplyMenuImmediate

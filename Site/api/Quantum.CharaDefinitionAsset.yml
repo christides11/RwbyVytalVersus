@@ -6,9 +6,11 @@ items:
   parent: Quantum
   children:
   - Quantum.CharaDefinitionAsset.CharacterPrototype
+  - Quantum.CharaDefinitionAsset.aiDefinitions
   - Quantum.CharaDefinitionAsset.cutsceneGroupingPrefab
   - Quantum.CharaDefinitionAsset.fighterDefinition
   - Quantum.CharaDefinitionAsset.health
+  - Quantum.CharaDefinitionAsset.overridedView
   - Quantum.CharaDefinitionAsset.parameters
   - Quantum.CharaDefinitionAsset.specialIntros
   - Quantum.CharaDefinitionAsset.statesets
@@ -31,13 +33,15 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public class CharaDefinitionAsset : AssetObject'
-    content.vb: Public Class CharaDefinitionAsset Inherits AssetObject
+    content: 'public class CharaDefinitionAsset : AssetObject, ILogSource'
+    content.vb: Public Class CharaDefinitionAsset Inherits AssetObject Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -103,6 +107,33 @@ items:
     return:
       type: Quantum.AssetRef{Quantum.AIConfig}
     content.vb: Public parameters As AssetRef(Of AIConfig)
+- uid: Quantum.CharaDefinitionAsset.overridedView
+  commentId: F:Quantum.CharaDefinitionAsset.overridedView
+  id: overridedView
+  parent: Quantum.CharaDefinitionAsset
+  langs:
+  - csharp
+  - vb
+  name: overridedView
+  nameWithType: CharaDefinitionAsset.overridedView
+  fullName: Quantum.CharaDefinitionAsset.overridedView
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/CharaDefinitionAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: overridedView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/CharaDefinitionAsset.cs
+    startLine: 9
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<EntityView> overridedView
+    return:
+      type: Quantum.AssetRef{Quantum.EntityView}
+    content.vb: Public overridedView As AssetRef(Of EntityView)
 - uid: Quantum.CharaDefinitionAsset.health
   commentId: F:Quantum.CharaDefinitionAsset.health
   id: health
@@ -121,7 +152,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: health
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/CharaDefinitionAsset.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -148,7 +179,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: statesets
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/CharaDefinitionAsset.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -175,7 +206,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: fighterDefinition
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/CharaDefinitionAsset.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -202,7 +233,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: cutsceneGroupingPrefab
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/CharaDefinitionAsset.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -229,7 +260,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: specialIntros
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/CharaDefinitionAsset.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -238,6 +269,33 @@ items:
     return:
       type: Quantum.FighterSpecialIntroDefinition[]
     content.vb: Public specialIntros As FighterSpecialIntroDefinition()
+- uid: Quantum.CharaDefinitionAsset.aiDefinitions
+  commentId: F:Quantum.CharaDefinitionAsset.aiDefinitions
+  id: aiDefinitions
+  parent: Quantum.CharaDefinitionAsset
+  langs:
+  - csharp
+  - vb
+  name: aiDefinitions
+  nameWithType: CharaDefinitionAsset.aiDefinitions
+  fullName: Quantum.CharaDefinitionAsset.aiDefinitions
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/CharaDefinitionAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: aiDefinitions
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/CharaDefinitionAsset.cs
+    startLine: 18
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<FighterAIDefinition>[] aiDefinitions
+    return:
+      type: Quantum.AssetRef{Quantum.FighterAIDefinition}[]
+    content.vb: Public aiDefinitions As AssetRef(Of FighterAIDefinition)()
 references:
 - uid: Quantum
   commentId: N:Quantum
@@ -277,6 +335,13 @@ references:
   name: AssetObject
   nameWithType: AssetObject
   fullName: Quantum.AssetObject
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject
@@ -644,6 +709,36 @@ references:
     name: AIConfig
     href: Quantum.AIConfig.html
   - name: )
+- uid: Quantum.AssetRef{Quantum.EntityView}
+  commentId: T:Quantum.AssetRef{Quantum.EntityView}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  name: AssetRef<EntityView>
+  nameWithType: AssetRef<EntityView>
+  fullName: Quantum.AssetRef<Quantum.EntityView>
+  nameWithType.vb: AssetRef(Of EntityView)
+  fullName.vb: Quantum.AssetRef(Of Quantum.EntityView)
+  name.vb: AssetRef(Of EntityView)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.EntityView
+    name: EntityView
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.EntityView
+    name: EntityView
+    isExternal: true
+  - name: )
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -791,5 +886,38 @@ references:
   - uid: Quantum.FighterSpecialIntroDefinition
     name: FighterSpecialIntroDefinition
     href: Quantum.FighterSpecialIntroDefinition.html
+  - name: (
+  - name: )
+- uid: Quantum.AssetRef{Quantum.FighterAIDefinition}[]
+  isExternal: true
+  href: Quantum.FighterAIDefinition.html
+  name: AssetRef<FighterAIDefinition>[]
+  nameWithType: AssetRef<FighterAIDefinition>[]
+  fullName: Quantum.AssetRef<Quantum.FighterAIDefinition>[]
+  nameWithType.vb: AssetRef(Of FighterAIDefinition)()
+  fullName.vb: Quantum.AssetRef(Of Quantum.FighterAIDefinition)()
+  name.vb: AssetRef(Of FighterAIDefinition)()
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.FighterAIDefinition
+    name: FighterAIDefinition
+    href: Quantum.FighterAIDefinition.html
+  - name: '>'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.FighterAIDefinition
+    name: FighterAIDefinition
+    href: Quantum.FighterAIDefinition.html
+  - name: )
   - name: (
   - name: )

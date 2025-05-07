@@ -8,9 +8,9 @@ items:
   - rwby.MenuLabelExternalOptionElement.Awake
   - rwby.MenuLabelExternalOptionElement.GetSelectedOption
   - rwby.MenuLabelExternalOptionElement.GetSelectedOptionName
-  - rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.String},System.Int32,IExternalOptionCallback,System.Boolean)
-  - rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.ValueTuple{System.String,System.String}},System.Int32,IExternalOptionCallback,System.Boolean)
-  - rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,rwby.ExternalOptionDefinition[],System.Int32,IExternalOptionCallback,System.Boolean)
+  - rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.String},System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
+  - rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.ValueTuple{System.String,System.String}},System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
+  - rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,rwby.ExternalOptionDefinition[],System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
   - rwby.MenuLabelExternalOptionElement.OnDeselect(UnityEngine.EventSystems.BaseEventData)
   - rwby.MenuLabelExternalOptionElement.OnSelect(UnityEngine.EventSystems.BaseEventData)
   - rwby.MenuLabelExternalOptionElement.SelectedOption
@@ -251,16 +251,16 @@ items:
     content.vb: Protected Overrides Sub Awake()
   overridden: UnityEngine.UI.Selectable.Awake
   overload: rwby.MenuLabelExternalOptionElement.Awake*
-- uid: rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.String},System.Int32,IExternalOptionCallback,System.Boolean)
-  commentId: M:rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.String},System.Int32,IExternalOptionCallback,System.Boolean)
-  id: Initialize(System.String,System.String,System.Collections.Generic.List{System.String},System.Int32,IExternalOptionCallback,System.Boolean)
+- uid: rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.String},System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
+  commentId: M:rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.String},System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
+  id: Initialize(System.String,System.String,System.Collections.Generic.List{System.String},System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
   parent: rwby.MenuLabelExternalOptionElement
   langs:
   - csharp
   - vb
-  name: Initialize(string, string, List<string>, int, IExternalOptionCallback, bool)
-  nameWithType: MenuLabelExternalOptionElement.Initialize(string, string, List<string>, int, IExternalOptionCallback, bool)
-  fullName: rwby.MenuLabelExternalOptionElement.Initialize(string, string, System.Collections.Generic.List<string>, int, IExternalOptionCallback, bool)
+  name: Initialize(string, string, List<string>, int, Action<MenuLabelExternalOptionElement, BaseEventData>, bool)
+  nameWithType: MenuLabelExternalOptionElement.Initialize(string, string, List<string>, int, Action<MenuLabelExternalOptionElement, BaseEventData>, bool)
+  fullName: rwby.MenuLabelExternalOptionElement.Initialize(string, string, System.Collections.Generic.List<string>, int, System.Action<rwby.MenuLabelExternalOptionElement, UnityEngine.EventSystems.BaseEventData>, bool)
   type: Method
   source:
     remote:
@@ -274,7 +274,7 @@ items:
   - rwby
   namespace: rwby
   syntax:
-    content: public void Initialize(string labelText, string description, List<string> options, int selectedOption, IExternalOptionCallback callback, bool reverse = false)
+    content: public void Initialize(string labelText, string description, List<string> options, int selectedOption, Action<MenuLabelExternalOptionElement, BaseEventData> callback, bool reverse = false)
     parameters:
     - id: labelText
       type: System.String
@@ -285,24 +285,24 @@ items:
     - id: selectedOption
       type: System.Int32
     - id: callback
-      type: Global.IExternalOptionCallback
+      type: System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData}
     - id: reverse
       type: System.Boolean
-    content.vb: Public Sub Initialize(labelText As String, description As String, options As List(Of String), selectedOption As Integer, callback As IExternalOptionCallback, reverse As Boolean = False)
+    content.vb: Public Sub Initialize(labelText As String, description As String, options As List(Of String), selectedOption As Integer, callback As Action(Of MenuLabelExternalOptionElement, BaseEventData), reverse As Boolean = False)
   overload: rwby.MenuLabelExternalOptionElement.Initialize*
-  nameWithType.vb: MenuLabelExternalOptionElement.Initialize(String, String, List(Of String), Integer, IExternalOptionCallback, Boolean)
-  fullName.vb: rwby.MenuLabelExternalOptionElement.Initialize(String, String, System.Collections.Generic.List(Of String), Integer, IExternalOptionCallback, Boolean)
-  name.vb: Initialize(String, String, List(Of String), Integer, IExternalOptionCallback, Boolean)
-- uid: rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.ValueTuple{System.String,System.String}},System.Int32,IExternalOptionCallback,System.Boolean)
-  commentId: M:rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.ValueTuple{System.String,System.String}},System.Int32,IExternalOptionCallback,System.Boolean)
-  id: Initialize(System.String,System.String,System.Collections.Generic.List{System.ValueTuple{System.String,System.String}},System.Int32,IExternalOptionCallback,System.Boolean)
+  nameWithType.vb: MenuLabelExternalOptionElement.Initialize(String, String, List(Of String), Integer, Action(Of MenuLabelExternalOptionElement, BaseEventData), Boolean)
+  fullName.vb: rwby.MenuLabelExternalOptionElement.Initialize(String, String, System.Collections.Generic.List(Of String), Integer, System.Action(Of rwby.MenuLabelExternalOptionElement, UnityEngine.EventSystems.BaseEventData), Boolean)
+  name.vb: Initialize(String, String, List(Of String), Integer, Action(Of MenuLabelExternalOptionElement, BaseEventData), Boolean)
+- uid: rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.ValueTuple{System.String,System.String}},System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
+  commentId: M:rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,System.Collections.Generic.List{System.ValueTuple{System.String,System.String}},System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
+  id: Initialize(System.String,System.String,System.Collections.Generic.List{System.ValueTuple{System.String,System.String}},System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
   parent: rwby.MenuLabelExternalOptionElement
   langs:
   - csharp
   - vb
-  name: Initialize(string, string, List<(string, string)>, int, IExternalOptionCallback, bool)
-  nameWithType: MenuLabelExternalOptionElement.Initialize(string, string, List<(string, string)>, int, IExternalOptionCallback, bool)
-  fullName: rwby.MenuLabelExternalOptionElement.Initialize(string, string, System.Collections.Generic.List<(string, string)>, int, IExternalOptionCallback, bool)
+  name: Initialize(string, string, List<(string, string)>, int, Action<MenuLabelExternalOptionElement, BaseEventData>, bool)
+  nameWithType: MenuLabelExternalOptionElement.Initialize(string, string, List<(string, string)>, int, Action<MenuLabelExternalOptionElement, BaseEventData>, bool)
+  fullName: rwby.MenuLabelExternalOptionElement.Initialize(string, string, System.Collections.Generic.List<(string, string)>, int, System.Action<rwby.MenuLabelExternalOptionElement, UnityEngine.EventSystems.BaseEventData>, bool)
   type: Method
   source:
     remote:
@@ -316,7 +316,7 @@ items:
   - rwby
   namespace: rwby
   syntax:
-    content: public void Initialize(string labelText, string description, List<(string, string)> options, int selectedOption, IExternalOptionCallback callback, bool reverse = false)
+    content: public void Initialize(string labelText, string description, List<(string, string)> options, int selectedOption, Action<MenuLabelExternalOptionElement, BaseEventData> callback, bool reverse = false)
     parameters:
     - id: labelText
       type: System.String
@@ -327,24 +327,24 @@ items:
     - id: selectedOption
       type: System.Int32
     - id: callback
-      type: Global.IExternalOptionCallback
+      type: System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData}
     - id: reverse
       type: System.Boolean
-    content.vb: Public Sub Initialize(labelText As String, description As String, options As List(Of (String, String)), selectedOption As Integer, callback As IExternalOptionCallback, reverse As Boolean = False)
+    content.vb: Public Sub Initialize(labelText As String, description As String, options As List(Of (String, String)), selectedOption As Integer, callback As Action(Of MenuLabelExternalOptionElement, BaseEventData), reverse As Boolean = False)
   overload: rwby.MenuLabelExternalOptionElement.Initialize*
-  nameWithType.vb: MenuLabelExternalOptionElement.Initialize(String, String, List(Of (String, String)), Integer, IExternalOptionCallback, Boolean)
-  fullName.vb: rwby.MenuLabelExternalOptionElement.Initialize(String, String, System.Collections.Generic.List(Of (String, String)), Integer, IExternalOptionCallback, Boolean)
-  name.vb: Initialize(String, String, List(Of (String, String)), Integer, IExternalOptionCallback, Boolean)
-- uid: rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,rwby.ExternalOptionDefinition[],System.Int32,IExternalOptionCallback,System.Boolean)
-  commentId: M:rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,rwby.ExternalOptionDefinition[],System.Int32,IExternalOptionCallback,System.Boolean)
-  id: Initialize(System.String,System.String,rwby.ExternalOptionDefinition[],System.Int32,IExternalOptionCallback,System.Boolean)
+  nameWithType.vb: MenuLabelExternalOptionElement.Initialize(String, String, List(Of (String, String)), Integer, Action(Of MenuLabelExternalOptionElement, BaseEventData), Boolean)
+  fullName.vb: rwby.MenuLabelExternalOptionElement.Initialize(String, String, System.Collections.Generic.List(Of (String, String)), Integer, System.Action(Of rwby.MenuLabelExternalOptionElement, UnityEngine.EventSystems.BaseEventData), Boolean)
+  name.vb: Initialize(String, String, List(Of (String, String)), Integer, Action(Of MenuLabelExternalOptionElement, BaseEventData), Boolean)
+- uid: rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,rwby.ExternalOptionDefinition[],System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
+  commentId: M:rwby.MenuLabelExternalOptionElement.Initialize(System.String,System.String,rwby.ExternalOptionDefinition[],System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
+  id: Initialize(System.String,System.String,rwby.ExternalOptionDefinition[],System.Int32,System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData},System.Boolean)
   parent: rwby.MenuLabelExternalOptionElement
   langs:
   - csharp
   - vb
-  name: Initialize(string, string, ExternalOptionDefinition[], int, IExternalOptionCallback, bool)
-  nameWithType: MenuLabelExternalOptionElement.Initialize(string, string, ExternalOptionDefinition[], int, IExternalOptionCallback, bool)
-  fullName: rwby.MenuLabelExternalOptionElement.Initialize(string, string, rwby.ExternalOptionDefinition[], int, IExternalOptionCallback, bool)
+  name: Initialize(string, string, ExternalOptionDefinition[], int, Action<MenuLabelExternalOptionElement, BaseEventData>, bool)
+  nameWithType: MenuLabelExternalOptionElement.Initialize(string, string, ExternalOptionDefinition[], int, Action<MenuLabelExternalOptionElement, BaseEventData>, bool)
+  fullName: rwby.MenuLabelExternalOptionElement.Initialize(string, string, rwby.ExternalOptionDefinition[], int, System.Action<rwby.MenuLabelExternalOptionElement, UnityEngine.EventSystems.BaseEventData>, bool)
   type: Method
   source:
     remote:
@@ -358,7 +358,7 @@ items:
   - rwby
   namespace: rwby
   syntax:
-    content: public void Initialize(string labelText, string description, ExternalOptionDefinition[] options, int selectedOption, IExternalOptionCallback callback, bool reverse = false)
+    content: public void Initialize(string labelText, string description, ExternalOptionDefinition[] options, int selectedOption, Action<MenuLabelExternalOptionElement, BaseEventData> callback, bool reverse = false)
     parameters:
     - id: labelText
       type: System.String
@@ -369,14 +369,14 @@ items:
     - id: selectedOption
       type: System.Int32
     - id: callback
-      type: Global.IExternalOptionCallback
+      type: System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData}
     - id: reverse
       type: System.Boolean
-    content.vb: Public Sub Initialize(labelText As String, description As String, options As ExternalOptionDefinition(), selectedOption As Integer, callback As IExternalOptionCallback, reverse As Boolean = False)
+    content.vb: Public Sub Initialize(labelText As String, description As String, options As ExternalOptionDefinition(), selectedOption As Integer, callback As Action(Of MenuLabelExternalOptionElement, BaseEventData), reverse As Boolean = False)
   overload: rwby.MenuLabelExternalOptionElement.Initialize*
-  nameWithType.vb: MenuLabelExternalOptionElement.Initialize(String, String, ExternalOptionDefinition(), Integer, IExternalOptionCallback, Boolean)
-  fullName.vb: rwby.MenuLabelExternalOptionElement.Initialize(String, String, rwby.ExternalOptionDefinition(), Integer, IExternalOptionCallback, Boolean)
-  name.vb: Initialize(String, String, ExternalOptionDefinition(), Integer, IExternalOptionCallback, Boolean)
+  nameWithType.vb: MenuLabelExternalOptionElement.Initialize(String, String, ExternalOptionDefinition(), Integer, Action(Of MenuLabelExternalOptionElement, BaseEventData), Boolean)
+  fullName.vb: rwby.MenuLabelExternalOptionElement.Initialize(String, String, rwby.ExternalOptionDefinition(), Integer, System.Action(Of rwby.MenuLabelExternalOptionElement, UnityEngine.EventSystems.BaseEventData), Boolean)
+  name.vb: Initialize(String, String, ExternalOptionDefinition(), Integer, Action(Of MenuLabelExternalOptionElement, BaseEventData), Boolean)
 - uid: rwby.MenuLabelExternalOptionElement.UpdateSelection
   commentId: M:rwby.MenuLabelExternalOptionElement.UpdateSelection
   id: UpdateSelection
@@ -738,7 +738,7 @@ references:
   fullName: rwby.MenuLabelExternalOptionElement.Awake
 - uid: rwby.MenuLabelExternalOptionElement.Initialize*
   commentId: Overload:rwby.MenuLabelExternalOptionElement.Initialize
-  href: rwby.MenuLabelExternalOptionElement.html#rwby_MenuLabelExternalOptionElement_Initialize_System_String_System_String_System_Collections_Generic_List_System_String__System_Int32_IExternalOptionCallback_System_Boolean_
+  href: rwby.MenuLabelExternalOptionElement.html#rwby_MenuLabelExternalOptionElement_Initialize_System_String_System_String_System_Collections_Generic_List_System_String__System_Int32_System_Action_rwby_MenuLabelExternalOptionElement_UnityEngine_EventSystems_BaseEventData__System_Boolean_
   name: Initialize
   nameWithType: MenuLabelExternalOptionElement.Initialize
   fullName: rwby.MenuLabelExternalOptionElement.Initialize
@@ -777,12 +777,49 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
-- uid: Global.IExternalOptionCallback
-  commentId: T:Global.IExternalOptionCallback
-  href: IExternalOptionCallback.html
-  name: IExternalOptionCallback
-  nameWithType: IExternalOptionCallback
-  fullName: IExternalOptionCallback
+- uid: System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData}
+  commentId: T:System.Action{rwby.MenuLabelExternalOptionElement,UnityEngine.EventSystems.BaseEventData}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<MenuLabelExternalOptionElement, BaseEventData>
+  nameWithType: Action<MenuLabelExternalOptionElement, BaseEventData>
+  fullName: System.Action<rwby.MenuLabelExternalOptionElement, UnityEngine.EventSystems.BaseEventData>
+  nameWithType.vb: Action(Of MenuLabelExternalOptionElement, BaseEventData)
+  fullName.vb: System.Action(Of rwby.MenuLabelExternalOptionElement, UnityEngine.EventSystems.BaseEventData)
+  name.vb: Action(Of MenuLabelExternalOptionElement, BaseEventData)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: rwby.MenuLabelExternalOptionElement
+    name: MenuLabelExternalOptionElement
+    href: rwby.MenuLabelExternalOptionElement.html
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.EventSystems.BaseEventData
+    name: BaseEventData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.MenuLabelExternalOptionElement
+    name: MenuLabelExternalOptionElement
+    href: rwby.MenuLabelExternalOptionElement.html
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.EventSystems.BaseEventData
+    name: BaseEventData
+    isExternal: true
+  - name: )
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
   isExternal: true
@@ -848,6 +885,40 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
 - uid: System.Collections.Generic.List{System.ValueTuple{System.String,System.String}}
   commentId: T:System.Collections.Generic.List{System.ValueTuple{System.String,System.String}}
   parent: System.Collections.Generic

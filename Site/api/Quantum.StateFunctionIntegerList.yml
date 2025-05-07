@@ -24,8 +24,8 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public abstract class StateFunctionIntegerList : HNSFStateFunction<QList<int>>'
-    content.vb: Public MustInherit Class StateFunctionIntegerList Inherits HNSFStateFunction(Of QList(Of Integer))
+    content: 'public abstract class StateFunctionIntegerList : HNSFStateFunction<QList<int>>, ILogSource'
+    content.vb: Public MustInherit Class StateFunctionIntegerList Inherits HNSFStateFunction(Of QList(Of Integer)) Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -33,6 +33,8 @@ items:
   - Quantum.AssetObject
   - Quantum.HNSFStateFunction
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Int32}}
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Int32}}.Label
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Int32}}.Execute(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -138,6 +140,13 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
   - name: )
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Int32}}.Label
   commentId: F:Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Int32}}.Label
   parent: Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Int32}}

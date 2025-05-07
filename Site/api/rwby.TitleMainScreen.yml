@@ -5,31 +5,30 @@ items:
   id: TitleMainScreen
   parent: rwby
   children:
-  - rwby.TitleMainScreen.BUTTON_ConfigureMods
-  - rwby.TitleMainScreen.BUTTON_CreateLobby
-  - rwby.TitleMainScreen.BUTTON_ExitToDesktop
-  - rwby.TitleMainScreen.BUTTON_JoinLobby
-  - rwby.TitleMainScreen.BUTTON_Local
-  - rwby.TitleMainScreen.BUTTON_Online
-  - rwby.TitleMainScreen.BUTTON_Settings
-  - rwby.TitleMainScreen.BUTTON_TestButton
-  - rwby.TitleMainScreen.BUTTON_Training
-  - rwby.TitleMainScreen.BUTTON_Versus
-  - rwby.TitleMainScreen.GetSubmenuFromType(rwby.TitleMainScreen.SubmenuType)
+  - rwby.TitleMainScreen.BUTTON_Local(CHARK.ScriptableEvents.Events.SimpleArg)
+  - rwby.TitleMainScreen.BUTTON_Modding(CHARK.ScriptableEvents.Events.SimpleArg)
+  - rwby.TitleMainScreen.BUTTON_Online(CHARK.ScriptableEvents.Events.SimpleArg)
+  - rwby.TitleMainScreen.BUTTON_Settings(CHARK.ScriptableEvents.Events.SimpleArg)
   - rwby.TitleMainScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
+  - rwby.TitleMainScreen.TransitionToLocalScreen
+  - rwby.TitleMainScreen.TransitionToOnlineScreen
   - rwby.TitleMainScreen.TryClose(rwby.ui.MenuDirection,System.Boolean)
+  - rwby.TitleMainScreen.defaultSelectionObject
+  - rwby.TitleMainScreen.event_PressedLocal
+  - rwby.TitleMainScreen.event_PressedMods
+  - rwby.TitleMainScreen.event_PressedOnline
+  - rwby.TitleMainScreen.event_PressedSettings
+  - rwby.TitleMainScreen.exitingTweenSequence
   - rwby.TitleMainScreen.gameManager
-  - rwby.TitleMainScreen.joinLobbyEntryScreen
-  - rwby.TitleMainScreen.submenuHistory
-  - rwby.TitleMainScreen.submenuLocal
-  - rwby.TitleMainScreen.submenuLocalDefaultSelection
-  - rwby.TitleMainScreen.submenuOnline
-  - rwby.TitleMainScreen.submenuOnlineDefaultSelection
-  - rwby.TitleMainScreen.submenuTop
-  - rwby.TitleMainScreen.submenuTopDefaultSelection
-  - rwby.TitleMainScreen.testingLocal
+  - rwby.TitleMainScreen.localSceneSwitcher
+  - rwby.TitleMainScreen.mainMenuLocalScreen
+  - rwby.TitleMainScreen.mainMenuManager
+  - rwby.TitleMainScreen.optionsScreen
+  - rwby.TitleMainScreen.tag_Cutscene_MainScreenToLocalScreen
+  - rwby.TitleMainScreen.tag_Cutscene_MainScreenToOnlineScreen
+  - rwby.TitleMainScreen.tag_Cutscene_TitleScreenToMainScreen
   - rwby.TitleMainScreen.titleCamera
-  - rwby.TitleMainScreen.titleGroup
+  - rwby.TitleMainScreen.titleOnlineScreen
   langs:
   - csharp
   - vb
@@ -44,7 +43,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TitleMainScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 11
+    startLine: 10
   assemblies:
   - rwby
   namespace: rwby
@@ -61,7 +60,8 @@ items:
   implements:
   - rwby.ui.IMenu
   inheritedMembers:
-  - rwby.ui.MenuBase.currentHandler
+  - rwby.ui.MenuBase.MenuHandler
+  - rwby.ui.MenuBase.history
 - uid: rwby.TitleMainScreen.gameManager
   commentId: F:rwby.TitleMainScreen.gameManager
   id: gameManager
@@ -80,7 +80,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: gameManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 20
+    startLine: 14
   assemblies:
   - rwby
   namespace: rwby
@@ -99,87 +99,33 @@ items:
   - type: System.NonSerializedAttribute
     ctor: System.NonSerializedAttribute.#ctor
     arguments: []
-- uid: rwby.TitleMainScreen.joinLobbyEntryScreen
-  commentId: F:rwby.TitleMainScreen.joinLobbyEntryScreen
-  id: joinLobbyEntryScreen
+- uid: rwby.TitleMainScreen.localSceneSwitcher
+  commentId: F:rwby.TitleMainScreen.localSceneSwitcher
+  id: localSceneSwitcher
   parent: rwby.TitleMainScreen
   langs:
   - csharp
   - vb
-  name: joinLobbyEntryScreen
-  nameWithType: TitleMainScreen.joinLobbyEntryScreen
-  fullName: rwby.TitleMainScreen.joinLobbyEntryScreen
+  name: localSceneSwitcher
+  nameWithType: TitleMainScreen.localSceneSwitcher
+  fullName: rwby.TitleMainScreen.localSceneSwitcher
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: joinLobbyEntryScreen
+    id: localSceneSwitcher
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 22
+    startLine: 16
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: public GameObject joinLobbyEntryScreen
+    content: public MainMenuLocalSceneSwitcher localSceneSwitcher
     return:
-      type: UnityEngine.GameObject
-    content.vb: Public joinLobbyEntryScreen As GameObject
-- uid: rwby.TitleMainScreen.titleGroup
-  commentId: F:rwby.TitleMainScreen.titleGroup
-  id: titleGroup
-  parent: rwby.TitleMainScreen
-  langs:
-  - csharp
-  - vb
-  name: titleGroup
-  nameWithType: TitleMainScreen.titleGroup
-  fullName: rwby.TitleMainScreen.titleGroup
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: titleGroup
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 23
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public CanvasGroup titleGroup
-    return:
-      type: UnityEngine.CanvasGroup
-    content.vb: Public titleGroup As CanvasGroup
-- uid: rwby.TitleMainScreen.testingLocal
-  commentId: F:rwby.TitleMainScreen.testingLocal
-  id: testingLocal
-  parent: rwby.TitleMainScreen
-  langs:
-  - csharp
-  - vb
-  name: testingLocal
-  nameWithType: TitleMainScreen.testingLocal
-  fullName: rwby.TitleMainScreen.testingLocal
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: testingLocal
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 25
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public bool testingLocal
-    return:
-      type: System.Boolean
-    content.vb: Public testingLocal As Boolean
+      type: Global.MainMenuLocalSceneSwitcher
+    content.vb: Public localSceneSwitcher As MainMenuLocalSceneSwitcher
 - uid: rwby.TitleMainScreen.titleCamera
   commentId: F:rwby.TitleMainScreen.titleCamera
   id: titleCamera
@@ -198,7 +144,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: titleCamera
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 27
+    startLine: 17
   assemblies:
   - rwby
   namespace: rwby
@@ -207,219 +153,393 @@ items:
     return:
       type: UnityEngine.Camera
     content.vb: Public titleCamera As Camera
-- uid: rwby.TitleMainScreen.submenuHistory
-  commentId: F:rwby.TitleMainScreen.submenuHistory
-  id: submenuHistory
+- uid: rwby.TitleMainScreen.defaultSelectionObject
+  commentId: F:rwby.TitleMainScreen.defaultSelectionObject
+  id: defaultSelectionObject
   parent: rwby.TitleMainScreen
   langs:
   - csharp
   - vb
-  name: submenuHistory
-  nameWithType: TitleMainScreen.submenuHistory
-  fullName: rwby.TitleMainScreen.submenuHistory
+  name: defaultSelectionObject
+  nameWithType: TitleMainScreen.defaultSelectionObject
+  fullName: rwby.TitleMainScreen.defaultSelectionObject
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: submenuHistory
+    id: defaultSelectionObject
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public GameObject defaultSelectionObject
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public defaultSelectionObject As GameObject
+- uid: rwby.TitleMainScreen.mainMenuManager
+  commentId: F:rwby.TitleMainScreen.mainMenuManager
+  id: mainMenuManager
+  parent: rwby.TitleMainScreen
+  langs:
+  - csharp
+  - vb
+  name: mainMenuManager
+  nameWithType: TitleMainScreen.mainMenuManager
+  fullName: rwby.TitleMainScreen.mainMenuManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: mainMenuManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+    startLine: 22
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [Header("Screens")]
+
+      public MainMenuManager mainMenuManager
+    return:
+      type: rwby.ui.MainMenu.MainMenuManager
+    content.vb: >-
+      <Header("Screens")>
+
+      Public mainMenuManager As MainMenuManager
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Screens
+- uid: rwby.TitleMainScreen.optionsScreen
+  commentId: F:rwby.TitleMainScreen.optionsScreen
+  id: optionsScreen
+  parent: rwby.TitleMainScreen
+  langs:
+  - csharp
+  - vb
+  name: optionsScreen
+  nameWithType: TitleMainScreen.optionsScreen
+  fullName: rwby.TitleMainScreen.optionsScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: optionsScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public OptionsScreen optionsScreen
+    return:
+      type: Global.OptionsScreen
+    content.vb: Public optionsScreen As OptionsScreen
+- uid: rwby.TitleMainScreen.titleOnlineScreen
+  commentId: F:rwby.TitleMainScreen.titleOnlineScreen
+  id: titleOnlineScreen
+  parent: rwby.TitleMainScreen
+  langs:
+  - csharp
+  - vb
+  name: titleOnlineScreen
+  nameWithType: TitleMainScreen.titleOnlineScreen
+  fullName: rwby.TitleMainScreen.titleOnlineScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: titleOnlineScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+    startLine: 24
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public TitleOnlineScreen titleOnlineScreen
+    return:
+      type: rwby.ui.MainMenu.TitleOnlineScreen
+    content.vb: Public titleOnlineScreen As TitleOnlineScreen
+- uid: rwby.TitleMainScreen.mainMenuLocalScreen
+  commentId: F:rwby.TitleMainScreen.mainMenuLocalScreen
+  id: mainMenuLocalScreen
+  parent: rwby.TitleMainScreen
+  langs:
+  - csharp
+  - vb
+  name: mainMenuLocalScreen
+  nameWithType: TitleMainScreen.mainMenuLocalScreen
+  fullName: rwby.TitleMainScreen.mainMenuLocalScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: mainMenuLocalScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+    startLine: 25
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public MainMenuLocalScreen mainMenuLocalScreen
+    return:
+      type: rwby.MainMenuLocalScreen
+    content.vb: Public mainMenuLocalScreen As MainMenuLocalScreen
+- uid: rwby.TitleMainScreen.tag_Cutscene_TitleScreenToMainScreen
+  commentId: F:rwby.TitleMainScreen.tag_Cutscene_TitleScreenToMainScreen
+  id: tag_Cutscene_TitleScreenToMainScreen
+  parent: rwby.TitleMainScreen
+  langs:
+  - csharp
+  - vb
+  name: tag_Cutscene_TitleScreenToMainScreen
+  nameWithType: TitleMainScreen.tag_Cutscene_TitleScreenToMainScreen
+  fullName: rwby.TitleMainScreen.tag_Cutscene_TitleScreenToMainScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_Cutscene_TitleScreenToMainScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+    startLine: 28
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [Header("Transition Animators")]
+
+      public Tag tag_Cutscene_TitleScreenToMainScreen
+    return:
+      type: Quantum.Tag
+    content.vb: >-
+      <Header("Transition Animators")>
+
+      Public tag_Cutscene_TitleScreenToMainScreen As Tag
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Transition Animators
+- uid: rwby.TitleMainScreen.tag_Cutscene_MainScreenToOnlineScreen
+  commentId: F:rwby.TitleMainScreen.tag_Cutscene_MainScreenToOnlineScreen
+  id: tag_Cutscene_MainScreenToOnlineScreen
+  parent: rwby.TitleMainScreen
+  langs:
+  - csharp
+  - vb
+  name: tag_Cutscene_MainScreenToOnlineScreen
+  nameWithType: TitleMainScreen.tag_Cutscene_MainScreenToOnlineScreen
+  fullName: rwby.TitleMainScreen.tag_Cutscene_MainScreenToOnlineScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_Cutscene_MainScreenToOnlineScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
     startLine: 29
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: public List<TitleMainScreen.SubmenuType> submenuHistory
+    content: public Tag tag_Cutscene_MainScreenToOnlineScreen
     return:
-      type: System.Collections.Generic.List{rwby.TitleMainScreen.SubmenuType}
-    content.vb: Public submenuHistory As List(Of TitleMainScreen.SubmenuType)
-- uid: rwby.TitleMainScreen.submenuTop
-  commentId: F:rwby.TitleMainScreen.submenuTop
-  id: submenuTop
+      type: Quantum.Tag
+    content.vb: Public tag_Cutscene_MainScreenToOnlineScreen As Tag
+- uid: rwby.TitleMainScreen.tag_Cutscene_MainScreenToLocalScreen
+  commentId: F:rwby.TitleMainScreen.tag_Cutscene_MainScreenToLocalScreen
+  id: tag_Cutscene_MainScreenToLocalScreen
   parent: rwby.TitleMainScreen
   langs:
   - csharp
   - vb
-  name: submenuTop
-  nameWithType: TitleMainScreen.submenuTop
-  fullName: rwby.TitleMainScreen.submenuTop
+  name: tag_Cutscene_MainScreenToLocalScreen
+  nameWithType: TitleMainScreen.tag_Cutscene_MainScreenToLocalScreen
+  fullName: rwby.TitleMainScreen.tag_Cutscene_MainScreenToLocalScreen
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: submenuTop
+    id: tag_Cutscene_MainScreenToLocalScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+    startLine: 30
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public Tag tag_Cutscene_MainScreenToLocalScreen
+    return:
+      type: Quantum.Tag
+    content.vb: Public tag_Cutscene_MainScreenToLocalScreen As Tag
+- uid: rwby.TitleMainScreen.exitingTweenSequence
+  commentId: F:rwby.TitleMainScreen.exitingTweenSequence
+  id: exitingTweenSequence
+  parent: rwby.TitleMainScreen
+  langs:
+  - csharp
+  - vb
+  name: exitingTweenSequence
+  nameWithType: TitleMainScreen.exitingTweenSequence
+  fullName: rwby.TitleMainScreen.exitingTweenSequence
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: exitingTweenSequence
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
     startLine: 32
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: >-
-      [Header("Submenus")]
-
-      public GameObject submenuTop
+    content: public TweenSequenceContainer exitingTweenSequence
     return:
-      type: UnityEngine.GameObject
-    content.vb: >-
-      <Header("Submenus")>
+      type: Global.TweenSequenceContainer
+    content.vb: Public exitingTweenSequence As TweenSequenceContainer
+- uid: rwby.TitleMainScreen.event_PressedOnline
+  commentId: F:rwby.TitleMainScreen.event_PressedOnline
+  id: event_PressedOnline
+  parent: rwby.TitleMainScreen
+  langs:
+  - csharp
+  - vb
+  name: event_PressedOnline
+  nameWithType: TitleMainScreen.event_PressedOnline
+  fullName: rwby.TitleMainScreen.event_PressedOnline
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: event_PressedOnline
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+    startLine: 35
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [Header("Event Assets")]
 
-      Public submenuTop As GameObject
+      public SimpleScriptableEvent event_PressedOnline
+    return:
+      type: CHARK.ScriptableEvents.Events.SimpleScriptableEvent
+    content.vb: >-
+      <Header("Event Assets")>
+
+      Public event_PressedOnline As SimpleScriptableEvent
   attributes:
   - type: UnityEngine.HeaderAttribute
     ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: Submenus
-- uid: rwby.TitleMainScreen.submenuOnline
-  commentId: F:rwby.TitleMainScreen.submenuOnline
-  id: submenuOnline
+      value: Event Assets
+- uid: rwby.TitleMainScreen.event_PressedLocal
+  commentId: F:rwby.TitleMainScreen.event_PressedLocal
+  id: event_PressedLocal
   parent: rwby.TitleMainScreen
   langs:
   - csharp
   - vb
-  name: submenuOnline
-  nameWithType: TitleMainScreen.submenuOnline
-  fullName: rwby.TitleMainScreen.submenuOnline
+  name: event_PressedLocal
+  nameWithType: TitleMainScreen.event_PressedLocal
+  fullName: rwby.TitleMainScreen.event_PressedLocal
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: submenuOnline
+    id: event_PressedLocal
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 33
+    startLine: 36
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: public GameObject submenuOnline
+    content: public SimpleScriptableEvent event_PressedLocal
     return:
-      type: UnityEngine.GameObject
-    content.vb: Public submenuOnline As GameObject
-- uid: rwby.TitleMainScreen.submenuLocal
-  commentId: F:rwby.TitleMainScreen.submenuLocal
-  id: submenuLocal
+      type: CHARK.ScriptableEvents.Events.SimpleScriptableEvent
+    content.vb: Public event_PressedLocal As SimpleScriptableEvent
+- uid: rwby.TitleMainScreen.event_PressedMods
+  commentId: F:rwby.TitleMainScreen.event_PressedMods
+  id: event_PressedMods
   parent: rwby.TitleMainScreen
   langs:
   - csharp
   - vb
-  name: submenuLocal
-  nameWithType: TitleMainScreen.submenuLocal
-  fullName: rwby.TitleMainScreen.submenuLocal
+  name: event_PressedMods
+  nameWithType: TitleMainScreen.event_PressedMods
+  fullName: rwby.TitleMainScreen.event_PressedMods
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: submenuLocal
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 34
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public GameObject submenuLocal
-    return:
-      type: UnityEngine.GameObject
-    content.vb: Public submenuLocal As GameObject
-- uid: rwby.TitleMainScreen.submenuTopDefaultSelection
-  commentId: F:rwby.TitleMainScreen.submenuTopDefaultSelection
-  id: submenuTopDefaultSelection
-  parent: rwby.TitleMainScreen
-  langs:
-  - csharp
-  - vb
-  name: submenuTopDefaultSelection
-  nameWithType: TitleMainScreen.submenuTopDefaultSelection
-  fullName: rwby.TitleMainScreen.submenuTopDefaultSelection
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: submenuTopDefaultSelection
+    id: event_PressedMods
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
     startLine: 37
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: >-
-      [Header("Default Picks")]
-
-      public GameObject submenuTopDefaultSelection
+    content: public SimpleScriptableEvent event_PressedMods
     return:
-      type: UnityEngine.GameObject
-    content.vb: >-
-      <Header("Default Picks")>
-
-      Public submenuTopDefaultSelection As GameObject
-  attributes:
-  - type: UnityEngine.HeaderAttribute
-    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: Default Picks
-- uid: rwby.TitleMainScreen.submenuOnlineDefaultSelection
-  commentId: F:rwby.TitleMainScreen.submenuOnlineDefaultSelection
-  id: submenuOnlineDefaultSelection
+      type: CHARK.ScriptableEvents.Events.SimpleScriptableEvent
+    content.vb: Public event_PressedMods As SimpleScriptableEvent
+- uid: rwby.TitleMainScreen.event_PressedSettings
+  commentId: F:rwby.TitleMainScreen.event_PressedSettings
+  id: event_PressedSettings
   parent: rwby.TitleMainScreen
   langs:
   - csharp
   - vb
-  name: submenuOnlineDefaultSelection
-  nameWithType: TitleMainScreen.submenuOnlineDefaultSelection
-  fullName: rwby.TitleMainScreen.submenuOnlineDefaultSelection
+  name: event_PressedSettings
+  nameWithType: TitleMainScreen.event_PressedSettings
+  fullName: rwby.TitleMainScreen.event_PressedSettings
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: submenuOnlineDefaultSelection
+    id: event_PressedSettings
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
     startLine: 38
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: public GameObject submenuOnlineDefaultSelection
+    content: public SimpleScriptableEvent event_PressedSettings
     return:
-      type: UnityEngine.GameObject
-    content.vb: Public submenuOnlineDefaultSelection As GameObject
-- uid: rwby.TitleMainScreen.submenuLocalDefaultSelection
-  commentId: F:rwby.TitleMainScreen.submenuLocalDefaultSelection
-  id: submenuLocalDefaultSelection
-  parent: rwby.TitleMainScreen
-  langs:
-  - csharp
-  - vb
-  name: submenuLocalDefaultSelection
-  nameWithType: TitleMainScreen.submenuLocalDefaultSelection
-  fullName: rwby.TitleMainScreen.submenuLocalDefaultSelection
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: submenuLocalDefaultSelection
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 39
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public GameObject submenuLocalDefaultSelection
-    return:
-      type: UnityEngine.GameObject
-    content.vb: Public submenuLocalDefaultSelection As GameObject
+      type: CHARK.ScriptableEvents.Events.SimpleScriptableEvent
+    content.vb: Public event_PressedSettings As SimpleScriptableEvent
 - uid: rwby.TitleMainScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   commentId: M:rwby.TitleMainScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   id: Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
@@ -438,7 +558,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Open
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 46
+    startLine: 40
   assemblies:
   - rwby
   namespace: rwby
@@ -471,7 +591,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryClose
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 54
+    startLine: 69
   assemblies:
   - rwby
   namespace: rwby
@@ -491,47 +611,16 @@ items:
   nameWithType.vb: TitleMainScreen.TryClose(MenuDirection, Boolean)
   fullName.vb: rwby.TitleMainScreen.TryClose(rwby.ui.MenuDirection, Boolean)
   name.vb: TryClose(MenuDirection, Boolean)
-- uid: rwby.TitleMainScreen.GetSubmenuFromType(rwby.TitleMainScreen.SubmenuType)
-  commentId: M:rwby.TitleMainScreen.GetSubmenuFromType(rwby.TitleMainScreen.SubmenuType)
-  id: GetSubmenuFromType(rwby.TitleMainScreen.SubmenuType)
+- uid: rwby.TitleMainScreen.BUTTON_Online(CHARK.ScriptableEvents.Events.SimpleArg)
+  commentId: M:rwby.TitleMainScreen.BUTTON_Online(CHARK.ScriptableEvents.Events.SimpleArg)
+  id: BUTTON_Online(CHARK.ScriptableEvents.Events.SimpleArg)
   parent: rwby.TitleMainScreen
   langs:
   - csharp
   - vb
-  name: GetSubmenuFromType(SubmenuType)
-  nameWithType: TitleMainScreen.GetSubmenuFromType(TitleMainScreen.SubmenuType)
-  fullName: rwby.TitleMainScreen.GetSubmenuFromType(rwby.TitleMainScreen.SubmenuType)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: GetSubmenuFromType
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 107
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public GameObject GetSubmenuFromType(TitleMainScreen.SubmenuType submenuType)
-    parameters:
-    - id: submenuType
-      type: rwby.TitleMainScreen.SubmenuType
-    return:
-      type: UnityEngine.GameObject
-    content.vb: Public Function GetSubmenuFromType(submenuType As TitleMainScreen.SubmenuType) As GameObject
-  overload: rwby.TitleMainScreen.GetSubmenuFromType*
-- uid: rwby.TitleMainScreen.BUTTON_Online
-  commentId: M:rwby.TitleMainScreen.BUTTON_Online
-  id: BUTTON_Online
-  parent: rwby.TitleMainScreen
-  langs:
-  - csharp
-  - vb
-  name: BUTTON_Online()
-  nameWithType: TitleMainScreen.BUTTON_Online()
-  fullName: rwby.TitleMainScreen.BUTTON_Online()
+  name: BUTTON_Online(SimpleArg)
+  nameWithType: TitleMainScreen.BUTTON_Online(SimpleArg)
+  fullName: rwby.TitleMainScreen.BUTTON_Online(CHARK.ScriptableEvents.Events.SimpleArg)
   type: Method
   source:
     remote:
@@ -540,24 +629,53 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BUTTON_Online
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 121
+    startLine: 130
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: public void BUTTON_Online()
-    content.vb: Public Sub BUTTON_Online()
+    content: public void BUTTON_Online(SimpleArg simpleArg)
+    parameters:
+    - id: simpleArg
+      type: CHARK.ScriptableEvents.Events.SimpleArg
+    content.vb: Public Sub BUTTON_Online(simpleArg As SimpleArg)
   overload: rwby.TitleMainScreen.BUTTON_Online*
-- uid: rwby.TitleMainScreen.BUTTON_Local
-  commentId: M:rwby.TitleMainScreen.BUTTON_Local
-  id: BUTTON_Local
+- uid: rwby.TitleMainScreen.TransitionToOnlineScreen
+  commentId: M:rwby.TitleMainScreen.TransitionToOnlineScreen
+  id: TransitionToOnlineScreen
   parent: rwby.TitleMainScreen
   langs:
   - csharp
   - vb
-  name: BUTTON_Local()
-  nameWithType: TitleMainScreen.BUTTON_Local()
-  fullName: rwby.TitleMainScreen.BUTTON_Local()
+  name: TransitionToOnlineScreen()
+  nameWithType: TitleMainScreen.TransitionToOnlineScreen()
+  fullName: rwby.TitleMainScreen.TransitionToOnlineScreen()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TransitionToOnlineScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+    startLine: 140
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void TransitionToOnlineScreen()
+    content.vb: Public Sub TransitionToOnlineScreen()
+  overload: rwby.TitleMainScreen.TransitionToOnlineScreen*
+- uid: rwby.TitleMainScreen.BUTTON_Local(CHARK.ScriptableEvents.Events.SimpleArg)
+  commentId: M:rwby.TitleMainScreen.BUTTON_Local(CHARK.ScriptableEvents.Events.SimpleArg)
+  id: BUTTON_Local(CHARK.ScriptableEvents.Events.SimpleArg)
+  parent: rwby.TitleMainScreen
+  langs:
+  - csharp
+  - vb
+  name: BUTTON_Local(SimpleArg)
+  nameWithType: TitleMainScreen.BUTTON_Local(SimpleArg)
+  fullName: rwby.TitleMainScreen.BUTTON_Local(CHARK.ScriptableEvents.Events.SimpleArg)
   type: Method
   source:
     remote:
@@ -566,50 +684,82 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BUTTON_Local
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 184
+    startLine: 152
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: public void BUTTON_Local()
-    content.vb: Public Sub BUTTON_Local()
+    content: public void BUTTON_Local(SimpleArg simpleArg)
+    parameters:
+    - id: simpleArg
+      type: CHARK.ScriptableEvents.Events.SimpleArg
+    content.vb: Public Sub BUTTON_Local(simpleArg As SimpleArg)
   overload: rwby.TitleMainScreen.BUTTON_Local*
-- uid: rwby.TitleMainScreen.BUTTON_ConfigureMods
-  commentId: M:rwby.TitleMainScreen.BUTTON_ConfigureMods
-  id: BUTTON_ConfigureMods
+- uid: rwby.TitleMainScreen.TransitionToLocalScreen
+  commentId: M:rwby.TitleMainScreen.TransitionToLocalScreen
+  id: TransitionToLocalScreen
   parent: rwby.TitleMainScreen
   langs:
   - csharp
   - vb
-  name: BUTTON_ConfigureMods()
-  nameWithType: TitleMainScreen.BUTTON_ConfigureMods()
-  fullName: rwby.TitleMainScreen.BUTTON_ConfigureMods()
+  name: TransitionToLocalScreen()
+  nameWithType: TitleMainScreen.TransitionToLocalScreen()
+  fullName: rwby.TitleMainScreen.TransitionToLocalScreen()
   type: Method
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: BUTTON_ConfigureMods
+    id: TransitionToLocalScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 189
+    startLine: 162
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: public void BUTTON_ConfigureMods()
-    content.vb: Public Sub BUTTON_ConfigureMods()
-  overload: rwby.TitleMainScreen.BUTTON_ConfigureMods*
-- uid: rwby.TitleMainScreen.BUTTON_Settings
-  commentId: M:rwby.TitleMainScreen.BUTTON_Settings
-  id: BUTTON_Settings
+    content: public void TransitionToLocalScreen()
+    content.vb: Public Sub TransitionToLocalScreen()
+  overload: rwby.TitleMainScreen.TransitionToLocalScreen*
+- uid: rwby.TitleMainScreen.BUTTON_Modding(CHARK.ScriptableEvents.Events.SimpleArg)
+  commentId: M:rwby.TitleMainScreen.BUTTON_Modding(CHARK.ScriptableEvents.Events.SimpleArg)
+  id: BUTTON_Modding(CHARK.ScriptableEvents.Events.SimpleArg)
   parent: rwby.TitleMainScreen
   langs:
   - csharp
   - vb
-  name: BUTTON_Settings()
-  nameWithType: TitleMainScreen.BUTTON_Settings()
-  fullName: rwby.TitleMainScreen.BUTTON_Settings()
+  name: BUTTON_Modding(SimpleArg)
+  nameWithType: TitleMainScreen.BUTTON_Modding(SimpleArg)
+  fullName: rwby.TitleMainScreen.BUTTON_Modding(CHARK.ScriptableEvents.Events.SimpleArg)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BUTTON_Modding
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
+    startLine: 174
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void BUTTON_Modding(SimpleArg simpleArg)
+    parameters:
+    - id: simpleArg
+      type: CHARK.ScriptableEvents.Events.SimpleArg
+    content.vb: Public Sub BUTTON_Modding(simpleArg As SimpleArg)
+  overload: rwby.TitleMainScreen.BUTTON_Modding*
+- uid: rwby.TitleMainScreen.BUTTON_Settings(CHARK.ScriptableEvents.Events.SimpleArg)
+  commentId: M:rwby.TitleMainScreen.BUTTON_Settings(CHARK.ScriptableEvents.Events.SimpleArg)
+  id: BUTTON_Settings(CHARK.ScriptableEvents.Events.SimpleArg)
+  parent: rwby.TitleMainScreen
+  langs:
+  - csharp
+  - vb
+  name: BUTTON_Settings(SimpleArg)
+  nameWithType: TitleMainScreen.BUTTON_Settings(SimpleArg)
+  fullName: rwby.TitleMainScreen.BUTTON_Settings(CHARK.ScriptableEvents.Events.SimpleArg)
   type: Method
   source:
     remote:
@@ -618,170 +768,17 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BUTTON_Settings
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 194
+    startLine: 179
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: public void BUTTON_Settings()
-    content.vb: Public Sub BUTTON_Settings()
+    content: public void BUTTON_Settings(SimpleArg simpleArg)
+    parameters:
+    - id: simpleArg
+      type: CHARK.ScriptableEvents.Events.SimpleArg
+    content.vb: Public Sub BUTTON_Settings(simpleArg As SimpleArg)
   overload: rwby.TitleMainScreen.BUTTON_Settings*
-- uid: rwby.TitleMainScreen.BUTTON_CreateLobby
-  commentId: M:rwby.TitleMainScreen.BUTTON_CreateLobby
-  id: BUTTON_CreateLobby
-  parent: rwby.TitleMainScreen
-  langs:
-  - csharp
-  - vb
-  name: BUTTON_CreateLobby()
-  nameWithType: TitleMainScreen.BUTTON_CreateLobby()
-  fullName: rwby.TitleMainScreen.BUTTON_CreateLobby()
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: BUTTON_CreateLobby
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 199
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public void BUTTON_CreateLobby()
-    content.vb: Public Sub BUTTON_CreateLobby()
-  overload: rwby.TitleMainScreen.BUTTON_CreateLobby*
-- uid: rwby.TitleMainScreen.BUTTON_JoinLobby
-  commentId: M:rwby.TitleMainScreen.BUTTON_JoinLobby
-  id: BUTTON_JoinLobby
-  parent: rwby.TitleMainScreen
-  langs:
-  - csharp
-  - vb
-  name: BUTTON_JoinLobby()
-  nameWithType: TitleMainScreen.BUTTON_JoinLobby()
-  fullName: rwby.TitleMainScreen.BUTTON_JoinLobby()
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: BUTTON_JoinLobby
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 221
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public void BUTTON_JoinLobby()
-    content.vb: Public Sub BUTTON_JoinLobby()
-  overload: rwby.TitleMainScreen.BUTTON_JoinLobby*
-- uid: rwby.TitleMainScreen.BUTTON_Training
-  commentId: M:rwby.TitleMainScreen.BUTTON_Training
-  id: BUTTON_Training
-  parent: rwby.TitleMainScreen
-  langs:
-  - csharp
-  - vb
-  name: BUTTON_Training()
-  nameWithType: TitleMainScreen.BUTTON_Training()
-  fullName: rwby.TitleMainScreen.BUTTON_Training()
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: BUTTON_Training
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 226
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public void BUTTON_Training()
-    content.vb: Public Sub BUTTON_Training()
-  overload: rwby.TitleMainScreen.BUTTON_Training*
-- uid: rwby.TitleMainScreen.BUTTON_Versus
-  commentId: M:rwby.TitleMainScreen.BUTTON_Versus
-  id: BUTTON_Versus
-  parent: rwby.TitleMainScreen
-  langs:
-  - csharp
-  - vb
-  name: BUTTON_Versus()
-  nameWithType: TitleMainScreen.BUTTON_Versus()
-  fullName: rwby.TitleMainScreen.BUTTON_Versus()
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: BUTTON_Versus
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 231
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public void BUTTON_Versus()
-    content.vb: Public Sub BUTTON_Versus()
-  overload: rwby.TitleMainScreen.BUTTON_Versus*
-- uid: rwby.TitleMainScreen.BUTTON_TestButton
-  commentId: M:rwby.TitleMainScreen.BUTTON_TestButton
-  id: BUTTON_TestButton
-  parent: rwby.TitleMainScreen
-  langs:
-  - csharp
-  - vb
-  name: BUTTON_TestButton()
-  nameWithType: TitleMainScreen.BUTTON_TestButton()
-  fullName: rwby.TitleMainScreen.BUTTON_TestButton()
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: BUTTON_TestButton
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 252
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public void BUTTON_TestButton()
-    content.vb: Public Sub BUTTON_TestButton()
-  overload: rwby.TitleMainScreen.BUTTON_TestButton*
-- uid: rwby.TitleMainScreen.BUTTON_ExitToDesktop
-  commentId: M:rwby.TitleMainScreen.BUTTON_ExitToDesktop
-  id: BUTTON_ExitToDesktop
-  parent: rwby.TitleMainScreen
-  langs:
-  - csharp
-  - vb
-  name: BUTTON_ExitToDesktop()
-  nameWithType: TitleMainScreen.BUTTON_ExitToDesktop()
-  fullName: rwby.TitleMainScreen.BUTTON_ExitToDesktop()
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: BUTTON_ExitToDesktop
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleMainScreen.cs
-    startLine: 257
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public void BUTTON_ExitToDesktop()
-    content.vb: Public Sub BUTTON_ExitToDesktop()
-  overload: rwby.TitleMainScreen.BUTTON_ExitToDesktop*
 references:
 - uid: rwby
   commentId: N:rwby
@@ -842,13 +839,20 @@ references:
   name: IMenu
   nameWithType: IMenu
   fullName: rwby.ui.IMenu
-- uid: rwby.ui.MenuBase.currentHandler
-  commentId: F:rwby.ui.MenuBase.currentHandler
+- uid: rwby.ui.MenuBase.MenuHandler
+  commentId: P:rwby.ui.MenuBase.MenuHandler
   parent: rwby.ui.MenuBase
-  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_currentHandler
-  name: currentHandler
-  nameWithType: MenuBase.currentHandler
-  fullName: rwby.ui.MenuBase.currentHandler
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_MenuHandler
+  name: MenuHandler
+  nameWithType: MenuBase.MenuHandler
+  fullName: rwby.ui.MenuBase.MenuHandler
+- uid: rwby.ui.MenuBase.history
+  commentId: F:rwby.ui.MenuBase.history
+  parent: rwby.ui.MenuBase
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_history
+  name: history
+  nameWithType: MenuBase.history
+  fullName: rwby.ui.MenuBase.history
 - uid: System
   commentId: N:System
   isExternal: true
@@ -891,31 +895,12 @@ references:
   name: GameManager
   nameWithType: GameManager
   fullName: rwby.GameManager
-- uid: UnityEngine.GameObject
-  commentId: T:UnityEngine.GameObject
-  parent: UnityEngine
-  isExternal: true
-  name: GameObject
-  nameWithType: GameObject
-  fullName: UnityEngine.GameObject
-- uid: UnityEngine.CanvasGroup
-  commentId: T:UnityEngine.CanvasGroup
-  parent: UnityEngine
-  isExternal: true
-  name: CanvasGroup
-  nameWithType: CanvasGroup
-  fullName: UnityEngine.CanvasGroup
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+- uid: Global.MainMenuLocalSceneSwitcher
+  commentId: T:Global.MainMenuLocalSceneSwitcher
+  href: MainMenuLocalSceneSwitcher.html
+  name: MainMenuLocalSceneSwitcher
+  nameWithType: MainMenuLocalSceneSwitcher
+  fullName: MainMenuLocalSceneSwitcher
 - uid: UnityEngine.Camera
   commentId: T:UnityEngine.Camera
   parent: UnityEngine
@@ -923,112 +908,126 @@ references:
   name: Camera
   nameWithType: Camera
   fullName: UnityEngine.Camera
-- uid: System.Collections.Generic.List{rwby.TitleMainScreen.SubmenuType}
-  commentId: T:System.Collections.Generic.List{rwby.TitleMainScreen.SubmenuType}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<TitleMainScreen.SubmenuType>
-  nameWithType: List<TitleMainScreen.SubmenuType>
-  fullName: System.Collections.Generic.List<rwby.TitleMainScreen.SubmenuType>
-  nameWithType.vb: List(Of TitleMainScreen.SubmenuType)
-  fullName.vb: System.Collections.Generic.List(Of rwby.TitleMainScreen.SubmenuType)
-  name.vb: List(Of TitleMainScreen.SubmenuType)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: rwby.TitleMainScreen
-    name: TitleMainScreen
-    href: rwby.TitleMainScreen.html
-  - name: .
-  - uid: rwby.TitleMainScreen.SubmenuType
-    name: SubmenuType
-    href: rwby.TitleMainScreen.SubmenuType.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: rwby.TitleMainScreen
-    name: TitleMainScreen
-    href: rwby.TitleMainScreen.html
-  - name: .
-  - uid: rwby.TitleMainScreen.SubmenuType
-    name: SubmenuType
-    href: rwby.TitleMainScreen.SubmenuType.html
-  - name: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: rwby.ui.MainMenu.MainMenuManager
+  commentId: T:rwby.ui.MainMenu.MainMenuManager
+  parent: rwby.ui.MainMenu
+  href: rwby.ui.MainMenu.MainMenuManager.html
+  name: MainMenuManager
+  nameWithType: MainMenuManager
+  fullName: rwby.ui.MainMenu.MainMenuManager
+- uid: rwby.ui.MainMenu
+  commentId: N:rwby.ui.MainMenu
+  href: rwby.html
+  name: rwby.ui.MainMenu
+  nameWithType: rwby.ui.MainMenu
+  fullName: rwby.ui.MainMenu
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - name: T
-  - name: '>'
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.ui
+    name: ui
+    href: rwby.ui.html
+  - name: .
+  - uid: rwby.ui.MainMenu
+    name: MainMenu
+    href: rwby.ui.MainMenu.html
   spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.ui
+    name: ui
+    href: rwby.ui.html
+  - name: .
+  - uid: rwby.ui.MainMenu
+    name: MainMenu
+    href: rwby.ui.MainMenu.html
+- uid: Global.OptionsScreen
+  commentId: T:Global.OptionsScreen
+  href: OptionsScreen.html
+  name: OptionsScreen
+  nameWithType: OptionsScreen
+  fullName: OptionsScreen
+- uid: rwby.ui.MainMenu.TitleOnlineScreen
+  commentId: T:rwby.ui.MainMenu.TitleOnlineScreen
+  parent: rwby.ui.MainMenu
+  href: rwby.ui.MainMenu.TitleOnlineScreen.html
+  name: TitleOnlineScreen
+  nameWithType: TitleOnlineScreen
+  fullName: rwby.ui.MainMenu.TitleOnlineScreen
+- uid: rwby.MainMenuLocalScreen
+  commentId: T:rwby.MainMenuLocalScreen
+  parent: rwby
+  href: rwby.MainMenuLocalScreen.html
+  name: MainMenuLocalScreen
+  nameWithType: MainMenuLocalScreen
+  fullName: rwby.MainMenuLocalScreen
+- uid: Quantum.Tag
+  commentId: T:Quantum.Tag
+  parent: Quantum
+  href: Quantum.Tag.html
+  name: Tag
+  nameWithType: Tag
+  fullName: Quantum.Tag
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Global.TweenSequenceContainer
+  commentId: T:Global.TweenSequenceContainer
+  href: TweenSequenceContainer.html
+  name: TweenSequenceContainer
+  nameWithType: TweenSequenceContainer
+  fullName: TweenSequenceContainer
+- uid: CHARK.ScriptableEvents.Events.SimpleScriptableEvent
+  commentId: T:CHARK.ScriptableEvents.Events.SimpleScriptableEvent
+  parent: CHARK.ScriptableEvents.Events
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
+  name: SimpleScriptableEvent
+  nameWithType: SimpleScriptableEvent
+  fullName: CHARK.ScriptableEvents.Events.SimpleScriptableEvent
+- uid: CHARK.ScriptableEvents.Events
+  commentId: N:CHARK.ScriptableEvents.Events
+  isExternal: true
+  name: CHARK.ScriptableEvents.Events
+  nameWithType: CHARK.ScriptableEvents.Events
+  fullName: CHARK.ScriptableEvents.Events
   spec.csharp:
-  - uid: System
-    name: System
+  - uid: CHARK
+    name: CHARK
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
   - name: .
-  - uid: System.Collections
-    name: Collections
+  - uid: CHARK.ScriptableEvents
+    name: ScriptableEvents
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
   - name: .
-  - uid: System.Collections.Generic
-    name: Generic
+  - uid: CHARK.ScriptableEvents.Events
+    name: Events
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
   spec.vb:
-  - uid: System
-    name: System
+  - uid: CHARK
+    name: CHARK
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
   - name: .
-  - uid: System.Collections
-    name: Collections
+  - uid: CHARK.ScriptableEvents
+    name: ScriptableEvents
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
   - name: .
-  - uid: System.Collections.Generic
-    name: Generic
+  - uid: CHARK.ScriptableEvents.Events
+    name: Events
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   commentId: M:rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   parent: rwby.ui.MenuBase
@@ -1131,92 +1130,57 @@ references:
   name: TryClose
   nameWithType: TitleMainScreen.TryClose
   fullName: rwby.TitleMainScreen.TryClose
-- uid: rwby.TitleMainScreen.GetSubmenuFromType*
-  commentId: Overload:rwby.TitleMainScreen.GetSubmenuFromType
-  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_GetSubmenuFromType_rwby_TitleMainScreen_SubmenuType_
-  name: GetSubmenuFromType
-  nameWithType: TitleMainScreen.GetSubmenuFromType
-  fullName: rwby.TitleMainScreen.GetSubmenuFromType
-- uid: rwby.TitleMainScreen.SubmenuType
-  commentId: T:rwby.TitleMainScreen.SubmenuType
-  parent: rwby
-  href: rwby.TitleMainScreen.html
-  name: TitleMainScreen.SubmenuType
-  nameWithType: TitleMainScreen.SubmenuType
-  fullName: rwby.TitleMainScreen.SubmenuType
-  spec.csharp:
-  - uid: rwby.TitleMainScreen
-    name: TitleMainScreen
-    href: rwby.TitleMainScreen.html
-  - name: .
-  - uid: rwby.TitleMainScreen.SubmenuType
-    name: SubmenuType
-    href: rwby.TitleMainScreen.SubmenuType.html
-  spec.vb:
-  - uid: rwby.TitleMainScreen
-    name: TitleMainScreen
-    href: rwby.TitleMainScreen.html
-  - name: .
-  - uid: rwby.TitleMainScreen.SubmenuType
-    name: SubmenuType
-    href: rwby.TitleMainScreen.SubmenuType.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: rwby.TitleMainScreen.BUTTON_Online*
   commentId: Overload:rwby.TitleMainScreen.BUTTON_Online
-  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_Online
+  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_Online_CHARK_ScriptableEvents_Events_SimpleArg_
   name: BUTTON_Online
   nameWithType: TitleMainScreen.BUTTON_Online
   fullName: rwby.TitleMainScreen.BUTTON_Online
+- uid: CHARK.ScriptableEvents.Events.SimpleArg
+  commentId: T:CHARK.ScriptableEvents.Events.SimpleArg
+  parent: CHARK.ScriptableEvents.Events
+  isExternal: true
+  name: SimpleArg
+  nameWithType: SimpleArg
+  fullName: CHARK.ScriptableEvents.Events.SimpleArg
+- uid: rwby.TitleMainScreen.TransitionToOnlineScreen*
+  commentId: Overload:rwby.TitleMainScreen.TransitionToOnlineScreen
+  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_TransitionToOnlineScreen
+  name: TransitionToOnlineScreen
+  nameWithType: TitleMainScreen.TransitionToOnlineScreen
+  fullName: rwby.TitleMainScreen.TransitionToOnlineScreen
 - uid: rwby.TitleMainScreen.BUTTON_Local*
   commentId: Overload:rwby.TitleMainScreen.BUTTON_Local
-  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_Local
+  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_Local_CHARK_ScriptableEvents_Events_SimpleArg_
   name: BUTTON_Local
   nameWithType: TitleMainScreen.BUTTON_Local
   fullName: rwby.TitleMainScreen.BUTTON_Local
-- uid: rwby.TitleMainScreen.BUTTON_ConfigureMods*
-  commentId: Overload:rwby.TitleMainScreen.BUTTON_ConfigureMods
-  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_ConfigureMods
-  name: BUTTON_ConfigureMods
-  nameWithType: TitleMainScreen.BUTTON_ConfigureMods
-  fullName: rwby.TitleMainScreen.BUTTON_ConfigureMods
+- uid: rwby.TitleMainScreen.TransitionToLocalScreen*
+  commentId: Overload:rwby.TitleMainScreen.TransitionToLocalScreen
+  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_TransitionToLocalScreen
+  name: TransitionToLocalScreen
+  nameWithType: TitleMainScreen.TransitionToLocalScreen
+  fullName: rwby.TitleMainScreen.TransitionToLocalScreen
+- uid: rwby.TitleMainScreen.BUTTON_Modding*
+  commentId: Overload:rwby.TitleMainScreen.BUTTON_Modding
+  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_Modding_CHARK_ScriptableEvents_Events_SimpleArg_
+  name: BUTTON_Modding
+  nameWithType: TitleMainScreen.BUTTON_Modding
+  fullName: rwby.TitleMainScreen.BUTTON_Modding
 - uid: rwby.TitleMainScreen.BUTTON_Settings*
   commentId: Overload:rwby.TitleMainScreen.BUTTON_Settings
-  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_Settings
+  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_Settings_CHARK_ScriptableEvents_Events_SimpleArg_
   name: BUTTON_Settings
   nameWithType: TitleMainScreen.BUTTON_Settings
   fullName: rwby.TitleMainScreen.BUTTON_Settings
-- uid: rwby.TitleMainScreen.BUTTON_CreateLobby*
-  commentId: Overload:rwby.TitleMainScreen.BUTTON_CreateLobby
-  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_CreateLobby
-  name: BUTTON_CreateLobby
-  nameWithType: TitleMainScreen.BUTTON_CreateLobby
-  fullName: rwby.TitleMainScreen.BUTTON_CreateLobby
-- uid: rwby.TitleMainScreen.BUTTON_JoinLobby*
-  commentId: Overload:rwby.TitleMainScreen.BUTTON_JoinLobby
-  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_JoinLobby
-  name: BUTTON_JoinLobby
-  nameWithType: TitleMainScreen.BUTTON_JoinLobby
-  fullName: rwby.TitleMainScreen.BUTTON_JoinLobby
-- uid: rwby.TitleMainScreen.BUTTON_Training*
-  commentId: Overload:rwby.TitleMainScreen.BUTTON_Training
-  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_Training
-  name: BUTTON_Training
-  nameWithType: TitleMainScreen.BUTTON_Training
-  fullName: rwby.TitleMainScreen.BUTTON_Training
-- uid: rwby.TitleMainScreen.BUTTON_Versus*
-  commentId: Overload:rwby.TitleMainScreen.BUTTON_Versus
-  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_Versus
-  name: BUTTON_Versus
-  nameWithType: TitleMainScreen.BUTTON_Versus
-  fullName: rwby.TitleMainScreen.BUTTON_Versus
-- uid: rwby.TitleMainScreen.BUTTON_TestButton*
-  commentId: Overload:rwby.TitleMainScreen.BUTTON_TestButton
-  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_TestButton
-  name: BUTTON_TestButton
-  nameWithType: TitleMainScreen.BUTTON_TestButton
-  fullName: rwby.TitleMainScreen.BUTTON_TestButton
-- uid: rwby.TitleMainScreen.BUTTON_ExitToDesktop*
-  commentId: Overload:rwby.TitleMainScreen.BUTTON_ExitToDesktop
-  href: rwby.TitleMainScreen.html#rwby_TitleMainScreen_BUTTON_ExitToDesktop
-  name: BUTTON_ExitToDesktop
-  nameWithType: TitleMainScreen.BUTTON_ExitToDesktop
-  fullName: rwby.TitleMainScreen.BUTTON_ExitToDesktop

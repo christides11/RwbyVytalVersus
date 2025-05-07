@@ -9,9 +9,6 @@ items:
   - Quantum.IsThrowing.ClearPointers(Quantum.Core.FrameBase,Quantum.EntityRef)
   - Quantum.IsThrowing.GetHashCode
   - Quantum.IsThrowing.OnRemoved(Quantum.Core.FrameBase,Quantum.EntityRef,System.Void*)
-  - Quantum.IsThrowing.ReleaseAllThrowees(Quantum.Frame,Quantum.EntityRef)
-  - Quantum.IsThrowing.ReleaseThrowee(Quantum.Frame,Quantum.EntityRef,Quantum.EntityRef)
-  - Quantum.IsThrowing.ReleaseThrowee(Quantum.Frame,Quantum.EntityRef,System.Int32)
   - Quantum.IsThrowing.SIZE
   - Quantum.IsThrowing.Serialize(System.Void*,Quantum.FrameSerializer)
   - Quantum.IsThrowing.throwees
@@ -24,12 +21,12 @@ items:
   type: Struct
   source:
     remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/IsThrowingEx.cs
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: IsThrowing
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/IsThrowingEx.cs
-    startLine: 2
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 2929
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -56,7 +53,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SIZE
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2593
+    startLine: 2931
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -83,7 +80,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ALIGNMENT
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2594
+    startLine: 2932
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -110,7 +107,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: throwees
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2596
+    startLine: 2934
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -137,7 +134,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHashCode
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2597
+    startLine: 2935
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -167,7 +164,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ClearPointers
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2604
+    startLine: 2942
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -198,7 +195,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnRemoved
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2607
+    startLine: 2945
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -234,7 +231,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Serialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2611
+    startLine: 2949
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -250,106 +247,6 @@ items:
   nameWithType.vb: IsThrowing.Serialize(Void*, FrameSerializer)
   fullName.vb: Quantum.IsThrowing.Serialize(Void*, Quantum.FrameSerializer)
   name.vb: Serialize(Void*, FrameSerializer)
-- uid: Quantum.IsThrowing.ReleaseThrowee(Quantum.Frame,Quantum.EntityRef,System.Int32)
-  commentId: M:Quantum.IsThrowing.ReleaseThrowee(Quantum.Frame,Quantum.EntityRef,System.Int32)
-  id: ReleaseThrowee(Quantum.Frame,Quantum.EntityRef,System.Int32)
-  parent: Quantum.IsThrowing
-  langs:
-  - csharp
-  - vb
-  name: ReleaseThrowee(Frame, EntityRef, int)
-  nameWithType: IsThrowing.ReleaseThrowee(Frame, EntityRef, int)
-  fullName: Quantum.IsThrowing.ReleaseThrowee(Quantum.Frame, Quantum.EntityRef, int)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/IsThrowingEx.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: ReleaseThrowee
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/IsThrowingEx.cs
-    startLine: 4
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public void ReleaseThrowee(Frame f, EntityRef entity, int throweeId)
-    parameters:
-    - id: f
-      type: Quantum.Frame
-    - id: entity
-      type: Quantum.EntityRef
-    - id: throweeId
-      type: System.Int32
-    content.vb: Public Sub ReleaseThrowee(f As Frame, entity As EntityRef, throweeId As Integer)
-  overload: Quantum.IsThrowing.ReleaseThrowee*
-  nameWithType.vb: IsThrowing.ReleaseThrowee(Frame, EntityRef, Integer)
-  fullName.vb: Quantum.IsThrowing.ReleaseThrowee(Quantum.Frame, Quantum.EntityRef, Integer)
-  name.vb: ReleaseThrowee(Frame, EntityRef, Integer)
-- uid: Quantum.IsThrowing.ReleaseThrowee(Quantum.Frame,Quantum.EntityRef,Quantum.EntityRef)
-  commentId: M:Quantum.IsThrowing.ReleaseThrowee(Quantum.Frame,Quantum.EntityRef,Quantum.EntityRef)
-  id: ReleaseThrowee(Quantum.Frame,Quantum.EntityRef,Quantum.EntityRef)
-  parent: Quantum.IsThrowing
-  langs:
-  - csharp
-  - vb
-  name: ReleaseThrowee(Frame, EntityRef, EntityRef)
-  nameWithType: IsThrowing.ReleaseThrowee(Frame, EntityRef, EntityRef)
-  fullName: Quantum.IsThrowing.ReleaseThrowee(Quantum.Frame, Quantum.EntityRef, Quantum.EntityRef)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/IsThrowingEx.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: ReleaseThrowee
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/IsThrowingEx.cs
-    startLine: 18
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public void ReleaseThrowee(Frame f, EntityRef entity, EntityRef throwee)
-    parameters:
-    - id: f
-      type: Quantum.Frame
-    - id: entity
-      type: Quantum.EntityRef
-    - id: throwee
-      type: Quantum.EntityRef
-    content.vb: Public Sub ReleaseThrowee(f As Frame, entity As EntityRef, throwee As EntityRef)
-  overload: Quantum.IsThrowing.ReleaseThrowee*
-- uid: Quantum.IsThrowing.ReleaseAllThrowees(Quantum.Frame,Quantum.EntityRef)
-  commentId: M:Quantum.IsThrowing.ReleaseAllThrowees(Quantum.Frame,Quantum.EntityRef)
-  id: ReleaseAllThrowees(Quantum.Frame,Quantum.EntityRef)
-  parent: Quantum.IsThrowing
-  langs:
-  - csharp
-  - vb
-  name: ReleaseAllThrowees(Frame, EntityRef)
-  nameWithType: IsThrowing.ReleaseAllThrowees(Frame, EntityRef)
-  fullName: Quantum.IsThrowing.ReleaseAllThrowees(Quantum.Frame, Quantum.EntityRef)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/IsThrowingEx.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: ReleaseAllThrowees
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/DataTypes/IsThrowingEx.cs
-    startLine: 37
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public void ReleaseAllThrowees(Frame f, EntityRef entity)
-    parameters:
-    - id: f
-      type: Quantum.Frame
-    - id: entity
-      type: Quantum.EntityRef
-    content.vb: Public Sub ReleaseAllThrowees(f As Frame, entity As EntityRef)
-  overload: Quantum.IsThrowing.ReleaseAllThrowees*
 references:
 - uid: Quantum
   commentId: N:Quantum
@@ -596,22 +493,3 @@ references:
   name: FrameSerializer
   nameWithType: FrameSerializer
   fullName: Quantum.FrameSerializer
-- uid: Quantum.IsThrowing.ReleaseThrowee*
-  commentId: Overload:Quantum.IsThrowing.ReleaseThrowee
-  href: Quantum.IsThrowing.html#Quantum_IsThrowing_ReleaseThrowee_Quantum_Frame_Quantum_EntityRef_System_Int32_
-  name: ReleaseThrowee
-  nameWithType: IsThrowing.ReleaseThrowee
-  fullName: Quantum.IsThrowing.ReleaseThrowee
-- uid: Quantum.Frame
-  commentId: T:Quantum.Frame
-  parent: Quantum
-  href: Quantum.Frame.html
-  name: Frame
-  nameWithType: Frame
-  fullName: Quantum.Frame
-- uid: Quantum.IsThrowing.ReleaseAllThrowees*
-  commentId: Overload:Quantum.IsThrowing.ReleaseAllThrowees
-  href: Quantum.IsThrowing.html#Quantum_IsThrowing_ReleaseAllThrowees_Quantum_Frame_Quantum_EntityRef_
-  name: ReleaseAllThrowees
-  nameWithType: IsThrowing.ReleaseAllThrowees
-  fullName: Quantum.IsThrowing.ReleaseAllThrowees

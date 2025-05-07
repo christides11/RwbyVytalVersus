@@ -8,8 +8,10 @@ items:
   - rwby.UModSongDefinitionContainer.GetDefinitions
   - rwby.UModSongDefinitionContainer.Load(System.String)
   - rwby.UModSongDefinitionContainer.LoadDefinitions
+  - rwby.UModSongDefinitionContainer.OnUModPrebuild
   - rwby.UModSongDefinitionContainer.Unload
   - rwby.UModSongDefinitionContainer.UnloadDefinitions
+  - rwby.UModSongDefinitionContainer.contentRefs
   langs:
   - csharp
   - vb
@@ -32,11 +34,11 @@ items:
     content: >-
       [CreateAssetMenu(menuName = "rwby/UMod/Content/Song Definitions Container", fileName = "songdefinitioncontainer")]
 
-      public class UModSongDefinitionContainer : BaseSongDefinitionContainer
+      public class UModSongDefinitionContainer : BaseSongDefinitionContainer, IOnUModPrebuild
     content.vb: >-
       <CreateAssetMenu(menuName:="rwby/UMod/Content/Song Definitions Container", fileName:="songdefinitioncontainer")>
 
-      Public Class UModSongDefinitionContainer Inherits BaseSongDefinitionContainer
+      Public Class UModSongDefinitionContainer Inherits BaseSongDefinitionContainer Implements IOnUModPrebuild
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -44,6 +46,8 @@ items:
   - Global.IContentDefinition
   - Global.BaseContentDefinitionContainer{rwby.BaseSongDefinition}
   - rwby.BaseSongDefinitionContainer
+  implements:
+  - rwby.IOnUModPrebuild
   inheritedMembers:
   - Global.IContentDefinition.modDefinition
   - Global.IContentDefinition.ID
@@ -54,6 +58,7 @@ items:
   - Global.IContentDefinition.RegisterQuantumAsset
   - Global.IContentDefinition.UnregisterQuantumAsset
   - Global.IContentDefinition.UnloadAssets
+  - Global.IContentDefinition.GetAssetSoftReference
   attributes:
   - type: UnityEngine.CreateAssetMenuAttribute
     ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
@@ -65,6 +70,79 @@ items:
     - name: fileName
       type: System.String
       value: songdefinitioncontainer
+- uid: rwby.UModSongDefinitionContainer.contentRefs
+  commentId: F:rwby.UModSongDefinitionContainer.contentRefs
+  id: contentRefs
+  parent: rwby.UModSongDefinitionContainer
+  langs:
+  - csharp
+  - vb
+  name: contentRefs
+  nameWithType: UModSongDefinitionContainer.contentRefs
+  fullName: rwby.UModSongDefinitionContainer.contentRefs
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinitionContainer.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: contentRefs
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinitionContainer.cs
+    startLine: 11
+  assemblies:
+  - rwby.modding.umod
+  namespace: rwby
+  syntax:
+    content: >-
+      [SerializeField]
+
+      [HideInInspector]
+
+      public ModAssetSoftReference[] contentRefs
+    return:
+      type: Global.ModAssetSoftReference[]
+    content.vb: >-
+      <SerializeField>
+
+      <HideInInspector>
+
+      Public contentRefs As ModAssetSoftReference()
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+- uid: rwby.UModSongDefinitionContainer.OnUModPrebuild
+  commentId: M:rwby.UModSongDefinitionContainer.OnUModPrebuild
+  id: OnUModPrebuild
+  parent: rwby.UModSongDefinitionContainer
+  langs:
+  - csharp
+  - vb
+  name: OnUModPrebuild()
+  nameWithType: UModSongDefinitionContainer.OnUModPrebuild()
+  fullName: rwby.UModSongDefinitionContainer.OnUModPrebuild()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinitionContainer.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnUModPrebuild
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinitionContainer.cs
+    startLine: 16
+  assemblies:
+  - rwby.modding.umod
+  namespace: rwby
+  example: []
+  syntax:
+    content: public void OnUModPrebuild()
+    content.vb: Public Sub OnUModPrebuild()
+  overload: rwby.UModSongDefinitionContainer.OnUModPrebuild*
+  implements:
+  - rwby.IOnUModPrebuild.OnUModPrebuild
 - uid: rwby.UModSongDefinitionContainer.Load(System.String)
   commentId: M:rwby.UModSongDefinitionContainer.Load(System.String)
   id: Load(System.String)
@@ -83,7 +161,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Load
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinitionContainer.cs
-    startLine: 15
+    startLine: 26
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -119,7 +197,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadDefinitions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinitionContainer.cs
-    startLine: 23
+    startLine: 34
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -149,7 +227,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetDefinitions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinitionContainer.cs
-    startLine: 58
+    startLine: 69
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -179,7 +257,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnloadDefinitions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinitionContainer.cs
-    startLine: 70
+    startLine: 81
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -207,7 +285,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Unload
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinitionContainer.cs
-    startLine: 86
+    startLine: 97
   assemblies:
   - rwby.modding.umod
   namespace: rwby
@@ -292,6 +370,13 @@ references:
   name: BaseSongDefinitionContainer
   nameWithType: BaseSongDefinitionContainer
   fullName: rwby.BaseSongDefinitionContainer
+- uid: rwby.IOnUModPrebuild
+  commentId: T:rwby.IOnUModPrebuild
+  parent: rwby
+  href: rwby.IOnUModPrebuild.html
+  name: IOnUModPrebuild
+  nameWithType: IOnUModPrebuild
+  fullName: rwby.IOnUModPrebuild
 - uid: Global.IContentDefinition.modDefinition
   commentId: P:Global.IContentDefinition.modDefinition
   parent: Global.IContentDefinition
@@ -403,6 +488,25 @@ references:
     href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
   - name: (
   - name: )
+- uid: Global.IContentDefinition.GetAssetSoftReference
+  commentId: M:Global.IContentDefinition.GetAssetSoftReference
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  name: GetAssetSoftReference()
+  nameWithType: IContentDefinition.GetAssetSoftReference()
+  fullName: IContentDefinition.GetAssetSoftReference()
+  spec.csharp:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -440,6 +544,52 @@ references:
   - name: Of
   - name: " "
   - name: T
+  - name: )
+- uid: Global.ModAssetSoftReference[]
+  isExternal: true
+  href: ModAssetSoftReference.html
+  name: ModAssetSoftReference[]
+  nameWithType: ModAssetSoftReference[]
+  fullName: ModAssetSoftReference[]
+  nameWithType.vb: ModAssetSoftReference()
+  fullName.vb: ModAssetSoftReference()
+  name.vb: ModAssetSoftReference()
+  spec.csharp:
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: (
+  - name: )
+- uid: rwby.UModSongDefinitionContainer.OnUModPrebuild*
+  commentId: Overload:rwby.UModSongDefinitionContainer.OnUModPrebuild
+  href: rwby.UModSongDefinitionContainer.html#rwby_UModSongDefinitionContainer_OnUModPrebuild
+  name: OnUModPrebuild
+  nameWithType: UModSongDefinitionContainer.OnUModPrebuild
+  fullName: rwby.UModSongDefinitionContainer.OnUModPrebuild
+- uid: rwby.IOnUModPrebuild.OnUModPrebuild
+  commentId: M:rwby.IOnUModPrebuild.OnUModPrebuild
+  parent: rwby.IOnUModPrebuild
+  href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
+  name: OnUModPrebuild()
+  nameWithType: IOnUModPrebuild.OnUModPrebuild()
+  fullName: rwby.IOnUModPrebuild.OnUModPrebuild()
+  spec.csharp:
+  - uid: rwby.IOnUModPrebuild.OnUModPrebuild
+    name: OnUModPrebuild
+    href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.IOnUModPrebuild.OnUModPrebuild
+    name: OnUModPrebuild
+    href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
+  - name: (
   - name: )
 - uid: Global.IContentDefinition.Load(System.String)
   commentId: M:Global.IContentDefinition.Load(System.String)

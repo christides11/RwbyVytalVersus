@@ -41,14 +41,23 @@ items:
   - UnityEngine.MonoBehaviour
   - Global.VisualEffectBase
   inheritedMembers:
+  - Global.VisualEffectBase.WhenEffectDestroyed
   - Global.VisualEffectBase.CurrentTime
+  - Global.VisualEffectBase.PlayRate
+  - Global.VisualEffectBase.playRate
   - Global.VisualEffectBase.status
   - Global.VisualEffectBase.autoDestroy
   - Global.VisualEffectBase.autoDestroyAfter
+  - Global.VisualEffectBase.autoStop
+  - Global.VisualEffectBase.autoStopAfter
+  - Global.VisualEffectBase.destoryTimer
   - Global.VisualEffectBase.entryAsset
   - Global.VisualEffectBase.freezeDuringHitstop
+  - Global.VisualEffectBase.sourcePool
   - Global.VisualEffectBase.FixedUpdate
   - Global.VisualEffectBase.SetSeed(System.UInt32)
+  - Global.VisualEffectBase.UpdatePlayRate
+  - Global.VisualEffectBase.Reinitialize
 - uid: Global.VFXGraphVisualEffect.visualEffects
   commentId: F:Global.VFXGraphVisualEffect.visualEffects
   id: visualEffects
@@ -305,6 +314,13 @@ references:
   name: VisualEffectBase
   nameWithType: VisualEffectBase
   fullName: VisualEffectBase
+- uid: Global.VisualEffectBase.WhenEffectDestroyed
+  commentId: F:Global.VisualEffectBase.WhenEffectDestroyed
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_WhenEffectDestroyed
+  name: WhenEffectDestroyed
+  nameWithType: VisualEffectBase.WhenEffectDestroyed
+  fullName: VisualEffectBase.WhenEffectDestroyed
 - uid: Global.VisualEffectBase.CurrentTime
   commentId: P:Global.VisualEffectBase.CurrentTime
   parent: Global.VisualEffectBase
@@ -312,6 +328,20 @@ references:
   name: CurrentTime
   nameWithType: VisualEffectBase.CurrentTime
   fullName: VisualEffectBase.CurrentTime
+- uid: Global.VisualEffectBase.PlayRate
+  commentId: P:Global.VisualEffectBase.PlayRate
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_PlayRate
+  name: PlayRate
+  nameWithType: VisualEffectBase.PlayRate
+  fullName: VisualEffectBase.PlayRate
+- uid: Global.VisualEffectBase.playRate
+  commentId: F:Global.VisualEffectBase.playRate
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_playRate
+  name: playRate
+  nameWithType: VisualEffectBase.playRate
+  fullName: VisualEffectBase.playRate
 - uid: Global.VisualEffectBase.status
   commentId: F:Global.VisualEffectBase.status
   parent: Global.VisualEffectBase
@@ -333,6 +363,27 @@ references:
   name: autoDestroyAfter
   nameWithType: VisualEffectBase.autoDestroyAfter
   fullName: VisualEffectBase.autoDestroyAfter
+- uid: Global.VisualEffectBase.autoStop
+  commentId: F:Global.VisualEffectBase.autoStop
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_autoStop
+  name: autoStop
+  nameWithType: VisualEffectBase.autoStop
+  fullName: VisualEffectBase.autoStop
+- uid: Global.VisualEffectBase.autoStopAfter
+  commentId: F:Global.VisualEffectBase.autoStopAfter
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_autoStopAfter
+  name: autoStopAfter
+  nameWithType: VisualEffectBase.autoStopAfter
+  fullName: VisualEffectBase.autoStopAfter
+- uid: Global.VisualEffectBase.destoryTimer
+  commentId: F:Global.VisualEffectBase.destoryTimer
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_destoryTimer
+  name: destoryTimer
+  nameWithType: VisualEffectBase.destoryTimer
+  fullName: VisualEffectBase.destoryTimer
 - uid: Global.VisualEffectBase.entryAsset
   commentId: F:Global.VisualEffectBase.entryAsset
   parent: Global.VisualEffectBase
@@ -347,6 +398,13 @@ references:
   name: freezeDuringHitstop
   nameWithType: VisualEffectBase.freezeDuringHitstop
   fullName: VisualEffectBase.freezeDuringHitstop
+- uid: Global.VisualEffectBase.sourcePool
+  commentId: F:Global.VisualEffectBase.sourcePool
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_sourcePool
+  name: sourcePool
+  nameWithType: VisualEffectBase.sourcePool
+  fullName: VisualEffectBase.sourcePool
 - uid: Global.VisualEffectBase.FixedUpdate
   commentId: M:Global.VisualEffectBase.FixedUpdate
   parent: Global.VisualEffectBase
@@ -396,6 +454,44 @@ references:
     name: UInteger
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: Global.VisualEffectBase.UpdatePlayRate
+  commentId: M:Global.VisualEffectBase.UpdatePlayRate
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_UpdatePlayRate
+  name: UpdatePlayRate()
+  nameWithType: VisualEffectBase.UpdatePlayRate()
+  fullName: VisualEffectBase.UpdatePlayRate()
+  spec.csharp:
+  - uid: Global.VisualEffectBase.UpdatePlayRate
+    name: UpdatePlayRate
+    href: Global.VisualEffectBase.html#VisualEffectBase_UpdatePlayRate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.UpdatePlayRate
+    name: UpdatePlayRate
+    href: Global.VisualEffectBase.html#VisualEffectBase_UpdatePlayRate
+  - name: (
+  - name: )
+- uid: Global.VisualEffectBase.Reinitialize
+  commentId: M:Global.VisualEffectBase.Reinitialize
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_Reinitialize
+  name: Reinitialize()
+  nameWithType: VisualEffectBase.Reinitialize()
+  fullName: VisualEffectBase.Reinitialize()
+  spec.csharp:
+  - uid: Global.VisualEffectBase.Reinitialize
+    name: Reinitialize
+    href: Global.VisualEffectBase.html#VisualEffectBase_Reinitialize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.Reinitialize
+    name: Reinitialize
+    href: Global.VisualEffectBase.html#VisualEffectBase_Reinitialize
+  - name: (
   - name: )
 - uid: System
   commentId: N:System

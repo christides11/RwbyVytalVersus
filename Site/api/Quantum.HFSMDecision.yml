@@ -26,8 +26,8 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public abstract class HFSMDecision : HFSMDecisionBase'
-    content.vb: Public MustInherit Class HFSMDecision Inherits HFSMDecisionBase
+    content: 'public abstract class HFSMDecision : HFSMDecisionBase, ILogSource'
+    content.vb: Public MustInherit Class HFSMDecision Inherits HFSMDecisionBase Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -41,6 +41,8 @@ items:
   - Quantum.HFSMCharaStunOverDecision
   - Quantum.IntComparisonDecision
   - Quantum.TrainingAIDummyBehaviourDecision
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HFSMDecisionBase.Label
   - Quantum.AssetObject.Identifier
@@ -177,6 +179,13 @@ references:
   name: HFSMDecisionBase
   nameWithType: HFSMDecisionBase
   fullName: Quantum.HFSMDecisionBase
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HFSMDecisionBase.Label
   commentId: F:Quantum.HFSMDecisionBase.Label
   parent: Quantum.HFSMDecisionBase

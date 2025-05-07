@@ -102,7 +102,7 @@ Class HNSFTaggedStatesAsset  <a class="header-action link-secondary" title="View
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class HNSFTaggedStatesAsset : AssetObject</code></pre>
+public class HNSFTaggedStatesAsset : AssetObject, ILogSource</code></pre>
   </div>
 
 
@@ -119,6 +119,12 @@ public class HNSFTaggedStatesAsset : AssetObject</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ILogSource</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -169,7 +175,7 @@ public class HNSFTaggedStatesAsset : AssetObject</code></pre>
 
   <h3 id="Quantum_HNSFTaggedStatesAsset_Get_Quantum_AssetRef_Quantum_Tag__" data-uid="Quantum.HNSFTaggedStatesAsset.Get(Quantum.AssetRef{Quantum.Tag})">
   Get(AssetRef&lt;Tag&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFTaggedStatesAsset.cs&amp;version=GBdev&amp;line=21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFTaggedStatesAsset.cs&amp;version=GBdev&amp;line=22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -203,9 +209,47 @@ public class HNSFTaggedStatesAsset : AssetObject</code></pre>
 
   <a id="Quantum_HNSFTaggedStatesAsset_TryGetValue_" data-uid="Quantum.HNSFTaggedStatesAsset.TryGetValue*"></a>
 
+  <h3 id="Quantum_HNSFTaggedStatesAsset_TryGetValue_Quantum_AssetRef_Quantum_HNSFState__Quantum_AssetRef_Quantum_Tag___" data-uid="Quantum.HNSFTaggedStatesAsset.TryGetValue(Quantum.AssetRef{Quantum.HNSFState},Quantum.AssetRef{Quantum.Tag}@)">
+  TryGetValue(AssetRef&lt;HNSFState&gt;, out AssetRef&lt;Tag&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFTaggedStatesAsset.cs&amp;version=GBdev&amp;line=34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetValue(AssetRef&lt;HNSFState&gt; stateRef, out AssetRef&lt;Tag&gt; tagRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stateRef</code> <span class="xref">AssetRef</span>&lt;<a class="xref" href="Quantum.HNSFState.html">HNSFState</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>tagRef</code> <span class="xref">AssetRef</span>&lt;<a class="xref" href="Quantum.Tag.html">Tag</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_HNSFTaggedStatesAsset_TryGetValue_" data-uid="Quantum.HNSFTaggedStatesAsset.TryGetValue*"></a>
+
   <h3 id="Quantum_HNSFTaggedStatesAsset_TryGetValue_Quantum_AssetRef_Quantum_Tag__Quantum_AssetRef_Quantum_HNSFState___" data-uid="Quantum.HNSFTaggedStatesAsset.TryGetValue(Quantum.AssetRef{Quantum.Tag},Quantum.AssetRef{Quantum.HNSFState}@)">
   TryGetValue(AssetRef&lt;Tag&gt;, out AssetRef&lt;HNSFState&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFTaggedStatesAsset.cs&amp;version=GBdev&amp;line=27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFTaggedStatesAsset.cs&amp;version=GBdev&amp;line=28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

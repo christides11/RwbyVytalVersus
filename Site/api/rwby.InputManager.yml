@@ -6,6 +6,7 @@ items:
   parent: rwby
   children:
   - rwby.InputManager.AddPlayer
+  - rwby.InputManager.ApplyProfileToAll(System.String)
   - rwby.InputManager.AssignDevicesToPlayer(UnityEngine.InputSystem.InputDevice[],System.Int32)
   - rwby.InputManager.GetPlayer(System.Int32)
   - rwby.InputManager.GetPlayerCount
@@ -18,6 +19,7 @@ items:
   - rwby.InputManager.ReturnPlayerDevicesToSystem(System.Int32)
   - rwby.InputManager.SetGlobalUIControllingPlayer(System.Int32)
   - rwby.InputManager.SetPlayerCount(System.Int32)
+  - rwby.InputManager.SetPlayersBasedOnDeviceLists(System.Collections.Generic.List{System.Collections.Generic.List{UnityEngine.InputSystem.InputDevice}})
   - rwby.InputManager.SwitchAllToPlayerActionMap
   - rwby.InputManager.SwitchAllToUIActionMap
   - rwby.InputManager.SwitchToPlayerActionMap(System.Int32)
@@ -487,6 +489,38 @@ items:
     content: public void SwitchAllToPlayerActionMap()
     content.vb: Public Sub SwitchAllToPlayerActionMap()
   overload: rwby.InputManager.SwitchAllToPlayerActionMap*
+- uid: rwby.InputManager.ApplyProfileToAll(System.String)
+  commentId: M:rwby.InputManager.ApplyProfileToAll(System.String)
+  id: ApplyProfileToAll(System.String)
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: ApplyProfileToAll(string)
+  nameWithType: InputManager.ApplyProfileToAll(string)
+  fullName: rwby.InputManager.ApplyProfileToAll(string)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ApplyProfileToAll
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 147
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void ApplyProfileToAll(string profileName)
+    parameters:
+    - id: profileName
+      type: System.String
+    content.vb: Public Sub ApplyProfileToAll(profileName As String)
+  overload: rwby.InputManager.ApplyProfileToAll*
+  nameWithType.vb: InputManager.ApplyProfileToAll(String)
+  fullName.vb: rwby.InputManager.ApplyProfileToAll(String)
+  name.vb: ApplyProfileToAll(String)
 - uid: rwby.InputManager.ReturnAllDevicesToSystem
   commentId: M:rwby.InputManager.ReturnAllDevicesToSystem
   id: ReturnAllDevicesToSystem
@@ -505,7 +539,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ReturnAllDevicesToSystem
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
-    startLine: 147
+    startLine: 156
   assemblies:
   - rwby
   namespace: rwby
@@ -531,7 +565,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ReturnPlayerDevicesToSystem
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
-    startLine: 158
+    startLine: 167
   assemblies:
   - rwby
   namespace: rwby
@@ -563,7 +597,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RemoveDeviceFromPlayers
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
-    startLine: 166
+    startLine: 175
   assemblies:
   - rwby
   namespace: rwby
@@ -592,7 +626,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AssignDevicesToPlayer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
-    startLine: 175
+    startLine: 184
   assemblies:
   - rwby
   namespace: rwby
@@ -626,7 +660,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TransferAllDevicesFromSystemTo
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
-    startLine: 182
+    startLine: 191
   assemblies:
   - rwby
   namespace: rwby
@@ -658,7 +692,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: onInputDeviceChange
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
-    startLine: 190
+    startLine: 199
   assemblies:
   - rwby
   namespace: rwby
@@ -671,6 +705,38 @@ items:
       type: UnityEngine.InputSystem.InputDeviceChange
     content.vb: Public Sub onInputDeviceChange(device As InputDevice, change As InputDeviceChange)
   overload: rwby.InputManager.onInputDeviceChange*
+- uid: rwby.InputManager.SetPlayersBasedOnDeviceLists(System.Collections.Generic.List{System.Collections.Generic.List{UnityEngine.InputSystem.InputDevice}})
+  commentId: M:rwby.InputManager.SetPlayersBasedOnDeviceLists(System.Collections.Generic.List{System.Collections.Generic.List{UnityEngine.InputSystem.InputDevice}})
+  id: SetPlayersBasedOnDeviceLists(System.Collections.Generic.List{System.Collections.Generic.List{UnityEngine.InputSystem.InputDevice}})
+  parent: rwby.InputManager
+  langs:
+  - csharp
+  - vb
+  name: SetPlayersBasedOnDeviceLists(List<List<InputDevice>>)
+  nameWithType: InputManager.SetPlayersBasedOnDeviceLists(List<List<InputDevice>>)
+  fullName: rwby.InputManager.SetPlayersBasedOnDeviceLists(System.Collections.Generic.List<System.Collections.Generic.List<UnityEngine.InputSystem.InputDevice>>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetPlayersBasedOnDeviceLists
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/InputManager.cs
+    startLine: 218
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void SetPlayersBasedOnDeviceLists(List<List<InputDevice>> players)
+    parameters:
+    - id: players
+      type: System.Collections.Generic.List{System.Collections.Generic.List{UnityEngine.InputSystem.InputDevice}}
+    content.vb: Public Sub SetPlayersBasedOnDeviceLists(players As List(Of List(Of InputDevice)))
+  overload: rwby.InputManager.SetPlayersBasedOnDeviceLists*
+  nameWithType.vb: InputManager.SetPlayersBasedOnDeviceLists(List(Of List(Of InputDevice)))
+  fullName.vb: rwby.InputManager.SetPlayersBasedOnDeviceLists(System.Collections.Generic.List(Of System.Collections.Generic.List(Of UnityEngine.InputSystem.InputDevice)))
+  name.vb: SetPlayersBasedOnDeviceLists(List(Of List(Of InputDevice)))
 references:
 - uid: rwby
   commentId: N:rwby
@@ -1002,6 +1068,23 @@ references:
   name: SwitchAllToPlayerActionMap
   nameWithType: InputManager.SwitchAllToPlayerActionMap
   fullName: rwby.InputManager.SwitchAllToPlayerActionMap
+- uid: rwby.InputManager.ApplyProfileToAll*
+  commentId: Overload:rwby.InputManager.ApplyProfileToAll
+  href: rwby.InputManager.html#rwby_InputManager_ApplyProfileToAll_System_String_
+  name: ApplyProfileToAll
+  nameWithType: InputManager.ApplyProfileToAll
+  fullName: rwby.InputManager.ApplyProfileToAll
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: rwby.InputManager.ReturnAllDevicesToSystem*
   commentId: Overload:rwby.InputManager.ReturnAllDevicesToSystem
   href: rwby.InputManager.html#rwby_InputManager_ReturnAllDevicesToSystem
@@ -1094,3 +1177,56 @@ references:
   name: InputDeviceChange
   nameWithType: InputDeviceChange
   fullName: UnityEngine.InputSystem.InputDeviceChange
+- uid: rwby.InputManager.SetPlayersBasedOnDeviceLists*
+  commentId: Overload:rwby.InputManager.SetPlayersBasedOnDeviceLists
+  href: rwby.InputManager.html#rwby_InputManager_SetPlayersBasedOnDeviceLists_System_Collections_Generic_List_System_Collections_Generic_List_UnityEngine_InputSystem_InputDevice___
+  name: SetPlayersBasedOnDeviceLists
+  nameWithType: InputManager.SetPlayersBasedOnDeviceLists
+  fullName: rwby.InputManager.SetPlayersBasedOnDeviceLists
+- uid: System.Collections.Generic.List{System.Collections.Generic.List{UnityEngine.InputSystem.InputDevice}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{UnityEngine.InputSystem.InputDevice}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<List<InputDevice>>
+  nameWithType: List<List<InputDevice>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.List<UnityEngine.InputSystem.InputDevice>>
+  nameWithType.vb: List(Of List(Of InputDevice))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.List(Of UnityEngine.InputSystem.InputDevice))
+  name.vb: List(Of List(Of InputDevice))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.InputSystem.InputDevice
+    name: InputDevice
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.InputSystem.InputDevice
+    name: InputDevice
+    isExternal: true
+  - name: )
+  - name: )

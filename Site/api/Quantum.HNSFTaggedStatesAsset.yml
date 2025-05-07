@@ -6,6 +6,7 @@ items:
   parent: Quantum
   children:
   - Quantum.HNSFTaggedStatesAsset.Get(Quantum.AssetRef{Quantum.Tag})
+  - Quantum.HNSFTaggedStatesAsset.TryGetValue(Quantum.AssetRef{Quantum.HNSFState},Quantum.AssetRef{Quantum.Tag}@)
   - Quantum.HNSFTaggedStatesAsset.TryGetValue(Quantum.AssetRef{Quantum.Tag},Quantum.AssetRef{Quantum.HNSFState}@)
   langs:
   - csharp
@@ -29,16 +30,18 @@ items:
     content: >-
       [Serializable]
 
-      public class HNSFTaggedStatesAsset : AssetObject
+      public class HNSFTaggedStatesAsset : AssetObject, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class HNSFTaggedStatesAsset Inherits AssetObject
+      Public Class HNSFTaggedStatesAsset Inherits AssetObject Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -72,7 +75,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Get
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFTaggedStatesAsset.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -106,7 +109,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryGetValue
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFTaggedStatesAsset.cs
-    startLine: 26
+    startLine: 27
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -124,6 +127,42 @@ items:
   nameWithType.vb: HNSFTaggedStatesAsset.TryGetValue(AssetRef(Of Tag), AssetRef(Of HNSFState))
   fullName.vb: Quantum.HNSFTaggedStatesAsset.TryGetValue(Quantum.AssetRef(Of Quantum.Tag), Quantum.AssetRef(Of Quantum.HNSFState))
   name.vb: TryGetValue(AssetRef(Of Tag), AssetRef(Of HNSFState))
+- uid: Quantum.HNSFTaggedStatesAsset.TryGetValue(Quantum.AssetRef{Quantum.HNSFState},Quantum.AssetRef{Quantum.Tag}@)
+  commentId: M:Quantum.HNSFTaggedStatesAsset.TryGetValue(Quantum.AssetRef{Quantum.HNSFState},Quantum.AssetRef{Quantum.Tag}@)
+  id: TryGetValue(Quantum.AssetRef{Quantum.HNSFState},Quantum.AssetRef{Quantum.Tag}@)
+  parent: Quantum.HNSFTaggedStatesAsset
+  langs:
+  - csharp
+  - vb
+  name: TryGetValue(AssetRef<HNSFState>, out AssetRef<Tag>)
+  nameWithType: HNSFTaggedStatesAsset.TryGetValue(AssetRef<HNSFState>, out AssetRef<Tag>)
+  fullName: Quantum.HNSFTaggedStatesAsset.TryGetValue(Quantum.AssetRef<Quantum.HNSFState>, out Quantum.AssetRef<Quantum.Tag>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFTaggedStatesAsset.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TryGetValue
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/HNSFTaggedStatesAsset.cs
+    startLine: 33
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public bool TryGetValue(AssetRef<HNSFState> stateRef, out AssetRef<Tag> tagRef)
+    parameters:
+    - id: stateRef
+      type: Quantum.AssetRef{Quantum.HNSFState}
+    - id: tagRef
+      type: Quantum.AssetRef{Quantum.Tag}
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetValue(stateRef As AssetRef(Of HNSFState), tagRef As AssetRef(Of Tag)) As Boolean
+  overload: Quantum.HNSFTaggedStatesAsset.TryGetValue*
+  nameWithType.vb: HNSFTaggedStatesAsset.TryGetValue(AssetRef(Of HNSFState), AssetRef(Of Tag))
+  fullName.vb: Quantum.HNSFTaggedStatesAsset.TryGetValue(Quantum.AssetRef(Of Quantum.HNSFState), Quantum.AssetRef(Of Quantum.Tag))
+  name.vb: TryGetValue(AssetRef(Of HNSFState), AssetRef(Of Tag))
 references:
 - uid: Quantum
   commentId: N:Quantum
@@ -163,6 +202,13 @@ references:
   name: AssetObject
   nameWithType: AssetObject
   fullName: Quantum.AssetObject
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject

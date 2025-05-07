@@ -5,6 +5,15 @@ items:
   id: Quantum
   children:
   - Quantum.AIAction
+  - Quantum.AIBotComboConditionBase
+  - Quantum.AIBotComboConditionInfo
+  - Quantum.AIBotComboConditionListEntry
+  - Quantum.AIBotComboConfig
+  - Quantum.AIBotComboEntry
+  - Quantum.AIBotComboMoveContainer
+  - Quantum.AIBotComboMoveEntry
+  - Quantum.AIBotComboMoveEntryInputContainer
+  - Quantum.AIBotCombos
   - Quantum.AICharacterActor
   - Quantum.AIConfig
   - Quantum.AIConfigExtensions
@@ -31,6 +40,9 @@ items:
   - Quantum.ApplyTractionAction.ModifierType
   - Quantum.ApplyTractionAction.TractionType
   - Quantum.ArticleDestroySelfAction
+  - Quantum.ArticlesOwner
+  - Quantum.AttackToken
+  - Quantum.AttemptAttackWithComboDecorator
   - Quantum.AttemptHardKnockdownAction
   - Quantum.AttemptSpecialsAction
   - Quantum.AudioSourceConfig
@@ -45,11 +57,17 @@ items:
   - Quantum.BitSet512
   - Quantum.BitSet6
   - Quantum.BitStreamReplayInputProvider
+  - Quantum.BlockstunComparisonDecorator
   - Quantum.BoolParamDecision
   - Quantum.BoolParamDecision.CheckType
   - Quantum.BotSDKDebugger
   - Quantum.BotSDKUtils
   - Quantum.BoxCombatant
+  - Quantum.BoxCombatantHelper
+  - Quantum.BoxCombatantHelper.CollisionboxHelper
+  - Quantum.BoxCombatantHelper.HitboxHelper
+  - Quantum.BoxCombatantHelper.HurtboxHelper
+  - Quantum.BoxCombatantHelper.WarningboxHelper
   - Quantum.BoxDefinition
   - Quantum.BoxSet
   - Quantum.ButtonData
@@ -74,6 +92,7 @@ items:
   - Quantum.CallbackPluginDisconnect
   - Quantum.CallbackPollInput
   - Quantum.CallbackSimulateFinished
+  - Quantum.CallbackTaskProfilerReportGenerated
   - Quantum.CallbackUpdateView
   - Quantum.ChangeGroundedStateAction
   - Quantum.ChangeMovesetAction
@@ -108,6 +127,7 @@ items:
   - Quantum.ClearComboAction
   - Quantum.ClearHitEntitiesAction
   - Quantum.ClearInputFromBufferAction
+  - Quantum.ClearTouchedEntitiesAfterHitAction
   - Quantum.ClearTrackedStatesAction
   - Quantum.CollisionCombatPair
   - Quantum.Collisionbox
@@ -115,13 +135,17 @@ items:
   - Quantum.CombatBoxesAsset
   - Quantum.CombatConstants
   - Quantum.CombatHelper
+  - Quantum.CombatHelper.ThrowHelper
+  - Quantum.CombatHelper.TokenHelper
   - Quantum.CombatHitDetectionInfo
   - Quantum.CombatHitDetectionSystem
   - Quantum.CombatHitResolverSystem
   - Quantum.CombatTargeter
   - Quantum.CombatTeam
-  - Quantum.CombatantHasHitDecision
-  - Quantum.CombatantHitCountDecision
+  - Quantum.CombatTokenActorInfo
+  - Quantum.CombatTokenSource
+  - Quantum.CombatantHitByTypeCountDecision
+  - Quantum.CombatantTouchedEntitiesCountDecision
   - Quantum.CombatboxBroadphaseSystem
   - Quantum.CombatboxBroadphaseSystem.Partition
   - Quantum.CombatboxNarrowphaseSystem
@@ -133,6 +157,7 @@ items:
   - Quantum.CreateOrUpdateHitbox
   - Quantum.CreateOrUpdateHurtbox
   - Quantum.CreateOrUpdateThrowbox
+  - Quantum.CreateOrUpdateWarningbox
   - Quantum.CurrentMovesetDecision
   - Quantum.CurrentStatesetDecision
   - Quantum.CustomKCCSystem
@@ -145,8 +170,12 @@ items:
   - Quantum.DisableHardTargetingEntityAction
   - Quantum.DisableHardTargetingEntityAction.ModifyType
   - Quantum.DisableLastInputAction
+  - Quantum.DistanceBetweenTargetsDecision
+  - Quantum.DistanceFromSelfDecorator
+  - Quantum.DistanceFromSelfDecorator.CheckType
   - Quantum.DoChargeAction
   - Quantum.DotNetRunnerFactory
+  - Quantum.DotNetSessionContext
   - Quantum.DotNetSessionRunner
   - Quantum.DotNetTaskRunner
   - Quantum.DummyAerialRecoveryDirection
@@ -168,6 +197,7 @@ items:
   - Quantum.EmptyStateAction
   - Quantum.EnterInputMethod
   - Quantum.EntityCenter
+  - Quantum.EntityExistDecorator
   - Quantum.EntityForce
   - Quantum.EntityHitDefinition
   - Quantum.EnvQuery
@@ -184,6 +214,7 @@ items:
   - Quantum.EnvTestPurpose
   - Quantum.EnvironmentProcessor
   - Quantum.EnvironmentQueryAsset
+  - Quantum.EvaluateBestTargetService
   - Quantum.EventCauseHitstopShakeEvent
   - Quantum.EventCharaLinkAddedEvent
   - Quantum.EventCharaLinkRemovedEvent
@@ -191,6 +222,8 @@ items:
   - Quantum.EventEntityHit
   - Quantum.EventFighterDied
   - Quantum.EventGameResult
+  - Quantum.EventGamemodeParticipantEntityUpdated
+  - Quantum.EventGamemodeParticipantSpawned
   - Quantum.EventGamemodeStateChanged
   - Quantum.EventGamemodeTeamScoreChanged
   - Quantum.EventHealthDecreased
@@ -202,7 +235,9 @@ items:
   - Quantum.EventStopCutsceneEvent
   - Quantum.EventStopEffectEvent
   - Quantum.EventTeleportCameraEvent
+  - Quantum.ExecuteComboLeaf
   - Quantum.ExecuteIfConditionAction
+  - Quantum.ExecuteNeutralActionLeaf
   - Quantum.ExternalBTLeaf
   - Quantum.ExternalStateAction
   - Quantum.FPConstant
@@ -220,8 +255,9 @@ items:
   - Quantum.FallSpeedDecision
   - Quantum.FallSpeedDecision.CheckType
   - Quantum.Fighter
+  - Quantum.FighterAIDefinition
+  - Quantum.FighterAIType
   - Quantum.FighterArticle
-  - Quantum.FighterArticles
   - Quantum.FighterEnvironmentProcessor
   - Quantum.FighterSpecialIntroDefinition
   - Quantum.FindEnemyAction
@@ -229,6 +265,8 @@ items:
   - Quantum.FindWallAroundAction
   - Quantum.FlagsExtensions
   - Quantum.ForceUngroundAction
+  - Quantum.FpVector3AndFpOperationFunction
+  - Quantum.FpVector3AndFpOperationFunction.OperationType
   - Quantum.Frame
   - Quantum.Frame.FrameEvents
   - Quantum.Frame.FrameSignals
@@ -236,6 +274,11 @@ items:
   - Quantum.FrameThreadSafeExtensions
   - Quantum.GainAuraPassively
   - Quantum.GameResult
+  - Quantum.GamemodeParticipantCharacterData
+  - Quantum.GamemodeParticipantData
+  - Quantum.GamemodeParticipantInfo
+  - Quantum.GamemodeParticipantType
+  - Quantum.GamemodeParticipantsGlobal
   - Quantum.GamemodeQuantumData
   - Quantum.GamemodeSettingsBase
   - Quantum.GenericGamemodeGlobals
@@ -244,19 +287,28 @@ items:
   - Quantum.GetAuraFunction
   - Quantum.GetCharacterForceFunction
   - Quantum.GetCharacterForceFunction.ForceType
+  - Quantum.GetCombatTargeterFPVector3Function
+  - Quantum.GetCombatTargeterFPVector3Function.VariableType
+  - Quantum.GetDistanceBetweenTargetsFunction
   - Quantum.GetDummyConfigAIFunction
   - Quantum.GetDummyConfigAIFunction.DummyEnumType
   - Quantum.GetFighterVariableFunction
   - Quantum.GetFighterVariableFunction.FighterVariableType
+  - Quantum.GetHitInfoBooleanFunction
+  - Quantum.GetHitInfoBooleanFunction.HitInfoValueType
   - Quantum.GetHitInfoFpVector3Function
   - Quantum.GetHitInfoFpVector3Function.HitInfoValueType
   - Quantum.GetHitboxHitCountFunction
   - Quantum.GetHitstunFunction
+  - Quantum.GetInRangeOfTargetLeaf
   - Quantum.GetPositionFunction
   - Quantum.GetPositionFunction.PositionType
   - Quantum.GetStateByTagFunction
   - Quantum.GetTotalHitCountFunction
   - Quantum.GetTotalHitstunFunction
+  - Quantum.GetTransformVectorFunction
+  - Quantum.GetTransformVectorFunction.PositionType
+  - Quantum.GetTransformVectorFunction.VectorType
   - Quantum.GetWallNormalFunction
   - Quantum.GlobalScriptToMakeSureThereAreNoCompileErrors
   - Quantum.GotWallInfo
@@ -277,7 +329,6 @@ items:
   - Quantum.HNSFConfig.EValueType
   - Quantum.HNSFConfig.KeyValuePair
   - Quantum.HNSFConfig.Value
-  - Quantum.HNSFExternalActions
   - Quantum.HNSFNOTDecision
   - Quantum.HNSFORDecision
   - Quantum.HNSFParamAssetRef
@@ -287,6 +338,7 @@ items:
   - Quantum.HNSFParamFPVector2
   - Quantum.HNSFParamFPVector3
   - Quantum.HNSFParamInt
+  - Quantum.HNSFParamNullableFP
   - Quantum.HNSFParamSource
   - Quantum.HNSFParam`1
   - Quantum.HNSFSpecialSet
@@ -302,6 +354,7 @@ items:
   - Quantum.HNSFStateFunction`1
   - Quantum.HNSFStateHelper
   - Quantum.HNSFStateHelper.Chara
+  - Quantum.HNSFStateHelper.Generic
   - Quantum.HNSFStateHelper.ThreadSafe
   - Quantum.HNSFStateSet
   - Quantum.HNSFTaggedStatesAsset
@@ -318,6 +371,8 @@ items:
   - Quantum.HitStrengthType
   - Quantum.Hitbox
   - Quantum.HitboxCombatPair
+  - Quantum.Hitstop
+  - Quantum.HitstunComparisonDecorator
   - Quantum.Hurtbox
   - Quantum.IAfterMove
   - Quantum.IAfterMoveStep
@@ -368,7 +423,6 @@ items:
   - Quantum.InAuraBurnout
   - Quantum.InAuraBurnoutDecision
   - Quantum.InCounterhitState
-  - Quantum.InHitstunDecorator
   - Quantum.InPunishCounterState
   - Quantum.InactiveTaskRunner
   - Quantum.Input
@@ -395,6 +449,7 @@ items:
   - Quantum.IntParamPercentageDecision.CheckType
   - Quantum.IntValueDecision
   - Quantum.IntValueDecision.CheckType
+  - Quantum.InvisibilityType
   - Quantum.IsBeingThrownDecision
   - Quantum.IsChargingAttack
   - Quantum.IsDead
@@ -432,6 +487,7 @@ items:
   - Quantum.LocalDeltaTime
   - Quantum.LocalDeltaTimeSystem
   - Quantum.LocalDeltaTimeSystem.Filter
+  - Quantum.ManageAttackTokenDecorator
   - Quantum.MapCustomData
   - Quantum.MapCustomData.SpawnPointData
   - Quantum.MathExtensions
@@ -444,6 +500,8 @@ items:
   - Quantum.ModifyBlackboardBoolAction.ModifyType
   - Quantum.ModifyBlackboardFPAction
   - Quantum.ModifyBlackboardFPAction.ModifyType
+  - Quantum.ModifyBlackboardFPVector3Action
+  - Quantum.ModifyBlackboardFPVector3Action.ModifyType
   - Quantum.ModifyBlackboardIntAction
   - Quantum.ModifyBlackboardIntAction.ModifyType
   - Quantum.ModifyForcesAction
@@ -462,8 +520,6 @@ items:
   - Quantum.ModifyPhysicsForcesAction
   - Quantum.ModifyPhysicsForcesAction.InputSourceType
   - Quantum.ModifyPhysicsForcesAction.ModifyType
-  - Quantum.ModifySpecialPageAction
-  - Quantum.ModifySpecialPageSetAction
   - Quantum.ModifyStateFrameAction
   - Quantum.ModifyStateFrameAction.ModifyType
   - Quantum.MoveInAttackStringDecision
@@ -473,9 +529,20 @@ items:
   - Quantum.MultiplyForcesAction
   - Quantum.MultiplyForcesAction.ForceGroupType
   - Quantum.NetworkButtons
+  - Quantum.NextStateByTagDecision
   - Quantum.NextStateDecision
   - Quantum.NextStatesetDecision
+  - Quantum.NullableFPValueDecision
+  - Quantum.NullableFPValueDecision.CheckType
   - Quantum.Parented
+  - Quantum.ParticipantLink
+  - Quantum.PhysicsBodyActor
+  - Quantum.PhysicsBodyClampGravity
+  - Quantum.PhysicsBodyClampMagnitudeAction
+  - Quantum.PhysicsBodyModifyGravityAction
+  - Quantum.PhysicsBodyModifyGravityAction.ModifyType
+  - Quantum.PhysicsBodyMoveTowardsPositionAction
+  - Quantum.PhysicsBodyMoveTowardsPositionAction.InputSourceType
   - Quantum.PhysicsGroundedDecision
   - Quantum.PhysicsGroundedDecision.CheckType
   - Quantum.PhysicsShapeOverlapDecision
@@ -498,7 +565,9 @@ items:
   - Quantum.QuantumJsonFriendlyDataBlob
   - Quantum.QuantumJsonFriendlyDataBlob.Encoder
   - Quantum.QuantumReplayFile
+  - Quantum.RandomDecisionDecorator
   - Quantum.RandomFPFunction
+  - Quantum.RefreshValidSpecialsAction
   - Quantum.RegisterAttackToStringAction
   - Quantum.ReleaseThroweeAction
   - Quantum.RemapFPFunction
@@ -577,6 +646,7 @@ items:
   - Quantum.StateFunctionFPVector3List
   - Quantum.StateFunctionInt
   - Quantum.StateFunctionIntegerList
+  - Quantum.StateFunctionNullableFp
   - Quantum.StateGroundedDecision
   - Quantum.StateGroundedDecision.CheckType
   - Quantum.StateGroundedType
@@ -601,7 +671,7 @@ items:
   - Quantum.SystemsConfig.SystemEntryBase`1
   - Quantum.Tag
   - Quantum.TeamVersusGlobals
-  - Quantum.TeamVersusPlayerData
+  - Quantum.TeamVersusParticipantData
   - Quantum.TeamVersusSettings
   - Quantum.TeleportRelatedToTargetAction
   - Quantum.TeleportRelatedToTargetAction.TeleportTargetType
@@ -612,13 +682,15 @@ items:
   - Quantum.TrainingAIDummyBehaviourDecision
   - Quantum.TrainingAIDummyBehaviourDecision.CompareType
   - Quantum.TrainingGlobals
-  - Quantum.TrainingPlayerData
+  - Quantum.TrainingParticipantData
   - Quantum.TrainingSettings
+  - Quantum.TransformHelpers
   - Quantum.UpdateGenericStateMachineSystem
   - Quantum.UpdateGenericStateMachineSystem.Filter
   - Quantum.UpdateParentedTransformSystem
   - Quantum.UpdateParentedTransformSystem.Filter
   - Quantum.VisualEffectEntry
+  - Quantum.Warningbox
   - Quantum.WillBeHitThisFrameDecorator
   - Quantum._globals_
   langs:
@@ -649,12 +721,6 @@ references:
   name: NextStateDecision
   nameWithType: NextStateDecision
   fullName: Quantum.NextStateDecision
-- uid: Quantum.CombatantHasHitDecision
-  commentId: T:Quantum.CombatantHasHitDecision
-  href: Quantum.CombatantHasHitDecision.html
-  name: CombatantHasHitDecision
-  nameWithType: CombatantHasHitDecision
-  fullName: Quantum.CombatantHasHitDecision
 - uid: Quantum.CreateOrUpdateCollisionbox
   commentId: T:Quantum.CreateOrUpdateCollisionbox
   href: Quantum.CreateOrUpdateCollisionbox.html
@@ -667,6 +733,12 @@ references:
   name: SetAnimationAction
   nameWithType: SetAnimationAction
   fullName: Quantum.SetAnimationAction
+- uid: Quantum.AIBotComboConditionListEntry
+  commentId: T:Quantum.AIBotComboConditionListEntry
+  href: Quantum.AIBotComboConditionListEntry.html
+  name: AIBotComboConditionListEntry
+  nameWithType: AIBotComboConditionListEntry
+  fullName: Quantum.AIBotComboConditionListEntry
 - uid: Quantum.KCC
   commentId: T:Quantum.KCC
   parent: Quantum
@@ -835,6 +907,13 @@ references:
   name: HFSMDecision
   nameWithType: HFSMDecision
   fullName: Quantum.HFSMDecision
+- uid: Quantum.HNSFParamNullableFP
+  commentId: T:Quantum.HNSFParamNullableFP
+  parent: Quantum
+  href: Quantum.HNSFParamNullableFP.html
+  name: HNSFParamNullableFP
+  nameWithType: HNSFParamNullableFP
+  fullName: Quantum.HNSFParamNullableFP
 - uid: Quantum.HasValidHardTargetDecision
   commentId: T:Quantum.HasValidHardTargetDecision
   href: Quantum.HasValidHardTargetDecision.html
@@ -877,6 +956,12 @@ references:
   name: NetworkButtons
   nameWithType: NetworkButtons
   fullName: Quantum.NetworkButtons
+- uid: Quantum.ClearTouchedEntitiesAfterHitAction
+  commentId: T:Quantum.ClearTouchedEntitiesAfterHitAction
+  href: Quantum.ClearTouchedEntitiesAfterHitAction.html
+  name: ClearTouchedEntitiesAfterHitAction
+  nameWithType: ClearTouchedEntitiesAfterHitAction
+  fullName: Quantum.ClearTouchedEntitiesAfterHitAction
 - uid: Quantum.StateFunctionFP
   commentId: T:Quantum.StateFunctionFP
   parent: Quantum
@@ -971,6 +1056,100 @@ references:
   - uid: Quantum.RequestStateChangeByTagAction.StateChangeEntry
     name: StateChangeEntry
     href: Quantum.RequestStateChangeByTagAction.StateChangeEntry.html
+- uid: Quantum.BoxCombatantHelper
+  commentId: T:Quantum.BoxCombatantHelper
+  href: Quantum.BoxCombatantHelper.html
+  name: BoxCombatantHelper
+  nameWithType: BoxCombatantHelper
+  fullName: Quantum.BoxCombatantHelper
+- uid: Quantum.BoxCombatantHelper.HurtboxHelper
+  commentId: T:Quantum.BoxCombatantHelper.HurtboxHelper
+  href: Quantum.BoxCombatantHelper.html
+  name: BoxCombatantHelper.HurtboxHelper
+  nameWithType: BoxCombatantHelper.HurtboxHelper
+  fullName: Quantum.BoxCombatantHelper.HurtboxHelper
+  spec.csharp:
+  - uid: Quantum.BoxCombatantHelper
+    name: BoxCombatantHelper
+    href: Quantum.BoxCombatantHelper.html
+  - name: .
+  - uid: Quantum.BoxCombatantHelper.HurtboxHelper
+    name: HurtboxHelper
+    href: Quantum.BoxCombatantHelper.HurtboxHelper.html
+  spec.vb:
+  - uid: Quantum.BoxCombatantHelper
+    name: BoxCombatantHelper
+    href: Quantum.BoxCombatantHelper.html
+  - name: .
+  - uid: Quantum.BoxCombatantHelper.HurtboxHelper
+    name: HurtboxHelper
+    href: Quantum.BoxCombatantHelper.HurtboxHelper.html
+- uid: Quantum.BoxCombatantHelper.WarningboxHelper
+  commentId: T:Quantum.BoxCombatantHelper.WarningboxHelper
+  href: Quantum.BoxCombatantHelper.html
+  name: BoxCombatantHelper.WarningboxHelper
+  nameWithType: BoxCombatantHelper.WarningboxHelper
+  fullName: Quantum.BoxCombatantHelper.WarningboxHelper
+  spec.csharp:
+  - uid: Quantum.BoxCombatantHelper
+    name: BoxCombatantHelper
+    href: Quantum.BoxCombatantHelper.html
+  - name: .
+  - uid: Quantum.BoxCombatantHelper.WarningboxHelper
+    name: WarningboxHelper
+    href: Quantum.BoxCombatantHelper.WarningboxHelper.html
+  spec.vb:
+  - uid: Quantum.BoxCombatantHelper
+    name: BoxCombatantHelper
+    href: Quantum.BoxCombatantHelper.html
+  - name: .
+  - uid: Quantum.BoxCombatantHelper.WarningboxHelper
+    name: WarningboxHelper
+    href: Quantum.BoxCombatantHelper.WarningboxHelper.html
+- uid: Quantum.BoxCombatantHelper.CollisionboxHelper
+  commentId: T:Quantum.BoxCombatantHelper.CollisionboxHelper
+  href: Quantum.BoxCombatantHelper.html
+  name: BoxCombatantHelper.CollisionboxHelper
+  nameWithType: BoxCombatantHelper.CollisionboxHelper
+  fullName: Quantum.BoxCombatantHelper.CollisionboxHelper
+  spec.csharp:
+  - uid: Quantum.BoxCombatantHelper
+    name: BoxCombatantHelper
+    href: Quantum.BoxCombatantHelper.html
+  - name: .
+  - uid: Quantum.BoxCombatantHelper.CollisionboxHelper
+    name: CollisionboxHelper
+    href: Quantum.BoxCombatantHelper.CollisionboxHelper.html
+  spec.vb:
+  - uid: Quantum.BoxCombatantHelper
+    name: BoxCombatantHelper
+    href: Quantum.BoxCombatantHelper.html
+  - name: .
+  - uid: Quantum.BoxCombatantHelper.CollisionboxHelper
+    name: CollisionboxHelper
+    href: Quantum.BoxCombatantHelper.CollisionboxHelper.html
+- uid: Quantum.BoxCombatantHelper.HitboxHelper
+  commentId: T:Quantum.BoxCombatantHelper.HitboxHelper
+  href: Quantum.BoxCombatantHelper.html
+  name: BoxCombatantHelper.HitboxHelper
+  nameWithType: BoxCombatantHelper.HitboxHelper
+  fullName: Quantum.BoxCombatantHelper.HitboxHelper
+  spec.csharp:
+  - uid: Quantum.BoxCombatantHelper
+    name: BoxCombatantHelper
+    href: Quantum.BoxCombatantHelper.html
+  - name: .
+  - uid: Quantum.BoxCombatantHelper.HitboxHelper
+    name: HitboxHelper
+    href: Quantum.BoxCombatantHelper.HitboxHelper.html
+  spec.vb:
+  - uid: Quantum.BoxCombatantHelper
+    name: BoxCombatantHelper
+    href: Quantum.BoxCombatantHelper.html
+  - name: .
+  - uid: Quantum.BoxCombatantHelper.HitboxHelper
+    name: HitboxHelper
+    href: Quantum.BoxCombatantHelper.HitboxHelper.html
 - uid: Quantum.SetArticleLookRotationAction
   commentId: T:Quantum.SetArticleLookRotationAction
   href: Quantum.SetArticleLookRotationAction.html
@@ -1095,6 +1274,35 @@ references:
   name: EmptyStateAction
   nameWithType: EmptyStateAction
   fullName: Quantum.EmptyStateAction
+- uid: Quantum.GetHitInfoBooleanFunction
+  commentId: T:Quantum.GetHitInfoBooleanFunction
+  href: Quantum.GetHitInfoBooleanFunction.html
+  name: GetHitInfoBooleanFunction
+  nameWithType: GetHitInfoBooleanFunction
+  fullName: Quantum.GetHitInfoBooleanFunction
+- uid: Quantum.GetHitInfoBooleanFunction.HitInfoValueType
+  commentId: T:Quantum.GetHitInfoBooleanFunction.HitInfoValueType
+  parent: Quantum
+  href: Quantum.GetHitInfoBooleanFunction.html
+  name: GetHitInfoBooleanFunction.HitInfoValueType
+  nameWithType: GetHitInfoBooleanFunction.HitInfoValueType
+  fullName: Quantum.GetHitInfoBooleanFunction.HitInfoValueType
+  spec.csharp:
+  - uid: Quantum.GetHitInfoBooleanFunction
+    name: GetHitInfoBooleanFunction
+    href: Quantum.GetHitInfoBooleanFunction.html
+  - name: .
+  - uid: Quantum.GetHitInfoBooleanFunction.HitInfoValueType
+    name: HitInfoValueType
+    href: Quantum.GetHitInfoBooleanFunction.HitInfoValueType.html
+  spec.vb:
+  - uid: Quantum.GetHitInfoBooleanFunction
+    name: GetHitInfoBooleanFunction
+    href: Quantum.GetHitInfoBooleanFunction.html
+  - name: .
+  - uid: Quantum.GetHitInfoBooleanFunction.HitInfoValueType
+    name: HitInfoValueType
+    href: Quantum.GetHitInfoBooleanFunction.HitInfoValueType.html
 - uid: Quantum.DeterministicCommandSetup
   commentId: T:Quantum.DeterministicCommandSetup
   href: Quantum.DeterministicCommandSetup.html
@@ -1277,6 +1485,20 @@ references:
   name: EventFighterDied
   nameWithType: EventFighterDied
   fullName: Quantum.EventFighterDied
+- uid: Quantum.EventGamemodeParticipantEntityUpdated
+  commentId: T:Quantum.EventGamemodeParticipantEntityUpdated
+  parent: Quantum
+  href: Quantum.EventGamemodeParticipantEntityUpdated.html
+  name: EventGamemodeParticipantEntityUpdated
+  nameWithType: EventGamemodeParticipantEntityUpdated
+  fullName: Quantum.EventGamemodeParticipantEntityUpdated
+- uid: Quantum.EventGamemodeParticipantSpawned
+  commentId: T:Quantum.EventGamemodeParticipantSpawned
+  parent: Quantum
+  href: Quantum.EventGamemodeParticipantSpawned.html
+  name: EventGamemodeParticipantSpawned
+  nameWithType: EventGamemodeParticipantSpawned
+  fullName: Quantum.EventGamemodeParticipantSpawned
 - uid: Quantum.EventGamemodeStateChanged
   commentId: T:Quantum.EventGamemodeStateChanged
   parent: Quantum
@@ -1382,8 +1604,16 @@ references:
   - uid: Quantum.HFSMModifyInputAction.ModifyType
     name: ModifyType
     href: Quantum.HFSMModifyInputAction.ModifyType.html
+- uid: Quantum.ArticlesOwner
+  commentId: T:Quantum.ArticlesOwner
+  parent: Quantum
+  href: Quantum.ArticlesOwner.html
+  name: ArticlesOwner
+  nameWithType: ArticlesOwner
+  fullName: Quantum.ArticlesOwner
 - uid: Quantum.StateFunctionBool
   commentId: T:Quantum.StateFunctionBool
+  parent: Quantum
   href: Quantum.StateFunctionBool.html
   name: StateFunctionBool
   nameWithType: StateFunctionBool
@@ -1394,6 +1624,13 @@ references:
   name: AIConfigUser
   nameWithType: AIConfigUser
   fullName: Quantum.AIConfigUser
+- uid: Quantum.AIBotComboEntry
+  commentId: T:Quantum.AIBotComboEntry
+  parent: Quantum
+  href: Quantum.AIBotComboEntry.html
+  name: AIBotComboEntry
+  nameWithType: AIBotComboEntry
+  fullName: Quantum.AIBotComboEntry
 - uid: Quantum.HNSFStateDecision
   commentId: T:Quantum.HNSFStateDecision
   parent: Quantum
@@ -1430,18 +1667,47 @@ references:
   - uid: Quantum.RotateTowardsAction.RotateTowardsType
     name: RotateTowardsType
     href: Quantum.RotateTowardsAction.RotateTowardsType.html
-- uid: Quantum.ModifySpecialPageSetAction
-  commentId: T:Quantum.ModifySpecialPageSetAction
-  href: Quantum.ModifySpecialPageSetAction.html
-  name: ModifySpecialPageSetAction
-  nameWithType: ModifySpecialPageSetAction
-  fullName: Quantum.ModifySpecialPageSetAction
+- uid: Quantum.ModifyBlackboardFPVector3Action
+  commentId: T:Quantum.ModifyBlackboardFPVector3Action
+  href: Quantum.ModifyBlackboardFPVector3Action.html
+  name: ModifyBlackboardFPVector3Action
+  nameWithType: ModifyBlackboardFPVector3Action
+  fullName: Quantum.ModifyBlackboardFPVector3Action
+- uid: Quantum.ModifyBlackboardFPVector3Action.ModifyType
+  commentId: T:Quantum.ModifyBlackboardFPVector3Action.ModifyType
+  parent: Quantum
+  href: Quantum.ModifyBlackboardFPVector3Action.html
+  name: ModifyBlackboardFPVector3Action.ModifyType
+  nameWithType: ModifyBlackboardFPVector3Action.ModifyType
+  fullName: Quantum.ModifyBlackboardFPVector3Action.ModifyType
+  spec.csharp:
+  - uid: Quantum.ModifyBlackboardFPVector3Action
+    name: ModifyBlackboardFPVector3Action
+    href: Quantum.ModifyBlackboardFPVector3Action.html
+  - name: .
+  - uid: Quantum.ModifyBlackboardFPVector3Action.ModifyType
+    name: ModifyType
+    href: Quantum.ModifyBlackboardFPVector3Action.ModifyType.html
+  spec.vb:
+  - uid: Quantum.ModifyBlackboardFPVector3Action
+    name: ModifyBlackboardFPVector3Action
+    href: Quantum.ModifyBlackboardFPVector3Action.html
+  - name: .
+  - uid: Quantum.ModifyBlackboardFPVector3Action.ModifyType
+    name: ModifyType
+    href: Quantum.ModifyBlackboardFPVector3Action.ModifyType.html
 - uid: Quantum.IntComparisonAIFunction
   commentId: T:Quantum.IntComparisonAIFunction
   href: Quantum.IntComparisonAIFunction.html
   name: IntComparisonAIFunction
   nameWithType: IntComparisonAIFunction
   fullName: Quantum.IntComparisonAIFunction
+- uid: Quantum.ExecuteNeutralActionLeaf
+  commentId: T:Quantum.ExecuteNeutralActionLeaf
+  href: Quantum.ExecuteNeutralActionLeaf.html
+  name: ExecuteNeutralActionLeaf
+  nameWithType: ExecuteNeutralActionLeaf
+  fullName: Quantum.ExecuteNeutralActionLeaf
 - uid: Quantum.SnapToECBAction
   commentId: T:Quantum.SnapToECBAction
   href: Quantum.SnapToECBAction.html
@@ -1505,6 +1771,12 @@ references:
   name: CharaPhysics
   nameWithType: CharaPhysics
   fullName: Quantum.CharaPhysics
+- uid: Quantum.GetDistanceBetweenTargetsFunction
+  commentId: T:Quantum.GetDistanceBetweenTargetsFunction
+  href: Quantum.GetDistanceBetweenTargetsFunction.html
+  name: GetDistanceBetweenTargetsFunction
+  nameWithType: GetDistanceBetweenTargetsFunction
+  fullName: Quantum.GetDistanceBetweenTargetsFunction
 - uid: Quantum.GroundSnapProcessor
   commentId: T:Quantum.GroundSnapProcessor
   href: Quantum.GroundSnapProcessor.html
@@ -1780,6 +2052,12 @@ references:
   name: CurrentMovesetDecision
   nameWithType: CurrentMovesetDecision
   fullName: Quantum.CurrentMovesetDecision
+- uid: Quantum.HitstunComparisonDecorator
+  commentId: T:Quantum.HitstunComparisonDecorator
+  href: Quantum.HitstunComparisonDecorator.html
+  name: HitstunComparisonDecorator
+  nameWithType: HitstunComparisonDecorator
+  fullName: Quantum.HitstunComparisonDecorator
 - uid: Quantum.AttemptHardKnockdownAction
   commentId: T:Quantum.AttemptHardKnockdownAction
   href: Quantum.AttemptHardKnockdownAction.html
@@ -2085,6 +2363,12 @@ references:
   name: InputBitmask
   nameWithType: InputBitmask
   fullName: Quantum.InputBitmask
+- uid: Quantum.EntityExistDecorator
+  commentId: T:Quantum.EntityExistDecorator
+  href: Quantum.EntityExistDecorator.html
+  name: EntityExistDecorator
+  nameWithType: EntityExistDecorator
+  fullName: Quantum.EntityExistDecorator
 - uid: Quantum.CharacterIntroType
   commentId: T:Quantum.CharacterIntroType
   parent: Quantum
@@ -2197,6 +2481,13 @@ references:
   name: GenericGamemodeStates
   nameWithType: GenericGamemodeStates
   fullName: Quantum.GenericGamemodeStates
+- uid: Quantum.InvisibilityType
+  commentId: T:Quantum.InvisibilityType
+  parent: Quantum
+  href: Quantum.InvisibilityType.html
+  name: InvisibilityType
+  nameWithType: InvisibilityType
+  fullName: Quantum.InvisibilityType
 - uid: Quantum.StateGroundedType
   commentId: T:Quantum.StateGroundedType
   parent: Quantum
@@ -2281,6 +2572,13 @@ references:
   name: CollisionCombatPair
   nameWithType: CollisionCombatPair
   fullName: Quantum.CollisionCombatPair
+- uid: Quantum.CombatTokenActorInfo
+  commentId: T:Quantum.CombatTokenActorInfo
+  parent: Quantum
+  href: Quantum.CombatTokenActorInfo.html
+  name: CombatTokenActorInfo
+  nameWithType: CombatTokenActorInfo
+  fullName: Quantum.CombatTokenActorInfo
 - uid: Quantum.DummyRecordingSlot
   commentId: T:Quantum.DummyRecordingSlot
   parent: Quantum
@@ -2309,6 +2607,20 @@ references:
   name: EnvQueryItemCached
   nameWithType: EnvQueryItemCached
   fullName: Quantum.EnvQueryItemCached
+- uid: Quantum.GamemodeParticipantCharacterData
+  commentId: T:Quantum.GamemodeParticipantCharacterData
+  parent: Quantum
+  href: Quantum.GamemodeParticipantCharacterData.html
+  name: GamemodeParticipantCharacterData
+  nameWithType: GamemodeParticipantCharacterData
+  fullName: Quantum.GamemodeParticipantCharacterData
+- uid: Quantum.GamemodeParticipantData
+  commentId: T:Quantum.GamemodeParticipantData
+  parent: Quantum
+  href: Quantum.GamemodeParticipantData.html
+  name: GamemodeParticipantData
+  nameWithType: GamemodeParticipantData
+  fullName: Quantum.GamemodeParticipantData
 - uid: Quantum.HNSFStateAgentData
   commentId: T:Quantum.HNSFStateAgentData
   parent: Quantum
@@ -2358,20 +2670,20 @@ references:
   name: KCCModifier
   nameWithType: KCCModifier
   fullName: Quantum.KCCModifier
-- uid: Quantum.TeamVersusPlayerData
-  commentId: T:Quantum.TeamVersusPlayerData
+- uid: Quantum.TeamVersusParticipantData
+  commentId: T:Quantum.TeamVersusParticipantData
   parent: Quantum
-  href: Quantum.TeamVersusPlayerData.html
-  name: TeamVersusPlayerData
-  nameWithType: TeamVersusPlayerData
-  fullName: Quantum.TeamVersusPlayerData
-- uid: Quantum.TrainingPlayerData
-  commentId: T:Quantum.TrainingPlayerData
+  href: Quantum.TeamVersusParticipantData.html
+  name: TeamVersusParticipantData
+  nameWithType: TeamVersusParticipantData
+  fullName: Quantum.TeamVersusParticipantData
+- uid: Quantum.TrainingParticipantData
+  commentId: T:Quantum.TrainingParticipantData
   parent: Quantum
-  href: Quantum.TrainingPlayerData.html
-  name: TrainingPlayerData
-  nameWithType: TrainingPlayerData
-  fullName: Quantum.TrainingPlayerData
+  href: Quantum.TrainingParticipantData.html
+  name: TrainingParticipantData
+  nameWithType: TrainingParticipantData
+  fullName: Quantum.TrainingParticipantData
 - uid: Quantum._globals_
   commentId: T:Quantum._globals_
   href: Quantum._globals_.html
@@ -2385,6 +2697,13 @@ references:
   name: AICharacterActor
   nameWithType: AICharacterActor
   fullName: Quantum.AICharacterActor
+- uid: Quantum.AttackToken
+  commentId: T:Quantum.AttackToken
+  parent: Quantum
+  href: Quantum.AttackToken.html
+  name: AttackToken
+  nameWithType: AttackToken
+  fullName: Quantum.AttackToken
 - uid: Quantum.Aura
   commentId: T:Quantum.Aura
   parent: Quantum
@@ -2462,6 +2781,13 @@ references:
   name: CombatTeam
   nameWithType: CombatTeam
   fullName: Quantum.CombatTeam
+- uid: Quantum.CombatTokenSource
+  commentId: T:Quantum.CombatTokenSource
+  parent: Quantum
+  href: Quantum.CombatTokenSource.html
+  name: CombatTokenSource
+  nameWithType: CombatTokenSource
+  fullName: Quantum.CombatTokenSource
 - uid: Quantum.DummyConfiguration
   commentId: T:Quantum.DummyConfiguration
   parent: Quantum
@@ -2504,13 +2830,6 @@ references:
   name: FighterArticle
   nameWithType: FighterArticle
   fullName: Quantum.FighterArticle
-- uid: Quantum.FighterArticles
-  commentId: T:Quantum.FighterArticles
-  parent: Quantum
-  href: Quantum.FighterArticles.html
-  name: FighterArticles
-  nameWithType: FighterArticles
-  fullName: Quantum.FighterArticles
 - uid: Quantum.GainAuraPassively
   commentId: T:Quantum.GainAuraPassively
   parent: Quantum
@@ -2518,6 +2837,13 @@ references:
   name: GainAuraPassively
   nameWithType: GainAuraPassively
   fullName: Quantum.GainAuraPassively
+- uid: Quantum.GamemodeParticipantsGlobal
+  commentId: T:Quantum.GamemodeParticipantsGlobal
+  parent: Quantum
+  href: Quantum.GamemodeParticipantsGlobal.html
+  name: GamemodeParticipantsGlobal
+  nameWithType: GamemodeParticipantsGlobal
+  fullName: Quantum.GamemodeParticipantsGlobal
 - uid: Quantum.GenericGamemodeGlobals
   commentId: T:Quantum.GenericGamemodeGlobals
   parent: Quantum
@@ -2567,6 +2893,13 @@ references:
   name: Hitbox
   nameWithType: Hitbox
   fullName: Quantum.Hitbox
+- uid: Quantum.Hitstop
+  commentId: T:Quantum.Hitstop
+  parent: Quantum
+  href: Quantum.Hitstop.html
+  name: Hitstop
+  nameWithType: Hitstop
+  fullName: Quantum.Hitstop
 - uid: Quantum.Hurtbox
   commentId: T:Quantum.Hurtbox
   parent: Quantum
@@ -2658,6 +2991,20 @@ references:
   name: Parented
   nameWithType: Parented
   fullName: Quantum.Parented
+- uid: Quantum.ParticipantLink
+  commentId: T:Quantum.ParticipantLink
+  parent: Quantum
+  href: Quantum.ParticipantLink.html
+  name: ParticipantLink
+  nameWithType: ParticipantLink
+  fullName: Quantum.ParticipantLink
+- uid: Quantum.PhysicsBodyActor
+  commentId: T:Quantum.PhysicsBodyActor
+  parent: Quantum
+  href: Quantum.PhysicsBodyActor.html
+  name: PhysicsBodyActor
+  nameWithType: PhysicsBodyActor
+  fullName: Quantum.PhysicsBodyActor
 - uid: Quantum.PlayerLink
   commentId: T:Quantum.PlayerLink
   parent: Quantum
@@ -2700,6 +3047,13 @@ references:
   name: TrainingGlobals
   nameWithType: TrainingGlobals
   fullName: Quantum.TrainingGlobals
+- uid: Quantum.Warningbox
+  commentId: T:Quantum.Warningbox
+  parent: Quantum
+  href: Quantum.Warningbox.html
+  name: Warningbox
+  nameWithType: Warningbox
+  fullName: Quantum.Warningbox
 - uid: Quantum.ISignalAuraDecreased
   commentId: T:Quantum.ISignalAuraDecreased
   parent: Quantum
@@ -2822,6 +3176,13 @@ references:
   - uid: Quantum.MapCustomData.SpawnPointData
     name: SpawnPointData
     href: Quantum.MapCustomData.SpawnPointData.html
+- uid: Quantum.AIBotComboConfig
+  commentId: T:Quantum.AIBotComboConfig
+  parent: Quantum
+  href: Quantum.AIBotComboConfig.html
+  name: AIBotComboConfig
+  nameWithType: AIBotComboConfig
+  fullName: Quantum.AIBotComboConfig
 - uid: Quantum.ModifyAnimationFrameAction
   commentId: T:Quantum.ModifyAnimationFrameAction
   href: Quantum.ModifyAnimationFrameAction.html
@@ -3035,6 +3396,12 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Quantum.RandomDecisionDecorator
+  commentId: T:Quantum.RandomDecisionDecorator
+  href: Quantum.RandomDecisionDecorator.html
+  name: RandomDecisionDecorator
+  nameWithType: RandomDecisionDecorator
+  fullName: Quantum.RandomDecisionDecorator
 - uid: Quantum.ClearAttackStringAction
   commentId: T:Quantum.ClearAttackStringAction
   href: Quantum.ClearAttackStringAction.html
@@ -3152,6 +3519,12 @@ references:
   name: CreateOrUpdateHurtbox
   nameWithType: CreateOrUpdateHurtbox
   fullName: Quantum.CreateOrUpdateHurtbox
+- uid: Quantum.ManageAttackTokenDecorator
+  commentId: T:Quantum.ManageAttackTokenDecorator
+  href: Quantum.ManageAttackTokenDecorator.html
+  name: ManageAttackTokenDecorator
+  nameWithType: ManageAttackTokenDecorator
+  fullName: Quantum.ManageAttackTokenDecorator
 - uid: Quantum.PlayEffectOnChargeLevelAction
   commentId: T:Quantum.PlayEffectOnChargeLevelAction
   href: Quantum.PlayEffectOnChargeLevelAction.html
@@ -3177,6 +3550,13 @@ references:
   name: HNSFORDecision
   nameWithType: HNSFORDecision
   fullName: Quantum.HNSFORDecision
+- uid: Quantum.AIBotComboConditionBase
+  commentId: T:Quantum.AIBotComboConditionBase
+  parent: Quantum
+  href: Quantum.AIBotComboConditionBase.html
+  name: AIBotComboConditionBase
+  nameWithType: AIBotComboConditionBase
+  fullName: Quantum.AIBotComboConditionBase
 - uid: Quantum.ModifyBlackboardIntAction
   commentId: T:Quantum.ModifyBlackboardIntAction
   href: Quantum.ModifyBlackboardIntAction.html
@@ -3256,6 +3636,28 @@ references:
   - uid: Quantum.HNSFStateHelper.Chara
     name: Chara
     href: Quantum.HNSFStateHelper.Chara.html
+- uid: Quantum.HNSFStateHelper.Generic
+  commentId: T:Quantum.HNSFStateHelper.Generic
+  href: Quantum.HNSFStateHelper.html
+  name: HNSFStateHelper.Generic
+  nameWithType: HNSFStateHelper.Generic
+  fullName: Quantum.HNSFStateHelper.Generic
+  spec.csharp:
+  - uid: Quantum.HNSFStateHelper
+    name: HNSFStateHelper
+    href: Quantum.HNSFStateHelper.html
+  - name: .
+  - uid: Quantum.HNSFStateHelper.Generic
+    name: Generic
+    href: Quantum.HNSFStateHelper.Generic.html
+  spec.vb:
+  - uid: Quantum.HNSFStateHelper
+    name: HNSFStateHelper
+    href: Quantum.HNSFStateHelper.html
+  - name: .
+  - uid: Quantum.HNSFStateHelper.Generic
+    name: Generic
+    href: Quantum.HNSFStateHelper.Generic.html
 - uid: Quantum.FindEnemyLeaf
   commentId: T:Quantum.FindEnemyLeaf
   href: Quantum.FindEnemyLeaf.html
@@ -3287,6 +3689,12 @@ references:
   name: ClearChargeAction
   nameWithType: ClearChargeAction
   fullName: Quantum.ClearChargeAction
+- uid: Quantum.AttemptAttackWithComboDecorator
+  commentId: T:Quantum.AttemptAttackWithComboDecorator
+  href: Quantum.AttemptAttackWithComboDecorator.html
+  name: AttemptAttackWithComboDecorator
+  nameWithType: AttemptAttackWithComboDecorator
+  fullName: Quantum.AttemptAttackWithComboDecorator
 - uid: Quantum.ApplyGravityAction
   commentId: T:Quantum.ApplyGravityAction
   href: Quantum.ApplyGravityAction.html
@@ -3299,6 +3707,35 @@ references:
   name: IntComparisonDecision
   nameWithType: IntComparisonDecision
   fullName: Quantum.IntComparisonDecision
+- uid: Quantum.FpVector3AndFpOperationFunction
+  commentId: T:Quantum.FpVector3AndFpOperationFunction
+  href: Quantum.FpVector3AndFpOperationFunction.html
+  name: FpVector3AndFpOperationFunction
+  nameWithType: FpVector3AndFpOperationFunction
+  fullName: Quantum.FpVector3AndFpOperationFunction
+- uid: Quantum.FpVector3AndFpOperationFunction.OperationType
+  commentId: T:Quantum.FpVector3AndFpOperationFunction.OperationType
+  parent: Quantum
+  href: Quantum.FpVector3AndFpOperationFunction.html
+  name: FpVector3AndFpOperationFunction.OperationType
+  nameWithType: FpVector3AndFpOperationFunction.OperationType
+  fullName: Quantum.FpVector3AndFpOperationFunction.OperationType
+  spec.csharp:
+  - uid: Quantum.FpVector3AndFpOperationFunction
+    name: FpVector3AndFpOperationFunction
+    href: Quantum.FpVector3AndFpOperationFunction.html
+  - name: .
+  - uid: Quantum.FpVector3AndFpOperationFunction.OperationType
+    name: OperationType
+    href: Quantum.FpVector3AndFpOperationFunction.OperationType.html
+  spec.vb:
+  - uid: Quantum.FpVector3AndFpOperationFunction
+    name: FpVector3AndFpOperationFunction
+    href: Quantum.FpVector3AndFpOperationFunction.html
+  - name: .
+  - uid: Quantum.FpVector3AndFpOperationFunction.OperationType
+    name: OperationType
+    href: Quantum.FpVector3AndFpOperationFunction.OperationType.html
 - uid: Quantum.ArticleDestroySelfAction
   commentId: T:Quantum.ArticleDestroySelfAction
   href: Quantum.ArticleDestroySelfAction.html
@@ -3313,6 +3750,7 @@ references:
   fullName: Quantum.KCCPenetrationSolver
 - uid: Quantum.HNSFTaggedStatesAsset
   commentId: T:Quantum.HNSFTaggedStatesAsset
+  parent: Quantum
   href: Quantum.HNSFTaggedStatesAsset.html
   name: HNSFTaggedStatesAsset
   nameWithType: HNSFTaggedStatesAsset
@@ -3437,6 +3875,56 @@ references:
   - uid: Quantum.FPOperationFunction.OperationType
     name: OperationType
     href: Quantum.FPOperationFunction.OperationType.html
+- uid: Quantum.CombatHelper
+  commentId: T:Quantum.CombatHelper
+  href: Quantum.CombatHelper.html
+  name: CombatHelper
+  nameWithType: CombatHelper
+  fullName: Quantum.CombatHelper
+- uid: Quantum.CombatHelper.ThrowHelper
+  commentId: T:Quantum.CombatHelper.ThrowHelper
+  href: Quantum.CombatHelper.html
+  name: CombatHelper.ThrowHelper
+  nameWithType: CombatHelper.ThrowHelper
+  fullName: Quantum.CombatHelper.ThrowHelper
+  spec.csharp:
+  - uid: Quantum.CombatHelper
+    name: CombatHelper
+    href: Quantum.CombatHelper.html
+  - name: .
+  - uid: Quantum.CombatHelper.ThrowHelper
+    name: ThrowHelper
+    href: Quantum.CombatHelper.ThrowHelper.html
+  spec.vb:
+  - uid: Quantum.CombatHelper
+    name: CombatHelper
+    href: Quantum.CombatHelper.html
+  - name: .
+  - uid: Quantum.CombatHelper.ThrowHelper
+    name: ThrowHelper
+    href: Quantum.CombatHelper.ThrowHelper.html
+- uid: Quantum.CombatHelper.TokenHelper
+  commentId: T:Quantum.CombatHelper.TokenHelper
+  href: Quantum.CombatHelper.html
+  name: CombatHelper.TokenHelper
+  nameWithType: CombatHelper.TokenHelper
+  fullName: Quantum.CombatHelper.TokenHelper
+  spec.csharp:
+  - uid: Quantum.CombatHelper
+    name: CombatHelper
+    href: Quantum.CombatHelper.html
+  - name: .
+  - uid: Quantum.CombatHelper.TokenHelper
+    name: TokenHelper
+    href: Quantum.CombatHelper.TokenHelper.html
+  spec.vb:
+  - uid: Quantum.CombatHelper
+    name: CombatHelper
+    href: Quantum.CombatHelper.html
+  - name: .
+  - uid: Quantum.CombatHelper.TokenHelper
+    name: TokenHelper
+    href: Quantum.CombatHelper.TokenHelper.html
 - uid: Quantum.HFSMCharaCurrentStateByTagDecision
   commentId: T:Quantum.HFSMCharaCurrentStateByTagDecision
   href: Quantum.HFSMCharaCurrentStateByTagDecision.html
@@ -3613,12 +4101,6 @@ references:
   name: KCCShapeCastHit
   nameWithType: KCCShapeCastHit
   fullName: Quantum.KCCShapeCastHit
-- uid: Quantum.CombatHelper
-  commentId: T:Quantum.CombatHelper
-  href: Quantum.CombatHelper.html
-  name: CombatHelper
-  nameWithType: CombatHelper
-  fullName: Quantum.CombatHelper
 - uid: Quantum.AIConfig
   commentId: T:Quantum.AIConfig
   parent: Quantum
@@ -3755,6 +4237,12 @@ references:
   - uid: Quantum.ModifyForcesAction.ModifyType
     name: ModifyType
     href: Quantum.ModifyForcesAction.ModifyType.html
+- uid: Quantum.EvaluateBestTargetService
+  commentId: T:Quantum.EvaluateBestTargetService
+  href: Quantum.EvaluateBestTargetService.html
+  name: EvaluateBestTargetService
+  nameWithType: EvaluateBestTargetService
+  fullName: Quantum.EvaluateBestTargetService
 - uid: Quantum.KCCStageInfo
   commentId: T:Quantum.KCCStageInfo
   parent: Quantum
@@ -3815,6 +4303,20 @@ references:
   - uid: Quantum.ModifyHitstopAction.ModifyType
     name: ModifyType
     href: Quantum.ModifyHitstopAction.ModifyType.html
+- uid: Quantum.GamemodeParticipantType
+  commentId: T:Quantum.GamemodeParticipantType
+  parent: Quantum
+  href: Quantum.GamemodeParticipantType.html
+  name: GamemodeParticipantType
+  nameWithType: GamemodeParticipantType
+  fullName: Quantum.GamemodeParticipantType
+- uid: Quantum.GamemodeParticipantInfo
+  commentId: T:Quantum.GamemodeParticipantInfo
+  parent: Quantum
+  href: Quantum.GamemodeParticipantInfo.html
+  name: GamemodeParticipantInfo
+  nameWithType: GamemodeParticipantInfo
+  fullName: Quantum.GamemodeParticipantInfo
 - uid: Quantum.UpdateParentedTransformSystem
   commentId: T:Quantum.UpdateParentedTransformSystem
   href: Quantum.UpdateParentedTransformSystem.html
@@ -3850,6 +4352,19 @@ references:
   name: BakedEntityPrototype
   nameWithType: BakedEntityPrototype
   fullName: Quantum.BakedEntityPrototype
+- uid: Quantum.FighterAIType
+  commentId: T:Quantum.FighterAIType
+  parent: Quantum
+  href: Quantum.FighterAIType.html
+  name: FighterAIType
+  nameWithType: FighterAIType
+  fullName: Quantum.FighterAIType
+- uid: Quantum.RefreshValidSpecialsAction
+  commentId: T:Quantum.RefreshValidSpecialsAction
+  href: Quantum.RefreshValidSpecialsAction.html
+  name: RefreshValidSpecialsAction
+  nameWithType: RefreshValidSpecialsAction
+  fullName: Quantum.RefreshValidSpecialsAction
 - uid: Quantum.HNSFParamInt
   commentId: T:Quantum.HNSFParamInt
   parent: Quantum
@@ -3857,6 +4372,58 @@ references:
   name: HNSFParamInt
   nameWithType: HNSFParamInt
   fullName: Quantum.HNSFParamInt
+- uid: Quantum.GetTransformVectorFunction
+  commentId: T:Quantum.GetTransformVectorFunction
+  href: Quantum.GetTransformVectorFunction.html
+  name: GetTransformVectorFunction
+  nameWithType: GetTransformVectorFunction
+  fullName: Quantum.GetTransformVectorFunction
+- uid: Quantum.GetTransformVectorFunction.PositionType
+  commentId: T:Quantum.GetTransformVectorFunction.PositionType
+  parent: Quantum
+  href: Quantum.GetTransformVectorFunction.html
+  name: GetTransformVectorFunction.PositionType
+  nameWithType: GetTransformVectorFunction.PositionType
+  fullName: Quantum.GetTransformVectorFunction.PositionType
+  spec.csharp:
+  - uid: Quantum.GetTransformVectorFunction
+    name: GetTransformVectorFunction
+    href: Quantum.GetTransformVectorFunction.html
+  - name: .
+  - uid: Quantum.GetTransformVectorFunction.PositionType
+    name: PositionType
+    href: Quantum.GetTransformVectorFunction.PositionType.html
+  spec.vb:
+  - uid: Quantum.GetTransformVectorFunction
+    name: GetTransformVectorFunction
+    href: Quantum.GetTransformVectorFunction.html
+  - name: .
+  - uid: Quantum.GetTransformVectorFunction.PositionType
+    name: PositionType
+    href: Quantum.GetTransformVectorFunction.PositionType.html
+- uid: Quantum.GetTransformVectorFunction.VectorType
+  commentId: T:Quantum.GetTransformVectorFunction.VectorType
+  parent: Quantum
+  href: Quantum.GetTransformVectorFunction.html
+  name: GetTransformVectorFunction.VectorType
+  nameWithType: GetTransformVectorFunction.VectorType
+  fullName: Quantum.GetTransformVectorFunction.VectorType
+  spec.csharp:
+  - uid: Quantum.GetTransformVectorFunction
+    name: GetTransformVectorFunction
+    href: Quantum.GetTransformVectorFunction.html
+  - name: .
+  - uid: Quantum.GetTransformVectorFunction.VectorType
+    name: VectorType
+    href: Quantum.GetTransformVectorFunction.VectorType.html
+  spec.vb:
+  - uid: Quantum.GetTransformVectorFunction
+    name: GetTransformVectorFunction
+    href: Quantum.GetTransformVectorFunction.html
+  - name: .
+  - uid: Quantum.GetTransformVectorFunction.VectorType
+    name: VectorType
+    href: Quantum.GetTransformVectorFunction.VectorType.html
 - uid: Quantum.CombatboxBroadphaseSystem
   commentId: T:Quantum.CombatboxBroadphaseSystem
   href: Quantum.CombatboxBroadphaseSystem.html
@@ -3892,6 +4459,83 @@ references:
   name: VisualEffectEntry
   nameWithType: VisualEffectEntry
   fullName: Quantum.VisualEffectEntry
+- uid: Quantum.CombatantHitByTypeCountDecision
+  commentId: T:Quantum.CombatantHitByTypeCountDecision
+  href: Quantum.CombatantHitByTypeCountDecision.html
+  name: CombatantHitByTypeCountDecision
+  nameWithType: CombatantHitByTypeCountDecision
+  fullName: Quantum.CombatantHitByTypeCountDecision
+- uid: Quantum.AIBotComboConditionInfo
+  commentId: T:Quantum.AIBotComboConditionInfo
+  parent: Quantum
+  href: Quantum.AIBotComboConditionInfo.html
+  name: AIBotComboConditionInfo
+  nameWithType: AIBotComboConditionInfo
+  fullName: Quantum.AIBotComboConditionInfo
+- uid: Quantum.DistanceBetweenTargetsDecision
+  commentId: T:Quantum.DistanceBetweenTargetsDecision
+  href: Quantum.DistanceBetweenTargetsDecision.html
+  name: DistanceBetweenTargetsDecision
+  nameWithType: DistanceBetweenTargetsDecision
+  fullName: Quantum.DistanceBetweenTargetsDecision
+- uid: Quantum.GetCombatTargeterFPVector3Function
+  commentId: T:Quantum.GetCombatTargeterFPVector3Function
+  href: Quantum.GetCombatTargeterFPVector3Function.html
+  name: GetCombatTargeterFPVector3Function
+  nameWithType: GetCombatTargeterFPVector3Function
+  fullName: Quantum.GetCombatTargeterFPVector3Function
+- uid: Quantum.GetCombatTargeterFPVector3Function.VariableType
+  commentId: T:Quantum.GetCombatTargeterFPVector3Function.VariableType
+  parent: Quantum
+  href: Quantum.GetCombatTargeterFPVector3Function.html
+  name: GetCombatTargeterFPVector3Function.VariableType
+  nameWithType: GetCombatTargeterFPVector3Function.VariableType
+  fullName: Quantum.GetCombatTargeterFPVector3Function.VariableType
+  spec.csharp:
+  - uid: Quantum.GetCombatTargeterFPVector3Function
+    name: GetCombatTargeterFPVector3Function
+    href: Quantum.GetCombatTargeterFPVector3Function.html
+  - name: .
+  - uid: Quantum.GetCombatTargeterFPVector3Function.VariableType
+    name: VariableType
+    href: Quantum.GetCombatTargeterFPVector3Function.VariableType.html
+  spec.vb:
+  - uid: Quantum.GetCombatTargeterFPVector3Function
+    name: GetCombatTargeterFPVector3Function
+    href: Quantum.GetCombatTargeterFPVector3Function.html
+  - name: .
+  - uid: Quantum.GetCombatTargeterFPVector3Function.VariableType
+    name: VariableType
+    href: Quantum.GetCombatTargeterFPVector3Function.VariableType.html
+- uid: Quantum.DistanceFromSelfDecorator
+  commentId: T:Quantum.DistanceFromSelfDecorator
+  href: Quantum.DistanceFromSelfDecorator.html
+  name: DistanceFromSelfDecorator
+  nameWithType: DistanceFromSelfDecorator
+  fullName: Quantum.DistanceFromSelfDecorator
+- uid: Quantum.DistanceFromSelfDecorator.CheckType
+  commentId: T:Quantum.DistanceFromSelfDecorator.CheckType
+  parent: Quantum
+  href: Quantum.DistanceFromSelfDecorator.html
+  name: DistanceFromSelfDecorator.CheckType
+  nameWithType: DistanceFromSelfDecorator.CheckType
+  fullName: Quantum.DistanceFromSelfDecorator.CheckType
+  spec.csharp:
+  - uid: Quantum.DistanceFromSelfDecorator
+    name: DistanceFromSelfDecorator
+    href: Quantum.DistanceFromSelfDecorator.html
+  - name: .
+  - uid: Quantum.DistanceFromSelfDecorator.CheckType
+    name: CheckType
+    href: Quantum.DistanceFromSelfDecorator.CheckType.html
+  spec.vb:
+  - uid: Quantum.DistanceFromSelfDecorator
+    name: DistanceFromSelfDecorator
+    href: Quantum.DistanceFromSelfDecorator.html
+  - name: .
+  - uid: Quantum.DistanceFromSelfDecorator.CheckType
+    name: CheckType
+    href: Quantum.DistanceFromSelfDecorator.CheckType.html
 - uid: Quantum.SystemsConfig
   commentId: T:Quantum.SystemsConfig
   parent: Quantum
@@ -4034,6 +4678,12 @@ references:
   name: KCCMathUtility
   nameWithType: KCCMathUtility
   fullName: Quantum.KCCMathUtility
+- uid: Quantum.GetInRangeOfTargetLeaf
+  commentId: T:Quantum.GetInRangeOfTargetLeaf
+  href: Quantum.GetInRangeOfTargetLeaf.html
+  name: GetInRangeOfTargetLeaf
+  nameWithType: GetInRangeOfTargetLeaf
+  fullName: Quantum.GetInRangeOfTargetLeaf
 - uid: Quantum.FacingTargetDecision
   commentId: T:Quantum.FacingTargetDecision
   href: Quantum.FacingTargetDecision.html
@@ -4104,6 +4754,12 @@ references:
   - uid: Quantum.TeleportRelatedToTargetAction.TeleportVectorType
     name: TeleportVectorType
     href: Quantum.TeleportRelatedToTargetAction.TeleportVectorType.html
+- uid: Quantum.FighterAIDefinition
+  commentId: T:Quantum.FighterAIDefinition
+  href: Quantum.FighterAIDefinition.html
+  name: FighterAIDefinition
+  nameWithType: FighterAIDefinition
+  fullName: Quantum.FighterAIDefinition
 - uid: Quantum.ModifyPassiveAuraGainDelayAction
   commentId: T:Quantum.ModifyPassiveAuraGainDelayAction
   href: Quantum.ModifyPassiveAuraGainDelayAction.html
@@ -4216,6 +4872,12 @@ references:
   name: SetPositionAction
   nameWithType: SetPositionAction
   fullName: Quantum.SetPositionAction
+- uid: Quantum.BlockstunComparisonDecorator
+  commentId: T:Quantum.BlockstunComparisonDecorator
+  href: Quantum.BlockstunComparisonDecorator.html
+  name: BlockstunComparisonDecorator
+  nameWithType: BlockstunComparisonDecorator
+  fullName: Quantum.BlockstunComparisonDecorator
 - uid: Quantum.GetTotalHitstunFunction
   commentId: T:Quantum.GetTotalHitstunFunction
   href: Quantum.GetTotalHitstunFunction.html
@@ -4722,6 +5384,12 @@ references:
   name: CallbackLocalPlayerRemoveFailed
   nameWithType: CallbackLocalPlayerRemoveFailed
   fullName: Quantum.CallbackLocalPlayerRemoveFailed
+- uid: Quantum.CallbackTaskProfilerReportGenerated
+  commentId: T:Quantum.CallbackTaskProfilerReportGenerated
+  href: Quantum.CallbackTaskProfilerReportGenerated.html
+  name: CallbackTaskProfilerReportGenerated
+  nameWithType: CallbackTaskProfilerReportGenerated
+  fullName: Quantum.CallbackTaskProfilerReportGenerated
 - uid: Quantum.QuantumGameFlags
   commentId: T:Quantum.QuantumGameFlags
   href: Quantum.QuantumGameFlags.html
@@ -4869,6 +5537,12 @@ references:
   name: DotNetRunnerFactory
   nameWithType: DotNetRunnerFactory
   fullName: Quantum.DotNetRunnerFactory
+- uid: Quantum.DotNetSessionContext
+  commentId: T:Quantum.DotNetSessionContext
+  href: Quantum.DotNetSessionContext.html
+  name: DotNetSessionContext
+  nameWithType: DotNetSessionContext
+  fullName: Quantum.DotNetSessionContext
 - uid: Quantum.DotNetSessionRunner
   commentId: T:Quantum.DotNetSessionRunner
   href: Quantum.DotNetSessionRunner.html
@@ -5042,6 +5716,12 @@ references:
   - uid: Quantum.DisableHardTargetingEntityAction.ModifyType
     name: ModifyType
     href: Quantum.DisableHardTargetingEntityAction.ModifyType.html
+- uid: Quantum.AIBotComboMoveEntryInputContainer
+  commentId: T:Quantum.AIBotComboMoveEntryInputContainer
+  href: Quantum.AIBotComboMoveEntryInputContainer.html
+  name: AIBotComboMoveEntryInputContainer
+  nameWithType: AIBotComboMoveEntryInputContainer
+  fullName: Quantum.AIBotComboMoveEntryInputContainer
 - uid: Quantum.ModifyBlackboardBoolAction
   commentId: T:Quantum.ModifyBlackboardBoolAction
   href: Quantum.ModifyBlackboardBoolAction.html
@@ -5298,6 +5978,41 @@ references:
   name: ChargeLevelDecision
   nameWithType: ChargeLevelDecision
   fullName: Quantum.ChargeLevelDecision
+- uid: Quantum.PhysicsBodyMoveTowardsPositionAction
+  commentId: T:Quantum.PhysicsBodyMoveTowardsPositionAction
+  href: Quantum.PhysicsBodyMoveTowardsPositionAction.html
+  name: PhysicsBodyMoveTowardsPositionAction
+  nameWithType: PhysicsBodyMoveTowardsPositionAction
+  fullName: Quantum.PhysicsBodyMoveTowardsPositionAction
+- uid: Quantum.PhysicsBodyMoveTowardsPositionAction.InputSourceType
+  commentId: T:Quantum.PhysicsBodyMoveTowardsPositionAction.InputSourceType
+  parent: Quantum
+  href: Quantum.PhysicsBodyMoveTowardsPositionAction.html
+  name: PhysicsBodyMoveTowardsPositionAction.InputSourceType
+  nameWithType: PhysicsBodyMoveTowardsPositionAction.InputSourceType
+  fullName: Quantum.PhysicsBodyMoveTowardsPositionAction.InputSourceType
+  spec.csharp:
+  - uid: Quantum.PhysicsBodyMoveTowardsPositionAction
+    name: PhysicsBodyMoveTowardsPositionAction
+    href: Quantum.PhysicsBodyMoveTowardsPositionAction.html
+  - name: .
+  - uid: Quantum.PhysicsBodyMoveTowardsPositionAction.InputSourceType
+    name: InputSourceType
+    href: Quantum.PhysicsBodyMoveTowardsPositionAction.InputSourceType.html
+  spec.vb:
+  - uid: Quantum.PhysicsBodyMoveTowardsPositionAction
+    name: PhysicsBodyMoveTowardsPositionAction
+    href: Quantum.PhysicsBodyMoveTowardsPositionAction.html
+  - name: .
+  - uid: Quantum.PhysicsBodyMoveTowardsPositionAction.InputSourceType
+    name: InputSourceType
+    href: Quantum.PhysicsBodyMoveTowardsPositionAction.InputSourceType.html
+- uid: Quantum.AIBotComboMoveContainer
+  commentId: T:Quantum.AIBotComboMoveContainer
+  href: Quantum.AIBotComboMoveContainer.html
+  name: AIBotComboMoveContainer
+  nameWithType: AIBotComboMoveContainer
+  fullName: Quantum.AIBotComboMoveContainer
 - uid: Quantum.FPConstant
   commentId: T:Quantum.FPConstant
   href: Quantum.FPConstant.html
@@ -5345,12 +6060,37 @@ references:
   name: EffectsHelper
   nameWithType: EffectsHelper
   fullName: Quantum.EffectsHelper
+- uid: Quantum.ExecuteComboLeaf
+  commentId: T:Quantum.ExecuteComboLeaf
+  href: Quantum.ExecuteComboLeaf.html
+  name: ExecuteComboLeaf
+  nameWithType: ExecuteComboLeaf
+  fullName: Quantum.ExecuteComboLeaf
+- uid: Quantum.CreateOrUpdateWarningbox
+  commentId: T:Quantum.CreateOrUpdateWarningbox
+  href: Quantum.CreateOrUpdateWarningbox.html
+  name: CreateOrUpdateWarningbox
+  nameWithType: CreateOrUpdateWarningbox
+  fullName: Quantum.CreateOrUpdateWarningbox
+- uid: Quantum.CombatantTouchedEntitiesCountDecision
+  commentId: T:Quantum.CombatantTouchedEntitiesCountDecision
+  href: Quantum.CombatantTouchedEntitiesCountDecision.html
+  name: CombatantTouchedEntitiesCountDecision
+  nameWithType: CombatantTouchedEntitiesCountDecision
+  fullName: Quantum.CombatantTouchedEntitiesCountDecision
 - uid: Quantum.ClearComboAction
   commentId: T:Quantum.ClearComboAction
   href: Quantum.ClearComboAction.html
   name: ClearComboAction
   nameWithType: ClearComboAction
   fullName: Quantum.ClearComboAction
+- uid: Quantum.AIBotCombos
+  commentId: T:Quantum.AIBotCombos
+  parent: Quantum
+  href: Quantum.AIBotCombos.html
+  name: AIBotCombos
+  nameWithType: AIBotCombos
+  fullName: Quantum.AIBotCombos
 - uid: Quantum.PlaySoundAction
   commentId: T:Quantum.PlaySoundAction
   href: Quantum.PlaySoundAction.html
@@ -5428,12 +6168,25 @@ references:
   name: FindWallAroundAction
   nameWithType: FindWallAroundAction
   fullName: Quantum.FindWallAroundAction
+- uid: Quantum.PhysicsBodyClampMagnitudeAction
+  commentId: T:Quantum.PhysicsBodyClampMagnitudeAction
+  href: Quantum.PhysicsBodyClampMagnitudeAction.html
+  name: PhysicsBodyClampMagnitudeAction
+  nameWithType: PhysicsBodyClampMagnitudeAction
+  fullName: Quantum.PhysicsBodyClampMagnitudeAction
 - uid: Quantum.MoveIsLastInAttackStringDecision
   commentId: T:Quantum.MoveIsLastInAttackStringDecision
   href: Quantum.MoveIsLastInAttackStringDecision.html
   name: MoveIsLastInAttackStringDecision
   nameWithType: MoveIsLastInAttackStringDecision
   fullName: Quantum.MoveIsLastInAttackStringDecision
+- uid: Quantum.StateFunctionNullableFp
+  commentId: T:Quantum.StateFunctionNullableFp
+  parent: Quantum
+  href: Quantum.StateFunctionNullableFp.html
+  name: StateFunctionNullableFp
+  nameWithType: StateFunctionNullableFp
+  fullName: Quantum.StateFunctionNullableFp
 - uid: Quantum.AnimationEntry
   commentId: T:Quantum.AnimationEntry
   href: Quantum.AnimationEntry.html
@@ -5526,6 +6279,12 @@ references:
   name: ApplySlopeMovementAction
   nameWithType: ApplySlopeMovementAction
   fullName: Quantum.ApplySlopeMovementAction
+- uid: Quantum.PhysicsBodyClampGravity
+  commentId: T:Quantum.PhysicsBodyClampGravity
+  href: Quantum.PhysicsBodyClampGravity.html
+  name: PhysicsBodyClampGravity
+  nameWithType: PhysicsBodyClampGravity
+  fullName: Quantum.PhysicsBodyClampGravity
 - uid: Quantum.CombatHitResolverSystem
   commentId: T:Quantum.CombatHitResolverSystem
   href: Quantum.CombatHitResolverSystem.html
@@ -5717,12 +6476,6 @@ references:
   name: AudioSourceConfig
   nameWithType: AudioSourceConfig
   fullName: Quantum.AudioSourceConfig
-- uid: Quantum.CombatantHitCountDecision
-  commentId: T:Quantum.CombatantHitCountDecision
-  href: Quantum.CombatantHitCountDecision.html
-  name: CombatantHitCountDecision
-  nameWithType: CombatantHitCountDecision
-  fullName: Quantum.CombatantHitCountDecision
 - uid: Quantum.CharaDefinitionAsset
   commentId: T:Quantum.CharaDefinitionAsset
   parent: Quantum
@@ -5826,18 +6579,18 @@ references:
   - uid: Quantum.ApplyTractionAction.ModifierType
     name: ModifierType
     href: Quantum.ApplyTractionAction.ModifierType.html
+- uid: Quantum.NextStateByTagDecision
+  commentId: T:Quantum.NextStateByTagDecision
+  href: Quantum.NextStateByTagDecision.html
+  name: NextStateByTagDecision
+  nameWithType: NextStateByTagDecision
+  fullName: Quantum.NextStateByTagDecision
 - uid: Quantum.ClampIntFunction
   commentId: T:Quantum.ClampIntFunction
   href: Quantum.ClampIntFunction.html
   name: ClampIntFunction
   nameWithType: ClampIntFunction
   fullName: Quantum.ClampIntFunction
-- uid: Quantum.InHitstunDecorator
-  commentId: T:Quantum.InHitstunDecorator
-  href: Quantum.InHitstunDecorator.html
-  name: InHitstunDecorator
-  nameWithType: InHitstunDecorator
-  fullName: Quantum.InHitstunDecorator
 - uid: Quantum.ButtonDataCheckType
   commentId: T:Quantum.ButtonDataCheckType
   parent: Quantum
@@ -6018,6 +6771,13 @@ references:
   name: HNSFParamFPVector3
   nameWithType: HNSFParamFPVector3
   fullName: Quantum.HNSFParamFPVector3
+- uid: Quantum.AIBotComboMoveEntry
+  commentId: T:Quantum.AIBotComboMoveEntry
+  parent: Quantum
+  href: Quantum.AIBotComboMoveEntry.html
+  name: AIBotComboMoveEntry
+  nameWithType: AIBotComboMoveEntry
+  fullName: Quantum.AIBotComboMoveEntry
 - uid: Quantum.HFSMCharaNextStateByTagDecision
   commentId: T:Quantum.HFSMCharaNextStateByTagDecision
   href: Quantum.HFSMCharaNextStateByTagDecision.html
@@ -6031,12 +6791,6 @@ references:
   name: IBeforeMove
   nameWithType: IBeforeMove
   fullName: Quantum.IBeforeMove
-- uid: Quantum.HNSFExternalActions
-  commentId: T:Quantum.HNSFExternalActions
-  href: Quantum.HNSFExternalActions.html
-  name: HNSFExternalActions
-  nameWithType: HNSFExternalActions
-  fullName: Quantum.HNSFExternalActions
 - uid: Quantum.AnimationGroupDefinitions
   commentId: T:Quantum.AnimationGroupDefinitions
   parent: Quantum
@@ -6072,6 +6826,35 @@ references:
   name: ThrowInfo
   nameWithType: ThrowInfo
   fullName: Quantum.ThrowInfo
+- uid: Quantum.NullableFPValueDecision
+  commentId: T:Quantum.NullableFPValueDecision
+  href: Quantum.NullableFPValueDecision.html
+  name: NullableFPValueDecision
+  nameWithType: NullableFPValueDecision
+  fullName: Quantum.NullableFPValueDecision
+- uid: Quantum.NullableFPValueDecision.CheckType
+  commentId: T:Quantum.NullableFPValueDecision.CheckType
+  parent: Quantum
+  href: Quantum.NullableFPValueDecision.html
+  name: NullableFPValueDecision.CheckType
+  nameWithType: NullableFPValueDecision.CheckType
+  fullName: Quantum.NullableFPValueDecision.CheckType
+  spec.csharp:
+  - uid: Quantum.NullableFPValueDecision
+    name: NullableFPValueDecision
+    href: Quantum.NullableFPValueDecision.html
+  - name: .
+  - uid: Quantum.NullableFPValueDecision.CheckType
+    name: CheckType
+    href: Quantum.NullableFPValueDecision.CheckType.html
+  spec.vb:
+  - uid: Quantum.NullableFPValueDecision
+    name: NullableFPValueDecision
+    href: Quantum.NullableFPValueDecision.html
+  - name: .
+  - uid: Quantum.NullableFPValueDecision.CheckType
+    name: CheckType
+    href: Quantum.NullableFPValueDecision.CheckType.html
 - uid: Quantum.SetMovementAction
   commentId: T:Quantum.SetMovementAction
   href: Quantum.SetMovementAction.html
@@ -6264,12 +7047,35 @@ references:
   - uid: Quantum.ModifyStateFrameAction.ModifyType
     name: ModifyType
     href: Quantum.ModifyStateFrameAction.ModifyType.html
-- uid: Quantum.ModifySpecialPageAction
-  commentId: T:Quantum.ModifySpecialPageAction
-  href: Quantum.ModifySpecialPageAction.html
-  name: ModifySpecialPageAction
-  nameWithType: ModifySpecialPageAction
-  fullName: Quantum.ModifySpecialPageAction
+- uid: Quantum.PhysicsBodyModifyGravityAction
+  commentId: T:Quantum.PhysicsBodyModifyGravityAction
+  href: Quantum.PhysicsBodyModifyGravityAction.html
+  name: PhysicsBodyModifyGravityAction
+  nameWithType: PhysicsBodyModifyGravityAction
+  fullName: Quantum.PhysicsBodyModifyGravityAction
+- uid: Quantum.PhysicsBodyModifyGravityAction.ModifyType
+  commentId: T:Quantum.PhysicsBodyModifyGravityAction.ModifyType
+  parent: Quantum
+  href: Quantum.PhysicsBodyModifyGravityAction.html
+  name: PhysicsBodyModifyGravityAction.ModifyType
+  nameWithType: PhysicsBodyModifyGravityAction.ModifyType
+  fullName: Quantum.PhysicsBodyModifyGravityAction.ModifyType
+  spec.csharp:
+  - uid: Quantum.PhysicsBodyModifyGravityAction
+    name: PhysicsBodyModifyGravityAction
+    href: Quantum.PhysicsBodyModifyGravityAction.html
+  - name: .
+  - uid: Quantum.PhysicsBodyModifyGravityAction.ModifyType
+    name: ModifyType
+    href: Quantum.PhysicsBodyModifyGravityAction.ModifyType.html
+  spec.vb:
+  - uid: Quantum.PhysicsBodyModifyGravityAction
+    name: PhysicsBodyModifyGravityAction
+    href: Quantum.PhysicsBodyModifyGravityAction.html
+  - name: .
+  - uid: Quantum.PhysicsBodyModifyGravityAction.ModifyType
+    name: ModifyType
+    href: Quantum.PhysicsBodyModifyGravityAction.ModifyType.html
 - uid: Quantum.HNSFParamByte
   commentId: T:Quantum.HNSFParamByte
   parent: Quantum
@@ -6349,6 +7155,12 @@ references:
   name: IAfterMoveStep
   nameWithType: IAfterMoveStep
   fullName: Quantum.IAfterMoveStep
+- uid: Quantum.TransformHelpers
+  commentId: T:Quantum.TransformHelpers
+  href: Quantum.TransformHelpers.html
+  name: TransformHelpers
+  nameWithType: TransformHelpers
+  fullName: Quantum.TransformHelpers
 - uid: Quantum.EnvQueryItem
   commentId: T:Quantum.EnvQueryItem
   href: Quantum.EnvQueryItem.html

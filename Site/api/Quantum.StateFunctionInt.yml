@@ -28,11 +28,11 @@ items:
     content: >-
       [Serializable]
 
-      public class StateFunctionInt : HNSFStateFunction<int>
+      public class StateFunctionInt : HNSFStateFunction<int>, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class StateFunctionInt Inherits HNSFStateFunction(Of Integer)
+      Public Class StateFunctionInt Inherits HNSFStateFunction(Of Integer) Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -50,6 +50,8 @@ items:
   - Quantum.HitReactionGuardFunction
   - Quantum.IntOperationFunction
   - Quantum.StandardHitReactionFunction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{System.Int32}.Label
   - Quantum.HNSFStateFunction{System.Int32}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -186,6 +188,13 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{System.Int32}.Label
   commentId: F:Quantum.HNSFStateFunction{System.Int32}.Label
   parent: Quantum.HNSFStateFunction{System.Int32}

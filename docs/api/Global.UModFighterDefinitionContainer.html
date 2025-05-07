@@ -102,7 +102,7 @@ Class UModFighterDefinitionContainer  <a class="header-action link-secondary" ti
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[CreateAssetMenu(menuName = &quot;rwby/UMod/Content/Fighter Definitions Container&quot;, fileName = &quot;fighterdefinitioncontainer&quot;)]
-public class UModFighterDefinitionContainer : BaseFighterDefinitionContainer</code></pre>
+public class UModFighterDefinitionContainer : BaseFighterDefinitionContainer, IOnUModPrebuild</code></pre>
   </div>
 
 
@@ -120,6 +120,12 @@ public class UModFighterDefinitionContainer : BaseFighterDefinitionContainer</co
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="rwby.IOnUModPrebuild.html">IOnUModPrebuild</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -151,6 +157,9 @@ public class UModFighterDefinitionContainer : BaseFighterDefinitionContainer</co
     </div>
     <div>
       <a class="xref" href="Global.IContentDefinition.html#Global_IContentDefinition_UnloadAssets">IContentDefinition.UnloadAssets()</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.IContentDefinition.html#Global_IContentDefinition_GetAssetSoftReference">IContentDefinition.GetAssetSoftReference()</a>
     </div>
   </dd></dl>
 
@@ -194,6 +203,38 @@ public ExternalModAssetSoftReference[] fighterReferences</code></pre>
 
 
 
+
+  <h3 id="Global_UModFighterDefinitionContainer_fighterRefs" data-uid="Global.UModFighterDefinitionContainer.fighterRefs">
+  fighterRefs
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[HideInInspector]
+public ModAssetSoftReference[] fighterRefs</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ModAssetSoftReference.html">ModAssetSoftReference</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -202,7 +243,7 @@ public ExternalModAssetSoftReference[] fighterReferences</code></pre>
 
   <h3 id="Global_UModFighterDefinitionContainer_GetFighters" data-uid="Global.UModFighterDefinitionContainer.GetFighters">
   GetFighters()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -233,7 +274,7 @@ public ExternalModAssetSoftReference[] fighterReferences</code></pre>
 
   <h3 id="Global_UModFighterDefinitionContainer_Load_System_String_" data-uid="Global.UModFighterDefinitionContainer.Load(System.String)">
   Load(string)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -269,7 +310,7 @@ public ExternalModAssetSoftReference[] fighterReferences</code></pre>
 
   <h3 id="Global_UModFighterDefinitionContainer_LoadFighterDefinitions" data-uid="Global.UModFighterDefinitionContainer.LoadFighterDefinitions">
   LoadFighterDefinitions()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -296,11 +337,37 @@ public ExternalModAssetSoftReference[] fighterReferences</code></pre>
 
 
 
+  <a id="Global_UModFighterDefinitionContainer_OnUModPrebuild_" data-uid="Global.UModFighterDefinitionContainer.OnUModPrebuild*"></a>
+
+  <h3 id="Global_UModFighterDefinitionContainer_OnUModPrebuild" data-uid="Global.UModFighterDefinitionContainer.OnUModPrebuild">
+  OnUModPrebuild()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnUModPrebuild()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Global_UModFighterDefinitionContainer_Unload_" data-uid="Global.UModFighterDefinitionContainer.Unload*"></a>
 
   <h3 id="Global_UModFighterDefinitionContainer_Unload" data-uid="Global.UModFighterDefinitionContainer.Unload">
   Unload()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -326,7 +393,7 @@ public ExternalModAssetSoftReference[] fighterReferences</code></pre>
 
   <h3 id="Global_UModFighterDefinitionContainer_UnloadFighterDefinitions" data-uid="Global.UModFighterDefinitionContainer.UnloadFighterDefinitions">
   UnloadFighterDefinitions()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs&amp;version=GBdev&amp;line=84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

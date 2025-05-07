@@ -30,11 +30,11 @@ items:
     content: >-
       [Serializable]
 
-      public class HFSMModifyInputAction : ExecuteIfConditionAction
+      public class HFSMModifyInputAction : ExecuteIfConditionAction, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class HFSMModifyInputAction Inherits ExecuteIfConditionAction
+      Public Class HFSMModifyInputAction Inherits ExecuteIfConditionAction Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -43,6 +43,8 @@ items:
   - Quantum.AIActionBase
   - Quantum.AIAction
   - Quantum.ExecuteIfConditionAction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.ExecuteIfConditionAction.checkCondition
   - Quantum.ExecuteIfConditionAction.condition
@@ -219,6 +221,13 @@ references:
   name: ExecuteIfConditionAction
   nameWithType: ExecuteIfConditionAction
   fullName: Quantum.ExecuteIfConditionAction
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.ExecuteIfConditionAction.checkCondition
   commentId: F:Quantum.ExecuteIfConditionAction.checkCondition
   parent: Quantum.ExecuteIfConditionAction

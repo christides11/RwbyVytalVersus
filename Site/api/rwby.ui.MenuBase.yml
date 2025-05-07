@@ -5,9 +5,10 @@ items:
   id: MenuBase
   parent: rwby.ui
   children:
+  - rwby.ui.MenuBase.MenuHandler
   - rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   - rwby.ui.MenuBase.TryClose(rwby.ui.MenuDirection,System.Boolean)
-  - rwby.ui.MenuBase.currentHandler
+  - rwby.ui.MenuBase.history
   langs:
   - csharp
   - vb
@@ -22,7 +23,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: MenuBase
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - rwby
   namespace: rwby.ui
@@ -38,16 +39,23 @@ items:
   derivedClasses:
   - Global.ControlsMainScreen
   - Global.ControlsProfileMappingScreen
-  - Global.MenuAndHandlerBase
+  - Global.MenuHandlerAndMenuBase
   - Global.OptionsGameplayScreen
   - Global.OptionsMainScreen
   - Global.OptionsModdingScreen
-  - Global.OptionsScreen
   - rwby.CreateLobbyScreen
   - rwby.FindLobbyScreen
+  - rwby.MainMenuLocalScreen
+  - rwby.QuickMatchScreenCharacterSelect
+  - rwby.QuickMatchScreenMain
   - rwby.TestUIMenu
   - rwby.TitleMainScreen
   - rwby.TitleScreen
+  - rwby.VytalMatchSceneFestivalSelectScreen
+  - rwby.VytalMatchSceneGamemodeSettingsScreen
+  - rwby.VytalMatchSceneMainScreen
+  - rwby.VytalMatchSceneMapSelectScreen
+  - rwby.VytalMatchSceneReadyScreen
   - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen
   - rwby.core.gamemodes.training.ui.DummySettingsMainScreen
   - rwby.sessionhandlers.lobby.BGMSelectScreen
@@ -56,37 +64,81 @@ items:
   - rwby.sessionhandlers.lobby.MatchCreationScreenMainScreen
   - rwby.sessionhandlers.lobby.MatchCreationScreenMapSelectionScreen
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  - rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyMenuRoomsScreen
   - rwby.ui.CommandListMenu
   - rwby.ui.MainMenu.OptionsVideoScreen
+  - rwby.ui.MainMenu.TitleOnlineScreen
   implements:
   - rwby.ui.IMenu
-- uid: rwby.ui.MenuBase.currentHandler
-  commentId: F:rwby.ui.MenuBase.currentHandler
-  id: currentHandler
+- uid: rwby.ui.MenuBase.MenuHandler
+  commentId: P:rwby.ui.MenuBase.MenuHandler
+  id: MenuHandler
   parent: rwby.ui.MenuBase
   langs:
   - csharp
   - vb
-  name: currentHandler
-  nameWithType: MenuBase.currentHandler
-  fullName: rwby.ui.MenuBase.currentHandler
+  name: MenuHandler
+  nameWithType: MenuBase.MenuHandler
+  fullName: rwby.ui.MenuBase.MenuHandler
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: MenuHandler
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs
+    startLine: 7
+  assemblies:
+  - rwby
+  namespace: rwby.ui
+  example: []
+  syntax:
+    content: public IMenuHandler MenuHandler { get; set; }
+    parameters: []
+    return:
+      type: rwby.ui.IMenuHandler
+    content.vb: Public Property MenuHandler As IMenuHandler
+  overload: rwby.ui.MenuBase.MenuHandler*
+  implements:
+  - rwby.ui.IMenu.MenuHandler
+- uid: rwby.ui.MenuBase.history
+  commentId: F:rwby.ui.MenuBase.history
+  id: history
+  parent: rwby.ui.MenuBase
+  langs:
+  - csharp
+  - vb
+  name: history
+  nameWithType: MenuBase.history
+  fullName: rwby.ui.MenuBase.history
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: currentHandler
+    id: history
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - rwby
   namespace: rwby.ui
   syntax:
-    content: public IMenuHandler currentHandler
+    content: >-
+      [SerializeField]
+
+      protected List<IMenu> history
     return:
-      type: rwby.ui.IMenuHandler
-    content.vb: Public currentHandler As IMenuHandler
+      type: System.Collections.Generic.List{rwby.ui.IMenu}
+    content.vb: >-
+      <SerializeField>
+
+      Protected history As List(Of IMenu)
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
 - uid: rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   commentId: M:rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   id: Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
@@ -105,7 +157,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Open
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - rwby
   namespace: rwby.ui
@@ -139,7 +191,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryClose
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - rwby
   namespace: rwby.ui
@@ -242,6 +294,19 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: rwby.ui.MenuBase.MenuHandler*
+  commentId: Overload:rwby.ui.MenuBase.MenuHandler
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_MenuHandler
+  name: MenuHandler
+  nameWithType: MenuBase.MenuHandler
+  fullName: rwby.ui.MenuBase.MenuHandler
+- uid: rwby.ui.IMenu.MenuHandler
+  commentId: P:rwby.ui.IMenu.MenuHandler
+  parent: rwby.ui.IMenu
+  href: rwby.ui.IMenu.html#rwby_ui_IMenu_MenuHandler
+  name: MenuHandler
+  nameWithType: IMenu.MenuHandler
+  fullName: rwby.ui.IMenu.MenuHandler
 - uid: rwby.ui.IMenuHandler
   commentId: T:rwby.ui.IMenuHandler
   parent: rwby.ui
@@ -249,6 +314,104 @@ references:
   name: IMenuHandler
   nameWithType: IMenuHandler
   fullName: rwby.ui.IMenuHandler
+- uid: System.Collections.Generic.List{rwby.ui.IMenu}
+  commentId: T:System.Collections.Generic.List{rwby.ui.IMenu}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<IMenu>
+  nameWithType: List<IMenu>
+  fullName: System.Collections.Generic.List<rwby.ui.IMenu>
+  nameWithType.vb: List(Of IMenu)
+  fullName.vb: System.Collections.Generic.List(Of rwby.ui.IMenu)
+  name.vb: List(Of IMenu)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: rwby.ui.MenuBase.Open*
   commentId: Overload:rwby.ui.MenuBase.Open
   href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_Open_rwby_ui_MenuDirection_rwby_ui_IMenuHandler_

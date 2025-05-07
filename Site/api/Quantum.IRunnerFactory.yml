@@ -7,7 +7,6 @@ items:
   children:
   - Quantum.IRunnerFactory.CreateGame(Quantum.QuantumGameStartParameters)
   - Quantum.IRunnerFactory.CreatePlaformInfo
-  - Quantum.IRunnerFactory.CreateProfiler(System.String,Photon.Deterministic.DeterministicSessionConfig,Photon.Deterministic.DeterministicPlatformInfo,Photon.Deterministic.IDeterministicGame)
   - Quantum.IRunnerFactory.CreateRunner(Quantum.SessionRunner.Arguments)
   - Quantum.IRunnerFactory.CreateTaskFactory
   - Quantum.IRunnerFactory.UpdateDB
@@ -25,7 +24,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: IRunnerFactory
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 7148
+    startLine: 7337
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -52,7 +51,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreatePlaformInfo
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 7153
+    startLine: 7342
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -86,7 +85,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateTaskFactory
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 7157
+    startLine: 7346
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -99,50 +98,6 @@ items:
       type: System.Threading.Tasks.TaskFactory
     content.vb: ReadOnly Property CreateTaskFactory As TaskFactory
   overload: Quantum.IRunnerFactory.CreateTaskFactory*
-- uid: Quantum.IRunnerFactory.CreateProfiler(System.String,Photon.Deterministic.DeterministicSessionConfig,Photon.Deterministic.DeterministicPlatformInfo,Photon.Deterministic.IDeterministicGame)
-  commentId: M:Quantum.IRunnerFactory.CreateProfiler(System.String,Photon.Deterministic.DeterministicSessionConfig,Photon.Deterministic.DeterministicPlatformInfo,Photon.Deterministic.IDeterministicGame)
-  id: CreateProfiler(System.String,Photon.Deterministic.DeterministicSessionConfig,Photon.Deterministic.DeterministicPlatformInfo,Photon.Deterministic.IDeterministicGame)
-  parent: Quantum.IRunnerFactory
-  langs:
-  - csharp
-  - vb
-  name: CreateProfiler(string, DeterministicSessionConfig, DeterministicPlatformInfo, IDeterministicGame)
-  nameWithType: IRunnerFactory.CreateProfiler(string, DeterministicSessionConfig, DeterministicPlatformInfo, IDeterministicGame)
-  fullName: Quantum.IRunnerFactory.CreateProfiler(string, Photon.Deterministic.DeterministicSessionConfig, Photon.Deterministic.DeterministicPlatformInfo, Photon.Deterministic.IDeterministicGame)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: CreateProfiler
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 7165
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  summary: The callback can be used to create and attach local profiler before the Quantum simulation has been started.
-  example: []
-  syntax:
-    content: void CreateProfiler(string clientId, DeterministicSessionConfig deterministicConfig, DeterministicPlatformInfo platformInfo, IDeterministicGame game)
-    parameters:
-    - id: clientId
-      type: System.String
-      description: Quantum client id
-    - id: deterministicConfig
-      type: Photon.Deterministic.DeterministicSessionConfig
-      description: Session config
-    - id: platformInfo
-      type: Photon.Deterministic.DeterministicPlatformInfo
-      description: Platform info
-    - id: game
-      type: Photon.Deterministic.IDeterministicGame
-      description: Game
-    content.vb: Sub CreateProfiler(clientId As String, deterministicConfig As DeterministicSessionConfig, platformInfo As DeterministicPlatformInfo, game As IDeterministicGame)
-  overload: Quantum.IRunnerFactory.CreateProfiler*
-  nameWithType.vb: IRunnerFactory.CreateProfiler(String, DeterministicSessionConfig, DeterministicPlatformInfo, IDeterministicGame)
-  fullName.vb: Quantum.IRunnerFactory.CreateProfiler(String, Photon.Deterministic.DeterministicSessionConfig, Photon.Deterministic.DeterministicPlatformInfo, Photon.Deterministic.IDeterministicGame)
-  name.vb: CreateProfiler(String, DeterministicSessionConfig, DeterministicPlatformInfo, IDeterministicGame)
 - uid: Quantum.IRunnerFactory.CreateGame(Quantum.QuantumGameStartParameters)
   commentId: M:Quantum.IRunnerFactory.CreateGame(Quantum.QuantumGameStartParameters)
   id: CreateGame(Quantum.QuantumGameStartParameters)
@@ -161,7 +116,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateGame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 7171
+    startLine: 7352
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -196,7 +151,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UpdateDB
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 7175
+    startLine: 7356
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -227,7 +182,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateRunner
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 7182
+    startLine: 7363
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -340,30 +295,6 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-- uid: Quantum.IRunnerFactory.CreateProfiler*
-  commentId: Overload:Quantum.IRunnerFactory.CreateProfiler
-  href: Quantum.IRunnerFactory.html#Quantum_IRunnerFactory_CreateProfiler_System_String_Photon_Deterministic_DeterministicSessionConfig_Photon_Deterministic_DeterministicPlatformInfo_Photon_Deterministic_IDeterministicGame_
-  name: CreateProfiler
-  nameWithType: IRunnerFactory.CreateProfiler
-  fullName: Quantum.IRunnerFactory.CreateProfiler
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: Photon.Deterministic.DeterministicSessionConfig
-  commentId: T:Photon.Deterministic.DeterministicSessionConfig
-  parent: Photon.Deterministic
-  isExternal: true
-  name: DeterministicSessionConfig
-  nameWithType: DeterministicSessionConfig
-  fullName: Photon.Deterministic.DeterministicSessionConfig
 - uid: Photon.Deterministic.IDeterministicGame
   commentId: T:Photon.Deterministic.IDeterministicGame
   parent: Photon.Deterministic
@@ -371,13 +302,6 @@ references:
   name: IDeterministicGame
   nameWithType: IDeterministicGame
   fullName: Photon.Deterministic.IDeterministicGame
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
 - uid: Quantum.IRunnerFactory.CreateGame*
   commentId: Overload:Quantum.IRunnerFactory.CreateGame
   href: Quantum.IRunnerFactory.html#Quantum_IRunnerFactory_CreateGame_Quantum_QuantumGameStartParameters_
@@ -405,6 +329,13 @@ references:
   name: Action
   nameWithType: Action
   fullName: System.Action
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Quantum.IRunnerFactory.CreateRunner*
   commentId: Overload:Quantum.IRunnerFactory.CreateRunner
   href: Quantum.IRunnerFactory.html#Quantum_IRunnerFactory_CreateRunner_Quantum_SessionRunner_Arguments_

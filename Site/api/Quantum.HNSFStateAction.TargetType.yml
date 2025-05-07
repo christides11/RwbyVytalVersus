@@ -5,8 +5,12 @@ items:
   id: HNSFStateAction.TargetType
   parent: Quantum
   children:
+  - Quantum.HNSFStateAction.TargetType.ArticleOwner
+  - Quantum.HNSFStateAction.TargetType.ArticleOwnerRoot
+  - Quantum.HNSFStateAction.TargetType.LastCreatedArticle
   - Quantum.HNSFStateAction.TargetType.LockOnTarget
   - Quantum.HNSFStateAction.TargetType.Self
+  - Quantum.HNSFStateAction.TargetType.SoftTarget
   - Quantum.HNSFStateAction.TargetType.Throwee
   langs:
   - csharp
@@ -27,8 +31,18 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public enum HNSFStateAction.TargetType
-    content.vb: Public Enum HNSFStateAction.TargetType
+    content: >-
+      [Serializable]
+
+      public enum HNSFStateAction.TargetType
+    content.vb: >-
+      <Serializable>
+
+      Public Enum HNSFStateAction.TargetType
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
 - uid: Quantum.HNSFStateAction.TargetType.Self
   commentId: F:Quantum.HNSFStateAction.TargetType.Self
   id: Self
@@ -47,7 +61,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Self
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -73,7 +87,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Throwee
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -99,12 +113,116 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LockOnTarget
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
     content: LockOnTarget = 2
+    return:
+      type: Quantum.HNSFStateAction.TargetType
+- uid: Quantum.HNSFStateAction.TargetType.ArticleOwner
+  commentId: F:Quantum.HNSFStateAction.TargetType.ArticleOwner
+  id: ArticleOwner
+  parent: Quantum.HNSFStateAction.TargetType
+  langs:
+  - csharp
+  - vb
+  name: ArticleOwner
+  nameWithType: HNSFStateAction.TargetType.ArticleOwner
+  fullName: Quantum.HNSFStateAction.TargetType.ArticleOwner
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ArticleOwner
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
+    startLine: 15
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: ArticleOwner = 3
+    return:
+      type: Quantum.HNSFStateAction.TargetType
+- uid: Quantum.HNSFStateAction.TargetType.ArticleOwnerRoot
+  commentId: F:Quantum.HNSFStateAction.TargetType.ArticleOwnerRoot
+  id: ArticleOwnerRoot
+  parent: Quantum.HNSFStateAction.TargetType
+  langs:
+  - csharp
+  - vb
+  name: ArticleOwnerRoot
+  nameWithType: HNSFStateAction.TargetType.ArticleOwnerRoot
+  fullName: Quantum.HNSFStateAction.TargetType.ArticleOwnerRoot
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ArticleOwnerRoot
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
+    startLine: 16
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: ArticleOwnerRoot = 4
+    return:
+      type: Quantum.HNSFStateAction.TargetType
+- uid: Quantum.HNSFStateAction.TargetType.SoftTarget
+  commentId: F:Quantum.HNSFStateAction.TargetType.SoftTarget
+  id: SoftTarget
+  parent: Quantum.HNSFStateAction.TargetType
+  langs:
+  - csharp
+  - vb
+  name: SoftTarget
+  nameWithType: HNSFStateAction.TargetType.SoftTarget
+  fullName: Quantum.HNSFStateAction.TargetType.SoftTarget
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SoftTarget
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
+    startLine: 17
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: SoftTarget = 5
+    return:
+      type: Quantum.HNSFStateAction.TargetType
+- uid: Quantum.HNSFStateAction.TargetType.LastCreatedArticle
+  commentId: F:Quantum.HNSFStateAction.TargetType.LastCreatedArticle
+  id: LastCreatedArticle
+  parent: Quantum.HNSFStateAction.TargetType
+  langs:
+  - csharp
+  - vb
+  name: LastCreatedArticle
+  nameWithType: HNSFStateAction.TargetType.LastCreatedArticle
+  fullName: Quantum.HNSFStateAction.TargetType.LastCreatedArticle
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LastCreatedArticle
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs
+    startLine: 18
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: LastCreatedArticle = 6
     return:
       type: Quantum.HNSFStateAction.TargetType
 references:

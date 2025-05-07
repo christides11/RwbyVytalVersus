@@ -29,11 +29,11 @@ items:
     content: >-
       [Serializable]
 
-      public class GetHitInfoFpVector3Function : StateFunctionFPVector3
+      public class GetHitInfoFpVector3Function : StateFunctionFPVector3, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class GetHitInfoFpVector3Function Inherits StateFunctionFPVector3
+      Public Class GetHitInfoFpVector3Function Inherits StateFunctionFPVector3 Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -42,6 +42,8 @@ items:
   - Quantum.HNSFStateFunction
   - Quantum.HNSFStateFunction{Photon.Deterministic.FPVector3}
   - Quantum.StateFunctionFPVector3
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{Photon.Deterministic.FPVector3}.Label
   - Quantum.HNSFStateFunction{Photon.Deterministic.FPVector3}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -210,6 +212,13 @@ references:
   name: StateFunctionFPVector3
   nameWithType: StateFunctionFPVector3
   fullName: Quantum.StateFunctionFPVector3
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{Photon.Deterministic.FPVector3}.Label
   commentId: F:Quantum.HNSFStateFunction{Photon.Deterministic.FPVector3}.Label
   parent: Quantum.HNSFStateFunction{Photon.Deterministic.FPVector3}

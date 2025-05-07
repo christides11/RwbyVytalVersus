@@ -6,19 +6,23 @@ items:
   parent: Quantum
   children:
   - Quantum.TeamVersusGlobals.ALIGNMENT
+  - Quantum.TeamVersusGlobals.AddPlayerData(Quantum.Frame,System.Int32)
   - Quantum.TeamVersusGlobals.AddToTeamScore(Quantum.Frame,System.Int32,System.Int32)
   - Quantum.TeamVersusGlobals.ClearPointers(Quantum.Core.FrameBase,Quantum.EntityRef)
   - Quantum.TeamVersusGlobals.GetHashCode
   - Quantum.TeamVersusGlobals.HasAnyTeamReachedScore(Quantum.Frame,System.Int32)
   - Quantum.TeamVersusGlobals.OnRemoved(Quantum.Core.FrameBase,Quantum.EntityRef,System.Void*)
+  - Quantum.TeamVersusGlobals.RemovePlayerData(Quantum.Frame,System.Int32)
   - Quantum.TeamVersusGlobals.SIZE
   - Quantum.TeamVersusGlobals.Serialize(System.Void*,Quantum.FrameSerializer)
   - Quantum.TeamVersusGlobals.characterIntroType
   - Quantum.TeamVersusGlobals.gameTimeLimitEndFrame
   - Quantum.TeamVersusGlobals.gameTimeLimitStartFrame
-  - Quantum.TeamVersusGlobals.playerData
-  - Quantum.TeamVersusGlobals.playersRequestingRespawn
+  - Quantum.TeamVersusGlobals.participantData
+  - Quantum.TeamVersusGlobals.participantsRequestingRespawn
+  - Quantum.TeamVersusGlobals.playerReadyStatus
   - Quantum.TeamVersusGlobals.teamScores
+  - Quantum.TeamVersusGlobals.timer
   - Quantum.TeamVersusGlobals.winningTeam
   langs:
   - csharp
@@ -34,7 +38,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TeamVersusGlobals
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusGlobals.cs
-    startLine: 6
+    startLine: 2
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -62,15 +66,15 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SIZE
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2834
+    startLine: 3208
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public const int SIZE = 28
+    content: public const int SIZE = 40
     return:
       type: System.Int32
-    content.vb: Public Const SIZE As Integer = 28
+    content.vb: Public Const SIZE As Integer = 40
 - uid: Quantum.TeamVersusGlobals.ALIGNMENT
   commentId: F:Quantum.TeamVersusGlobals.ALIGNMENT
   id: ALIGNMENT
@@ -89,69 +93,96 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ALIGNMENT
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2835
+    startLine: 3209
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public const int ALIGNMENT = 4
+    content: public const int ALIGNMENT = 8
     return:
       type: System.Int32
-    content.vb: Public Const ALIGNMENT As Integer = 4
-- uid: Quantum.TeamVersusGlobals.playerData
-  commentId: F:Quantum.TeamVersusGlobals.playerData
-  id: playerData
+    content.vb: Public Const ALIGNMENT As Integer = 8
+- uid: Quantum.TeamVersusGlobals.playerReadyStatus
+  commentId: F:Quantum.TeamVersusGlobals.playerReadyStatus
+  id: playerReadyStatus
   parent: Quantum.TeamVersusGlobals
   langs:
   - csharp
   - vb
-  name: playerData
-  nameWithType: TeamVersusGlobals.playerData
-  fullName: Quantum.TeamVersusGlobals.playerData
+  name: playerReadyStatus
+  nameWithType: TeamVersusGlobals.playerReadyStatus
+  fullName: Quantum.TeamVersusGlobals.playerReadyStatus
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: playerData
+    id: playerReadyStatus
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2837
+    startLine: 3211
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public QDictionaryPtr<int, TeamVersusPlayerData> playerData
+    content: public QDictionaryPtr<int, QBoolean> playerReadyStatus
     return:
-      type: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TeamVersusPlayerData}
-    content.vb: Public playerData As QDictionaryPtr(Of Integer, TeamVersusPlayerData)
-- uid: Quantum.TeamVersusGlobals.playersRequestingRespawn
-  commentId: F:Quantum.TeamVersusGlobals.playersRequestingRespawn
-  id: playersRequestingRespawn
+      type: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.QBoolean}
+    content.vb: Public playerReadyStatus As QDictionaryPtr(Of Integer, QBoolean)
+- uid: Quantum.TeamVersusGlobals.participantData
+  commentId: F:Quantum.TeamVersusGlobals.participantData
+  id: participantData
   parent: Quantum.TeamVersusGlobals
   langs:
   - csharp
   - vb
-  name: playersRequestingRespawn
-  nameWithType: TeamVersusGlobals.playersRequestingRespawn
-  fullName: Quantum.TeamVersusGlobals.playersRequestingRespawn
+  name: participantData
+  nameWithType: TeamVersusGlobals.participantData
+  fullName: Quantum.TeamVersusGlobals.participantData
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: playersRequestingRespawn
+    id: participantData
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2839
+    startLine: 3213
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public QDictionaryPtr<PlayerRef, int> playersRequestingRespawn
+    content: public QDictionaryPtr<int, TeamVersusParticipantData> participantData
     return:
-      type: Quantum.Collections.QDictionaryPtr{Quantum.PlayerRef,System.Int32}
-    content.vb: Public playersRequestingRespawn As QDictionaryPtr(Of PlayerRef, Integer)
+      type: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TeamVersusParticipantData}
+    content.vb: Public participantData As QDictionaryPtr(Of Integer, TeamVersusParticipantData)
+- uid: Quantum.TeamVersusGlobals.participantsRequestingRespawn
+  commentId: F:Quantum.TeamVersusGlobals.participantsRequestingRespawn
+  id: participantsRequestingRespawn
+  parent: Quantum.TeamVersusGlobals
+  langs:
+  - csharp
+  - vb
+  name: participantsRequestingRespawn
+  nameWithType: TeamVersusGlobals.participantsRequestingRespawn
+  fullName: Quantum.TeamVersusGlobals.participantsRequestingRespawn
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: participantsRequestingRespawn
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 3215
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QDictionaryPtr<int, int> participantsRequestingRespawn
+    return:
+      type: Quantum.Collections.QDictionaryPtr{System.Int32,System.Int32}
+    content.vb: Public participantsRequestingRespawn As QDictionaryPtr(Of Integer, Integer)
 - uid: Quantum.TeamVersusGlobals.teamScores
   commentId: F:Quantum.TeamVersusGlobals.teamScores
   id: teamScores
@@ -170,7 +201,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: teamScores
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2841
+    startLine: 3217
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -197,7 +228,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: gameTimeLimitStartFrame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2843
+    startLine: 3219
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -224,7 +255,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: gameTimeLimitEndFrame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2845
+    startLine: 3221
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -251,7 +282,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: winningTeam
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2847
+    startLine: 3223
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -278,7 +309,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: characterIntroType
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2849
+    startLine: 3225
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -287,6 +318,33 @@ items:
     return:
       type: Quantum.CharacterIntroType
     content.vb: Public characterIntroType As CharacterIntroType
+- uid: Quantum.TeamVersusGlobals.timer
+  commentId: F:Quantum.TeamVersusGlobals.timer
+  id: timer
+  parent: Quantum.TeamVersusGlobals
+  langs:
+  - csharp
+  - vb
+  name: timer
+  nameWithType: TeamVersusGlobals.timer
+  fullName: Quantum.TeamVersusGlobals.timer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: timer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+    startLine: 3227
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public FrameTimer timer
+    return:
+      type: Quantum.FrameTimer
+    content.vb: Public timer As FrameTimer
 - uid: Quantum.TeamVersusGlobals.GetHashCode
   commentId: M:Quantum.TeamVersusGlobals.GetHashCode
   id: GetHashCode
@@ -305,7 +363,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHashCode
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2850
+    startLine: 3228
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -335,7 +393,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ClearPointers
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2863
+    startLine: 3243
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -366,7 +424,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnRemoved
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2868
+    startLine: 3249
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -402,7 +460,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Serialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2872
+    startLine: 3253
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -418,6 +476,74 @@ items:
   nameWithType.vb: TeamVersusGlobals.Serialize(Void*, FrameSerializer)
   fullName.vb: Quantum.TeamVersusGlobals.Serialize(Void*, Quantum.FrameSerializer)
   name.vb: Serialize(Void*, FrameSerializer)
+- uid: Quantum.TeamVersusGlobals.AddPlayerData(Quantum.Frame,System.Int32)
+  commentId: M:Quantum.TeamVersusGlobals.AddPlayerData(Quantum.Frame,System.Int32)
+  id: AddPlayerData(Quantum.Frame,System.Int32)
+  parent: Quantum.TeamVersusGlobals
+  langs:
+  - csharp
+  - vb
+  name: AddPlayerData(Frame, int)
+  nameWithType: TeamVersusGlobals.AddPlayerData(Frame, int)
+  fullName: Quantum.TeamVersusGlobals.AddPlayerData(Quantum.Frame, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusGlobals.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddPlayerData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusGlobals.cs
+    startLine: 4
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void AddPlayerData(Frame frame, int key)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: key
+      type: System.Int32
+    content.vb: Public Sub AddPlayerData(frame As Frame, key As Integer)
+  overload: Quantum.TeamVersusGlobals.AddPlayerData*
+  nameWithType.vb: TeamVersusGlobals.AddPlayerData(Frame, Integer)
+  fullName.vb: Quantum.TeamVersusGlobals.AddPlayerData(Quantum.Frame, Integer)
+  name.vb: AddPlayerData(Frame, Integer)
+- uid: Quantum.TeamVersusGlobals.RemovePlayerData(Quantum.Frame,System.Int32)
+  commentId: M:Quantum.TeamVersusGlobals.RemovePlayerData(Quantum.Frame,System.Int32)
+  id: RemovePlayerData(Quantum.Frame,System.Int32)
+  parent: Quantum.TeamVersusGlobals
+  langs:
+  - csharp
+  - vb
+  name: RemovePlayerData(Frame, int)
+  nameWithType: TeamVersusGlobals.RemovePlayerData(Frame, int)
+  fullName: Quantum.TeamVersusGlobals.RemovePlayerData(Quantum.Frame, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusGlobals.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemovePlayerData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusGlobals.cs
+    startLine: 19
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void RemovePlayerData(Frame frame, int key)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: key
+      type: System.Int32
+    content.vb: Public Sub RemovePlayerData(frame As Frame, key As Integer)
+  overload: Quantum.TeamVersusGlobals.RemovePlayerData*
+  nameWithType.vb: TeamVersusGlobals.RemovePlayerData(Frame, Integer)
+  fullName.vb: Quantum.TeamVersusGlobals.RemovePlayerData(Quantum.Frame, Integer)
+  name.vb: RemovePlayerData(Frame, Integer)
 - uid: Quantum.TeamVersusGlobals.AddToTeamScore(Quantum.Frame,System.Int32,System.Int32)
   commentId: M:Quantum.TeamVersusGlobals.AddToTeamScore(Quantum.Frame,System.Int32,System.Int32)
   id: AddToTeamScore(Quantum.Frame,System.Int32,System.Int32)
@@ -436,7 +562,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AddToTeamScore
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusGlobals.cs
-    startLine: 8
+    startLine: 31
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -472,7 +598,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: HasAnyTeamReachedScore
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/TeamVersus/TeamVersusGlobals.cs
-    startLine: 19
+    startLine: 42
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -529,17 +655,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TeamVersusPlayerData}
-  commentId: T:Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TeamVersusPlayerData}
+- uid: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.QBoolean}
+  commentId: T:Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.QBoolean}
   parent: Quantum.Collections
   definition: Quantum.Collections.QDictionaryPtr`2
   href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: QDictionaryPtr<int, TeamVersusPlayerData>
-  nameWithType: QDictionaryPtr<int, TeamVersusPlayerData>
-  fullName: Quantum.Collections.QDictionaryPtr<int, Quantum.TeamVersusPlayerData>
-  nameWithType.vb: QDictionaryPtr(Of Integer, TeamVersusPlayerData)
-  fullName.vb: Quantum.Collections.QDictionaryPtr(Of Integer, Quantum.TeamVersusPlayerData)
-  name.vb: QDictionaryPtr(Of Integer, TeamVersusPlayerData)
+  name: QDictionaryPtr<int, QBoolean>
+  nameWithType: QDictionaryPtr<int, QBoolean>
+  fullName: Quantum.Collections.QDictionaryPtr<int, Quantum.QBoolean>
+  nameWithType.vb: QDictionaryPtr(Of Integer, QBoolean)
+  fullName.vb: Quantum.Collections.QDictionaryPtr(Of Integer, Quantum.QBoolean)
+  name.vb: QDictionaryPtr(Of Integer, QBoolean)
   spec.csharp:
   - uid: Quantum.Collections.QDictionaryPtr`2
     name: QDictionaryPtr
@@ -551,9 +677,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
-  - uid: Quantum.TeamVersusPlayerData
-    name: TeamVersusPlayerData
-    href: Quantum.TeamVersusPlayerData.html
+  - uid: Quantum.QBoolean
+    name: QBoolean
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: Quantum.Collections.QDictionaryPtr`2
@@ -568,9 +694,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
-  - uid: Quantum.TeamVersusPlayerData
-    name: TeamVersusPlayerData
-    href: Quantum.TeamVersusPlayerData.html
+  - uid: Quantum.QBoolean
+    name: QBoolean
+    isExternal: true
   - name: )
 - uid: Quantum.Collections.QDictionaryPtr`2
   commentId: T:Quantum.Collections.QDictionaryPtr`2
@@ -625,31 +751,31 @@ references:
   - uid: Quantum.Collections
     name: Collections
     isExternal: true
-- uid: Quantum.Collections.QDictionaryPtr{Quantum.PlayerRef,System.Int32}
-  commentId: T:Quantum.Collections.QDictionaryPtr{Quantum.PlayerRef,System.Int32}
+- uid: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TeamVersusParticipantData}
+  commentId: T:Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TeamVersusParticipantData}
   parent: Quantum.Collections
   definition: Quantum.Collections.QDictionaryPtr`2
   href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: QDictionaryPtr<PlayerRef, int>
-  nameWithType: QDictionaryPtr<PlayerRef, int>
-  fullName: Quantum.Collections.QDictionaryPtr<Quantum.PlayerRef, int>
-  nameWithType.vb: QDictionaryPtr(Of PlayerRef, Integer)
-  fullName.vb: Quantum.Collections.QDictionaryPtr(Of Quantum.PlayerRef, Integer)
-  name.vb: QDictionaryPtr(Of PlayerRef, Integer)
+  name: QDictionaryPtr<int, TeamVersusParticipantData>
+  nameWithType: QDictionaryPtr<int, TeamVersusParticipantData>
+  fullName: Quantum.Collections.QDictionaryPtr<int, Quantum.TeamVersusParticipantData>
+  nameWithType.vb: QDictionaryPtr(Of Integer, TeamVersusParticipantData)
+  fullName.vb: Quantum.Collections.QDictionaryPtr(Of Integer, Quantum.TeamVersusParticipantData)
+  name.vb: QDictionaryPtr(Of Integer, TeamVersusParticipantData)
   spec.csharp:
   - uid: Quantum.Collections.QDictionaryPtr`2
     name: QDictionaryPtr
     isExternal: true
   - name: <
-  - uid: Quantum.PlayerRef
-    name: PlayerRef
-    isExternal: true
-  - name: ','
-  - name: " "
   - uid: System.Int32
     name: int
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.TeamVersusParticipantData
+    name: TeamVersusParticipantData
+    href: Quantum.TeamVersusParticipantData.html
   - name: '>'
   spec.vb:
   - uid: Quantum.Collections.QDictionaryPtr`2
@@ -658,15 +784,15 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: Quantum.PlayerRef
-    name: PlayerRef
-    isExternal: true
-  - name: ','
-  - name: " "
   - uid: System.Int32
     name: Integer
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.TeamVersusParticipantData
+    name: TeamVersusParticipantData
+    href: Quantum.TeamVersusParticipantData.html
   - name: )
 - uid: Quantum.Collections.QDictionaryPtr{System.Int32,System.Int32}
   commentId: T:Quantum.Collections.QDictionaryPtr{System.Int32,System.Int32}
@@ -720,6 +846,13 @@ references:
   name: CharacterIntroType
   nameWithType: CharacterIntroType
   fullName: Quantum.CharacterIntroType
+- uid: Quantum.FrameTimer
+  commentId: T:Quantum.FrameTimer
+  parent: Quantum
+  isExternal: true
+  name: FrameTimer
+  nameWithType: FrameTimer
+  fullName: Quantum.FrameTimer
 - uid: System.ValueType.GetHashCode
   commentId: M:System.ValueType.GetHashCode
   parent: System.ValueType
@@ -838,12 +971,12 @@ references:
   name: FrameSerializer
   nameWithType: FrameSerializer
   fullName: Quantum.FrameSerializer
-- uid: Quantum.TeamVersusGlobals.AddToTeamScore*
-  commentId: Overload:Quantum.TeamVersusGlobals.AddToTeamScore
-  href: Quantum.TeamVersusGlobals.html#Quantum_TeamVersusGlobals_AddToTeamScore_Quantum_Frame_System_Int32_System_Int32_
-  name: AddToTeamScore
-  nameWithType: TeamVersusGlobals.AddToTeamScore
-  fullName: Quantum.TeamVersusGlobals.AddToTeamScore
+- uid: Quantum.TeamVersusGlobals.AddPlayerData*
+  commentId: Overload:Quantum.TeamVersusGlobals.AddPlayerData
+  href: Quantum.TeamVersusGlobals.html#Quantum_TeamVersusGlobals_AddPlayerData_Quantum_Frame_System_Int32_
+  name: AddPlayerData
+  nameWithType: TeamVersusGlobals.AddPlayerData
+  fullName: Quantum.TeamVersusGlobals.AddPlayerData
 - uid: Quantum.Frame
   commentId: T:Quantum.Frame
   parent: Quantum
@@ -851,6 +984,18 @@ references:
   name: Frame
   nameWithType: Frame
   fullName: Quantum.Frame
+- uid: Quantum.TeamVersusGlobals.RemovePlayerData*
+  commentId: Overload:Quantum.TeamVersusGlobals.RemovePlayerData
+  href: Quantum.TeamVersusGlobals.html#Quantum_TeamVersusGlobals_RemovePlayerData_Quantum_Frame_System_Int32_
+  name: RemovePlayerData
+  nameWithType: TeamVersusGlobals.RemovePlayerData
+  fullName: Quantum.TeamVersusGlobals.RemovePlayerData
+- uid: Quantum.TeamVersusGlobals.AddToTeamScore*
+  commentId: Overload:Quantum.TeamVersusGlobals.AddToTeamScore
+  href: Quantum.TeamVersusGlobals.html#Quantum_TeamVersusGlobals_AddToTeamScore_Quantum_Frame_System_Int32_System_Int32_
+  name: AddToTeamScore
+  nameWithType: TeamVersusGlobals.AddToTeamScore
+  fullName: Quantum.TeamVersusGlobals.AddToTeamScore
 - uid: Quantum.TeamVersusGlobals.HasAnyTeamReachedScore*
   commentId: Overload:Quantum.TeamVersusGlobals.HasAnyTeamReachedScore
   href: Quantum.TeamVersusGlobals.html#Quantum_TeamVersusGlobals_HasAnyTeamReachedScore_Quantum_Frame_System_Int32_

@@ -36,17 +36,19 @@ items:
     content: >-
       [Serializable]
 
-      public class CreateOrUpdateHurtbox : HNSFStateAction
+      public class CreateOrUpdateHurtbox : HNSFStateAction, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class CreateOrUpdateHurtbox Inherits HNSFStateAction
+      Public Class CreateOrUpdateHurtbox Inherits HNSFStateAction Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.HNSFStateAction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateAction.Label
   - Quantum.HNSFStateAction.parent
@@ -226,15 +228,33 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: radius
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public FP radius
+    content: >-
+      [DrawIf("shapeType", 1, CompareOperator.Equal, DrawIfMode.ReadOnly)]
+
+      public FP radius
     return:
       type: Photon.Deterministic.FP
-    content.vb: Public radius As FP
+    content.vb: >-
+      <DrawIf("shapeType", 1, CompareOperator.Equal, DrawIfMode.ReadOnly)>
+
+      Public radius As FP
+  attributes:
+  - type: Quantum.DrawIfAttribute
+    ctor: Quantum.DrawIfAttribute.#ctor(System.String,System.Int64,Quantum.CompareOperator,Quantum.DrawIfMode)
+    arguments:
+    - type: System.String
+      value: shapeType
+    - type: System.Int64
+      value: "1"
+    - type: Quantum.CompareOperator
+      value: 0
+    - type: Quantum.DrawIfMode
+      value: 0
 - uid: Quantum.CreateOrUpdateHurtbox.boxExtents
   commentId: F:Quantum.CreateOrUpdateHurtbox.boxExtents
   id: boxExtents
@@ -253,15 +273,33 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: boxExtents
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public FPVector3 boxExtents
+    content: >-
+      [DrawIf("shapeType", 2, CompareOperator.Equal, DrawIfMode.ReadOnly)]
+
+      public FPVector3 boxExtents
     return:
       type: Photon.Deterministic.FPVector3
-    content.vb: Public boxExtents As FPVector3
+    content.vb: >-
+      <DrawIf("shapeType", 2, CompareOperator.Equal, DrawIfMode.ReadOnly)>
+
+      Public boxExtents As FPVector3
+  attributes:
+  - type: Quantum.DrawIfAttribute
+    ctor: Quantum.DrawIfAttribute.#ctor(System.String,System.Int64,Quantum.CompareOperator,Quantum.DrawIfMode)
+    arguments:
+    - type: System.String
+      value: shapeType
+    - type: System.Int64
+      value: "2"
+    - type: Quantum.CompareOperator
+      value: 0
+    - type: Quantum.DrawIfMode
+      value: 0
 - uid: Quantum.CreateOrUpdateHurtbox.offset
   commentId: F:Quantum.CreateOrUpdateHurtbox.offset
   id: offset
@@ -280,7 +318,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: offset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -307,7 +345,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ExecuteAction
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/CreateOrUpdateHurtbox.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -377,6 +415,13 @@ references:
   name: HNSFStateAction
   nameWithType: HNSFStateAction
   fullName: Quantum.HNSFStateAction
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateAction.Label
   commentId: F:Quantum.HNSFStateAction.Label
   parent: Quantum.HNSFStateAction

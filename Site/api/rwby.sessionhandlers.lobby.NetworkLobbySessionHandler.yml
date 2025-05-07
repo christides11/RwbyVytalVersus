@@ -10,19 +10,19 @@ items:
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.GetMatchIndexByID(System.Int32)
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.GetMatchInfoByID(System.Int32)
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.Initialize
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby(System.String,Epic.OnlineServices.Lobby.LobbyDetails)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.LobbyManager
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.QuantumClientUpdateRegionPing
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.RegisterNetworkEvents
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.SetMatchInfo(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.SetupLobbyLocalUI
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.Teardown
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.TeardownLobbyLocalUI
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.UnregisterNetworkEvents
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.Update
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.currentMatches
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.gameManager
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyMenuHandlers
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyInfo
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyMenuPrefab
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyUIInstances
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.mirrorNetworkManager
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.networkMessageHandler
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.quantumAppSettings
@@ -76,7 +76,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: gameManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -113,7 +113,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: mirrorNetworkManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -132,33 +132,33 @@ items:
   - type: UnityEngine.HideInInspector
     ctor: UnityEngine.HideInInspector.#ctor
     arguments: []
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.currentMatches
-  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.currentMatches
-  id: currentMatches
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyInfo
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyInfo
+  id: lobbyInfo
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
   langs:
   - csharp
   - vb
-  name: currentMatches
-  nameWithType: NetworkLobbySessionHandler.currentMatches
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.currentMatches
+  name: lobbyInfo
+  nameWithType: NetworkLobbySessionHandler.lobbyInfo
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyInfo
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: currentMatches
+    id: lobbyInfo
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public List<NetworkLobbySessionMatchInfo> currentMatches
+    content: public NetworkVytalMatchLobbyInfoContainer lobbyInfo
     return:
-      type: System.Collections.Generic.List{rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo}
-    content.vb: Public currentMatches As List(Of NetworkLobbySessionMatchInfo)
+      type: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyInfoContainer
+    content.vb: Public lobbyInfo As NetworkVytalMatchLobbyInfoContainer
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyMenuPrefab
   commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyMenuPrefab
   id: lobbyMenuPrefab
@@ -177,7 +177,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lobbyMenuPrefab
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 19
+    startLine: 21
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -186,33 +186,33 @@ items:
     return:
       type: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
     content.vb: Public lobbyMenuPrefab As NetworkLobbySessionMenuHandler
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyMenuHandlers
-  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyMenuHandlers
-  id: lobbyMenuHandlers
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyUIInstances
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyUIInstances
+  id: lobbyUIInstances
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
   langs:
   - csharp
   - vb
-  name: lobbyMenuHandlers
-  nameWithType: NetworkLobbySessionHandler.lobbyMenuHandlers
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyMenuHandlers
+  name: lobbyUIInstances
+  nameWithType: NetworkLobbySessionHandler.lobbyUIInstances
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.lobbyUIInstances
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: lobbyMenuHandlers
+    id: lobbyUIInstances
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public List<NetworkLobbySessionMenuHandler> lobbyMenuHandlers
+    content: public List<NetworkLobbySessionMenuHandler> lobbyUIInstances
     return:
       type: System.Collections.Generic.List{rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler}
-    content.vb: Public lobbyMenuHandlers As List(Of NetworkLobbySessionMenuHandler)
+    content.vb: Public lobbyUIInstances As List(Of NetworkLobbySessionMenuHandler)
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.networkMessageHandler
   commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.networkMessageHandler
   id: networkMessageHandler
@@ -231,7 +231,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: networkMessageHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -258,7 +258,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: selectedSong
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 25
+    startLine: 28
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -285,7 +285,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: quantumAppSettings
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 27
+    startLine: 30
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -312,7 +312,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: quantumClient
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -321,6 +321,33 @@ items:
     return:
       type: Photon.Realtime.RealtimeClient
     content.vb: Public quantumClient As RealtimeClient
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.LobbyManager
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.LobbyManager
+  id: LobbyManager
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
+  langs:
+  - csharp
+  - vb
+  name: LobbyManager
+  nameWithType: NetworkLobbySessionHandler.LobbyManager
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.LobbyManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LobbyManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
+    startLine: 33
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public EOSLobbyManager LobbyManager
+    return:
+      type: PlayEveryWare.EpicOnlineServices.Samples.EOSLobbyManager
+    content.vb: Public LobbyManager As EOSLobbyManager
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.Initialize
   commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.Initialize
   id: Initialize
@@ -339,7 +366,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Initialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 36
+    startLine: 41
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -369,7 +396,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Teardown
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 46
+    startLine: 53
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -399,7 +426,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Update
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 58
+    startLine: 80
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -425,7 +452,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateLobby
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 90
+    startLine: 112
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -447,16 +474,16 @@ items:
   nameWithType.vb: NetworkLobbySessionHandler.CreateLobby(String, String, UInteger, Guid)
   fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.CreateLobby(String, String, UInteger, System.Guid)
   name.vb: CreateLobby(String, String, UInteger, Guid)
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
-  id: JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby(System.String,Epic.OnlineServices.Lobby.LobbyDetails)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby(System.String,Epic.OnlineServices.Lobby.LobbyDetails)
+  id: JoinLobby(System.String,Epic.OnlineServices.Lobby.LobbyDetails)
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
   langs:
   - csharp
   - vb
-  name: JoinLobby(LobbyDetails)
-  nameWithType: NetworkLobbySessionHandler.JoinLobby(LobbyDetails)
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby(Epic.OnlineServices.Lobby.LobbyDetails)
+  name: JoinLobby(string, LobbyDetails)
+  nameWithType: NetworkLobbySessionHandler.JoinLobby(string, LobbyDetails)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby(string, Epic.OnlineServices.Lobby.LobbyDetails)
   type: Method
   source:
     remote:
@@ -465,19 +492,24 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: JoinLobby
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 132
+    startLine: 186
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public virtual bool JoinLobby(LobbyDetails lobbyDetails)
+    content: public virtual bool JoinLobby(string lobbyId, LobbyDetails lobbyDetails)
     parameters:
+    - id: lobbyId
+      type: System.String
     - id: lobbyDetails
       type: Epic.OnlineServices.Lobby.LobbyDetails
     return:
       type: System.Boolean
-    content.vb: Public Overridable Function JoinLobby(lobbyDetails As LobbyDetails) As Boolean
+    content.vb: Public Overridable Function JoinLobby(lobbyId As String, lobbyDetails As LobbyDetails) As Boolean
   overload: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby*
+  nameWithType.vb: NetworkLobbySessionHandler.JoinLobby(String, LobbyDetails)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby(String, Epic.OnlineServices.Lobby.LobbyDetails)
+  name.vb: JoinLobby(String, LobbyDetails)
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.CreateQuantumClient
   commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.CreateQuantumClient
   id: CreateQuantumClient
@@ -496,7 +528,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateQuantumClient
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 147
+    startLine: 206
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -522,7 +554,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: QuantumClientUpdateRegionPing
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 153
+    startLine: 212
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -550,7 +582,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetMatchIndexByID
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 188
+    startLine: 225
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -584,7 +616,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetMatchInfoByID
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 197
+    startLine: 234
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -600,35 +632,6 @@ items:
   nameWithType.vb: NetworkLobbySessionHandler.GetMatchInfoByID(Integer)
   fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.GetMatchInfoByID(Integer)
   name.vb: GetMatchInfoByID(Integer)
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.SetMatchInfo(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.SetMatchInfo(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
-  id: SetMatchInfo(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
-  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
-  langs:
-  - csharp
-  - vb
-  name: SetMatchInfo(NetworkLobbySessionMatchInfo)
-  nameWithType: NetworkLobbySessionHandler.SetMatchInfo(NetworkLobbySessionMatchInfo)
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.SetMatchInfo(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: SetMatchInfo
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandler.cs
-    startLine: 204
-  assemblies:
-  - rwby
-  namespace: rwby.sessionhandlers.lobby
-  syntax:
-    content: public void SetMatchInfo(NetworkLobbySessionMatchInfo newMatchInfo)
-    parameters:
-    - id: newMatchInfo
-      type: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
-    content.vb: Public Sub SetMatchInfo(newMatchInfo As NetworkLobbySessionMatchInfo)
-  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.SetMatchInfo*
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.RegisterNetworkEvents
   commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.RegisterNetworkEvents
   id: RegisterNetworkEvents
@@ -699,7 +702,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SetupLobbyLocalUI
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandlerNetworkEventHandlers.cs
-    startLine: 40
+    startLine: 41
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -725,7 +728,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TeardownLobbyLocalUI
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkLobbySessionHandlerNetworkEventHandlers.cs
-    startLine: 69
+    startLine: 73
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -850,26 +853,40 @@ references:
   name: MirrorNetworkManager
   nameWithType: MirrorNetworkManager
   fullName: rwby.MirrorNetworkManager
-- uid: System.Collections.Generic.List{rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo}
-  commentId: T:System.Collections.Generic.List{rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo}
+- uid: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyInfoContainer
+  commentId: T:rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyInfoContainer
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyInfoContainer.html
+  name: NetworkVytalMatchLobbyInfoContainer
+  nameWithType: NetworkVytalMatchLobbyInfoContainer
+  fullName: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyInfoContainer
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.html
+  name: NetworkLobbySessionMenuHandler
+  nameWithType: NetworkLobbySessionMenuHandler
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
+- uid: System.Collections.Generic.List{rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler}
+  commentId: T:System.Collections.Generic.List{rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<NetworkLobbySessionMatchInfo>
-  nameWithType: List<NetworkLobbySessionMatchInfo>
-  fullName: System.Collections.Generic.List<rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo>
-  nameWithType.vb: List(Of NetworkLobbySessionMatchInfo)
-  fullName.vb: System.Collections.Generic.List(Of rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
-  name.vb: List(Of NetworkLobbySessionMatchInfo)
+  name: List<NetworkLobbySessionMenuHandler>
+  nameWithType: List<NetworkLobbySessionMenuHandler>
+  fullName: System.Collections.Generic.List<rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler>
+  nameWithType.vb: List(Of NetworkLobbySessionMenuHandler)
+  fullName.vb: System.Collections.Generic.List(Of rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler)
+  name.vb: List(Of NetworkLobbySessionMenuHandler)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
-    name: NetworkLobbySessionMatchInfo
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
+    name: NetworkLobbySessionMenuHandler
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.html
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
@@ -879,9 +896,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
-    name: NetworkLobbySessionMatchInfo
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
+    name: NetworkLobbySessionMenuHandler
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.html
   - name: )
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
@@ -948,46 +965,6 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
-  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
-  parent: rwby.sessionhandlers.lobby
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.html
-  name: NetworkLobbySessionMenuHandler
-  nameWithType: NetworkLobbySessionMenuHandler
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
-- uid: System.Collections.Generic.List{rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler}
-  commentId: T:System.Collections.Generic.List{rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<NetworkLobbySessionMenuHandler>
-  nameWithType: List<NetworkLobbySessionMenuHandler>
-  fullName: System.Collections.Generic.List<rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler>
-  nameWithType.vb: List(Of NetworkLobbySessionMenuHandler)
-  fullName.vb: System.Collections.Generic.List(Of rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler)
-  name.vb: List(Of NetworkLobbySessionMenuHandler)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
-    name: NetworkLobbySessionMenuHandler
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
-    name: NetworkLobbySessionMenuHandler
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.html
-  - name: )
 - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
   commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
   parent: rwby.sessionhandlers.lobby
@@ -1031,6 +1008,43 @@ references:
   name: RealtimeClient
   nameWithType: RealtimeClient
   fullName: Photon.Realtime.RealtimeClient
+- uid: PlayEveryWare.EpicOnlineServices.Samples.EOSLobbyManager
+  commentId: T:PlayEveryWare.EpicOnlineServices.Samples.EOSLobbyManager
+  parent: PlayEveryWare.EpicOnlineServices.Samples
+  href: PlayEveryWare.EpicOnlineServices.Samples.EOSLobbyManager.html
+  name: EOSLobbyManager
+  nameWithType: EOSLobbyManager
+  fullName: PlayEveryWare.EpicOnlineServices.Samples.EOSLobbyManager
+- uid: PlayEveryWare.EpicOnlineServices.Samples
+  commentId: N:PlayEveryWare.EpicOnlineServices.Samples
+  href: PlayEveryWare.html
+  name: PlayEveryWare.EpicOnlineServices.Samples
+  nameWithType: PlayEveryWare.EpicOnlineServices.Samples
+  fullName: PlayEveryWare.EpicOnlineServices.Samples
+  spec.csharp:
+  - uid: PlayEveryWare
+    name: PlayEveryWare
+    href: PlayEveryWare.html
+  - name: .
+  - uid: PlayEveryWare.EpicOnlineServices
+    name: EpicOnlineServices
+    href: PlayEveryWare.EpicOnlineServices.html
+  - name: .
+  - uid: PlayEveryWare.EpicOnlineServices.Samples
+    name: Samples
+    href: PlayEveryWare.EpicOnlineServices.Samples.html
+  spec.vb:
+  - uid: PlayEveryWare
+    name: PlayEveryWare
+    href: PlayEveryWare.html
+  - name: .
+  - uid: PlayEveryWare.EpicOnlineServices
+    name: EpicOnlineServices
+    href: PlayEveryWare.EpicOnlineServices.html
+  - name: .
+  - uid: PlayEveryWare.EpicOnlineServices.Samples
+    name: Samples
+    href: PlayEveryWare.EpicOnlineServices.Samples.html
 - uid: rwby.SessionHandlerBase.Initialize
   commentId: M:rwby.SessionHandlerBase.Initialize
   parent: rwby.SessionHandlerBase
@@ -1173,39 +1187,47 @@ references:
   fullName: System.Guid
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby*
   commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.html#rwby_sessionhandlers_lobby_NetworkLobbySessionHandler_JoinLobby_Epic_OnlineServices_Lobby_LobbyDetails_
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.html#rwby_sessionhandlers_lobby_NetworkLobbySessionHandler_JoinLobby_System_String_Epic_OnlineServices_Lobby_LobbyDetails_
   name: JoinLobby
   nameWithType: NetworkLobbySessionHandler.JoinLobby
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.JoinLobby
 - uid: Epic.OnlineServices.Lobby.LobbyDetails
   commentId: T:Epic.OnlineServices.Lobby.LobbyDetails
   parent: Epic.OnlineServices.Lobby
+  isExternal: true
   name: LobbyDetails
   nameWithType: LobbyDetails
   fullName: Epic.OnlineServices.Lobby.LobbyDetails
 - uid: Epic.OnlineServices.Lobby
   commentId: N:Epic.OnlineServices.Lobby
+  isExternal: true
   name: Epic.OnlineServices.Lobby
   nameWithType: Epic.OnlineServices.Lobby
   fullName: Epic.OnlineServices.Lobby
   spec.csharp:
   - uid: Epic
     name: Epic
+    isExternal: true
   - name: .
   - uid: Epic.OnlineServices
     name: OnlineServices
+    isExternal: true
   - name: .
   - uid: Epic.OnlineServices.Lobby
     name: Lobby
+    isExternal: true
   spec.vb:
   - uid: Epic
     name: Epic
+    isExternal: true
   - name: .
   - uid: Epic.OnlineServices
     name: OnlineServices
+    isExternal: true
   - name: .
   - uid: Epic.OnlineServices.Lobby
     name: Lobby
+    isExternal: true
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.CreateQuantumClient*
   commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.CreateQuantumClient
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.html#rwby_sessionhandlers_lobby_NetworkLobbySessionHandler_CreateQuantumClient
@@ -1306,12 +1328,6 @@ references:
   name: NetworkLobbySessionMatchInfo
   nameWithType: NetworkLobbySessionMatchInfo
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.SetMatchInfo*
-  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.SetMatchInfo
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.html#rwby_sessionhandlers_lobby_NetworkLobbySessionHandler_SetMatchInfo_rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_
-  name: SetMatchInfo
-  nameWithType: NetworkLobbySessionHandler.SetMatchInfo
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.SetMatchInfo
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.RegisterNetworkEvents*
   commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.RegisterNetworkEvents
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler.html#rwby_sessionhandlers_lobby_NetworkLobbySessionHandler_RegisterNetworkEvents

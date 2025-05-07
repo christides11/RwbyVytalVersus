@@ -9,6 +9,7 @@ items:
   - Quantum.Core.DebugCommand.CreateDestroyPayload(Quantum.EntityRef)
   - Quantum.Core.DebugCommand.CreateMaterializePayload(Quantum.EntityRef,Quantum.EntityPrototype,Quantum.IAssetSerializer)
   - Quantum.Core.DebugCommand.CreateRemoveComponentPayload(Quantum.EntityRef,System.Type)
+  - Quantum.Core.DebugCommand.CreateToggleSystemPayload(System.Type)
   - Quantum.Core.DebugCommand.IsEnabled
   - Quantum.Core.DebugCommand.Reset
   - Quantum.Core.DebugCommand.Send(Quantum.QuantumGame,Quantum.Core.DebugCommand.Payload[])
@@ -26,7 +27,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: DebugCommand
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 8886
+    startLine: 9079
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Core
@@ -60,7 +61,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CommandExecuted
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 8904
+    startLine: 9097
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Core
@@ -89,7 +90,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: IsEnabled
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 8918
+    startLine: 9111
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Core
@@ -120,7 +121,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Send
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 8930
+    startLine: 9123
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Core
@@ -160,7 +161,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Reset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 8945
+    startLine: 9138
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Core
@@ -188,7 +189,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateDestroyPayload
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 8982
+    startLine: 9179
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Core
@@ -223,7 +224,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateMaterializePayload
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 8996
+    startLine: 9193
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Core
@@ -264,7 +265,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CreateRemoveComponentPayload
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 9015
+    startLine: 9212
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Core
@@ -284,6 +285,41 @@ items:
       description: The debug command payload.
     content.vb: Public Shared Function CreateRemoveComponentPayload(entityRef As EntityRef, componentType As Type) As DebugCommand.Payload
   overload: Quantum.Core.DebugCommand.CreateRemoveComponentPayload*
+- uid: Quantum.Core.DebugCommand.CreateToggleSystemPayload(System.Type)
+  commentId: M:Quantum.Core.DebugCommand.CreateToggleSystemPayload(System.Type)
+  id: CreateToggleSystemPayload(System.Type)
+  parent: Quantum.Core.DebugCommand
+  langs:
+  - csharp
+  - vb
+  name: CreateToggleSystemPayload(Type)
+  nameWithType: DebugCommand.CreateToggleSystemPayload(Type)
+  fullName: Quantum.Core.DebugCommand.CreateToggleSystemPayload(System.Type)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateToggleSystemPayload
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 9228
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Core
+  summary: Factory to create the payload for a toggle system command.
+  example: []
+  syntax:
+    content: public static DebugCommand.Payload CreateToggleSystemPayload(Type systemType)
+    parameters:
+    - id: systemType
+      type: System.Type
+      description: System type, serialized as string
+    return:
+      type: Quantum.Core.DebugCommand.Payload
+      description: The debug command payload.
+    content.vb: Public Shared Function CreateToggleSystemPayload(systemType As Type) As DebugCommand.Payload
+  overload: Quantum.Core.DebugCommand.CreateToggleSystemPayload*
 references:
 - uid: Quantum.Core
   commentId: N:Quantum.Core
@@ -551,3 +587,9 @@ references:
   name: Type
   nameWithType: Type
   fullName: System.Type
+- uid: Quantum.Core.DebugCommand.CreateToggleSystemPayload*
+  commentId: Overload:Quantum.Core.DebugCommand.CreateToggleSystemPayload
+  href: Quantum.Core.DebugCommand.html#Quantum_Core_DebugCommand_CreateToggleSystemPayload_System_Type_
+  name: CreateToggleSystemPayload
+  nameWithType: DebugCommand.CreateToggleSystemPayload
+  fullName: Quantum.Core.DebugCommand.CreateToggleSystemPayload

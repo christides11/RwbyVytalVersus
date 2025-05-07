@@ -5,7 +5,10 @@ items:
   id: CutsceneBinder
   parent: rwby
   children:
-  - rwby.CutsceneBinder.Bind(Quantum.QuantumGame,rwby.CutsceneBindingSource)
+  - rwby.CutsceneBinder.Bind
+  - rwby.CutsceneBinder.Bind(Quantum.QuantumGame)
+  - rwby.CutsceneBinder.Bind(Quantum.QuantumGame,rwby.ITimelineDirectorBindingSource)
+  - rwby.CutsceneBinder.Bind(rwby.ITimelineDirectorBindingSource)
   - rwby.CutsceneBinder.bindingList
   - rwby.CutsceneBinder.cinemachineTrackBindings
   - rwby.CutsceneBinder.director
@@ -28,14 +31,16 @@ items:
   - rwby
   namespace: rwby
   syntax:
-    content: 'public class CutsceneBinder : MonoBehaviour'
-    content.vb: Public Class CutsceneBinder Inherits MonoBehaviour
+    content: 'public class CutsceneBinder : MonoBehaviour, ITimelineDirectorBinder'
+    content.vb: Public Class CutsceneBinder Inherits MonoBehaviour Implements ITimelineDirectorBinder
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.Component
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
+  implements:
+  - rwby.ITimelineDirectorBinder
 - uid: rwby.CutsceneBinder.bindingList
   commentId: F:rwby.CutsceneBinder.bindingList
   id: bindingList
@@ -117,16 +122,16 @@ items:
     return:
       type: System.Collections.Generic.List{rwby.CutsceneBinder.CinemachineTrackBindingDefinition}
     content.vb: Public cinemachineTrackBindings As List(Of CutsceneBinder.CinemachineTrackBindingDefinition)
-- uid: rwby.CutsceneBinder.Bind(Quantum.QuantumGame,rwby.CutsceneBindingSource)
-  commentId: M:rwby.CutsceneBinder.Bind(Quantum.QuantumGame,rwby.CutsceneBindingSource)
-  id: Bind(Quantum.QuantumGame,rwby.CutsceneBindingSource)
+- uid: rwby.CutsceneBinder.Bind
+  commentId: M:rwby.CutsceneBinder.Bind
+  id: Bind
   parent: rwby.CutsceneBinder
   langs:
   - csharp
   - vb
-  name: Bind(QuantumGame, CutsceneBindingSource)
-  nameWithType: CutsceneBinder.Bind(QuantumGame, CutsceneBindingSource)
-  fullName: rwby.CutsceneBinder.Bind(Quantum.QuantumGame, rwby.CutsceneBindingSource)
+  name: Bind()
+  nameWithType: CutsceneBinder.Bind()
+  fullName: rwby.CutsceneBinder.Bind()
   type: Method
   source:
     remote:
@@ -139,15 +144,111 @@ items:
   assemblies:
   - rwby
   namespace: rwby
+  example: []
   syntax:
-    content: public void Bind(QuantumGame qGame, CutsceneBindingSource bindingSource)
+    content: public void Bind()
+    content.vb: Public Sub Bind()
+  overload: rwby.CutsceneBinder.Bind*
+  implements:
+  - rwby.ITimelineDirectorBinder.Bind
+- uid: rwby.CutsceneBinder.Bind(rwby.ITimelineDirectorBindingSource)
+  commentId: M:rwby.CutsceneBinder.Bind(rwby.ITimelineDirectorBindingSource)
+  id: Bind(rwby.ITimelineDirectorBindingSource)
+  parent: rwby.CutsceneBinder
+  langs:
+  - csharp
+  - vb
+  name: Bind(ITimelineDirectorBindingSource)
+  nameWithType: CutsceneBinder.Bind(ITimelineDirectorBindingSource)
+  fullName: rwby.CutsceneBinder.Bind(rwby.ITimelineDirectorBindingSource)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBinder.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Bind
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBinder.cs
+    startLine: 25
+  assemblies:
+  - rwby
+  namespace: rwby
+  example: []
+  syntax:
+    content: public void Bind(ITimelineDirectorBindingSource bindingSource)
+    parameters:
+    - id: bindingSource
+      type: rwby.ITimelineDirectorBindingSource
+    content.vb: Public Sub Bind(bindingSource As ITimelineDirectorBindingSource)
+  overload: rwby.CutsceneBinder.Bind*
+  implements:
+  - rwby.ITimelineDirectorBinder.Bind(rwby.ITimelineDirectorBindingSource)
+- uid: rwby.CutsceneBinder.Bind(Quantum.QuantumGame)
+  commentId: M:rwby.CutsceneBinder.Bind(Quantum.QuantumGame)
+  id: Bind(Quantum.QuantumGame)
+  parent: rwby.CutsceneBinder
+  langs:
+  - csharp
+  - vb
+  name: Bind(QuantumGame)
+  nameWithType: CutsceneBinder.Bind(QuantumGame)
+  fullName: rwby.CutsceneBinder.Bind(Quantum.QuantumGame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBinder.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Bind
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBinder.cs
+    startLine: 29
+  assemblies:
+  - rwby
+  namespace: rwby
+  example: []
+  syntax:
+    content: public void Bind(QuantumGame qGame)
+    parameters:
+    - id: qGame
+      type: Quantum.QuantumGame
+    content.vb: Public Sub Bind(qGame As QuantumGame)
+  overload: rwby.CutsceneBinder.Bind*
+  implements:
+  - rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame)
+- uid: rwby.CutsceneBinder.Bind(Quantum.QuantumGame,rwby.ITimelineDirectorBindingSource)
+  commentId: M:rwby.CutsceneBinder.Bind(Quantum.QuantumGame,rwby.ITimelineDirectorBindingSource)
+  id: Bind(Quantum.QuantumGame,rwby.ITimelineDirectorBindingSource)
+  parent: rwby.CutsceneBinder
+  langs:
+  - csharp
+  - vb
+  name: Bind(QuantumGame, ITimelineDirectorBindingSource)
+  nameWithType: CutsceneBinder.Bind(QuantumGame, ITimelineDirectorBindingSource)
+  fullName: rwby.CutsceneBinder.Bind(Quantum.QuantumGame, rwby.ITimelineDirectorBindingSource)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBinder.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Bind
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/CutsceneBinder.cs
+    startLine: 33
+  assemblies:
+  - rwby
+  namespace: rwby
+  example: []
+  syntax:
+    content: public void Bind(QuantumGame qGame, ITimelineDirectorBindingSource bindingSource)
     parameters:
     - id: qGame
       type: Quantum.QuantumGame
     - id: bindingSource
-      type: rwby.CutsceneBindingSource
-    content.vb: Public Sub Bind(qGame As QuantumGame, bindingSource As CutsceneBindingSource)
+      type: rwby.ITimelineDirectorBindingSource
+    content.vb: Public Sub Bind(qGame As QuantumGame, bindingSource As ITimelineDirectorBindingSource)
   overload: rwby.CutsceneBinder.Bind*
+  implements:
+  - rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame,rwby.ITimelineDirectorBindingSource)
 references:
 - uid: rwby
   commentId: N:rwby
@@ -194,6 +295,13 @@ references:
   name: MonoBehaviour
   nameWithType: MonoBehaviour
   fullName: UnityEngine.MonoBehaviour
+- uid: rwby.ITimelineDirectorBinder
+  commentId: T:rwby.ITimelineDirectorBinder
+  parent: rwby
+  href: rwby.ITimelineDirectorBinder.html
+  name: ITimelineDirectorBinder
+  nameWithType: ITimelineDirectorBinder
+  fullName: rwby.ITimelineDirectorBinder
 - uid: System
   commentId: N:System
   isExternal: true
@@ -230,6 +338,7 @@ references:
   - name: <
   - uid: Quantum.Tag
     name: Tag
+    href: Quantum.Tag.html
   - name: '>'
   - name: '>'
   spec.vb:
@@ -248,6 +357,7 @@ references:
   - name: " "
   - uid: Quantum.Tag
     name: Tag
+    href: Quantum.Tag.html
   - name: )
   - name: )
 - uid: System.Collections.Generic.List`1
@@ -387,10 +497,86 @@ references:
   - name: )
 - uid: rwby.CutsceneBinder.Bind*
   commentId: Overload:rwby.CutsceneBinder.Bind
-  href: rwby.CutsceneBinder.html#rwby_CutsceneBinder_Bind_Quantum_QuantumGame_rwby_CutsceneBindingSource_
+  href: rwby.CutsceneBinder.html#rwby_CutsceneBinder_Bind
   name: Bind
   nameWithType: CutsceneBinder.Bind
   fullName: rwby.CutsceneBinder.Bind
+- uid: rwby.ITimelineDirectorBinder.Bind
+  commentId: M:rwby.ITimelineDirectorBinder.Bind
+  parent: rwby.ITimelineDirectorBinder
+  href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind
+  name: Bind()
+  nameWithType: ITimelineDirectorBinder.Bind()
+  fullName: rwby.ITimelineDirectorBinder.Bind()
+  spec.csharp:
+  - uid: rwby.ITimelineDirectorBinder.Bind
+    name: Bind
+    href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.ITimelineDirectorBinder.Bind
+    name: Bind
+    href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind
+  - name: (
+  - name: )
+- uid: rwby.ITimelineDirectorBinder.Bind(rwby.ITimelineDirectorBindingSource)
+  commentId: M:rwby.ITimelineDirectorBinder.Bind(rwby.ITimelineDirectorBindingSource)
+  parent: rwby.ITimelineDirectorBinder
+  href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind_rwby_ITimelineDirectorBindingSource_
+  name: Bind(ITimelineDirectorBindingSource)
+  nameWithType: ITimelineDirectorBinder.Bind(ITimelineDirectorBindingSource)
+  fullName: rwby.ITimelineDirectorBinder.Bind(rwby.ITimelineDirectorBindingSource)
+  spec.csharp:
+  - uid: rwby.ITimelineDirectorBinder.Bind(rwby.ITimelineDirectorBindingSource)
+    name: Bind
+    href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind_rwby_ITimelineDirectorBindingSource_
+  - name: (
+  - uid: rwby.ITimelineDirectorBindingSource
+    name: ITimelineDirectorBindingSource
+    href: rwby.ITimelineDirectorBindingSource.html
+  - name: )
+  spec.vb:
+  - uid: rwby.ITimelineDirectorBinder.Bind(rwby.ITimelineDirectorBindingSource)
+    name: Bind
+    href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind_rwby_ITimelineDirectorBindingSource_
+  - name: (
+  - uid: rwby.ITimelineDirectorBindingSource
+    name: ITimelineDirectorBindingSource
+    href: rwby.ITimelineDirectorBindingSource.html
+  - name: )
+- uid: rwby.ITimelineDirectorBindingSource
+  commentId: T:rwby.ITimelineDirectorBindingSource
+  parent: rwby
+  href: rwby.ITimelineDirectorBindingSource.html
+  name: ITimelineDirectorBindingSource
+  nameWithType: ITimelineDirectorBindingSource
+  fullName: rwby.ITimelineDirectorBindingSource
+- uid: rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame)
+  commentId: M:rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame)
+  parent: rwby.ITimelineDirectorBinder
+  href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind_Quantum_QuantumGame_
+  name: Bind(QuantumGame)
+  nameWithType: ITimelineDirectorBinder.Bind(QuantumGame)
+  fullName: rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame)
+  spec.csharp:
+  - uid: rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame)
+    name: Bind
+    href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind_Quantum_QuantumGame_
+  - name: (
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+    href: Quantum.QuantumGame.html
+  - name: )
+  spec.vb:
+  - uid: rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame)
+    name: Bind
+    href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind_Quantum_QuantumGame_
+  - name: (
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+    href: Quantum.QuantumGame.html
+  - name: )
 - uid: Quantum.QuantumGame
   commentId: T:Quantum.QuantumGame
   parent: Quantum
@@ -398,16 +584,44 @@ references:
   name: QuantumGame
   nameWithType: QuantumGame
   fullName: Quantum.QuantumGame
-- uid: rwby.CutsceneBindingSource
-  commentId: T:rwby.CutsceneBindingSource
-  parent: rwby
-  href: rwby.CutsceneBindingSource.html
-  name: CutsceneBindingSource
-  nameWithType: CutsceneBindingSource
-  fullName: rwby.CutsceneBindingSource
 - uid: Quantum
   commentId: N:Quantum
   href: Quantum.html
   name: Quantum
   nameWithType: Quantum
   fullName: Quantum
+- uid: rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame,rwby.ITimelineDirectorBindingSource)
+  commentId: M:rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame,rwby.ITimelineDirectorBindingSource)
+  parent: rwby.ITimelineDirectorBinder
+  href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind_Quantum_QuantumGame_rwby_ITimelineDirectorBindingSource_
+  name: Bind(QuantumGame, ITimelineDirectorBindingSource)
+  nameWithType: ITimelineDirectorBinder.Bind(QuantumGame, ITimelineDirectorBindingSource)
+  fullName: rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame, rwby.ITimelineDirectorBindingSource)
+  spec.csharp:
+  - uid: rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame,rwby.ITimelineDirectorBindingSource)
+    name: Bind
+    href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind_Quantum_QuantumGame_rwby_ITimelineDirectorBindingSource_
+  - name: (
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+    href: Quantum.QuantumGame.html
+  - name: ','
+  - name: " "
+  - uid: rwby.ITimelineDirectorBindingSource
+    name: ITimelineDirectorBindingSource
+    href: rwby.ITimelineDirectorBindingSource.html
+  - name: )
+  spec.vb:
+  - uid: rwby.ITimelineDirectorBinder.Bind(Quantum.QuantumGame,rwby.ITimelineDirectorBindingSource)
+    name: Bind
+    href: rwby.ITimelineDirectorBinder.html#rwby_ITimelineDirectorBinder_Bind_Quantum_QuantumGame_rwby_ITimelineDirectorBindingSource_
+  - name: (
+  - uid: Quantum.QuantumGame
+    name: QuantumGame
+    href: Quantum.QuantumGame.html
+  - name: ','
+  - name: " "
+  - uid: rwby.ITimelineDirectorBindingSource
+    name: ITimelineDirectorBindingSource
+    href: rwby.ITimelineDirectorBindingSource.html
+  - name: )

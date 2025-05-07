@@ -28,11 +28,11 @@ items:
     content: >-
       [Serializable]
 
-      public class GetHitstunFunction : StateFunctionInt
+      public class GetHitstunFunction : StateFunctionInt, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class GetHitstunFunction Inherits StateFunctionInt
+      Public Class GetHitstunFunction Inherits StateFunctionInt Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -41,6 +41,8 @@ items:
   - Quantum.HNSFStateFunction
   - Quantum.HNSFStateFunction{System.Int32}
   - Quantum.StateFunctionInt
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{System.Int32}.Label
   - Quantum.HNSFStateFunction{System.Int32}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -184,6 +186,13 @@ references:
   name: StateFunctionInt
   nameWithType: StateFunctionInt
   fullName: Quantum.StateFunctionInt
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{System.Int32}.Label
   commentId: F:Quantum.HNSFStateFunction{System.Int32}.Label
   parent: Quantum.HNSFStateFunction{System.Int32}

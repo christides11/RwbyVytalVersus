@@ -8,6 +8,7 @@ items:
   - Quantum.InputConditionDecision.Decide(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
   - Quantum.InputConditionDecision.inputConditionListAssetRef
   - Quantum.InputConditionDecision.offset
+  - Quantum.InputConditionDecision.startAtLastSpecialInput
   langs:
   - csharp
   - vb
@@ -30,17 +31,19 @@ items:
     content: >-
       [Serializable]
 
-      public class InputConditionDecision : HNSFStateDecision
+      public class InputConditionDecision : HNSFStateDecision, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class InputConditionDecision Inherits HNSFStateDecision
+      Public Class InputConditionDecision Inherits HNSFStateDecision Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.HNSFStateDecision
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateDecision.Label
   - Quantum.HNSFStateDecision.DecideThreadSafe(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -112,6 +115,33 @@ items:
     return:
       type: System.Int32
     content.vb: Public offset As Integer
+- uid: Quantum.InputConditionDecision.startAtLastSpecialInput
+  commentId: F:Quantum.InputConditionDecision.startAtLastSpecialInput
+  id: startAtLastSpecialInput
+  parent: Quantum.InputConditionDecision
+  langs:
+  - csharp
+  - vb
+  name: startAtLastSpecialInput
+  nameWithType: InputConditionDecision.startAtLastSpecialInput
+  fullName: Quantum.InputConditionDecision.startAtLastSpecialInput
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SDecisions/Input/InputConditionDecision.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: startAtLastSpecialInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SDecisions/Input/InputConditionDecision.cs
+    startLine: 7
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public bool startAtLastSpecialInput
+    return:
+      type: System.Boolean
+    content.vb: Public startAtLastSpecialInput As Boolean
 - uid: Quantum.InputConditionDecision.Decide(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
   commentId: M:Quantum.InputConditionDecision.Decide(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
   id: Decide(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -130,7 +160,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Decide
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SDecisions/Input/InputConditionDecision.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -198,6 +228,13 @@ references:
   name: HNSFStateDecision
   nameWithType: HNSFStateDecision
   fullName: Quantum.HNSFStateDecision
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateDecision.Label
   commentId: F:Quantum.HNSFStateDecision.Label
   parent: Quantum.HNSFStateDecision
@@ -581,6 +618,17 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: Quantum.HNSFStateDecision.Decide(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
   commentId: M:Quantum.HNSFStateDecision.Decide(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
   parent: Quantum.HNSFStateDecision
@@ -659,14 +707,3 @@ references:
   name: HNSFStateContext
   nameWithType: HNSFStateContext
   fullName: Quantum.HNSFStateContext
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean

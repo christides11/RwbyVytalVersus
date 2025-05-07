@@ -25,13 +25,19 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GenericGamemodeStateSystem
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GenericGamemodeStateSystem.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - Quantum.Simulation
   namespace: rwby.core.systems
   syntax:
-    content: 'public class GenericGamemodeStateSystem : SystemMainThread, ISignalOnComponentAdded<GenericGamemodeGlobals>, ISignalOnComponentRemoved<GenericGamemodeGlobals>, ISignal'
-    content.vb: Public Class GenericGamemodeStateSystem Inherits SystemMainThread Implements ISignalOnComponentAdded(Of GenericGamemodeGlobals), ISignalOnComponentRemoved(Of GenericGamemodeGlobals), ISignal
+    content: >-
+      [Preserve]
+
+      public class GenericGamemodeStateSystem : SystemMainThread, ISignalOnComponentAdded<GenericGamemodeGlobals>, ISignalOnComponentRemoved<GenericGamemodeGlobals>, ISignal
+    content.vb: >-
+      <Preserve>
+
+      Public Class GenericGamemodeStateSystem Inherits SystemMainThread Implements ISignalOnComponentAdded(Of GenericGamemodeGlobals), ISignalOnComponentRemoved(Of GenericGamemodeGlobals), ISignal
   inheritance:
   - System.Object
   - Quantum.SystemBase
@@ -51,6 +57,10 @@ items:
   - Quantum.SystemBase.OnEnabled(Quantum.Frame)
   - Quantum.SystemBase.OnDisabled(Quantum.Frame)
   - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  attributes:
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
 - uid: rwby.core.systems.GenericGamemodeStateSystem.OnInit(Quantum.Frame)
   commentId: M:rwby.core.systems.GenericGamemodeStateSystem.OnInit(Quantum.Frame)
   id: OnInit(Quantum.Frame)
@@ -69,7 +79,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnInit
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GenericGamemodeStateSystem.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - Quantum.Simulation
   namespace: rwby.core.systems
@@ -102,7 +112,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Update
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GenericGamemodeStateSystem.cs
-    startLine: 34
+    startLine: 36
   assemblies:
   - Quantum.Simulation
   namespace: rwby.core.systems
@@ -135,7 +145,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SetStateDelayed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GenericGamemodeStateSystem.cs
-    startLine: 85
+    startLine: 87
   assemblies:
   - Quantum.Simulation
   namespace: rwby.core.systems
@@ -168,7 +178,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SetState
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GenericGamemodeStateSystem.cs
-    startLine: 93
+    startLine: 95
   assemblies:
   - Quantum.Simulation
   namespace: rwby.core.systems
@@ -199,7 +209,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnAdded
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GenericGamemodeStateSystem.cs
-    startLine: 100
+    startLine: 102
   assemblies:
   - Quantum.Simulation
   namespace: rwby.core.systems
@@ -239,7 +249,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnRemoved
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GenericGamemodeStateSystem.cs
-    startLine: 105
+    startLine: 107
   assemblies:
   - Quantum.Simulation
   namespace: rwby.core.systems

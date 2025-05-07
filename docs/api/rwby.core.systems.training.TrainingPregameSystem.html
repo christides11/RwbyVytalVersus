@@ -102,7 +102,7 @@ Class TrainingPregameSystem  <a class="header-action link-secondary" title="View
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Preserve]
-public class TrainingPregameSystem : SystemSignalsOnly, IGameStateGroupPregame, IGameStateGroup, ISignalOnPlayerAdded, ISignal</code></pre>
+public class TrainingPregameSystem : SystemSignalsOnly, IGameStateGroupPregame, IGameStateGroup, ISignalOnPlayerAdded, ISignalOnComponentAdded&lt;GamemodeParticipantsGlobal&gt;, ISignalOnComponentRemoved&lt;GamemodeParticipantsGlobal&gt;, ISignal</code></pre>
   </div>
 
 
@@ -124,6 +124,8 @@ public class TrainingPregameSystem : SystemSignalsOnly, IGameStateGroupPregame, 
       <div><a class="xref" href="Quantum.IGameStateGroupPregame.html">IGameStateGroupPregame</a></div>
       <div><a class="xref" href="Quantum.IGameStateGroup.html">IGameStateGroup</a></div>
       <div><a class="xref" href="Quantum.ISignalOnPlayerAdded.html">ISignalOnPlayerAdded</a></div>
+      <div><a class="xref" href="Quantum.ISignalOnComponentAdded-1.html">ISignalOnComponentAdded</a>&lt;<a class="xref" href="Quantum.GamemodeParticipantsGlobal.html">GamemodeParticipantsGlobal</a>&gt;</div>
+      <div><a class="xref" href="Quantum.ISignalOnComponentRemoved-1.html">ISignalOnComponentRemoved</a>&lt;<a class="xref" href="Quantum.GamemodeParticipantsGlobal.html">GamemodeParticipantsGlobal</a>&gt;</div>
       <div><span class="xref">ISignal</span></div>
     </dd>
   </dl>
@@ -203,6 +205,45 @@ public class TrainingPregameSystem : SystemSignalsOnly, IGameStateGroupPregame, 
 </h2>
 
 
+  <a id="rwby_core_systems_training_TrainingPregameSystem_OnAdded_" data-uid="rwby.core.systems.training.TrainingPregameSystem.OnAdded*"></a>
+
+  <h3 id="rwby_core_systems_training_TrainingPregameSystem_OnAdded_Quantum_Frame_Quantum_EntityRef_Quantum_GamemodeParticipantsGlobal__" data-uid="rwby.core.systems.training.TrainingPregameSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)">
+  OnAdded(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingPregameSystem.cs&amp;version=GBdev&amp;line=144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The signal is called after a component of the desired type has been added to an entity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnAdded(Frame f, EntityRef entity, GamemodeParticipantsGlobal* component)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>f</code> <a class="xref" href="Quantum.Frame.html">Frame</a></dt>
+    <dd><p>The frame reference.</p>
+</dd>
+    <dt><code>entity</code> <span class="xref">EntityRef</span></dt>
+    <dd><p>The entity that the component was added to.</p>
+</dd>
+    <dt><code>component</code> <a class="xref" href="Quantum.GamemodeParticipantsGlobal.html">GamemodeParticipantsGlobal</a>*</dt>
+    <dd><p>The component that was added.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="rwby_core_systems_training_TrainingPregameSystem_OnEnabled_" data-uid="rwby.core.systems.training.TrainingPregameSystem.OnEnabled*"></a>
 
   <h3 id="rwby_core_systems_training_TrainingPregameSystem_OnEnabled_Quantum_Frame_" data-uid="rwby.core.systems.training.TrainingPregameSystem.OnEnabled(Quantum.Frame)">
@@ -241,7 +282,7 @@ or during <a class="xref" href="Quantum.QuantumGame.html#Quantum_QuantumGame_Ini
 
   <h3 id="rwby_core_systems_training_TrainingPregameSystem_OnPlayerAdded_Quantum_Frame_Quantum_PlayerRef_System_Boolean_" data-uid="rwby.core.systems.training.TrainingPregameSystem.OnPlayerAdded(Quantum.Frame,Quantum.PlayerRef,System.Boolean)">
   OnPlayerAdded(Frame, PlayerRef, bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingPregameSystem.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingPregameSystem.cs&amp;version=GBdev&amp;line=39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This signal is called when a player was successfully added to the simulation
@@ -263,6 +304,45 @@ and the server accepted the RuntimePlayer data.</p>
 </dd>
     <dt><code>firstTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p>The first time that this player ref was assigned to a player at all. When firstTime is false the player ref is being reused by a different player. See documentation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="rwby_core_systems_training_TrainingPregameSystem_OnRemoved_" data-uid="rwby.core.systems.training.TrainingPregameSystem.OnRemoved*"></a>
+
+  <h3 id="rwby_core_systems_training_TrainingPregameSystem_OnRemoved_Quantum_Frame_Quantum_EntityRef_Quantum_GamemodeParticipantsGlobal__" data-uid="rwby.core.systems.training.TrainingPregameSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)">
+  OnRemoved(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingPregameSystem.cs&amp;version=GBdev&amp;line=192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The signal is called after a component of the desired type has been removed from an entity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnRemoved(Frame f, EntityRef entity, GamemodeParticipantsGlobal* component)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>f</code> <a class="xref" href="Quantum.Frame.html">Frame</a></dt>
+    <dd><p>The frame reference.</p>
+</dd>
+    <dt><code>entity</code> <span class="xref">EntityRef</span></dt>
+    <dd><p>The entity that the component was removed from.</p>
+</dd>
+    <dt><code>component</code> <a class="xref" href="Quantum.GamemodeParticipantsGlobal.html">GamemodeParticipantsGlobal</a>*</dt>
+    <dd><p>The component that was removed.</p>
 </dd>
   </dl>
 

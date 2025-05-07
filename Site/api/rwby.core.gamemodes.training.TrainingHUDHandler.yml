@@ -5,18 +5,26 @@ items:
   id: TrainingHUDHandler
   parent: rwby.core.gamemodes.training
   children:
+  - rwby.core.gamemodes.training.TrainingHUDHandler.DisableAllUI
   - rwby.core.gamemodes.training.TrainingHUDHandler.GetLocalPlayerFighterDefinition
-  - rwby.core.gamemodes.training.TrainingHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,System.Int32,System.Int32)
+  - rwby.core.gamemodes.training.TrainingHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,Quantum.PlayerRef)
+  - rwby.core.gamemodes.training.TrainingHUDHandler.SetCamera(UnityEngine.Camera)
+  - rwby.core.gamemodes.training.TrainingHUDHandler.SetUITarget(Quantum.QuantumGame,Quantum.EntityRef)
+  - rwby.core.gamemodes.training.TrainingHUDHandler.Setup
+  - rwby.core.gamemodes.training.TrainingHUDHandler.SetupCharactersUI(IFighterDefinition[])
   - rwby.core.gamemodes.training.TrainingHUDHandler.Teardown
-  - rwby.core.gamemodes.training.TrainingHUDHandler.globalPlayerID
+  - rwby.core.gamemodes.training.TrainingHUDHandler.UpdateUITarget(Quantum.QuantumGame)
+  - rwby.core.gamemodes.training.TrainingHUDHandler.hudElementFrameMeter
+  - rwby.core.gamemodes.training.TrainingHUDHandler.hudElementsByFighterDef
   - rwby.core.gamemodes.training.TrainingHUDHandler.localPlayer
-  - rwby.core.gamemodes.training.TrainingHUDHandler.localPlayerID
   - rwby.core.gamemodes.training.TrainingHUDHandler.mainCanvas
   - rwby.core.gamemodes.training.TrainingHUDHandler.mainCanvasGroup
   - rwby.core.gamemodes.training.TrainingHUDHandler.matchHandler
   - rwby.core.gamemodes.training.TrainingHUDHandler.overheadHudReference
+  - rwby.core.gamemodes.training.TrainingHUDHandler.participantId
   - rwby.core.gamemodes.training.TrainingHUDHandler.pauseMenuCanvas
   - rwby.core.gamemodes.training.TrainingHUDHandler.pauseMenuHandler
+  - rwby.core.gamemodes.training.TrainingHUDHandler.playerRef
   langs:
   - csharp
   - vb
@@ -31,7 +39,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TrainingHUDHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -62,7 +70,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: mainCanvas
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -101,7 +109,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: mainCanvasGroup
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -140,7 +148,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: pauseMenuCanvas
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -167,7 +175,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: pauseMenuHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -194,7 +202,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: localPlayer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -203,60 +211,6 @@ items:
     return:
       type: Global.InputPlayerManager
     content.vb: Public localPlayer As InputPlayerManager
-- uid: rwby.core.gamemodes.training.TrainingHUDHandler.globalPlayerID
-  commentId: F:rwby.core.gamemodes.training.TrainingHUDHandler.globalPlayerID
-  id: globalPlayerID
-  parent: rwby.core.gamemodes.training.TrainingHUDHandler
-  langs:
-  - csharp
-  - vb
-  name: globalPlayerID
-  nameWithType: TrainingHUDHandler.globalPlayerID
-  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.globalPlayerID
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: globalPlayerID
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 17
-  assemblies:
-  - Assembly-CSharp
-  namespace: rwby.core.gamemodes.training
-  syntax:
-    content: public int globalPlayerID
-    return:
-      type: System.Int32
-    content.vb: Public globalPlayerID As Integer
-- uid: rwby.core.gamemodes.training.TrainingHUDHandler.localPlayerID
-  commentId: F:rwby.core.gamemodes.training.TrainingHUDHandler.localPlayerID
-  id: localPlayerID
-  parent: rwby.core.gamemodes.training.TrainingHUDHandler
-  langs:
-  - csharp
-  - vb
-  name: localPlayerID
-  nameWithType: TrainingHUDHandler.localPlayerID
-  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.localPlayerID
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: localPlayerID
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 18
-  assemblies:
-  - Assembly-CSharp
-  namespace: rwby.core.gamemodes.training
-  syntax:
-    content: public int localPlayerID
-    return:
-      type: System.Int32
-    content.vb: Public localPlayerID As Integer
 - uid: rwby.core.gamemodes.training.TrainingHUDHandler.matchHandler
   commentId: F:rwby.core.gamemodes.training.TrainingHUDHandler.matchHandler
   id: matchHandler
@@ -275,7 +229,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: matchHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -302,7 +256,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: overheadHudReference
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -311,16 +265,175 @@ items:
     return:
       type: rwby.ExternalModAssetSoftReference
     content.vb: Public overheadHudReference As ExternalModAssetSoftReference
-- uid: rwby.core.gamemodes.training.TrainingHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,System.Int32,System.Int32)
-  commentId: M:rwby.core.gamemodes.training.TrainingHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,System.Int32,System.Int32)
-  id: Initialize(UnityEngine.Camera,InputPlayerManager,System.Int32,System.Int32)
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.participantId
+  commentId: F:rwby.core.gamemodes.training.TrainingHUDHandler.participantId
+  id: participantId
   parent: rwby.core.gamemodes.training.TrainingHUDHandler
   langs:
   - csharp
   - vb
-  name: Initialize(Camera, InputPlayerManager, int, int)
-  nameWithType: TrainingHUDHandler.Initialize(Camera, InputPlayerManager, int, int)
-  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.Initialize(UnityEngine.Camera, InputPlayerManager, int, int)
+  name: participantId
+  nameWithType: TrainingHUDHandler.participantId
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.participantId
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: participantId
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+    startLine: 28
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public int participantId
+    return:
+      type: System.Int32
+    content.vb: >-
+      <NonSerialized>
+
+      Public participantId As Integer
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.playerRef
+  commentId: F:rwby.core.gamemodes.training.TrainingHUDHandler.playerRef
+  id: playerRef
+  parent: rwby.core.gamemodes.training.TrainingHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: playerRef
+  nameWithType: TrainingHUDHandler.playerRef
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.playerRef
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playerRef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+    startLine: 29
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public PlayerRef playerRef
+    return:
+      type: Quantum.PlayerRef
+    content.vb: >-
+      <NonSerialized>
+
+      Public playerRef As PlayerRef
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.hudElementsByFighterDef
+  commentId: F:rwby.core.gamemodes.training.TrainingHUDHandler.hudElementsByFighterDef
+  id: hudElementsByFighterDef
+  parent: rwby.core.gamemodes.training.TrainingHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: hudElementsByFighterDef
+  nameWithType: TrainingHUDHandler.hudElementsByFighterDef
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.hudElementsByFighterDef
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hudElementsByFighterDef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+    startLine: 31
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  syntax:
+    content: public Dictionary<IFighterDefinition, List<GameObject>> hudElementsByFighterDef
+    return:
+      type: System.Collections.Generic.Dictionary{IFighterDefinition,System.Collections.Generic.List{UnityEngine.GameObject}}
+    content.vb: Public hudElementsByFighterDef As Dictionary(Of IFighterDefinition, List(Of GameObject))
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.hudElementFrameMeter
+  commentId: F:rwby.core.gamemodes.training.TrainingHUDHandler.hudElementFrameMeter
+  id: hudElementFrameMeter
+  parent: rwby.core.gamemodes.training.TrainingHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: hudElementFrameMeter
+  nameWithType: TrainingHUDHandler.hudElementFrameMeter
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.hudElementFrameMeter
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hudElementFrameMeter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+    startLine: 33
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  syntax:
+    content: public HudElementFrameMeter hudElementFrameMeter
+    return:
+      type: rwby.core.HudElementFrameMeter
+    content.vb: Public hudElementFrameMeter As HudElementFrameMeter
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.Setup
+  commentId: M:rwby.core.gamemodes.training.TrainingHUDHandler.Setup
+  id: Setup
+  parent: rwby.core.gamemodes.training.TrainingHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: TrainingHUDHandler.Setup()
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.Setup()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Setup
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+    startLine: 39
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  summary: Load needed assets before the quantum game starts.
+  example: []
+  syntax:
+    content: public UniTask<bool> Setup()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+      description: ''
+    content.vb: Public Function Setup() As UniTask(Of Boolean)
+  overload: rwby.core.gamemodes.training.TrainingHUDHandler.Setup*
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,Quantum.PlayerRef)
+  commentId: M:rwby.core.gamemodes.training.TrainingHUDHandler.Initialize(UnityEngine.Camera,InputPlayerManager,Quantum.PlayerRef)
+  id: Initialize(UnityEngine.Camera,InputPlayerManager,Quantum.PlayerRef)
+  parent: rwby.core.gamemodes.training.TrainingHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: Initialize(Camera, InputPlayerManager, PlayerRef)
+  nameWithType: TrainingHUDHandler.Initialize(Camera, InputPlayerManager, PlayerRef)
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.Initialize(UnityEngine.Camera, InputPlayerManager, Quantum.PlayerRef)
   type: Method
   source:
     remote:
@@ -329,26 +442,168 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Initialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 27
+    startLine: 49
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
   syntax:
-    content: public void Initialize(Camera cam, InputPlayerManager inputPlayer, int localPlayerID, int globalPlayerID)
+    content: public void Initialize(Camera cam, InputPlayerManager inputPlayer, PlayerRef player)
     parameters:
     - id: cam
       type: UnityEngine.Camera
     - id: inputPlayer
       type: Global.InputPlayerManager
-    - id: localPlayerID
-      type: System.Int32
-    - id: globalPlayerID
-      type: System.Int32
-    content.vb: Public Sub Initialize(cam As Camera, inputPlayer As InputPlayerManager, localPlayerID As Integer, globalPlayerID As Integer)
+    - id: player
+      type: Quantum.PlayerRef
+    content.vb: Public Sub Initialize(cam As Camera, inputPlayer As InputPlayerManager, player As PlayerRef)
   overload: rwby.core.gamemodes.training.TrainingHUDHandler.Initialize*
-  nameWithType.vb: TrainingHUDHandler.Initialize(Camera, InputPlayerManager, Integer, Integer)
-  fullName.vb: rwby.core.gamemodes.training.TrainingHUDHandler.Initialize(UnityEngine.Camera, InputPlayerManager, Integer, Integer)
-  name.vb: Initialize(Camera, InputPlayerManager, Integer, Integer)
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.SetCamera(UnityEngine.Camera)
+  commentId: M:rwby.core.gamemodes.training.TrainingHUDHandler.SetCamera(UnityEngine.Camera)
+  id: SetCamera(UnityEngine.Camera)
+  parent: rwby.core.gamemodes.training.TrainingHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: SetCamera(Camera)
+  nameWithType: TrainingHUDHandler.SetCamera(Camera)
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.SetCamera(UnityEngine.Camera)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetCamera
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+    startLine: 86
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  syntax:
+    content: public void SetCamera(Camera cam)
+    parameters:
+    - id: cam
+      type: UnityEngine.Camera
+    content.vb: Public Sub SetCamera(cam As Camera)
+  overload: rwby.core.gamemodes.training.TrainingHUDHandler.SetCamera*
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.SetupCharactersUI(IFighterDefinition[])
+  commentId: M:rwby.core.gamemodes.training.TrainingHUDHandler.SetupCharactersUI(IFighterDefinition[])
+  id: SetupCharactersUI(IFighterDefinition[])
+  parent: rwby.core.gamemodes.training.TrainingHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: SetupCharactersUI(IFighterDefinition[])
+  nameWithType: TrainingHUDHandler.SetupCharactersUI(IFighterDefinition[])
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.SetupCharactersUI(IFighterDefinition[])
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetupCharactersUI
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+    startLine: 92
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  syntax:
+    content: public void SetupCharactersUI(IFighterDefinition[] fighterDefinitions)
+    parameters:
+    - id: fighterDefinitions
+      type: Global.IFighterDefinition[]
+    content.vb: Public Sub SetupCharactersUI(fighterDefinitions As IFighterDefinition())
+  overload: rwby.core.gamemodes.training.TrainingHUDHandler.SetupCharactersUI*
+  nameWithType.vb: TrainingHUDHandler.SetupCharactersUI(IFighterDefinition())
+  fullName.vb: rwby.core.gamemodes.training.TrainingHUDHandler.SetupCharactersUI(IFighterDefinition())
+  name.vb: SetupCharactersUI(IFighterDefinition())
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.UpdateUITarget(Quantum.QuantumGame)
+  commentId: M:rwby.core.gamemodes.training.TrainingHUDHandler.UpdateUITarget(Quantum.QuantumGame)
+  id: UpdateUITarget(Quantum.QuantumGame)
+  parent: rwby.core.gamemodes.training.TrainingHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: UpdateUITarget(QuantumGame)
+  nameWithType: TrainingHUDHandler.UpdateUITarget(QuantumGame)
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.UpdateUITarget(Quantum.QuantumGame)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdateUITarget
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+    startLine: 141
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  syntax:
+    content: public void UpdateUITarget(QuantumGame game)
+    parameters:
+    - id: game
+      type: Quantum.QuantumGame
+    content.vb: Public Sub UpdateUITarget(game As QuantumGame)
+  overload: rwby.core.gamemodes.training.TrainingHUDHandler.UpdateUITarget*
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.SetUITarget(Quantum.QuantumGame,Quantum.EntityRef)
+  commentId: M:rwby.core.gamemodes.training.TrainingHUDHandler.SetUITarget(Quantum.QuantumGame,Quantum.EntityRef)
+  id: SetUITarget(Quantum.QuantumGame,Quantum.EntityRef)
+  parent: rwby.core.gamemodes.training.TrainingHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: SetUITarget(QuantumGame, EntityRef)
+  nameWithType: TrainingHUDHandler.SetUITarget(QuantumGame, EntityRef)
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.SetUITarget(Quantum.QuantumGame, Quantum.EntityRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetUITarget
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+    startLine: 153
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  syntax:
+    content: public void SetUITarget(QuantumGame game, EntityRef entityRef)
+    parameters:
+    - id: game
+      type: Quantum.QuantumGame
+    - id: entityRef
+      type: Quantum.EntityRef
+    content.vb: Public Sub SetUITarget(game As QuantumGame, entityRef As EntityRef)
+  overload: rwby.core.gamemodes.training.TrainingHUDHandler.SetUITarget*
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.DisableAllUI
+  commentId: M:rwby.core.gamemodes.training.TrainingHUDHandler.DisableAllUI
+  id: DisableAllUI
+  parent: rwby.core.gamemodes.training.TrainingHUDHandler
+  langs:
+  - csharp
+  - vb
+  name: DisableAllUI()
+  nameWithType: TrainingHUDHandler.DisableAllUI()
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.DisableAllUI()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DisableAllUI
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
+    startLine: 181
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core.gamemodes.training
+  syntax:
+    content: public void DisableAllUI()
+    content.vb: Public Sub DisableAllUI()
+  overload: rwby.core.gamemodes.training.TrainingHUDHandler.DisableAllUI*
 - uid: rwby.core.gamemodes.training.TrainingHUDHandler.Teardown
   commentId: M:rwby.core.gamemodes.training.TrainingHUDHandler.Teardown
   id: Teardown
@@ -367,7 +622,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Teardown
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 113
+    startLine: 206
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -393,7 +648,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetLocalPlayerFighterDefinition
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/View/TrainingHUDHandler.cs
-    startLine: 134
+    startLine: 241
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training
@@ -567,17 +822,6 @@ references:
   name: InputPlayerManager
   nameWithType: InputPlayerManager
   fullName: InputPlayerManager
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: rwby.core.gamemodes.training.TrainingMatchHandler
   commentId: T:rwby.core.gamemodes.training.TrainingMatchHandler
   parent: rwby.core.gamemodes.training
@@ -598,9 +842,282 @@ references:
   name: rwby
   nameWithType: rwby
   fullName: rwby
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
+  parent: Quantum
+  isExternal: true
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Collections.Generic.Dictionary{IFighterDefinition,System.Collections.Generic.List{UnityEngine.GameObject}}
+  commentId: T:System.Collections.Generic.Dictionary{IFighterDefinition,System.Collections.Generic.List{UnityEngine.GameObject}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<IFighterDefinition, List<GameObject>>
+  nameWithType: Dictionary<IFighterDefinition, List<GameObject>>
+  fullName: System.Collections.Generic.Dictionary<IFighterDefinition, System.Collections.Generic.List<UnityEngine.GameObject>>
+  nameWithType.vb: Dictionary(Of IFighterDefinition, List(Of GameObject))
+  fullName.vb: System.Collections.Generic.Dictionary(Of IFighterDefinition, System.Collections.Generic.List(Of UnityEngine.GameObject))
+  name.vb: Dictionary(Of IFighterDefinition, List(Of GameObject))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: rwby.core.HudElementFrameMeter
+  commentId: T:rwby.core.HudElementFrameMeter
+  parent: rwby.core
+  href: rwby.core.HudElementFrameMeter.html
+  name: HudElementFrameMeter
+  nameWithType: HudElementFrameMeter
+  fullName: rwby.core.HudElementFrameMeter
+- uid: rwby.core
+  commentId: N:rwby.core
+  href: rwby.html
+  name: rwby.core
+  nameWithType: rwby.core
+  fullName: rwby.core
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.Setup*
+  commentId: Overload:rwby.core.gamemodes.training.TrainingHUDHandler.Setup
+  href: rwby.core.gamemodes.training.TrainingHUDHandler.html#rwby_core_gamemodes_training_TrainingHUDHandler_Setup
+  name: Setup
+  nameWithType: TrainingHUDHandler.Setup
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.Setup
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
 - uid: rwby.core.gamemodes.training.TrainingHUDHandler.Initialize*
   commentId: Overload:rwby.core.gamemodes.training.TrainingHUDHandler.Initialize
-  href: rwby.core.gamemodes.training.TrainingHUDHandler.html#rwby_core_gamemodes_training_TrainingHUDHandler_Initialize_UnityEngine_Camera_InputPlayerManager_System_Int32_System_Int32_
+  href: rwby.core.gamemodes.training.TrainingHUDHandler.html#rwby_core_gamemodes_training_TrainingHUDHandler_Initialize_UnityEngine_Camera_InputPlayerManager_Quantum_PlayerRef_
   name: Initialize
   nameWithType: TrainingHUDHandler.Initialize
   fullName: rwby.core.gamemodes.training.TrainingHUDHandler.Initialize
@@ -611,6 +1128,71 @@ references:
   name: Camera
   nameWithType: Camera
   fullName: UnityEngine.Camera
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.SetCamera*
+  commentId: Overload:rwby.core.gamemodes.training.TrainingHUDHandler.SetCamera
+  href: rwby.core.gamemodes.training.TrainingHUDHandler.html#rwby_core_gamemodes_training_TrainingHUDHandler_SetCamera_UnityEngine_Camera_
+  name: SetCamera
+  nameWithType: TrainingHUDHandler.SetCamera
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.SetCamera
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.SetupCharactersUI*
+  commentId: Overload:rwby.core.gamemodes.training.TrainingHUDHandler.SetupCharactersUI
+  href: rwby.core.gamemodes.training.TrainingHUDHandler.html#rwby_core_gamemodes_training_TrainingHUDHandler_SetupCharactersUI_IFighterDefinition___
+  name: SetupCharactersUI
+  nameWithType: TrainingHUDHandler.SetupCharactersUI
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.SetupCharactersUI
+- uid: Global.IFighterDefinition[]
+  isExternal: true
+  href: IFighterDefinition.html
+  name: IFighterDefinition[]
+  nameWithType: IFighterDefinition[]
+  fullName: IFighterDefinition[]
+  nameWithType.vb: IFighterDefinition()
+  fullName.vb: IFighterDefinition()
+  name.vb: IFighterDefinition()
+  spec.csharp:
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+    href: IFighterDefinition.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+    href: IFighterDefinition.html
+  - name: (
+  - name: )
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.UpdateUITarget*
+  commentId: Overload:rwby.core.gamemodes.training.TrainingHUDHandler.UpdateUITarget
+  href: rwby.core.gamemodes.training.TrainingHUDHandler.html#rwby_core_gamemodes_training_TrainingHUDHandler_UpdateUITarget_Quantum_QuantumGame_
+  name: UpdateUITarget
+  nameWithType: TrainingHUDHandler.UpdateUITarget
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.UpdateUITarget
+- uid: Quantum.QuantumGame
+  commentId: T:Quantum.QuantumGame
+  parent: Quantum
+  href: Quantum.QuantumGame.html
+  name: QuantumGame
+  nameWithType: QuantumGame
+  fullName: Quantum.QuantumGame
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.SetUITarget*
+  commentId: Overload:rwby.core.gamemodes.training.TrainingHUDHandler.SetUITarget
+  href: rwby.core.gamemodes.training.TrainingHUDHandler.html#rwby_core_gamemodes_training_TrainingHUDHandler_SetUITarget_Quantum_QuantumGame_Quantum_EntityRef_
+  name: SetUITarget
+  nameWithType: TrainingHUDHandler.SetUITarget
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.SetUITarget
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: rwby.core.gamemodes.training.TrainingHUDHandler.DisableAllUI*
+  commentId: Overload:rwby.core.gamemodes.training.TrainingHUDHandler.DisableAllUI
+  href: rwby.core.gamemodes.training.TrainingHUDHandler.html#rwby_core_gamemodes_training_TrainingHUDHandler_DisableAllUI
+  name: DisableAllUI
+  nameWithType: TrainingHUDHandler.DisableAllUI
+  fullName: rwby.core.gamemodes.training.TrainingHUDHandler.DisableAllUI
 - uid: rwby.core.gamemodes.training.TrainingHUDHandler.Teardown*
   commentId: Overload:rwby.core.gamemodes.training.TrainingHUDHandler.Teardown
   href: rwby.core.gamemodes.training.TrainingHUDHandler.html#rwby_core_gamemodes_training_TrainingHUDHandler_Teardown

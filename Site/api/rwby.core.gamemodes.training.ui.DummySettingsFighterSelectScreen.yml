@@ -8,9 +8,9 @@ items:
   - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.FillCharacters
   - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.TryClose(rwby.ui.MenuDirection,System.Boolean)
-  - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.dummySettingsHandler
   - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.fighterItemPrefab
   - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.fightersPerPage
+  - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.handlerDummySettingsMenu
   - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.onFighterSelected
   - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.page
   - rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.pauseMenuHandler
@@ -30,7 +30,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: DummySettingsFighterSelectScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -47,7 +47,8 @@ items:
   implements:
   - rwby.ui.IMenu
   inheritedMembers:
-  - rwby.ui.MenuBase.currentHandler
+  - rwby.ui.MenuBase.MenuHandler
+  - rwby.ui.MenuBase.history
 - uid: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.onFighterSelected
   commentId: F:rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.onFighterSelected
   id: onFighterSelected
@@ -66,7 +67,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: onFighterSelected
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -93,7 +94,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: page
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -120,7 +121,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: fightersPerPage
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -147,7 +148,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: scrollRect
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -174,7 +175,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: fighterItemPrefab
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -201,7 +202,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: pauseMenuHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -210,33 +211,45 @@ items:
     return:
       type: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
     content.vb: Public pauseMenuHandler As TrainingPauseMenuHandler
-- uid: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.dummySettingsHandler
-  commentId: F:rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.dummySettingsHandler
-  id: dummySettingsHandler
+- uid: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.handlerDummySettingsMenu
+  commentId: F:rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.handlerDummySettingsMenu
+  id: handlerDummySettingsMenu
   parent: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen
   langs:
   - csharp
   - vb
-  name: dummySettingsHandler
-  nameWithType: DummySettingsFighterSelectScreen.dummySettingsHandler
-  fullName: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.dummySettingsHandler
+  name: handlerDummySettingsMenu
+  nameWithType: DummySettingsFighterSelectScreen.handlerDummySettingsMenu
+  fullName: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.handlerDummySettingsMenu
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: dummySettingsHandler
+    id: handlerDummySettingsMenu
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
   syntax:
-    content: public PauseMenuDummySettingsHandler dummySettingsHandler
+    content: >-
+      [FormerlySerializedAs("dummySettingsHandler")]
+
+      public PauseMenuHandlerDummySettingsMenu handlerDummySettingsMenu
     return:
-      type: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
-    content.vb: Public dummySettingsHandler As PauseMenuDummySettingsHandler
+      type: rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
+    content.vb: >-
+      <FormerlySerializedAs("dummySettingsHandler")>
+
+      Public handlerDummySettingsMenu As PauseMenuHandlerDummySettingsMenu
+  attributes:
+  - type: UnityEngine.Serialization.FormerlySerializedAsAttribute
+    ctor: UnityEngine.Serialization.FormerlySerializedAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: dummySettingsHandler
 - uid: rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.selectingDummyIndex
   commentId: F:rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.selectingDummyIndex
   id: selectingDummyIndex
@@ -255,7 +268,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: selectingDummyIndex
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -282,7 +295,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Open
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 27
+    startLine: 28
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -315,7 +328,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryClose
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 35
+    startLine: 36
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -353,7 +366,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: FillCharacters
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs
-    startLine: 57
+    startLine: 58
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core.gamemodes.training.ui
@@ -461,13 +474,20 @@ references:
   name: IMenu
   nameWithType: IMenu
   fullName: rwby.ui.IMenu
-- uid: rwby.ui.MenuBase.currentHandler
-  commentId: F:rwby.ui.MenuBase.currentHandler
+- uid: rwby.ui.MenuBase.MenuHandler
+  commentId: P:rwby.ui.MenuBase.MenuHandler
   parent: rwby.ui.MenuBase
-  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_currentHandler
-  name: currentHandler
-  nameWithType: MenuBase.currentHandler
-  fullName: rwby.ui.MenuBase.currentHandler
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_MenuHandler
+  name: MenuHandler
+  nameWithType: MenuBase.MenuHandler
+  fullName: rwby.ui.MenuBase.MenuHandler
+- uid: rwby.ui.MenuBase.history
+  commentId: F:rwby.ui.MenuBase.history
+  parent: rwby.ui.MenuBase
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_history
+  name: history
+  nameWithType: MenuBase.history
+  fullName: rwby.ui.MenuBase.history
 - uid: System
   commentId: N:System
   isExternal: true
@@ -580,13 +600,13 @@ references:
   name: TrainingPauseMenuHandler
   nameWithType: TrainingPauseMenuHandler
   fullName: rwby.core.gamemodes.training.ui.TrainingPauseMenuHandler
-- uid: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
-  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
+- uid: rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
+  commentId: T:rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
   parent: rwby.core.gamemodes.training.ui
-  href: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.html
-  name: PauseMenuDummySettingsHandler
-  nameWithType: PauseMenuDummySettingsHandler
-  fullName: rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler
+  href: rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu.html
+  name: PauseMenuHandlerDummySettingsMenu
+  nameWithType: PauseMenuHandlerDummySettingsMenu
+  fullName: rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu
 - uid: rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   commentId: M:rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   parent: rwby.ui.MenuBase

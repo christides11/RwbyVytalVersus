@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DotNetSessionRunner | Rwby Vytal Versus Documentation ">
       
-      <meta name="description" content="This class implements the  interface and contains code to glue together the Quantum server and Quantum session runner. This was formerly part of the Quantum Server SDK.">
+      <meta name="description" content="This class implements the  interface and contains code to glue together the Quantum server and Quantum session runner. This was formerly part of the Quantum Server SDK. The class will also work without running the server simulation only as wrapper for access to custom simulation code as resource manager and command serialization for example.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Quantum_DotNetSessionRunner" data-uid="Quantum.DotNetSessionRunner" class="text-break">
-Class DotNetSessionRunner  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6938"><i class="bi bi-code-slash"></i></a>
+Class DotNetSessionRunner  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7149"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,8 @@ Class DotNetSessionRunner  <a class="header-action link-secondary" title="View s
   </div>
 
   <div class="markdown summary"><p>This class implements the <span class="xref">Photon.Deterministic.IDeterministicSessionRunner</span> interface and contains code to glue together the Quantum server and Quantum session runner.
-This was formerly part of the Quantum Server SDK.</p>
+This was formerly part of the Quantum Server SDK.
+The class will also work without running the server simulation only as wrapper for access to custom simulation code as resource manager and command serialization for example.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -133,7 +134,7 @@ This was formerly part of the Quantum Server SDK.</p>
 
   <h3 id="Quantum_DotNetSessionRunner_AssetSerializer" data-uid="Quantum.DotNetSessionRunner.AssetSerializer">
   AssetSerializer
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6949"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get and set the AssetSerializer directly after <span class="xref">Photon.Deterministic.IDeterministicSessionRunner</span> creation, until it is possible to pass it internally.</p>
@@ -165,7 +166,7 @@ This was formerly part of the Quantum Server SDK.</p>
 
   <h3 id="Quantum_DotNetSessionRunner_CallbackDispatcher" data-uid="Quantum.DotNetSessionRunner.CallbackDispatcher">
   CallbackDispatcher
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6970"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Access Quantum callbacks.</p>
@@ -193,44 +194,11 @@ This was formerly part of the Quantum Server SDK.</p>
 
 
 
-  <a id="Quantum_DotNetSessionRunner_CustomResourceManager_" data-uid="Quantum.DotNetSessionRunner.CustomResourceManager*"></a>
-
-  <h3 id="Quantum_DotNetSessionRunner_CustomResourceManager" data-uid="Quantum.DotNetSessionRunner.CustomResourceManager">
-  CustomResourceManager
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6955"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Assign a custom resource manager which will use the cached static resource manager as <span class="xref">Quantum.ResourceManagerStatic.FallbackResourceManager</span>.
-Must be set right after creation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResourceManagerStatic CustomResourceManager { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">ResourceManagerStatic</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="Quantum_DotNetSessionRunner_EventDispatcher_" data-uid="Quantum.DotNetSessionRunner.EventDispatcher*"></a>
 
   <h3 id="Quantum_DotNetSessionRunner_EventDispatcher" data-uid="Quantum.DotNetSessionRunner.EventDispatcher">
   EventDispatcher
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6965"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Access Quantum events.</p>
@@ -258,11 +226,44 @@ Must be set right after creation.</p>
 
 
 
+  <a id="Quantum_DotNetSessionRunner_InitialDynamicAssetDB_" data-uid="Quantum.DotNetSessionRunner.InitialDynamicAssetDB*"></a>
+
+  <h3 id="Quantum_DotNetSessionRunner_InitialDynamicAssetDB" data-uid="Quantum.DotNetSessionRunner.InitialDynamicAssetDB">
+  InitialDynamicAssetDB
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Access the initial dynamic asset db, gets created after <a class="xref" href="Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_AddInitialDynamicAsset_Quantum_AssetObject_">AddInitialDynamicAsset(AssetObject)</a> was used.
+Will be disposed and nulled after <a class="xref" href="Quantum.DotNetSessionRunner.html#Quantum_DotNetSessionRunner_Start_Photon_Deterministic_DeterministicSessionRunnerStartArguments_">Start(DeterministicSessionRunnerStartArguments)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DynamicAssetDB InitialDynamicAssetDB { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">DynamicAssetDB</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Quantum_DotNetSessionRunner_OnGameResult_" data-uid="Quantum.DotNetSessionRunner.OnGameResult*"></a>
 
   <h3 id="Quantum_DotNetSessionRunner_OnGameResult" data-uid="Quantum.DotNetSessionRunner.OnGameResult">
   OnGameResult
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6975"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Callback raised on game result events from the simulation.</p>
@@ -294,7 +295,7 @@ Must be set right after creation.</p>
 
   <h3 id="Quantum_DotNetSessionRunner_Runner" data-uid="Quantum.DotNetSessionRunner.Runner">
   Runner
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6960"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Grants access to the Quantum session runner.</p>
@@ -322,32 +323,70 @@ Must be set right after creation.</p>
 
 
 
-  <h2 class="section" id="methods">Methods
-</h2>
+  <a id="Quantum_DotNetSessionRunner_Session_" data-uid="Quantum.DotNetSessionRunner.Session*"></a>
 
-
-  <a id="Quantum_DotNetSessionRunner_Init_" data-uid="Quantum.DotNetSessionRunner.Init*"></a>
-
-  <h3 id="Quantum_DotNetSessionRunner_Init_Photon_Deterministic_DeterministicSessionRunnerInitArguments_" data-uid="Quantum.DotNetSessionRunner.Init(Photon.Deterministic.DeterministicSessionRunnerInitArguments)">
-  Init(DeterministicSessionRunnerInitArguments)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6981"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Quantum_DotNetSessionRunner_Session" data-uid="Quantum.DotNetSessionRunner.Session">
+  Session
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7190"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initialized the server simulation. It initializes static classes like FPLut, Native.Utils and instantiates a static resource manager that is shared over multiple server simulations.
-This method throws exceptions on errors.</p>
+  <div class="markdown level1 summary"><p>Returns the session.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Init(DeterministicSessionRunnerInitArguments args)</code></pre>
+    <pre><code class="lang-csharp hljs">public DeterministicSession Session { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">DeterministicSession</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quantum_DotNetSessionRunner_AddInitialDynamicAsset_" data-uid="Quantum.DotNetSessionRunner.AddInitialDynamicAsset*"></a>
+
+  <h3 id="Quantum_DotNetSessionRunner_AddInitialDynamicAsset_Quantum_AssetObject_" data-uid="Quantum.DotNetSessionRunner.AddInitialDynamicAsset(Quantum.AssetObject)">
+  AddInitialDynamicAsset(AssetObject)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add an initial dynamic asset. Needs to be performed before the simulation starts. Use DeterministicServer.OnDeterministicSessionCanStart().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetGuid AddInitialDynamicAsset(AssetObject asset)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>args</code> <span class="xref">DeterministicSessionRunnerInitArguments</span></dt>
-    <dd></dd>
+    <dt><code>asset</code> <span class="xref">AssetObject</span></dt>
+    <dd><p>Asset to add to initial dynamic asset db.</p>
+</dd>
   </dl>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AssetGuid</span></dt>
+    <dd><p>Guid of the asset or invalid guid when the simulation has already been started.</p>
+</dd>
+  </dl>
 
 
 
@@ -363,7 +402,7 @@ This method throws exceptions on errors.</p>
 
   <h3 id="Quantum_DotNetSessionRunner_Service_System_Double_" data-uid="Quantum.DotNetSessionRunner.Service(System.Double)">
   Service(double)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7097"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7285"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implements the server update callback.</p>
@@ -396,7 +435,7 @@ This method throws exceptions on errors.</p>
 
   <h3 id="Quantum_DotNetSessionRunner_Shutdown" data-uid="Quantum.DotNetSessionRunner.Shutdown">
   Shutdown()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7032"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Disposes the Quantum runner.</p>
@@ -423,7 +462,7 @@ This method throws exceptions on errors.</p>
 
   <h3 id="Quantum_DotNetSessionRunner_Start_Photon_Deterministic_DeterministicSessionRunnerStartArguments_" data-uid="Quantum.DotNetSessionRunner.Start(Photon.Deterministic.DeterministicSessionRunnerStartArguments)">
   Start(DeterministicSessionRunnerStartArguments)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7053"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implements the start of the Quantum online session. Instantiates a Quantum runner.</p>
@@ -456,7 +495,7 @@ This method throws exceptions on errors.</p>
 
   <h3 id="Quantum_DotNetSessionRunner_TryCreateSnapshot_System_Int32__System_Byte____" data-uid="Quantum.DotNetSessionRunner.TryCreateSnapshot(System.Int32@,System.Byte[]@)">
   TryCreateSnapshot(ref int, ref byte[])
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7310"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implements the server snapshot requested callback.
@@ -500,7 +539,7 @@ Which will bypass requesting buddy snapshots from other clients.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6938" class="edit-link">Edit this page</a>
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=7149" class="edit-link">Edit this page</a>
         </div>
 
 

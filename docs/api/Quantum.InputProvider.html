@@ -89,7 +89,7 @@
 
 
   <h1 id="Quantum_InputProvider" data-uid="Quantum.InputProvider" class="text-break">
-Class InputProvider  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5914"><i class="bi bi-code-slash"></i></a>
+Class InputProvider  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5970"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -132,9 +132,9 @@ which uses a large memory footprint.</p>
 
   <a id="Quantum_InputProvider__ctor_" data-uid="Quantum.InputProvider.#ctor*"></a>
 
-  <h3 id="Quantum_InputProvider__ctor_Photon_Deterministic_DeterministicSessionConfig_System_Int32_System_Int32_" data-uid="Quantum.InputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32,System.Int32)">
-  InputProvider(DeterministicSessionConfig, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5928"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Quantum_InputProvider__ctor_Photon_Deterministic_DeterministicSessionConfig_System_Int32_System_Int32_System_Int32_" data-uid="Quantum.InputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32,System.Int32,System.Int32)">
+  InputProvider(DeterministicSessionConfig, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5991"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Construct an input provider with a given capacity and grow size.</p>
@@ -142,7 +142,7 @@ which uses a large memory footprint.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputProvider(DeterministicSessionConfig config, int capacity = 3600, int growSize = 0)</code></pre>
+    <pre><code class="lang-csharp hljs">public InputProvider(DeterministicSessionConfig config, int capacity = 3600, int growSize = 0, int localActorNumber = 0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -155,6 +155,9 @@ which uses a large memory footprint.</p>
 </dd>
     <dt><code>growSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The grow size, 0 means doubling the buffer</p>
+</dd>
+    <dt><code>localActorNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The actor number of the client that recoded the replay.</p>
 </dd>
   </dl>
 
@@ -173,7 +176,7 @@ which uses a large memory footprint.</p>
 
   <h3 id="Quantum_InputProvider__ctor_Photon_Deterministic_DeterministicTickInputSet___" data-uid="Quantum.InputProvider.#ctor(Photon.Deterministic.DeterministicTickInputSet[])">
   InputProvider(DeterministicTickInputSet[])
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5936"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6000"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Construct an input provider with a given list of inputs.</p>
@@ -204,9 +207,9 @@ which uses a large memory footprint.</p>
 
   <a id="Quantum_InputProvider__ctor_" data-uid="Quantum.InputProvider.#ctor*"></a>
 
-  <h3 id="Quantum_InputProvider__ctor_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Quantum.InputProvider.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
-  InputProvider(int, int, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5947"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Quantum_InputProvider__ctor_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Quantum.InputProvider.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+  InputProvider(int, int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6012"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Construct an input provider with a given player count, start frame, capacity and grow size.</p>
@@ -214,7 +217,7 @@ which uses a large memory footprint.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputProvider(int playerCount, int startFrame, int capacity, int growSize)</code></pre>
+    <pre><code class="lang-csharp hljs">public InputProvider(int playerCount, int startFrame, int capacity, int growSize, int localActorNumber = 0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -231,11 +234,50 @@ which uses a large memory footprint.</p>
     <dt><code>growSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The grow size, 0 means doubling the buffer</p>
 </dd>
+    <dt><code>localActorNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The actor number of the client that recoded the replay.</p>
+</dd>
   </dl>
 
 
 
 
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Quantum_InputProvider_LocalActorNumber_" data-uid="Quantum.InputProvider.LocalActorNumber*"></a>
+
+  <h3 id="Quantum_InputProvider_LocalActorNumber" data-uid="Quantum.InputProvider.LocalActorNumber">
+  LocalActorNumber
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5982"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The actor number of the client that recoded the replay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int LocalActorNumber { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -252,7 +294,7 @@ which uses a large memory footprint.</p>
 
   <h3 id="Quantum_InputProvider_AddRpc_System_Int32_System_Byte___System_Boolean_" data-uid="Quantum.InputProvider.AddRpc(System.Int32,System.Byte[],System.Boolean)">
   AddRpc(int, byte[], bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6067"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unused.</p>
@@ -288,7 +330,7 @@ which uses a large memory footprint.</p>
 
   <h3 id="Quantum_InputProvider_CanSimulate_System_Int32_" data-uid="Quantum.InputProvider.CanSimulate(System.Int32)">
   CanSimulate(int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5962"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6028"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns true if the input provider can simulate the given frame.</p>
@@ -327,7 +369,7 @@ which uses a large memory footprint.</p>
 
   <h3 id="Quantum_InputProvider_Clear_System_Int32_" data-uid="Quantum.InputProvider.Clear(System.Int32)">
   Clear(int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5976"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6042"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Clear all recorded inputs. Usually called after a resync.</p>
@@ -360,7 +402,7 @@ which uses a large memory footprint.</p>
 
   <h3 id="Quantum_InputProvider_ExportToList_System_Int32_" data-uid="Quantum.InputProvider.ExportToList(System.Int32)">
   ExportToList(int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6007"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6073"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Export the inputs to a list.</p>
@@ -399,7 +441,7 @@ which uses a large memory footprint.</p>
 
   <h3 id="Quantum_InputProvider_GetInput_System_Int32_System_Int32_" data-uid="Quantum.InputProvider.GetInput(System.Int32,System.Int32)">
   GetInput(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6092"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns input for a given frame and player.</p>
@@ -441,7 +483,7 @@ which uses a large memory footprint.</p>
 
   <h3 id="Quantum_InputProvider_GetRpc_System_Int32_System_Int32_" data-uid="Quantum.InputProvider.GetRpc(System.Int32,System.Int32)">
   GetRpc(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6076"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reads a rpc from the input provider.</p>
@@ -483,7 +525,7 @@ which uses a large memory footprint.</p>
 
   <h3 id="Quantum_InputProvider_ImportFromList_Photon_Deterministic_DeterministicTickInputSet___" data-uid="Quantum.InputProvider.ImportFromList(Photon.Deterministic.DeterministicTickInputSet[])">
   ImportFromList(DeterministicTickInputSet[])
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5990"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6056"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Import a list of inputs into the input provider.</p>
@@ -516,7 +558,7 @@ which uses a large memory footprint.</p>
 
   <h3 id="Quantum_InputProvider_InjectInput_Photon_Deterministic_DeterministicTickInput_System_Boolean_" data-uid="Quantum.InputProvider.InjectInput(Photon.Deterministic.DeterministicTickInput,System.Boolean)">
   InjectInput(DeterministicTickInput, bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6050"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Injects a random input.</p>
@@ -552,7 +594,7 @@ which uses a large memory footprint.</p>
 
   <h3 id="Quantum_InputProvider_OnInputConfirmed_Quantum_QuantumGame_Photon_Deterministic_DeterministicFrameInputTemp_" data-uid="Quantum.InputProvider.OnInputConfirmed(Quantum.QuantumGame,Photon.Deterministic.DeterministicFrameInputTemp)">
   OnInputConfirmed(QuantumGame, DeterministicFrameInputTemp)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6029"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6095"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This callback is called when an input was confirmed and can be recorded.</p>
@@ -588,7 +630,7 @@ which uses a large memory footprint.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5914" class="edit-link">Edit this page</a>
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=5970" class="edit-link">Edit this page</a>
         </div>
 
 

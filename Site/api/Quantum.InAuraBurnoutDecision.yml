@@ -28,17 +28,19 @@ items:
     content: >-
       [Serializable]
 
-      public class InAuraBurnoutDecision : HNSFStateDecision
+      public class InAuraBurnoutDecision : HNSFStateDecision, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class InAuraBurnoutDecision Inherits HNSFStateDecision
+      Public Class InAuraBurnoutDecision Inherits HNSFStateDecision Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.HNSFStateDecision
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateDecision.Label
   - Quantum.HNSFStateDecision.DecideThreadSafe(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -142,6 +144,13 @@ references:
   name: HNSFStateDecision
   nameWithType: HNSFStateDecision
   fullName: Quantum.HNSFStateDecision
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateDecision.Label
   commentId: F:Quantum.HNSFStateDecision.Label
   parent: Quantum.HNSFStateDecision

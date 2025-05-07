@@ -102,7 +102,7 @@ Class FindEnemyLeaf  <a class="header-action link-secondary" title="View source"
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class FindEnemyLeaf : BTLeaf</code></pre>
+public class FindEnemyLeaf : BTLeaf, ILogSource</code></pre>
   </div>
 
 
@@ -121,6 +121,12 @@ public class FindEnemyLeaf : BTLeaf</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ILogSource</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -230,14 +236,15 @@ public class FindEnemyLeaf : BTLeaf</code></pre>
 
   <h3 id="Quantum_FindEnemyLeaf_checkRadius" data-uid="Quantum.FindEnemyLeaf.checkRadius">
   checkRadius
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs&amp;version=GBdev&amp;line=10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs&amp;version=GBdev&amp;line=12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FP checkRadius</code></pre>
+    <pre><code class="lang-csharp hljs">[DrawIf(&quot;globalCheck&quot;, false, CompareOperator.Equal, DrawIfMode.ReadOnly)]
+public FP checkRadius</code></pre>
   </div>
 
 
@@ -288,9 +295,39 @@ public class FindEnemyLeaf : BTLeaf</code></pre>
 
 
 
+  <h3 id="Quantum_FindEnemyLeaf_globalCheck" data-uid="Quantum.FindEnemyLeaf.globalCheck">
+  globalCheck
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs&amp;version=GBdev&amp;line=10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool globalCheck</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Quantum_FindEnemyLeaf_layerMask" data-uid="Quantum.FindEnemyLeaf.layerMask">
   layerMask
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs&amp;version=GBdev&amp;line=11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs&amp;version=GBdev&amp;line=13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -355,7 +392,7 @@ public class FindEnemyLeaf : BTLeaf</code></pre>
 
   <h3 id="Quantum_FindEnemyLeaf_Init_Quantum_BTParams_Quantum_AIContext__" data-uid="Quantum.FindEnemyLeaf.Init(Quantum.BTParams,Quantum.AIContext@)">
   Init(BTParams, ref AIContext)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs&amp;version=GBdev&amp;line=13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs&amp;version=GBdev&amp;line=15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -388,7 +425,7 @@ public class FindEnemyLeaf : BTLeaf</code></pre>
 
   <h3 id="Quantum_FindEnemyLeaf_OnUpdate_Quantum_BTParams_Quantum_AIContext__" data-uid="Quantum.FindEnemyLeaf.OnUpdate(Quantum.BTParams,Quantum.AIContext@)">
   OnUpdate(BTParams, ref AIContext)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs&amp;version=GBdev&amp;line=20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

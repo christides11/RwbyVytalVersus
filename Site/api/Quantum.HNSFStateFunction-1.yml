@@ -30,13 +30,13 @@ items:
     content: >-
       [Serializable]
 
-      public class HNSFStateFunction<T> : HNSFStateFunction
+      public class HNSFStateFunction<T> : HNSFStateFunction, ILogSource
     typeParameters:
     - id: T
     content.vb: >-
       <Serializable>
 
-      Public Class HNSFStateFunction(Of T) Inherits HNSFStateFunction
+      Public Class HNSFStateFunction(Of T) Inherits HNSFStateFunction Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -59,6 +59,9 @@ items:
   - Quantum.StateFunctionFPVector3List
   - Quantum.StateFunctionInt
   - Quantum.StateFunctionIntegerList
+  - Quantum.StateFunctionNullableFp
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -228,6 +231,13 @@ references:
   name: HNSFStateFunction
   nameWithType: HNSFStateFunction
   fullName: Quantum.HNSFStateFunction
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject

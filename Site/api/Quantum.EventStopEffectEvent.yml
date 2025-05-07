@@ -11,8 +11,11 @@ items:
   - Quantum.EventStopEffectEvent.GetHashCode
   - Quantum.EventStopEffectEvent.ID
   - Quantum.EventStopEffectEvent.destroyAllParticles
-  - Quantum.EventStopEffectEvent.identifier
+  - Quantum.EventStopEffectEvent.effectToStop
+  - Quantum.EventStopEffectEvent.offset
   - Quantum.EventStopEffectEvent.parent
+  - Quantum.EventStopEffectEvent.stopAllInstances
+  - Quantum.EventStopEffectEvent.unparent
   langs:
   - csharp
   - vb
@@ -27,7 +30,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: EventStopEffectEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 649
+    startLine: 730
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -64,15 +67,15 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ID
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 650
+    startLine: 731
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public const int ID = 16
+    content: public const int ID = 18
     return:
       type: System.Int32
-    content.vb: Public Const ID As Integer = 16
+    content.vb: Public Const ID As Integer = 18
 - uid: Quantum.EventStopEffectEvent.parent
   commentId: F:Quantum.EventStopEffectEvent.parent
   id: parent
@@ -91,7 +94,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: parent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 651
+    startLine: 732
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -100,33 +103,33 @@ items:
     return:
       type: Quantum.EntityRef
     content.vb: Public parent As EntityRef
-- uid: Quantum.EventStopEffectEvent.identifier
-  commentId: F:Quantum.EventStopEffectEvent.identifier
-  id: identifier
+- uid: Quantum.EventStopEffectEvent.stopAllInstances
+  commentId: F:Quantum.EventStopEffectEvent.stopAllInstances
+  id: stopAllInstances
   parent: Quantum.EventStopEffectEvent
   langs:
   - csharp
   - vb
-  name: identifier
-  nameWithType: EventStopEffectEvent.identifier
-  fullName: Quantum.EventStopEffectEvent.identifier
+  name: stopAllInstances
+  nameWithType: EventStopEffectEvent.stopAllInstances
+  fullName: Quantum.EventStopEffectEvent.stopAllInstances
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: identifier
+    id: stopAllInstances
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 652
+    startLine: 733
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public int identifier
+    content: public QBoolean stopAllInstances
     return:
-      type: System.Int32
-    content.vb: Public identifier As Integer
+      type: Quantum.QBoolean
+    content.vb: Public stopAllInstances As QBoolean
 - uid: Quantum.EventStopEffectEvent.destroyAllParticles
   commentId: F:Quantum.EventStopEffectEvent.destroyAllParticles
   id: destroyAllParticles
@@ -145,7 +148,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: destroyAllParticles
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 653
+    startLine: 734
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -154,6 +157,87 @@ items:
     return:
       type: Quantum.QBoolean
     content.vb: Public destroyAllParticles As QBoolean
+- uid: Quantum.EventStopEffectEvent.unparent
+  commentId: F:Quantum.EventStopEffectEvent.unparent
+  id: unparent
+  parent: Quantum.EventStopEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: unparent
+  nameWithType: EventStopEffectEvent.unparent
+  fullName: Quantum.EventStopEffectEvent.unparent
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: unparent
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+    startLine: 735
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public QBoolean unparent
+    return:
+      type: Quantum.QBoolean
+    content.vb: Public unparent As QBoolean
+- uid: Quantum.EventStopEffectEvent.effectToStop
+  commentId: F:Quantum.EventStopEffectEvent.effectToStop
+  id: effectToStop
+  parent: Quantum.EventStopEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: effectToStop
+  nameWithType: EventStopEffectEvent.effectToStop
+  fullName: Quantum.EventStopEffectEvent.effectToStop
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: effectToStop
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+    startLine: 736
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<VisualEffectEntry> effectToStop
+    return:
+      type: Quantum.AssetRef{Quantum.VisualEffectEntry}
+    content.vb: Public effectToStop As AssetRef(Of VisualEffectEntry)
+- uid: Quantum.EventStopEffectEvent.offset
+  commentId: F:Quantum.EventStopEffectEvent.offset
+  id: offset
+  parent: Quantum.EventStopEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: offset
+  nameWithType: EventStopEffectEvent.offset
+  fullName: Quantum.EventStopEffectEvent.offset
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: offset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+    startLine: 737
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public int offset
+    return:
+      type: System.Int32
+    content.vb: Public offset As Integer
 - uid: Quantum.EventStopEffectEvent.#ctor(System.Int32,Quantum.EventFlags)
   commentId: M:Quantum.EventStopEffectEvent.#ctor(System.Int32,Quantum.EventFlags)
   id: '#ctor(System.Int32,Quantum.EventFlags)'
@@ -172,7 +256,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 654
+    startLine: 738
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -206,7 +290,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 657
+    startLine: 741
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -235,7 +319,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Game
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 660
+    startLine: 744
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -264,7 +348,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHashCode
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 668
+    startLine: 752
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -394,6 +478,62 @@ references:
   name: QBoolean
   nameWithType: QBoolean
   fullName: Quantum.QBoolean
+- uid: Quantum.AssetRef{Quantum.VisualEffectEntry}
+  commentId: T:Quantum.AssetRef{Quantum.VisualEffectEntry}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.VisualEffectEntry.html
+  name: AssetRef<VisualEffectEntry>
+  nameWithType: AssetRef<VisualEffectEntry>
+  fullName: Quantum.AssetRef<Quantum.VisualEffectEntry>
+  nameWithType.vb: AssetRef(Of VisualEffectEntry)
+  fullName.vb: Quantum.AssetRef(Of Quantum.VisualEffectEntry)
+  name.vb: AssetRef(Of VisualEffectEntry)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.VisualEffectEntry
+    name: VisualEffectEntry
+    href: Quantum.VisualEffectEntry.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.VisualEffectEntry
+    name: VisualEffectEntry
+    href: Quantum.VisualEffectEntry.html
+  - name: )
+- uid: Quantum.AssetRef`1
+  commentId: T:Quantum.AssetRef`1
+  isExternal: true
+  name: AssetRef<T>
+  nameWithType: AssetRef<T>
+  fullName: Quantum.AssetRef<T>
+  nameWithType.vb: AssetRef(Of T)
+  fullName.vb: Quantum.AssetRef(Of T)
+  name.vb: AssetRef(Of T)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: Quantum.EventStopEffectEvent.#ctor*
   commentId: Overload:Quantum.EventStopEffectEvent.#ctor
   href: Quantum.EventStopEffectEvent.html#Quantum_EventStopEffectEvent__ctor_System_Int32_Quantum_EventFlags_

@@ -89,7 +89,7 @@
 
 
   <h1 id="Quantum_StreamReplayInputProvider" data-uid="Quantum.StreamReplayInputProvider" class="text-break">
-Class StreamReplayInputProvider  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6697"><i class="bi bi-code-slash"></i></a>
+Class StreamReplayInputProvider  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6780"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -130,9 +130,9 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 
   <a id="Quantum_StreamReplayInputProvider__ctor_" data-uid="Quantum.StreamReplayInputProvider.#ctor*"></a>
 
-  <h3 id="Quantum_StreamReplayInputProvider__ctor_System_IO_Stream_System_Int32_" data-uid="Quantum.StreamReplayInputProvider.#ctor(System.IO.Stream,System.Int32)">
-  StreamReplayInputProvider(Stream, int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6712"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Quantum_StreamReplayInputProvider__ctor_System_IO_Stream_System_Int32_System_Int32_" data-uid="Quantum.StreamReplayInputProvider.#ctor(System.IO.Stream,System.Int32,System.Int32)">
+  StreamReplayInputProvider(Stream, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6802"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a stream replay input provider.</p>
@@ -140,7 +140,7 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StreamReplayInputProvider(Stream inputStream, int maxFrame)</code></pre>
+    <pre><code class="lang-csharp hljs">public StreamReplayInputProvider(Stream inputStream, int maxFrame, int localActorNumber = 0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -150,6 +150,9 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 </dd>
     <dt><code>maxFrame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>Max frame that input is available for</p>
+</dd>
+    <dt><code>localActorNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The actor number of the client that recorded the replay</p>
 </dd>
   </dl>
 
@@ -168,11 +171,43 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 </h2>
 
 
+  <a id="Quantum_StreamReplayInputProvider_LocalActorNumber_" data-uid="Quantum.StreamReplayInputProvider.LocalActorNumber*"></a>
+
+  <h3 id="Quantum_StreamReplayInputProvider_LocalActorNumber" data-uid="Quantum.StreamReplayInputProvider.LocalActorNumber">
+  LocalActorNumber
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6794"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The actor number of the client that recoded the replay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LocalActorNumber { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Quantum_StreamReplayInputProvider_MaxFrame_" data-uid="Quantum.StreamReplayInputProvider.MaxFrame*"></a>
 
   <h3 id="Quantum_StreamReplayInputProvider_MaxFrame" data-uid="Quantum.StreamReplayInputProvider.MaxFrame">
   MaxFrame
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6705"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6789"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The max frame that the stream has input for.</p>
@@ -208,7 +243,7 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 
   <h3 id="Quantum_StreamReplayInputProvider_AddRpc_System_Int32_System_Byte___System_Boolean_" data-uid="Quantum.StreamReplayInputProvider.AddRpc(System.Int32,System.Byte[],System.Boolean)">
   AddRpc(int, byte[], bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6766"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6857"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unused.</p>
@@ -244,7 +279,7 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 
   <h3 id="Quantum_StreamReplayInputProvider_BeginReadFrame_System_Int32_" data-uid="Quantum.StreamReplayInputProvider.BeginReadFrame(System.Int32)">
   BeginReadFrame(int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6738"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6829"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Request input for a certain frame.</p>
@@ -283,7 +318,7 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 
   <h3 id="Quantum_StreamReplayInputProvider_CanSimulate_System_Int32_" data-uid="Quantum.StreamReplayInputProvider.CanSimulate(System.Int32)">
   CanSimulate(int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6729"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6820"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Is all input for this frame available.</p>
@@ -322,7 +357,7 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 
   <h3 id="Quantum_StreamReplayInputProvider_CompleteReadFrame_System_Int32_System_Int32_System_Byte____" data-uid="Quantum.StreamReplayInputProvider.CompleteReadFrame(System.Int32,System.Int32,System.Byte[]@)">
   CompleteReadFrame(int, int, ref byte[])
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6750"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6841"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Read the input data for the frame.</p>
@@ -361,7 +396,7 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 
   <h3 id="Quantum_StreamReplayInputProvider_ForwardToFrame_System_IO_Stream_System_Int32_" data-uid="Quantum.StreamReplayInputProvider.ForwardToFrame(System.IO.Stream,System.Int32)">
   ForwardToFrame(Stream, int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6783"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6874"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Skip to a selected frame in the stream.</p>
@@ -397,7 +432,7 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 
   <h3 id="Quantum_StreamReplayInputProvider_GetInput_System_Int32_System_Int32_" data-uid="Quantum.StreamReplayInputProvider.GetInput(System.Int32,System.Int32)">
   GetInput(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6758"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6849"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unused.</p>
@@ -436,7 +471,7 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 
   <h3 id="Quantum_StreamReplayInputProvider_GetRpc_System_Int32_System_Int32_" data-uid="Quantum.StreamReplayInputProvider.GetRpc(System.Int32,System.Int32)">
   GetRpc(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6773"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6864"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unused.</p>
@@ -475,7 +510,7 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 
   <h3 id="Quantum_StreamReplayInputProvider_Reset" data-uid="Quantum.StreamReplayInputProvider.Reset">
   Reset()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6720"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6811"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Resets the input provider when restarting a replay for example. The stream should be reset to the beginning.</p>
@@ -502,7 +537,7 @@ Class StreamReplayInputProvider  <a class="header-action link-secondary" title="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6697" class="edit-link">Edit this page</a>
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs&amp;version=GBdev&amp;line=6780" class="edit-link">Edit this page</a>
         </div>
 
 

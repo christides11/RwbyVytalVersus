@@ -5,6 +5,8 @@ items:
   id: Quantum.Prototypes
   children:
   - Quantum.Prototypes.AICharacterActorPrototype
+  - Quantum.Prototypes.ArticlesOwnerPrototype
+  - Quantum.Prototypes.AttackTokenPrototype
   - Quantum.Prototypes.AuraPrototype
   - Quantum.Prototypes.BoxCombatantPrototype
   - Quantum.Prototypes.CharaAnimatorPrototype
@@ -20,14 +22,18 @@ items:
   - Quantum.Prototypes.CombatHitDetectionInfoPrototype
   - Quantum.Prototypes.CombatTargeterPrototype
   - Quantum.Prototypes.CombatTeamPrototype
+  - Quantum.Prototypes.CombatTokenActorInfoPrototype
+  - Quantum.Prototypes.CombatTokenSourcePrototype
   - Quantum.Prototypes.DictionaryEntry_EntityRef_ClashCombatPair
   - Quantum.Prototypes.DictionaryEntry_EntityRef_CollisionCombatPair
+  - Quantum.Prototypes.DictionaryEntry_EntityRef_CombatTokenActorInfo
   - Quantum.Prototypes.DictionaryEntry_EntityRef_HitboxCombatPair
   - Quantum.Prototypes.DictionaryEntry_Int32_EntityRef
+  - Quantum.Prototypes.DictionaryEntry_Int32_GamemodeParticipantData
   - Quantum.Prototypes.DictionaryEntry_Int32_Int32
-  - Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData
-  - Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData
-  - Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32
+  - Quantum.Prototypes.DictionaryEntry_Int32_QBoolean
+  - Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData
+  - Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData
   - Quantum.Prototypes.DummyConfigurationPrototype
   - Quantum.Prototypes.DummyRecordingSlotPrototype
   - Quantum.Prototypes.EntityCenterPrototype
@@ -37,9 +43,11 @@ items:
   - Quantum.Prototypes.EnvQueryItemCachedPrototype
   - Quantum.Prototypes.EnvQueryPrototype
   - Quantum.Prototypes.FighterArticlePrototype
-  - Quantum.Prototypes.FighterArticlesPrototype
   - Quantum.Prototypes.FighterPrototype
   - Quantum.Prototypes.GainAuraPassivelyPrototype
+  - Quantum.Prototypes.GamemodeParticipantCharacterDataPrototype
+  - Quantum.Prototypes.GamemodeParticipantDataPrototype
+  - Quantum.Prototypes.GamemodeParticipantsGlobalPrototype
   - Quantum.Prototypes.GenericGamemodeGlobalsPrototype
   - Quantum.Prototypes.GenericStateAgentPrototype
   - Quantum.Prototypes.GotWallInfoPrototype
@@ -49,6 +57,7 @@ items:
   - Quantum.Prototypes.HealthPrototype
   - Quantum.Prototypes.HitboxCombatPairPrototype
   - Quantum.Prototypes.HitboxPrototype
+  - Quantum.Prototypes.HitstopPrototype
   - Quantum.Prototypes.HurtboxPrototype
   - Quantum.Prototypes.InAuraBurnoutPrototype
   - Quantum.Prototypes.InCounterhitStatePrototype
@@ -68,14 +77,17 @@ items:
   - Quantum.Prototypes.KCCPrototype
   - Quantum.Prototypes.LocalDeltaTimePrototype
   - Quantum.Prototypes.ParentedPrototype
+  - Quantum.Prototypes.ParticipantLinkPrototype
+  - Quantum.Prototypes.PhysicsBodyActorPrototype
   - Quantum.Prototypes.PlayerLinkPrototype
   - Quantum.Prototypes.ProjectilePrototype
   - Quantum.Prototypes.SyncedCutsceneTimerPrototype
   - Quantum.Prototypes.TeamVersusGlobalsPrototype
-  - Quantum.Prototypes.TeamVersusPlayerDataPrototype
+  - Quantum.Prototypes.TeamVersusParticipantDataPrototype
   - Quantum.Prototypes.TrackedStatesPrototype
   - Quantum.Prototypes.TrainingGlobalsPrototype
-  - Quantum.Prototypes.TrainingPlayerDataPrototype
+  - Quantum.Prototypes.TrainingParticipantDataPrototype
+  - Quantum.Prototypes.WarningboxPrototype
   langs:
   - csharp
   - vb
@@ -110,36 +122,60 @@ references:
   name: DictionaryEntry_EntityRef_CollisionCombatPair
   nameWithType: DictionaryEntry_EntityRef_CollisionCombatPair
   fullName: Quantum.Prototypes.DictionaryEntry_EntityRef_CollisionCombatPair
+- uid: Quantum.Prototypes.DictionaryEntry_EntityRef_CombatTokenActorInfo
+  commentId: T:Quantum.Prototypes.DictionaryEntry_EntityRef_CombatTokenActorInfo
+  href: Quantum.Prototypes.DictionaryEntry_EntityRef_CombatTokenActorInfo.html
+  name: DictionaryEntry_EntityRef_CombatTokenActorInfo
+  nameWithType: DictionaryEntry_EntityRef_CombatTokenActorInfo
+  fullName: Quantum.Prototypes.DictionaryEntry_EntityRef_CombatTokenActorInfo
+- uid: Quantum.Prototypes.DictionaryEntry_Int32_GamemodeParticipantData
+  commentId: T:Quantum.Prototypes.DictionaryEntry_Int32_GamemodeParticipantData
+  href: Quantum.Prototypes.DictionaryEntry_Int32_GamemodeParticipantData.html
+  name: DictionaryEntry_Int32_GamemodeParticipantData
+  nameWithType: DictionaryEntry_Int32_GamemodeParticipantData
+  fullName: Quantum.Prototypes.DictionaryEntry_Int32_GamemodeParticipantData
 - uid: Quantum.Prototypes.DictionaryEntry_Int32_EntityRef
   commentId: T:Quantum.Prototypes.DictionaryEntry_Int32_EntityRef
   href: Quantum.Prototypes.DictionaryEntry_Int32_EntityRef.html
   name: DictionaryEntry_Int32_EntityRef
   nameWithType: DictionaryEntry_Int32_EntityRef
   fullName: Quantum.Prototypes.DictionaryEntry_Int32_EntityRef
-- uid: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData
-  commentId: T:Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData
-  href: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData.html
-  name: DictionaryEntry_Int32_TeamVersusPlayerData
-  nameWithType: DictionaryEntry_Int32_TeamVersusPlayerData
-  fullName: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData
-- uid: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32
-  commentId: T:Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32
-  href: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32.html
-  name: DictionaryEntry_PlayerRef_Int32
-  nameWithType: DictionaryEntry_PlayerRef_Int32
-  fullName: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32
-- uid: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData
-  commentId: T:Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData
-  href: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData.html
-  name: DictionaryEntry_Int32_TrainingPlayerData
-  nameWithType: DictionaryEntry_Int32_TrainingPlayerData
-  fullName: Quantum.Prototypes.DictionaryEntry_Int32_TrainingPlayerData
+- uid: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean
+  commentId: T:Quantum.Prototypes.DictionaryEntry_Int32_QBoolean
+  href: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean.html
+  name: DictionaryEntry_Int32_QBoolean
+  nameWithType: DictionaryEntry_Int32_QBoolean
+  fullName: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean
+- uid: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData
+  commentId: T:Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData
+  href: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData.html
+  name: DictionaryEntry_Int32_TeamVersusParticipantData
+  nameWithType: DictionaryEntry_Int32_TeamVersusParticipantData
+  fullName: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData
+- uid: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData
+  commentId: T:Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData
+  href: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData.html
+  name: DictionaryEntry_Int32_TrainingParticipantData
+  nameWithType: DictionaryEntry_Int32_TrainingParticipantData
+  fullName: Quantum.Prototypes.DictionaryEntry_Int32_TrainingParticipantData
 - uid: Quantum.Prototypes.AICharacterActorPrototype
   commentId: T:Quantum.Prototypes.AICharacterActorPrototype
   href: Quantum.Prototypes.AICharacterActorPrototype.html
   name: AICharacterActorPrototype
   nameWithType: AICharacterActorPrototype
   fullName: Quantum.Prototypes.AICharacterActorPrototype
+- uid: Quantum.Prototypes.ArticlesOwnerPrototype
+  commentId: T:Quantum.Prototypes.ArticlesOwnerPrototype
+  href: Quantum.Prototypes.ArticlesOwnerPrototype.html
+  name: ArticlesOwnerPrototype
+  nameWithType: ArticlesOwnerPrototype
+  fullName: Quantum.Prototypes.ArticlesOwnerPrototype
+- uid: Quantum.Prototypes.AttackTokenPrototype
+  commentId: T:Quantum.Prototypes.AttackTokenPrototype
+  href: Quantum.Prototypes.AttackTokenPrototype.html
+  name: AttackTokenPrototype
+  nameWithType: AttackTokenPrototype
+  fullName: Quantum.Prototypes.AttackTokenPrototype
 - uid: Quantum.Prototypes.AuraPrototype
   commentId: T:Quantum.Prototypes.AuraPrototype
   href: Quantum.Prototypes.AuraPrototype.html
@@ -233,6 +269,19 @@ references:
   name: CombatTeamPrototype
   nameWithType: CombatTeamPrototype
   fullName: Quantum.Prototypes.CombatTeamPrototype
+- uid: Quantum.Prototypes.CombatTokenActorInfoPrototype
+  commentId: T:Quantum.Prototypes.CombatTokenActorInfoPrototype
+  parent: Quantum.Prototypes
+  href: Quantum.Prototypes.CombatTokenActorInfoPrototype.html
+  name: CombatTokenActorInfoPrototype
+  nameWithType: CombatTokenActorInfoPrototype
+  fullName: Quantum.Prototypes.CombatTokenActorInfoPrototype
+- uid: Quantum.Prototypes.CombatTokenSourcePrototype
+  commentId: T:Quantum.Prototypes.CombatTokenSourcePrototype
+  href: Quantum.Prototypes.CombatTokenSourcePrototype.html
+  name: CombatTokenSourcePrototype
+  nameWithType: CombatTokenSourcePrototype
+  fullName: Quantum.Prototypes.CombatTokenSourcePrototype
 - uid: Quantum.Prototypes.DummyConfigurationPrototype
   commentId: T:Quantum.Prototypes.DummyConfigurationPrototype
   href: Quantum.Prototypes.DummyConfigurationPrototype.html
@@ -293,18 +342,31 @@ references:
   name: FighterArticlePrototype
   nameWithType: FighterArticlePrototype
   fullName: Quantum.Prototypes.FighterArticlePrototype
-- uid: Quantum.Prototypes.FighterArticlesPrototype
-  commentId: T:Quantum.Prototypes.FighterArticlesPrototype
-  href: Quantum.Prototypes.FighterArticlesPrototype.html
-  name: FighterArticlesPrototype
-  nameWithType: FighterArticlesPrototype
-  fullName: Quantum.Prototypes.FighterArticlesPrototype
 - uid: Quantum.Prototypes.GainAuraPassivelyPrototype
   commentId: T:Quantum.Prototypes.GainAuraPassivelyPrototype
   href: Quantum.Prototypes.GainAuraPassivelyPrototype.html
   name: GainAuraPassivelyPrototype
   nameWithType: GainAuraPassivelyPrototype
   fullName: Quantum.Prototypes.GainAuraPassivelyPrototype
+- uid: Quantum.Prototypes.GamemodeParticipantCharacterDataPrototype
+  commentId: T:Quantum.Prototypes.GamemodeParticipantCharacterDataPrototype
+  href: Quantum.Prototypes.GamemodeParticipantCharacterDataPrototype.html
+  name: GamemodeParticipantCharacterDataPrototype
+  nameWithType: GamemodeParticipantCharacterDataPrototype
+  fullName: Quantum.Prototypes.GamemodeParticipantCharacterDataPrototype
+- uid: Quantum.Prototypes.GamemodeParticipantDataPrototype
+  commentId: T:Quantum.Prototypes.GamemodeParticipantDataPrototype
+  parent: Quantum.Prototypes
+  href: Quantum.Prototypes.GamemodeParticipantDataPrototype.html
+  name: GamemodeParticipantDataPrototype
+  nameWithType: GamemodeParticipantDataPrototype
+  fullName: Quantum.Prototypes.GamemodeParticipantDataPrototype
+- uid: Quantum.Prototypes.GamemodeParticipantsGlobalPrototype
+  commentId: T:Quantum.Prototypes.GamemodeParticipantsGlobalPrototype
+  href: Quantum.Prototypes.GamemodeParticipantsGlobalPrototype.html
+  name: GamemodeParticipantsGlobalPrototype
+  nameWithType: GamemodeParticipantsGlobalPrototype
+  fullName: Quantum.Prototypes.GamemodeParticipantsGlobalPrototype
 - uid: Quantum.Prototypes.GenericGamemodeGlobalsPrototype
   commentId: T:Quantum.Prototypes.GenericGamemodeGlobalsPrototype
   href: Quantum.Prototypes.GenericGamemodeGlobalsPrototype.html
@@ -362,6 +424,12 @@ references:
   name: HitboxCombatPairPrototype
   nameWithType: HitboxCombatPairPrototype
   fullName: Quantum.Prototypes.HitboxCombatPairPrototype
+- uid: Quantum.Prototypes.HitstopPrototype
+  commentId: T:Quantum.Prototypes.HitstopPrototype
+  href: Quantum.Prototypes.HitstopPrototype.html
+  name: HitstopPrototype
+  nameWithType: HitstopPrototype
+  fullName: Quantum.Prototypes.HitstopPrototype
 - uid: Quantum.Prototypes.HurtboxPrototype
   commentId: T:Quantum.Prototypes.HurtboxPrototype
   href: Quantum.Prototypes.HurtboxPrototype.html
@@ -477,6 +545,18 @@ references:
   name: ParentedPrototype
   nameWithType: ParentedPrototype
   fullName: Quantum.Prototypes.ParentedPrototype
+- uid: Quantum.Prototypes.ParticipantLinkPrototype
+  commentId: T:Quantum.Prototypes.ParticipantLinkPrototype
+  href: Quantum.Prototypes.ParticipantLinkPrototype.html
+  name: ParticipantLinkPrototype
+  nameWithType: ParticipantLinkPrototype
+  fullName: Quantum.Prototypes.ParticipantLinkPrototype
+- uid: Quantum.Prototypes.PhysicsBodyActorPrototype
+  commentId: T:Quantum.Prototypes.PhysicsBodyActorPrototype
+  href: Quantum.Prototypes.PhysicsBodyActorPrototype.html
+  name: PhysicsBodyActorPrototype
+  nameWithType: PhysicsBodyActorPrototype
+  fullName: Quantum.Prototypes.PhysicsBodyActorPrototype
 - uid: Quantum.Prototypes.PlayerLinkPrototype
   commentId: T:Quantum.Prototypes.PlayerLinkPrototype
   href: Quantum.Prototypes.PlayerLinkPrototype.html
@@ -501,13 +581,13 @@ references:
   name: TeamVersusGlobalsPrototype
   nameWithType: TeamVersusGlobalsPrototype
   fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype
-- uid: Quantum.Prototypes.TeamVersusPlayerDataPrototype
-  commentId: T:Quantum.Prototypes.TeamVersusPlayerDataPrototype
+- uid: Quantum.Prototypes.TeamVersusParticipantDataPrototype
+  commentId: T:Quantum.Prototypes.TeamVersusParticipantDataPrototype
   parent: Quantum.Prototypes
-  href: Quantum.Prototypes.TeamVersusPlayerDataPrototype.html
-  name: TeamVersusPlayerDataPrototype
-  nameWithType: TeamVersusPlayerDataPrototype
-  fullName: Quantum.Prototypes.TeamVersusPlayerDataPrototype
+  href: Quantum.Prototypes.TeamVersusParticipantDataPrototype.html
+  name: TeamVersusParticipantDataPrototype
+  nameWithType: TeamVersusParticipantDataPrototype
+  fullName: Quantum.Prototypes.TeamVersusParticipantDataPrototype
 - uid: Quantum.Prototypes.TrackedStatesPrototype
   commentId: T:Quantum.Prototypes.TrackedStatesPrototype
   href: Quantum.Prototypes.TrackedStatesPrototype.html
@@ -520,13 +600,19 @@ references:
   name: TrainingGlobalsPrototype
   nameWithType: TrainingGlobalsPrototype
   fullName: Quantum.Prototypes.TrainingGlobalsPrototype
-- uid: Quantum.Prototypes.TrainingPlayerDataPrototype
-  commentId: T:Quantum.Prototypes.TrainingPlayerDataPrototype
+- uid: Quantum.Prototypes.TrainingParticipantDataPrototype
+  commentId: T:Quantum.Prototypes.TrainingParticipantDataPrototype
   parent: Quantum.Prototypes
-  href: Quantum.Prototypes.TrainingPlayerDataPrototype.html
-  name: TrainingPlayerDataPrototype
-  nameWithType: TrainingPlayerDataPrototype
-  fullName: Quantum.Prototypes.TrainingPlayerDataPrototype
+  href: Quantum.Prototypes.TrainingParticipantDataPrototype.html
+  name: TrainingParticipantDataPrototype
+  nameWithType: TrainingParticipantDataPrototype
+  fullName: Quantum.Prototypes.TrainingParticipantDataPrototype
+- uid: Quantum.Prototypes.WarningboxPrototype
+  commentId: T:Quantum.Prototypes.WarningboxPrototype
+  href: Quantum.Prototypes.WarningboxPrototype.html
+  name: WarningboxPrototype
+  nameWithType: WarningboxPrototype
+  fullName: Quantum.Prototypes.WarningboxPrototype
 - uid: Quantum.Prototypes
   commentId: N:Quantum.Prototypes
   href: Quantum.html

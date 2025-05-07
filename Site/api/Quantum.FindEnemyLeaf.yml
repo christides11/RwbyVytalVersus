@@ -9,6 +9,7 @@ items:
   - Quantum.FindEnemyLeaf.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
   - Quantum.FindEnemyLeaf.checkRadius
   - Quantum.FindEnemyLeaf.emptySlot
+  - Quantum.FindEnemyLeaf.globalCheck
   - Quantum.FindEnemyLeaf.layerMask
   - Quantum.FindEnemyLeaf.targetBlackboardKey
   langs:
@@ -33,11 +34,11 @@ items:
     content: >-
       [Serializable]
 
-      public class FindEnemyLeaf : BTLeaf
+      public class FindEnemyLeaf : BTLeaf, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class FindEnemyLeaf Inherits BTLeaf
+      Public Class FindEnemyLeaf Inherits BTLeaf Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -45,6 +46,8 @@ items:
   - Quantum.AssetObject
   - Quantum.BTNode
   - Quantum.BTLeaf
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.BTLeaf.Services
   - Quantum.BTLeaf._serviceInstances
@@ -134,6 +137,33 @@ items:
     return:
       type: Quantum.AIBlackboardValueKey
     content.vb: Public targetBlackboardKey As AIBlackboardValueKey
+- uid: Quantum.FindEnemyLeaf.globalCheck
+  commentId: F:Quantum.FindEnemyLeaf.globalCheck
+  id: globalCheck
+  parent: Quantum.FindEnemyLeaf
+  langs:
+  - csharp
+  - vb
+  name: globalCheck
+  nameWithType: FindEnemyLeaf.globalCheck
+  fullName: Quantum.FindEnemyLeaf.globalCheck
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: globalCheck
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs
+    startLine: 9
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public bool globalCheck
+    return:
+      type: System.Boolean
+    content.vb: Public globalCheck As Boolean
 - uid: Quantum.FindEnemyLeaf.checkRadius
   commentId: F:Quantum.FindEnemyLeaf.checkRadius
   id: checkRadius
@@ -152,15 +182,33 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: checkRadius
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public FP checkRadius
+    content: >-
+      [DrawIf("globalCheck", false, CompareOperator.Equal, DrawIfMode.ReadOnly)]
+
+      public FP checkRadius
     return:
       type: Photon.Deterministic.FP
-    content.vb: Public checkRadius As FP
+    content.vb: >-
+      <DrawIf("globalCheck", False, CompareOperator.Equal, DrawIfMode.ReadOnly)>
+
+      Public checkRadius As FP
+  attributes:
+  - type: Quantum.DrawIfAttribute
+    ctor: Quantum.DrawIfAttribute.#ctor(System.String,System.Boolean,Quantum.CompareOperator,Quantum.DrawIfMode)
+    arguments:
+    - type: System.String
+      value: globalCheck
+    - type: System.Boolean
+      value: false
+    - type: Quantum.CompareOperator
+      value: 0
+    - type: Quantum.DrawIfMode
+      value: 0
 - uid: Quantum.FindEnemyLeaf.layerMask
   commentId: F:Quantum.FindEnemyLeaf.layerMask
   id: layerMask
@@ -179,7 +227,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: layerMask
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -206,7 +254,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Init
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -242,7 +290,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnUpdate
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Leafs/FindEnemyLeaf.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -315,6 +363,13 @@ references:
   name: BTLeaf
   nameWithType: BTLeaf
   fullName: Quantum.BTLeaf
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.BTLeaf.Services
   commentId: F:Quantum.BTLeaf.Services
   parent: Quantum.BTLeaf

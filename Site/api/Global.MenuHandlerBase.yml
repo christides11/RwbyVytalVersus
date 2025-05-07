@@ -6,12 +6,12 @@ items:
   parent: Global
   children:
   - Global.MenuHandlerBase.Back
-  - Global.MenuHandlerBase.Forward(System.Int32,System.Boolean)
+  - Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
   - Global.MenuHandlerBase.GetCurrentMenu
   - Global.MenuHandlerBase.GetHistory
   - Global.MenuHandlerBase.GetPreviousMenu
   - Global.MenuHandlerBase.HasSubmenuOpen
-  - Global.MenuHandlerBase.ResetAndForwardTo(System.Int32)
+  - Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
   - Global.MenuHandlerBase.history
   - Global.MenuHandlerBase.menus
   langs:
@@ -42,6 +42,8 @@ items:
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
   derivedClasses:
+  - rwby.QuickMatchScreenManager
+  - rwby.VytalMatchSceneScreenManager
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
   implements:
   - rwby.ui.IMenuHandler
@@ -68,10 +70,10 @@ items:
   - rwby
   namespace: Global
   syntax:
-    content: public Dictionary<int, MenuBase> menus
+    content: protected List<IMenu> menus
     return:
-      type: System.Collections.Generic.Dictionary{System.Int32,rwby.ui.MenuBase}
-    content.vb: Public menus As Dictionary(Of Integer, MenuBase)
+      type: System.Collections.Generic.List{rwby.ui.IMenu}
+    content.vb: Protected menus As List(Of IMenu)
 - uid: Global.MenuHandlerBase.history
   commentId: F:Global.MenuHandlerBase.history
   id: history
@@ -98,27 +100,27 @@ items:
     content: >-
       [SerializeField]
 
-      protected List<int> history
+      protected List<IMenu> history
     return:
-      type: System.Collections.Generic.List{System.Int32}
+      type: System.Collections.Generic.List{rwby.ui.IMenu}
     content.vb: >-
       <SerializeField>
 
-      Protected history As List(Of Integer)
+      Protected history As List(Of IMenu)
   attributes:
   - type: UnityEngine.SerializeField
     ctor: UnityEngine.SerializeField.#ctor
     arguments: []
-- uid: Global.MenuHandlerBase.ResetAndForwardTo(System.Int32)
-  commentId: M:Global.MenuHandlerBase.ResetAndForwardTo(System.Int32)
-  id: ResetAndForwardTo(System.Int32)
+- uid: Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+  commentId: M:Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+  id: ResetAndForwardTo(rwby.ui.IMenu)
   parent: Global.MenuHandlerBase
   langs:
   - csharp
   - vb
-  name: ResetAndForwardTo(int)
-  nameWithType: MenuHandlerBase.ResetAndForwardTo(int)
-  fullName: MenuHandlerBase.ResetAndForwardTo(int)
+  name: ResetAndForwardTo(IMenu)
+  nameWithType: MenuHandlerBase.ResetAndForwardTo(IMenu)
+  fullName: MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
   type: Method
   source:
     remote:
@@ -132,25 +134,22 @@ items:
   - rwby
   namespace: Global
   syntax:
-    content: public virtual void ResetAndForwardTo(int menuToForwardTo)
+    content: public virtual void ResetAndForwardTo(IMenu menuToForwardTo)
     parameters:
     - id: menuToForwardTo
-      type: System.Int32
-    content.vb: Public Overridable Sub ResetAndForwardTo(menuToForwardTo As Integer)
+      type: rwby.ui.IMenu
+    content.vb: Public Overridable Sub ResetAndForwardTo(menuToForwardTo As IMenu)
   overload: Global.MenuHandlerBase.ResetAndForwardTo*
-  nameWithType.vb: MenuHandlerBase.ResetAndForwardTo(Integer)
-  fullName.vb: MenuHandlerBase.ResetAndForwardTo(Integer)
-  name.vb: ResetAndForwardTo(Integer)
-- uid: Global.MenuHandlerBase.Forward(System.Int32,System.Boolean)
-  commentId: M:Global.MenuHandlerBase.Forward(System.Int32,System.Boolean)
-  id: Forward(System.Int32,System.Boolean)
+- uid: Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+  commentId: M:Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+  id: Forward(rwby.ui.IMenu,System.Boolean)
   parent: Global.MenuHandlerBase
   langs:
   - csharp
   - vb
-  name: Forward(int, bool)
-  nameWithType: MenuHandlerBase.Forward(int, bool)
-  fullName: MenuHandlerBase.Forward(int, bool)
+  name: Forward(IMenu, bool)
+  nameWithType: MenuHandlerBase.Forward(IMenu, bool)
+  fullName: MenuHandlerBase.Forward(rwby.ui.IMenu, bool)
   type: Method
   source:
     remote:
@@ -165,21 +164,21 @@ items:
   namespace: Global
   example: []
   syntax:
-    content: public virtual bool Forward(int menu, bool autoClose = true)
+    content: public virtual bool Forward(IMenu menu, bool autoClose = true)
     parameters:
     - id: menu
-      type: System.Int32
+      type: rwby.ui.IMenu
     - id: autoClose
       type: System.Boolean
     return:
       type: System.Boolean
-    content.vb: Public Overridable Function Forward(menu As Integer, autoClose As Boolean = True) As Boolean
+    content.vb: Public Overridable Function Forward(menu As IMenu, autoClose As Boolean = True) As Boolean
   overload: Global.MenuHandlerBase.Forward*
   implements:
-  - rwby.ui.IMenuHandler.Forward(System.Int32,System.Boolean)
-  nameWithType.vb: MenuHandlerBase.Forward(Integer, Boolean)
-  fullName.vb: MenuHandlerBase.Forward(Integer, Boolean)
-  name.vb: Forward(Integer, Boolean)
+  - rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu,System.Boolean)
+  nameWithType.vb: MenuHandlerBase.Forward(IMenu, Boolean)
+  fullName.vb: MenuHandlerBase.Forward(rwby.ui.IMenu, Boolean)
+  name.vb: Forward(IMenu, Boolean)
 - uid: Global.MenuHandlerBase.Back
   commentId: M:Global.MenuHandlerBase.Back
   id: Back
@@ -198,7 +197,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Back
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs
-    startLine: 33
+    startLine: 35
   assemblies:
   - rwby
   namespace: Global
@@ -229,16 +228,16 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHistory
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs
-    startLine: 45
+    startLine: 48
   assemblies:
   - rwby
   namespace: Global
   example: []
   syntax:
-    content: public virtual IList GetHistory()
+    content: public virtual List<IMenu> GetHistory()
     return:
-      type: System.Collections.IList
-    content.vb: Public Overridable Function GetHistory() As IList
+      type: System.Collections.Generic.List{rwby.ui.IMenu}
+    content.vb: Public Overridable Function GetHistory() As List(Of IMenu)
   overload: Global.MenuHandlerBase.GetHistory*
   implements:
   - rwby.ui.IMenuHandler.GetHistory
@@ -260,7 +259,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetPreviousMenu
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs
-    startLine: 50
+    startLine: 53
   assemblies:
   - rwby
   namespace: Global
@@ -288,7 +287,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetCurrentMenu
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs
-    startLine: 56
+    startLine: 59
   assemblies:
   - rwby
   namespace: Global
@@ -319,7 +318,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: HasSubmenuOpen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/MenuHandlerBase.cs
-    startLine: 62
+    startLine: 65
   assemblies:
   - rwby
   namespace: Global
@@ -415,84 +414,66 @@ references:
   - uid: rwby.ui
     name: ui
     href: rwby.ui.html
-- uid: System.Collections.Generic.Dictionary{System.Int32,rwby.ui.MenuBase}
-  commentId: T:System.Collections.Generic.Dictionary{System.Int32,rwby.ui.MenuBase}
+- uid: System.Collections.Generic.List{rwby.ui.IMenu}
+  commentId: T:System.Collections.Generic.List{rwby.ui.IMenu}
   parent: System.Collections.Generic
-  definition: System.Collections.Generic.Dictionary`2
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  name: Dictionary<int, MenuBase>
-  nameWithType: Dictionary<int, MenuBase>
-  fullName: System.Collections.Generic.Dictionary<int, rwby.ui.MenuBase>
-  nameWithType.vb: Dictionary(Of Integer, MenuBase)
-  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, rwby.ui.MenuBase)
-  name.vb: Dictionary(Of Integer, MenuBase)
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<IMenu>
+  nameWithType: List<IMenu>
+  fullName: System.Collections.Generic.List<rwby.ui.IMenu>
+  nameWithType.vb: List(Of IMenu)
+  fullName.vb: System.Collections.Generic.List(Of rwby.ui.IMenu)
+  name.vb: List(Of IMenu)
   spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
+  - uid: System.Collections.Generic.List`1
+    name: List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: rwby.ui.MenuBase
-    name: MenuBase
-    href: rwby.ui.MenuBase.html
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
+  - uid: System.Collections.Generic.List`1
+    name: List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: (
   - name: Of
   - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: rwby.ui.MenuBase
-    name: MenuBase
-    href: rwby.ui.MenuBase.html
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
   - name: )
-- uid: System.Collections.Generic.Dictionary`2
-  commentId: T:System.Collections.Generic.Dictionary`2
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  name: Dictionary<TKey, TValue>
-  nameWithType: Dictionary<TKey, TValue>
-  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
-  nameWithType.vb: Dictionary(Of TKey, TValue)
-  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
-  name.vb: Dictionary(Of TKey, TValue)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
   spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
+  - uid: System.Collections.Generic.List`1
+    name: List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
-  - name: TKey
-  - name: ','
-  - name: " "
-  - name: TValue
+  - name: T
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
+  - uid: System.Collections.Generic.List`1
+    name: List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: (
   - name: Of
   - name: " "
-  - name: TKey
-  - name: ','
-  - name: " "
-  - name: TValue
+  - name: T
   - name: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
@@ -531,112 +512,44 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: System.Collections.Generic.List{System.Int32}
-  commentId: T:System.Collections.Generic.List{System.Int32}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<int>
-  nameWithType: List<int>
-  fullName: System.Collections.Generic.List<int>
-  nameWithType.vb: List(Of Integer)
-  fullName.vb: System.Collections.Generic.List(Of Integer)
-  name.vb: List(Of Integer)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
 - uid: Global.MenuHandlerBase.ResetAndForwardTo*
   commentId: Overload:Global.MenuHandlerBase.ResetAndForwardTo
-  href: Global.MenuHandlerBase.html#MenuHandlerBase_ResetAndForwardTo_System_Int32_
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_ResetAndForwardTo_rwby_ui_IMenu_
   name: ResetAndForwardTo
   nameWithType: MenuHandlerBase.ResetAndForwardTo
   fullName: MenuHandlerBase.ResetAndForwardTo
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+- uid: rwby.ui.IMenu
+  commentId: T:rwby.ui.IMenu
+  parent: rwby.ui
+  href: rwby.ui.IMenu.html
+  name: IMenu
+  nameWithType: IMenu
+  fullName: rwby.ui.IMenu
 - uid: Global.MenuHandlerBase.Forward*
   commentId: Overload:Global.MenuHandlerBase.Forward
-  href: Global.MenuHandlerBase.html#MenuHandlerBase_Forward_System_Int32_System_Boolean_
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_Forward_rwby_ui_IMenu_System_Boolean_
   name: Forward
   nameWithType: MenuHandlerBase.Forward
   fullName: MenuHandlerBase.Forward
-- uid: rwby.ui.IMenuHandler.Forward(System.Int32,System.Boolean)
-  commentId: M:rwby.ui.IMenuHandler.Forward(System.Int32,System.Boolean)
+- uid: rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu,System.Boolean)
+  commentId: M:rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu,System.Boolean)
   parent: rwby.ui.IMenuHandler
   isExternal: true
-  href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_System_Int32_System_Boolean_
-  name: Forward(int, bool)
-  nameWithType: IMenuHandler.Forward(int, bool)
-  fullName: rwby.ui.IMenuHandler.Forward(int, bool)
-  nameWithType.vb: IMenuHandler.Forward(Integer, Boolean)
-  fullName.vb: rwby.ui.IMenuHandler.Forward(Integer, Boolean)
-  name.vb: Forward(Integer, Boolean)
+  href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_rwby_ui_IMenu_System_Boolean_
+  name: Forward(IMenu, bool)
+  nameWithType: IMenuHandler.Forward(IMenu, bool)
+  fullName: rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu, bool)
+  nameWithType.vb: IMenuHandler.Forward(IMenu, Boolean)
+  fullName.vb: rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu, Boolean)
+  name.vb: Forward(IMenu, Boolean)
   spec.csharp:
-  - uid: rwby.ui.IMenuHandler.Forward(System.Int32,System.Boolean)
+  - uid: rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu,System.Boolean)
     name: Forward
-    href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_System_Int32_System_Boolean_
+    href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_rwby_ui_IMenu_System_Boolean_
   - name: (
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
   - name: ','
   - name: " "
   - uid: System.Boolean
@@ -645,14 +558,13 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
   spec.vb:
-  - uid: rwby.ui.IMenuHandler.Forward(System.Int32,System.Boolean)
+  - uid: rwby.ui.IMenuHandler.Forward(rwby.ui.IMenu,System.Boolean)
     name: Forward
-    href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_System_Int32_System_Boolean_
+    href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_Forward_rwby_ui_IMenu_System_Boolean_
   - name: (
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
   - name: ','
   - name: " "
   - uid: System.Boolean
@@ -721,54 +633,12 @@ references:
     href: rwby.ui.IMenuHandler.html#rwby_ui_IMenuHandler_GetHistory
   - name: (
   - name: )
-- uid: System.Collections.IList
-  commentId: T:System.Collections.IList
-  parent: System.Collections
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
-  name: IList
-  nameWithType: IList
-  fullName: System.Collections.IList
-- uid: System.Collections
-  commentId: N:System.Collections
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections
-  nameWithType: System.Collections
-  fullName: System.Collections
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
 - uid: Global.MenuHandlerBase.GetPreviousMenu*
   commentId: Overload:Global.MenuHandlerBase.GetPreviousMenu
   href: Global.MenuHandlerBase.html#MenuHandlerBase_GetPreviousMenu
   name: GetPreviousMenu
   nameWithType: MenuHandlerBase.GetPreviousMenu
   fullName: MenuHandlerBase.GetPreviousMenu
-- uid: rwby.ui.IMenu
-  commentId: T:rwby.ui.IMenu
-  parent: rwby.ui
-  href: rwby.ui.IMenu.html
-  name: IMenu
-  nameWithType: IMenu
-  fullName: rwby.ui.IMenu
 - uid: Global.MenuHandlerBase.GetCurrentMenu*
   commentId: Overload:Global.MenuHandlerBase.GetCurrentMenu
   href: Global.MenuHandlerBase.html#MenuHandlerBase_GetCurrentMenu

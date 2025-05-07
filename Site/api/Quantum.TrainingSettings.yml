@@ -5,6 +5,7 @@ items:
   id: TrainingSettings
   parent: Quantum
   children:
+  - Quantum.TrainingSettings.CreateSettingsAsset
   - Quantum.TrainingSettings.dummyBlackboard
   - Quantum.TrainingSettings.dummyCharaDef
   - Quantum.TrainingSettings.dummyHFSM
@@ -27,15 +28,28 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public class TrainingSettings : GamemodeSettingsBase'
-    content.vb: Public Class TrainingSettings Inherits GamemodeSettingsBase
+    content: >-
+      [Serializable]
+
+      public class TrainingSettings : GamemodeSettingsBase, ILogSource
+    content.vb: >-
+      <Serializable>
+
+      Public Class TrainingSettings Inherits GamemodeSettingsBase Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.GamemodeSettingsBase
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
+  - Quantum.GamemodeSettingsBase.teamTypes
+  - Quantum.GamemodeSettingsBase.teamConfigs
+  - Quantum.GamemodeSettingsBase.fightersPerPlayer
+  - Quantum.GamemodeSettingsBase.initialParticipantsInfo
+  - Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
   - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -46,6 +60,10 @@ items:
   - Quantum.AssetObject.Guid
   - Quantum.AssetObject.Path
   - Quantum.AssetObject.Settings
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
 - uid: Quantum.TrainingSettings.dummyCharaDef
   commentId: F:Quantum.TrainingSettings.dummyCharaDef
   id: dummyCharaDef
@@ -64,7 +82,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: dummyCharaDef
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingSettings.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -91,7 +109,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: dummyHFSM
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingSettings.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -118,7 +136,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: dummyBlackboard
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingSettings.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -127,6 +145,36 @@ items:
     return:
       type: Quantum.AssetRef{Quantum.AIBlackboardInitializer}
     content.vb: Public dummyBlackboard As AssetRef(Of AIBlackboardInitializer)
+- uid: Quantum.TrainingSettings.CreateSettingsAsset
+  commentId: M:Quantum.TrainingSettings.CreateSettingsAsset
+  id: CreateSettingsAsset
+  parent: Quantum.TrainingSettings
+  langs:
+  - csharp
+  - vb
+  name: CreateSettingsAsset()
+  nameWithType: TrainingSettings.CreateSettingsAsset()
+  fullName: Quantum.TrainingSettings.CreateSettingsAsset()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingSettings.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CreateSettingsAsset
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingSettings.cs
+    startLine: 9
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: public override GamemodeSettingsBase CreateSettingsAsset()
+    return:
+      type: Quantum.GamemodeSettingsBase
+    content.vb: Public Overrides Function CreateSettingsAsset() As GamemodeSettingsBase
+  overridden: Quantum.GamemodeSettingsBase.CreateSettingsAsset
+  overload: Quantum.TrainingSettings.CreateSettingsAsset*
 references:
 - uid: Quantum
   commentId: N:Quantum
@@ -173,6 +221,66 @@ references:
   name: GamemodeSettingsBase
   nameWithType: GamemodeSettingsBase
   fullName: Quantum.GamemodeSettingsBase
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
+- uid: Quantum.GamemodeSettingsBase.teamTypes
+  commentId: F:Quantum.GamemodeSettingsBase.teamTypes
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_teamTypes
+  name: teamTypes
+  nameWithType: GamemodeSettingsBase.teamTypes
+  fullName: Quantum.GamemodeSettingsBase.teamTypes
+- uid: Quantum.GamemodeSettingsBase.teamConfigs
+  commentId: F:Quantum.GamemodeSettingsBase.teamConfigs
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_teamConfigs
+  name: teamConfigs
+  nameWithType: GamemodeSettingsBase.teamConfigs
+  fullName: Quantum.GamemodeSettingsBase.teamConfigs
+- uid: Quantum.GamemodeSettingsBase.fightersPerPlayer
+  commentId: F:Quantum.GamemodeSettingsBase.fightersPerPlayer
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_fightersPerPlayer
+  name: fightersPerPlayer
+  nameWithType: GamemodeSettingsBase.fightersPerPlayer
+  fullName: Quantum.GamemodeSettingsBase.fightersPerPlayer
+- uid: Quantum.GamemodeSettingsBase.initialParticipantsInfo
+  commentId: F:Quantum.GamemodeSettingsBase.initialParticipantsInfo
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_initialParticipantsInfo
+  name: initialParticipantsInfo
+  nameWithType: GamemodeSettingsBase.initialParticipantsInfo
+  fullName: Quantum.GamemodeSettingsBase.initialParticipantsInfo
+- uid: Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
+  commentId: M:Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_FillBaseSettings_Quantum_GamemodeSettingsBase_
+  name: FillBaseSettings(GamemodeSettingsBase)
+  nameWithType: GamemodeSettingsBase.FillBaseSettings(GamemodeSettingsBase)
+  fullName: Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
+  spec.csharp:
+  - uid: Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
+    name: FillBaseSettings
+    href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_FillBaseSettings_Quantum_GamemodeSettingsBase_
+  - name: (
+  - uid: Quantum.GamemodeSettingsBase
+    name: GamemodeSettingsBase
+    href: Quantum.GamemodeSettingsBase.html
+  - name: )
+  spec.vb:
+  - uid: Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)
+    name: FillBaseSettings
+    href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_FillBaseSettings_Quantum_GamemodeSettingsBase_
+  - name: (
+  - uid: Quantum.GamemodeSettingsBase
+    name: GamemodeSettingsBase
+    href: Quantum.GamemodeSettingsBase.html
+  - name: )
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject
@@ -570,3 +678,28 @@ references:
     name: AIBlackboardInitializer
     isExternal: true
   - name: )
+- uid: Quantum.GamemodeSettingsBase.CreateSettingsAsset
+  commentId: M:Quantum.GamemodeSettingsBase.CreateSettingsAsset
+  parent: Quantum.GamemodeSettingsBase
+  href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_CreateSettingsAsset
+  name: CreateSettingsAsset()
+  nameWithType: GamemodeSettingsBase.CreateSettingsAsset()
+  fullName: Quantum.GamemodeSettingsBase.CreateSettingsAsset()
+  spec.csharp:
+  - uid: Quantum.GamemodeSettingsBase.CreateSettingsAsset
+    name: CreateSettingsAsset
+    href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_CreateSettingsAsset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.GamemodeSettingsBase.CreateSettingsAsset
+    name: CreateSettingsAsset
+    href: Quantum.GamemodeSettingsBase.html#Quantum_GamemodeSettingsBase_CreateSettingsAsset
+  - name: (
+  - name: )
+- uid: Quantum.TrainingSettings.CreateSettingsAsset*
+  commentId: Overload:Quantum.TrainingSettings.CreateSettingsAsset
+  href: Quantum.TrainingSettings.html#Quantum_TrainingSettings_CreateSettingsAsset
+  name: CreateSettingsAsset
+  nameWithType: TrainingSettings.CreateSettingsAsset
+  fullName: Quantum.TrainingSettings.CreateSettingsAsset

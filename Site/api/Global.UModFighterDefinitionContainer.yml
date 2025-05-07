@@ -8,9 +8,11 @@ items:
   - Global.UModFighterDefinitionContainer.GetFighters
   - Global.UModFighterDefinitionContainer.Load(System.String)
   - Global.UModFighterDefinitionContainer.LoadFighterDefinitions
+  - Global.UModFighterDefinitionContainer.OnUModPrebuild
   - Global.UModFighterDefinitionContainer.Unload
   - Global.UModFighterDefinitionContainer.UnloadFighterDefinitions
   - Global.UModFighterDefinitionContainer.fighterReferences
+  - Global.UModFighterDefinitionContainer.fighterRefs
   langs:
   - csharp
   - vb
@@ -33,17 +35,19 @@ items:
     content: >-
       [CreateAssetMenu(menuName = "rwby/UMod/Content/Fighter Definitions Container", fileName = "fighterdefinitioncontainer")]
 
-      public class UModFighterDefinitionContainer : BaseFighterDefinitionContainer
+      public class UModFighterDefinitionContainer : BaseFighterDefinitionContainer, IOnUModPrebuild
     content.vb: >-
       <CreateAssetMenu(menuName:="rwby/UMod/Content/Fighter Definitions Container", fileName:="fighterdefinitioncontainer")>
 
-      Public Class UModFighterDefinitionContainer Inherits BaseFighterDefinitionContainer
+      Public Class UModFighterDefinitionContainer Inherits BaseFighterDefinitionContainer Implements IOnUModPrebuild
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Global.IContentDefinition
   - Global.BaseFighterDefinitionContainer
+  implements:
+  - rwby.IOnUModPrebuild
   inheritedMembers:
   - Global.IContentDefinition.modDefinition
   - Global.IContentDefinition.ID
@@ -54,6 +58,7 @@ items:
   - Global.IContentDefinition.RegisterQuantumAsset
   - Global.IContentDefinition.UnregisterQuantumAsset
   - Global.IContentDefinition.UnloadAssets
+  - Global.IContentDefinition.GetAssetSoftReference
   attributes:
   - type: UnityEngine.CreateAssetMenuAttribute
     ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
@@ -102,6 +107,79 @@ items:
   - type: UnityEngine.SerializeField
     ctor: UnityEngine.SerializeField.#ctor
     arguments: []
+- uid: Global.UModFighterDefinitionContainer.fighterRefs
+  commentId: F:Global.UModFighterDefinitionContainer.fighterRefs
+  id: fighterRefs
+  parent: Global.UModFighterDefinitionContainer
+  langs:
+  - csharp
+  - vb
+  name: fighterRefs
+  nameWithType: UModFighterDefinitionContainer.fighterRefs
+  fullName: UModFighterDefinitionContainer.fighterRefs
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: fighterRefs
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs
+    startLine: 10
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  syntax:
+    content: >-
+      [SerializeField]
+
+      [HideInInspector]
+
+      public ModAssetSoftReference[] fighterRefs
+    return:
+      type: Global.ModAssetSoftReference[]
+    content.vb: >-
+      <SerializeField>
+
+      <HideInInspector>
+
+      Public fighterRefs As ModAssetSoftReference()
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+- uid: Global.UModFighterDefinitionContainer.OnUModPrebuild
+  commentId: M:Global.UModFighterDefinitionContainer.OnUModPrebuild
+  id: OnUModPrebuild
+  parent: Global.UModFighterDefinitionContainer
+  langs:
+  - csharp
+  - vb
+  name: OnUModPrebuild()
+  nameWithType: UModFighterDefinitionContainer.OnUModPrebuild()
+  fullName: UModFighterDefinitionContainer.OnUModPrebuild()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnUModPrebuild
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs
+    startLine: 15
+  assemblies:
+  - rwby.modding.umod
+  namespace: Global
+  example: []
+  syntax:
+    content: public void OnUModPrebuild()
+    content.vb: Public Sub OnUModPrebuild()
+  overload: Global.UModFighterDefinitionContainer.OnUModPrebuild*
+  implements:
+  - rwby.IOnUModPrebuild.OnUModPrebuild
 - uid: Global.UModFighterDefinitionContainer.Load(System.String)
   commentId: M:Global.UModFighterDefinitionContainer.Load(System.String)
   id: Load(System.String)
@@ -120,7 +198,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Load
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs
-    startLine: 14
+    startLine: 25
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -156,7 +234,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadFighterDefinitions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs
-    startLine: 22
+    startLine: 33
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -186,7 +264,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetFighters
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs
-    startLine: 61
+    startLine: 71
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -216,7 +294,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnloadFighterDefinitions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs
-    startLine: 73
+    startLine: 83
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -244,7 +322,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Unload
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModFighterDefinitionContainer.cs
-    startLine: 89
+    startLine: 99
   assemblies:
   - rwby.modding.umod
   namespace: Global
@@ -293,6 +371,13 @@ references:
   name: BaseFighterDefinitionContainer
   nameWithType: BaseFighterDefinitionContainer
   fullName: BaseFighterDefinitionContainer
+- uid: rwby.IOnUModPrebuild
+  commentId: T:rwby.IOnUModPrebuild
+  parent: rwby
+  href: rwby.IOnUModPrebuild.html
+  name: IOnUModPrebuild
+  nameWithType: IOnUModPrebuild
+  fullName: rwby.IOnUModPrebuild
 - uid: Global.IContentDefinition.modDefinition
   commentId: P:Global.IContentDefinition.modDefinition
   parent: Global.IContentDefinition
@@ -404,6 +489,25 @@ references:
     href: Global.IContentDefinition.html#IContentDefinition_UnloadAssets
   - name: (
   - name: )
+- uid: Global.IContentDefinition.GetAssetSoftReference
+  commentId: M:Global.IContentDefinition.GetAssetSoftReference
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  name: GetAssetSoftReference()
+  nameWithType: IContentDefinition.GetAssetSoftReference()
+  fullName: IContentDefinition.GetAssetSoftReference()
+  spec.csharp:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -417,6 +521,12 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
 - uid: rwby.ExternalModAssetSoftReference[]
   isExternal: true
   name: ExternalModAssetSoftReference[]
@@ -433,6 +543,52 @@ references:
   spec.vb:
   - uid: rwby.ExternalModAssetSoftReference
     name: ExternalModAssetSoftReference
+  - name: (
+  - name: )
+- uid: Global.ModAssetSoftReference[]
+  isExternal: true
+  href: ModAssetSoftReference.html
+  name: ModAssetSoftReference[]
+  nameWithType: ModAssetSoftReference[]
+  fullName: ModAssetSoftReference[]
+  nameWithType.vb: ModAssetSoftReference()
+  fullName.vb: ModAssetSoftReference()
+  name.vb: ModAssetSoftReference()
+  spec.csharp:
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.ModAssetSoftReference
+    name: ModAssetSoftReference
+    href: ModAssetSoftReference.html
+  - name: (
+  - name: )
+- uid: Global.UModFighterDefinitionContainer.OnUModPrebuild*
+  commentId: Overload:Global.UModFighterDefinitionContainer.OnUModPrebuild
+  href: Global.UModFighterDefinitionContainer.html#UModFighterDefinitionContainer_OnUModPrebuild
+  name: OnUModPrebuild
+  nameWithType: UModFighterDefinitionContainer.OnUModPrebuild
+  fullName: UModFighterDefinitionContainer.OnUModPrebuild
+- uid: rwby.IOnUModPrebuild.OnUModPrebuild
+  commentId: M:rwby.IOnUModPrebuild.OnUModPrebuild
+  parent: rwby.IOnUModPrebuild
+  href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
+  name: OnUModPrebuild()
+  nameWithType: IOnUModPrebuild.OnUModPrebuild()
+  fullName: rwby.IOnUModPrebuild.OnUModPrebuild()
+  spec.csharp:
+  - uid: rwby.IOnUModPrebuild.OnUModPrebuild
+    name: OnUModPrebuild
+    href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.IOnUModPrebuild.OnUModPrebuild
+    name: OnUModPrebuild
+    href: rwby.IOnUModPrebuild.html#rwby_IOnUModPrebuild_OnUModPrebuild
   - name: (
   - name: )
 - uid: Global.IContentDefinition.Load(System.String)

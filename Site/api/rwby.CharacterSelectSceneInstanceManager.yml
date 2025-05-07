@@ -1,0 +1,789 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.CharacterSelectSceneInstanceManager
+  commentId: T:rwby.CharacterSelectSceneInstanceManager
+  id: CharacterSelectSceneInstanceManager
+  parent: rwby
+  children:
+  - rwby.CharacterSelectSceneInstanceManager.AttemptFinishSelection
+  - rwby.CharacterSelectSceneInstanceManager.CancelSelection
+  - rwby.CharacterSelectSceneInstanceManager.Initialize(System.Int32,System.Int32)
+  - rwby.CharacterSelectSceneInstanceManager.OnCancelSelection
+  - rwby.CharacterSelectSceneInstanceManager.OnCharactersSelected
+  - rwby.CharacterSelectSceneInstanceManager.SetSlotFighter(System.Int32,IFighterDefinition)
+  - rwby.CharacterSelectSceneInstanceManager.Teardown
+  - rwby.CharacterSelectSceneInstanceManager.currentSelectedSlot
+  - rwby.CharacterSelectSceneInstanceManager.fighterReferences
+  - rwby.CharacterSelectSceneInstanceManager.inputPlayerManager
+  - rwby.CharacterSelectSceneInstanceManager.instanceCamera
+  - rwby.CharacterSelectSceneInstanceManager.instanceCinemachineCameras
+  - rwby.CharacterSelectSceneInstanceManager.maxCharacters
+  - rwby.CharacterSelectSceneInstanceManager.minCharacters
+  - rwby.CharacterSelectSceneInstanceManager.screenManager
+  - rwby.CharacterSelectSceneInstanceManager.visualSlots
+  langs:
+  - csharp
+  - vb
+  name: CharacterSelectSceneInstanceManager
+  nameWithType: CharacterSelectSceneInstanceManager
+  fullName: rwby.CharacterSelectSceneInstanceManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CharacterSelectSceneInstanceManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 7
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: 'public class CharacterSelectSceneInstanceManager : MonoBehaviour'
+    content.vb: Public Class CharacterSelectSceneInstanceManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: rwby.CharacterSelectSceneInstanceManager.OnCharactersSelected
+  commentId: F:rwby.CharacterSelectSceneInstanceManager.OnCharactersSelected
+  id: OnCharactersSelected
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: OnCharactersSelected
+  nameWithType: CharacterSelectSceneInstanceManager.OnCharactersSelected
+  fullName: rwby.CharacterSelectSceneInstanceManager.OnCharactersSelected
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnCharactersSelected
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 9
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public UnityEvent<CharacterSelectSceneInstanceManager> OnCharactersSelected
+    return:
+      type: UnityEngine.Events.UnityEvent{rwby.CharacterSelectSceneInstanceManager}
+    content.vb: >-
+      <NonSerialized>
+
+      Public OnCharactersSelected As UnityEvent(Of CharacterSelectSceneInstanceManager)
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.CharacterSelectSceneInstanceManager.OnCancelSelection
+  commentId: F:rwby.CharacterSelectSceneInstanceManager.OnCancelSelection
+  id: OnCancelSelection
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: OnCancelSelection
+  nameWithType: CharacterSelectSceneInstanceManager.OnCancelSelection
+  fullName: rwby.CharacterSelectSceneInstanceManager.OnCancelSelection
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnCancelSelection
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 10
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public UnityEvent<CharacterSelectSceneInstanceManager> OnCancelSelection
+    return:
+      type: UnityEngine.Events.UnityEvent{rwby.CharacterSelectSceneInstanceManager}
+    content.vb: >-
+      <NonSerialized>
+
+      Public OnCancelSelection As UnityEvent(Of CharacterSelectSceneInstanceManager)
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: rwby.CharacterSelectSceneInstanceManager.instanceCamera
+  commentId: F:rwby.CharacterSelectSceneInstanceManager.instanceCamera
+  id: instanceCamera
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: instanceCamera
+  nameWithType: CharacterSelectSceneInstanceManager.instanceCamera
+  fullName: rwby.CharacterSelectSceneInstanceManager.instanceCamera
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: instanceCamera
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 12
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public Camera instanceCamera
+    return:
+      type: UnityEngine.Camera
+    content.vb: Public instanceCamera As Camera
+- uid: rwby.CharacterSelectSceneInstanceManager.instanceCinemachineCameras
+  commentId: F:rwby.CharacterSelectSceneInstanceManager.instanceCinemachineCameras
+  id: instanceCinemachineCameras
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: instanceCinemachineCameras
+  nameWithType: CharacterSelectSceneInstanceManager.instanceCinemachineCameras
+  fullName: rwby.CharacterSelectSceneInstanceManager.instanceCinemachineCameras
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: instanceCinemachineCameras
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 13
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public CinemachineCamera[] instanceCinemachineCameras
+    return:
+      type: Unity.Cinemachine.CinemachineCamera[]
+    content.vb: Public instanceCinemachineCameras As CinemachineCamera()
+- uid: rwby.CharacterSelectSceneInstanceManager.screenManager
+  commentId: F:rwby.CharacterSelectSceneInstanceManager.screenManager
+  id: screenManager
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: screenManager
+  nameWithType: CharacterSelectSceneInstanceManager.screenManager
+  fullName: rwby.CharacterSelectSceneInstanceManager.screenManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: screenManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public CharacterSelectSceneScreenManager screenManager
+    return:
+      type: rwby.CharacterSelectSceneScreenManager
+    content.vb: Public screenManager As CharacterSelectSceneScreenManager
+- uid: rwby.CharacterSelectSceneInstanceManager.inputPlayerManager
+  commentId: F:rwby.CharacterSelectSceneInstanceManager.inputPlayerManager
+  id: inputPlayerManager
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: inputPlayerManager
+  nameWithType: CharacterSelectSceneInstanceManager.inputPlayerManager
+  fullName: rwby.CharacterSelectSceneInstanceManager.inputPlayerManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: inputPlayerManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 16
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public InputPlayerManager inputPlayerManager
+    return:
+      type: Global.InputPlayerManager
+    content.vb: >-
+      <HideInInspector>
+
+      Public inputPlayerManager As InputPlayerManager
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+- uid: rwby.CharacterSelectSceneInstanceManager.visualSlots
+  commentId: F:rwby.CharacterSelectSceneInstanceManager.visualSlots
+  id: visualSlots
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: visualSlots
+  nameWithType: CharacterSelectSceneInstanceManager.visualSlots
+  fullName: rwby.CharacterSelectSceneInstanceManager.visualSlots
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: visualSlots
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 18
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public CharacterSelectSceneVisualSlotInstance[] visualSlots
+    return:
+      type: rwby.CharacterSelectSceneVisualSlotInstance[]
+    content.vb: Public visualSlots As CharacterSelectSceneVisualSlotInstance()
+- uid: rwby.CharacterSelectSceneInstanceManager.fighterReferences
+  commentId: F:rwby.CharacterSelectSceneInstanceManager.fighterReferences
+  id: fighterReferences
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: fighterReferences
+  nameWithType: CharacterSelectSceneInstanceManager.fighterReferences
+  fullName: rwby.CharacterSelectSceneInstanceManager.fighterReferences
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: fighterReferences
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public IFighterDefinition[] fighterReferences
+    return:
+      type: Global.IFighterDefinition[]
+    content.vb: Public fighterReferences As IFighterDefinition()
+- uid: rwby.CharacterSelectSceneInstanceManager.currentSelectedSlot
+  commentId: F:rwby.CharacterSelectSceneInstanceManager.currentSelectedSlot
+  id: currentSelectedSlot
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: currentSelectedSlot
+  nameWithType: CharacterSelectSceneInstanceManager.currentSelectedSlot
+  fullName: rwby.CharacterSelectSceneInstanceManager.currentSelectedSlot
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: currentSelectedSlot
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 21
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public int currentSelectedSlot
+    return:
+      type: System.Int32
+    content.vb: Public currentSelectedSlot As Integer
+- uid: rwby.CharacterSelectSceneInstanceManager.minCharacters
+  commentId: F:rwby.CharacterSelectSceneInstanceManager.minCharacters
+  id: minCharacters
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: minCharacters
+  nameWithType: CharacterSelectSceneInstanceManager.minCharacters
+  fullName: rwby.CharacterSelectSceneInstanceManager.minCharacters
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: minCharacters
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 22
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public int minCharacters
+    return:
+      type: System.Int32
+    content.vb: Public minCharacters As Integer
+- uid: rwby.CharacterSelectSceneInstanceManager.maxCharacters
+  commentId: F:rwby.CharacterSelectSceneInstanceManager.maxCharacters
+  id: maxCharacters
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: maxCharacters
+  nameWithType: CharacterSelectSceneInstanceManager.maxCharacters
+  fullName: rwby.CharacterSelectSceneInstanceManager.maxCharacters
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: maxCharacters
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public int maxCharacters
+    return:
+      type: System.Int32
+    content.vb: Public maxCharacters As Integer
+- uid: rwby.CharacterSelectSceneInstanceManager.Initialize(System.Int32,System.Int32)
+  commentId: M:rwby.CharacterSelectSceneInstanceManager.Initialize(System.Int32,System.Int32)
+  id: Initialize(System.Int32,System.Int32)
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: Initialize(int, int)
+  nameWithType: CharacterSelectSceneInstanceManager.Initialize(int, int)
+  fullName: rwby.CharacterSelectSceneInstanceManager.Initialize(int, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 25
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void Initialize(int maximumCharacters = 4, int minimumCharacters = 1)
+    parameters:
+    - id: maximumCharacters
+      type: System.Int32
+    - id: minimumCharacters
+      type: System.Int32
+    content.vb: Public Sub Initialize(maximumCharacters As Integer = 4, minimumCharacters As Integer = 1)
+  overload: rwby.CharacterSelectSceneInstanceManager.Initialize*
+  nameWithType.vb: CharacterSelectSceneInstanceManager.Initialize(Integer, Integer)
+  fullName.vb: rwby.CharacterSelectSceneInstanceManager.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+- uid: rwby.CharacterSelectSceneInstanceManager.Teardown
+  commentId: M:rwby.CharacterSelectSceneInstanceManager.Teardown
+  id: Teardown
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: CharacterSelectSceneInstanceManager.Teardown()
+  fullName: rwby.CharacterSelectSceneInstanceManager.Teardown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Teardown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 50
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void Teardown()
+    content.vb: Public Sub Teardown()
+  overload: rwby.CharacterSelectSceneInstanceManager.Teardown*
+- uid: rwby.CharacterSelectSceneInstanceManager.AttemptFinishSelection
+  commentId: M:rwby.CharacterSelectSceneInstanceManager.AttemptFinishSelection
+  id: AttemptFinishSelection
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: AttemptFinishSelection()
+  nameWithType: CharacterSelectSceneInstanceManager.AttemptFinishSelection()
+  fullName: rwby.CharacterSelectSceneInstanceManager.AttemptFinishSelection()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AttemptFinishSelection
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 55
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void AttemptFinishSelection()
+    content.vb: Public Sub AttemptFinishSelection()
+  overload: rwby.CharacterSelectSceneInstanceManager.AttemptFinishSelection*
+- uid: rwby.CharacterSelectSceneInstanceManager.CancelSelection
+  commentId: M:rwby.CharacterSelectSceneInstanceManager.CancelSelection
+  id: CancelSelection
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: CancelSelection()
+  nameWithType: CharacterSelectSceneInstanceManager.CancelSelection()
+  fullName: rwby.CharacterSelectSceneInstanceManager.CancelSelection()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CancelSelection
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 68
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void CancelSelection()
+    content.vb: Public Sub CancelSelection()
+  overload: rwby.CharacterSelectSceneInstanceManager.CancelSelection*
+- uid: rwby.CharacterSelectSceneInstanceManager.SetSlotFighter(System.Int32,IFighterDefinition)
+  commentId: M:rwby.CharacterSelectSceneInstanceManager.SetSlotFighter(System.Int32,IFighterDefinition)
+  id: SetSlotFighter(System.Int32,IFighterDefinition)
+  parent: rwby.CharacterSelectSceneInstanceManager
+  langs:
+  - csharp
+  - vb
+  name: SetSlotFighter(int, IFighterDefinition)
+  nameWithType: CharacterSelectSceneInstanceManager.SetSlotFighter(int, IFighterDefinition)
+  fullName: rwby.CharacterSelectSceneInstanceManager.SetSlotFighter(int, IFighterDefinition)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetSlotFighter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Menus/CharacterSelectSceneInstanceManager.cs
+    startLine: 84
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void SetSlotFighter(int slotIdx, IFighterDefinition fighter)
+    parameters:
+    - id: slotIdx
+      type: System.Int32
+    - id: fighter
+      type: Global.IFighterDefinition
+    content.vb: Public Sub SetSlotFighter(slotIdx As Integer, fighter As IFighterDefinition)
+  overload: rwby.CharacterSelectSceneInstanceManager.SetSlotFighter*
+  nameWithType.vb: CharacterSelectSceneInstanceManager.SetSlotFighter(Integer, IFighterDefinition)
+  fullName.vb: rwby.CharacterSelectSceneInstanceManager.SetSlotFighter(Integer, IFighterDefinition)
+  name.vb: SetSlotFighter(Integer, IFighterDefinition)
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Events.UnityEvent{rwby.CharacterSelectSceneInstanceManager}
+  commentId: T:UnityEngine.Events.UnityEvent{rwby.CharacterSelectSceneInstanceManager}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityEvent`1
+  href: rwby.CharacterSelectSceneInstanceManager.html
+  name: UnityEvent<CharacterSelectSceneInstanceManager>
+  nameWithType: UnityEvent<CharacterSelectSceneInstanceManager>
+  fullName: UnityEngine.Events.UnityEvent<rwby.CharacterSelectSceneInstanceManager>
+  nameWithType.vb: UnityEvent(Of CharacterSelectSceneInstanceManager)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of rwby.CharacterSelectSceneInstanceManager)
+  name.vb: UnityEvent(Of CharacterSelectSceneInstanceManager)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - uid: rwby.CharacterSelectSceneInstanceManager
+    name: CharacterSelectSceneInstanceManager
+    href: rwby.CharacterSelectSceneInstanceManager.html
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: rwby.CharacterSelectSceneInstanceManager
+    name: CharacterSelectSceneInstanceManager
+    href: rwby.CharacterSelectSceneInstanceManager.html
+  - name: )
+- uid: UnityEngine.Events.UnityEvent`1
+  commentId: T:UnityEngine.Events.UnityEvent`1
+  isExternal: true
+  name: UnityEvent<T0>
+  nameWithType: UnityEvent<T0>
+  fullName: UnityEngine.Events.UnityEvent<T0>
+  nameWithType.vb: UnityEvent(Of T0)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
+  name.vb: UnityEvent(Of T0)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - name: T0
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T0
+  - name: )
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
+- uid: UnityEngine.Camera
+  commentId: T:UnityEngine.Camera
+  parent: UnityEngine
+  isExternal: true
+  name: Camera
+  nameWithType: Camera
+  fullName: UnityEngine.Camera
+- uid: Unity.Cinemachine.CinemachineCamera[]
+  isExternal: true
+  name: CinemachineCamera[]
+  nameWithType: CinemachineCamera[]
+  fullName: Unity.Cinemachine.CinemachineCamera[]
+  nameWithType.vb: CinemachineCamera()
+  fullName.vb: Unity.Cinemachine.CinemachineCamera()
+  name.vb: CinemachineCamera()
+  spec.csharp:
+  - uid: Unity.Cinemachine.CinemachineCamera
+    name: CinemachineCamera
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Unity.Cinemachine.CinemachineCamera
+    name: CinemachineCamera
+    isExternal: true
+  - name: (
+  - name: )
+- uid: rwby.CharacterSelectSceneScreenManager
+  commentId: T:rwby.CharacterSelectSceneScreenManager
+  parent: rwby
+  href: rwby.CharacterSelectSceneScreenManager.html
+  name: CharacterSelectSceneScreenManager
+  nameWithType: CharacterSelectSceneScreenManager
+  fullName: rwby.CharacterSelectSceneScreenManager
+- uid: Global.InputPlayerManager
+  commentId: T:Global.InputPlayerManager
+  href: InputPlayerManager.html
+  name: InputPlayerManager
+  nameWithType: InputPlayerManager
+  fullName: InputPlayerManager
+- uid: rwby.CharacterSelectSceneVisualSlotInstance[]
+  isExternal: true
+  href: rwby.CharacterSelectSceneVisualSlotInstance.html
+  name: CharacterSelectSceneVisualSlotInstance[]
+  nameWithType: CharacterSelectSceneVisualSlotInstance[]
+  fullName: rwby.CharacterSelectSceneVisualSlotInstance[]
+  nameWithType.vb: CharacterSelectSceneVisualSlotInstance()
+  fullName.vb: rwby.CharacterSelectSceneVisualSlotInstance()
+  name.vb: CharacterSelectSceneVisualSlotInstance()
+  spec.csharp:
+  - uid: rwby.CharacterSelectSceneVisualSlotInstance
+    name: CharacterSelectSceneVisualSlotInstance
+    href: rwby.CharacterSelectSceneVisualSlotInstance.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: rwby.CharacterSelectSceneVisualSlotInstance
+    name: CharacterSelectSceneVisualSlotInstance
+    href: rwby.CharacterSelectSceneVisualSlotInstance.html
+  - name: (
+  - name: )
+- uid: Global.IFighterDefinition[]
+  isExternal: true
+  href: IFighterDefinition.html
+  name: IFighterDefinition[]
+  nameWithType: IFighterDefinition[]
+  fullName: IFighterDefinition[]
+  nameWithType.vb: IFighterDefinition()
+  fullName.vb: IFighterDefinition()
+  name.vb: IFighterDefinition()
+  spec.csharp:
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+    href: IFighterDefinition.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.IFighterDefinition
+    name: IFighterDefinition
+    href: IFighterDefinition.html
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: rwby.CharacterSelectSceneInstanceManager.Initialize*
+  commentId: Overload:rwby.CharacterSelectSceneInstanceManager.Initialize
+  href: rwby.CharacterSelectSceneInstanceManager.html#rwby_CharacterSelectSceneInstanceManager_Initialize_System_Int32_System_Int32_
+  name: Initialize
+  nameWithType: CharacterSelectSceneInstanceManager.Initialize
+  fullName: rwby.CharacterSelectSceneInstanceManager.Initialize
+- uid: rwby.CharacterSelectSceneInstanceManager.Teardown*
+  commentId: Overload:rwby.CharacterSelectSceneInstanceManager.Teardown
+  href: rwby.CharacterSelectSceneInstanceManager.html#rwby_CharacterSelectSceneInstanceManager_Teardown
+  name: Teardown
+  nameWithType: CharacterSelectSceneInstanceManager.Teardown
+  fullName: rwby.CharacterSelectSceneInstanceManager.Teardown
+- uid: rwby.CharacterSelectSceneInstanceManager.AttemptFinishSelection*
+  commentId: Overload:rwby.CharacterSelectSceneInstanceManager.AttemptFinishSelection
+  href: rwby.CharacterSelectSceneInstanceManager.html#rwby_CharacterSelectSceneInstanceManager_AttemptFinishSelection
+  name: AttemptFinishSelection
+  nameWithType: CharacterSelectSceneInstanceManager.AttemptFinishSelection
+  fullName: rwby.CharacterSelectSceneInstanceManager.AttemptFinishSelection
+- uid: rwby.CharacterSelectSceneInstanceManager.CancelSelection*
+  commentId: Overload:rwby.CharacterSelectSceneInstanceManager.CancelSelection
+  href: rwby.CharacterSelectSceneInstanceManager.html#rwby_CharacterSelectSceneInstanceManager_CancelSelection
+  name: CancelSelection
+  nameWithType: CharacterSelectSceneInstanceManager.CancelSelection
+  fullName: rwby.CharacterSelectSceneInstanceManager.CancelSelection
+- uid: rwby.CharacterSelectSceneInstanceManager.SetSlotFighter*
+  commentId: Overload:rwby.CharacterSelectSceneInstanceManager.SetSlotFighter
+  href: rwby.CharacterSelectSceneInstanceManager.html#rwby_CharacterSelectSceneInstanceManager_SetSlotFighter_System_Int32_IFighterDefinition_
+  name: SetSlotFighter
+  nameWithType: CharacterSelectSceneInstanceManager.SetSlotFighter
+  fullName: rwby.CharacterSelectSceneInstanceManager.SetSlotFighter
+- uid: Global.IFighterDefinition
+  commentId: T:Global.IFighterDefinition
+  href: IFighterDefinition.html
+  name: IFighterDefinition
+  nameWithType: IFighterDefinition
+  fullName: IFighterDefinition

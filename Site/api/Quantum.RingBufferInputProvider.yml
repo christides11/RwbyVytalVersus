@@ -5,7 +5,7 @@ items:
   id: RingBufferInputProvider
   parent: Quantum
   children:
-  - Quantum.RingBufferInputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32)
+  - Quantum.RingBufferInputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32,System.Int32)
   - Quantum.RingBufferInputProvider.#ctor(Photon.Deterministic.DeterministicTickInputSet[])
   - Quantum.RingBufferInputProvider.#ctor(System.Int32,System.Int32,System.Int32)
   - Quantum.RingBufferInputProvider.AddRpc(System.Int32,System.Byte[],System.Boolean)
@@ -14,6 +14,7 @@ items:
   - Quantum.RingBufferInputProvider.GetInput(System.Int32,System.Int32)
   - Quantum.RingBufferInputProvider.GetRpc(System.Int32,System.Int32)
   - Quantum.RingBufferInputProvider.InjectInput(Photon.Deterministic.DeterministicTickInput,System.Boolean)
+  - Quantum.RingBufferInputProvider.LocalActorNumber
   - Quantum.RingBufferInputProvider.OnInputConfirmed(Quantum.QuantumGame,Photon.Deterministic.DeterministicFrameInputTemp)
   langs:
   - csharp
@@ -29,7 +30,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RingBufferInputProvider
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6503
+    startLine: 6579
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -40,16 +41,47 @@ items:
     content.vb: Public Class RingBufferInputProvider
   inheritance:
   - System.Object
-- uid: Quantum.RingBufferInputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32)
-  commentId: M:Quantum.RingBufferInputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32)
-  id: '#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32)'
+- uid: Quantum.RingBufferInputProvider.LocalActorNumber
+  commentId: P:Quantum.RingBufferInputProvider.LocalActorNumber
+  id: LocalActorNumber
   parent: Quantum.RingBufferInputProvider
   langs:
   - csharp
   - vb
-  name: RingBufferInputProvider(DeterministicSessionConfig, int)
-  nameWithType: RingBufferInputProvider.RingBufferInputProvider(DeterministicSessionConfig, int)
-  fullName: Quantum.RingBufferInputProvider.RingBufferInputProvider(Photon.Deterministic.DeterministicSessionConfig, int)
+  name: LocalActorNumber
+  nameWithType: RingBufferInputProvider.LocalActorNumber
+  fullName: Quantum.RingBufferInputProvider.LocalActorNumber
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LocalActorNumber
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 6588
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: The actor number of the client that recoded the replay.
+  example: []
+  syntax:
+    content: public int LocalActorNumber { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LocalActorNumber As Integer
+  overload: Quantum.RingBufferInputProvider.LocalActorNumber*
+- uid: Quantum.RingBufferInputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32,System.Int32)
+  commentId: M:Quantum.RingBufferInputProvider.#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32,System.Int32)
+  id: '#ctor(Photon.Deterministic.DeterministicSessionConfig,System.Int32,System.Int32)'
+  parent: Quantum.RingBufferInputProvider
+  langs:
+  - csharp
+  - vb
+  name: RingBufferInputProvider(DeterministicSessionConfig, int, int)
+  nameWithType: RingBufferInputProvider.RingBufferInputProvider(DeterministicSessionConfig, int, int)
+  fullName: Quantum.RingBufferInputProvider.RingBufferInputProvider(Photon.Deterministic.DeterministicSessionConfig, int, int)
   type: Constructor
   source:
     remote:
@@ -58,14 +90,14 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6514
+    startLine: 6596
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   summary: Create a ring buffer input provider.
   example: []
   syntax:
-    content: public RingBufferInputProvider(DeterministicSessionConfig sessionConfig, int capacity = 256)
+    content: public RingBufferInputProvider(DeterministicSessionConfig sessionConfig, int capacity = 256, int localActorNumber = 0)
     parameters:
     - id: sessionConfig
       type: Photon.Deterministic.DeterministicSessionConfig
@@ -73,11 +105,14 @@ items:
     - id: capacity
       type: System.Int32
       description: Total capacity
-    content.vb: Public Sub New(sessionConfig As DeterministicSessionConfig, capacity As Integer = 256)
+    - id: localActorNumber
+      type: System.Int32
+      description: The actor number of the client that recoded the replay.
+    content.vb: Public Sub New(sessionConfig As DeterministicSessionConfig, capacity As Integer = 256, localActorNumber As Integer = 0)
   overload: Quantum.RingBufferInputProvider.#ctor*
-  nameWithType.vb: RingBufferInputProvider.New(DeterministicSessionConfig, Integer)
-  fullName.vb: Quantum.RingBufferInputProvider.New(Photon.Deterministic.DeterministicSessionConfig, Integer)
-  name.vb: New(DeterministicSessionConfig, Integer)
+  nameWithType.vb: RingBufferInputProvider.New(DeterministicSessionConfig, Integer, Integer)
+  fullName.vb: Quantum.RingBufferInputProvider.New(Photon.Deterministic.DeterministicSessionConfig, Integer, Integer)
+  name.vb: New(DeterministicSessionConfig, Integer, Integer)
 - uid: Quantum.RingBufferInputProvider.CanSimulate(System.Int32)
   commentId: M:Quantum.RingBufferInputProvider.CanSimulate(System.Int32)
   id: CanSimulate(System.Int32)
@@ -96,7 +131,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CanSimulate
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6523
+    startLine: 6606
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -134,7 +169,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6537
+    startLine: 6620
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -169,7 +204,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6557
+    startLine: 6640
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -210,7 +245,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Clear
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6576
+    startLine: 6659
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -245,7 +280,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnInputConfirmed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6589
+    startLine: 6672
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -280,7 +315,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: InjectInput
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6602
+    startLine: 6685
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -318,7 +353,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AddRpc
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6617
+    startLine: 6700
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -356,7 +391,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetRpc
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6626
+    startLine: 6709
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -397,7 +432,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetInput
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 6644
+    startLine: 6727
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -445,9 +480,26 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Quantum.RingBufferInputProvider.LocalActorNumber*
+  commentId: Overload:Quantum.RingBufferInputProvider.LocalActorNumber
+  href: Quantum.RingBufferInputProvider.html#Quantum_RingBufferInputProvider_LocalActorNumber
+  name: LocalActorNumber
+  nameWithType: RingBufferInputProvider.LocalActorNumber
+  fullName: Quantum.RingBufferInputProvider.LocalActorNumber
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: Quantum.RingBufferInputProvider.#ctor*
   commentId: Overload:Quantum.RingBufferInputProvider.#ctor
-  href: Quantum.RingBufferInputProvider.html#Quantum_RingBufferInputProvider__ctor_Photon_Deterministic_DeterministicSessionConfig_System_Int32_
+  href: Quantum.RingBufferInputProvider.html#Quantum_RingBufferInputProvider__ctor_Photon_Deterministic_DeterministicSessionConfig_System_Int32_System_Int32_
   name: RingBufferInputProvider
   nameWithType: RingBufferInputProvider.RingBufferInputProvider
   fullName: Quantum.RingBufferInputProvider.RingBufferInputProvider
@@ -461,17 +513,6 @@ references:
   name: DeterministicSessionConfig
   nameWithType: DeterministicSessionConfig
   fullName: Photon.Deterministic.DeterministicSessionConfig
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: Photon.Deterministic
   commentId: N:Photon.Deterministic
   isExternal: true

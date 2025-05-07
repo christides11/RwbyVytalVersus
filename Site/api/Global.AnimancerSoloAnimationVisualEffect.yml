@@ -1,0 +1,833 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.AnimancerSoloAnimationVisualEffect
+  commentId: T:Global.AnimancerSoloAnimationVisualEffect
+  id: AnimancerSoloAnimationVisualEffect
+  parent: Global
+  children:
+  - Global.AnimancerSoloAnimationVisualEffect.CurrentTime
+  - Global.AnimancerSoloAnimationVisualEffect.DestroyEffect
+  - Global.AnimancerSoloAnimationVisualEffect.Freeze
+  - Global.AnimancerSoloAnimationVisualEffect.Play
+  - Global.AnimancerSoloAnimationVisualEffect.Resume
+  - Global.AnimancerSoloAnimationVisualEffect.SeekTo(System.Single,System.Boolean)
+  - Global.AnimancerSoloAnimationVisualEffect.Stop(System.Boolean)
+  - Global.AnimancerSoloAnimationVisualEffect.UpdatePlayRate
+  - Global.AnimancerSoloAnimationVisualEffect.animancer
+  - Global.AnimancerSoloAnimationVisualEffect.clip
+  langs:
+  - csharp
+  - vb
+  name: AnimancerSoloAnimationVisualEffect
+  nameWithType: AnimancerSoloAnimationVisualEffect
+  fullName: AnimancerSoloAnimationVisualEffect
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AnimancerSoloAnimationVisualEffect
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+    startLine: 3
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: 'public class AnimancerSoloAnimationVisualEffect : VisualEffectBase'
+    content.vb: Public Class AnimancerSoloAnimationVisualEffect Inherits VisualEffectBase
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - Global.VisualEffectBase
+  inheritedMembers:
+  - Global.VisualEffectBase.WhenEffectDestroyed
+  - Global.VisualEffectBase.PlayRate
+  - Global.VisualEffectBase.playRate
+  - Global.VisualEffectBase.status
+  - Global.VisualEffectBase.autoDestroy
+  - Global.VisualEffectBase.autoDestroyAfter
+  - Global.VisualEffectBase.autoStop
+  - Global.VisualEffectBase.autoStopAfter
+  - Global.VisualEffectBase.destoryTimer
+  - Global.VisualEffectBase.entryAsset
+  - Global.VisualEffectBase.freezeDuringHitstop
+  - Global.VisualEffectBase.sourcePool
+  - Global.VisualEffectBase.FixedUpdate
+  - Global.VisualEffectBase.SetSeed(System.UInt32)
+  - Global.VisualEffectBase.Reinitialize
+- uid: Global.AnimancerSoloAnimationVisualEffect.CurrentTime
+  commentId: P:Global.AnimancerSoloAnimationVisualEffect.CurrentTime
+  id: CurrentTime
+  parent: Global.AnimancerSoloAnimationVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: CurrentTime
+  nameWithType: AnimancerSoloAnimationVisualEffect.CurrentTime
+  fullName: AnimancerSoloAnimationVisualEffect.CurrentTime
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: CurrentTime
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+    startLine: 5
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override float CurrentTime { get; protected set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Overrides Property CurrentTime As Single
+  overridden: Global.VisualEffectBase.CurrentTime
+  overload: Global.AnimancerSoloAnimationVisualEffect.CurrentTime*
+- uid: Global.AnimancerSoloAnimationVisualEffect.animancer
+  commentId: F:Global.AnimancerSoloAnimationVisualEffect.animancer
+  id: animancer
+  parent: Global.AnimancerSoloAnimationVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: animancer
+  nameWithType: AnimancerSoloAnimationVisualEffect.animancer
+  fullName: AnimancerSoloAnimationVisualEffect.animancer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: animancer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+    startLine: 7
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public SoloAnimation animancer
+    return:
+      type: Animancer.SoloAnimation
+    content.vb: Public animancer As SoloAnimation
+- uid: Global.AnimancerSoloAnimationVisualEffect.clip
+  commentId: F:Global.AnimancerSoloAnimationVisualEffect.clip
+  id: clip
+  parent: Global.AnimancerSoloAnimationVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: clip
+  nameWithType: AnimancerSoloAnimationVisualEffect.clip
+  fullName: AnimancerSoloAnimationVisualEffect.clip
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: clip
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+    startLine: 8
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public AnimationClip clip
+    return:
+      type: UnityEngine.AnimationClip
+    content.vb: Public clip As AnimationClip
+- uid: Global.AnimancerSoloAnimationVisualEffect.Play
+  commentId: M:Global.AnimancerSoloAnimationVisualEffect.Play
+  id: Play
+  parent: Global.AnimancerSoloAnimationVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: Play()
+  nameWithType: AnimancerSoloAnimationVisualEffect.Play()
+  fullName: AnimancerSoloAnimationVisualEffect.Play()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Play
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+    startLine: 10
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void Play()
+    content.vb: Public Overrides Sub Play()
+  overridden: Global.VisualEffectBase.Play
+  overload: Global.AnimancerSoloAnimationVisualEffect.Play*
+- uid: Global.AnimancerSoloAnimationVisualEffect.Freeze
+  commentId: M:Global.AnimancerSoloAnimationVisualEffect.Freeze
+  id: Freeze
+  parent: Global.AnimancerSoloAnimationVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: Freeze()
+  nameWithType: AnimancerSoloAnimationVisualEffect.Freeze()
+  fullName: AnimancerSoloAnimationVisualEffect.Freeze()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Freeze
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+    startLine: 16
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void Freeze()
+    content.vb: Public Overrides Sub Freeze()
+  overridden: Global.VisualEffectBase.Freeze
+  overload: Global.AnimancerSoloAnimationVisualEffect.Freeze*
+- uid: Global.AnimancerSoloAnimationVisualEffect.Resume
+  commentId: M:Global.AnimancerSoloAnimationVisualEffect.Resume
+  id: Resume
+  parent: Global.AnimancerSoloAnimationVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: Resume()
+  nameWithType: AnimancerSoloAnimationVisualEffect.Resume()
+  fullName: AnimancerSoloAnimationVisualEffect.Resume()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Resume
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+    startLine: 22
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void Resume()
+    content.vb: Public Overrides Sub [Resume]()
+  overridden: Global.VisualEffectBase.Resume
+  overload: Global.AnimancerSoloAnimationVisualEffect.Resume*
+- uid: Global.AnimancerSoloAnimationVisualEffect.SeekTo(System.Single,System.Boolean)
+  commentId: M:Global.AnimancerSoloAnimationVisualEffect.SeekTo(System.Single,System.Boolean)
+  id: SeekTo(System.Single,System.Boolean)
+  parent: Global.AnimancerSoloAnimationVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: SeekTo(float, bool)
+  nameWithType: AnimancerSoloAnimationVisualEffect.SeekTo(float, bool)
+  fullName: AnimancerSoloAnimationVisualEffect.SeekTo(float, bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SeekTo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+    startLine: 28
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void SeekTo(float time, bool play = true)
+    parameters:
+    - id: time
+      type: System.Single
+    - id: play
+      type: System.Boolean
+    content.vb: Public Overrides Sub SeekTo(time As Single, play As Boolean = True)
+  overridden: Global.VisualEffectBase.SeekTo(System.Single,System.Boolean)
+  overload: Global.AnimancerSoloAnimationVisualEffect.SeekTo*
+  nameWithType.vb: AnimancerSoloAnimationVisualEffect.SeekTo(Single, Boolean)
+  fullName.vb: AnimancerSoloAnimationVisualEffect.SeekTo(Single, Boolean)
+  name.vb: SeekTo(Single, Boolean)
+- uid: Global.AnimancerSoloAnimationVisualEffect.Stop(System.Boolean)
+  commentId: M:Global.AnimancerSoloAnimationVisualEffect.Stop(System.Boolean)
+  id: Stop(System.Boolean)
+  parent: Global.AnimancerSoloAnimationVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: Stop(bool)
+  nameWithType: AnimancerSoloAnimationVisualEffect.Stop(bool)
+  fullName: AnimancerSoloAnimationVisualEffect.Stop(bool)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Stop
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+    startLine: 36
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void Stop(bool clearParticles = true)
+    parameters:
+    - id: clearParticles
+      type: System.Boolean
+    content.vb: Public Overrides Sub [Stop](clearParticles As Boolean = True)
+  overridden: Global.VisualEffectBase.Stop(System.Boolean)
+  overload: Global.AnimancerSoloAnimationVisualEffect.Stop*
+  nameWithType.vb: AnimancerSoloAnimationVisualEffect.Stop(Boolean)
+  fullName.vb: AnimancerSoloAnimationVisualEffect.Stop(Boolean)
+  name.vb: Stop(Boolean)
+- uid: Global.AnimancerSoloAnimationVisualEffect.DestroyEffect
+  commentId: M:Global.AnimancerSoloAnimationVisualEffect.DestroyEffect
+  id: DestroyEffect
+  parent: Global.AnimancerSoloAnimationVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: DestroyEffect()
+  nameWithType: AnimancerSoloAnimationVisualEffect.DestroyEffect()
+  fullName: AnimancerSoloAnimationVisualEffect.DestroyEffect()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DestroyEffect
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+    startLine: 42
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void DestroyEffect()
+    content.vb: Public Overrides Sub DestroyEffect()
+  overridden: Global.VisualEffectBase.DestroyEffect
+  overload: Global.AnimancerSoloAnimationVisualEffect.DestroyEffect*
+- uid: Global.AnimancerSoloAnimationVisualEffect.UpdatePlayRate
+  commentId: M:Global.AnimancerSoloAnimationVisualEffect.UpdatePlayRate
+  id: UpdatePlayRate
+  parent: Global.AnimancerSoloAnimationVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: UpdatePlayRate()
+  nameWithType: AnimancerSoloAnimationVisualEffect.UpdatePlayRate()
+  fullName: AnimancerSoloAnimationVisualEffect.UpdatePlayRate()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdatePlayRate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/AnimancerSoloAnimationVisualEffect.cs
+    startLine: 52
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: protected override void UpdatePlayRate()
+    content.vb: Protected Overrides Sub UpdatePlayRate()
+  overridden: Global.VisualEffectBase.UpdatePlayRate
+  overload: Global.AnimancerSoloAnimationVisualEffect.UpdatePlayRate*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: Global.VisualEffectBase
+  commentId: T:Global.VisualEffectBase
+  href: VisualEffectBase.html
+  name: VisualEffectBase
+  nameWithType: VisualEffectBase
+  fullName: VisualEffectBase
+- uid: Global.VisualEffectBase.WhenEffectDestroyed
+  commentId: F:Global.VisualEffectBase.WhenEffectDestroyed
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_WhenEffectDestroyed
+  name: WhenEffectDestroyed
+  nameWithType: VisualEffectBase.WhenEffectDestroyed
+  fullName: VisualEffectBase.WhenEffectDestroyed
+- uid: Global.VisualEffectBase.PlayRate
+  commentId: P:Global.VisualEffectBase.PlayRate
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_PlayRate
+  name: PlayRate
+  nameWithType: VisualEffectBase.PlayRate
+  fullName: VisualEffectBase.PlayRate
+- uid: Global.VisualEffectBase.playRate
+  commentId: F:Global.VisualEffectBase.playRate
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_playRate
+  name: playRate
+  nameWithType: VisualEffectBase.playRate
+  fullName: VisualEffectBase.playRate
+- uid: Global.VisualEffectBase.status
+  commentId: F:Global.VisualEffectBase.status
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_status
+  name: status
+  nameWithType: VisualEffectBase.status
+  fullName: VisualEffectBase.status
+- uid: Global.VisualEffectBase.autoDestroy
+  commentId: F:Global.VisualEffectBase.autoDestroy
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_autoDestroy
+  name: autoDestroy
+  nameWithType: VisualEffectBase.autoDestroy
+  fullName: VisualEffectBase.autoDestroy
+- uid: Global.VisualEffectBase.autoDestroyAfter
+  commentId: F:Global.VisualEffectBase.autoDestroyAfter
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_autoDestroyAfter
+  name: autoDestroyAfter
+  nameWithType: VisualEffectBase.autoDestroyAfter
+  fullName: VisualEffectBase.autoDestroyAfter
+- uid: Global.VisualEffectBase.autoStop
+  commentId: F:Global.VisualEffectBase.autoStop
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_autoStop
+  name: autoStop
+  nameWithType: VisualEffectBase.autoStop
+  fullName: VisualEffectBase.autoStop
+- uid: Global.VisualEffectBase.autoStopAfter
+  commentId: F:Global.VisualEffectBase.autoStopAfter
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_autoStopAfter
+  name: autoStopAfter
+  nameWithType: VisualEffectBase.autoStopAfter
+  fullName: VisualEffectBase.autoStopAfter
+- uid: Global.VisualEffectBase.destoryTimer
+  commentId: F:Global.VisualEffectBase.destoryTimer
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_destoryTimer
+  name: destoryTimer
+  nameWithType: VisualEffectBase.destoryTimer
+  fullName: VisualEffectBase.destoryTimer
+- uid: Global.VisualEffectBase.entryAsset
+  commentId: F:Global.VisualEffectBase.entryAsset
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_entryAsset
+  name: entryAsset
+  nameWithType: VisualEffectBase.entryAsset
+  fullName: VisualEffectBase.entryAsset
+- uid: Global.VisualEffectBase.freezeDuringHitstop
+  commentId: F:Global.VisualEffectBase.freezeDuringHitstop
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_freezeDuringHitstop
+  name: freezeDuringHitstop
+  nameWithType: VisualEffectBase.freezeDuringHitstop
+  fullName: VisualEffectBase.freezeDuringHitstop
+- uid: Global.VisualEffectBase.sourcePool
+  commentId: F:Global.VisualEffectBase.sourcePool
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_sourcePool
+  name: sourcePool
+  nameWithType: VisualEffectBase.sourcePool
+  fullName: VisualEffectBase.sourcePool
+- uid: Global.VisualEffectBase.FixedUpdate
+  commentId: M:Global.VisualEffectBase.FixedUpdate
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_FixedUpdate
+  name: FixedUpdate()
+  nameWithType: VisualEffectBase.FixedUpdate()
+  fullName: VisualEffectBase.FixedUpdate()
+  spec.csharp:
+  - uid: Global.VisualEffectBase.FixedUpdate
+    name: FixedUpdate
+    href: Global.VisualEffectBase.html#VisualEffectBase_FixedUpdate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.FixedUpdate
+    name: FixedUpdate
+    href: Global.VisualEffectBase.html#VisualEffectBase_FixedUpdate
+  - name: (
+  - name: )
+- uid: Global.VisualEffectBase.SetSeed(System.UInt32)
+  commentId: M:Global.VisualEffectBase.SetSeed(System.UInt32)
+  parent: Global.VisualEffectBase
+  isExternal: true
+  href: Global.VisualEffectBase.html#VisualEffectBase_SetSeed_System_UInt32_
+  name: SetSeed(uint)
+  nameWithType: VisualEffectBase.SetSeed(uint)
+  fullName: VisualEffectBase.SetSeed(uint)
+  nameWithType.vb: VisualEffectBase.SetSeed(UInteger)
+  fullName.vb: VisualEffectBase.SetSeed(UInteger)
+  name.vb: SetSeed(UInteger)
+  spec.csharp:
+  - uid: Global.VisualEffectBase.SetSeed(System.UInt32)
+    name: SetSeed
+    href: Global.VisualEffectBase.html#VisualEffectBase_SetSeed_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.SetSeed(System.UInt32)
+    name: SetSeed
+    href: Global.VisualEffectBase.html#VisualEffectBase_SetSeed_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: Global.VisualEffectBase.Reinitialize
+  commentId: M:Global.VisualEffectBase.Reinitialize
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_Reinitialize
+  name: Reinitialize()
+  nameWithType: VisualEffectBase.Reinitialize()
+  fullName: VisualEffectBase.Reinitialize()
+  spec.csharp:
+  - uid: Global.VisualEffectBase.Reinitialize
+    name: Reinitialize
+    href: Global.VisualEffectBase.html#VisualEffectBase_Reinitialize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.Reinitialize
+    name: Reinitialize
+    href: Global.VisualEffectBase.html#VisualEffectBase_Reinitialize
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.VisualEffectBase.CurrentTime
+  commentId: P:Global.VisualEffectBase.CurrentTime
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_CurrentTime
+  name: CurrentTime
+  nameWithType: VisualEffectBase.CurrentTime
+  fullName: VisualEffectBase.CurrentTime
+- uid: Global.AnimancerSoloAnimationVisualEffect.CurrentTime*
+  commentId: Overload:Global.AnimancerSoloAnimationVisualEffect.CurrentTime
+  href: Global.AnimancerSoloAnimationVisualEffect.html#AnimancerSoloAnimationVisualEffect_CurrentTime
+  name: CurrentTime
+  nameWithType: AnimancerSoloAnimationVisualEffect.CurrentTime
+  fullName: AnimancerSoloAnimationVisualEffect.CurrentTime
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Animancer.SoloAnimation
+  commentId: T:Animancer.SoloAnimation
+  parent: Animancer
+  name: SoloAnimation
+  nameWithType: SoloAnimation
+  fullName: Animancer.SoloAnimation
+- uid: Animancer
+  commentId: N:Animancer
+  name: Animancer
+  nameWithType: Animancer
+  fullName: Animancer
+- uid: UnityEngine.AnimationClip
+  commentId: T:UnityEngine.AnimationClip
+  parent: UnityEngine
+  isExternal: true
+  name: AnimationClip
+  nameWithType: AnimationClip
+  fullName: UnityEngine.AnimationClip
+- uid: Global.VisualEffectBase.Play
+  commentId: M:Global.VisualEffectBase.Play
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_Play
+  name: Play()
+  nameWithType: VisualEffectBase.Play()
+  fullName: VisualEffectBase.Play()
+  spec.csharp:
+  - uid: Global.VisualEffectBase.Play
+    name: Play
+    href: Global.VisualEffectBase.html#VisualEffectBase_Play
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.Play
+    name: Play
+    href: Global.VisualEffectBase.html#VisualEffectBase_Play
+  - name: (
+  - name: )
+- uid: Global.AnimancerSoloAnimationVisualEffect.Play*
+  commentId: Overload:Global.AnimancerSoloAnimationVisualEffect.Play
+  href: Global.AnimancerSoloAnimationVisualEffect.html#AnimancerSoloAnimationVisualEffect_Play
+  name: Play
+  nameWithType: AnimancerSoloAnimationVisualEffect.Play
+  fullName: AnimancerSoloAnimationVisualEffect.Play
+- uid: Global.VisualEffectBase.Freeze
+  commentId: M:Global.VisualEffectBase.Freeze
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_Freeze
+  name: Freeze()
+  nameWithType: VisualEffectBase.Freeze()
+  fullName: VisualEffectBase.Freeze()
+  spec.csharp:
+  - uid: Global.VisualEffectBase.Freeze
+    name: Freeze
+    href: Global.VisualEffectBase.html#VisualEffectBase_Freeze
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.Freeze
+    name: Freeze
+    href: Global.VisualEffectBase.html#VisualEffectBase_Freeze
+  - name: (
+  - name: )
+- uid: Global.AnimancerSoloAnimationVisualEffect.Freeze*
+  commentId: Overload:Global.AnimancerSoloAnimationVisualEffect.Freeze
+  href: Global.AnimancerSoloAnimationVisualEffect.html#AnimancerSoloAnimationVisualEffect_Freeze
+  name: Freeze
+  nameWithType: AnimancerSoloAnimationVisualEffect.Freeze
+  fullName: AnimancerSoloAnimationVisualEffect.Freeze
+- uid: Global.VisualEffectBase.Resume
+  commentId: M:Global.VisualEffectBase.Resume
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_Resume
+  name: Resume()
+  nameWithType: VisualEffectBase.Resume()
+  fullName: VisualEffectBase.Resume()
+  spec.csharp:
+  - uid: Global.VisualEffectBase.Resume
+    name: Resume
+    href: Global.VisualEffectBase.html#VisualEffectBase_Resume
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.Resume
+    name: Resume
+    href: Global.VisualEffectBase.html#VisualEffectBase_Resume
+  - name: (
+  - name: )
+- uid: Global.AnimancerSoloAnimationVisualEffect.Resume*
+  commentId: Overload:Global.AnimancerSoloAnimationVisualEffect.Resume
+  href: Global.AnimancerSoloAnimationVisualEffect.html#AnimancerSoloAnimationVisualEffect_Resume
+  name: Resume
+  nameWithType: AnimancerSoloAnimationVisualEffect.Resume
+  fullName: AnimancerSoloAnimationVisualEffect.Resume
+- uid: Global.VisualEffectBase.SeekTo(System.Single,System.Boolean)
+  commentId: M:Global.VisualEffectBase.SeekTo(System.Single,System.Boolean)
+  parent: Global.VisualEffectBase
+  isExternal: true
+  href: Global.VisualEffectBase.html#VisualEffectBase_SeekTo_System_Single_System_Boolean_
+  name: SeekTo(float, bool)
+  nameWithType: VisualEffectBase.SeekTo(float, bool)
+  fullName: VisualEffectBase.SeekTo(float, bool)
+  nameWithType.vb: VisualEffectBase.SeekTo(Single, Boolean)
+  fullName.vb: VisualEffectBase.SeekTo(Single, Boolean)
+  name.vb: SeekTo(Single, Boolean)
+  spec.csharp:
+  - uid: Global.VisualEffectBase.SeekTo(System.Single,System.Boolean)
+    name: SeekTo
+    href: Global.VisualEffectBase.html#VisualEffectBase_SeekTo_System_Single_System_Boolean_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.SeekTo(System.Single,System.Boolean)
+    name: SeekTo
+    href: Global.VisualEffectBase.html#VisualEffectBase_SeekTo_System_Single_System_Boolean_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Global.AnimancerSoloAnimationVisualEffect.SeekTo*
+  commentId: Overload:Global.AnimancerSoloAnimationVisualEffect.SeekTo
+  href: Global.AnimancerSoloAnimationVisualEffect.html#AnimancerSoloAnimationVisualEffect_SeekTo_System_Single_System_Boolean_
+  name: SeekTo
+  nameWithType: AnimancerSoloAnimationVisualEffect.SeekTo
+  fullName: AnimancerSoloAnimationVisualEffect.SeekTo
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Global.VisualEffectBase.Stop(System.Boolean)
+  commentId: M:Global.VisualEffectBase.Stop(System.Boolean)
+  parent: Global.VisualEffectBase
+  isExternal: true
+  href: Global.VisualEffectBase.html#VisualEffectBase_Stop_System_Boolean_
+  name: Stop(bool)
+  nameWithType: VisualEffectBase.Stop(bool)
+  fullName: VisualEffectBase.Stop(bool)
+  nameWithType.vb: VisualEffectBase.Stop(Boolean)
+  fullName.vb: VisualEffectBase.Stop(Boolean)
+  name.vb: Stop(Boolean)
+  spec.csharp:
+  - uid: Global.VisualEffectBase.Stop(System.Boolean)
+    name: Stop
+    href: Global.VisualEffectBase.html#VisualEffectBase_Stop_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.Stop(System.Boolean)
+    name: Stop
+    href: Global.VisualEffectBase.html#VisualEffectBase_Stop_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Global.AnimancerSoloAnimationVisualEffect.Stop*
+  commentId: Overload:Global.AnimancerSoloAnimationVisualEffect.Stop
+  href: Global.AnimancerSoloAnimationVisualEffect.html#AnimancerSoloAnimationVisualEffect_Stop_System_Boolean_
+  name: Stop
+  nameWithType: AnimancerSoloAnimationVisualEffect.Stop
+  fullName: AnimancerSoloAnimationVisualEffect.Stop
+- uid: Global.VisualEffectBase.DestroyEffect
+  commentId: M:Global.VisualEffectBase.DestroyEffect
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_DestroyEffect
+  name: DestroyEffect()
+  nameWithType: VisualEffectBase.DestroyEffect()
+  fullName: VisualEffectBase.DestroyEffect()
+  spec.csharp:
+  - uid: Global.VisualEffectBase.DestroyEffect
+    name: DestroyEffect
+    href: Global.VisualEffectBase.html#VisualEffectBase_DestroyEffect
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.DestroyEffect
+    name: DestroyEffect
+    href: Global.VisualEffectBase.html#VisualEffectBase_DestroyEffect
+  - name: (
+  - name: )
+- uid: Global.AnimancerSoloAnimationVisualEffect.DestroyEffect*
+  commentId: Overload:Global.AnimancerSoloAnimationVisualEffect.DestroyEffect
+  href: Global.AnimancerSoloAnimationVisualEffect.html#AnimancerSoloAnimationVisualEffect_DestroyEffect
+  name: DestroyEffect
+  nameWithType: AnimancerSoloAnimationVisualEffect.DestroyEffect
+  fullName: AnimancerSoloAnimationVisualEffect.DestroyEffect
+- uid: Global.VisualEffectBase.UpdatePlayRate
+  commentId: M:Global.VisualEffectBase.UpdatePlayRate
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_UpdatePlayRate
+  name: UpdatePlayRate()
+  nameWithType: VisualEffectBase.UpdatePlayRate()
+  fullName: VisualEffectBase.UpdatePlayRate()
+  spec.csharp:
+  - uid: Global.VisualEffectBase.UpdatePlayRate
+    name: UpdatePlayRate
+    href: Global.VisualEffectBase.html#VisualEffectBase_UpdatePlayRate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.UpdatePlayRate
+    name: UpdatePlayRate
+    href: Global.VisualEffectBase.html#VisualEffectBase_UpdatePlayRate
+  - name: (
+  - name: )
+- uid: Global.AnimancerSoloAnimationVisualEffect.UpdatePlayRate*
+  commentId: Overload:Global.AnimancerSoloAnimationVisualEffect.UpdatePlayRate
+  href: Global.AnimancerSoloAnimationVisualEffect.html#AnimancerSoloAnimationVisualEffect_UpdatePlayRate
+  name: UpdatePlayRate
+  nameWithType: AnimancerSoloAnimationVisualEffect.UpdatePlayRate
+  fullName: AnimancerSoloAnimationVisualEffect.UpdatePlayRate

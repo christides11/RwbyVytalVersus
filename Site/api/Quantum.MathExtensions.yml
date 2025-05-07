@@ -6,7 +6,6 @@ items:
   parent: Quantum
   children:
   - Quantum.MathExtensions.InverseTransformDirection(Photon.Deterministic.FPVector3,Photon.Deterministic.FPQuaternion)
-  - Quantum.MathExtensions.PositionWithOffset(Quantum.Frame,Quantum.EntityRef,Quantum.Transform3D*)
   - Quantum.MathExtensions.TransformDirection(Photon.Deterministic.FPVector3,Photon.Deterministic.FPQuaternion)
   langs:
   - csharp
@@ -103,41 +102,6 @@ items:
       type: Photon.Deterministic.FPVector3
     content.vb: Public Shared Function TransformDirection(direction As FPVector3, lookDir As FPQuaternion) As FPVector3
   overload: Quantum.MathExtensions.TransformDirection*
-- uid: Quantum.MathExtensions.PositionWithOffset(Quantum.Frame,Quantum.EntityRef,Quantum.Transform3D*)
-  commentId: M:Quantum.MathExtensions.PositionWithOffset(Quantum.Frame,Quantum.EntityRef,Quantum.Transform3D*)
-  id: PositionWithOffset(Quantum.Frame,Quantum.EntityRef,Quantum.Transform3D*)
-  parent: Quantum.MathExtensions
-  langs:
-  - csharp
-  - vb
-  name: PositionWithOffset(Frame, EntityRef, Transform3D*)
-  nameWithType: MathExtensions.PositionWithOffset(Frame, EntityRef, Transform3D*)
-  fullName: Quantum.MathExtensions.PositionWithOffset(Quantum.Frame, Quantum.EntityRef, Quantum.Transform3D*)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Input/MathExtensions.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: PositionWithOffset
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Input/MathExtensions.cs
-    startLine: 19
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public static FPVector3 PositionWithOffset(Frame f, EntityRef entity, Transform3D* transform)
-    parameters:
-    - id: f
-      type: Quantum.Frame
-    - id: entity
-      type: Quantum.EntityRef
-    - id: transform
-      type: Quantum.Transform3D*
-    return:
-      type: Photon.Deterministic.FPVector3
-    content.vb: Public Shared Function PositionWithOffset(f As Frame, entity As EntityRef, transform As Transform3D*) As FPVector3
-  overload: Quantum.MathExtensions.PositionWithOffset*
 references:
 - uid: Quantum
   commentId: N:Quantum
@@ -217,38 +181,3 @@ references:
   name: TransformDirection
   nameWithType: MathExtensions.TransformDirection
   fullName: Quantum.MathExtensions.TransformDirection
-- uid: Quantum.MathExtensions.PositionWithOffset*
-  commentId: Overload:Quantum.MathExtensions.PositionWithOffset
-  href: Quantum.MathExtensions.html#Quantum_MathExtensions_PositionWithOffset_Quantum_Frame_Quantum_EntityRef_Quantum_Transform3D__
-  name: PositionWithOffset
-  nameWithType: MathExtensions.PositionWithOffset
-  fullName: Quantum.MathExtensions.PositionWithOffset
-- uid: Quantum.Frame
-  commentId: T:Quantum.Frame
-  parent: Quantum
-  href: Quantum.Frame.html
-  name: Frame
-  nameWithType: Frame
-  fullName: Quantum.Frame
-- uid: Quantum.EntityRef
-  commentId: T:Quantum.EntityRef
-  parent: Quantum
-  isExternal: true
-  name: EntityRef
-  nameWithType: EntityRef
-  fullName: Quantum.EntityRef
-- uid: Quantum.Transform3D*
-  isExternal: true
-  name: Transform3D*
-  nameWithType: Transform3D*
-  fullName: Quantum.Transform3D*
-  spec.csharp:
-  - uid: Quantum.Transform3D
-    name: Transform3D
-    isExternal: true
-  - name: '*'
-  spec.vb:
-  - uid: Quantum.Transform3D
-    name: Transform3D
-    isExternal: true
-  - name: '*'

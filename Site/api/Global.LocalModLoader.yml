@@ -56,11 +56,11 @@ items:
   namespace: Global
   example: []
   syntax:
-    content: public override ModLoaderType LoaderType { get; }
+    content: public override int LoaderType { get; }
     parameters: []
     return:
-      type: Global.ModLoaderType
-    content.vb: Public Overrides ReadOnly Property LoaderType As ModLoaderType
+      type: System.Int32
+    content.vb: Public Overrides ReadOnly Property LoaderType As Integer
   overridden: Global.BaseModLoader.LoaderType
   overload: Global.LocalModLoader.LoaderType*
 - uid: Global.LocalModLoader.TryLoadMod(ModManager,AvailableModDefinition)
@@ -81,7 +81,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryLoadMod
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Local/LocalModLoader.cs
-    startLine: 12
+    startLine: 11
   assemblies:
   - rwby
   namespace: Global
@@ -116,7 +116,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryUnloadMod
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Local/LocalModLoader.cs
-    startLine: 61
+    startLine: 60
   assemblies:
   - rwby
   namespace: Global
@@ -172,12 +172,17 @@ references:
   name: LoaderType
   nameWithType: LocalModLoader.LoaderType
   fullName: LocalModLoader.LoaderType
-- uid: Global.ModLoaderType
-  commentId: T:Global.ModLoaderType
-  href: ModLoaderType.html
-  name: ModLoaderType
-  nameWithType: ModLoaderType
-  fullName: ModLoaderType
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: Global.BaseModLoader.TryLoadMod(ModManager,AvailableModDefinition)
   commentId: M:Global.BaseModLoader.TryLoadMod(ModManager,AvailableModDefinition)
   parent: Global.BaseModLoader

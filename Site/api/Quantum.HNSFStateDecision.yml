@@ -27,8 +27,8 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public class HNSFStateDecision : AssetObject'
-    content.vb: Public Class HNSFStateDecision Inherits AssetObject
+    content: 'public class HNSFStateDecision : AssetObject, ILogSource'
+    content.vb: Public Class HNSFStateDecision Inherits AssetObject Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -38,10 +38,11 @@ items:
   - Quantum.BoolParamDecision
   - Quantum.ButtonHeldDecision
   - Quantum.ChargeLevelDecision
-  - Quantum.CombatantHasHitDecision
-  - Quantum.CombatantHitCountDecision
+  - Quantum.CombatantHitByTypeCountDecision
+  - Quantum.CombatantTouchedEntitiesCountDecision
   - Quantum.CurrentMovesetDecision
   - Quantum.CurrentStatesetDecision
+  - Quantum.DistanceBetweenTargetsDecision
   - Quantum.FPParamDecision
   - Quantum.FacingTargetDecision
   - Quantum.FallSpeedDecision
@@ -66,12 +67,16 @@ items:
   - Quantum.IsMaxChargeDecision
   - Quantum.MoveInAttackStringDecision
   - Quantum.MoveIsLastInAttackStringDecision
+  - Quantum.NextStateByTagDecision
   - Quantum.NextStateDecision
   - Quantum.NextStatesetDecision
+  - Quantum.NullableFPValueDecision
   - Quantum.PhysicsGroundedDecision
   - Quantum.PhysicsShapeOverlapDecision
   - Quantum.StateGroundedDecision
   - Quantum.StateTrackedDecision
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -225,6 +230,13 @@ references:
   name: AssetObject
   nameWithType: AssetObject
   fullName: Quantum.AssetObject
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject

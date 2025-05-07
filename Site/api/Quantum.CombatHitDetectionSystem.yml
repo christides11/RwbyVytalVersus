@@ -5,14 +5,14 @@ items:
   id: CombatHitDetectionSystem
   parent: Quantum
   children:
+  - Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
   - Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.BoxCombatant*)
   - Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.CombatHitDetectionInfo*)
   - Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.Fighter*)
-  - Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
+  - Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
   - Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.BoxCombatant*)
   - Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.CombatHitDetectionInfo*)
   - Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.Fighter*)
-  - Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
   - Quantum.CombatHitDetectionSystem.Update(Quantum.Frame)
   langs:
   - csharp
@@ -36,11 +36,11 @@ items:
     content: >-
       [Preserve]
 
-      public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdded<BoxCombatant>, ISignalOnComponentRemoved<BoxCombatant>, ISignalOnComponentAdded<CombatHitDetectionInfo>, ISignalOnComponentRemoved<CombatHitDetectionInfo>, ISignalOnComponentAdded<Fighter>, ISignalOnComponentRemoved<Fighter>, ISignalOnComponentAdded<FighterArticles>, ISignalOnComponentRemoved<FighterArticles>, ISignal
+      public class CombatHitDetectionSystem : SystemMainThread, ISignalOnComponentAdded<BoxCombatant>, ISignalOnComponentRemoved<BoxCombatant>, ISignalOnComponentAdded<CombatHitDetectionInfo>, ISignalOnComponentRemoved<CombatHitDetectionInfo>, ISignalOnComponentAdded<Fighter>, ISignalOnComponentRemoved<Fighter>, ISignalOnComponentAdded<ArticlesOwner>, ISignalOnComponentRemoved<ArticlesOwner>, ISignal
     content.vb: >-
       <Preserve>
 
-      Public Class CombatHitDetectionSystem Inherits SystemMainThread Implements ISignalOnComponentAdded(Of BoxCombatant), ISignalOnComponentRemoved(Of BoxCombatant), ISignalOnComponentAdded(Of CombatHitDetectionInfo), ISignalOnComponentRemoved(Of CombatHitDetectionInfo), ISignalOnComponentAdded(Of Fighter), ISignalOnComponentRemoved(Of Fighter), ISignalOnComponentAdded(Of FighterArticles), ISignalOnComponentRemoved(Of FighterArticles), ISignal
+      Public Class CombatHitDetectionSystem Inherits SystemMainThread Implements ISignalOnComponentAdded(Of BoxCombatant), ISignalOnComponentRemoved(Of BoxCombatant), ISignalOnComponentAdded(Of CombatHitDetectionInfo), ISignalOnComponentRemoved(Of CombatHitDetectionInfo), ISignalOnComponentAdded(Of Fighter), ISignalOnComponentRemoved(Of Fighter), ISignalOnComponentAdded(Of ArticlesOwner), ISignalOnComponentRemoved(Of ArticlesOwner), ISignal
   inheritance:
   - System.Object
   - Quantum.SystemBase
@@ -52,8 +52,8 @@ items:
   - Quantum.ISignalOnComponentRemoved{Quantum.CombatHitDetectionInfo}
   - Quantum.ISignalOnComponentAdded{Quantum.Fighter}
   - Quantum.ISignalOnComponentRemoved{Quantum.Fighter}
-  - Quantum.ISignalOnComponentAdded{Quantum.FighterArticles}
-  - Quantum.ISignalOnComponentRemoved{Quantum.FighterArticles}
+  - Quantum.ISignalOnComponentAdded{Quantum.ArticlesOwner}
+  - Quantum.ISignalOnComponentRemoved{Quantum.ArticlesOwner}
   - Quantum.ISignal
   inheritedMembers:
   - Quantum.SystemMainThread.ScheduleUpdate(Quantum.Frame,Quantum.Task.TaskHandle)
@@ -162,7 +162,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnRemoved
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs
-    startLine: 247
+    startLine: 248
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -202,7 +202,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnAdded
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs
-    startLine: 265
+    startLine: 269
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -242,7 +242,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnRemoved
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs
-    startLine: 273
+    startLine: 277
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -282,7 +282,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnAdded
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs
-    startLine: 286
+    startLine: 290
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -322,7 +322,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnRemoved
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs
-    startLine: 291
+    startLine: 295
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -344,16 +344,16 @@ items:
   overload: Quantum.CombatHitDetectionSystem.OnRemoved*
   implements:
   - Quantum.ISignalOnComponentRemoved{Quantum.Fighter}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.Fighter*)
-- uid: Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
-  commentId: M:Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
-  id: OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
+- uid: Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
+  commentId: M:Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
+  id: OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
   parent: Quantum.CombatHitDetectionSystem
   langs:
   - csharp
   - vb
-  name: OnAdded(Frame, EntityRef, FighterArticles*)
-  nameWithType: CombatHitDetectionSystem.OnAdded(Frame, EntityRef, FighterArticles*)
-  fullName: Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.FighterArticles*)
+  name: OnAdded(Frame, EntityRef, ArticlesOwner*)
+  nameWithType: CombatHitDetectionSystem.OnAdded(Frame, EntityRef, ArticlesOwner*)
+  fullName: Quantum.CombatHitDetectionSystem.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.ArticlesOwner*)
   type: Method
   source:
     remote:
@@ -362,14 +362,14 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnAdded
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs
-    startLine: 297
+    startLine: 301
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   summary: The signal is called after a component of the desired type has been added to an entity.
   example: []
   syntax:
-    content: public void OnAdded(Frame f, EntityRef entity, FighterArticles* component)
+    content: public void OnAdded(Frame f, EntityRef entity, ArticlesOwner* component)
     parameters:
     - id: f
       type: Quantum.Frame
@@ -378,22 +378,22 @@ items:
       type: Quantum.EntityRef
       description: The entity that the component was added to.
     - id: component
-      type: Quantum.FighterArticles*
+      type: Quantum.ArticlesOwner*
       description: The component that was added.
-    content.vb: Public Sub OnAdded(f As Frame, entity As EntityRef, component As FighterArticles*)
+    content.vb: Public Sub OnAdded(f As Frame, entity As EntityRef, component As ArticlesOwner*)
   overload: Quantum.CombatHitDetectionSystem.OnAdded*
   implements:
-  - Quantum.ISignalOnComponentAdded{Quantum.FighterArticles}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
-- uid: Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
-  commentId: M:Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
-  id: OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
+  - Quantum.ISignalOnComponentAdded{Quantum.ArticlesOwner}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
+- uid: Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
+  commentId: M:Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
+  id: OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
   parent: Quantum.CombatHitDetectionSystem
   langs:
   - csharp
   - vb
-  name: OnRemoved(Frame, EntityRef, FighterArticles*)
-  nameWithType: CombatHitDetectionSystem.OnRemoved(Frame, EntityRef, FighterArticles*)
-  fullName: Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.FighterArticles*)
+  name: OnRemoved(Frame, EntityRef, ArticlesOwner*)
+  nameWithType: CombatHitDetectionSystem.OnRemoved(Frame, EntityRef, ArticlesOwner*)
+  fullName: Quantum.CombatHitDetectionSystem.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.ArticlesOwner*)
   type: Method
   source:
     remote:
@@ -402,14 +402,14 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnRemoved
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/CombatHitDetectionSystem.cs
-    startLine: 303
+    startLine: 307
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   summary: The signal is called after a component of the desired type has been removed from an entity.
   example: []
   syntax:
-    content: public void OnRemoved(Frame f, EntityRef entity, FighterArticles* component)
+    content: public void OnRemoved(Frame f, EntityRef entity, ArticlesOwner* component)
     parameters:
     - id: f
       type: Quantum.Frame
@@ -418,12 +418,12 @@ items:
       type: Quantum.EntityRef
       description: The entity that the component was removed from.
     - id: component
-      type: Quantum.FighterArticles*
+      type: Quantum.ArticlesOwner*
       description: The component that was removed.
-    content.vb: Public Sub OnRemoved(f As Frame, entity As EntityRef, component As FighterArticles*)
+    content.vb: Public Sub OnRemoved(f As Frame, entity As EntityRef, component As ArticlesOwner*)
   overload: Quantum.CombatHitDetectionSystem.OnRemoved*
   implements:
-  - Quantum.ISignalOnComponentRemoved{Quantum.FighterArticles}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
+  - Quantum.ISignalOnComponentRemoved{Quantum.ArticlesOwner}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
 references:
 - uid: Quantum
   commentId: N:Quantum
@@ -642,25 +642,25 @@ references:
     name: Fighter
     href: Quantum.Fighter.html
   - name: )
-- uid: Quantum.ISignalOnComponentAdded{Quantum.FighterArticles}
-  commentId: T:Quantum.ISignalOnComponentAdded{Quantum.FighterArticles}
+- uid: Quantum.ISignalOnComponentAdded{Quantum.ArticlesOwner}
+  commentId: T:Quantum.ISignalOnComponentAdded{Quantum.ArticlesOwner}
   parent: Quantum
   definition: Quantum.ISignalOnComponentAdded`1
   href: Quantum.ISignalOnComponentAdded-1.html
-  name: ISignalOnComponentAdded<FighterArticles>
-  nameWithType: ISignalOnComponentAdded<FighterArticles>
-  fullName: Quantum.ISignalOnComponentAdded<Quantum.FighterArticles>
-  nameWithType.vb: ISignalOnComponentAdded(Of FighterArticles)
-  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.FighterArticles)
-  name.vb: ISignalOnComponentAdded(Of FighterArticles)
+  name: ISignalOnComponentAdded<ArticlesOwner>
+  nameWithType: ISignalOnComponentAdded<ArticlesOwner>
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.ArticlesOwner>
+  nameWithType.vb: ISignalOnComponentAdded(Of ArticlesOwner)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.ArticlesOwner)
+  name.vb: ISignalOnComponentAdded(Of ArticlesOwner)
   spec.csharp:
   - uid: Quantum.ISignalOnComponentAdded`1
     name: ISignalOnComponentAdded
     href: Quantum.ISignalOnComponentAdded-1.html
   - name: <
-  - uid: Quantum.FighterArticles
-    name: FighterArticles
-    href: Quantum.FighterArticles.html
+  - uid: Quantum.ArticlesOwner
+    name: ArticlesOwner
+    href: Quantum.ArticlesOwner.html
   - name: '>'
   spec.vb:
   - uid: Quantum.ISignalOnComponentAdded`1
@@ -669,29 +669,29 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: Quantum.FighterArticles
-    name: FighterArticles
-    href: Quantum.FighterArticles.html
+  - uid: Quantum.ArticlesOwner
+    name: ArticlesOwner
+    href: Quantum.ArticlesOwner.html
   - name: )
-- uid: Quantum.ISignalOnComponentRemoved{Quantum.FighterArticles}
-  commentId: T:Quantum.ISignalOnComponentRemoved{Quantum.FighterArticles}
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.ArticlesOwner}
+  commentId: T:Quantum.ISignalOnComponentRemoved{Quantum.ArticlesOwner}
   parent: Quantum
   definition: Quantum.ISignalOnComponentRemoved`1
   href: Quantum.ISignalOnComponentRemoved-1.html
-  name: ISignalOnComponentRemoved<FighterArticles>
-  nameWithType: ISignalOnComponentRemoved<FighterArticles>
-  fullName: Quantum.ISignalOnComponentRemoved<Quantum.FighterArticles>
-  nameWithType.vb: ISignalOnComponentRemoved(Of FighterArticles)
-  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.FighterArticles)
-  name.vb: ISignalOnComponentRemoved(Of FighterArticles)
+  name: ISignalOnComponentRemoved<ArticlesOwner>
+  nameWithType: ISignalOnComponentRemoved<ArticlesOwner>
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.ArticlesOwner>
+  nameWithType.vb: ISignalOnComponentRemoved(Of ArticlesOwner)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.ArticlesOwner)
+  name.vb: ISignalOnComponentRemoved(Of ArticlesOwner)
   spec.csharp:
   - uid: Quantum.ISignalOnComponentRemoved`1
     name: ISignalOnComponentRemoved
     href: Quantum.ISignalOnComponentRemoved-1.html
   - name: <
-  - uid: Quantum.FighterArticles
-    name: FighterArticles
-    href: Quantum.FighterArticles.html
+  - uid: Quantum.ArticlesOwner
+    name: ArticlesOwner
+    href: Quantum.ArticlesOwner.html
   - name: '>'
   spec.vb:
   - uid: Quantum.ISignalOnComponentRemoved`1
@@ -700,9 +700,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: Quantum.FighterArticles
-    name: FighterArticles
-    href: Quantum.FighterArticles.html
+  - uid: Quantum.ArticlesOwner
+    name: ArticlesOwner
+    href: Quantum.ArticlesOwner.html
   - name: )
 - uid: Quantum.ISignal
   commentId: T:Quantum.ISignal
@@ -1481,18 +1481,18 @@ references:
     href: Quantum.Fighter.html
   - name: '*'
   - name: )
-- uid: Quantum.ISignalOnComponentAdded{Quantum.FighterArticles}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
-  commentId: M:Quantum.ISignalOnComponentAdded{Quantum.FighterArticles}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
-  parent: Quantum.ISignalOnComponentAdded{Quantum.FighterArticles}
+- uid: Quantum.ISignalOnComponentAdded{Quantum.ArticlesOwner}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
+  commentId: M:Quantum.ISignalOnComponentAdded{Quantum.ArticlesOwner}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
+  parent: Quantum.ISignalOnComponentAdded{Quantum.ArticlesOwner}
   definition: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
   href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
-  name: OnAdded(Frame, EntityRef, FighterArticles*)
-  nameWithType: ISignalOnComponentAdded<FighterArticles>.OnAdded(Frame, EntityRef, FighterArticles*)
-  fullName: Quantum.ISignalOnComponentAdded<Quantum.FighterArticles>.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.FighterArticles*)
-  nameWithType.vb: ISignalOnComponentAdded(Of FighterArticles).OnAdded(Frame, EntityRef, FighterArticles*)
-  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.FighterArticles).OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.FighterArticles*)
+  name: OnAdded(Frame, EntityRef, ArticlesOwner*)
+  nameWithType: ISignalOnComponentAdded<ArticlesOwner>.OnAdded(Frame, EntityRef, ArticlesOwner*)
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.ArticlesOwner>.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.ArticlesOwner*)
+  nameWithType.vb: ISignalOnComponentAdded(Of ArticlesOwner).OnAdded(Frame, EntityRef, ArticlesOwner*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.ArticlesOwner).OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.ArticlesOwner*)
   spec.csharp:
-  - uid: Quantum.ISignalOnComponentAdded{Quantum.FighterArticles}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.ArticlesOwner}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
     name: OnAdded
     href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
   - name: (
@@ -1506,13 +1506,13 @@ references:
     isExternal: true
   - name: ','
   - name: " "
-  - uid: Quantum.FighterArticles
-    name: FighterArticles
-    href: Quantum.FighterArticles.html
+  - uid: Quantum.ArticlesOwner
+    name: ArticlesOwner
+    href: Quantum.ArticlesOwner.html
   - name: '*'
   - name: )
   spec.vb:
-  - uid: Quantum.ISignalOnComponentAdded{Quantum.FighterArticles}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.ArticlesOwner}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
     name: OnAdded
     href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
   - name: (
@@ -1526,39 +1526,39 @@ references:
     isExternal: true
   - name: ','
   - name: " "
-  - uid: Quantum.FighterArticles
-    name: FighterArticles
-    href: Quantum.FighterArticles.html
+  - uid: Quantum.ArticlesOwner
+    name: ArticlesOwner
+    href: Quantum.ArticlesOwner.html
   - name: '*'
   - name: )
-- uid: Quantum.FighterArticles*
+- uid: Quantum.ArticlesOwner*
   isExternal: true
-  href: Quantum.FighterArticles.html
-  name: FighterArticles*
-  nameWithType: FighterArticles*
-  fullName: Quantum.FighterArticles*
+  href: Quantum.ArticlesOwner.html
+  name: ArticlesOwner*
+  nameWithType: ArticlesOwner*
+  fullName: Quantum.ArticlesOwner*
   spec.csharp:
-  - uid: Quantum.FighterArticles
-    name: FighterArticles
-    href: Quantum.FighterArticles.html
+  - uid: Quantum.ArticlesOwner
+    name: ArticlesOwner
+    href: Quantum.ArticlesOwner.html
   - name: '*'
   spec.vb:
-  - uid: Quantum.FighterArticles
-    name: FighterArticles
-    href: Quantum.FighterArticles.html
+  - uid: Quantum.ArticlesOwner
+    name: ArticlesOwner
+    href: Quantum.ArticlesOwner.html
   - name: '*'
-- uid: Quantum.ISignalOnComponentRemoved{Quantum.FighterArticles}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
-  commentId: M:Quantum.ISignalOnComponentRemoved{Quantum.FighterArticles}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
-  parent: Quantum.ISignalOnComponentRemoved{Quantum.FighterArticles}
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.ArticlesOwner}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
+  commentId: M:Quantum.ISignalOnComponentRemoved{Quantum.ArticlesOwner}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
+  parent: Quantum.ISignalOnComponentRemoved{Quantum.ArticlesOwner}
   definition: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
   href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
-  name: OnRemoved(Frame, EntityRef, FighterArticles*)
-  nameWithType: ISignalOnComponentRemoved<FighterArticles>.OnRemoved(Frame, EntityRef, FighterArticles*)
-  fullName: Quantum.ISignalOnComponentRemoved<Quantum.FighterArticles>.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.FighterArticles*)
-  nameWithType.vb: ISignalOnComponentRemoved(Of FighterArticles).OnRemoved(Frame, EntityRef, FighterArticles*)
-  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.FighterArticles).OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.FighterArticles*)
+  name: OnRemoved(Frame, EntityRef, ArticlesOwner*)
+  nameWithType: ISignalOnComponentRemoved<ArticlesOwner>.OnRemoved(Frame, EntityRef, ArticlesOwner*)
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.ArticlesOwner>.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.ArticlesOwner*)
+  nameWithType.vb: ISignalOnComponentRemoved(Of ArticlesOwner).OnRemoved(Frame, EntityRef, ArticlesOwner*)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.ArticlesOwner).OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.ArticlesOwner*)
   spec.csharp:
-  - uid: Quantum.ISignalOnComponentRemoved{Quantum.FighterArticles}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.ArticlesOwner}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
     name: OnRemoved
     href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
   - name: (
@@ -1572,13 +1572,13 @@ references:
     isExternal: true
   - name: ','
   - name: " "
-  - uid: Quantum.FighterArticles
-    name: FighterArticles
-    href: Quantum.FighterArticles.html
+  - uid: Quantum.ArticlesOwner
+    name: ArticlesOwner
+    href: Quantum.ArticlesOwner.html
   - name: '*'
   - name: )
   spec.vb:
-  - uid: Quantum.ISignalOnComponentRemoved{Quantum.FighterArticles}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.FighterArticles*)
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.ArticlesOwner}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.ArticlesOwner*)
     name: OnRemoved
     href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
   - name: (
@@ -1592,8 +1592,8 @@ references:
     isExternal: true
   - name: ','
   - name: " "
-  - uid: Quantum.FighterArticles
-    name: FighterArticles
-    href: Quantum.FighterArticles.html
+  - uid: Quantum.ArticlesOwner
+    name: ArticlesOwner
+    href: Quantum.ArticlesOwner.html
   - name: '*'
   - name: )

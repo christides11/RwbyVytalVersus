@@ -29,14 +29,16 @@ items:
   - Quantum.Simulation
   namespace: Quantum.EQS
   syntax:
-    content: 'public class EnvQueryTestDot : EnvQueryTest'
-    content.vb: Public Class EnvQueryTestDot Inherits EnvQueryTest
+    content: 'public class EnvQueryTestDot : EnvQueryTest, ILogSource'
+    content.vb: Public Class EnvQueryTestDot Inherits EnvQueryTest Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.EQS.EnvQueryTest
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.EQS.EnvQueryTest.testPurpose
   - Quantum.EQS.EnvQueryTest.IsActive
@@ -266,6 +268,13 @@ references:
   name: EnvQueryTest
   nameWithType: EnvQueryTest
   fullName: Quantum.EQS.EnvQueryTest
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.EQS.EnvQueryTest.testPurpose
   commentId: F:Quantum.EQS.EnvQueryTest.testPurpose
   parent: Quantum.EQS.EnvQueryTest

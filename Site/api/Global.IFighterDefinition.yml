@@ -11,8 +11,11 @@ items:
   - Global.IFighterDefinition.GetFighter
   - Global.IFighterDefinition.GetFighterQuantum
   - Global.IFighterDefinition.GetHUDReferences
+  - Global.IFighterDefinition.GetVisualRepresentation
   - Global.IFighterDefinition.Health
+  - Global.IFighterDefinition.LoadVisualRepresentation
   - Global.IFighterDefinition.Selectable
+  - Global.IFighterDefinition.UnloadVisualRepresentation
   langs:
   - csharp
   - vb
@@ -54,6 +57,7 @@ items:
   - Global.IContentDefinition.UnregisterQuantumAsset
   - Global.IContentDefinition.UnloadAssets
   - Global.IContentDefinition.Unload
+  - Global.IContentDefinition.GetAssetSoftReference
 - uid: Global.IFighterDefinition.Selectable
   commentId: P:Global.IFighterDefinition.Selectable
   id: Selectable
@@ -170,6 +174,88 @@ items:
       type: System.Int32
     content.vb: Public Overridable ReadOnly Property AuraGainPerFrame As Integer
   overload: Global.IFighterDefinition.AuraGainPerFrame*
+- uid: Global.IFighterDefinition.LoadVisualRepresentation
+  commentId: M:Global.IFighterDefinition.LoadVisualRepresentation
+  id: LoadVisualRepresentation
+  parent: Global.IFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: LoadVisualRepresentation()
+  nameWithType: IFighterDefinition.LoadVisualRepresentation()
+  fullName: IFighterDefinition.LoadVisualRepresentation()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/IFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: LoadVisualRepresentation
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/IFighterDefinition.cs
+    startLine: 12
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public abstract UniTask<bool> LoadVisualRepresentation()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+    content.vb: Public MustOverride Function LoadVisualRepresentation() As UniTask(Of Boolean)
+  overload: Global.IFighterDefinition.LoadVisualRepresentation*
+- uid: Global.IFighterDefinition.GetVisualRepresentation
+  commentId: M:Global.IFighterDefinition.GetVisualRepresentation
+  id: GetVisualRepresentation
+  parent: Global.IFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetVisualRepresentation()
+  nameWithType: IFighterDefinition.GetVisualRepresentation()
+  fullName: IFighterDefinition.GetVisualRepresentation()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/IFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetVisualRepresentation
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/IFighterDefinition.cs
+    startLine: 13
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public abstract GameObject GetVisualRepresentation()
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public MustOverride Function GetVisualRepresentation() As GameObject
+  overload: Global.IFighterDefinition.GetVisualRepresentation*
+- uid: Global.IFighterDefinition.UnloadVisualRepresentation
+  commentId: M:Global.IFighterDefinition.UnloadVisualRepresentation
+  id: UnloadVisualRepresentation
+  parent: Global.IFighterDefinition
+  langs:
+  - csharp
+  - vb
+  name: UnloadVisualRepresentation()
+  nameWithType: IFighterDefinition.UnloadVisualRepresentation()
+  fullName: IFighterDefinition.UnloadVisualRepresentation()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/IFighterDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UnloadVisualRepresentation
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/IFighterDefinition.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public abstract void UnloadVisualRepresentation()
+    content.vb: Public MustOverride Sub UnloadVisualRepresentation()
+  overload: Global.IFighterDefinition.UnloadVisualRepresentation*
 - uid: Global.IFighterDefinition.GetFighter
   commentId: M:Global.IFighterDefinition.GetFighter
   id: GetFighter
@@ -188,7 +274,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetFighter
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/IFighterDefinition.cs
-    startLine: 11
+    startLine: 15
   assemblies:
   - rwby
   namespace: Global
@@ -216,7 +302,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetFighterQuantum
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/IFighterDefinition.cs
-    startLine: 12
+    startLine: 16
   assemblies:
   - rwby
   namespace: Global
@@ -244,7 +330,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHUDReferences
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/IFighterDefinition.cs
-    startLine: 13
+    startLine: 17
   assemblies:
   - rwby
   namespace: Global
@@ -272,7 +358,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetCommandList
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/IFighterDefinition.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - rwby
   namespace: Global
@@ -476,6 +562,25 @@ references:
     href: Global.IContentDefinition.html#IContentDefinition_Unload
   - name: (
   - name: )
+- uid: Global.IContentDefinition.GetAssetSoftReference
+  commentId: M:Global.IContentDefinition.GetAssetSoftReference
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  name: GetAssetSoftReference()
+  nameWithType: IContentDefinition.GetAssetSoftReference()
+  fullName: IContentDefinition.GetAssetSoftReference()
+  spec.csharp:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -535,12 +640,106 @@ references:
   name: AuraGainPerFrame
   nameWithType: IFighterDefinition.AuraGainPerFrame
   fullName: IFighterDefinition.AuraGainPerFrame
-- uid: Global.IFighterDefinition.GetFighter*
-  commentId: Overload:Global.IFighterDefinition.GetFighter
-  href: Global.IFighterDefinition.html#IFighterDefinition_GetFighter
-  name: GetFighter
-  nameWithType: IFighterDefinition.GetFighter
-  fullName: IFighterDefinition.GetFighter
+- uid: Global.IFighterDefinition.LoadVisualRepresentation*
+  commentId: Overload:Global.IFighterDefinition.LoadVisualRepresentation
+  href: Global.IFighterDefinition.html#IFighterDefinition_LoadVisualRepresentation
+  name: LoadVisualRepresentation
+  nameWithType: IFighterDefinition.LoadVisualRepresentation
+  fullName: IFighterDefinition.LoadVisualRepresentation
+- uid: Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{System.Boolean}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: UniTask<bool>
+  nameWithType: UniTask<bool>
+  fullName: Cysharp.Threading.Tasks.UniTask<bool>
+  nameWithType.vb: UniTask(Of Boolean)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Boolean)
+  name.vb: UniTask(Of Boolean)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Global.IFighterDefinition.GetVisualRepresentation*
+  commentId: Overload:Global.IFighterDefinition.GetVisualRepresentation
+  href: Global.IFighterDefinition.html#IFighterDefinition_GetVisualRepresentation
+  name: GetVisualRepresentation
+  nameWithType: IFighterDefinition.GetVisualRepresentation
+  fullName: IFighterDefinition.GetVisualRepresentation
 - uid: UnityEngine.GameObject
   commentId: T:UnityEngine.GameObject
   parent: UnityEngine
@@ -548,6 +747,18 @@ references:
   name: GameObject
   nameWithType: GameObject
   fullName: UnityEngine.GameObject
+- uid: Global.IFighterDefinition.UnloadVisualRepresentation*
+  commentId: Overload:Global.IFighterDefinition.UnloadVisualRepresentation
+  href: Global.IFighterDefinition.html#IFighterDefinition_UnloadVisualRepresentation
+  name: UnloadVisualRepresentation
+  nameWithType: IFighterDefinition.UnloadVisualRepresentation
+  fullName: IFighterDefinition.UnloadVisualRepresentation
+- uid: Global.IFighterDefinition.GetFighter*
+  commentId: Overload:Global.IFighterDefinition.GetFighter
+  href: Global.IFighterDefinition.html#IFighterDefinition_GetFighter
+  name: GetFighter
+  nameWithType: IFighterDefinition.GetFighter
+  fullName: IFighterDefinition.GetFighter
 - uid: Global.IFighterDefinition.GetFighterQuantum*
   commentId: Overload:Global.IFighterDefinition.GetFighterQuantum
   href: Global.IFighterDefinition.html#IFighterDefinition_GetFighterQuantum

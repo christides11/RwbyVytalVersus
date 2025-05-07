@@ -37,10 +37,65 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: InputActions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 19
+    startLine: 76
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides programmatic access to <xref href="UnityEngine.InputSystem.InputActionAsset" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputActionMap" data-throw-if-not-resolved="false"></xref>, <xref href="UnityEngine.InputSystem.InputAction" data-throw-if-not-resolved="false"></xref> and <xref href="UnityEngine.InputSystem.InputControlScheme" data-throw-if-not-resolved="false"></xref> instances defined in asset "Assets/0.Settings/InputActions.inputactions".
+  remarks: This class is source generated and any manual edits will be discarded if the associated asset is reimported or modified.
+  example:
+  - >-
+    <pre><code class="lang-csharp">using namespace UnityEngine;
+
+    using UnityEngine.InputSystem;
+
+
+    // Example of using an InputActionMap named "Player" from a UnityEngine.MonoBehaviour implementing callback interface.
+
+    public class Example : MonoBehaviour, MyActions.IPlayerActions
+
+    {
+        private MyActions_Actions m_Actions;                  // Source code representation of asset.
+        private MyActions_Actions.PlayerActions m_Player;     // Source code representation of action map.
+
+        void Awake()
+        {
+            m_Actions = new MyActions_Actions();              // Create asset object.
+            m_Player = m_Actions.Player;                      // Extract action map object.
+            m_Player.AddCallbacks(this);                      // Register callback interface IPlayerActions.
+        }
+
+        void OnDestroy()
+        {
+            m_Actions.Dispose();                              // Destroy asset object.
+        }
+
+        void OnEnable()
+        {
+            m_Player.Enable();                                // Enable all actions within map.
+        }
+
+        void OnDisable()
+        {
+            m_Player.Disable();                               // Disable all actions within map.
+        }
+
+        #region Interface implementation of MyActions.IPlayerActions
+
+        // Invoked when "Move" action is either started, performed or canceled.
+        public void OnMove(InputAction.CallbackContext context)
+        {
+            Debug.Log($"OnMove: {context.ReadValue&lt;Vector2&gt;()}");
+        }
+
+        // Invoked when "Attack" action is either started, performed or canceled.
+        public void OnAttack(InputAction.CallbackContext context)
+        {
+            Debug.Log($"OnAttack: {context.ReadValue&lt;float&gt;()}");
+        }
+
+        #endregion
+    }</code></pre>
   syntax:
     content: public class InputActions
     content.vb: Public Class InputActions
@@ -64,10 +119,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: asset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 21
+    startLine: 81
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to the underlying asset instance.
+  example: []
   syntax:
     content: public InputActionAsset asset { get; }
     parameters: []
@@ -93,10 +150,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 22
+    startLine: 86
   assemblies:
   - rwby
   namespace: rwby
+  summary: Constructs a new instance.
+  example: []
   syntax:
     content: public InputActions()
     content.vb: Public Sub New()
@@ -122,7 +181,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Finalize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1467
+    startLine: 1605
   assemblies:
   - rwby
   namespace: rwby
@@ -151,10 +210,11 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Dispose
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1473
+    startLine: 1614
   assemblies:
   - rwby
   namespace: rwby
+  summary: Destroys this asset and all associated <xref href="UnityEngine.InputSystem.InputAction" data-throw-if-not-resolved="false"></xref> instances.
   example: []
   syntax:
     content: public void Dispose()
@@ -178,7 +238,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: bindingMask
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1478
+    startLine: 1620
   assemblies:
   - rwby
   namespace: rwby
@@ -208,7 +268,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: devices
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1484
+    startLine: 1627
   assemblies:
   - rwby
   namespace: rwby
@@ -238,7 +298,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: controlSchemes
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1490
+    startLine: 1634
   assemblies:
   - rwby
   namespace: rwby
@@ -268,7 +328,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Contains
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1492
+    startLine: 1637
   assemblies:
   - rwby
   namespace: rwby
@@ -300,7 +360,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetEnumerator
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1497
+    startLine: 1643
   assemblies:
   - rwby
   namespace: rwby
@@ -329,7 +389,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Enable
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1507
+    startLine: 1655
   assemblies:
   - rwby
   namespace: rwby
@@ -356,7 +416,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Disable
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1512
+    startLine: 1661
   assemblies:
   - rwby
   namespace: rwby
@@ -383,7 +443,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: bindings
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1517
+    startLine: 1667
   assemblies:
   - rwby
   namespace: rwby
@@ -413,7 +473,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: FindAction
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1519
+    startLine: 1670
   assemblies:
   - rwby
   namespace: rwby
@@ -450,7 +510,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: FindBinding
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1524
+    startLine: 1676
   assemblies:
   - rwby
   namespace: rwby
@@ -487,10 +547,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Player
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1733
+    startLine: 1995
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides a new <xref href="rwby.InputActions.PlayerActions" data-throw-if-not-resolved="false"></xref> instance referencing this action map.
+  example: []
   syntax:
     content: public InputActions.PlayerActions Player { get; }
     parameters: []
@@ -516,10 +578,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UI
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1859
+    startLine: 2234
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides a new <xref href="rwby.InputActions.UIActions" data-throw-if-not-resolved="false"></xref> instance referencing this action map.
+  example: []
   syntax:
     content: public InputActions.UIActions UI { get; }
     parameters: []
@@ -545,10 +609,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: KeyboardMouseScheme
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1861
+    startLine: 2240
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to the input control scheme.
+  example: []
   syntax:
     content: public InputControlScheme KeyboardMouseScheme { get; }
     parameters: []
@@ -556,6 +622,9 @@ items:
       type: UnityEngine.InputSystem.InputControlScheme
     content.vb: Public ReadOnly Property KeyboardMouseScheme As InputControlScheme
   overload: rwby.InputActions.KeyboardMouseScheme*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputControlScheme
+    commentId: T:UnityEngine.InputSystem.InputControlScheme
 - uid: rwby.InputActions.GamepadScheme
   commentId: P:rwby.InputActions.GamepadScheme
   id: GamepadScheme
@@ -574,10 +643,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GamepadScheme
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Input/InputActions.cs
-    startLine: 1870
+    startLine: 2253
   assemblies:
   - rwby
   namespace: rwby
+  summary: Provides access to the input control scheme.
+  example: []
   syntax:
     content: public InputControlScheme GamepadScheme { get; }
     parameters: []
@@ -585,7 +656,38 @@ items:
       type: UnityEngine.InputSystem.InputControlScheme
     content.vb: Public ReadOnly Property GamepadScheme As InputControlScheme
   overload: rwby.InputActions.GamepadScheme*
+  seealso:
+  - linkId: UnityEngine.InputSystem.InputControlScheme
+    commentId: T:UnityEngine.InputSystem.InputControlScheme
 references:
+- uid: UnityEngine.InputSystem.InputActionAsset
+  commentId: T:UnityEngine.InputSystem.InputActionAsset
+  parent: UnityEngine.InputSystem
+  isExternal: true
+  name: InputActionAsset
+  nameWithType: InputActionAsset
+  fullName: UnityEngine.InputSystem.InputActionAsset
+- uid: UnityEngine.InputSystem.InputActionMap
+  commentId: T:UnityEngine.InputSystem.InputActionMap
+  parent: UnityEngine.InputSystem
+  isExternal: true
+  name: InputActionMap
+  nameWithType: InputActionMap
+  fullName: UnityEngine.InputSystem.InputActionMap
+- uid: UnityEngine.InputSystem.InputAction
+  commentId: T:UnityEngine.InputSystem.InputAction
+  parent: UnityEngine.InputSystem
+  isExternal: true
+  name: InputAction
+  nameWithType: InputAction
+  fullName: UnityEngine.InputSystem.InputAction
+- uid: UnityEngine.InputSystem.InputControlScheme
+  commentId: T:UnityEngine.InputSystem.InputControlScheme
+  parent: UnityEngine.InputSystem
+  isExternal: true
+  name: InputControlScheme
+  nameWithType: InputControlScheme
+  fullName: UnityEngine.InputSystem.InputControlScheme
 - uid: rwby
   commentId: N:rwby
   href: rwby.html
@@ -603,26 +705,6 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: rwby.InputActions.asset*
-  commentId: Overload:rwby.InputActions.asset
-  href: rwby.InputActions.html#rwby_InputActions_asset
-  name: asset
-  nameWithType: InputActions.asset
-  fullName: rwby.InputActions.asset
-- uid: UnityEngine.InputSystem.InputActionAsset
-  commentId: T:UnityEngine.InputSystem.InputActionAsset
-  parent: UnityEngine.InputSystem
-  isExternal: true
-  name: InputActionAsset
-  nameWithType: InputActionAsset
-  fullName: UnityEngine.InputSystem.InputActionAsset
 - uid: UnityEngine.InputSystem
   commentId: N:UnityEngine.InputSystem
   isExternal: true
@@ -645,6 +727,19 @@ references:
   - uid: UnityEngine.InputSystem
     name: InputSystem
     isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: rwby.InputActions.asset*
+  commentId: Overload:rwby.InputActions.asset
+  href: rwby.InputActions.html#rwby_InputActions_asset
+  name: asset
+  nameWithType: InputActions.asset
+  fullName: rwby.InputActions.asset
 - uid: rwby.InputActions.#ctor*
   commentId: Overload:rwby.InputActions.#ctor
   href: rwby.InputActions.html#rwby_InputActions__ctor
@@ -857,13 +952,6 @@ references:
   name: Contains
   nameWithType: InputActions.Contains
   fullName: rwby.InputActions.Contains
-- uid: UnityEngine.InputSystem.InputAction
-  commentId: T:UnityEngine.InputSystem.InputAction
-  parent: UnityEngine.InputSystem
-  isExternal: true
-  name: InputAction
-  nameWithType: InputAction
-  fullName: UnityEngine.InputSystem.InputAction
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -1099,12 +1187,6 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: rwby.InputActions.Player*
-  commentId: Overload:rwby.InputActions.Player
-  href: rwby.InputActions.html#rwby_InputActions_Player
-  name: Player
-  nameWithType: InputActions.Player
-  fullName: rwby.InputActions.Player
 - uid: rwby.InputActions.PlayerActions
   commentId: T:rwby.InputActions.PlayerActions
   parent: rwby
@@ -1128,12 +1210,12 @@ references:
   - uid: rwby.InputActions.PlayerActions
     name: PlayerActions
     href: rwby.InputActions.PlayerActions.html
-- uid: rwby.InputActions.UI*
-  commentId: Overload:rwby.InputActions.UI
-  href: rwby.InputActions.html#rwby_InputActions_UI
-  name: UI
-  nameWithType: InputActions.UI
-  fullName: rwby.InputActions.UI
+- uid: rwby.InputActions.Player*
+  commentId: Overload:rwby.InputActions.Player
+  href: rwby.InputActions.html#rwby_InputActions_Player
+  name: Player
+  nameWithType: InputActions.Player
+  fullName: rwby.InputActions.Player
 - uid: rwby.InputActions.UIActions
   commentId: T:rwby.InputActions.UIActions
   parent: rwby
@@ -1157,19 +1239,18 @@ references:
   - uid: rwby.InputActions.UIActions
     name: UIActions
     href: rwby.InputActions.UIActions.html
+- uid: rwby.InputActions.UI*
+  commentId: Overload:rwby.InputActions.UI
+  href: rwby.InputActions.html#rwby_InputActions_UI
+  name: UI
+  nameWithType: InputActions.UI
+  fullName: rwby.InputActions.UI
 - uid: rwby.InputActions.KeyboardMouseScheme*
   commentId: Overload:rwby.InputActions.KeyboardMouseScheme
   href: rwby.InputActions.html#rwby_InputActions_KeyboardMouseScheme
   name: KeyboardMouseScheme
   nameWithType: InputActions.KeyboardMouseScheme
   fullName: rwby.InputActions.KeyboardMouseScheme
-- uid: UnityEngine.InputSystem.InputControlScheme
-  commentId: T:UnityEngine.InputSystem.InputControlScheme
-  parent: UnityEngine.InputSystem
-  isExternal: true
-  name: InputControlScheme
-  nameWithType: InputControlScheme
-  fullName: UnityEngine.InputSystem.InputControlScheme
 - uid: rwby.InputActions.GamepadScheme*
   commentId: Overload:rwby.InputActions.GamepadScheme
   href: rwby.InputActions.html#rwby_InputActions_GamepadScheme

@@ -89,7 +89,7 @@
 
 
   <h1 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen" class="text-break">
-Class NetworkLobbySessionMatchScreen  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=11"><i class="bi bi-code-slash"></i></a>
+Class NetworkLobbySessionMatchScreen  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -132,7 +132,10 @@ Class NetworkLobbySessionMatchScreen  <a class="header-action link-secondary" ti
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="rwby.ui.MenuBase.html#rwby_ui_MenuBase_currentHandler">MenuBase.currentHandler</a>
+      <a class="xref" href="rwby.ui.MenuBase.html#rwby_ui_MenuBase_MenuHandler">MenuBase.MenuHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="rwby.ui.MenuBase.html#rwby_ui_MenuBase_history">MenuBase.history</a>
     </div>
   </dd></dl>
 
@@ -148,7 +151,7 @@ Class NetworkLobbySessionMatchScreen  <a class="header-action link-secondary" ti
 
   <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BGMText" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BGMText">
   BGMText
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -176,17 +179,137 @@ Class NetworkLobbySessionMatchScreen  <a class="header-action link-secondary" ti
 
 
 
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_lobbySessionHandler" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.lobbySessionHandler">
-  lobbySessionHandler
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=13"><i class="bi bi-code-slash"></i></a>
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_bgmSelectScreen" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.bgmSelectScreen">
+  bgmSelectScreen
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[FormerlySerializedAs(&quot;messageHandler&quot;)]
-public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
+    <pre><code class="lang-csharp hljs">[Header(&quot;Screens&quot;)]
+public BGMSelectScreen bgmSelectScreen</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="rwby.sessionhandlers.lobby.BGMSelectScreen.html">BGMSelectScreen</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_defaultSelection" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.defaultSelection">
+  defaultSelection
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject defaultSelection</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_festivalName" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.festivalName">
+  festivalName
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextMeshProUGUI festivalName</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TextMeshProUGUI</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_festivalSelectionObject" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.festivalSelectionObject">
+  festivalSelectionObject
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExButton festivalSelectionObject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Global.ExButton.html">ExButton</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_lobbySessionHandler" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.lobbySessionHandler">
+  lobbySessionHandler
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
   </div>
 
 
@@ -209,7 +332,7 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
 
   <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_lobbySessionMenuHandler" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.lobbySessionMenuHandler">
   lobbySessionMenuHandler
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -237,128 +360,8 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
 
 
 
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_matchButtonPrefab" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchButtonPrefab">
-  matchButtonPrefab
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=17"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Button matchButtonPrefab</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Button</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_matchGamemodeNameText" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchGamemodeNameText">
-  matchGamemodeNameText
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TextMeshProUGUI matchGamemodeNameText</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">TextMeshProUGUI</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_matchMapNameText" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchMapNameText">
-  matchMapNameText
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=19"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TextMeshProUGUI matchMapNameText</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">TextMeshProUGUI</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_matchPlayerListHolderPrefab" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchPlayerListHolderPrefab">
-  matchPlayerListHolderPrefab
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=24"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MatchPlayerListHolder matchPlayerListHolderPrefab</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="rwby.sessionhandlers.lobby.MatchPlayerListHolder.html">MatchPlayerListHolder</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_matchPlayerScrollView" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchPlayerScrollView">
-  matchPlayerScrollView
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_mapName" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.mapName">
+  mapName
   <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -366,7 +369,127 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ScrollRect matchPlayerScrollView</code></pre>
+    <pre><code class="lang-csharp hljs">public TextMeshProUGUI mapName</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TextMeshProUGUI</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_mapSelectionObject" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.mapSelectionObject">
+  mapSelectionObject
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExButton mapSelectionObject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Global.ExButton.html">ExButton</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_participantAddViewItemPrefab" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantAddViewItemPrefab">
+  participantAddViewItemPrefab
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExButton participantAddViewItemPrefab</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Global.ExButton.html">ExButton</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_participantViewItemPrefab" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantViewItemPrefab">
+  participantViewItemPrefab
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VytalMatchSceneParticipantViewItem participantViewItemPrefab</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="rwby.VytalMatchSceneParticipantViewItem.html">VytalMatchSceneParticipantViewItem</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_participantsScrollRect" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantsScrollRect">
+  participantsScrollRect
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ScrollRect participantsScrollRect</code></pre>
   </div>
 
 
@@ -387,16 +510,16 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
 
 
 
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_matchScrollView" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchScrollView">
-  matchScrollView
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=16"><i class="bi bi-code-slash"></i></a>
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_promptLister" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.promptLister">
+  promptLister
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ScrollRect matchScrollView</code></pre>
+    <pre><code class="lang-csharp hljs">public InputPromptsLister promptLister</code></pre>
   </div>
 
 
@@ -404,7 +527,7 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">ScrollRect</span></dt>
+    <dt><a class="xref" href="rwby.InputPromptsLister.html">InputPromptsLister</a></dt>
     <dd></dd>
   </dl>
 
@@ -419,7 +542,7 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
 
   <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_regionText" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.regionText">
   regionText
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -450,18 +573,18 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
 </h2>
 
 
-  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_BGMSelect_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_BGMSelect*"></a>
+  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_Festival_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Festival*"></a>
 
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_BGMSelect" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_BGMSelect">
-  BUTTON_BGMSelect()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=68"><i class="bi bi-code-slash"></i></a>
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_Festival" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Festival">
+  BUTTON_Festival()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=275"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void BUTTON_BGMSelect()</code></pre>
+    <pre><code class="lang-csharp hljs">public void BUTTON_Festival()</code></pre>
   </div>
 
 
@@ -476,28 +599,130 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
 
 
 
-  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_OnTeamSlotClicked_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.OnTeamSlotClicked*"></a>
+  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_Map_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Map*"></a>
 
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_OnTeamSlotClicked_System_Int32_System_Int32_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.OnTeamSlotClicked(System.Int32,System.Int32)">
-  OnTeamSlotClicked(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=143"><i class="bi bi-code-slash"></i></a>
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_Map" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Map">
+  BUTTON_Map()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=280"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnTeamSlotClicked(int teamIndex, int playerSlotIndex)</code></pre>
+    <pre><code class="lang-csharp hljs">public void BUTTON_Map()</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_Music_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Music*"></a>
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_Music" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Music">
+  BUTTON_Music()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BUTTON_Music()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BuildParticipantView_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BuildParticipantView*"></a>
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BuildParticipantView" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BuildParticipantView">
+  BuildParticipantView()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BuildParticipantView()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_Button_ViewRooms_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Button_ViewRooms*"></a>
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_Button_ViewRooms" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Button_ViewRooms">
+  Button_ViewRooms()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Button_ViewRooms()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_GetCurrentlyViewingMatchID_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID*"></a>
+
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_GetCurrentlyViewingMatchID" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID">
+  GetCurrentlyViewingMatchID()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetCurrentlyViewingMatchID()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><code>teamIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>playerSlotIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
-
 
 
 
@@ -513,7 +738,7 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
 
   <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_Open_rwby_ui_MenuDirection_rwby_ui_IMenuHandler_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)">
   Open(MenuDirection, IMenuHandler)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -542,72 +767,25 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
 
 
 
-  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_RefreshAll_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshAll*"></a>
+  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_SetCurrentlyViewingMatchID_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID*"></a>
 
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_RefreshAll" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshAll">
-  RefreshAll()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=73"><i class="bi bi-code-slash"></i></a>
+  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_SetCurrentlyViewingMatchID_System_Int32_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID(System.Int32)">
+  SetCurrentlyViewingMatchID(int)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=268"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RefreshAll()</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetCurrentlyViewingMatchID(int matchID)</code></pre>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_RefreshMatchInfo_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchInfo*"></a>
-
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_RefreshMatchInfo" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchInfo">
-  RefreshMatchInfo()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=113"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RefreshMatchInfo()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_RefreshMatchList_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchList*"></a>
-
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_RefreshMatchList" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchList">
-  RefreshMatchList()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=79"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RefreshMatchList()</code></pre>
-  </div>
-
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matchID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -624,7 +802,7 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
 
   <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_TryClose_rwby_ui_MenuDirection_System_Boolean_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.TryClose(rwby.ui.MenuDirection,System.Boolean)">
   TryClose(MenuDirection, bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -658,42 +836,11 @@ public NetworkLobbySessionHandler lobbySessionHandler</code></pre>
 
 
 
-  <a id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_WhenMatchSelected_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.WhenMatchSelected*"></a>
-
-  <h3 id="rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_WhenMatchSelected_rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_" data-uid="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.WhenMatchSelected(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)">
-  WhenMatchSelected(NetworkLobbySessionMatchInfo)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=107"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WhenMatchSelected(NetworkLobbySessionMatchInfo match)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>match</code> <a class="xref" href="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html">NetworkLobbySessionMatchInfo</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=11" class="edit-link">Edit this page</a>
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs&amp;version=GBdev&amp;line=12" class="edit-link">Edit this page</a>
         </div>
 
 

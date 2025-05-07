@@ -24,8 +24,8 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public abstract class StateFunctionAssetRefList : HNSFStateFunction<QList<AssetRef>>'
-    content.vb: Public MustInherit Class StateFunctionAssetRefList Inherits HNSFStateFunction(Of QList(Of AssetRef))
+    content: 'public abstract class StateFunctionAssetRefList : HNSFStateFunction<QList<AssetRef>>, ILogSource'
+    content.vb: Public MustInherit Class StateFunctionAssetRefList Inherits HNSFStateFunction(Of QList(Of AssetRef)) Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -33,6 +33,8 @@ items:
   - Quantum.AssetObject
   - Quantum.HNSFStateFunction
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{Quantum.AssetRef}}
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{Quantum.AssetRef}}.Label
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{Quantum.AssetRef}}.Execute(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -136,6 +138,13 @@ references:
     isExternal: true
   - name: )
   - name: )
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{Quantum.Collections.QList{Quantum.AssetRef}}.Label
   commentId: F:Quantum.HNSFStateFunction{Quantum.Collections.QList{Quantum.AssetRef}}.Label
   parent: Quantum.HNSFStateFunction{Quantum.Collections.QList{Quantum.AssetRef}}

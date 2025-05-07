@@ -101,7 +101,8 @@ Class GamemodeSettingsBase  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GamemodeSettingsBase : AssetObject</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class GamemodeSettingsBase : AssetObject, ILogSource</code></pre>
   </div>
 
 
@@ -118,6 +119,12 @@ Class GamemodeSettingsBase  <a class="header-action link-secondary" title="View 
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ILogSource</span></div>
+    </dd>
+  </dl>
 
   <dl class="typelist derived">
     <dt>Derived</dt>
@@ -161,6 +168,196 @@ Class GamemodeSettingsBase  <a class="header-action link-secondary" title="View 
       <span class="xref">AssetObject.Settings</span>
     </div>
   </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Quantum_GamemodeSettingsBase_fightersPerPlayer" data-uid="Quantum.GamemodeSettingsBase.fightersPerPlayer">
+  fightersPerPlayer
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GamemodeSettingsBase.cs&amp;version=GBdev&amp;line=8"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int fightersPerPlayer</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_GamemodeSettingsBase_initialParticipantsInfo" data-uid="Quantum.GamemodeSettingsBase.initialParticipantsInfo">
+  initialParticipantsInfo
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GamemodeSettingsBase.cs&amp;version=GBdev&amp;line=9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GamemodeParticipantInfo[] initialParticipantsInfo</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quantum.GamemodeParticipantInfo.html">GamemodeParticipantInfo</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_GamemodeSettingsBase_teamConfigs" data-uid="Quantum.GamemodeSettingsBase.teamConfigs">
+  teamConfigs
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GamemodeSettingsBase.cs&amp;version=GBdev&amp;line=7"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GamemodeTeamConfig[] teamConfigs</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GamemodeTeamConfig.html">GamemodeTeamConfig</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_GamemodeSettingsBase_teamTypes" data-uid="Quantum.GamemodeSettingsBase.teamTypes">
+  teamTypes
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GamemodeSettingsBase.cs&amp;version=GBdev&amp;line=6"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GamemodeTeamTypeConfig[] teamTypes</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GamemodeTeamTypeConfig.html">GamemodeTeamTypeConfig</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Quantum_GamemodeSettingsBase_CreateSettingsAsset_" data-uid="Quantum.GamemodeSettingsBase.CreateSettingsAsset*"></a>
+
+  <h3 id="Quantum_GamemodeSettingsBase_CreateSettingsAsset" data-uid="Quantum.GamemodeSettingsBase.CreateSettingsAsset">
+  CreateSettingsAsset()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GamemodeSettingsBase.cs&amp;version=GBdev&amp;line=11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual GamemodeSettingsBase CreateSettingsAsset()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Quantum.GamemodeSettingsBase.html">GamemodeSettingsBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Quantum_GamemodeSettingsBase_FillBaseSettings_" data-uid="Quantum.GamemodeSettingsBase.FillBaseSettings*"></a>
+
+  <h3 id="Quantum_GamemodeSettingsBase_FillBaseSettings_Quantum_GamemodeSettingsBase_" data-uid="Quantum.GamemodeSettingsBase.FillBaseSettings(Quantum.GamemodeSettingsBase)">
+  FillBaseSettings(GamemodeSettingsBase)
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/General/GamemodeSettingsBase.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FillBaseSettings(GamemodeSettingsBase asset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <a class="xref" href="Quantum.GamemodeSettingsBase.html">GamemodeSettingsBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
 

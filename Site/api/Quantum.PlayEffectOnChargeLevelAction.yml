@@ -6,6 +6,7 @@ items:
   parent: Quantum
   children:
   - Quantum.PlayEffectOnChargeLevelAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
+  - Quantum.PlayEffectOnChargeLevelAction.parentBoneTag
   - Quantum.PlayEffectOnChargeLevelAction.parented
   - Quantum.PlayEffectOnChargeLevelAction.positionAsOffset
   - Quantum.PlayEffectOnChargeLevelAction.positionOffset
@@ -34,17 +35,19 @@ items:
     content: >-
       [Serializable]
 
-      public class PlayEffectOnChargeLevelAction : HNSFStateAction
+      public class PlayEffectOnChargeLevelAction : HNSFStateAction, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class PlayEffectOnChargeLevelAction Inherits HNSFStateAction
+      Public Class PlayEffectOnChargeLevelAction Inherits HNSFStateAction Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.HNSFStateAction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateAction.Label
   - Quantum.HNSFStateAction.parent
@@ -233,6 +236,33 @@ items:
     return:
       type: Photon.Deterministic.FPVector3
     content.vb: Public rotationOffset As FPVector3
+- uid: Quantum.PlayEffectOnChargeLevelAction.parentBoneTag
+  commentId: F:Quantum.PlayEffectOnChargeLevelAction.parentBoneTag
+  id: parentBoneTag
+  parent: Quantum.PlayEffectOnChargeLevelAction
+  langs:
+  - csharp
+  - vb
+  name: parentBoneTag
+  nameWithType: PlayEffectOnChargeLevelAction.parentBoneTag
+  fullName: Quantum.PlayEffectOnChargeLevelAction.parentBoneTag
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/PlayEffectOnChargeLevelAction.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: parentBoneTag
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/PlayEffectOnChargeLevelAction.cs
+    startLine: 14
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AssetRef<Tag> parentBoneTag
+    return:
+      type: Quantum.AssetRef{Quantum.Tag}
+    content.vb: Public parentBoneTag As AssetRef(Of Tag)
 - uid: Quantum.PlayEffectOnChargeLevelAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   commentId: M:Quantum.PlayEffectOnChargeLevelAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   id: ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
@@ -251,7 +281,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ExecuteAction
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/Combat/PlayEffectOnChargeLevelAction.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -321,6 +351,13 @@ references:
   name: HNSFStateAction
   nameWithType: HNSFStateAction
   fullName: Quantum.HNSFStateAction
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateAction.Label
   commentId: F:Quantum.HNSFStateAction.Label
   parent: Quantum.HNSFStateAction
@@ -1129,6 +1166,37 @@ references:
   - uid: Photon.Deterministic
     name: Deterministic
     isExternal: true
+- uid: Quantum.AssetRef{Quantum.Tag}
+  commentId: T:Quantum.AssetRef{Quantum.Tag}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.Tag.html
+  name: AssetRef<Tag>
+  nameWithType: AssetRef<Tag>
+  fullName: Quantum.AssetRef<Quantum.Tag>
+  nameWithType.vb: AssetRef(Of Tag)
+  fullName.vb: Quantum.AssetRef(Of Quantum.Tag)
+  name.vb: AssetRef(Of Tag)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.Tag
+    name: Tag
+    href: Quantum.Tag.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.Tag
+    name: Tag
+    href: Quantum.Tag.html
+  - name: )
 - uid: Quantum.HNSFStateAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   commentId: M:Quantum.HNSFStateAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)
   parent: Quantum.HNSFStateAction

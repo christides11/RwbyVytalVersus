@@ -41,8 +41,8 @@ items:
   summary: Movement implementation for default environment.
   example: []
   syntax:
-    content: 'public class EnvironmentProcessor : KCCProcessor, IBeforeMove, IAfterMoveStep'
-    content.vb: Public Class EnvironmentProcessor Inherits KCCProcessor Implements IBeforeMove, IAfterMoveStep
+    content: 'public class EnvironmentProcessor : KCCProcessor, ILogSource, IBeforeMove, IAfterMoveStep'
+    content.vb: Public Class EnvironmentProcessor Inherits KCCProcessor Implements ILogSource, IBeforeMove, IAfterMoveStep
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -50,6 +50,7 @@ items:
   - Quantum.AssetObject
   - Quantum.KCCProcessor
   implements:
+  - Quantum.ILogSource
   - Quantum.IBeforeMove
   - Quantum.IAfterMoveStep
   inheritedMembers:
@@ -744,6 +745,13 @@ references:
   name: KCCProcessor
   nameWithType: KCCProcessor
   fullName: Quantum.KCCProcessor
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.IBeforeMove
   commentId: T:Quantum.IBeforeMove
   parent: Quantum

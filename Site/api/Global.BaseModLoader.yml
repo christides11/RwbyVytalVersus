@@ -22,7 +22,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BaseModLoader
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModLoader.cs
-    startLine: 5
+    startLine: 2
   assemblies:
   - rwby
   namespace: Global
@@ -53,16 +53,16 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoaderType
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModLoader.cs
-    startLine: 7
+    startLine: 4
   assemblies:
   - rwby
   namespace: Global
   syntax:
-    content: public virtual ModLoaderType LoaderType { get; }
+    content: public virtual int LoaderType { get; }
     parameters: []
     return:
-      type: Global.ModLoaderType
-    content.vb: Public Overridable ReadOnly Property LoaderType As ModLoaderType
+      type: System.Int32
+    content.vb: Public Overridable ReadOnly Property LoaderType As Integer
   overload: Global.BaseModLoader.LoaderType*
 - uid: Global.BaseModLoader.TryLoadMod(ModManager,AvailableModDefinition)
   commentId: M:Global.BaseModLoader.TryLoadMod(ModManager,AvailableModDefinition)
@@ -82,7 +82,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryLoadMod
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModLoader.cs
-    startLine: 9
+    startLine: 6
   assemblies:
   - rwby
   namespace: Global
@@ -115,7 +115,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryUnloadMod
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/BaseModLoader.cs
-    startLine: 15
+    startLine: 12
   assemblies:
   - rwby
   namespace: Global
@@ -156,12 +156,17 @@ references:
   name: LoaderType
   nameWithType: BaseModLoader.LoaderType
   fullName: BaseModLoader.LoaderType
-- uid: Global.ModLoaderType
-  commentId: T:Global.ModLoaderType
-  href: ModLoaderType.html
-  name: ModLoaderType
-  nameWithType: ModLoaderType
-  fullName: ModLoaderType
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: Global.BaseModLoader.TryLoadMod*
   commentId: Overload:Global.BaseModLoader.TryLoadMod
   href: Global.BaseModLoader.html#BaseModLoader_TryLoadMod_ModManager_AvailableModDefinition_

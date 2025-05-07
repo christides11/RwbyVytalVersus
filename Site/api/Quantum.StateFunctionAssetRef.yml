@@ -28,11 +28,11 @@ items:
     content: >-
       [Serializable]
 
-      public class StateFunctionAssetRef : HNSFStateFunction<AssetRef>
+      public class StateFunctionAssetRef : HNSFStateFunction<AssetRef>, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class StateFunctionAssetRef Inherits HNSFStateFunction(Of AssetRef)
+      Public Class StateFunctionAssetRef Inherits HNSFStateFunction(Of AssetRef) Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -42,6 +42,8 @@ items:
   - Quantum.HNSFStateFunction{Quantum.AssetRef}
   derivedClasses:
   - Quantum.GetStateByTagFunction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{Quantum.AssetRef}.Label
   - Quantum.HNSFStateFunction{Quantum.AssetRef}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -176,6 +178,13 @@ references:
     name: AssetRef
     isExternal: true
   - name: )
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{Quantum.AssetRef}.Label
   commentId: F:Quantum.HNSFStateFunction{Quantum.AssetRef}.Label
   parent: Quantum.HNSFStateFunction{Quantum.AssetRef}

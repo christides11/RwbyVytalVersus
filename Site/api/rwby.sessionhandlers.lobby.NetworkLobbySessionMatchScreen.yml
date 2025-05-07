@@ -6,22 +6,27 @@ items:
   parent: rwby.sessionhandlers.lobby
   children:
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BGMText
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_BGMSelect
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.OnTeamSlotClicked(System.Int32,System.Int32)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Festival
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Map
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Music
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BuildParticipantView
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Button_ViewRooms
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshAll
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchInfo
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchList
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID(System.Int32)
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.TryClose(rwby.ui.MenuDirection,System.Boolean)
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.WhenMatchSelected(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.bgmSelectScreen
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.defaultSelection
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.festivalName
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.festivalSelectionObject
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.lobbySessionHandler
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.lobbySessionMenuHandler
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchButtonPrefab
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchGamemodeNameText
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchMapNameText
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchPlayerListHolderPrefab
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchPlayerScrollView
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchScrollView
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.mapName
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.mapSelectionObject
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantAddViewItemPrefab
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantViewItemPrefab
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantsScrollRect
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.promptLister
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.regionText
   langs:
   - csharp
@@ -37,7 +42,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: NetworkLobbySessionMatchScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -54,7 +59,8 @@ items:
   implements:
   - rwby.ui.IMenu
   inheritedMembers:
-  - rwby.ui.MenuBase.currentHandler
+  - rwby.ui.MenuBase.MenuHandler
+  - rwby.ui.MenuBase.history
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.lobbySessionHandler
   commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.lobbySessionHandler
   id: lobbySessionHandler
@@ -73,27 +79,15 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lobbySessionHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: >-
-      [FormerlySerializedAs("messageHandler")]
-
-      public NetworkLobbySessionHandler lobbySessionHandler
+    content: public NetworkLobbySessionHandler lobbySessionHandler
     return:
       type: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
-    content.vb: >-
-      <FormerlySerializedAs("messageHandler")>
-
-      Public lobbySessionHandler As NetworkLobbySessionHandler
-  attributes:
-  - type: UnityEngine.Serialization.FormerlySerializedAsAttribute
-    ctor: UnityEngine.Serialization.FormerlySerializedAsAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: messageHandler
+    content.vb: Public lobbySessionHandler As NetworkLobbySessionHandler
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.lobbySessionMenuHandler
   commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.lobbySessionMenuHandler
   id: lobbySessionMenuHandler
@@ -112,7 +106,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lobbySessionMenuHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -121,141 +115,141 @@ items:
     return:
       type: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
     content.vb: Public lobbySessionMenuHandler As NetworkLobbySessionMenuHandler
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchScrollView
-  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchScrollView
-  id: matchScrollView
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.festivalSelectionObject
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.festivalSelectionObject
+  id: festivalSelectionObject
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
   langs:
   - csharp
   - vb
-  name: matchScrollView
-  nameWithType: NetworkLobbySessionMatchScreen.matchScrollView
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchScrollView
+  name: festivalSelectionObject
+  nameWithType: NetworkLobbySessionMatchScreen.festivalSelectionObject
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.festivalSelectionObject
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: matchScrollView
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 15
-  assemblies:
-  - rwby
-  namespace: rwby.sessionhandlers.lobby
-  syntax:
-    content: public ScrollRect matchScrollView
-    return:
-      type: UnityEngine.UI.ScrollRect
-    content.vb: Public matchScrollView As ScrollRect
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchButtonPrefab
-  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchButtonPrefab
-  id: matchButtonPrefab
-  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
-  langs:
-  - csharp
-  - vb
-  name: matchButtonPrefab
-  nameWithType: NetworkLobbySessionMatchScreen.matchButtonPrefab
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchButtonPrefab
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: matchButtonPrefab
+    id: festivalSelectionObject
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
     startLine: 16
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public Button matchButtonPrefab
+    content: public ExButton festivalSelectionObject
     return:
-      type: UnityEngine.UI.Button
-    content.vb: Public matchButtonPrefab As Button
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchGamemodeNameText
-  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchGamemodeNameText
-  id: matchGamemodeNameText
+      type: Global.ExButton
+    content.vb: Public festivalSelectionObject As ExButton
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.mapSelectionObject
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.mapSelectionObject
+  id: mapSelectionObject
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
   langs:
   - csharp
   - vb
-  name: matchGamemodeNameText
-  nameWithType: NetworkLobbySessionMatchScreen.matchGamemodeNameText
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchGamemodeNameText
+  name: mapSelectionObject
+  nameWithType: NetworkLobbySessionMatchScreen.mapSelectionObject
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.mapSelectionObject
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: matchGamemodeNameText
+    id: mapSelectionObject
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
     startLine: 17
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public TextMeshProUGUI matchGamemodeNameText
+    content: public ExButton mapSelectionObject
     return:
-      type: TMPro.TextMeshProUGUI
-    content.vb: Public matchGamemodeNameText As TextMeshProUGUI
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchMapNameText
-  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchMapNameText
-  id: matchMapNameText
+      type: Global.ExButton
+    content.vb: Public mapSelectionObject As ExButton
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.festivalName
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.festivalName
+  id: festivalName
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
   langs:
   - csharp
   - vb
-  name: matchMapNameText
-  nameWithType: NetworkLobbySessionMatchScreen.matchMapNameText
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchMapNameText
+  name: festivalName
+  nameWithType: NetworkLobbySessionMatchScreen.festivalName
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.festivalName
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: matchMapNameText
+    id: festivalName
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
     startLine: 18
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public TextMeshProUGUI matchMapNameText
+    content: public TextMeshProUGUI festivalName
     return:
       type: TMPro.TextMeshProUGUI
-    content.vb: Public matchMapNameText As TextMeshProUGUI
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchPlayerScrollView
-  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchPlayerScrollView
-  id: matchPlayerScrollView
+    content.vb: Public festivalName As TextMeshProUGUI
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.mapName
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.mapName
+  id: mapName
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
   langs:
   - csharp
   - vb
-  name: matchPlayerScrollView
-  nameWithType: NetworkLobbySessionMatchScreen.matchPlayerScrollView
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchPlayerScrollView
+  name: mapName
+  nameWithType: NetworkLobbySessionMatchScreen.mapName
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.mapName
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: matchPlayerScrollView
+    id: mapName
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
     startLine: 19
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public ScrollRect matchPlayerScrollView
+    content: public TextMeshProUGUI mapName
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public mapName As TextMeshProUGUI
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantsScrollRect
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantsScrollRect
+  id: participantsScrollRect
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  langs:
+  - csharp
+  - vb
+  name: participantsScrollRect
+  nameWithType: NetworkLobbySessionMatchScreen.participantsScrollRect
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantsScrollRect
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: participantsScrollRect
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+    startLine: 20
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public ScrollRect participantsScrollRect
     return:
       type: UnityEngine.UI.ScrollRect
-    content.vb: Public matchPlayerScrollView As ScrollRect
+    content.vb: Public participantsScrollRect As ScrollRect
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BGMText
   commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BGMText
   id: BGMText
@@ -274,7 +268,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BGMText
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -301,7 +295,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: regionText
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -310,33 +304,153 @@ items:
     return:
       type: TMPro.TextMeshProUGUI
     content.vb: Public regionText As TextMeshProUGUI
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchPlayerListHolderPrefab
-  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchPlayerListHolderPrefab
-  id: matchPlayerListHolderPrefab
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantViewItemPrefab
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantViewItemPrefab
+  id: participantViewItemPrefab
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
   langs:
   - csharp
   - vb
-  name: matchPlayerListHolderPrefab
-  nameWithType: NetworkLobbySessionMatchScreen.matchPlayerListHolderPrefab
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.matchPlayerListHolderPrefab
+  name: participantViewItemPrefab
+  nameWithType: NetworkLobbySessionMatchScreen.participantViewItemPrefab
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantViewItemPrefab
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: matchPlayerListHolderPrefab
+    id: participantViewItemPrefab
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 23
+    startLine: 27
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public MatchPlayerListHolder matchPlayerListHolderPrefab
+    content: public VytalMatchSceneParticipantViewItem participantViewItemPrefab
     return:
-      type: rwby.sessionhandlers.lobby.MatchPlayerListHolder
-    content.vb: Public matchPlayerListHolderPrefab As MatchPlayerListHolder
+      type: rwby.VytalMatchSceneParticipantViewItem
+    content.vb: Public participantViewItemPrefab As VytalMatchSceneParticipantViewItem
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantAddViewItemPrefab
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantAddViewItemPrefab
+  id: participantAddViewItemPrefab
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  langs:
+  - csharp
+  - vb
+  name: participantAddViewItemPrefab
+  nameWithType: NetworkLobbySessionMatchScreen.participantAddViewItemPrefab
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.participantAddViewItemPrefab
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: participantAddViewItemPrefab
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+    startLine: 28
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public ExButton participantAddViewItemPrefab
+    return:
+      type: Global.ExButton
+    content.vb: Public participantAddViewItemPrefab As ExButton
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.promptLister
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.promptLister
+  id: promptLister
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  langs:
+  - csharp
+  - vb
+  name: promptLister
+  nameWithType: NetworkLobbySessionMatchScreen.promptLister
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.promptLister
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: promptLister
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+    startLine: 31
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public InputPromptsLister promptLister
+    return:
+      type: rwby.InputPromptsLister
+    content.vb: Public promptLister As InputPromptsLister
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.defaultSelection
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.defaultSelection
+  id: defaultSelection
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  langs:
+  - csharp
+  - vb
+  name: defaultSelection
+  nameWithType: NetworkLobbySessionMatchScreen.defaultSelection
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.defaultSelection
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: defaultSelection
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+    startLine: 33
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public GameObject defaultSelection
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public defaultSelection As GameObject
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.bgmSelectScreen
+  commentId: F:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.bgmSelectScreen
+  id: bgmSelectScreen
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  langs:
+  - csharp
+  - vb
+  name: bgmSelectScreen
+  nameWithType: NetworkLobbySessionMatchScreen.bgmSelectScreen
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.bgmSelectScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: bgmSelectScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+    startLine: 38
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: >-
+      [Header("Screens")]
+
+      public BGMSelectScreen bgmSelectScreen
+    return:
+      type: rwby.sessionhandlers.lobby.BGMSelectScreen
+    content.vb: >-
+      <Header("Screens")>
+
+      Public bgmSelectScreen As BGMSelectScreen
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Screens
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   id: Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
@@ -355,7 +469,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Open
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 29
+    startLine: 43
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -388,7 +502,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryClose
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 42
+    startLine: 54
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
@@ -408,173 +522,196 @@ items:
   nameWithType.vb: NetworkLobbySessionMatchScreen.TryClose(MenuDirection, Boolean)
   fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.TryClose(rwby.ui.MenuDirection, Boolean)
   name.vb: TryClose(MenuDirection, Boolean)
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_BGMSelect
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_BGMSelect
-  id: BUTTON_BGMSelect
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID
+  id: GetCurrentlyViewingMatchID
   parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
   langs:
   - csharp
   - vb
-  name: BUTTON_BGMSelect()
-  nameWithType: NetworkLobbySessionMatchScreen.BUTTON_BGMSelect()
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_BGMSelect()
+  name: GetCurrentlyViewingMatchID()
+  nameWithType: NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID()
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID()
   type: Method
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: BUTTON_BGMSelect
+    id: GetCurrentlyViewingMatchID
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 67
+    startLine: 262
   assemblies:
   - rwby
   namespace: rwby.sessionhandlers.lobby
   syntax:
-    content: public void BUTTON_BGMSelect()
-    content.vb: Public Sub BUTTON_BGMSelect()
-  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_BGMSelect*
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshAll
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshAll
-  id: RefreshAll
-  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
-  langs:
-  - csharp
-  - vb
-  name: RefreshAll()
-  nameWithType: NetworkLobbySessionMatchScreen.RefreshAll()
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshAll()
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: RefreshAll
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 72
-  assemblies:
-  - rwby
-  namespace: rwby.sessionhandlers.lobby
-  syntax:
-    content: public void RefreshAll()
-    content.vb: Public Sub RefreshAll()
-  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshAll*
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchList
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchList
-  id: RefreshMatchList
-  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
-  langs:
-  - csharp
-  - vb
-  name: RefreshMatchList()
-  nameWithType: NetworkLobbySessionMatchScreen.RefreshMatchList()
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchList()
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: RefreshMatchList
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 78
-  assemblies:
-  - rwby
-  namespace: rwby.sessionhandlers.lobby
-  syntax:
-    content: public void RefreshMatchList()
-    content.vb: Public Sub RefreshMatchList()
-  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchList*
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.WhenMatchSelected(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.WhenMatchSelected(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
-  id: WhenMatchSelected(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
-  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
-  langs:
-  - csharp
-  - vb
-  name: WhenMatchSelected(NetworkLobbySessionMatchInfo)
-  nameWithType: NetworkLobbySessionMatchScreen.WhenMatchSelected(NetworkLobbySessionMatchInfo)
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.WhenMatchSelected(rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: WhenMatchSelected
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 106
-  assemblies:
-  - rwby
-  namespace: rwby.sessionhandlers.lobby
-  syntax:
-    content: public void WhenMatchSelected(NetworkLobbySessionMatchInfo match)
-    parameters:
-    - id: match
-      type: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
-    content.vb: Public Sub WhenMatchSelected(match As NetworkLobbySessionMatchInfo)
-  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.WhenMatchSelected*
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchInfo
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchInfo
-  id: RefreshMatchInfo
-  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
-  langs:
-  - csharp
-  - vb
-  name: RefreshMatchInfo()
-  nameWithType: NetworkLobbySessionMatchScreen.RefreshMatchInfo()
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchInfo()
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: RefreshMatchInfo
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 112
-  assemblies:
-  - rwby
-  namespace: rwby.sessionhandlers.lobby
-  syntax:
-    content: public void RefreshMatchInfo()
-    content.vb: Public Sub RefreshMatchInfo()
-  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchInfo*
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.OnTeamSlotClicked(System.Int32,System.Int32)
-  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.OnTeamSlotClicked(System.Int32,System.Int32)
-  id: OnTeamSlotClicked(System.Int32,System.Int32)
-  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
-  langs:
-  - csharp
-  - vb
-  name: OnTeamSlotClicked(int, int)
-  nameWithType: NetworkLobbySessionMatchScreen.OnTeamSlotClicked(int, int)
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.OnTeamSlotClicked(int, int)
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: OnTeamSlotClicked
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
-    startLine: 142
-  assemblies:
-  - rwby
-  namespace: rwby.sessionhandlers.lobby
-  syntax:
-    content: public void OnTeamSlotClicked(int teamIndex, int playerSlotIndex)
-    parameters:
-    - id: teamIndex
+    content: public int GetCurrentlyViewingMatchID()
+    return:
       type: System.Int32
-    - id: playerSlotIndex
+    content.vb: Public Function GetCurrentlyViewingMatchID() As Integer
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID(System.Int32)
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID(System.Int32)
+  id: SetCurrentlyViewingMatchID(System.Int32)
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  langs:
+  - csharp
+  - vb
+  name: SetCurrentlyViewingMatchID(int)
+  nameWithType: NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID(int)
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: SetCurrentlyViewingMatchID
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+    startLine: 267
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void SetCurrentlyViewingMatchID(int matchID)
+    parameters:
+    - id: matchID
       type: System.Int32
-    content.vb: Public Sub OnTeamSlotClicked(teamIndex As Integer, playerSlotIndex As Integer)
-  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.OnTeamSlotClicked*
-  nameWithType.vb: NetworkLobbySessionMatchScreen.OnTeamSlotClicked(Integer, Integer)
-  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.OnTeamSlotClicked(Integer, Integer)
-  name.vb: OnTeamSlotClicked(Integer, Integer)
+    content.vb: Public Sub SetCurrentlyViewingMatchID(matchID As Integer)
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID*
+  nameWithType.vb: NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID(Integer)
+  fullName.vb: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID(Integer)
+  name.vb: SetCurrentlyViewingMatchID(Integer)
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Festival
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Festival
+  id: BUTTON_Festival
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  langs:
+  - csharp
+  - vb
+  name: BUTTON_Festival()
+  nameWithType: NetworkLobbySessionMatchScreen.BUTTON_Festival()
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Festival()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BUTTON_Festival
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+    startLine: 274
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void BUTTON_Festival()
+    content.vb: Public Sub BUTTON_Festival()
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Festival*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Map
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Map
+  id: BUTTON_Map
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  langs:
+  - csharp
+  - vb
+  name: BUTTON_Map()
+  nameWithType: NetworkLobbySessionMatchScreen.BUTTON_Map()
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Map()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BUTTON_Map
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+    startLine: 279
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void BUTTON_Map()
+    content.vb: Public Sub BUTTON_Map()
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Map*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Music
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Music
+  id: BUTTON_Music
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  langs:
+  - csharp
+  - vb
+  name: BUTTON_Music()
+  nameWithType: NetworkLobbySessionMatchScreen.BUTTON_Music()
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Music()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BUTTON_Music
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+    startLine: 284
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void BUTTON_Music()
+    content.vb: Public Sub BUTTON_Music()
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Music*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Button_ViewRooms
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Button_ViewRooms
+  id: Button_ViewRooms
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  langs:
+  - csharp
+  - vb
+  name: Button_ViewRooms()
+  nameWithType: NetworkLobbySessionMatchScreen.Button_ViewRooms()
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Button_ViewRooms()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Button_ViewRooms
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+    startLine: 289
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void Button_ViewRooms()
+    content.vb: Public Sub Button_ViewRooms()
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Button_ViewRooms*
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BuildParticipantView
+  commentId: M:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BuildParticipantView
+  id: BuildParticipantView
+  parent: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
+  langs:
+  - csharp
+  - vb
+  name: BuildParticipantView()
+  nameWithType: NetworkLobbySessionMatchScreen.BuildParticipantView()
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BuildParticipantView()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BuildParticipantView
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/UI/NetworkLobbySessionMatchScreen.cs
+    startLine: 335
+  assemblies:
+  - rwby
+  namespace: rwby.sessionhandlers.lobby
+  syntax:
+    content: public void BuildParticipantView()
+    content.vb: Public Sub BuildParticipantView()
+  overload: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BuildParticipantView*
 references:
 - uid: rwby.sessionhandlers.lobby
   commentId: N:rwby.sessionhandlers.lobby
@@ -659,13 +796,20 @@ references:
   name: IMenu
   nameWithType: IMenu
   fullName: rwby.ui.IMenu
-- uid: rwby.ui.MenuBase.currentHandler
-  commentId: F:rwby.ui.MenuBase.currentHandler
+- uid: rwby.ui.MenuBase.MenuHandler
+  commentId: P:rwby.ui.MenuBase.MenuHandler
   parent: rwby.ui.MenuBase
-  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_currentHandler
-  name: currentHandler
-  nameWithType: MenuBase.currentHandler
-  fullName: rwby.ui.MenuBase.currentHandler
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_MenuHandler
+  name: MenuHandler
+  nameWithType: MenuBase.MenuHandler
+  fullName: rwby.ui.MenuBase.MenuHandler
+- uid: rwby.ui.MenuBase.history
+  commentId: F:rwby.ui.MenuBase.history
+  parent: rwby.ui.MenuBase
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_history
+  name: history
+  nameWithType: MenuBase.history
+  fullName: rwby.ui.MenuBase.history
 - uid: System
   commentId: N:System
   isExternal: true
@@ -715,6 +859,25 @@ references:
   name: NetworkLobbySessionMenuHandler
   nameWithType: NetworkLobbySessionMenuHandler
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
+- uid: Global.ExButton
+  commentId: T:Global.ExButton
+  href: ExButton.html
+  name: ExButton
+  nameWithType: ExButton
+  fullName: ExButton
+- uid: TMPro.TextMeshProUGUI
+  commentId: T:TMPro.TextMeshProUGUI
+  parent: TMPro
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TMPro.TextMeshProUGUI
+- uid: TMPro
+  commentId: N:TMPro
+  isExternal: true
+  name: TMPro
+  nameWithType: TMPro
+  fullName: TMPro
 - uid: UnityEngine.UI.ScrollRect
   commentId: T:UnityEngine.UI.ScrollRect
   parent: UnityEngine.UI
@@ -744,33 +907,40 @@ references:
   - uid: UnityEngine.UI
     name: UI
     isExternal: true
-- uid: UnityEngine.UI.Button
-  commentId: T:UnityEngine.UI.Button
-  parent: UnityEngine.UI
+- uid: rwby.VytalMatchSceneParticipantViewItem
+  commentId: T:rwby.VytalMatchSceneParticipantViewItem
+  parent: rwby
+  href: rwby.VytalMatchSceneParticipantViewItem.html
+  name: VytalMatchSceneParticipantViewItem
+  nameWithType: VytalMatchSceneParticipantViewItem
+  fullName: rwby.VytalMatchSceneParticipantViewItem
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: rwby.InputPromptsLister
+  commentId: T:rwby.InputPromptsLister
+  parent: rwby
+  href: rwby.InputPromptsLister.html
+  name: InputPromptsLister
+  nameWithType: InputPromptsLister
+  fullName: rwby.InputPromptsLister
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
-  name: Button
-  nameWithType: Button
-  fullName: UnityEngine.UI.Button
-- uid: TMPro.TextMeshProUGUI
-  commentId: T:TMPro.TextMeshProUGUI
-  parent: TMPro
-  isExternal: true
-  name: TextMeshProUGUI
-  nameWithType: TextMeshProUGUI
-  fullName: TMPro.TextMeshProUGUI
-- uid: TMPro
-  commentId: N:TMPro
-  isExternal: true
-  name: TMPro
-  nameWithType: TMPro
-  fullName: TMPro
-- uid: rwby.sessionhandlers.lobby.MatchPlayerListHolder
-  commentId: T:rwby.sessionhandlers.lobby.MatchPlayerListHolder
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: rwby.sessionhandlers.lobby.BGMSelectScreen
+  commentId: T:rwby.sessionhandlers.lobby.BGMSelectScreen
   parent: rwby.sessionhandlers.lobby
-  href: rwby.sessionhandlers.lobby.MatchPlayerListHolder.html
-  name: MatchPlayerListHolder
-  nameWithType: MatchPlayerListHolder
-  fullName: rwby.sessionhandlers.lobby.MatchPlayerListHolder
+  href: rwby.sessionhandlers.lobby.BGMSelectScreen.html
+  name: BGMSelectScreen
+  nameWithType: BGMSelectScreen
+  fullName: rwby.sessionhandlers.lobby.BGMSelectScreen
 - uid: rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   commentId: M:rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   parent: rwby.ui.MenuBase
@@ -884,49 +1054,12 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_BGMSelect*
-  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_BGMSelect
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_BGMSelect
-  name: BUTTON_BGMSelect
-  nameWithType: NetworkLobbySessionMatchScreen.BUTTON_BGMSelect
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_BGMSelect
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshAll*
-  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshAll
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_RefreshAll
-  name: RefreshAll
-  nameWithType: NetworkLobbySessionMatchScreen.RefreshAll
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshAll
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchList*
-  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchList
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_RefreshMatchList
-  name: RefreshMatchList
-  nameWithType: NetworkLobbySessionMatchScreen.RefreshMatchList
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchList
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.WhenMatchSelected*
-  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.WhenMatchSelected
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_WhenMatchSelected_rwby_sessionhandlers_lobby_NetworkLobbySessionMatchInfo_
-  name: WhenMatchSelected
-  nameWithType: NetworkLobbySessionMatchScreen.WhenMatchSelected
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.WhenMatchSelected
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
-  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
-  parent: rwby.sessionhandlers.lobby
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo.html
-  name: NetworkLobbySessionMatchInfo
-  nameWithType: NetworkLobbySessionMatchInfo
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchInfo*
-  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchInfo
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_RefreshMatchInfo
-  name: RefreshMatchInfo
-  nameWithType: NetworkLobbySessionMatchScreen.RefreshMatchInfo
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.RefreshMatchInfo
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.OnTeamSlotClicked*
-  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.OnTeamSlotClicked
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_OnTeamSlotClicked_System_Int32_System_Int32_
-  name: OnTeamSlotClicked
-  nameWithType: NetworkLobbySessionMatchScreen.OnTeamSlotClicked
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.OnTeamSlotClicked
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_GetCurrentlyViewingMatchID
+  name: GetCurrentlyViewingMatchID
+  nameWithType: NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.GetCurrentlyViewingMatchID
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -938,3 +1071,39 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_SetCurrentlyViewingMatchID_System_Int32_
+  name: SetCurrentlyViewingMatchID
+  nameWithType: NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.SetCurrentlyViewingMatchID
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Festival*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Festival
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_Festival
+  name: BUTTON_Festival
+  nameWithType: NetworkLobbySessionMatchScreen.BUTTON_Festival
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Festival
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Map*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Map
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_Map
+  name: BUTTON_Map
+  nameWithType: NetworkLobbySessionMatchScreen.BUTTON_Map
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Map
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Music*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Music
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BUTTON_Music
+  name: BUTTON_Music
+  nameWithType: NetworkLobbySessionMatchScreen.BUTTON_Music
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BUTTON_Music
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Button_ViewRooms*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Button_ViewRooms
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_Button_ViewRooms
+  name: Button_ViewRooms
+  nameWithType: NetworkLobbySessionMatchScreen.Button_ViewRooms
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.Button_ViewRooms
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BuildParticipantView*
+  commentId: Overload:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BuildParticipantView
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html#rwby_sessionhandlers_lobby_NetworkLobbySessionMatchScreen_BuildParticipantView
+  name: BuildParticipantView
+  nameWithType: NetworkLobbySessionMatchScreen.BuildParticipantView
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.BuildParticipantView

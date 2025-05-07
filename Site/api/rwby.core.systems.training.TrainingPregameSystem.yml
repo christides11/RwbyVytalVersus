@@ -5,8 +5,10 @@ items:
   id: TrainingPregameSystem
   parent: rwby.core.systems.training
   children:
+  - rwby.core.systems.training.TrainingPregameSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
   - rwby.core.systems.training.TrainingPregameSystem.OnEnabled(Quantum.Frame)
   - rwby.core.systems.training.TrainingPregameSystem.OnPlayerAdded(Quantum.Frame,Quantum.PlayerRef,System.Boolean)
+  - rwby.core.systems.training.TrainingPregameSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
   - rwby.core.systems.training.TrainingPregameSystem.StartEnabled
   langs:
   - csharp
@@ -30,11 +32,11 @@ items:
     content: >-
       [Preserve]
 
-      public class TrainingPregameSystem : SystemSignalsOnly, IGameStateGroupPregame, IGameStateGroup, ISignalOnPlayerAdded, ISignal
+      public class TrainingPregameSystem : SystemSignalsOnly, IGameStateGroupPregame, IGameStateGroup, ISignalOnPlayerAdded, ISignalOnComponentAdded<GamemodeParticipantsGlobal>, ISignalOnComponentRemoved<GamemodeParticipantsGlobal>, ISignal
     content.vb: >-
       <Preserve>
 
-      Public Class TrainingPregameSystem Inherits SystemSignalsOnly Implements IGameStateGroupPregame, IGameStateGroup, ISignalOnPlayerAdded, ISignal
+      Public Class TrainingPregameSystem Inherits SystemSignalsOnly Implements IGameStateGroupPregame, IGameStateGroup, ISignalOnPlayerAdded, ISignalOnComponentAdded(Of GamemodeParticipantsGlobal), ISignalOnComponentRemoved(Of GamemodeParticipantsGlobal), ISignal
   inheritance:
   - System.Object
   - Quantum.SystemBase
@@ -43,6 +45,8 @@ items:
   - Quantum.IGameStateGroupPregame
   - Quantum.IGameStateGroup
   - Quantum.ISignalOnPlayerAdded
+  - Quantum.ISignalOnComponentAdded{Quantum.GamemodeParticipantsGlobal}
+  - Quantum.ISignalOnComponentRemoved{Quantum.GamemodeParticipantsGlobal}
   - Quantum.ISignal
   inheritedMembers:
   - Quantum.SystemSignalsOnly.Schedule(Quantum.Frame,Quantum.Task.TaskHandle)
@@ -143,7 +147,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnPlayerAdded
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingPregameSystem.cs
-    startLine: 17
+    startLine: 38
   assemblies:
   - Quantum.Simulation
   namespace: rwby.core.systems.training
@@ -171,6 +175,86 @@ items:
   nameWithType.vb: TrainingPregameSystem.OnPlayerAdded(Frame, PlayerRef, Boolean)
   fullName.vb: rwby.core.systems.training.TrainingPregameSystem.OnPlayerAdded(Quantum.Frame, Quantum.PlayerRef, Boolean)
   name.vb: OnPlayerAdded(Frame, PlayerRef, Boolean)
+- uid: rwby.core.systems.training.TrainingPregameSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+  commentId: M:rwby.core.systems.training.TrainingPregameSystem.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+  id: OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+  parent: rwby.core.systems.training.TrainingPregameSystem
+  langs:
+  - csharp
+  - vb
+  name: OnAdded(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  nameWithType: TrainingPregameSystem.OnAdded(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  fullName: rwby.core.systems.training.TrainingPregameSystem.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.GamemodeParticipantsGlobal*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingPregameSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnAdded
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingPregameSystem.cs
+    startLine: 143
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems.training
+  summary: The signal is called after a component of the desired type has been added to an entity.
+  example: []
+  syntax:
+    content: public void OnAdded(Frame f, EntityRef entity, GamemodeParticipantsGlobal* component)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was added to.
+    - id: component
+      type: Quantum.GamemodeParticipantsGlobal*
+      description: The component that was added.
+    content.vb: Public Sub OnAdded(f As Frame, entity As EntityRef, component As GamemodeParticipantsGlobal*)
+  overload: rwby.core.systems.training.TrainingPregameSystem.OnAdded*
+  implements:
+  - Quantum.ISignalOnComponentAdded{Quantum.GamemodeParticipantsGlobal}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+- uid: rwby.core.systems.training.TrainingPregameSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+  commentId: M:rwby.core.systems.training.TrainingPregameSystem.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+  id: OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+  parent: rwby.core.systems.training.TrainingPregameSystem
+  langs:
+  - csharp
+  - vb
+  name: OnRemoved(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  nameWithType: TrainingPregameSystem.OnRemoved(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  fullName: rwby.core.systems.training.TrainingPregameSystem.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.GamemodeParticipantsGlobal*)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingPregameSystem.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnRemoved
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingPregameSystem.cs
+    startLine: 191
+  assemblies:
+  - Quantum.Simulation
+  namespace: rwby.core.systems.training
+  summary: The signal is called after a component of the desired type has been removed from an entity.
+  example: []
+  syntax:
+    content: public void OnRemoved(Frame f, EntityRef entity, GamemodeParticipantsGlobal* component)
+    parameters:
+    - id: f
+      type: Quantum.Frame
+      description: The frame reference.
+    - id: entity
+      type: Quantum.EntityRef
+      description: The entity that the component was removed from.
+    - id: component
+      type: Quantum.GamemodeParticipantsGlobal*
+      description: The component that was removed.
+    content.vb: Public Sub OnRemoved(f As Frame, entity As EntityRef, component As GamemodeParticipantsGlobal*)
+  overload: rwby.core.systems.training.TrainingPregameSystem.OnRemoved*
+  implements:
+  - Quantum.ISignalOnComponentRemoved{Quantum.GamemodeParticipantsGlobal}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
 references:
 - uid: rwby.core.systems.training
   commentId: N:rwby.core.systems.training
@@ -256,6 +340,68 @@ references:
   name: ISignalOnPlayerAdded
   nameWithType: ISignalOnPlayerAdded
   fullName: Quantum.ISignalOnPlayerAdded
+- uid: Quantum.ISignalOnComponentAdded{Quantum.GamemodeParticipantsGlobal}
+  commentId: T:Quantum.ISignalOnComponentAdded{Quantum.GamemodeParticipantsGlobal}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentAdded`1
+  href: Quantum.ISignalOnComponentAdded-1.html
+  name: ISignalOnComponentAdded<GamemodeParticipantsGlobal>
+  nameWithType: ISignalOnComponentAdded<GamemodeParticipantsGlobal>
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.GamemodeParticipantsGlobal>
+  nameWithType.vb: ISignalOnComponentAdded(Of GamemodeParticipantsGlobal)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.GamemodeParticipantsGlobal)
+  name.vb: ISignalOnComponentAdded(Of GamemodeParticipantsGlobal)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: <
+  - uid: Quantum.GamemodeParticipantsGlobal
+    name: GamemodeParticipantsGlobal
+    href: Quantum.GamemodeParticipantsGlobal.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.GamemodeParticipantsGlobal
+    name: GamemodeParticipantsGlobal
+    href: Quantum.GamemodeParticipantsGlobal.html
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.GamemodeParticipantsGlobal}
+  commentId: T:Quantum.ISignalOnComponentRemoved{Quantum.GamemodeParticipantsGlobal}
+  parent: Quantum
+  definition: Quantum.ISignalOnComponentRemoved`1
+  href: Quantum.ISignalOnComponentRemoved-1.html
+  name: ISignalOnComponentRemoved<GamemodeParticipantsGlobal>
+  nameWithType: ISignalOnComponentRemoved<GamemodeParticipantsGlobal>
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.GamemodeParticipantsGlobal>
+  nameWithType.vb: ISignalOnComponentRemoved(Of GamemodeParticipantsGlobal)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.GamemodeParticipantsGlobal)
+  name.vb: ISignalOnComponentRemoved(Of GamemodeParticipantsGlobal)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: <
+  - uid: Quantum.GamemodeParticipantsGlobal
+    name: GamemodeParticipantsGlobal
+    href: Quantum.GamemodeParticipantsGlobal.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.GamemodeParticipantsGlobal
+    name: GamemodeParticipantsGlobal
+    href: Quantum.GamemodeParticipantsGlobal.html
+  - name: )
 - uid: Quantum.ISignal
   commentId: T:Quantum.ISignal
   parent: Quantum
@@ -426,6 +572,56 @@ references:
   name: Quantum
   nameWithType: Quantum
   fullName: Quantum
+- uid: Quantum.ISignalOnComponentAdded`1
+  commentId: T:Quantum.ISignalOnComponentAdded`1
+  href: Quantum.ISignalOnComponentAdded-1.html
+  name: ISignalOnComponentAdded<T>
+  nameWithType: ISignalOnComponentAdded<T>
+  fullName: Quantum.ISignalOnComponentAdded<T>
+  nameWithType.vb: ISignalOnComponentAdded(Of T)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of T)
+  name.vb: ISignalOnComponentAdded(Of T)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1
+    name: ISignalOnComponentAdded
+    href: Quantum.ISignalOnComponentAdded-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved`1
+  commentId: T:Quantum.ISignalOnComponentRemoved`1
+  href: Quantum.ISignalOnComponentRemoved-1.html
+  name: ISignalOnComponentRemoved<T>
+  nameWithType: ISignalOnComponentRemoved<T>
+  fullName: Quantum.ISignalOnComponentRemoved<T>
+  nameWithType.vb: ISignalOnComponentRemoved(Of T)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of T)
+  name.vb: ISignalOnComponentRemoved(Of T)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1
+    name: ISignalOnComponentRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: Quantum.SystemBase.StartEnabled
   commentId: P:Quantum.SystemBase.StartEnabled
   parent: Quantum.SystemBase
@@ -606,3 +802,228 @@ references:
   name: PlayerRef
   nameWithType: PlayerRef
   fullName: Quantum.PlayerRef
+- uid: rwby.core.systems.training.TrainingPregameSystem.OnAdded*
+  commentId: Overload:rwby.core.systems.training.TrainingPregameSystem.OnAdded
+  href: rwby.core.systems.training.TrainingPregameSystem.html#rwby_core_systems_training_TrainingPregameSystem_OnAdded_Quantum_Frame_Quantum_EntityRef_Quantum_GamemodeParticipantsGlobal__
+  name: OnAdded
+  nameWithType: TrainingPregameSystem.OnAdded
+  fullName: rwby.core.systems.training.TrainingPregameSystem.OnAdded
+- uid: Quantum.ISignalOnComponentAdded{Quantum.GamemodeParticipantsGlobal}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+  commentId: M:Quantum.ISignalOnComponentAdded{Quantum.GamemodeParticipantsGlobal}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+  parent: Quantum.ISignalOnComponentAdded{Quantum.GamemodeParticipantsGlobal}
+  definition: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnAdded(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  nameWithType: ISignalOnComponentAdded<GamemodeParticipantsGlobal>.OnAdded(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  fullName: Quantum.ISignalOnComponentAdded<Quantum.GamemodeParticipantsGlobal>.OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.GamemodeParticipantsGlobal*)
+  nameWithType.vb: ISignalOnComponentAdded(Of GamemodeParticipantsGlobal).OnAdded(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of Quantum.GamemodeParticipantsGlobal).OnAdded(Quantum.Frame, Quantum.EntityRef, Quantum.GamemodeParticipantsGlobal*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.GamemodeParticipantsGlobal}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.GamemodeParticipantsGlobal
+    name: GamemodeParticipantsGlobal
+    href: Quantum.GamemodeParticipantsGlobal.html
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded{Quantum.GamemodeParticipantsGlobal}.OnAdded(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.GamemodeParticipantsGlobal
+    name: GamemodeParticipantsGlobal
+    href: Quantum.GamemodeParticipantsGlobal.html
+  - name: '*'
+  - name: )
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum.GamemodeParticipantsGlobal*
+  isExternal: true
+  href: Quantum.GamemodeParticipantsGlobal.html
+  name: GamemodeParticipantsGlobal*
+  nameWithType: GamemodeParticipantsGlobal*
+  fullName: Quantum.GamemodeParticipantsGlobal*
+  spec.csharp:
+  - uid: Quantum.GamemodeParticipantsGlobal
+    name: GamemodeParticipantsGlobal
+    href: Quantum.GamemodeParticipantsGlobal.html
+  - name: '*'
+  spec.vb:
+  - uid: Quantum.GamemodeParticipantsGlobal
+    name: GamemodeParticipantsGlobal
+    href: Quantum.GamemodeParticipantsGlobal.html
+  - name: '*'
+- uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  commentId: M:Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+  isExternal: true
+  href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnAdded(Frame, EntityRef, T*)
+  nameWithType: ISignalOnComponentAdded<T>.OnAdded(Frame, EntityRef, T*)
+  fullName: Quantum.ISignalOnComponentAdded<T>.OnAdded(Quantum.Frame, Quantum.EntityRef, T*)
+  nameWithType.vb: ISignalOnComponentAdded(Of T).OnAdded(Frame, EntityRef, T*)
+  fullName.vb: Quantum.ISignalOnComponentAdded(Of T).OnAdded(Quantum.Frame, Quantum.EntityRef, T*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentAdded`1.OnAdded(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnAdded
+    href: Quantum.ISignalOnComponentAdded-1.html#Quantum_ISignalOnComponentAdded_1_OnAdded_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+- uid: rwby.core.systems.training.TrainingPregameSystem.OnRemoved*
+  commentId: Overload:rwby.core.systems.training.TrainingPregameSystem.OnRemoved
+  href: rwby.core.systems.training.TrainingPregameSystem.html#rwby_core_systems_training_TrainingPregameSystem_OnRemoved_Quantum_Frame_Quantum_EntityRef_Quantum_GamemodeParticipantsGlobal__
+  name: OnRemoved
+  nameWithType: TrainingPregameSystem.OnRemoved
+  fullName: rwby.core.systems.training.TrainingPregameSystem.OnRemoved
+- uid: Quantum.ISignalOnComponentRemoved{Quantum.GamemodeParticipantsGlobal}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+  commentId: M:Quantum.ISignalOnComponentRemoved{Quantum.GamemodeParticipantsGlobal}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+  parent: Quantum.ISignalOnComponentRemoved{Quantum.GamemodeParticipantsGlobal}
+  definition: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnRemoved(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  nameWithType: ISignalOnComponentRemoved<GamemodeParticipantsGlobal>.OnRemoved(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  fullName: Quantum.ISignalOnComponentRemoved<Quantum.GamemodeParticipantsGlobal>.OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.GamemodeParticipantsGlobal*)
+  nameWithType.vb: ISignalOnComponentRemoved(Of GamemodeParticipantsGlobal).OnRemoved(Frame, EntityRef, GamemodeParticipantsGlobal*)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of Quantum.GamemodeParticipantsGlobal).OnRemoved(Quantum.Frame, Quantum.EntityRef, Quantum.GamemodeParticipantsGlobal*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.GamemodeParticipantsGlobal}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.GamemodeParticipantsGlobal
+    name: GamemodeParticipantsGlobal
+    href: Quantum.GamemodeParticipantsGlobal.html
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved{Quantum.GamemodeParticipantsGlobal}.OnRemoved(Quantum.Frame,Quantum.EntityRef,Quantum.GamemodeParticipantsGlobal*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.GamemodeParticipantsGlobal
+    name: GamemodeParticipantsGlobal
+    href: Quantum.GamemodeParticipantsGlobal.html
+  - name: '*'
+  - name: )
+- uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  commentId: M:Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+  isExternal: true
+  href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  name: OnRemoved(Frame, EntityRef, T*)
+  nameWithType: ISignalOnComponentRemoved<T>.OnRemoved(Frame, EntityRef, T*)
+  fullName: Quantum.ISignalOnComponentRemoved<T>.OnRemoved(Quantum.Frame, Quantum.EntityRef, T*)
+  nameWithType.vb: ISignalOnComponentRemoved(Of T).OnRemoved(Frame, EntityRef, T*)
+  fullName.vb: Quantum.ISignalOnComponentRemoved(Of T).OnRemoved(Quantum.Frame, Quantum.EntityRef, T*)
+  spec.csharp:
+  - uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.ISignalOnComponentRemoved`1.OnRemoved(Quantum.Frame,Quantum.EntityRef,`0*)
+    name: OnRemoved
+    href: Quantum.ISignalOnComponentRemoved-1.html#Quantum_ISignalOnComponentRemoved_1_OnRemoved_Quantum_Frame_Quantum_EntityRef__0__
+  - name: (
+  - uid: Quantum.Frame
+    name: Frame
+    href: Quantum.Frame.html
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '*'
+  - name: )

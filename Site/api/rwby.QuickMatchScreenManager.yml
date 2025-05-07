@@ -1,0 +1,812 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.QuickMatchScreenManager
+  commentId: T:rwby.QuickMatchScreenManager
+  id: QuickMatchScreenManager
+  parent: rwby
+  children:
+  - rwby.QuickMatchScreenManager.BackOutOfCSS
+  - rwby.QuickMatchScreenManager.Close
+  - rwby.QuickMatchScreenManager.Open
+  - rwby.QuickMatchScreenManager.OpenCSS
+  - rwby.QuickMatchScreenManager.TransitionFromCssToMainScreen
+  - rwby.QuickMatchScreenManager.TransitionToCharacterSelectScreen(System.Int32)
+  - rwby.QuickMatchScreenManager.cameraControlCSSPositioner
+  - rwby.QuickMatchScreenManager.cameraControlCharacterSelectScreen
+  - rwby.QuickMatchScreenManager.cameraControlMainScreen
+  - rwby.QuickMatchScreenManager.characterSelectScreen
+  - rwby.QuickMatchScreenManager.director_CharacterSelectToMainScreen
+  - rwby.QuickMatchScreenManager.director_MainScreenToCharacterSelect
+  - rwby.QuickMatchScreenManager.instanceManager
+  - rwby.QuickMatchScreenManager.mainScreen
+  langs:
+  - csharp
+  - vb
+  name: QuickMatchScreenManager
+  nameWithType: QuickMatchScreenManager
+  fullName: rwby.QuickMatchScreenManager
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: QuickMatchScreenManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 5
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: 'public class QuickMatchScreenManager : MenuHandlerBase, IMenuHandler'
+    content.vb: Public Class QuickMatchScreenManager Inherits MenuHandlerBase Implements IMenuHandler
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - Global.MenuHandlerBase
+  implements:
+  - rwby.ui.IMenuHandler
+  inheritedMembers:
+  - Global.MenuHandlerBase.menus
+  - Global.MenuHandlerBase.history
+  - Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+  - Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+  - Global.MenuHandlerBase.Back
+  - Global.MenuHandlerBase.GetHistory
+  - Global.MenuHandlerBase.GetPreviousMenu
+  - Global.MenuHandlerBase.GetCurrentMenu
+  - Global.MenuHandlerBase.HasSubmenuOpen
+- uid: rwby.QuickMatchScreenManager.instanceManager
+  commentId: F:rwby.QuickMatchScreenManager.instanceManager
+  id: instanceManager
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: instanceManager
+  nameWithType: QuickMatchScreenManager.instanceManager
+  fullName: rwby.QuickMatchScreenManager.instanceManager
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: instanceManager
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 7
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public QuickMatchSceneInstanceManager instanceManager
+    return:
+      type: rwby.QuickMatchSceneInstanceManager
+    content.vb: Public instanceManager As QuickMatchSceneInstanceManager
+- uid: rwby.QuickMatchScreenManager.mainScreen
+  commentId: F:rwby.QuickMatchScreenManager.mainScreen
+  id: mainScreen
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: mainScreen
+  nameWithType: QuickMatchScreenManager.mainScreen
+  fullName: rwby.QuickMatchScreenManager.mainScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: mainScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 9
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public QuickMatchScreenMain mainScreen
+    return:
+      type: rwby.QuickMatchScreenMain
+    content.vb: Public mainScreen As QuickMatchScreenMain
+- uid: rwby.QuickMatchScreenManager.characterSelectScreen
+  commentId: F:rwby.QuickMatchScreenManager.characterSelectScreen
+  id: characterSelectScreen
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: characterSelectScreen
+  nameWithType: QuickMatchScreenManager.characterSelectScreen
+  fullName: rwby.QuickMatchScreenManager.characterSelectScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: characterSelectScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 10
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public QuickMatchScreenCharacterSelect characterSelectScreen
+    return:
+      type: rwby.QuickMatchScreenCharacterSelect
+    content.vb: Public characterSelectScreen As QuickMatchScreenCharacterSelect
+- uid: rwby.QuickMatchScreenManager.cameraControlMainScreen
+  commentId: F:rwby.QuickMatchScreenManager.cameraControlMainScreen
+  id: cameraControlMainScreen
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: cameraControlMainScreen
+  nameWithType: QuickMatchScreenManager.cameraControlMainScreen
+  fullName: rwby.QuickMatchScreenManager.cameraControlMainScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: cameraControlMainScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 12
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public GameObject cameraControlMainScreen
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public cameraControlMainScreen As GameObject
+- uid: rwby.QuickMatchScreenManager.cameraControlCharacterSelectScreen
+  commentId: F:rwby.QuickMatchScreenManager.cameraControlCharacterSelectScreen
+  id: cameraControlCharacterSelectScreen
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: cameraControlCharacterSelectScreen
+  nameWithType: QuickMatchScreenManager.cameraControlCharacterSelectScreen
+  fullName: rwby.QuickMatchScreenManager.cameraControlCharacterSelectScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: cameraControlCharacterSelectScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 13
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public GameObject cameraControlCharacterSelectScreen
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public cameraControlCharacterSelectScreen As GameObject
+- uid: rwby.QuickMatchScreenManager.cameraControlCSSPositioner
+  commentId: F:rwby.QuickMatchScreenManager.cameraControlCSSPositioner
+  id: cameraControlCSSPositioner
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: cameraControlCSSPositioner
+  nameWithType: QuickMatchScreenManager.cameraControlCSSPositioner
+  fullName: rwby.QuickMatchScreenManager.cameraControlCSSPositioner
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: cameraControlCSSPositioner
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public GameObject cameraControlCSSPositioner
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public cameraControlCSSPositioner As GameObject
+- uid: rwby.QuickMatchScreenManager.director_MainScreenToCharacterSelect
+  commentId: F:rwby.QuickMatchScreenManager.director_MainScreenToCharacterSelect
+  id: director_MainScreenToCharacterSelect
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: director_MainScreenToCharacterSelect
+  nameWithType: QuickMatchScreenManager.director_MainScreenToCharacterSelect
+  fullName: rwby.QuickMatchScreenManager.director_MainScreenToCharacterSelect
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: director_MainScreenToCharacterSelect
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 16
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public PlayableDirector director_MainScreenToCharacterSelect
+    return:
+      type: UnityEngine.Playables.PlayableDirector
+    content.vb: Public director_MainScreenToCharacterSelect As PlayableDirector
+- uid: rwby.QuickMatchScreenManager.director_CharacterSelectToMainScreen
+  commentId: F:rwby.QuickMatchScreenManager.director_CharacterSelectToMainScreen
+  id: director_CharacterSelectToMainScreen
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: director_CharacterSelectToMainScreen
+  nameWithType: QuickMatchScreenManager.director_CharacterSelectToMainScreen
+  fullName: rwby.QuickMatchScreenManager.director_CharacterSelectToMainScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: director_CharacterSelectToMainScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public PlayableDirector director_CharacterSelectToMainScreen
+    return:
+      type: UnityEngine.Playables.PlayableDirector
+    content.vb: Public director_CharacterSelectToMainScreen As PlayableDirector
+- uid: rwby.QuickMatchScreenManager.Open
+  commentId: M:rwby.QuickMatchScreenManager.Open
+  id: Open
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: Open()
+  nameWithType: QuickMatchScreenManager.Open()
+  fullName: rwby.QuickMatchScreenManager.Open()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Open
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 21
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void Open()
+    content.vb: Public Sub Open()
+  overload: rwby.QuickMatchScreenManager.Open*
+- uid: rwby.QuickMatchScreenManager.Close
+  commentId: M:rwby.QuickMatchScreenManager.Close
+  id: Close
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: QuickMatchScreenManager.Close()
+  fullName: rwby.QuickMatchScreenManager.Close()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Close
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 32
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void Close()
+    content.vb: Public Sub Close()
+  overload: rwby.QuickMatchScreenManager.Close*
+- uid: rwby.QuickMatchScreenManager.OpenCSS
+  commentId: M:rwby.QuickMatchScreenManager.OpenCSS
+  id: OpenCSS
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: OpenCSS()
+  nameWithType: QuickMatchScreenManager.OpenCSS()
+  fullName: rwby.QuickMatchScreenManager.OpenCSS()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OpenCSS
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 37
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void OpenCSS()
+    content.vb: Public Sub OpenCSS()
+  overload: rwby.QuickMatchScreenManager.OpenCSS*
+- uid: rwby.QuickMatchScreenManager.BackOutOfCSS
+  commentId: M:rwby.QuickMatchScreenManager.BackOutOfCSS
+  id: BackOutOfCSS
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: BackOutOfCSS()
+  nameWithType: QuickMatchScreenManager.BackOutOfCSS()
+  fullName: rwby.QuickMatchScreenManager.BackOutOfCSS()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BackOutOfCSS
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 42
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void BackOutOfCSS()
+    content.vb: Public Sub BackOutOfCSS()
+  overload: rwby.QuickMatchScreenManager.BackOutOfCSS*
+- uid: rwby.QuickMatchScreenManager.TransitionToCharacterSelectScreen(System.Int32)
+  commentId: M:rwby.QuickMatchScreenManager.TransitionToCharacterSelectScreen(System.Int32)
+  id: TransitionToCharacterSelectScreen(System.Int32)
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: TransitionToCharacterSelectScreen(int)
+  nameWithType: QuickMatchScreenManager.TransitionToCharacterSelectScreen(int)
+  fullName: rwby.QuickMatchScreenManager.TransitionToCharacterSelectScreen(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TransitionToCharacterSelectScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 47
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void TransitionToCharacterSelectScreen(int slotIndex)
+    parameters:
+    - id: slotIndex
+      type: System.Int32
+    content.vb: Public Sub TransitionToCharacterSelectScreen(slotIndex As Integer)
+  overload: rwby.QuickMatchScreenManager.TransitionToCharacterSelectScreen*
+  nameWithType.vb: QuickMatchScreenManager.TransitionToCharacterSelectScreen(Integer)
+  fullName.vb: rwby.QuickMatchScreenManager.TransitionToCharacterSelectScreen(Integer)
+  name.vb: TransitionToCharacterSelectScreen(Integer)
+- uid: rwby.QuickMatchScreenManager.TransitionFromCssToMainScreen
+  commentId: M:rwby.QuickMatchScreenManager.TransitionFromCssToMainScreen
+  id: TransitionFromCssToMainScreen
+  parent: rwby.QuickMatchScreenManager
+  langs:
+  - csharp
+  - vb
+  name: TransitionFromCssToMainScreen()
+  nameWithType: QuickMatchScreenManager.TransitionFromCssToMainScreen()
+  fullName: rwby.QuickMatchScreenManager.TransitionFromCssToMainScreen()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: TransitionFromCssToMainScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/QuickMatchScreenManager.cs
+    startLine: 67
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void TransitionFromCssToMainScreen()
+    content.vb: Public Sub TransitionFromCssToMainScreen()
+  overload: rwby.QuickMatchScreenManager.TransitionFromCssToMainScreen*
+references:
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: Global.MenuHandlerBase
+  commentId: T:Global.MenuHandlerBase
+  href: MenuHandlerBase.html
+  name: MenuHandlerBase
+  nameWithType: MenuHandlerBase
+  fullName: MenuHandlerBase
+- uid: rwby.ui.IMenuHandler
+  commentId: T:rwby.ui.IMenuHandler
+  parent: rwby.ui
+  href: rwby.ui.IMenuHandler.html
+  name: IMenuHandler
+  nameWithType: IMenuHandler
+  fullName: rwby.ui.IMenuHandler
+- uid: Global.MenuHandlerBase.menus
+  commentId: F:Global.MenuHandlerBase.menus
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_menus
+  name: menus
+  nameWithType: MenuHandlerBase.menus
+  fullName: MenuHandlerBase.menus
+- uid: Global.MenuHandlerBase.history
+  commentId: F:Global.MenuHandlerBase.history
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_history
+  name: history
+  nameWithType: MenuHandlerBase.history
+  fullName: MenuHandlerBase.history
+- uid: Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+  commentId: M:Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_ResetAndForwardTo_rwby_ui_IMenu_
+  name: ResetAndForwardTo(IMenu)
+  nameWithType: MenuHandlerBase.ResetAndForwardTo(IMenu)
+  fullName: MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+    name: ResetAndForwardTo
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_ResetAndForwardTo_rwby_ui_IMenu_
+  - name: (
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.ResetAndForwardTo(rwby.ui.IMenu)
+    name: ResetAndForwardTo
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_ResetAndForwardTo_rwby_ui_IMenu_
+  - name: (
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: )
+- uid: Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+  commentId: M:Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+  parent: Global.MenuHandlerBase
+  isExternal: true
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_Forward_rwby_ui_IMenu_System_Boolean_
+  name: Forward(IMenu, bool)
+  nameWithType: MenuHandlerBase.Forward(IMenu, bool)
+  fullName: MenuHandlerBase.Forward(rwby.ui.IMenu, bool)
+  nameWithType.vb: MenuHandlerBase.Forward(IMenu, Boolean)
+  fullName.vb: MenuHandlerBase.Forward(rwby.ui.IMenu, Boolean)
+  name.vb: Forward(IMenu, Boolean)
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+    name: Forward
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_Forward_rwby_ui_IMenu_System_Boolean_
+  - name: (
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.Forward(rwby.ui.IMenu,System.Boolean)
+    name: Forward
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_Forward_rwby_ui_IMenu_System_Boolean_
+  - name: (
+  - uid: rwby.ui.IMenu
+    name: IMenu
+    href: rwby.ui.IMenu.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Global.MenuHandlerBase.Back
+  commentId: M:Global.MenuHandlerBase.Back
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_Back
+  name: Back()
+  nameWithType: MenuHandlerBase.Back()
+  fullName: MenuHandlerBase.Back()
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.Back
+    name: Back
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_Back
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.Back
+    name: Back
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_Back
+  - name: (
+  - name: )
+- uid: Global.MenuHandlerBase.GetHistory
+  commentId: M:Global.MenuHandlerBase.GetHistory
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_GetHistory
+  name: GetHistory()
+  nameWithType: MenuHandlerBase.GetHistory()
+  fullName: MenuHandlerBase.GetHistory()
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.GetHistory
+    name: GetHistory
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetHistory
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.GetHistory
+    name: GetHistory
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetHistory
+  - name: (
+  - name: )
+- uid: Global.MenuHandlerBase.GetPreviousMenu
+  commentId: M:Global.MenuHandlerBase.GetPreviousMenu
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_GetPreviousMenu
+  name: GetPreviousMenu()
+  nameWithType: MenuHandlerBase.GetPreviousMenu()
+  fullName: MenuHandlerBase.GetPreviousMenu()
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.GetPreviousMenu
+    name: GetPreviousMenu
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetPreviousMenu
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.GetPreviousMenu
+    name: GetPreviousMenu
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetPreviousMenu
+  - name: (
+  - name: )
+- uid: Global.MenuHandlerBase.GetCurrentMenu
+  commentId: M:Global.MenuHandlerBase.GetCurrentMenu
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_GetCurrentMenu
+  name: GetCurrentMenu()
+  nameWithType: MenuHandlerBase.GetCurrentMenu()
+  fullName: MenuHandlerBase.GetCurrentMenu()
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.GetCurrentMenu
+    name: GetCurrentMenu
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetCurrentMenu
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.GetCurrentMenu
+    name: GetCurrentMenu
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_GetCurrentMenu
+  - name: (
+  - name: )
+- uid: Global.MenuHandlerBase.HasSubmenuOpen
+  commentId: M:Global.MenuHandlerBase.HasSubmenuOpen
+  parent: Global.MenuHandlerBase
+  href: Global.MenuHandlerBase.html#MenuHandlerBase_HasSubmenuOpen
+  name: HasSubmenuOpen()
+  nameWithType: MenuHandlerBase.HasSubmenuOpen()
+  fullName: MenuHandlerBase.HasSubmenuOpen()
+  spec.csharp:
+  - uid: Global.MenuHandlerBase.HasSubmenuOpen
+    name: HasSubmenuOpen
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_HasSubmenuOpen
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.MenuHandlerBase.HasSubmenuOpen
+    name: HasSubmenuOpen
+    href: Global.MenuHandlerBase.html#MenuHandlerBase_HasSubmenuOpen
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby.ui
+  commentId: N:rwby.ui
+  href: rwby.html
+  name: rwby.ui
+  nameWithType: rwby.ui
+  fullName: rwby.ui
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.ui
+    name: ui
+    href: rwby.ui.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.ui
+    name: ui
+    href: rwby.ui.html
+- uid: rwby.QuickMatchSceneInstanceManager
+  commentId: T:rwby.QuickMatchSceneInstanceManager
+  parent: rwby
+  href: rwby.QuickMatchSceneInstanceManager.html
+  name: QuickMatchSceneInstanceManager
+  nameWithType: QuickMatchSceneInstanceManager
+  fullName: rwby.QuickMatchSceneInstanceManager
+- uid: rwby.QuickMatchScreenMain
+  commentId: T:rwby.QuickMatchScreenMain
+  parent: rwby
+  href: rwby.QuickMatchScreenMain.html
+  name: QuickMatchScreenMain
+  nameWithType: QuickMatchScreenMain
+  fullName: rwby.QuickMatchScreenMain
+- uid: rwby.QuickMatchScreenCharacterSelect
+  commentId: T:rwby.QuickMatchScreenCharacterSelect
+  parent: rwby
+  href: rwby.QuickMatchScreenCharacterSelect.html
+  name: QuickMatchScreenCharacterSelect
+  nameWithType: QuickMatchScreenCharacterSelect
+  fullName: rwby.QuickMatchScreenCharacterSelect
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.Playables.PlayableDirector
+  commentId: T:UnityEngine.Playables.PlayableDirector
+  parent: UnityEngine.Playables
+  isExternal: true
+  name: PlayableDirector
+  nameWithType: PlayableDirector
+  fullName: UnityEngine.Playables.PlayableDirector
+- uid: UnityEngine.Playables
+  commentId: N:UnityEngine.Playables
+  isExternal: true
+  name: UnityEngine.Playables
+  nameWithType: UnityEngine.Playables
+  fullName: UnityEngine.Playables
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Playables
+    name: Playables
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Playables
+    name: Playables
+    isExternal: true
+- uid: rwby.QuickMatchScreenManager.Open*
+  commentId: Overload:rwby.QuickMatchScreenManager.Open
+  href: rwby.QuickMatchScreenManager.html#rwby_QuickMatchScreenManager_Open
+  name: Open
+  nameWithType: QuickMatchScreenManager.Open
+  fullName: rwby.QuickMatchScreenManager.Open
+- uid: rwby.QuickMatchScreenManager.Close*
+  commentId: Overload:rwby.QuickMatchScreenManager.Close
+  href: rwby.QuickMatchScreenManager.html#rwby_QuickMatchScreenManager_Close
+  name: Close
+  nameWithType: QuickMatchScreenManager.Close
+  fullName: rwby.QuickMatchScreenManager.Close
+- uid: rwby.QuickMatchScreenManager.OpenCSS*
+  commentId: Overload:rwby.QuickMatchScreenManager.OpenCSS
+  href: rwby.QuickMatchScreenManager.html#rwby_QuickMatchScreenManager_OpenCSS
+  name: OpenCSS
+  nameWithType: QuickMatchScreenManager.OpenCSS
+  fullName: rwby.QuickMatchScreenManager.OpenCSS
+- uid: rwby.QuickMatchScreenManager.BackOutOfCSS*
+  commentId: Overload:rwby.QuickMatchScreenManager.BackOutOfCSS
+  href: rwby.QuickMatchScreenManager.html#rwby_QuickMatchScreenManager_BackOutOfCSS
+  name: BackOutOfCSS
+  nameWithType: QuickMatchScreenManager.BackOutOfCSS
+  fullName: rwby.QuickMatchScreenManager.BackOutOfCSS
+- uid: rwby.QuickMatchScreenManager.TransitionToCharacterSelectScreen*
+  commentId: Overload:rwby.QuickMatchScreenManager.TransitionToCharacterSelectScreen
+  href: rwby.QuickMatchScreenManager.html#rwby_QuickMatchScreenManager_TransitionToCharacterSelectScreen_System_Int32_
+  name: TransitionToCharacterSelectScreen
+  nameWithType: QuickMatchScreenManager.TransitionToCharacterSelectScreen
+  fullName: rwby.QuickMatchScreenManager.TransitionToCharacterSelectScreen
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: rwby.QuickMatchScreenManager.TransitionFromCssToMainScreen*
+  commentId: Overload:rwby.QuickMatchScreenManager.TransitionFromCssToMainScreen
+  href: rwby.QuickMatchScreenManager.html#rwby_QuickMatchScreenManager_TransitionFromCssToMainScreen
+  name: TransitionFromCssToMainScreen
+  nameWithType: QuickMatchScreenManager.TransitionFromCssToMainScreen
+  fullName: rwby.QuickMatchScreenManager.TransitionFromCssToMainScreen

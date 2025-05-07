@@ -16,6 +16,7 @@ items:
   - Global.AdvancedTypeModal
   - Global.AdvancedTypePopup
   - Global.AdvancedTypePopupItem
+  - Global.AnimancerSoloAnimationVisualEffect
   - Global.AnimancerVisualEffect
   - Global.AnimationAssetBaker
   - Global.AnimationCurveExtensions
@@ -45,16 +46,34 @@ items:
   - Global.BaseModInfoAsset
   - Global.BaseModItemAsset
   - Global.BaseModLoader
+  - Global.CombatTokenSystem
+  - Global.ComboRecorderTool
   - Global.ControllerGlyphDatabase
   - Global.ControllerGlyphs
   - Global.ControlsMainScreen
   - Global.ControlsProfileMappingScreen
   - Global.ControlsScreen
   - Global.ControlsScreen.MenuTypes
+  - Global.CrossSceneCutsceneContainer
+  - Global.CrossSceneCutsceneContainer.CutsceneData
   - Global.DevicePickerUtility
   - Global.DevicePickerUtility.DelegatePickerEvent
   - Global.DualsenseEdgeGamepadHID
+  - Global.EOSLobby
+  - Global.EOSLobby.CreateLobbyFailure
+  - Global.EOSLobby.CreateLobbySuccess
+  - Global.EOSLobby.FindLobbiesFailure
+  - Global.EOSLobby.FindLobbiesSuccess
+  - Global.EOSLobby.JoinLobbyFailure
+  - Global.EOSLobby.JoinLobbySuccess
+  - Global.EOSLobby.LeaveLobbyFailure
+  - Global.EOSLobby.LeaveLobbySuccess
+  - Global.EOSLobby.LobbyAttributeUpdate
+  - Global.EOSLobby.LobbyMemberStatusUpdate
+  - Global.EOSLobby.UpdateAttributeFailure
+  - Global.EOSLobby.UpdateAttributeSuccess
   - Global.EQSTester
+  - Global.EditorDrawUtility
   - Global.EntityInputDebugger
   - Global.EntityPhysicsDebugger
   - Global.EntityPrototypeBaker
@@ -63,6 +82,7 @@ items:
   - Global.EntityViewTrackECB
   - Global.EntityVisibilityUpdater
   - Global.ExButton
+  - Global.ExButtonTweenAnimator
   - Global.FPConverter
   - Global.FighterContentHelper
   - Global.FighterPassiveAuraGainSystem
@@ -70,9 +90,12 @@ items:
   - Global.FighterShakeManager
   - Global.FighterVFXManager
   - Global.FighterViewHandle
+  - Global.FighterVisualPositioner
+  - Global.FighterVisualPositioner.TagBoneDefinition
   - Global.FileCreationHelpers
   - Global.GamemodeContentHelper
   - Global.GamemodeTeamConfig
+  - Global.GamemodeTeamTypeConfig
   - Global.GeneralHelpers
   - Global.GlobalFighterEventManager
   - Global.GlobalSoundManager
@@ -96,19 +119,24 @@ items:
   - Global.InputPlayerManager.NavigationType
   - Global.InputRumbleManager
   - Global.JumpCalcWindow
+  - Global.KnownModLoaderTypes
   - Global.LoadedModDefinition
   - Global.LocalLoadedModDefinition
   - Global.LocalModLoader
   - Global.MLPForceSaveProbes
   - Global.MLPSettings
+  - Global.MainMenuLocalSceneSwitcher
   - Global.MapContentHelper
   - Global.MapViewManager
-  - Global.MenuAndHandlerBase
+  - Global.MenuCutscenePlayer
+  - Global.MenuCutscenePlayer.CutscenePlayerDirectorDefinition
+  - Global.MenuCutscenePlayer.DelegateCutscenePlayer
+  - Global.MenuCutscenePlayer.DelegateCutscenePlayerIndex
+  - Global.MenuHandlerAndMenuBase
   - Global.MenuHandlerBase
   - Global.ModAssetReference
   - Global.ModAssetSoftReference
   - Global.ModContentManager
-  - Global.ModLoaderType
   - Global.ModManager
   - Global.ModOnlineRequirement
   - Global.ModProfile
@@ -121,7 +149,6 @@ items:
   - Global.OptionsMainScreen.OptionsTabs
   - Global.OptionsModdingScreen
   - Global.OptionsScreen
-  - Global.OptionsScreen.OptionsScreenMenus
   - Global.OptionsSidebarItem
   - Global.ParticleSystemVisualEffect
   - Global.PhysicsExtensions
@@ -133,6 +160,8 @@ items:
   - Global.ProfilesManager.ProfileAction
   - Global.ProfilesManager.ProfileChangeAction
   - Global.QuantumAssetDBHelper
+  - Global.RadialBlurBlitData
+  - Global.RadialBlurRendererFeature
   - Global.RectTransformExtensions
   - Global.RectTransformPresetApplyUtils
   - Global.SongContentHelper
@@ -140,6 +169,7 @@ items:
   - Global.SpinningCube
   - Global.SplitScreenManager
   - Global.SplitScreenManager.RectDefinition
+  - Global.SplitScreenManager.ScreenDelegate
   - Global.StateActionLabel
   - Global.StateActionLabel.OnChange
   - Global.StateConverter
@@ -147,6 +177,12 @@ items:
   - Global.StateTimelineFramebar
   - Global.SubassetConverter
   - Global.TextColorBounce
+  - Global.TweenSequenceContainer
+  - Global.TweenSequencePart
+  - Global.TweenSequencePartScale
+  - Global.TweenSequencePartType
+  - Global.TweenSequencePartUIAnchoredPositionY
+  - Global.TweenSequencePart_UISizeDelta
   - Global.UIOutline
   - Global.UModFighterDefinition
   - Global.UModFighterDefinitionContainer
@@ -155,6 +191,7 @@ items:
   - Global.UModMapDefinition
   - Global.VFXGraphVisualEffect
   - Global.VisualEffectBase
+  - Global.VisualEffectBase.EffectDelegate
   - Global.VisualEffectBase.VisualEffectPlayStatus
   - Global.WindowsServerConsole
   langs:
@@ -421,6 +458,12 @@ references:
   name: AddTypeMenuAttribute
   nameWithType: AddTypeMenuAttribute
   fullName: AddTypeMenuAttribute
+- uid: Global.CombatTokenSystem
+  commentId: T:Global.CombatTokenSystem
+  href: CombatTokenSystem.html
+  name: CombatTokenSystem
+  nameWithType: CombatTokenSystem
+  fullName: CombatTokenSystem
 - uid: Global.FighterPassiveAuraGainSystem
   commentId: T:Global.FighterPassiveAuraGainSystem
   href: FighterPassiveAuraGainSystem.html
@@ -455,6 +498,18 @@ references:
   name: PhysicsExtensions
   nameWithType: PhysicsExtensions
   fullName: PhysicsExtensions
+- uid: Global.GamemodeTeamConfig
+  commentId: T:Global.GamemodeTeamConfig
+  href: GamemodeTeamConfig.html
+  name: GamemodeTeamConfig
+  nameWithType: GamemodeTeamConfig
+  fullName: GamemodeTeamConfig
+- uid: Global.GamemodeTeamTypeConfig
+  commentId: T:Global.GamemodeTeamTypeConfig
+  href: GamemodeTeamTypeConfig.html
+  name: GamemodeTeamTypeConfig
+  nameWithType: GamemodeTeamTypeConfig
+  fullName: GamemodeTeamTypeConfig
 - uid: Global.HitboxResolveResult
   commentId: T:Global.HitboxResolveResult
   href: HitboxResolveResult.html
@@ -479,6 +534,18 @@ references:
   name: TextColorBounce
   nameWithType: TextColorBounce
   fullName: TextColorBounce
+- uid: Global.RadialBlurRendererFeature
+  commentId: T:Global.RadialBlurRendererFeature
+  href: RadialBlurRendererFeature.html
+  name: RadialBlurRendererFeature
+  nameWithType: RadialBlurRendererFeature
+  fullName: RadialBlurRendererFeature
+- uid: Global.AnimancerSoloAnimationVisualEffect
+  commentId: T:Global.AnimancerSoloAnimationVisualEffect
+  href: AnimancerSoloAnimationVisualEffect.html
+  name: AnimancerSoloAnimationVisualEffect
+  nameWithType: AnimancerSoloAnimationVisualEffect
+  fullName: AnimancerSoloAnimationVisualEffect
 - uid: Global.IMapDefinition
   commentId: T:Global.IMapDefinition
   href: IMapDefinition.html
@@ -555,6 +622,12 @@ references:
   name: FighterVFXManager
   nameWithType: FighterVFXManager
   fullName: FighterVFXManager
+- uid: Global.KnownModLoaderTypes
+  commentId: T:Global.KnownModLoaderTypes
+  href: KnownModLoaderTypes.html
+  name: KnownModLoaderTypes
+  nameWithType: KnownModLoaderTypes
+  fullName: KnownModLoaderTypes
 - uid: Global.IExternalOptionCallback
   commentId: T:Global.IExternalOptionCallback
   href: IExternalOptionCallback.html
@@ -591,6 +664,12 @@ references:
   name: GlobalFighterEventManager
   nameWithType: GlobalFighterEventManager
   fullName: GlobalFighterEventManager
+- uid: Global.MainMenuLocalSceneSwitcher
+  commentId: T:Global.MainMenuLocalSceneSwitcher
+  href: MainMenuLocalSceneSwitcher.html
+  name: MainMenuLocalSceneSwitcher
+  nameWithType: MainMenuLocalSceneSwitcher
+  fullName: MainMenuLocalSceneSwitcher
 - uid: Global.OptionsSidebarItem
   commentId: T:Global.OptionsSidebarItem
   href: OptionsSidebarItem.html
@@ -669,6 +748,12 @@ references:
   name: AddressablesMapDefinitionContainer
   nameWithType: AddressablesMapDefinitionContainer
   fullName: AddressablesMapDefinitionContainer
+- uid: Global.RadialBlurBlitData
+  commentId: T:Global.RadialBlurBlitData
+  href: RadialBlurBlitData.html
+  name: RadialBlurBlitData
+  nameWithType: RadialBlurBlitData
+  fullName: RadialBlurBlitData
 - uid: Global.RectTransformPresetApplyUtils
   commentId: T:Global.RectTransformPresetApplyUtils
   href: RectTransformPresetApplyUtils.html
@@ -693,6 +778,28 @@ references:
   name: VisualEffectBase
   nameWithType: VisualEffectBase
   fullName: VisualEffectBase
+- uid: Global.VisualEffectBase.EffectDelegate
+  commentId: T:Global.VisualEffectBase.EffectDelegate
+  href: VisualEffectBase.html
+  name: VisualEffectBase.EffectDelegate
+  nameWithType: VisualEffectBase.EffectDelegate
+  fullName: VisualEffectBase.EffectDelegate
+  spec.csharp:
+  - uid: Global.VisualEffectBase
+    name: VisualEffectBase
+    href: VisualEffectBase.html
+  - name: .
+  - uid: Global.VisualEffectBase.EffectDelegate
+    name: EffectDelegate
+    href: VisualEffectBase.EffectDelegate.html
+  spec.vb:
+  - uid: Global.VisualEffectBase
+    name: VisualEffectBase
+    href: VisualEffectBase.html
+  - name: .
+  - uid: Global.VisualEffectBase.EffectDelegate
+    name: EffectDelegate
+    href: VisualEffectBase.EffectDelegate.html
 - uid: Global.VisualEffectBase.VisualEffectPlayStatus
   commentId: T:Global.VisualEffectBase.VisualEffectPlayStatus
   href: VisualEffectBase.html
@@ -721,6 +828,28 @@ references:
   name: SplitScreenManager
   nameWithType: SplitScreenManager
   fullName: SplitScreenManager
+- uid: Global.SplitScreenManager.ScreenDelegate
+  commentId: T:Global.SplitScreenManager.ScreenDelegate
+  href: SplitScreenManager.html
+  name: SplitScreenManager.ScreenDelegate
+  nameWithType: SplitScreenManager.ScreenDelegate
+  fullName: SplitScreenManager.ScreenDelegate
+  spec.csharp:
+  - uid: Global.SplitScreenManager
+    name: SplitScreenManager
+    href: SplitScreenManager.html
+  - name: .
+  - uid: Global.SplitScreenManager.ScreenDelegate
+    name: ScreenDelegate
+    href: SplitScreenManager.ScreenDelegate.html
+  spec.vb:
+  - uid: Global.SplitScreenManager
+    name: SplitScreenManager
+    href: SplitScreenManager.html
+  - name: .
+  - uid: Global.SplitScreenManager.ScreenDelegate
+    name: ScreenDelegate
+    href: SplitScreenManager.ScreenDelegate.html
 - uid: Global.SplitScreenManager.RectDefinition
   commentId: T:Global.SplitScreenManager.RectDefinition
   href: SplitScreenManager.html
@@ -777,12 +906,288 @@ references:
   name: AvailableModDefinition
   nameWithType: AvailableModDefinition
   fullName: AvailableModDefinition
+- uid: Global.EOSLobby
+  commentId: T:Global.EOSLobby
+  href: EOSLobby.html
+  name: EOSLobby
+  nameWithType: EOSLobby
+  fullName: EOSLobby
+- uid: Global.EOSLobby.CreateLobbySuccess
+  commentId: T:Global.EOSLobby.CreateLobbySuccess
+  href: EOSLobby.html
+  name: EOSLobby.CreateLobbySuccess
+  nameWithType: EOSLobby.CreateLobbySuccess
+  fullName: EOSLobby.CreateLobbySuccess
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.CreateLobbySuccess
+    name: CreateLobbySuccess
+    href: EOSLobby.CreateLobbySuccess.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.CreateLobbySuccess
+    name: CreateLobbySuccess
+    href: EOSLobby.CreateLobbySuccess.html
+- uid: Global.EOSLobby.CreateLobbyFailure
+  commentId: T:Global.EOSLobby.CreateLobbyFailure
+  href: EOSLobby.html
+  name: EOSLobby.CreateLobbyFailure
+  nameWithType: EOSLobby.CreateLobbyFailure
+  fullName: EOSLobby.CreateLobbyFailure
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.CreateLobbyFailure
+    name: CreateLobbyFailure
+    href: EOSLobby.CreateLobbyFailure.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.CreateLobbyFailure
+    name: CreateLobbyFailure
+    href: EOSLobby.CreateLobbyFailure.html
+- uid: Global.EOSLobby.JoinLobbySuccess
+  commentId: T:Global.EOSLobby.JoinLobbySuccess
+  href: EOSLobby.html
+  name: EOSLobby.JoinLobbySuccess
+  nameWithType: EOSLobby.JoinLobbySuccess
+  fullName: EOSLobby.JoinLobbySuccess
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.JoinLobbySuccess
+    name: JoinLobbySuccess
+    href: EOSLobby.JoinLobbySuccess.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.JoinLobbySuccess
+    name: JoinLobbySuccess
+    href: EOSLobby.JoinLobbySuccess.html
+- uid: Global.EOSLobby.JoinLobbyFailure
+  commentId: T:Global.EOSLobby.JoinLobbyFailure
+  href: EOSLobby.html
+  name: EOSLobby.JoinLobbyFailure
+  nameWithType: EOSLobby.JoinLobbyFailure
+  fullName: EOSLobby.JoinLobbyFailure
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.JoinLobbyFailure
+    name: JoinLobbyFailure
+    href: EOSLobby.JoinLobbyFailure.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.JoinLobbyFailure
+    name: JoinLobbyFailure
+    href: EOSLobby.JoinLobbyFailure.html
+- uid: Global.EOSLobby.FindLobbiesSuccess
+  commentId: T:Global.EOSLobby.FindLobbiesSuccess
+  href: EOSLobby.html
+  name: EOSLobby.FindLobbiesSuccess
+  nameWithType: EOSLobby.FindLobbiesSuccess
+  fullName: EOSLobby.FindLobbiesSuccess
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.FindLobbiesSuccess
+    name: FindLobbiesSuccess
+    href: EOSLobby.FindLobbiesSuccess.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.FindLobbiesSuccess
+    name: FindLobbiesSuccess
+    href: EOSLobby.FindLobbiesSuccess.html
+- uid: Global.EOSLobby.FindLobbiesFailure
+  commentId: T:Global.EOSLobby.FindLobbiesFailure
+  href: EOSLobby.html
+  name: EOSLobby.FindLobbiesFailure
+  nameWithType: EOSLobby.FindLobbiesFailure
+  fullName: EOSLobby.FindLobbiesFailure
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.FindLobbiesFailure
+    name: FindLobbiesFailure
+    href: EOSLobby.FindLobbiesFailure.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.FindLobbiesFailure
+    name: FindLobbiesFailure
+    href: EOSLobby.FindLobbiesFailure.html
+- uid: Global.EOSLobby.LeaveLobbySuccess
+  commentId: T:Global.EOSLobby.LeaveLobbySuccess
+  href: EOSLobby.html
+  name: EOSLobby.LeaveLobbySuccess
+  nameWithType: EOSLobby.LeaveLobbySuccess
+  fullName: EOSLobby.LeaveLobbySuccess
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.LeaveLobbySuccess
+    name: LeaveLobbySuccess
+    href: EOSLobby.LeaveLobbySuccess.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.LeaveLobbySuccess
+    name: LeaveLobbySuccess
+    href: EOSLobby.LeaveLobbySuccess.html
+- uid: Global.EOSLobby.LeaveLobbyFailure
+  commentId: T:Global.EOSLobby.LeaveLobbyFailure
+  href: EOSLobby.html
+  name: EOSLobby.LeaveLobbyFailure
+  nameWithType: EOSLobby.LeaveLobbyFailure
+  fullName: EOSLobby.LeaveLobbyFailure
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.LeaveLobbyFailure
+    name: LeaveLobbyFailure
+    href: EOSLobby.LeaveLobbyFailure.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.LeaveLobbyFailure
+    name: LeaveLobbyFailure
+    href: EOSLobby.LeaveLobbyFailure.html
+- uid: Global.EOSLobby.UpdateAttributeSuccess
+  commentId: T:Global.EOSLobby.UpdateAttributeSuccess
+  href: EOSLobby.html
+  name: EOSLobby.UpdateAttributeSuccess
+  nameWithType: EOSLobby.UpdateAttributeSuccess
+  fullName: EOSLobby.UpdateAttributeSuccess
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.UpdateAttributeSuccess
+    name: UpdateAttributeSuccess
+    href: EOSLobby.UpdateAttributeSuccess.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.UpdateAttributeSuccess
+    name: UpdateAttributeSuccess
+    href: EOSLobby.UpdateAttributeSuccess.html
+- uid: Global.EOSLobby.UpdateAttributeFailure
+  commentId: T:Global.EOSLobby.UpdateAttributeFailure
+  href: EOSLobby.html
+  name: EOSLobby.UpdateAttributeFailure
+  nameWithType: EOSLobby.UpdateAttributeFailure
+  fullName: EOSLobby.UpdateAttributeFailure
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.UpdateAttributeFailure
+    name: UpdateAttributeFailure
+    href: EOSLobby.UpdateAttributeFailure.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.UpdateAttributeFailure
+    name: UpdateAttributeFailure
+    href: EOSLobby.UpdateAttributeFailure.html
+- uid: Global.EOSLobby.LobbyMemberStatusUpdate
+  commentId: T:Global.EOSLobby.LobbyMemberStatusUpdate
+  href: EOSLobby.html
+  name: EOSLobby.LobbyMemberStatusUpdate
+  nameWithType: EOSLobby.LobbyMemberStatusUpdate
+  fullName: EOSLobby.LobbyMemberStatusUpdate
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.LobbyMemberStatusUpdate
+    name: LobbyMemberStatusUpdate
+    href: EOSLobby.LobbyMemberStatusUpdate.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.LobbyMemberStatusUpdate
+    name: LobbyMemberStatusUpdate
+    href: EOSLobby.LobbyMemberStatusUpdate.html
+- uid: Global.EOSLobby.LobbyAttributeUpdate
+  commentId: T:Global.EOSLobby.LobbyAttributeUpdate
+  href: EOSLobby.html
+  name: EOSLobby.LobbyAttributeUpdate
+  nameWithType: EOSLobby.LobbyAttributeUpdate
+  fullName: EOSLobby.LobbyAttributeUpdate
+  spec.csharp:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.LobbyAttributeUpdate
+    name: LobbyAttributeUpdate
+    href: EOSLobby.LobbyAttributeUpdate.html
+  spec.vb:
+  - uid: Global.EOSLobby
+    name: EOSLobby
+    href: EOSLobby.html
+  - name: .
+  - uid: Global.EOSLobby.LobbyAttributeUpdate
+    name: LobbyAttributeUpdate
+    href: EOSLobby.LobbyAttributeUpdate.html
 - uid: Global.ExButton
   commentId: T:Global.ExButton
   href: ExButton.html
   name: ExButton
   nameWithType: ExButton
   fullName: ExButton
+- uid: Global.MenuHandlerAndMenuBase
+  commentId: T:Global.MenuHandlerAndMenuBase
+  href: MenuHandlerAndMenuBase.html
+  name: MenuHandlerAndMenuBase
+  nameWithType: MenuHandlerAndMenuBase
+  fullName: MenuHandlerAndMenuBase
 - uid: Global.ModAssetSoftReference
   commentId: T:Global.ModAssetSoftReference
   href: ModAssetSoftReference.html
@@ -813,6 +1218,34 @@ references:
   name: OptionsGameplayScreen
   nameWithType: OptionsGameplayScreen
   fullName: OptionsGameplayScreen
+- uid: Global.FighterVisualPositioner
+  commentId: T:Global.FighterVisualPositioner
+  href: FighterVisualPositioner.html
+  name: FighterVisualPositioner
+  nameWithType: FighterVisualPositioner
+  fullName: FighterVisualPositioner
+- uid: Global.FighterVisualPositioner.TagBoneDefinition
+  commentId: T:Global.FighterVisualPositioner.TagBoneDefinition
+  href: FighterVisualPositioner.html
+  name: FighterVisualPositioner.TagBoneDefinition
+  nameWithType: FighterVisualPositioner.TagBoneDefinition
+  fullName: FighterVisualPositioner.TagBoneDefinition
+  spec.csharp:
+  - uid: Global.FighterVisualPositioner
+    name: FighterVisualPositioner
+    href: FighterVisualPositioner.html
+  - name: .
+  - uid: Global.FighterVisualPositioner.TagBoneDefinition
+    name: TagBoneDefinition
+    href: FighterVisualPositioner.TagBoneDefinition.html
+  spec.vb:
+  - uid: Global.FighterVisualPositioner
+    name: FighterVisualPositioner
+    href: FighterVisualPositioner.html
+  - name: .
+  - uid: Global.FighterVisualPositioner.TagBoneDefinition
+    name: TagBoneDefinition
+    href: FighterVisualPositioner.TagBoneDefinition.html
 - uid: Global.AnimationCurveExtensions
   commentId: T:Global.AnimationCurveExtensions
   href: AnimationCurveExtensions.html
@@ -831,12 +1264,78 @@ references:
   name: ModManager
   nameWithType: ModManager
   fullName: ModManager
-- uid: Global.ModLoaderType
-  commentId: T:Global.ModLoaderType
-  href: ModLoaderType.html
-  name: ModLoaderType
-  nameWithType: ModLoaderType
-  fullName: ModLoaderType
+- uid: Global.MenuCutscenePlayer
+  commentId: T:Global.MenuCutscenePlayer
+  href: MenuCutscenePlayer.html
+  name: MenuCutscenePlayer
+  nameWithType: MenuCutscenePlayer
+  fullName: MenuCutscenePlayer
+- uid: Global.MenuCutscenePlayer.CutscenePlayerDirectorDefinition
+  commentId: T:Global.MenuCutscenePlayer.CutscenePlayerDirectorDefinition
+  href: MenuCutscenePlayer.html
+  name: MenuCutscenePlayer.CutscenePlayerDirectorDefinition
+  nameWithType: MenuCutscenePlayer.CutscenePlayerDirectorDefinition
+  fullName: MenuCutscenePlayer.CutscenePlayerDirectorDefinition
+  spec.csharp:
+  - uid: Global.MenuCutscenePlayer
+    name: MenuCutscenePlayer
+    href: MenuCutscenePlayer.html
+  - name: .
+  - uid: Global.MenuCutscenePlayer.CutscenePlayerDirectorDefinition
+    name: CutscenePlayerDirectorDefinition
+    href: MenuCutscenePlayer.CutscenePlayerDirectorDefinition.html
+  spec.vb:
+  - uid: Global.MenuCutscenePlayer
+    name: MenuCutscenePlayer
+    href: MenuCutscenePlayer.html
+  - name: .
+  - uid: Global.MenuCutscenePlayer.CutscenePlayerDirectorDefinition
+    name: CutscenePlayerDirectorDefinition
+    href: MenuCutscenePlayer.CutscenePlayerDirectorDefinition.html
+- uid: Global.MenuCutscenePlayer.DelegateCutscenePlayer
+  commentId: T:Global.MenuCutscenePlayer.DelegateCutscenePlayer
+  href: MenuCutscenePlayer.html
+  name: MenuCutscenePlayer.DelegateCutscenePlayer
+  nameWithType: MenuCutscenePlayer.DelegateCutscenePlayer
+  fullName: MenuCutscenePlayer.DelegateCutscenePlayer
+  spec.csharp:
+  - uid: Global.MenuCutscenePlayer
+    name: MenuCutscenePlayer
+    href: MenuCutscenePlayer.html
+  - name: .
+  - uid: Global.MenuCutscenePlayer.DelegateCutscenePlayer
+    name: DelegateCutscenePlayer
+    href: MenuCutscenePlayer.DelegateCutscenePlayer.html
+  spec.vb:
+  - uid: Global.MenuCutscenePlayer
+    name: MenuCutscenePlayer
+    href: MenuCutscenePlayer.html
+  - name: .
+  - uid: Global.MenuCutscenePlayer.DelegateCutscenePlayer
+    name: DelegateCutscenePlayer
+    href: MenuCutscenePlayer.DelegateCutscenePlayer.html
+- uid: Global.MenuCutscenePlayer.DelegateCutscenePlayerIndex
+  commentId: T:Global.MenuCutscenePlayer.DelegateCutscenePlayerIndex
+  href: MenuCutscenePlayer.html
+  name: MenuCutscenePlayer.DelegateCutscenePlayerIndex
+  nameWithType: MenuCutscenePlayer.DelegateCutscenePlayerIndex
+  fullName: MenuCutscenePlayer.DelegateCutscenePlayerIndex
+  spec.csharp:
+  - uid: Global.MenuCutscenePlayer
+    name: MenuCutscenePlayer
+    href: MenuCutscenePlayer.html
+  - name: .
+  - uid: Global.MenuCutscenePlayer.DelegateCutscenePlayerIndex
+    name: DelegateCutscenePlayerIndex
+    href: MenuCutscenePlayer.DelegateCutscenePlayerIndex.html
+  spec.vb:
+  - uid: Global.MenuCutscenePlayer
+    name: MenuCutscenePlayer
+    href: MenuCutscenePlayer.html
+  - name: .
+  - uid: Global.MenuCutscenePlayer.DelegateCutscenePlayerIndex
+    name: DelegateCutscenePlayerIndex
+    href: MenuCutscenePlayer.DelegateCutscenePlayerIndex.html
 - uid: Global.GlobalSoundManager
   commentId: T:Global.GlobalSoundManager
   href: GlobalSoundManager.html
@@ -976,6 +1475,12 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Global.TweenSequenceContainer
+  commentId: T:Global.TweenSequenceContainer
+  href: TweenSequenceContainer.html
+  name: TweenSequenceContainer
+  nameWithType: TweenSequenceContainer
+  fullName: TweenSequenceContainer
 - uid: Global.InputRumbleManager
   commentId: T:Global.InputRumbleManager
   href: InputRumbleManager.html
@@ -988,18 +1493,42 @@ references:
   name: AddressablesGamemodeDefinition
   nameWithType: AddressablesGamemodeDefinition
   fullName: AddressablesGamemodeDefinition
-- uid: Global.GamemodeTeamConfig
-  commentId: T:Global.GamemodeTeamConfig
-  href: GamemodeTeamConfig.html
-  name: GamemodeTeamConfig
-  nameWithType: GamemodeTeamConfig
-  fullName: GamemodeTeamConfig
 - uid: Global.LocalModLoader
   commentId: T:Global.LocalModLoader
   href: LocalModLoader.html
   name: LocalModLoader
   nameWithType: LocalModLoader
   fullName: LocalModLoader
+- uid: Global.TweenSequencePartType
+  commentId: T:Global.TweenSequencePartType
+  href: TweenSequencePartType.html
+  name: TweenSequencePartType
+  nameWithType: TweenSequencePartType
+  fullName: TweenSequencePartType
+- uid: Global.TweenSequencePart
+  commentId: T:Global.TweenSequencePart
+  href: TweenSequencePart.html
+  name: TweenSequencePart
+  nameWithType: TweenSequencePart
+  fullName: TweenSequencePart
+- uid: Global.TweenSequencePart_UISizeDelta
+  commentId: T:Global.TweenSequencePart_UISizeDelta
+  href: TweenSequencePart_UISizeDelta.html
+  name: TweenSequencePart_UISizeDelta
+  nameWithType: TweenSequencePart_UISizeDelta
+  fullName: TweenSequencePart_UISizeDelta
+- uid: Global.TweenSequencePartScale
+  commentId: T:Global.TweenSequencePartScale
+  href: TweenSequencePartScale.html
+  name: TweenSequencePartScale
+  nameWithType: TweenSequencePartScale
+  fullName: TweenSequencePartScale
+- uid: Global.TweenSequencePartUIAnchoredPositionY
+  commentId: T:Global.TweenSequencePartUIAnchoredPositionY
+  href: TweenSequencePartUIAnchoredPositionY.html
+  name: TweenSequencePartUIAnchoredPositionY
+  nameWithType: TweenSequencePartUIAnchoredPositionY
+  fullName: TweenSequencePartUIAnchoredPositionY
 - uid: Global.BaseFighterDefinitionContainer
   commentId: T:Global.BaseFighterDefinitionContainer
   href: BaseFighterDefinitionContainer.html
@@ -1158,6 +1687,34 @@ references:
   name: ControlsProfileMappingScreen
   nameWithType: ControlsProfileMappingScreen
   fullName: ControlsProfileMappingScreen
+- uid: Global.CrossSceneCutsceneContainer
+  commentId: T:Global.CrossSceneCutsceneContainer
+  href: CrossSceneCutsceneContainer.html
+  name: CrossSceneCutsceneContainer
+  nameWithType: CrossSceneCutsceneContainer
+  fullName: CrossSceneCutsceneContainer
+- uid: Global.CrossSceneCutsceneContainer.CutsceneData
+  commentId: T:Global.CrossSceneCutsceneContainer.CutsceneData
+  href: CrossSceneCutsceneContainer.html
+  name: CrossSceneCutsceneContainer.CutsceneData
+  nameWithType: CrossSceneCutsceneContainer.CutsceneData
+  fullName: CrossSceneCutsceneContainer.CutsceneData
+  spec.csharp:
+  - uid: Global.CrossSceneCutsceneContainer
+    name: CrossSceneCutsceneContainer
+    href: CrossSceneCutsceneContainer.html
+  - name: .
+  - uid: Global.CrossSceneCutsceneContainer.CutsceneData
+    name: CutsceneData
+    href: CrossSceneCutsceneContainer.CutsceneData.html
+  spec.vb:
+  - uid: Global.CrossSceneCutsceneContainer
+    name: CrossSceneCutsceneContainer
+    href: CrossSceneCutsceneContainer.html
+  - name: .
+  - uid: Global.CrossSceneCutsceneContainer.CutsceneData
+    name: CutsceneData
+    href: CrossSceneCutsceneContainer.CutsceneData.html
 - uid: Global.AddressablesModLoader
   commentId: T:Global.AddressablesModLoader
   href: AddressablesModLoader.html
@@ -1188,6 +1745,12 @@ references:
   name: LocalLoadedModDefinition
   nameWithType: LocalLoadedModDefinition
   fullName: LocalLoadedModDefinition
+- uid: Global.ExButtonTweenAnimator
+  commentId: T:Global.ExButtonTweenAnimator
+  href: ExButtonTweenAnimator.html
+  name: ExButtonTweenAnimator
+  nameWithType: ExButtonTweenAnimator
+  fullName: ExButtonTweenAnimator
 - uid: Global.IControllerChangedCallback
   commentId: T:Global.IControllerChangedCallback
   href: IControllerChangedCallback.html
@@ -1270,28 +1833,6 @@ references:
   name: OptionsScreen
   nameWithType: OptionsScreen
   fullName: OptionsScreen
-- uid: Global.OptionsScreen.OptionsScreenMenus
-  commentId: T:Global.OptionsScreen.OptionsScreenMenus
-  href: OptionsScreen.html
-  name: OptionsScreen.OptionsScreenMenus
-  nameWithType: OptionsScreen.OptionsScreenMenus
-  fullName: OptionsScreen.OptionsScreenMenus
-  spec.csharp:
-  - uid: Global.OptionsScreen
-    name: OptionsScreen
-    href: OptionsScreen.html
-  - name: .
-  - uid: Global.OptionsScreen.OptionsScreenMenus
-    name: OptionsScreenMenus
-    href: OptionsScreen.OptionsScreenMenus.html
-  spec.vb:
-  - uid: Global.OptionsScreen
-    name: OptionsScreen
-    href: OptionsScreen.html
-  - name: .
-  - uid: Global.OptionsScreen.OptionsScreenMenus
-    name: OptionsScreenMenus
-    href: OptionsScreen.OptionsScreenMenus.html
 - uid: Global.BaseModItemAsset
   commentId: T:Global.BaseModItemAsset
   href: BaseModItemAsset.html
@@ -1304,12 +1845,6 @@ references:
   name: OptionsModdingScreen
   nameWithType: OptionsModdingScreen
   fullName: OptionsModdingScreen
-- uid: Global.MenuAndHandlerBase
-  commentId: T:Global.MenuAndHandlerBase
-  href: MenuAndHandlerBase.html
-  name: MenuAndHandlerBase
-  nameWithType: MenuAndHandlerBase
-  fullName: MenuAndHandlerBase
 - uid: Global.ParticleSystemVisualEffect
   commentId: T:Global.ParticleSystemVisualEffect
   href: ParticleSystemVisualEffect.html
@@ -1334,6 +1869,12 @@ references:
   name: EntityPrototypeBaker
   nameWithType: EntityPrototypeBaker
   fullName: EntityPrototypeBaker
+- uid: Global.ComboRecorderTool
+  commentId: T:Global.ComboRecorderTool
+  href: ComboRecorderTool.html
+  name: ComboRecorderTool
+  nameWithType: ComboRecorderTool
+  fullName: ComboRecorderTool
 - uid: Global.AnimationAssetBaker
   commentId: T:Global.AnimationAssetBaker
   href: AnimationAssetBaker.html
@@ -1346,6 +1887,12 @@ references:
   name: SubassetConverter
   nameWithType: SubassetConverter
   fullName: SubassetConverter
+- uid: Global.EditorDrawUtility
+  commentId: T:Global.EditorDrawUtility
+  href: EditorDrawUtility.html
+  name: EditorDrawUtility
+  nameWithType: EditorDrawUtility
+  fullName: EditorDrawUtility
 - uid: Global.FPConverter
   commentId: T:Global.FPConverter
   href: FPConverter.html

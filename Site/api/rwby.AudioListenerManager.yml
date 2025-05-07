@@ -9,7 +9,9 @@ items:
   - rwby.AudioListenerManager.AttemptSetRotation(UnityEngine.Quaternion,System.Int32)
   - rwby.AudioListenerManager.AttemptSetRotation(UnityEngine.Vector3,System.Int32)
   - rwby.AudioListenerManager.AudioListener
+  - rwby.AudioListenerManager.PlayUISound(UnityEngine.AudioClip,System.Single)
   - rwby.AudioListenerManager.lastSetPriority
+  - rwby.AudioListenerManager.uiSoundAudioSource
   langs:
   - csharp
   - vb
@@ -66,6 +68,33 @@ items:
       type: UnityEngine.Transform
     content.vb: Public ReadOnly Property AudioListener As Transform
   overload: rwby.AudioListenerManager.AudioListener*
+- uid: rwby.AudioListenerManager.uiSoundAudioSource
+  commentId: F:rwby.AudioListenerManager.uiSoundAudioSource
+  id: uiSoundAudioSource
+  parent: rwby.AudioListenerManager
+  langs:
+  - csharp
+  - vb
+  name: uiSoundAudioSource
+  nameWithType: AudioListenerManager.uiSoundAudioSource
+  fullName: rwby.AudioListenerManager.uiSoundAudioSource
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/AudioListenerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: uiSoundAudioSource
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/AudioListenerManager.cs
+    startLine: 8
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public AudioSource uiSoundAudioSource
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: Public uiSoundAudioSource As AudioSource
 - uid: rwby.AudioListenerManager.lastSetPriority
   commentId: F:rwby.AudioListenerManager.lastSetPriority
   id: lastSetPriority
@@ -84,7 +113,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lastSetPriority
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/AudioListenerManager.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - rwby
   namespace: rwby
@@ -111,7 +140,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AttemptSetPosition
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/AudioListenerManager.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - rwby
   namespace: rwby
@@ -145,7 +174,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AttemptSetRotation
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/AudioListenerManager.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - rwby
   namespace: rwby
@@ -179,7 +208,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AttemptSetRotation
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/AudioListenerManager.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - rwby
   namespace: rwby
@@ -195,6 +224,40 @@ items:
   nameWithType.vb: AudioListenerManager.AttemptSetRotation(Vector3, Integer)
   fullName.vb: rwby.AudioListenerManager.AttemptSetRotation(UnityEngine.Vector3, Integer)
   name.vb: AttemptSetRotation(Vector3, Integer)
+- uid: rwby.AudioListenerManager.PlayUISound(UnityEngine.AudioClip,System.Single)
+  commentId: M:rwby.AudioListenerManager.PlayUISound(UnityEngine.AudioClip,System.Single)
+  id: PlayUISound(UnityEngine.AudioClip,System.Single)
+  parent: rwby.AudioListenerManager
+  langs:
+  - csharp
+  - vb
+  name: PlayUISound(AudioClip, float)
+  nameWithType: AudioListenerManager.PlayUISound(AudioClip, float)
+  fullName: rwby.AudioListenerManager.PlayUISound(UnityEngine.AudioClip, float)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/System/AudioListenerManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PlayUISound
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/System/AudioListenerManager.cs
+    startLine: 38
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void PlayUISound(AudioClip clip, float volume = 1)
+    parameters:
+    - id: clip
+      type: UnityEngine.AudioClip
+    - id: volume
+      type: System.Single
+    content.vb: Public Sub PlayUISound(clip As AudioClip, volume As Single = 1)
+  overload: rwby.AudioListenerManager.PlayUISound*
+  nameWithType.vb: AudioListenerManager.PlayUISound(AudioClip, Single)
+  fullName.vb: rwby.AudioListenerManager.PlayUISound(UnityEngine.AudioClip, Single)
+  name.vb: PlayUISound(AudioClip, Single)
 references:
 - uid: rwby
   commentId: N:rwby
@@ -267,6 +330,13 @@ references:
   name: Transform
   nameWithType: Transform
   fullName: UnityEngine.Transform
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -304,3 +374,27 @@ references:
   name: Quaternion
   nameWithType: Quaternion
   fullName: UnityEngine.Quaternion
+- uid: rwby.AudioListenerManager.PlayUISound*
+  commentId: Overload:rwby.AudioListenerManager.PlayUISound
+  href: rwby.AudioListenerManager.html#rwby_AudioListenerManager_PlayUISound_UnityEngine_AudioClip_System_Single_
+  name: PlayUISound
+  nameWithType: AudioListenerManager.PlayUISound
+  fullName: rwby.AudioListenerManager.PlayUISound
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

@@ -26,10 +26,10 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public abstract class AIFunction<T> : AIFunctionBase<T>'
+    content: 'public abstract class AIFunction<T> : AIFunctionBase<T>, ILogSource'
     typeParameters:
     - id: T
-    content.vb: Public MustInherit Class AIFunction(Of T) Inherits AIFunctionBase(Of T)
+    content.vb: Public MustInherit Class AIFunction(Of T) Inherits AIFunctionBase(Of T) Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -37,6 +37,8 @@ items:
   - Quantum.AssetObject
   - Quantum.AIFunctionBase
   - Quantum.AIFunctionBase{{T}}
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -201,6 +203,13 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject

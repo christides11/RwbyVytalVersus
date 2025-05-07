@@ -31,11 +31,11 @@ items:
     content: >-
       [Serializable]
 
-      public class IntComparisonAIFunction : AIFunctionBase<bool>
+      public class IntComparisonAIFunction : AIFunctionBase<bool>, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class IntComparisonAIFunction Inherits AIFunctionBase(Of Boolean)
+      Public Class IntComparisonAIFunction Inherits AIFunctionBase(Of Boolean) Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -43,6 +43,8 @@ items:
   - Quantum.AssetObject
   - Quantum.AIFunctionBase
   - Quantum.AIFunctionBase{System.Boolean}
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -258,6 +260,13 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject

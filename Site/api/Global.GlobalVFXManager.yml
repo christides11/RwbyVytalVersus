@@ -8,6 +8,7 @@ items:
   - Global.GlobalVFXManager.Breakdown
   - Global.GlobalVFXManager.Initialize
   - Global.GlobalVFXManager.viewUpdater
+  - Global.GlobalVFXManager.visualEffectPools
   langs:
   - csharp
   - vb
@@ -22,7 +23,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GlobalVFXManager
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/GlobalVFXManager.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - rwby
   namespace: Global
@@ -59,7 +60,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: viewUpdater
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/GlobalVFXManager.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - rwby
   namespace: Global
@@ -68,6 +69,33 @@ items:
     return:
       type: Quantum.QuantumEntityViewUpdater
     content.vb: Public viewUpdater As QuantumEntityViewUpdater
+- uid: Global.GlobalVFXManager.visualEffectPools
+  commentId: F:Global.GlobalVFXManager.visualEffectPools
+  id: visualEffectPools
+  parent: Global.GlobalVFXManager
+  langs:
+  - csharp
+  - vb
+  name: visualEffectPools
+  nameWithType: GlobalVFXManager.visualEffectPools
+  fullName: GlobalVFXManager.visualEffectPools
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/GlobalVFXManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: visualEffectPools
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/GlobalVFXManager.cs
+    startLine: 15
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Dictionary<VisualEffectEntry, ObjectPool<VisualEffectBase>> visualEffectPools
+    return:
+      type: System.Collections.Generic.Dictionary{Quantum.VisualEffectEntry,UnityEngine.Pool.ObjectPool{VisualEffectBase}}
+    content.vb: Public visualEffectPools As Dictionary(Of VisualEffectEntry, ObjectPool(Of VisualEffectBase))
 - uid: Global.GlobalVFXManager.Initialize
   commentId: M:Global.GlobalVFXManager.Initialize
   id: Initialize
@@ -86,7 +114,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Initialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/GlobalVFXManager.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - rwby
   namespace: Global
@@ -112,7 +140,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Breakdown
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/GlobalVFXManager.cs
-    startLine: 25
+    startLine: 28
   assemblies:
   - rwby
   namespace: Global
@@ -152,6 +180,132 @@ references:
   name: Quantum
   nameWithType: Quantum
   fullName: Quantum
+- uid: System.Collections.Generic.Dictionary{Quantum.VisualEffectEntry,UnityEngine.Pool.ObjectPool{VisualEffectBase}}
+  commentId: T:System.Collections.Generic.Dictionary{Quantum.VisualEffectEntry,UnityEngine.Pool.ObjectPool{VisualEffectBase}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<VisualEffectEntry, ObjectPool<VisualEffectBase>>
+  nameWithType: Dictionary<VisualEffectEntry, ObjectPool<VisualEffectBase>>
+  fullName: System.Collections.Generic.Dictionary<Quantum.VisualEffectEntry, UnityEngine.Pool.ObjectPool<VisualEffectBase>>
+  nameWithType.vb: Dictionary(Of VisualEffectEntry, ObjectPool(Of VisualEffectBase))
+  fullName.vb: System.Collections.Generic.Dictionary(Of Quantum.VisualEffectEntry, UnityEngine.Pool.ObjectPool(Of VisualEffectBase))
+  name.vb: Dictionary(Of VisualEffectEntry, ObjectPool(Of VisualEffectBase))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Quantum.VisualEffectEntry
+    name: VisualEffectEntry
+    href: Quantum.VisualEffectEntry.html
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Pool.ObjectPool`1
+    name: ObjectPool
+    isExternal: true
+  - name: <
+  - uid: Global.VisualEffectBase
+    name: VisualEffectBase
+    href: VisualEffectBase.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.VisualEffectEntry
+    name: VisualEffectEntry
+    href: Quantum.VisualEffectEntry.html
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Pool.ObjectPool`1
+    name: ObjectPool
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.VisualEffectBase
+    name: VisualEffectBase
+    href: VisualEffectBase.html
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: Global.GlobalVFXManager.Initialize*
   commentId: Overload:Global.GlobalVFXManager.Initialize
   href: Global.GlobalVFXManager.html#GlobalVFXManager_Initialize

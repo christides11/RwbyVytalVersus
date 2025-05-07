@@ -31,19 +31,21 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: EnvQueryTestTrace
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 7
+    startLine: 6
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
   syntax:
-    content: 'public class EnvQueryTestTrace : EnvQueryTest'
-    content.vb: Public Class EnvQueryTestTrace Inherits EnvQueryTest
+    content: 'public class EnvQueryTestTrace : EnvQueryTest, ILogSource'
+    content.vb: Public Class EnvQueryTestTrace Inherits EnvQueryTest Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.EQS.EnvQueryTest
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.EQS.EnvQueryTest.testPurpose
   - Quantum.EQS.EnvQueryTest.IsActive
@@ -79,7 +81,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: layerMask
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 30
+    startLine: 29
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -106,7 +108,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: queryOptions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 31
+    startLine: 30
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -133,7 +135,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: traceType
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 32
+    startLine: 31
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -160,7 +162,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: traceShape
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 33
+    startLine: 32
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -187,7 +189,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitType
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 34
+    startLine: 33
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -214,7 +216,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: traceFrom
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 36
+    startLine: 35
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -241,7 +243,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: traceTo
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 37
+    startLine: 36
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -268,7 +270,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: fromHeightOffset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 39
+    startLine: 38
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -295,7 +297,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: toHeightOffset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 40
+    startLine: 39
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -322,7 +324,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RunTest
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 42
+    startLine: 41
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -362,7 +364,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: StartInjectionTest
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 94
+    startLine: 93
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -402,7 +404,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: FinalizeInjectionTest
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/qEQS/Tests/EnvQueryTestTrace.cs
-    startLine: 126
+    startLine: 125
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.EQS
@@ -486,6 +488,13 @@ references:
   name: EnvQueryTest
   nameWithType: EnvQueryTest
   fullName: Quantum.EQS.EnvQueryTest
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.EQS.EnvQueryTest.testPurpose
   commentId: F:Quantum.EQS.EnvQueryTest.testPurpose
   parent: Quantum.EQS.EnvQueryTest

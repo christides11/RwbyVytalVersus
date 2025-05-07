@@ -7,8 +7,12 @@ items:
   children:
   - rwby.TitleScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   - rwby.TitleScreen.TryClose(rwby.ui.MenuDirection,System.Boolean)
-  - rwby.TitleScreen.cutsceneTitleScreenTransition
+  - rwby.TitleScreen.clickSound
+  - rwby.TitleScreen.clickSoundVolume
   - rwby.TitleScreen.gameManager
+  - rwby.TitleScreen.localSceneSwitcher
+  - rwby.TitleScreen.tag_Cutscene_ExitTitleScreen
+  - rwby.TitleScreen.titleMainScreen
   langs:
   - csharp
   - vb
@@ -40,7 +44,8 @@ items:
   implements:
   - rwby.ui.IMenu
   inheritedMembers:
-  - rwby.ui.MenuBase.currentHandler
+  - rwby.ui.MenuBase.MenuHandler
+  - rwby.ui.MenuBase.history
 - uid: rwby.TitleScreen.gameManager
   commentId: F:rwby.TitleScreen.gameManager
   id: gameManager
@@ -78,33 +83,153 @@ items:
   - type: System.NonSerializedAttribute
     ctor: System.NonSerializedAttribute.#ctor
     arguments: []
-- uid: rwby.TitleScreen.cutsceneTitleScreenTransition
-  commentId: F:rwby.TitleScreen.cutsceneTitleScreenTransition
-  id: cutsceneTitleScreenTransition
+- uid: rwby.TitleScreen.localSceneSwitcher
+  commentId: F:rwby.TitleScreen.localSceneSwitcher
+  id: localSceneSwitcher
   parent: rwby.TitleScreen
   langs:
   - csharp
   - vb
-  name: cutsceneTitleScreenTransition
-  nameWithType: TitleScreen.cutsceneTitleScreenTransition
-  fullName: rwby.TitleScreen.cutsceneTitleScreenTransition
+  name: localSceneSwitcher
+  nameWithType: TitleScreen.localSceneSwitcher
+  fullName: rwby.TitleScreen.localSceneSwitcher
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: cutsceneTitleScreenTransition
+    id: localSceneSwitcher
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
     startLine: 13
   assemblies:
   - rwby
   namespace: rwby
   syntax:
-    content: public PlayableDirector cutsceneTitleScreenTransition
+    content: public MainMenuLocalSceneSwitcher localSceneSwitcher
     return:
-      type: UnityEngine.Playables.PlayableDirector
-    content.vb: Public cutsceneTitleScreenTransition As PlayableDirector
+      type: Global.MainMenuLocalSceneSwitcher
+    content.vb: Public localSceneSwitcher As MainMenuLocalSceneSwitcher
+- uid: rwby.TitleScreen.titleMainScreen
+  commentId: F:rwby.TitleScreen.titleMainScreen
+  id: titleMainScreen
+  parent: rwby.TitleScreen
+  langs:
+  - csharp
+  - vb
+  name: titleMainScreen
+  nameWithType: TitleScreen.titleMainScreen
+  fullName: rwby.TitleScreen.titleMainScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: titleMainScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public TitleMainScreen titleMainScreen
+    return:
+      type: rwby.TitleMainScreen
+    content.vb: Public titleMainScreen As TitleMainScreen
+- uid: rwby.TitleScreen.clickSound
+  commentId: F:rwby.TitleScreen.clickSound
+  id: clickSound
+  parent: rwby.TitleScreen
+  langs:
+  - csharp
+  - vb
+  name: clickSound
+  nameWithType: TitleScreen.clickSound
+  fullName: rwby.TitleScreen.clickSound
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: clickSound
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
+    startLine: 15
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public AudioClip clickSound
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public clickSound As AudioClip
+- uid: rwby.TitleScreen.clickSoundVolume
+  commentId: F:rwby.TitleScreen.clickSoundVolume
+  id: clickSoundVolume
+  parent: rwby.TitleScreen
+  langs:
+  - csharp
+  - vb
+  name: clickSoundVolume
+  nameWithType: TitleScreen.clickSoundVolume
+  fullName: rwby.TitleScreen.clickSoundVolume
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: clickSoundVolume
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
+    startLine: 16
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public float clickSoundVolume
+    return:
+      type: System.Single
+    content.vb: Public clickSoundVolume As Single
+- uid: rwby.TitleScreen.tag_Cutscene_ExitTitleScreen
+  commentId: F:rwby.TitleScreen.tag_Cutscene_ExitTitleScreen
+  id: tag_Cutscene_ExitTitleScreen
+  parent: rwby.TitleScreen
+  langs:
+  - csharp
+  - vb
+  name: tag_Cutscene_ExitTitleScreen
+  nameWithType: TitleScreen.tag_Cutscene_ExitTitleScreen
+  fullName: rwby.TitleScreen.tag_Cutscene_ExitTitleScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tag_Cutscene_ExitTitleScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
+    startLine: 22
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: >-
+      [Header("Tags")]
+
+      public Tag tag_Cutscene_ExitTitleScreen
+    return:
+      type: Quantum.Tag
+    content.vb: >-
+      <Header("Tags")>
+
+      Public tag_Cutscene_ExitTitleScreen As Tag
+  attributes:
+  - type: UnityEngine.HeaderAttribute
+    ctor: UnityEngine.HeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Tags
 - uid: rwby.TitleScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   commentId: M:rwby.TitleScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   id: Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
@@ -123,7 +248,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Open
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
-    startLine: 15
+    startLine: 24
   assemblies:
   - rwby
   namespace: rwby
@@ -156,7 +281,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryClose
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/TitleMenus/TitleScreen.cs
-    startLine: 72
+    startLine: 38
   assemblies:
   - rwby
   namespace: rwby
@@ -236,13 +361,20 @@ references:
   name: IMenu
   nameWithType: IMenu
   fullName: rwby.ui.IMenu
-- uid: rwby.ui.MenuBase.currentHandler
-  commentId: F:rwby.ui.MenuBase.currentHandler
+- uid: rwby.ui.MenuBase.MenuHandler
+  commentId: P:rwby.ui.MenuBase.MenuHandler
   parent: rwby.ui.MenuBase
-  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_currentHandler
-  name: currentHandler
-  nameWithType: MenuBase.currentHandler
-  fullName: rwby.ui.MenuBase.currentHandler
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_MenuHandler
+  name: MenuHandler
+  nameWithType: MenuBase.MenuHandler
+  fullName: rwby.ui.MenuBase.MenuHandler
+- uid: rwby.ui.MenuBase.history
+  commentId: F:rwby.ui.MenuBase.history
+  parent: rwby.ui.MenuBase
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_history
+  name: history
+  nameWithType: MenuBase.history
+  fullName: rwby.ui.MenuBase.history
 - uid: System
   commentId: N:System
   isExternal: true
@@ -285,35 +417,50 @@ references:
   name: GameManager
   nameWithType: GameManager
   fullName: rwby.GameManager
-- uid: UnityEngine.Playables.PlayableDirector
-  commentId: T:UnityEngine.Playables.PlayableDirector
-  parent: UnityEngine.Playables
+- uid: Global.MainMenuLocalSceneSwitcher
+  commentId: T:Global.MainMenuLocalSceneSwitcher
+  href: MainMenuLocalSceneSwitcher.html
+  name: MainMenuLocalSceneSwitcher
+  nameWithType: MainMenuLocalSceneSwitcher
+  fullName: MainMenuLocalSceneSwitcher
+- uid: rwby.TitleMainScreen
+  commentId: T:rwby.TitleMainScreen
+  parent: rwby
+  href: rwby.TitleMainScreen.html
+  name: TitleMainScreen
+  nameWithType: TitleMainScreen
+  fullName: rwby.TitleMainScreen
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
   isExternal: true
-  name: PlayableDirector
-  nameWithType: PlayableDirector
-  fullName: UnityEngine.Playables.PlayableDirector
-- uid: UnityEngine.Playables
-  commentId: N:UnityEngine.Playables
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
   isExternal: true
-  name: UnityEngine.Playables
-  nameWithType: UnityEngine.Playables
-  fullName: UnityEngine.Playables
-  spec.csharp:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.Playables
-    name: Playables
-    isExternal: true
-  spec.vb:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.Playables
-    name: Playables
-    isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Quantum.Tag
+  commentId: T:Quantum.Tag
+  parent: Quantum
+  href: Quantum.Tag.html
+  name: Tag
+  nameWithType: Tag
+  fullName: Quantum.Tag
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
 - uid: rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   commentId: M:rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)
   parent: rwby.ui.MenuBase

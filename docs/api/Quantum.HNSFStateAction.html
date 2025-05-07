@@ -101,7 +101,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HNSFStateAction : AssetObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class HNSFStateAction : AssetObject, ILogSource</code></pre>
   </div>
 
 
@@ -118,6 +118,12 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ILogSource</span></div>
+    </dd>
+  </dl>
 
   <dl class="typelist derived">
     <dt>Derived</dt>
@@ -138,11 +144,13 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
       <div><a class="xref" href="Quantum.ClearComboAction.html">ClearComboAction</a></div>
       <div><a class="xref" href="Quantum.ClearHitEntitiesAction.html">ClearHitEntitiesAction</a></div>
       <div><a class="xref" href="Quantum.ClearInputFromBufferAction.html">ClearInputFromBufferAction</a></div>
+      <div><a class="xref" href="Quantum.ClearTouchedEntitiesAfterHitAction.html">ClearTouchedEntitiesAfterHitAction</a></div>
       <div><a class="xref" href="Quantum.ClearTrackedStatesAction.html">ClearTrackedStatesAction</a></div>
       <div><a class="xref" href="Quantum.CreateOrUpdateCollisionbox.html">CreateOrUpdateCollisionbox</a></div>
       <div><a class="xref" href="Quantum.CreateOrUpdateHitbox.html">CreateOrUpdateHitbox</a></div>
       <div><a class="xref" href="Quantum.CreateOrUpdateHurtbox.html">CreateOrUpdateHurtbox</a></div>
       <div><a class="xref" href="Quantum.CreateOrUpdateThrowbox.html">CreateOrUpdateThrowbox</a></div>
+      <div><a class="xref" href="Quantum.CreateOrUpdateWarningbox.html">CreateOrUpdateWarningbox</a></div>
       <div><a class="xref" href="Quantum.DebugMessageAction.html">DebugMessageAction</a></div>
       <div><a class="xref" href="Quantum.DirectDamageAction.html">DirectDamageAction</a></div>
       <div><a class="xref" href="Quantum.DisableHardTargetingEntityAction.html">DisableHardTargetingEntityAction</a></div>
@@ -156,6 +164,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
       <div><a class="xref" href="Quantum.ModifyAuraAction.html">ModifyAuraAction</a></div>
       <div><a class="xref" href="Quantum.ModifyBlackboardBoolAction.html">ModifyBlackboardBoolAction</a></div>
       <div><a class="xref" href="Quantum.ModifyBlackboardFPAction.html">ModifyBlackboardFPAction</a></div>
+      <div><a class="xref" href="Quantum.ModifyBlackboardFPVector3Action.html">ModifyBlackboardFPVector3Action</a></div>
       <div><a class="xref" href="Quantum.ModifyBlackboardIntAction.html">ModifyBlackboardIntAction</a></div>
       <div><a class="xref" href="Quantum.ModifyForcesAction.html">ModifyForcesAction</a></div>
       <div><a class="xref" href="Quantum.ModifyGravityAction.html">ModifyGravityAction</a></div>
@@ -164,15 +173,17 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
       <div><a class="xref" href="Quantum.ModifyInertiaAction.html">ModifyInertiaAction</a></div>
       <div><a class="xref" href="Quantum.ModifyPassiveAuraGainDelayAction.html">ModifyPassiveAuraGainDelayAction</a></div>
       <div><a class="xref" href="Quantum.ModifyPhysicsForcesAction.html">ModifyPhysicsForcesAction</a></div>
-      <div><a class="xref" href="Quantum.ModifySpecialPageAction.html">ModifySpecialPageAction</a></div>
-      <div><a class="xref" href="Quantum.ModifySpecialPageSetAction.html">ModifySpecialPageSetAction</a></div>
       <div><a class="xref" href="Quantum.ModifyStateFrameAction.html">ModifyStateFrameAction</a></div>
       <div><a class="xref" href="Quantum.MoveTowardsPhysicsForceAction.html">MoveTowardsPhysicsForceAction</a></div>
       <div><a class="xref" href="Quantum.MultiplyForcesAction.html">MultiplyForcesAction</a></div>
+      <div><a class="xref" href="Quantum.PhysicsBodyClampGravity.html">PhysicsBodyClampGravity</a></div>
+      <div><a class="xref" href="Quantum.PhysicsBodyModifyGravityAction.html">PhysicsBodyModifyGravityAction</a></div>
+      <div><a class="xref" href="Quantum.PhysicsBodyMoveTowardsPositionAction.html">PhysicsBodyMoveTowardsPositionAction</a></div>
       <div><a class="xref" href="Quantum.PlayEffectOnChargeLevelAction.html">PlayEffectOnChargeLevelAction</a></div>
       <div><a class="xref" href="Quantum.PlayRandomSoundAction.html">PlayRandomSoundAction</a></div>
       <div><a class="xref" href="Quantum.PlaySoundAction.html">PlaySoundAction</a></div>
       <div><a class="xref" href="Quantum.PlayVisualEffectAction.html">PlayVisualEffectAction</a></div>
+      <div><a class="xref" href="Quantum.RefreshValidSpecialsAction.html">RefreshValidSpecialsAction</a></div>
       <div><a class="xref" href="Quantum.RegisterAttackToStringAction.html">RegisterAttackToStringAction</a></div>
       <div><a class="xref" href="Quantum.ReleaseThroweeAction.html">ReleaseThroweeAction</a></div>
       <div><a class="xref" href="Quantum.RequestStateChangeAction.html">RequestStateChangeAction</a></div>
@@ -259,7 +270,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_Label" data-uid="Quantum.HNSFStateAction.Label">
   Label
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -289,7 +300,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_actionDisabled" data-uid="Quantum.HNSFStateAction.actionDisabled">
   actionDisabled
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -319,7 +330,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_children" data-uid="Quantum.HNSFStateAction.children">
   children
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -349,7 +360,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_decision" data-uid="Quantum.HNSFStateAction.decision">
   decision
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -379,7 +390,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_frameRanges" data-uid="Quantum.HNSFStateAction.frameRanges">
   frameRanges
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -409,7 +420,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_parent" data-uid="Quantum.HNSFStateAction.parent">
   parent
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -439,7 +450,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_targetType" data-uid="Quantum.HNSFStateAction.targetType">
   targetType
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -474,7 +485,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_Copy_Quantum_HNSFStateAction_" data-uid="Quantum.HNSFStateAction.Copy(Quantum.HNSFStateAction)">
   Copy(HNSFStateAction)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -505,7 +516,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_Execute_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateAgentData__Photon_Deterministic_FP_Quantum_HNSFStateContext__System_Collections_Generic_List_System_Type__System_Collections_Generic_List_System_Type__" data-uid="Quantum.HNSFStateAction.Execute(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Photon.Deterministic.FP,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})">
   Execute(Frame, EntityRef, HNSFStateAgentData*, FP, ref HNSFStateContext, List&lt;Type&gt;, List&lt;Type&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -553,7 +564,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_Execute_Quantum_Frame_Quantum_EntityRef_Quantum_HNSFStateAgentData__Quantum_HNSFStateContext__System_Collections_Generic_List_System_Type__System_Collections_Generic_List_System_Type__" data-uid="Quantum.HNSFStateAction.Execute(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})">
   Execute(Frame, EntityRef, HNSFStateAgentData*, ref HNSFStateContext, List&lt;Type&gt;, List&lt;Type&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -599,7 +610,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_Execute_Quantum_FrameThreadSafe__Quantum_EntityRef_Quantum_HNSFStateAgentData__Quantum_HNSFStateContext__System_Collections_Generic_List_System_Type__System_Collections_Generic_List_System_Type__" data-uid="Quantum.HNSFStateAction.Execute(Quantum.FrameThreadSafe@,Quantum.EntityRef,Quantum.HNSFStateAgentData*,Quantum.HNSFStateContext@,System.Collections.Generic.List{System.Type},System.Collections.Generic.List{System.Type})">
   Execute(ref FrameThreadSafe, EntityRef, HNSFStateAgentData*, ref HNSFStateContext, List&lt;Type&gt;, List&lt;Type&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -645,7 +656,7 @@ Class HNSFStateAction  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Quantum_HNSFStateAction_ExecuteAction_Quantum_Frame_Quantum_EntityRef_Photon_Deterministic_FP_Quantum_HNSFStateContext__" data-uid="Quantum.HNSFStateAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)">
   ExecuteAction(Frame, EntityRef, FP, ref HNSFStateContext)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/HnsFramework/State/Action/HNSFStateAction.cs&amp;version=GBdev&amp;line=102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

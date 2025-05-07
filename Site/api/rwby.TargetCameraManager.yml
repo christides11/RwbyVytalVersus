@@ -13,6 +13,7 @@ items:
   - rwby.TargetCameraManager.animator
   - rwby.TargetCameraManager.dummyCam
   - rwby.TargetCameraManager.enemyVirtualTarget
+  - rwby.TargetCameraManager.entityViewUpdater
   - rwby.TargetCameraManager.followPlayer
   - rwby.TargetCameraManager.localEntityHolder
   - rwby.TargetCameraManager.lockOnCenterTarget
@@ -485,6 +486,33 @@ items:
       type: Global.InputPlayerManager
     content.vb: Public Sub UpdatePOVSources(inputPlayer As InputPlayerManager)
   overload: rwby.TargetCameraManager.UpdatePOVSources*
+- uid: rwby.TargetCameraManager.entityViewUpdater
+  commentId: F:rwby.TargetCameraManager.entityViewUpdater
+  id: entityViewUpdater
+  parent: rwby.TargetCameraManager
+  langs:
+  - csharp
+  - vb
+  name: entityViewUpdater
+  nameWithType: TargetCameraManager.entityViewUpdater
+  fullName: rwby.TargetCameraManager.entityViewUpdater
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Camera/TargetCameraManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: entityViewUpdater
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Camera/TargetCameraManager.cs
+    startLine: 58
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public QuantumEntityViewUpdater entityViewUpdater
+    return:
+      type: Quantum.QuantumEntityViewUpdater
+    content.vb: Public entityViewUpdater As QuantumEntityViewUpdater
 - uid: rwby.TargetCameraManager.OnUpdateView(Quantum.QuantumGame)
   commentId: M:rwby.TargetCameraManager.OnUpdateView(Quantum.QuantumGame)
   id: OnUpdateView(Quantum.QuantumGame)
@@ -503,7 +531,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnUpdateView
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Camera/TargetCameraManager.cs
-    startLine: 58
+    startLine: 64
   assemblies:
   - rwby
   namespace: rwby
@@ -539,7 +567,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UpdateTpCameraAim
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Camera/TargetCameraManager.cs
-    startLine: 124
+    startLine: 131
   assemblies:
   - rwby
   namespace: rwby
@@ -565,7 +593,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UpdateTargetCameraAim
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Camera/TargetCameraManager.cs
-    startLine: 133
+    startLine: 140
   assemblies:
   - rwby
   namespace: rwby
@@ -591,7 +619,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SetCameraOutputLayer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Camera/TargetCameraManager.cs
-    startLine: 142
+    startLine: 149
   assemblies:
   - rwby
   namespace: rwby
@@ -702,7 +730,7 @@ references:
   commentId: M:Quantum.QuantumCallbacks.OnGameInit(Quantum.QuantumGame,System.Boolean)
   parent: Quantum.QuantumCallbacks
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  href: Quantum.QuantumGame.html
   name: OnGameInit(QuantumGame, bool)
   nameWithType: QuantumCallbacks.OnGameInit(QuantumGame, bool)
   fullName: Quantum.QuantumCallbacks.OnGameInit(Quantum.QuantumGame, bool)
@@ -715,6 +743,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: ','
   - name: " "
   - uid: System.Boolean
@@ -728,6 +757,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: ','
   - name: " "
   - uid: System.Boolean
@@ -738,6 +768,7 @@ references:
 - uid: Quantum.QuantumCallbacks.OnGameStart(Quantum.QuantumGame)
   commentId: M:Quantum.QuantumCallbacks.OnGameStart(Quantum.QuantumGame)
   parent: Quantum.QuantumCallbacks
+  href: Quantum.QuantumGame.html
   name: OnGameStart(QuantumGame)
   nameWithType: QuantumCallbacks.OnGameStart(QuantumGame)
   fullName: Quantum.QuantumCallbacks.OnGameStart(Quantum.QuantumGame)
@@ -747,6 +778,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
   spec.vb:
   - uid: Quantum.QuantumCallbacks.OnGameStart(Quantum.QuantumGame)
@@ -754,12 +786,13 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
 - uid: Quantum.QuantumCallbacks.OnGameStart(Quantum.QuantumGame,System.Boolean)
   commentId: M:Quantum.QuantumCallbacks.OnGameStart(Quantum.QuantumGame,System.Boolean)
   parent: Quantum.QuantumCallbacks
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  href: Quantum.QuantumGame.html
   name: OnGameStart(QuantumGame, bool)
   nameWithType: QuantumCallbacks.OnGameStart(QuantumGame, bool)
   fullName: Quantum.QuantumCallbacks.OnGameStart(Quantum.QuantumGame, bool)
@@ -772,6 +805,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: ','
   - name: " "
   - uid: System.Boolean
@@ -785,6 +819,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: ','
   - name: " "
   - uid: System.Boolean
@@ -795,6 +830,7 @@ references:
 - uid: Quantum.QuantumCallbacks.OnGameResync(Quantum.QuantumGame)
   commentId: M:Quantum.QuantumCallbacks.OnGameResync(Quantum.QuantumGame)
   parent: Quantum.QuantumCallbacks
+  href: Quantum.QuantumGame.html
   name: OnGameResync(QuantumGame)
   nameWithType: QuantumCallbacks.OnGameResync(QuantumGame)
   fullName: Quantum.QuantumCallbacks.OnGameResync(Quantum.QuantumGame)
@@ -804,6 +840,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
   spec.vb:
   - uid: Quantum.QuantumCallbacks.OnGameResync(Quantum.QuantumGame)
@@ -811,10 +848,12 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
 - uid: Quantum.QuantumCallbacks.OnGameDestroyed(Quantum.QuantumGame)
   commentId: M:Quantum.QuantumCallbacks.OnGameDestroyed(Quantum.QuantumGame)
   parent: Quantum.QuantumCallbacks
+  href: Quantum.QuantumGame.html
   name: OnGameDestroyed(QuantumGame)
   nameWithType: QuantumCallbacks.OnGameDestroyed(QuantumGame)
   fullName: Quantum.QuantumCallbacks.OnGameDestroyed(Quantum.QuantumGame)
@@ -824,6 +863,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
   spec.vb:
   - uid: Quantum.QuantumCallbacks.OnGameDestroyed(Quantum.QuantumGame)
@@ -831,10 +871,12 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
 - uid: Quantum.QuantumCallbacks.OnSimulateFinished(Quantum.QuantumGame,Quantum.Frame)
   commentId: M:Quantum.QuantumCallbacks.OnSimulateFinished(Quantum.QuantumGame,Quantum.Frame)
   parent: Quantum.QuantumCallbacks
+  href: Quantum.QuantumGame.html
   name: OnSimulateFinished(QuantumGame, Frame)
   nameWithType: QuantumCallbacks.OnSimulateFinished(QuantumGame, Frame)
   fullName: Quantum.QuantumCallbacks.OnSimulateFinished(Quantum.QuantumGame, Quantum.Frame)
@@ -844,10 +886,12 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: ','
   - name: " "
   - uid: Quantum.Frame
     name: Frame
+    href: Quantum.Frame.html
   - name: )
   spec.vb:
   - uid: Quantum.QuantumCallbacks.OnSimulateFinished(Quantum.QuantumGame,Quantum.Frame)
@@ -855,14 +899,17 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: ','
   - name: " "
   - uid: Quantum.Frame
     name: Frame
+    href: Quantum.Frame.html
   - name: )
 - uid: Quantum.QuantumCallbacks.OnUnitySceneLoadBegin(Quantum.QuantumGame)
   commentId: M:Quantum.QuantumCallbacks.OnUnitySceneLoadBegin(Quantum.QuantumGame)
   parent: Quantum.QuantumCallbacks
+  href: Quantum.QuantumGame.html
   name: OnUnitySceneLoadBegin(QuantumGame)
   nameWithType: QuantumCallbacks.OnUnitySceneLoadBegin(QuantumGame)
   fullName: Quantum.QuantumCallbacks.OnUnitySceneLoadBegin(Quantum.QuantumGame)
@@ -872,6 +919,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
   spec.vb:
   - uid: Quantum.QuantumCallbacks.OnUnitySceneLoadBegin(Quantum.QuantumGame)
@@ -879,10 +927,12 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
 - uid: Quantum.QuantumCallbacks.OnUnitySceneLoadDone(Quantum.QuantumGame)
   commentId: M:Quantum.QuantumCallbacks.OnUnitySceneLoadDone(Quantum.QuantumGame)
   parent: Quantum.QuantumCallbacks
+  href: Quantum.QuantumGame.html
   name: OnUnitySceneLoadDone(QuantumGame)
   nameWithType: QuantumCallbacks.OnUnitySceneLoadDone(QuantumGame)
   fullName: Quantum.QuantumCallbacks.OnUnitySceneLoadDone(Quantum.QuantumGame)
@@ -892,6 +942,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
   spec.vb:
   - uid: Quantum.QuantumCallbacks.OnUnitySceneLoadDone(Quantum.QuantumGame)
@@ -899,10 +950,12 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
 - uid: Quantum.QuantumCallbacks.OnUnitySceneUnloadBegin(Quantum.QuantumGame)
   commentId: M:Quantum.QuantumCallbacks.OnUnitySceneUnloadBegin(Quantum.QuantumGame)
   parent: Quantum.QuantumCallbacks
+  href: Quantum.QuantumGame.html
   name: OnUnitySceneUnloadBegin(QuantumGame)
   nameWithType: QuantumCallbacks.OnUnitySceneUnloadBegin(QuantumGame)
   fullName: Quantum.QuantumCallbacks.OnUnitySceneUnloadBegin(Quantum.QuantumGame)
@@ -912,6 +965,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
   spec.vb:
   - uid: Quantum.QuantumCallbacks.OnUnitySceneUnloadBegin(Quantum.QuantumGame)
@@ -919,10 +973,12 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
 - uid: Quantum.QuantumCallbacks.OnUnitySceneUnloadDone(Quantum.QuantumGame)
   commentId: M:Quantum.QuantumCallbacks.OnUnitySceneUnloadDone(Quantum.QuantumGame)
   parent: Quantum.QuantumCallbacks
+  href: Quantum.QuantumGame.html
   name: OnUnitySceneUnloadDone(QuantumGame)
   nameWithType: QuantumCallbacks.OnUnitySceneUnloadDone(QuantumGame)
   fullName: Quantum.QuantumCallbacks.OnUnitySceneUnloadDone(Quantum.QuantumGame)
@@ -932,6 +988,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
   spec.vb:
   - uid: Quantum.QuantumCallbacks.OnUnitySceneUnloadDone(Quantum.QuantumGame)
@@ -939,11 +996,13 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
 - uid: Quantum.QuantumCallbacks.OnChecksumError(Quantum.QuantumGame,Photon.Deterministic.DeterministicTickChecksumError,Quantum.Frame[])
   commentId: M:Quantum.QuantumCallbacks.OnChecksumError(Quantum.QuantumGame,Photon.Deterministic.DeterministicTickChecksumError,Quantum.Frame[])
   parent: Quantum.QuantumCallbacks
   isExternal: true
+  href: Quantum.QuantumGame.html
   name: OnChecksumError(QuantumGame, DeterministicTickChecksumError, Frame[])
   nameWithType: QuantumCallbacks.OnChecksumError(QuantumGame, DeterministicTickChecksumError, Frame[])
   fullName: Quantum.QuantumCallbacks.OnChecksumError(Quantum.QuantumGame, Photon.Deterministic.DeterministicTickChecksumError, Quantum.Frame[])
@@ -956,6 +1015,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: ','
   - name: " "
   - uid: Photon.Deterministic.DeterministicTickChecksumError
@@ -965,6 +1025,7 @@ references:
   - name: " "
   - uid: Quantum.Frame
     name: Frame
+    href: Quantum.Frame.html
   - name: '['
   - name: ']'
   - name: )
@@ -974,6 +1035,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: ','
   - name: " "
   - uid: Photon.Deterministic.DeterministicTickChecksumError
@@ -983,6 +1045,7 @@ references:
   - name: " "
   - uid: Quantum.Frame
     name: Frame
+    href: Quantum.Frame.html
   - name: (
   - name: )
   - name: )
@@ -1130,6 +1193,12 @@ references:
   name: InputPlayerManager
   nameWithType: InputPlayerManager
   fullName: InputPlayerManager
+- uid: Quantum.QuantumEntityViewUpdater
+  commentId: T:Quantum.QuantumEntityViewUpdater
+  parent: Quantum
+  name: QuantumEntityViewUpdater
+  nameWithType: QuantumEntityViewUpdater
+  fullName: Quantum.QuantumEntityViewUpdater
 - uid: Quantum.CallbackUpdateView
   commentId: T:Quantum.CallbackUpdateView
   parent: Quantum
@@ -1155,6 +1224,7 @@ references:
 - uid: Quantum.QuantumCallbacks.OnUpdateView(Quantum.QuantumGame)
   commentId: M:Quantum.QuantumCallbacks.OnUpdateView(Quantum.QuantumGame)
   parent: Quantum.QuantumCallbacks
+  href: Quantum.QuantumGame.html
   name: OnUpdateView(QuantumGame)
   nameWithType: QuantumCallbacks.OnUpdateView(QuantumGame)
   fullName: Quantum.QuantumCallbacks.OnUpdateView(Quantum.QuantumGame)
@@ -1164,6 +1234,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
   spec.vb:
   - uid: Quantum.QuantumCallbacks.OnUpdateView(Quantum.QuantumGame)
@@ -1171,6 +1242,7 @@ references:
   - name: (
   - uid: Quantum.QuantumGame
     name: QuantumGame
+    href: Quantum.QuantumGame.html
   - name: )
 - uid: rwby.TargetCameraManager.OnUpdateView*
   commentId: Overload:rwby.TargetCameraManager.OnUpdateView

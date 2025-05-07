@@ -8,6 +8,7 @@ items:
   - Quantum.CallbackDispatcher.#ctor
   - Quantum.CallbackDispatcher.#ctor(System.Collections.Generic.Dictionary{System.Type,System.Int32})
   - Quantum.CallbackDispatcher.GetBuiltInTypes
+  - Quantum.CallbackDispatcher.HasAnyListeners(Quantum.CallbackBase)
   - Quantum.CallbackDispatcher.Publish(Quantum.CallbackBase)
   langs:
   - csharp
@@ -23,7 +24,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CallbackDispatcher
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2521
+    startLine: 2526
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -54,6 +55,8 @@ items:
   - Quantum.DispatcherBase.GetListenerStatus(System.Object,System.UInt32)
   - Quantum.DispatcherBase.InvokeMeta``1({TDispatchable})
   - Quantum.DispatcherBase.InvokeMeta(System.Int32,Quantum.IDispatchable)
+  - Quantum.DispatcherBase.HasAnyActiveListeners(System.Int32,Quantum.IDispatchable)
+  - Quantum.DispatcherBase.IsListenerSubscribed``1(System.Object)
   - Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}},Quantum.DispatchableFilter,System.UInt32)
   - Quantum.DispatcherBase.SubscribeManualInternal``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}},Quantum.DispatchableFilter,System.Boolean)
   - Quantum.DispatcherBase.UnsubscribeInternal``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}})
@@ -77,7 +80,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetBuiltInTypes
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2526
+    startLine: 2531
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -108,7 +111,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2552
+    startLine: 2558
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -139,7 +142,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2557
+    startLine: 2563
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -174,7 +177,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Publish
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 2563
+    startLine: 2569
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -193,6 +196,41 @@ items:
   overload: Quantum.CallbackDispatcher.Publish*
   implements:
   - Quantum.ICallbackDispatcher.Publish(Quantum.CallbackBase)
+- uid: Quantum.CallbackDispatcher.HasAnyListeners(Quantum.CallbackBase)
+  commentId: M:Quantum.CallbackDispatcher.HasAnyListeners(Quantum.CallbackBase)
+  id: HasAnyListeners(Quantum.CallbackBase)
+  parent: Quantum.CallbackDispatcher
+  langs:
+  - csharp
+  - vb
+  name: HasAnyListeners(CallbackBase)
+  nameWithType: CallbackDispatcher.HasAnyListeners(CallbackBase)
+  fullName: Quantum.CallbackDispatcher.HasAnyListeners(Quantum.CallbackBase)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HasAnyListeners
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
+    startLine: 2574
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  summary: Returns true if the callback has any listeners.
+  example: []
+  syntax:
+    content: public bool HasAnyListeners(CallbackBase e)
+    parameters:
+    - id: e
+      type: Quantum.CallbackBase
+    return:
+      type: System.Boolean
+    content.vb: Public Function HasAnyListeners(e As CallbackBase) As Boolean
+  overload: Quantum.CallbackDispatcher.HasAnyListeners*
+  implements:
+  - Quantum.ICallbackDispatcher.HasAnyListeners(Quantum.CallbackBase)
 references:
 - uid: Quantum
   commentId: N:Quantum
@@ -784,6 +822,86 @@ references:
   - uid: Quantum.IDispatchable
     name: IDispatchable
     isExternal: true
+  - name: )
+- uid: Quantum.DispatcherBase.HasAnyActiveListeners(System.Int32,Quantum.IDispatchable)
+  commentId: M:Quantum.DispatcherBase.HasAnyActiveListeners(System.Int32,Quantum.IDispatchable)
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: HasAnyActiveListeners(int, IDispatchable)
+  nameWithType: DispatcherBase.HasAnyActiveListeners(int, IDispatchable)
+  fullName: Quantum.DispatcherBase.HasAnyActiveListeners(int, Quantum.IDispatchable)
+  nameWithType.vb: DispatcherBase.HasAnyActiveListeners(Integer, IDispatchable)
+  fullName.vb: Quantum.DispatcherBase.HasAnyActiveListeners(Integer, Quantum.IDispatchable)
+  name.vb: HasAnyActiveListeners(Integer, IDispatchable)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.HasAnyActiveListeners(System.Int32,Quantum.IDispatchable)
+    name: HasAnyActiveListeners
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.IDispatchable
+    name: IDispatchable
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.HasAnyActiveListeners(System.Int32,Quantum.IDispatchable)
+    name: HasAnyActiveListeners
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.IDispatchable
+    name: IDispatchable
+    isExternal: true
+  - name: )
+- uid: Quantum.DispatcherBase.IsListenerSubscribed``1(System.Object)
+  commentId: M:Quantum.DispatcherBase.IsListenerSubscribed``1(System.Object)
+  parent: Quantum.DispatcherBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: IsListenerSubscribed<TDispatchable>(object)
+  nameWithType: DispatcherBase.IsListenerSubscribed<TDispatchable>(object)
+  fullName: Quantum.DispatcherBase.IsListenerSubscribed<TDispatchable>(object)
+  nameWithType.vb: DispatcherBase.IsListenerSubscribed(Of TDispatchable)(Object)
+  fullName.vb: Quantum.DispatcherBase.IsListenerSubscribed(Of TDispatchable)(Object)
+  name.vb: IsListenerSubscribed(Of TDispatchable)(Object)
+  spec.csharp:
+  - uid: Quantum.DispatcherBase.IsListenerSubscribed``1(System.Object)
+    name: IsListenerSubscribed
+    isExternal: true
+  - name: <
+  - name: TDispatchable
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Quantum.DispatcherBase.IsListenerSubscribed``1(System.Object)
+    name: IsListenerSubscribed
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDispatchable
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
 - uid: Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{{TDispatchable}},Quantum.DispatchableFilter,System.UInt32)
   commentId: M:Quantum.DispatcherBase.SubscribeInternal``1(System.Object,Quantum.DispatchableHandler{``0},Quantum.DispatchableFilter,System.UInt32)
@@ -1741,3 +1859,34 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: Quantum.CallbackDispatcher.HasAnyListeners*
+  commentId: Overload:Quantum.CallbackDispatcher.HasAnyListeners
+  href: Quantum.CallbackDispatcher.html#Quantum_CallbackDispatcher_HasAnyListeners_Quantum_CallbackBase_
+  name: HasAnyListeners
+  nameWithType: CallbackDispatcher.HasAnyListeners
+  fullName: Quantum.CallbackDispatcher.HasAnyListeners
+- uid: Quantum.ICallbackDispatcher.HasAnyListeners(Quantum.CallbackBase)
+  commentId: M:Quantum.ICallbackDispatcher.HasAnyListeners(Quantum.CallbackBase)
+  parent: Quantum.ICallbackDispatcher
+  isExternal: true
+  name: HasAnyListeners(CallbackBase)
+  nameWithType: ICallbackDispatcher.HasAnyListeners(CallbackBase)
+  fullName: Quantum.ICallbackDispatcher.HasAnyListeners(Quantum.CallbackBase)
+  spec.csharp:
+  - uid: Quantum.ICallbackDispatcher.HasAnyListeners(Quantum.CallbackBase)
+    name: HasAnyListeners
+    isExternal: true
+  - name: (
+  - uid: Quantum.CallbackBase
+    name: CallbackBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.ICallbackDispatcher.HasAnyListeners(Quantum.CallbackBase)
+    name: HasAnyListeners
+    isExternal: true
+  - name: (
+  - uid: Quantum.CallbackBase
+    name: CallbackBase
+    isExternal: true
+  - name: )

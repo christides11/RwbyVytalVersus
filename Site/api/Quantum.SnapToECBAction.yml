@@ -30,19 +30,21 @@ items:
 
       [AddTypeMenu("Fighter/ECB/Snap to ECB", 0)]
 
-      public class SnapToECBAction : HNSFStateAction
+      public class SnapToECBAction : HNSFStateAction, ILogSource
     content.vb: >-
       <Serializable>
 
       <AddTypeMenu("Fighter/ECB/Snap to ECB", 0)>
 
-      Public Class SnapToECBAction Inherits HNSFStateAction
+      Public Class SnapToECBAction Inherits HNSFStateAction Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
   - Quantum.HNSFStateAction
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateAction.Label
   - Quantum.HNSFStateAction.parent
@@ -164,6 +166,13 @@ references:
   name: HNSFStateAction
   nameWithType: HNSFStateAction
   fullName: Quantum.HNSFStateAction
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateAction.Label
   commentId: F:Quantum.HNSFStateAction.Label
   parent: Quantum.HNSFStateAction

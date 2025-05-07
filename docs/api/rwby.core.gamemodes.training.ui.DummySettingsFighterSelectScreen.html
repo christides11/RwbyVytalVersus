@@ -89,7 +89,7 @@
 
 
   <h1 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen" class="text-break">
-Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=12"><i class="bi bi-code-slash"></i></a>
+Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -132,7 +132,10 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="rwby.ui.MenuBase.html#rwby_ui_MenuBase_currentHandler">MenuBase.currentHandler</a>
+      <a class="xref" href="rwby.ui.MenuBase.html#rwby_ui_MenuBase_MenuHandler">MenuBase.MenuHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="rwby.ui.MenuBase.html#rwby_ui_MenuBase_history">MenuBase.history</a>
     </div>
   </dd></dl>
 
@@ -146,39 +149,9 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
 
 
 
-  <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_dummySettingsHandler" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.dummySettingsHandler">
-  dummySettingsHandler
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=24"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PauseMenuDummySettingsHandler dummySettingsHandler</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="rwby.core.gamemodes.training.ui.PauseMenuDummySettingsHandler.html">PauseMenuDummySettingsHandler</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
   <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_fighterItemPrefab" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.fighterItemPrefab">
   fighterItemPrefab
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -208,7 +181,7 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
 
   <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_fightersPerPage" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.fightersPerPage">
   fightersPerPage
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -236,9 +209,40 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
 
 
 
+  <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_handlerDummySettingsMenu" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.handlerDummySettingsMenu">
+  handlerDummySettingsMenu
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[FormerlySerializedAs(&quot;dummySettingsHandler&quot;)]
+public PauseMenuHandlerDummySettingsMenu handlerDummySettingsMenu</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="rwby.core.gamemodes.training.ui.PauseMenuHandlerDummySettingsMenu.html">PauseMenuHandlerDummySettingsMenu</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_onFighterSelected" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.onFighterSelected">
   onFighterSelected
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -268,7 +272,7 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
 
   <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_page" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.page">
   page
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -298,7 +302,7 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
 
   <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_pauseMenuHandler" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.pauseMenuHandler">
   pauseMenuHandler
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -328,7 +332,7 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
 
   <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_scrollRect" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.scrollRect">
   scrollRect
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -358,7 +362,7 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
 
   <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_selectingDummyIndex" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.selectingDummyIndex">
   selectingDummyIndex
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -393,7 +397,7 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
 
   <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_FillCharacters" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.FillCharacters">
   FillCharacters()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -419,7 +423,7 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
 
   <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_Open_rwby_ui_MenuDirection_rwby_ui_IMenuHandler_" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)">
   Open(MenuDirection, IMenuHandler)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -452,7 +456,7 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
 
   <h3 id="rwby_core_gamemodes_training_ui_DummySettingsFighterSelectScreen_TryClose_rwby_ui_MenuDirection_System_Boolean_" data-uid="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.TryClose(rwby.ui.MenuDirection,System.Boolean)">
   TryClose(MenuDirection, bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -490,7 +494,7 @@ Class DummySettingsFighterSelectScreen  <a class="header-action link-secondary" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=12" class="edit-link">Edit this page</a>
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/2.Content/Gamemodes/Training/UI/DummySettingsFighterSelectScreen.cs&amp;version=GBdev&amp;line=13" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -102,7 +102,7 @@ Class StopVisualEffectAction  <a class="header-action link-secondary" title="Vie
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class StopVisualEffectAction : HNSFStateAction</code></pre>
+public class StopVisualEffectAction : HNSFStateAction, ILogSource</code></pre>
   </div>
 
 
@@ -120,6 +120,12 @@ public class StopVisualEffectAction : HNSFStateAction</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ILogSource</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -202,7 +208,7 @@ public class StopVisualEffectAction : HNSFStateAction</code></pre>
 
   <h3 id="Quantum_StopVisualEffectAction_destroyAllParticles" data-uid="Quantum.StopVisualEffectAction.destroyAllParticles">
   destroyAllParticles
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/VFX/StopVisualEffectAction.cs&amp;version=GBdev&amp;line=9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/VFX/StopVisualEffectAction.cs&amp;version=GBdev&amp;line=11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -230,9 +236,39 @@ public class StopVisualEffectAction : HNSFStateAction</code></pre>
 
 
 
+  <h3 id="Quantum_StopVisualEffectAction_effectToStop" data-uid="Quantum.StopVisualEffectAction.effectToStop">
+  effectToStop
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/VFX/StopVisualEffectAction.cs&amp;version=GBdev&amp;line=9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetRef&lt;VisualEffectEntry&gt; effectToStop</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AssetRef</span>&lt;<a class="xref" href="Quantum.VisualEffectEntry.html">VisualEffectEntry</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Quantum_StopVisualEffectAction_offset" data-uid="Quantum.StopVisualEffectAction.offset">
   offset
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/VFX/StopVisualEffectAction.cs&amp;version=GBdev&amp;line=8"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/VFX/StopVisualEffectAction.cs&amp;version=GBdev&amp;line=10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -259,6 +295,66 @@ public class StopVisualEffectAction : HNSFStateAction</code></pre>
 
 
 
+
+  <h3 id="Quantum_StopVisualEffectAction_stopAllInstances" data-uid="Quantum.StopVisualEffectAction.stopAllInstances">
+  stopAllInstances
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/VFX/StopVisualEffectAction.cs&amp;version=GBdev&amp;line=8"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool stopAllInstances</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_StopVisualEffectAction_unparent" data-uid="Quantum.StopVisualEffectAction.unparent">
+  unparent
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/VFX/StopVisualEffectAction.cs&amp;version=GBdev&amp;line=12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool unparent</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -267,7 +363,7 @@ public class StopVisualEffectAction : HNSFStateAction</code></pre>
 
   <h3 id="Quantum_StopVisualEffectAction_ExecuteAction_Quantum_Frame_Quantum_EntityRef_Photon_Deterministic_FP_Quantum_HNSFStateContext__" data-uid="Quantum.StopVisualEffectAction.ExecuteAction(Quantum.Frame,Quantum.EntityRef,Photon.Deterministic.FP,Quantum.HNSFStateContext@)">
   ExecuteAction(Frame, EntityRef, FP, ref HNSFStateContext)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/VFX/StopVisualEffectAction.cs&amp;version=GBdev&amp;line=11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Chara/SActions/Character/VFX/StopVisualEffectAction.cs&amp;version=GBdev&amp;line=14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

@@ -89,7 +89,7 @@
 
 
   <h1 id="rwby_sessionhandlers_lobby_LobbySessionNetworkMessageHandler_ClientCharacterAssetEvent" data-uid="rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent" class="text-break">
-Delegate LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs&amp;version=GBdev&amp;line=15"><i class="bi bi-code-slash"></i></a>
+Delegate LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs&amp;version=GBdev&amp;line=13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,14 +101,16 @@ Delegate LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent  <a class="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate void LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent(ClientManager client, ModAssetSoftReference characterRef, bool result)</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate void LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent(ClientManager client, int localPlayerId, ModAssetSoftReference[] characterReferences, bool result)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>client</code> <a class="xref" href="rwby.ClientManager.html">ClientManager</a></dt>
     <dd></dd>
-    <dt><code>characterRef</code> <a class="xref" href="Global.ModAssetSoftReference.html">ModAssetSoftReference</a></dt>
+    <dt><code>localPlayerId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>characterReferences</code> <a class="xref" href="ModAssetSoftReference.html">ModAssetSoftReference</a>[]</dt>
     <dd></dd>
     <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
@@ -129,7 +131,7 @@ Delegate LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent  <a class="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs&amp;version=GBdev&amp;line=15" class="edit-link">Edit this page</a>
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Networking/SessionHandler/NetworkLobbySession/NetworkMessages/LobbySessionNetworkMessageHandler.cs&amp;version=GBdev&amp;line=13" class="edit-link">Edit this page</a>
         </div>
 
 

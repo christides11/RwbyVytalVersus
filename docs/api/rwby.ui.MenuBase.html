@@ -89,7 +89,7 @@
 
 
   <h1 id="rwby_ui_MenuBase" data-uid="rwby.ui.MenuBase" class="text-break">
-Class MenuBase  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs&amp;version=GBdev&amp;line=5"><i class="bi bi-code-slash"></i></a>
+Class MenuBase  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs&amp;version=GBdev&amp;line=6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -131,16 +131,23 @@ Class MenuBase  <a class="header-action link-secondary" title="View source" href
     <dd>
       <div><a class="xref" href="Global.ControlsMainScreen.html">ControlsMainScreen</a></div>
       <div><a class="xref" href="Global.ControlsProfileMappingScreen.html">ControlsProfileMappingScreen</a></div>
-      <div><a class="xref" href="Global.MenuAndHandlerBase.html">MenuAndHandlerBase</a></div>
+      <div><a class="xref" href="Global.MenuHandlerAndMenuBase.html">MenuHandlerAndMenuBase</a></div>
       <div><a class="xref" href="Global.OptionsGameplayScreen.html">OptionsGameplayScreen</a></div>
       <div><a class="xref" href="Global.OptionsMainScreen.html">OptionsMainScreen</a></div>
       <div><a class="xref" href="Global.OptionsModdingScreen.html">OptionsModdingScreen</a></div>
-      <div><a class="xref" href="Global.OptionsScreen.html">OptionsScreen</a></div>
       <div><a class="xref" href="rwby.CreateLobbyScreen.html">CreateLobbyScreen</a></div>
       <div><a class="xref" href="rwby.FindLobbyScreen.html">FindLobbyScreen</a></div>
+      <div><a class="xref" href="rwby.MainMenuLocalScreen.html">MainMenuLocalScreen</a></div>
+      <div><a class="xref" href="rwby.QuickMatchScreenCharacterSelect.html">QuickMatchScreenCharacterSelect</a></div>
+      <div><a class="xref" href="rwby.QuickMatchScreenMain.html">QuickMatchScreenMain</a></div>
       <div><a class="xref" href="rwby.TestUIMenu.html">TestUIMenu</a></div>
       <div><a class="xref" href="rwby.TitleMainScreen.html">TitleMainScreen</a></div>
       <div><a class="xref" href="rwby.TitleScreen.html">TitleScreen</a></div>
+      <div><a class="xref" href="rwby.VytalMatchSceneFestivalSelectScreen.html">VytalMatchSceneFestivalSelectScreen</a></div>
+      <div><a class="xref" href="rwby.VytalMatchSceneGamemodeSettingsScreen.html">VytalMatchSceneGamemodeSettingsScreen</a></div>
+      <div><a class="xref" href="rwby.VytalMatchSceneMainScreen.html">VytalMatchSceneMainScreen</a></div>
+      <div><a class="xref" href="rwby.VytalMatchSceneMapSelectScreen.html">VytalMatchSceneMapSelectScreen</a></div>
+      <div><a class="xref" href="rwby.VytalMatchSceneReadyScreen.html">VytalMatchSceneReadyScreen</a></div>
       <div><a class="xref" href="rwby.core.gamemodes.training.ui.DummySettingsFighterSelectScreen.html">DummySettingsFighterSelectScreen</a></div>
       <div><a class="xref" href="rwby.core.gamemodes.training.ui.DummySettingsMainScreen.html">DummySettingsMainScreen</a></div>
       <div><a class="xref" href="rwby.sessionhandlers.lobby.BGMSelectScreen.html">BGMSelectScreen</a></div>
@@ -149,8 +156,10 @@ Class MenuBase  <a class="header-action link-secondary" title="View source" href
       <div><a class="xref" href="rwby.sessionhandlers.lobby.MatchCreationScreenMainScreen.html">MatchCreationScreenMainScreen</a></div>
       <div><a class="xref" href="rwby.sessionhandlers.lobby.MatchCreationScreenMapSelectionScreen.html">MatchCreationScreenMapSelectionScreen</a></div>
       <div><a class="xref" href="rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen.html">NetworkLobbySessionMatchScreen</a></div>
+      <div><a class="xref" href="rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyMenuRoomsScreen.html">NetworkVytalMatchLobbyMenuRoomsScreen</a></div>
       <div><a class="xref" href="rwby.ui.CommandListMenu.html">CommandListMenu</a></div>
       <div><a class="xref" href="rwby.ui.MainMenu.OptionsVideoScreen.html">OptionsVideoScreen</a></div>
+      <div><a class="xref" href="rwby.ui.MainMenu.TitleOnlineScreen.html">TitleOnlineScreen</a></div>
     </dd>
   </dl>
 
@@ -165,16 +174,17 @@ Class MenuBase  <a class="header-action link-secondary" title="View source" href
 
 
 
-  <h3 id="rwby_ui_MenuBase_currentHandler" data-uid="rwby.ui.MenuBase.currentHandler">
-  currentHandler
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs&amp;version=GBdev&amp;line=7"><i class="bi bi-code-slash"></i></a>
+  <h3 id="rwby_ui_MenuBase_history" data-uid="rwby.ui.MenuBase.history">
+  history
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs&amp;version=GBdev&amp;line=10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IMenuHandler currentHandler</code></pre>
+    <pre><code class="lang-csharp hljs">[SerializeField]
+protected List&lt;IMenu&gt; history</code></pre>
   </div>
 
 
@@ -182,10 +192,45 @@ Class MenuBase  <a class="header-action link-secondary" title="View source" href
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="rwby.ui.IMenuHandler.html">IMenuHandler</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="rwby.ui.IMenu.html">IMenu</a>&gt;</dt>
     <dd></dd>
   </dl>
 
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="rwby_ui_MenuBase_MenuHandler_" data-uid="rwby.ui.MenuBase.MenuHandler*"></a>
+
+  <h3 id="rwby_ui_MenuBase_MenuHandler" data-uid="rwby.ui.MenuBase.MenuHandler">
+  MenuHandler
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs&amp;version=GBdev&amp;line=8"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMenuHandler MenuHandler { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="rwby.ui.IMenuHandler.html">IMenuHandler</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -202,7 +247,7 @@ Class MenuBase  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="rwby_ui_MenuBase_Open_rwby_ui_MenuDirection_rwby_ui_IMenuHandler_" data-uid="rwby.ui.MenuBase.Open(rwby.ui.MenuDirection,rwby.ui.IMenuHandler)">
   Open(MenuDirection, IMenuHandler)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs&amp;version=GBdev&amp;line=9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs&amp;version=GBdev&amp;line=12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -235,7 +280,7 @@ Class MenuBase  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="rwby_ui_MenuBase_TryClose_rwby_ui_MenuDirection_System_Boolean_" data-uid="rwby.ui.MenuBase.TryClose(rwby.ui.MenuDirection,System.Boolean)">
   TryClose(MenuDirection, bool)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs&amp;version=GBdev&amp;line=14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs&amp;version=GBdev&amp;line=17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -273,7 +318,7 @@ Class MenuBase  <a class="header-action link-secondary" title="View source" href
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs&amp;version=GBdev&amp;line=5" class="edit-link">Edit this page</a>
+          <a href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/UI/MenuBase.cs&amp;version=GBdev&amp;line=6" class="edit-link">Edit this page</a>
         </div>
 
 

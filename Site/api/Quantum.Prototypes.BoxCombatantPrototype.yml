@@ -25,12 +25,14 @@ items:
   - Quantum.Prototypes.BoxCombatantPrototype.hurtboxList
   - Quantum.Prototypes.BoxCombatantPrototype.hurtboxesDisabled
   - Quantum.Prototypes.BoxCombatantPrototype.lastHitEntity
+  - Quantum.Prototypes.BoxCombatantPrototype.lastHitEntityOnFrame
   - Quantum.Prototypes.BoxCombatantPrototype.lastHitOnFrame
   - Quantum.Prototypes.BoxCombatantPrototype.lastReceivedClashLevel
   - Quantum.Prototypes.BoxCombatantPrototype.lastReceivedHitReaction
   - Quantum.Prototypes.BoxCombatantPrototype.onClashAction
   - Quantum.Prototypes.BoxCombatantPrototype.onHitAction
   - Quantum.Prototypes.BoxCombatantPrototype.stateHitCounters
+  - Quantum.Prototypes.BoxCombatantPrototype.warningboxList
   - Quantum.Prototypes.BoxCombatantPrototype.whenHitAction
   langs:
   - csharp
@@ -46,7 +48,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BoxCombatantPrototype
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 129
+    startLine: 185
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -101,7 +103,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: collisionboxesDisabled
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 132
+    startLine: 188
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -128,7 +130,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitboxesDisabled
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 133
+    startLine: 189
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -155,7 +157,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hurtboxesDisabled
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 134
+    startLine: 190
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -182,7 +184,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: collisionboxList
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 136
+    startLine: 192
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -219,7 +221,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitboxList
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 138
+    startLine: 194
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -256,7 +258,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hurtboxList
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 140
+    startLine: 196
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -271,6 +273,43 @@ items:
       <DynamicCollection>
 
       Public hurtboxList As MapEntityId()
+  attributes:
+  - type: Quantum.DynamicCollectionAttribute
+    ctor: Quantum.DynamicCollectionAttribute.#ctor
+    arguments: []
+- uid: Quantum.Prototypes.BoxCombatantPrototype.warningboxList
+  commentId: F:Quantum.Prototypes.BoxCombatantPrototype.warningboxList
+  id: warningboxList
+  parent: Quantum.Prototypes.BoxCombatantPrototype
+  langs:
+  - csharp
+  - vb
+  name: warningboxList
+  nameWithType: BoxCombatantPrototype.warningboxList
+  fullName: Quantum.Prototypes.BoxCombatantPrototype.warningboxList
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: warningboxList
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 198
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: >-
+      [DynamicCollection]
+
+      public MapEntityId[] warningboxList
+    return:
+      type: Quantum.MapEntityId[]
+    content.vb: >-
+      <DynamicCollection>
+
+      Public warningboxList As MapEntityId()
   attributes:
   - type: Quantum.DynamicCollectionAttribute
     ctor: Quantum.DynamicCollectionAttribute.#ctor
@@ -293,7 +332,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: entitiesHit
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 142
+    startLine: 200
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -330,7 +369,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: stateHitCounters
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 145
+    startLine: 203
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -374,7 +413,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lastHitOnFrame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 146
+    startLine: 204
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -401,7 +440,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitByPosition
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 147
+    startLine: 205
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -428,7 +467,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitByHurtboxWasHit
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 148
+    startLine: 206
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -455,7 +494,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitByEntity
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 149
+    startLine: 207
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -482,7 +521,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitByTeam
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 150
+    startLine: 208
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -509,7 +548,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitByInfo
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 151
+    startLine: 209
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -536,7 +575,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitByNewState
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 152
+    startLine: 210
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -563,7 +602,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitByState
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 153
+    startLine: 211
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -590,7 +629,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: onHitAction
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 154
+    startLine: 212
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -617,7 +656,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitByStates
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 156
+    startLine: 214
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -654,7 +693,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hitWithInfo
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 157
+    startLine: 215
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -681,7 +720,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lastReceivedHitReaction
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 158
+    startLine: 216
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -708,7 +747,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: whenHitAction
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 159
+    startLine: 217
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -735,7 +774,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lastHitEntity
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 160
+    startLine: 218
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -744,6 +783,33 @@ items:
     return:
       type: Quantum.MapEntityId
     content.vb: Public lastHitEntity As MapEntityId
+- uid: Quantum.Prototypes.BoxCombatantPrototype.lastHitEntityOnFrame
+  commentId: F:Quantum.Prototypes.BoxCombatantPrototype.lastHitEntityOnFrame
+  id: lastHitEntityOnFrame
+  parent: Quantum.Prototypes.BoxCombatantPrototype
+  langs:
+  - csharp
+  - vb
+  name: lastHitEntityOnFrame
+  nameWithType: BoxCombatantPrototype.lastHitEntityOnFrame
+  fullName: Quantum.Prototypes.BoxCombatantPrototype.lastHitEntityOnFrame
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: lastHitEntityOnFrame
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 219
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: public int lastHitEntityOnFrame
+    return:
+      type: System.Int32
+    content.vb: Public lastHitEntityOnFrame As Integer
 - uid: Quantum.Prototypes.BoxCombatantPrototype.hasClashed
   commentId: F:Quantum.Prototypes.BoxCombatantPrototype.hasClashed
   id: hasClashed
@@ -762,7 +828,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: hasClashed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 161
+    startLine: 220
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -789,7 +855,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lastReceivedClashLevel
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 162
+    startLine: 221
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -816,7 +882,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: onClashAction
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 163
+    startLine: 222
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -843,7 +909,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AddToEntity
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 164
+    startLine: 223
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -883,7 +949,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Materialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 169
+    startLine: 228
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes

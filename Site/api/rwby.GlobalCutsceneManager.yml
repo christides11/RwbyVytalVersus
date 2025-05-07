@@ -5,8 +5,8 @@ items:
   id: GlobalCutsceneManager
   parent: rwby
   children:
-  - rwby.GlobalCutsceneManager.Breakdown
   - rwby.GlobalCutsceneManager.Initialize(rwby.MatchHandlerBase,rwby.CutsceneBindingSource)
+  - rwby.GlobalCutsceneManager.Teardown
   - rwby.GlobalCutsceneManager.UpdateMapBindings
   - rwby.GlobalCutsceneManager.cutsceneGroupingPool
   - rwby.GlobalCutsceneManager.entityToCutscenePlayers
@@ -212,6 +212,32 @@ items:
       type: rwby.CutsceneBindingSource
     content.vb: Public Sub Initialize(mHandler As MatchHandlerBase, bindingSource As CutsceneBindingSource = Nothing)
   overload: rwby.GlobalCutsceneManager.Initialize*
+- uid: rwby.GlobalCutsceneManager.Teardown
+  commentId: M:rwby.GlobalCutsceneManager.Teardown
+  id: Teardown
+  parent: rwby.GlobalCutsceneManager
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: GlobalCutsceneManager.Teardown()
+  fullName: rwby.GlobalCutsceneManager.Teardown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Teardown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
+    startLine: 47
+  assemblies:
+  - rwby
+  namespace: rwby
+  syntax:
+    content: public void Teardown()
+    content.vb: Public Sub Teardown()
+  overload: rwby.GlobalCutsceneManager.Teardown*
 - uid: rwby.GlobalCutsceneManager.UpdateMapBindings
   commentId: M:rwby.GlobalCutsceneManager.UpdateMapBindings
   id: UpdateMapBindings
@@ -230,7 +256,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UpdateMapBindings
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
-    startLine: 47
+    startLine: 56
   assemblies:
   - rwby
   namespace: rwby
@@ -238,32 +264,6 @@ items:
     content: public void UpdateMapBindings()
     content.vb: Public Sub UpdateMapBindings()
   overload: rwby.GlobalCutsceneManager.UpdateMapBindings*
-- uid: rwby.GlobalCutsceneManager.Breakdown
-  commentId: M:rwby.GlobalCutsceneManager.Breakdown
-  id: Breakdown
-  parent: rwby.GlobalCutsceneManager
-  langs:
-  - csharp
-  - vb
-  name: Breakdown()
-  nameWithType: GlobalCutsceneManager.Breakdown()
-  fullName: rwby.GlobalCutsceneManager.Breakdown()
-  type: Method
-  source:
-    remote:
-      path: rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: Breakdown
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Cutscene/GlobalCutsceneManager.cs
-    startLine: 131
-  assemblies:
-  - rwby
-  namespace: rwby
-  syntax:
-    content: public void Breakdown()
-    content.vb: Public Sub Breakdown()
-  overload: rwby.GlobalCutsceneManager.Breakdown*
 references:
 - uid: rwby
   commentId: N:rwby
@@ -438,6 +438,7 @@ references:
   - name: <
   - uid: Quantum.CharaDefinitionAsset
     name: CharaDefinitionAsset
+    href: Quantum.CharaDefinitionAsset.html
   - name: '>'
   - name: ','
   - name: " "
@@ -467,6 +468,7 @@ references:
   - name: " "
   - uid: Quantum.CharaDefinitionAsset
     name: CharaDefinitionAsset
+    href: Quantum.CharaDefinitionAsset.html
   - name: )
   - name: ','
   - name: " "
@@ -502,15 +504,15 @@ references:
   name: Initialize
   nameWithType: GlobalCutsceneManager.Initialize
   fullName: rwby.GlobalCutsceneManager.Initialize
+- uid: rwby.GlobalCutsceneManager.Teardown*
+  commentId: Overload:rwby.GlobalCutsceneManager.Teardown
+  href: rwby.GlobalCutsceneManager.html#rwby_GlobalCutsceneManager_Teardown
+  name: Teardown
+  nameWithType: GlobalCutsceneManager.Teardown
+  fullName: rwby.GlobalCutsceneManager.Teardown
 - uid: rwby.GlobalCutsceneManager.UpdateMapBindings*
   commentId: Overload:rwby.GlobalCutsceneManager.UpdateMapBindings
   href: rwby.GlobalCutsceneManager.html#rwby_GlobalCutsceneManager_UpdateMapBindings
   name: UpdateMapBindings
   nameWithType: GlobalCutsceneManager.UpdateMapBindings
   fullName: rwby.GlobalCutsceneManager.UpdateMapBindings
-- uid: rwby.GlobalCutsceneManager.Breakdown*
-  commentId: Overload:rwby.GlobalCutsceneManager.Breakdown
-  href: rwby.GlobalCutsceneManager.html#rwby_GlobalCutsceneManager_Breakdown
-  name: Breakdown
-  nameWithType: GlobalCutsceneManager.Breakdown
-  fullName: rwby.GlobalCutsceneManager.Breakdown

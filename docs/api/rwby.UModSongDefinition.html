@@ -102,7 +102,7 @@ Class UModSongDefinition  <a class="header-action link-secondary" title="View so
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[CreateAssetMenu(menuName = &quot;rwby/UMod/Content/Song Definition&quot;)]
-public class UModSongDefinition : BaseSongDefinition</code></pre>
+public class UModSongDefinition : BaseSongDefinition, IOnUModPrebuild</code></pre>
   </div>
 
 
@@ -120,6 +120,12 @@ public class UModSongDefinition : BaseSongDefinition</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="rwby.IOnUModPrebuild.html">IOnUModPrebuild</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -142,6 +148,9 @@ public class UModSongDefinition : BaseSongDefinition</code></pre>
     </div>
     <div>
       <a class="xref" href="Global.IContentDefinition.html#Global_IContentDefinition_UnregisterQuantumAsset">IContentDefinition.UnregisterQuantumAsset()</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.IContentDefinition.html#Global_IContentDefinition_GetAssetSoftReference">IContentDefinition.GetAssetSoftReference()</a>
     </div>
   </dd></dl>
 
@@ -224,7 +233,7 @@ public class UModSongDefinition : BaseSongDefinition</code></pre>
 
   <h3 id="rwby_UModSongDefinition_GetSong" data-uid="rwby.UModSongDefinition.GetSong">
   GetSong()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs&amp;version=GBdev&amp;line=38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs&amp;version=GBdev&amp;line=44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -255,7 +264,7 @@ public class UModSongDefinition : BaseSongDefinition</code></pre>
 
   <h3 id="rwby_UModSongDefinition_LoadAssets" data-uid="rwby.UModSongDefinition.LoadAssets">
   LoadAssets()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs&amp;version=GBdev&amp;line=19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs&amp;version=GBdev&amp;line=25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -282,11 +291,37 @@ public class UModSongDefinition : BaseSongDefinition</code></pre>
 
 
 
+  <a id="rwby_UModSongDefinition_OnUModPrebuild_" data-uid="rwby.UModSongDefinition.OnUModPrebuild*"></a>
+
+  <h3 id="rwby_UModSongDefinition_OnUModPrebuild" data-uid="rwby.UModSongDefinition.OnUModPrebuild">
+  OnUModPrebuild()
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs&amp;version=GBdev&amp;line=20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnUModPrebuild()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="rwby_UModSongDefinition_Unload_" data-uid="rwby.UModSongDefinition.Unload*"></a>
 
   <h3 id="rwby_UModSongDefinition_Unload" data-uid="rwby.UModSongDefinition.Unload">
   Unload()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs&amp;version=GBdev&amp;line=48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs&amp;version=GBdev&amp;line=54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -312,7 +347,7 @@ public class UModSongDefinition : BaseSongDefinition</code></pre>
 
   <h3 id="rwby_UModSongDefinition_UnloadAssets" data-uid="rwby.UModSongDefinition.UnloadAssets">
   UnloadAssets()
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs&amp;version=GBdev&amp;line=43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/1.Project/Scripts/Modding/UMod/Content/UModSongDefinition.cs&amp;version=GBdev&amp;line=49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

@@ -30,11 +30,11 @@ items:
     content: >-
       [Serializable]
 
-      public class HFSMCharaInDangerDecision : HFSMDecision
+      public class HFSMCharaInDangerDecision : HFSMDecision, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class HFSMCharaInDangerDecision Inherits HFSMDecision
+      Public Class HFSMCharaInDangerDecision Inherits HFSMDecision Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -42,6 +42,8 @@ items:
   - Quantum.AssetObject
   - Quantum.HFSMDecisionBase
   - Quantum.HFSMDecision
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HFSMDecision.Decide(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
   - Quantum.HFSMDecisionBase.Label
@@ -206,6 +208,13 @@ references:
   name: HFSMDecision
   nameWithType: HFSMDecision
   fullName: Quantum.HFSMDecision
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HFSMDecision.Decide(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
   commentId: M:Quantum.HFSMDecision.Decide(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.AIContext@)
   parent: Quantum.HFSMDecision

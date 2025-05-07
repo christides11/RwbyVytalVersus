@@ -35,13 +35,15 @@ items:
   summary: Base settings for KCC.
   example: []
   syntax:
-    content: 'public class KCCSettings : AssetObject'
-    content.vb: Public Class KCCSettings Inherits AssetObject
+    content: 'public class KCCSettings : AssetObject, ILogSource'
+    content.vb: Public Class KCCSettings Inherits AssetObject Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -437,6 +439,13 @@ references:
   name: AssetObject
   nameWithType: AssetObject
   fullName: Quantum.AssetObject
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject

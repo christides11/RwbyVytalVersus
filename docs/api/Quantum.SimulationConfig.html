@@ -102,7 +102,7 @@ Class SimulationConfig  <a class="header-action link-secondary" title="View sour
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SimulationConfig : AssetObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class SimulationConfig : AssetObject, ILogSource</code></pre>
   </div>
 
 
@@ -119,6 +119,12 @@ Class SimulationConfig  <a class="header-action link-secondary" title="View sour
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ILogSource</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -199,7 +205,7 @@ public SimulationConfig.AutoLoadSceneFromMapMode AutoLoadSceneFromMap</code></pr
 
   <h3 id="Quantum_SimulationConfig_ChecksumErrorDumpOptions" data-uid="Quantum.SimulationConfig.ChecksumErrorDumpOptions">
   ChecksumErrorDumpOptions
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Additional options for checksum dumps, if the default settings don't provide a clear picture.</p>
@@ -231,7 +237,7 @@ public SimulationConfigChecksumErrorDumpOptions ChecksumErrorDumpOptions</code><
 
   <h3 id="Quantum_SimulationConfig_ChecksumSnapshotHistoryLengthSeconds" data-uid="Quantum.SimulationConfig.ChecksumSnapshotHistoryLengthSeconds">
   ChecksumSnapshotHistoryLengthSeconds
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>How long to store checksumed verified frames. The are used to generate a frame dump in case of a checksum error happening. Not used in Replay and Local mode. Default is 3.</p>
@@ -359,7 +365,7 @@ public FrameBase.EntitiesConfig Entities</code></pre>
 
   <h3 id="Quantum_SimulationConfig_HeapExtraCount" data-uid="Quantum.SimulationConfig.HeapExtraCount">
   HeapExtraCount
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets extra heaps to allocate for a session in case you need to
@@ -393,7 +399,7 @@ public int HeapExtraCount</code></pre>
 
   <h3 id="Quantum_SimulationConfig_HeapPageCount" data-uid="Quantum.SimulationConfig.HeapPageCount">
   HeapPageCount
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Define the max heap page count for memory the frame class uses for custom allocations like QList for example. Default is 256.</p>
@@ -428,7 +434,7 @@ public int HeapPageCount</code></pre>
 
   <h3 id="Quantum_SimulationConfig_HeapPageShift" data-uid="Quantum.SimulationConfig.HeapPageShift">
   HeapPageShift
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Define the max heap size for one page of memory the frame class uses for custom allocations like QList for example. The default is 15.</p>
@@ -463,7 +469,7 @@ public int HeapPageShift</code></pre>
 
   <h3 id="Quantum_SimulationConfig_HeapTrackingMode" data-uid="Quantum.SimulationConfig.HeapTrackingMode">
   HeapTrackingMode
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>If and to which extent allocations in the Frame Heap should be tracked when in Debug mode.
@@ -561,7 +567,7 @@ public PhysicsCommon.Config Physics</code></pre>
 
   <h3 id="Quantum_SimulationConfig_ThreadCount" data-uid="Quantum.SimulationConfig.ThreadCount">
   ThreadCount
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Override the number of threads used internally. Default is 2.</p>
@@ -570,6 +576,7 @@ public PhysicsCommon.Config Physics</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[InlineHelp]
+[ErrorIf(&quot;ThreadCount&quot;, 0, &quot;Thread Count must be greater than 0.&quot;, CompareOperator.LessOrEqual)]
 public int ThreadCount</code></pre>
   </div>
 
@@ -651,9 +658,99 @@ public int ThreadCount</code></pre>
 
 
 
+  <h3 id="Quantum_SimulationConfig_tag_CharacterState_Group_Attack" data-uid="Quantum.SimulationConfig.tag_CharacterState_Group_Attack">
+  tag_CharacterState_Group_Attack
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs&amp;version=GBdev&amp;line=10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetRef&lt;Tag&gt; tag_CharacterState_Group_Attack</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AssetRef</span>&lt;<a class="xref" href="Quantum.Tag.html">Tag</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_SimulationConfig_tag_CharacterState_Group_Movement" data-uid="Quantum.SimulationConfig.tag_CharacterState_Group_Movement">
+  tag_CharacterState_Group_Movement
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs&amp;version=GBdev&amp;line=9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetRef&lt;Tag&gt; tag_CharacterState_Group_Movement</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AssetRef</span>&lt;<a class="xref" href="Quantum.Tag.html">Tag</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_SimulationConfig_tag_CharacterState_Group_Recovery" data-uid="Quantum.SimulationConfig.tag_CharacterState_Group_Recovery">
+  tag_CharacterState_Group_Recovery
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs&amp;version=GBdev&amp;line=11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetRef&lt;Tag&gt; tag_CharacterState_Group_Recovery</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AssetRef</span>&lt;<a class="xref" href="Quantum.Tag.html">Tag</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Quantum_SimulationConfig_tag_CharacterState_Idle" data-uid="Quantum.SimulationConfig.tag_CharacterState_Idle">
   tag_CharacterState_Idle
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs&amp;version=GBdev&amp;line=6"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs&amp;version=GBdev&amp;line=8"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -661,6 +758,66 @@ public int ThreadCount</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public AssetRef&lt;Tag&gt; tag_CharacterState_Idle</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AssetRef</span>&lt;<a class="xref" href="Quantum.Tag.html">Tag</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_SimulationConfig_tag_CharacterState_MatchDefeat" data-uid="Quantum.SimulationConfig.tag_CharacterState_MatchDefeat">
+  tag_CharacterState_MatchDefeat
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs&amp;version=GBdev&amp;line=7"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetRef&lt;Tag&gt; tag_CharacterState_MatchDefeat</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AssetRef</span>&lt;<a class="xref" href="Quantum.Tag.html">Tag</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Quantum_SimulationConfig_tag_CharacterState_MatchVictory" data-uid="Quantum.SimulationConfig.tag_CharacterState_MatchVictory">
+  tag_CharacterState_MatchVictory
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/QuantumUser/Simulation/SimulationConfig.User.cs&amp;version=GBdev&amp;line=6"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetRef&lt;Tag&gt; tag_CharacterState_MatchVictory</code></pre>
   </div>
 
 
@@ -688,7 +845,7 @@ public int ThreadCount</code></pre>
 
   <h3 id="Quantum_SimulationConfig_Loaded_Quantum_IResourceManager_Photon_Deterministic_Native_Allocator_" data-uid="Quantum.SimulationConfig.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)">
   Loaded(IResourceManager, Allocator)
-  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=135"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq?path=rwbyq_unity/Assets/Photon/Quantum/Simulation/SimulationConfig.cs&amp;version=GBdev&amp;line=136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The asset loaded callback, caches fixed calculation results.</p>

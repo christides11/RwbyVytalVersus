@@ -12,7 +12,6 @@ items:
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientAssetEvent
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientCharacterAssetEvent
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.ClientReadyStateEvent
-  - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.JoinMatchResponseEvent
   - rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
   - rwby.sessionhandlers.lobby.MatchCreationScreenGamemodeSelectionScreen
@@ -21,31 +20,37 @@ items:
   - rwby.sessionhandlers.lobby.MatchPlayerListHolder
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SendMatchRoomNameMessage
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SetMatchMap
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ChatMessage
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientAssetCheckResponse
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientAttemptToReadyUp
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientAttemptToUnready
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientLeaveRoomMessage
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveJoinMatchResponseMessage
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveJoinMatchResponseMessage.ResponseCode
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetCharacterResponse
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetParticipantCharactersResponse
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientRequestJoinMatchMessage
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientRequestSetCharacterMessage
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetMatchGamemode
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantCharactersMessage
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantTeamMessage
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.MatchCreationOrUpdateResponseMessage
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLatestMatchListMessage
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLobbyInfoMessage
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestNewMatchMessage
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestUpdateMatchMessage
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ServerAttemptToReadyUpResponse
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ServerCheckIfClientHasAssets
   - rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ServerStartMatchMessage
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchClientDefinition
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen.MenuTypes
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam
+  - rwby.sessionhandlers.lobby.NetworkLobbySessionMatchStatus
   - rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
-  - rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.ScreenTypes
+  - rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition
+  - rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientPlayerDefinition
+  - rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyInfoContainer
+  - rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyMenuRoomsScreen
   langs:
   - csharp
   - vb
@@ -63,29 +68,6 @@ references:
   name: LobbySessionNetworkMessageHandler
   nameWithType: LobbySessionNetworkMessageHandler
   fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
-- uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
-  commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
-  parent: rwby.sessionhandlers.lobby
-  href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
-  name: LobbySessionNetworkMessageHandler.EmptyEvent
-  nameWithType: LobbySessionNetworkMessageHandler.EmptyEvent
-  fullName: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
-  spec.csharp:
-  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
-    name: LobbySessionNetworkMessageHandler
-    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
-  - name: .
-  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
-    name: EmptyEvent
-    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent.html
-  spec.vb:
-  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler
-    name: LobbySessionNetworkMessageHandler
-    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.html
-  - name: .
-  - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent
-    name: EmptyEvent
-    href: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.EmptyEvent.html
 - uid: rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
   commentId: T:rwby.sessionhandlers.lobby.LobbySessionNetworkMessageHandler.MatchCreationOrUpdateEvent
   parent: rwby.sessionhandlers.lobby
@@ -210,7 +192,6 @@ references:
   fullName: rwby.sessionhandlers.lobby.MatchCreationScreenMapSelectionScreen
 - uid: rwby.sessionhandlers.lobby.MatchPlayerListHolder
   commentId: T:rwby.sessionhandlers.lobby.MatchPlayerListHolder
-  parent: rwby.sessionhandlers.lobby
   href: rwby.sessionhandlers.lobby.MatchPlayerListHolder.html
   name: MatchPlayerListHolder
   nameWithType: MatchPlayerListHolder
@@ -246,6 +227,7 @@ references:
     href: rwby.sessionhandlers.lobby.CharacterSelectionScreen.FighterEvent.html
 - uid: rwby.sessionhandlers.lobby.BGMSelectScreen
   commentId: T:rwby.sessionhandlers.lobby.BGMSelectScreen
+  parent: rwby.sessionhandlers.lobby
   href: rwby.sessionhandlers.lobby.BGMSelectScreen.html
   name: BGMSelectScreen
   nameWithType: BGMSelectScreen
@@ -280,29 +262,6 @@ references:
   name: NetworkLobbySessionMenuHandler
   nameWithType: NetworkLobbySessionMenuHandler
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.ScreenTypes
-  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.ScreenTypes
-  parent: rwby.sessionhandlers.lobby
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.html
-  name: NetworkLobbySessionMenuHandler.ScreenTypes
-  nameWithType: NetworkLobbySessionMenuHandler.ScreenTypes
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.ScreenTypes
-  spec.csharp:
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
-    name: NetworkLobbySessionMenuHandler
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.html
-  - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.ScreenTypes
-    name: ScreenTypes
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.ScreenTypes.html
-  spec.vb:
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler
-    name: NetworkLobbySessionMenuHandler
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.html
-  - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.ScreenTypes
-    name: ScreenTypes
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMenuHandler.ScreenTypes.html
 - uid: rwby.sessionhandlers.lobby.MatchCreationScreenMainScreen
   commentId: T:rwby.sessionhandlers.lobby.MatchCreationScreenMainScreen
   parent: rwby.sessionhandlers.lobby
@@ -310,6 +269,13 @@ references:
   name: MatchCreationScreenMainScreen
   nameWithType: MatchCreationScreenMainScreen
   fullName: rwby.sessionhandlers.lobby.MatchCreationScreenMainScreen
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchStatus
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchStatus
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchStatus.html
+  name: NetworkLobbySessionMatchStatus
+  nameWithType: NetworkLobbySessionMatchStatus
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchStatus
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
   commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
   parent: rwby.sessionhandlers.lobby
@@ -317,18 +283,18 @@ references:
   name: NetworkLobbySessionMatchInfo
   nameWithType: NetworkLobbySessionMatchInfo
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchInfo
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam
-  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam.html
-  name: NetworkLobbySessionMatchTeam
-  nameWithType: NetworkLobbySessionMatchTeam
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchTeam
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchClientDefinition
-  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchClientDefinition
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchClientDefinition.html
-  name: NetworkLobbySessionMatchClientDefinition
-  nameWithType: NetworkLobbySessionMatchClientDefinition
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchClientDefinition
+- uid: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientPlayerDefinition
+  commentId: T:rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientPlayerDefinition
+  href: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientPlayerDefinition.html
+  name: NetworkVytalMatchLobbyClientPlayerDefinition
+  nameWithType: NetworkVytalMatchLobbyClientPlayerDefinition
+  fullName: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientPlayerDefinition
+- uid: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition
+  commentId: T:rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition
+  href: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition.html
+  name: NetworkVytalMatchLobbyClientParticipantDefinition
+  nameWithType: NetworkVytalMatchLobbyClientParticipantDefinition
+  fullName: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyClientParticipantDefinition
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen
   commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen
   parent: rwby.sessionhandlers.lobby
@@ -336,29 +302,13 @@ references:
   name: NetworkLobbySessionMatchCreationScreen
   nameWithType: NetworkLobbySessionMatchCreationScreen
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen.MenuTypes
-  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen.MenuTypes
+- uid: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyMenuRoomsScreen
+  commentId: T:rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyMenuRoomsScreen
   parent: rwby.sessionhandlers.lobby
-  href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen.html
-  name: NetworkLobbySessionMatchCreationScreen.MenuTypes
-  nameWithType: NetworkLobbySessionMatchCreationScreen.MenuTypes
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen.MenuTypes
-  spec.csharp:
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen
-    name: NetworkLobbySessionMatchCreationScreen
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen.html
-  - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen.MenuTypes
-    name: MenuTypes
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen.MenuTypes.html
-  spec.vb:
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen
-    name: NetworkLobbySessionMatchCreationScreen
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen.html
-  - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen.MenuTypes
-    name: MenuTypes
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchCreationScreen.MenuTypes.html
+  href: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyMenuRoomsScreen.html
+  name: NetworkVytalMatchLobbyMenuRoomsScreen
+  nameWithType: NetworkVytalMatchLobbyMenuRoomsScreen
+  fullName: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyMenuRoomsScreen
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
   commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionMatchScreen
   parent: rwby.sessionhandlers.lobby
@@ -373,6 +323,13 @@ references:
   name: NetworkLobbySessionHandler
   nameWithType: NetworkLobbySessionHandler
   fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandler
+- uid: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyInfoContainer
+  commentId: T:rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyInfoContainer
+  parent: rwby.sessionhandlers.lobby
+  href: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyInfoContainer.html
+  name: NetworkVytalMatchLobbyInfoContainer
+  nameWithType: NetworkVytalMatchLobbyInfoContainer
+  fullName: rwby.sessionhandlers.lobby.NetworkVytalMatchLobbyInfoContainer
 - uid: rwby.sessionhandlers.lobby.MatchCreationScreenGamemodeSelectionScreen
   commentId: T:rwby.sessionhandlers.lobby.MatchCreationScreenGamemodeSelectionScreen
   parent: rwby.sessionhandlers.lobby
@@ -408,51 +365,51 @@ references:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ChatMessage
     name: ChatMessage
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ChatMessage.html
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
-  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
   parent: rwby.sessionhandlers.lobby
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
-  name: NetworkLobbySessionHandlerMessages.RequestMatchListMessage
-  nameWithType: NetworkLobbySessionHandlerMessages.RequestMatchListMessage
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
+  name: NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
+  nameWithType: NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
   spec.csharp:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
     name: NetworkLobbySessionHandlerMessages
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
   - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
-    name: RequestMatchListMessage
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage.html
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
+    name: RequestLobbyInfoMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage.html
   spec.vb:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
     name: NetworkLobbySessionHandlerMessages
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
   - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage
-    name: RequestMatchListMessage
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestMatchListMessage.html
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLatestMatchListMessage
-  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLatestMatchListMessage
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage
+    name: RequestLobbyInfoMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestLobbyInfoMessage.html
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLobbyInfoMessage
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLobbyInfoMessage
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
-  name: NetworkLobbySessionHandlerMessages.ReceiveLatestMatchListMessage
-  nameWithType: NetworkLobbySessionHandlerMessages.ReceiveLatestMatchListMessage
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLatestMatchListMessage
+  name: NetworkLobbySessionHandlerMessages.ReceiveLobbyInfoMessage
+  nameWithType: NetworkLobbySessionHandlerMessages.ReceiveLobbyInfoMessage
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLobbyInfoMessage
   spec.csharp:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
     name: NetworkLobbySessionHandlerMessages
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
   - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLatestMatchListMessage
-    name: ReceiveLatestMatchListMessage
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLatestMatchListMessage.html
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLobbyInfoMessage
+    name: ReceiveLobbyInfoMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLobbyInfoMessage.html
   spec.vb:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
     name: NetworkLobbySessionHandlerMessages
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
   - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLatestMatchListMessage
-    name: ReceiveLatestMatchListMessage
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLatestMatchListMessage.html
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLobbyInfoMessage
+    name: ReceiveLobbyInfoMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ReceiveLobbyInfoMessage.html
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestNewMatchMessage
   commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.RequestNewMatchMessage
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
@@ -541,6 +498,28 @@ references:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientRequestJoinMatchMessage
     name: ClientRequestJoinMatchMessage
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientRequestJoinMatchMessage.html
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientLeaveRoomMessage
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientLeaveRoomMessage
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  name: NetworkLobbySessionHandlerMessages.ClientLeaveRoomMessage
+  nameWithType: NetworkLobbySessionHandlerMessages.ClientLeaveRoomMessage
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientLeaveRoomMessage
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientLeaveRoomMessage
+    name: ClientLeaveRoomMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientLeaveRoomMessage.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientLeaveRoomMessage
+    name: ClientLeaveRoomMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientLeaveRoomMessage.html
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveJoinMatchResponseMessage
   commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveJoinMatchResponseMessage
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
@@ -594,50 +573,72 @@ references:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveJoinMatchResponseMessage.ResponseCode
     name: ResponseCode
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveJoinMatchResponseMessage.ResponseCode.html
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientRequestSetCharacterMessage
-  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientRequestSetCharacterMessage
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantTeamMessage
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantTeamMessage
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
-  name: NetworkLobbySessionHandlerMessages.ClientRequestSetCharacterMessage
-  nameWithType: NetworkLobbySessionHandlerMessages.ClientRequestSetCharacterMessage
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientRequestSetCharacterMessage
+  name: NetworkLobbySessionHandlerMessages.ClientSetParticipantTeamMessage
+  nameWithType: NetworkLobbySessionHandlerMessages.ClientSetParticipantTeamMessage
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantTeamMessage
   spec.csharp:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
     name: NetworkLobbySessionHandlerMessages
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
   - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientRequestSetCharacterMessage
-    name: ClientRequestSetCharacterMessage
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientRequestSetCharacterMessage.html
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantTeamMessage
+    name: ClientSetParticipantTeamMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantTeamMessage.html
   spec.vb:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
     name: NetworkLobbySessionHandlerMessages
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
   - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientRequestSetCharacterMessage
-    name: ClientRequestSetCharacterMessage
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientRequestSetCharacterMessage.html
-- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetCharacterResponse
-  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetCharacterResponse
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantTeamMessage
+    name: ClientSetParticipantTeamMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantTeamMessage.html
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantCharactersMessage
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantCharactersMessage
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
-  name: NetworkLobbySessionHandlerMessages.ClientReceiveSetCharacterResponse
-  nameWithType: NetworkLobbySessionHandlerMessages.ClientReceiveSetCharacterResponse
-  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetCharacterResponse
+  name: NetworkLobbySessionHandlerMessages.ClientSetParticipantCharactersMessage
+  nameWithType: NetworkLobbySessionHandlerMessages.ClientSetParticipantCharactersMessage
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantCharactersMessage
   spec.csharp:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
     name: NetworkLobbySessionHandlerMessages
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
   - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetCharacterResponse
-    name: ClientReceiveSetCharacterResponse
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetCharacterResponse.html
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantCharactersMessage
+    name: ClientSetParticipantCharactersMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantCharactersMessage.html
   spec.vb:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
     name: NetworkLobbySessionHandlerMessages
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
   - name: .
-  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetCharacterResponse
-    name: ClientReceiveSetCharacterResponse
-    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetCharacterResponse.html
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantCharactersMessage
+    name: ClientSetParticipantCharactersMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetParticipantCharactersMessage.html
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetParticipantCharactersResponse
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetParticipantCharactersResponse
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  name: NetworkLobbySessionHandlerMessages.ClientReceiveSetParticipantCharactersResponse
+  nameWithType: NetworkLobbySessionHandlerMessages.ClientReceiveSetParticipantCharactersResponse
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetParticipantCharactersResponse
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetParticipantCharactersResponse
+    name: ClientReceiveSetParticipantCharactersResponse
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetParticipantCharactersResponse.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetParticipantCharactersResponse
+    name: ClientReceiveSetParticipantCharactersResponse
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientReceiveSetParticipantCharactersResponse.html
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ServerCheckIfClientHasAssets
   commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ServerCheckIfClientHasAssets
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
@@ -748,6 +749,50 @@ references:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ServerAttemptToReadyUpResponse
     name: ServerAttemptToReadyUpResponse
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ServerAttemptToReadyUpResponse.html
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetMatchGamemode
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetMatchGamemode
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  name: NetworkLobbySessionHandlerMessages.ClientSetMatchGamemode
+  nameWithType: NetworkLobbySessionHandlerMessages.ClientSetMatchGamemode
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetMatchGamemode
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetMatchGamemode
+    name: ClientSetMatchGamemode
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetMatchGamemode.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetMatchGamemode
+    name: ClientSetMatchGamemode
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ClientSetMatchGamemode.html
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SetMatchMap
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SetMatchMap
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  name: NetworkLobbySessionHandlerMessages.CLIENT_SetMatchMap
+  nameWithType: NetworkLobbySessionHandlerMessages.CLIENT_SetMatchMap
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SetMatchMap
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SetMatchMap
+    name: CLIENT_SetMatchMap
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SetMatchMap.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SetMatchMap
+    name: CLIENT_SetMatchMap
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SetMatchMap.html
 - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ServerStartMatchMessage
   commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ServerStartMatchMessage
   href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
@@ -770,6 +815,28 @@ references:
   - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ServerStartMatchMessage
     name: ServerStartMatchMessage
     href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.ServerStartMatchMessage.html
+- uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SendMatchRoomNameMessage
+  commentId: T:rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SendMatchRoomNameMessage
+  href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  name: NetworkLobbySessionHandlerMessages.CLIENT_SendMatchRoomNameMessage
+  nameWithType: NetworkLobbySessionHandlerMessages.CLIENT_SendMatchRoomNameMessage
+  fullName: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SendMatchRoomNameMessage
+  spec.csharp:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SendMatchRoomNameMessage
+    name: CLIENT_SendMatchRoomNameMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SendMatchRoomNameMessage.html
+  spec.vb:
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages
+    name: NetworkLobbySessionHandlerMessages
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.html
+  - name: .
+  - uid: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SendMatchRoomNameMessage
+    name: CLIENT_SendMatchRoomNameMessage
+    href: rwby.sessionhandlers.lobby.NetworkLobbySessionHandlerMessages.CLIENT_SendMatchRoomNameMessage.html
 - uid: rwby.sessionhandlers.lobby
   commentId: N:rwby.sessionhandlers.lobby
   href: rwby.html

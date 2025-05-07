@@ -35,11 +35,11 @@ items:
     content: >-
       [Serializable]
 
-      public class RunEQSQueryBroadphaseLeaf : BTLeaf
+      public class RunEQSQueryBroadphaseLeaf : BTLeaf, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class RunEQSQueryBroadphaseLeaf Inherits BTLeaf
+      Public Class RunEQSQueryBroadphaseLeaf Inherits BTLeaf Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -47,6 +47,8 @@ items:
   - Quantum.AssetObject
   - Quantum.BTNode
   - Quantum.BTLeaf
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.BTLeaf.Services
   - Quantum.BTLeaf._serviceInstances
@@ -387,6 +389,13 @@ references:
   name: BTLeaf
   nameWithType: BTLeaf
   fullName: Quantum.BTLeaf
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.BTLeaf.Services
   commentId: F:Quantum.BTLeaf.Services
   parent: Quantum.BTLeaf

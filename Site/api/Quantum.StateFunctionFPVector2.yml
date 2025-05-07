@@ -28,11 +28,11 @@ items:
     content: >-
       [Serializable]
 
-      public class StateFunctionFPVector2 : HNSFStateFunction<FPVector2>
+      public class StateFunctionFPVector2 : HNSFStateFunction<FPVector2>, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class StateFunctionFPVector2 Inherits HNSFStateFunction(Of FPVector2)
+      Public Class StateFunctionFPVector2 Inherits HNSFStateFunction(Of FPVector2) Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -40,6 +40,8 @@ items:
   - Quantum.AssetObject
   - Quantum.HNSFStateFunction
   - Quantum.HNSFStateFunction{Photon.Deterministic.FPVector2}
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{Photon.Deterministic.FPVector2}.Label
   - Quantum.HNSFStateFunction{Photon.Deterministic.FPVector2}.Execute(Quantum.FrameThreadSafe,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -174,6 +176,13 @@ references:
     name: FPVector2
     isExternal: true
   - name: )
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{Photon.Deterministic.FPVector2}.Label
   commentId: F:Quantum.HNSFStateFunction{Photon.Deterministic.FPVector2}.Label
   parent: Quantum.HNSFStateFunction{Photon.Deterministic.FPVector2}

@@ -5,12 +5,11 @@ items:
   id: AnimationEntry
   parent: Quantum
   children:
-  - Quantum.AnimationEntry.GetName
   - Quantum.AnimationEntry.anims
+  - Quantum.AnimationEntry.entryName
   - Quantum.AnimationEntry.fadeOutTime
   - Quantum.AnimationEntry.maxFadeInTime
   - Quantum.AnimationEntry.mixer
-  - Quantum.AnimationEntry.name
   - Quantum.AnimationEntry.playRate
   langs:
   - csharp
@@ -26,18 +25,20 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AnimationEntry
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/AnimationEntry.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public class AnimationEntry : AssetObject'
-    content.vb: Public Class AnimationEntry Inherits AssetObject
+    content: 'public class AnimationEntry : AssetObject, ILogSource'
+    content.vb: Public Class AnimationEntry Inherits AssetObject Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   - Quantum.AssetObject
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -49,62 +50,45 @@ items:
   - Quantum.AssetObject.Guid
   - Quantum.AssetObject.Path
   - Quantum.AssetObject.Settings
-- uid: Quantum.AnimationEntry.name
-  commentId: F:Quantum.AnimationEntry.name
-  id: name
+- uid: Quantum.AnimationEntry.entryName
+  commentId: F:Quantum.AnimationEntry.entryName
+  id: entryName
   parent: Quantum.AnimationEntry
   langs:
   - csharp
   - vb
-  name: name
-  nameWithType: AnimationEntry.name
-  fullName: Quantum.AnimationEntry.name
+  name: entryName
+  nameWithType: AnimationEntry.entryName
+  fullName: Quantum.AnimationEntry.entryName
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/AnimationEntry.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: name
+    id: entryName
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/AnimationEntry.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public string name
+    content: >-
+      [FormerlySerializedAs("name")]
+
+      public string entryName
     return:
       type: System.String
-    content.vb: Public name As String
-- uid: Quantum.AnimationEntry.GetName
-  commentId: P:Quantum.AnimationEntry.GetName
-  id: GetName
-  parent: Quantum.AnimationEntry
-  langs:
-  - csharp
-  - vb
-  name: GetName
-  nameWithType: AnimationEntry.GetName
-  fullName: Quantum.AnimationEntry.GetName
-  type: Property
-  source:
-    remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/AnimationEntry.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: GetName
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Assets/AnimationEntry.cs
-    startLine: 26
-  assemblies:
-  - Quantum.Simulation
-  namespace: Quantum
-  syntax:
-    content: public string GetName { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public ReadOnly Property GetName As String
-  overload: Quantum.AnimationEntry.GetName*
+    content.vb: >-
+      <FormerlySerializedAs("name")>
+
+      Public entryName As String
+  attributes:
+  - type: UnityEngine.Serialization.FormerlySerializedAsAttribute
+    ctor: UnityEngine.Serialization.FormerlySerializedAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
 - uid: Quantum.AnimationEntry.mixer
   commentId: F:Quantum.AnimationEntry.mixer
   id: mixer
@@ -279,6 +263,13 @@ references:
   name: AssetObject
   nameWithType: AssetObject
   fullName: Quantum.AssetObject
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject
@@ -571,12 +562,6 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: Quantum.AnimationEntry.GetName*
-  commentId: Overload:Quantum.AnimationEntry.GetName
-  href: Quantum.AnimationEntry.html#Quantum_AnimationEntry_GetName
-  name: GetName
-  nameWithType: AnimationEntry.GetName
-  fullName: Quantum.AnimationEntry.GetName
 - uid: Quantum.AnimationEntry.MixerType
   commentId: T:Quantum.AnimationEntry.MixerType
   parent: Quantum

@@ -1,0 +1,830 @@
+### YamlMime:ManagedReference
+items:
+- uid: Quantum.EvaluateBestTargetService
+  commentId: T:Quantum.EvaluateBestTargetService
+  id: EvaluateBestTargetService
+  parent: Quantum
+  children:
+  - Quantum.EvaluateBestTargetService.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.EvaluateBestTargetService.bbValueCurrentTarget
+  langs:
+  - csharp
+  - vb
+  name: EvaluateBestTargetService
+  nameWithType: EvaluateBestTargetService
+  fullName: Quantum.EvaluateBestTargetService
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Service/EvaluateBestTargetService.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: EvaluateBestTargetService
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Service/EvaluateBestTargetService.cs
+    startLine: 2
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class EvaluateBestTargetService : BTService, ILogSource
+    content.vb: >-
+      <Serializable>
+
+      Public Class EvaluateBestTargetService Inherits BTService Implements ILogSource
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Quantum.AssetObject
+  - Quantum.BTService
+  implements:
+  - Quantum.ILogSource
+  inheritedMembers:
+  - Quantum.BTService.Label
+  - Quantum.BTService.IntervalInSec
+  - Quantum.BTService.RunOnEnter
+  - Quantum.BTService.Id
+  - Quantum.BTService.Init(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.BTService.GetTimeProgressPercent(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  - Quantum.BTService.OnEnter(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.BTService.SetEndTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  - Quantum.BTService.GetEndTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  - Quantum.BTService.GetStartTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  - Quantum.BTService.TickServices(Quantum.BTParams,Quantum.AIContext@)
+  - Quantum.AssetObject.Identifier
+  - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  - Quantum.AssetObject.Create``1
+  - Quantum.AssetObject.Create(System.Type)
+  - Quantum.AssetObject.Create``1(System.Action{{T}})
+  - Quantum.AssetObject.Reset
+  - Quantum.AssetObject.Guid
+  - Quantum.AssetObject.Path
+  - Quantum.AssetObject.Settings
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Quantum.EvaluateBestTargetService.bbValueCurrentTarget
+  commentId: F:Quantum.EvaluateBestTargetService.bbValueCurrentTarget
+  id: bbValueCurrentTarget
+  parent: Quantum.EvaluateBestTargetService
+  langs:
+  - csharp
+  - vb
+  name: bbValueCurrentTarget
+  nameWithType: EvaluateBestTargetService.bbValueCurrentTarget
+  fullName: Quantum.EvaluateBestTargetService.bbValueCurrentTarget
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Service/EvaluateBestTargetService.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: bbValueCurrentTarget
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Service/EvaluateBestTargetService.cs
+    startLine: 5
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public AIBlackboardValueKey bbValueCurrentTarget
+    return:
+      type: Quantum.AIBlackboardValueKey
+    content.vb: Public bbValueCurrentTarget As AIBlackboardValueKey
+- uid: Quantum.EvaluateBestTargetService.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.EvaluateBestTargetService.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  id: OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.EvaluateBestTargetService
+  langs:
+  - csharp
+  - vb
+  name: OnUpdate(BTParams, ref AIContext)
+  nameWithType: EvaluateBestTargetService.OnUpdate(BTParams, ref AIContext)
+  fullName: Quantum.EvaluateBestTargetService.OnUpdate(Quantum.BTParams, ref Quantum.AIContext)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Service/EvaluateBestTargetService.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnUpdate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/AI/BehaviourTrees/Service/EvaluateBestTargetService.cs
+    startLine: 7
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  example: []
+  syntax:
+    content: protected override void OnUpdate(BTParams btParams, ref AIContext aiContext)
+    parameters:
+    - id: btParams
+      type: Quantum.BTParams
+    - id: aiContext
+      type: Quantum.AIContext
+    content.vb: Protected Overrides Sub OnUpdate(btParams As BTParams, aiContext As AIContext)
+  overridden: Quantum.BTService.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  overload: Quantum.EvaluateBestTargetService.OnUpdate*
+  nameWithType.vb: EvaluateBestTargetService.OnUpdate(BTParams, AIContext)
+  fullName.vb: Quantum.EvaluateBestTargetService.OnUpdate(Quantum.BTParams, Quantum.AIContext)
+  name.vb: OnUpdate(BTParams, AIContext)
+references:
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Quantum.AssetObject
+  commentId: T:Quantum.AssetObject
+  parent: Quantum
+  isExternal: true
+  name: AssetObject
+  nameWithType: AssetObject
+  fullName: Quantum.AssetObject
+- uid: Quantum.BTService
+  commentId: T:Quantum.BTService
+  parent: Quantum
+  isExternal: true
+  name: BTService
+  nameWithType: BTService
+  fullName: Quantum.BTService
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
+- uid: Quantum.BTService.Label
+  commentId: F:Quantum.BTService.Label
+  parent: Quantum.BTService
+  isExternal: true
+  name: Label
+  nameWithType: BTService.Label
+  fullName: Quantum.BTService.Label
+- uid: Quantum.BTService.IntervalInSec
+  commentId: F:Quantum.BTService.IntervalInSec
+  parent: Quantum.BTService
+  isExternal: true
+  name: IntervalInSec
+  nameWithType: BTService.IntervalInSec
+  fullName: Quantum.BTService.IntervalInSec
+- uid: Quantum.BTService.RunOnEnter
+  commentId: F:Quantum.BTService.RunOnEnter
+  parent: Quantum.BTService
+  isExternal: true
+  name: RunOnEnter
+  nameWithType: BTService.RunOnEnter
+  fullName: Quantum.BTService.RunOnEnter
+- uid: Quantum.BTService.Id
+  commentId: F:Quantum.BTService.Id
+  parent: Quantum.BTService
+  isExternal: true
+  name: Id
+  nameWithType: BTService.Id
+  fullName: Quantum.BTService.Id
+- uid: Quantum.BTService.Init(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTService.Init(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTService
+  isExternal: true
+  name: Init(BTParams, ref AIContext)
+  nameWithType: BTService.Init(BTParams, ref AIContext)
+  fullName: Quantum.BTService.Init(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTService.Init(BTParams, AIContext)
+  fullName.vb: Quantum.BTService.Init(Quantum.BTParams, Quantum.AIContext)
+  name.vb: Init(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTService.Init(Quantum.BTParams,Quantum.AIContext@)
+    name: Init
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTService.Init(Quantum.BTParams,Quantum.AIContext@)
+    name: Init
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.BTService.GetTimeProgressPercent(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  commentId: M:Quantum.BTService.GetTimeProgressPercent(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  parent: Quantum.BTService
+  isExternal: true
+  name: GetTimeProgressPercent(FrameThreadSafe, BTAgent*)
+  nameWithType: BTService.GetTimeProgressPercent(FrameThreadSafe, BTAgent*)
+  fullName: Quantum.BTService.GetTimeProgressPercent(Quantum.FrameThreadSafe, Quantum.BTAgent*)
+  spec.csharp:
+  - uid: Quantum.BTService.GetTimeProgressPercent(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+    name: GetTimeProgressPercent
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTService.GetTimeProgressPercent(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+    name: GetTimeProgressPercent
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.BTService.OnEnter(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTService.OnEnter(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTService
+  isExternal: true
+  name: OnEnter(BTParams, ref AIContext)
+  nameWithType: BTService.OnEnter(BTParams, ref AIContext)
+  fullName: Quantum.BTService.OnEnter(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTService.OnEnter(BTParams, AIContext)
+  fullName.vb: Quantum.BTService.OnEnter(Quantum.BTParams, Quantum.AIContext)
+  name.vb: OnEnter(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTService.OnEnter(Quantum.BTParams,Quantum.AIContext@)
+    name: OnEnter
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTService.OnEnter(Quantum.BTParams,Quantum.AIContext@)
+    name: OnEnter
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.BTService.SetEndTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  commentId: M:Quantum.BTService.SetEndTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  parent: Quantum.BTService
+  isExternal: true
+  name: SetEndTime(FrameThreadSafe, BTAgent*)
+  nameWithType: BTService.SetEndTime(FrameThreadSafe, BTAgent*)
+  fullName: Quantum.BTService.SetEndTime(Quantum.FrameThreadSafe, Quantum.BTAgent*)
+  spec.csharp:
+  - uid: Quantum.BTService.SetEndTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+    name: SetEndTime
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTService.SetEndTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+    name: SetEndTime
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.BTService.GetEndTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  commentId: M:Quantum.BTService.GetEndTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  parent: Quantum.BTService
+  isExternal: true
+  name: GetEndTime(FrameThreadSafe, BTAgent*)
+  nameWithType: BTService.GetEndTime(FrameThreadSafe, BTAgent*)
+  fullName: Quantum.BTService.GetEndTime(Quantum.FrameThreadSafe, Quantum.BTAgent*)
+  spec.csharp:
+  - uid: Quantum.BTService.GetEndTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+    name: GetEndTime
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTService.GetEndTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+    name: GetEndTime
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.BTService.GetStartTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  commentId: M:Quantum.BTService.GetStartTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+  parent: Quantum.BTService
+  isExternal: true
+  name: GetStartTime(FrameThreadSafe, BTAgent*)
+  nameWithType: BTService.GetStartTime(FrameThreadSafe, BTAgent*)
+  fullName: Quantum.BTService.GetStartTime(Quantum.FrameThreadSafe, Quantum.BTAgent*)
+  spec.csharp:
+  - uid: Quantum.BTService.GetStartTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+    name: GetStartTime
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTService.GetStartTime(Quantum.FrameThreadSafe,Quantum.BTAgent*)
+    name: GetStartTime
+    isExternal: true
+  - name: (
+  - uid: Quantum.FrameThreadSafe
+    name: FrameThreadSafe
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.BTAgent
+    name: BTAgent
+    isExternal: true
+  - name: '*'
+  - name: )
+- uid: Quantum.BTService.TickServices(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTService.TickServices(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTService
+  isExternal: true
+  name: TickServices(BTParams, ref AIContext)
+  nameWithType: BTService.TickServices(BTParams, ref AIContext)
+  fullName: Quantum.BTService.TickServices(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTService.TickServices(BTParams, AIContext)
+  fullName.vb: Quantum.BTService.TickServices(Quantum.BTParams, Quantum.AIContext)
+  name.vb: TickServices(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTService.TickServices(Quantum.BTParams,Quantum.AIContext@)
+    name: TickServices
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTService.TickServices(Quantum.BTParams,Quantum.AIContext@)
+    name: TickServices
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Identifier
+  commentId: F:Quantum.AssetObject.Identifier
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Identifier
+  nameWithType: AssetObject.Identifier
+  fullName: Quantum.AssetObject.Identifier
+- uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Loaded(IResourceManager, Allocator)
+  nameWithType: AssetObject.Loaded(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Loaded(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Loaded
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  commentId: M:Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Disposed(IResourceManager, Allocator)
+  nameWithType: AssetObject.Disposed(IResourceManager, Native.Allocator)
+  fullName: Quantum.AssetObject.Disposed(Quantum.IResourceManager, Photon.Deterministic.Native.Allocator)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Disposed(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
+    name: Disposed
+    isExternal: true
+  - name: (
+  - uid: Quantum.IResourceManager
+    name: IResourceManager
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Photon.Deterministic.Native.Allocator
+    name: Allocator
+    isExternal: true
+  - name: )
+- uid: Quantum.AssetObject.Create``1
+  commentId: M:Quantum.AssetObject.Create``1
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Create<T>()
+  nameWithType: AssetObject.Create<T>()
+  fullName: Quantum.AssetObject.Create<T>()
+  nameWithType.vb: AssetObject.Create(Of T)()
+  fullName.vb: Quantum.AssetObject.Create(Of T)()
+  name.vb: Create(Of T)()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Create(System.Type)
+  commentId: M:Quantum.AssetObject.Create(System.Type)
+  parent: Quantum.AssetObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Create(Type)
+  nameWithType: AssetObject.Create(Type)
+  fullName: Quantum.AssetObject.Create(System.Type)
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create(System.Type)
+    name: Create
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Quantum.AssetObject.Create``1(System.Action{{T}})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  parent: Quantum.AssetObject
+  definition: Quantum.AssetObject.Create``1(System.Action{``0})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.AssetObject.Reset
+  commentId: M:Quantum.AssetObject.Reset
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Reset()
+  nameWithType: AssetObject.Reset()
+  fullName: Quantum.AssetObject.Reset()
+  spec.csharp:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Quantum.AssetObject.Guid
+  commentId: P:Quantum.AssetObject.Guid
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Guid
+  nameWithType: AssetObject.Guid
+  fullName: Quantum.AssetObject.Guid
+- uid: Quantum.AssetObject.Path
+  commentId: P:Quantum.AssetObject.Path
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Path
+  nameWithType: AssetObject.Path
+  fullName: Quantum.AssetObject.Path
+- uid: Quantum.AssetObject.Settings
+  commentId: P:Quantum.AssetObject.Settings
+  parent: Quantum.AssetObject
+  isExternal: true
+  name: Settings
+  nameWithType: AssetObject.Settings
+  fullName: Quantum.AssetObject.Settings
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Quantum.AssetObject.Create``1(System.Action{``0})
+  commentId: M:Quantum.AssetObject.Create``1(System.Action{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Create<T>(Action<T>)
+  nameWithType: AssetObject.Create<T>(Action<T>)
+  fullName: Quantum.AssetObject.Create<T>(System.Action<T>)
+  nameWithType.vb: AssetObject.Create(Of T)(Action(Of T))
+  fullName.vb: Quantum.AssetObject.Create(Of T)(System.Action(Of T))
+  name.vb: Create(Of T)(Action(Of T))
+  spec.csharp:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Quantum.AssetObject.Create``1(System.Action{``0})
+    name: Create
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Quantum.AIBlackboardValueKey
+  commentId: T:Quantum.AIBlackboardValueKey
+  parent: Quantum
+  isExternal: true
+  name: AIBlackboardValueKey
+  nameWithType: AIBlackboardValueKey
+  fullName: Quantum.AIBlackboardValueKey
+- uid: Quantum.BTService.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  commentId: M:Quantum.BTService.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+  parent: Quantum.BTService
+  isExternal: true
+  name: OnUpdate(BTParams, ref AIContext)
+  nameWithType: BTService.OnUpdate(BTParams, ref AIContext)
+  fullName: Quantum.BTService.OnUpdate(Quantum.BTParams, ref Quantum.AIContext)
+  nameWithType.vb: BTService.OnUpdate(BTParams, AIContext)
+  fullName.vb: Quantum.BTService.OnUpdate(Quantum.BTParams, Quantum.AIContext)
+  name.vb: OnUpdate(BTParams, AIContext)
+  spec.csharp:
+  - uid: Quantum.BTService.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+    name: OnUpdate
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Quantum.BTService.OnUpdate(Quantum.BTParams,Quantum.AIContext@)
+    name: OnUpdate
+    isExternal: true
+  - name: (
+  - uid: Quantum.BTParams
+    name: BTParams
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.AIContext
+    name: AIContext
+    isExternal: true
+  - name: )
+- uid: Quantum.EvaluateBestTargetService.OnUpdate*
+  commentId: Overload:Quantum.EvaluateBestTargetService.OnUpdate
+  href: Quantum.EvaluateBestTargetService.html#Quantum_EvaluateBestTargetService_OnUpdate_Quantum_BTParams_Quantum_AIContext__
+  name: OnUpdate
+  nameWithType: EvaluateBestTargetService.OnUpdate
+  fullName: Quantum.EvaluateBestTargetService.OnUpdate
+- uid: Quantum.BTParams
+  commentId: T:Quantum.BTParams
+  parent: Quantum
+  isExternal: true
+  name: BTParams
+  nameWithType: BTParams
+  fullName: Quantum.BTParams
+- uid: Quantum.AIContext
+  commentId: T:Quantum.AIContext
+  parent: Quantum
+  isExternal: true
+  name: AIContext
+  nameWithType: AIContext
+  fullName: Quantum.AIContext

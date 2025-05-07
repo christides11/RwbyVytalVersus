@@ -7,12 +7,14 @@ items:
   children:
   - Global.ParticleSystemVisualEffect.CurrentTime
   - Global.ParticleSystemVisualEffect.DestroyEffect
+  - Global.ParticleSystemVisualEffect.FixedUpdate
   - Global.ParticleSystemVisualEffect.Freeze
   - Global.ParticleSystemVisualEffect.Play
   - Global.ParticleSystemVisualEffect.Resume
   - Global.ParticleSystemVisualEffect.SeekTo(System.Single,System.Boolean)
   - Global.ParticleSystemVisualEffect.SetSeed(System.UInt32)
   - Global.ParticleSystemVisualEffect.Stop(System.Boolean)
+  - Global.ParticleSystemVisualEffect.UpdatePlayRate
   - Global.ParticleSystemVisualEffect.particleSystems
   langs:
   - csharp
@@ -28,7 +30,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ParticleSystemVisualEffect
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
-    startLine: 4
+    startLine: 2
   assemblies:
   - rwby
   namespace: Global
@@ -43,12 +45,19 @@ items:
   - UnityEngine.MonoBehaviour
   - Global.VisualEffectBase
   inheritedMembers:
+  - Global.VisualEffectBase.WhenEffectDestroyed
+  - Global.VisualEffectBase.PlayRate
+  - Global.VisualEffectBase.playRate
   - Global.VisualEffectBase.status
   - Global.VisualEffectBase.autoDestroy
   - Global.VisualEffectBase.autoDestroyAfter
+  - Global.VisualEffectBase.autoStop
+  - Global.VisualEffectBase.autoStopAfter
+  - Global.VisualEffectBase.destoryTimer
   - Global.VisualEffectBase.entryAsset
   - Global.VisualEffectBase.freezeDuringHitstop
-  - Global.VisualEffectBase.FixedUpdate
+  - Global.VisualEffectBase.sourcePool
+  - Global.VisualEffectBase.Reinitialize
 - uid: Global.ParticleSystemVisualEffect.CurrentTime
   commentId: P:Global.ParticleSystemVisualEffect.CurrentTime
   id: CurrentTime
@@ -67,7 +76,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CurrentTime
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
-    startLine: 6
+    startLine: 4
   assemblies:
   - rwby
   namespace: Global
@@ -98,7 +107,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: particleSystems
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
-    startLine: 8
+    startLine: 6
   assemblies:
   - rwby
   namespace: Global
@@ -107,6 +116,34 @@ items:
     return:
       type: UnityEngine.ParticleSystem[]
     content.vb: Public particleSystems As ParticleSystem()
+- uid: Global.ParticleSystemVisualEffect.FixedUpdate
+  commentId: M:Global.ParticleSystemVisualEffect.FixedUpdate
+  id: FixedUpdate
+  parent: Global.ParticleSystemVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: FixedUpdate()
+  nameWithType: ParticleSystemVisualEffect.FixedUpdate()
+  fullName: ParticleSystemVisualEffect.FixedUpdate()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FixedUpdate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
+    startLine: 8
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void FixedUpdate()
+    content.vb: Public Overrides Sub FixedUpdate()
+  overridden: Global.VisualEffectBase.FixedUpdate
+  overload: Global.ParticleSystemVisualEffect.FixedUpdate*
 - uid: Global.ParticleSystemVisualEffect.Play
   commentId: M:Global.ParticleSystemVisualEffect.Play
   id: Play
@@ -125,7 +162,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Play
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
-    startLine: 10
+    startLine: 16
   assemblies:
   - rwby
   namespace: Global
@@ -153,7 +190,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Freeze
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
-    startLine: 20
+    startLine: 26
   assemblies:
   - rwby
   namespace: Global
@@ -181,7 +218,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Resume
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
-    startLine: 29
+    startLine: 35
   assemblies:
   - rwby
   namespace: Global
@@ -209,7 +246,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SeekTo
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
-    startLine: 38
+    startLine: 44
   assemblies:
   - rwby
   namespace: Global
@@ -245,7 +282,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Stop
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
-    startLine: 48
+    startLine: 54
   assemblies:
   - rwby
   namespace: Global
@@ -279,7 +316,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: DestroyEffect
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
-    startLine: 58
+    startLine: 64
   assemblies:
   - rwby
   namespace: Global
@@ -307,7 +344,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SetSeed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
-    startLine: 64
+    startLine: 75
   assemblies:
   - rwby
   namespace: Global
@@ -323,6 +360,34 @@ items:
   nameWithType.vb: ParticleSystemVisualEffect.SetSeed(UInteger)
   fullName.vb: ParticleSystemVisualEffect.SetSeed(UInteger)
   name.vb: SetSeed(UInteger)
+- uid: Global.ParticleSystemVisualEffect.UpdatePlayRate
+  commentId: M:Global.ParticleSystemVisualEffect.UpdatePlayRate
+  id: UpdatePlayRate
+  parent: Global.ParticleSystemVisualEffect
+  langs:
+  - csharp
+  - vb
+  name: UpdatePlayRate()
+  nameWithType: ParticleSystemVisualEffect.UpdatePlayRate()
+  fullName: ParticleSystemVisualEffect.UpdatePlayRate()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdatePlayRate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/ParticleSystemVisualEffect.cs
+    startLine: 83
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: protected override void UpdatePlayRate()
+    content.vb: Protected Overrides Sub UpdatePlayRate()
+  overridden: Global.VisualEffectBase.UpdatePlayRate
+  overload: Global.ParticleSystemVisualEffect.UpdatePlayRate*
 references:
 - uid: Global
 - uid: System.Object
@@ -370,6 +435,27 @@ references:
   name: VisualEffectBase
   nameWithType: VisualEffectBase
   fullName: VisualEffectBase
+- uid: Global.VisualEffectBase.WhenEffectDestroyed
+  commentId: F:Global.VisualEffectBase.WhenEffectDestroyed
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_WhenEffectDestroyed
+  name: WhenEffectDestroyed
+  nameWithType: VisualEffectBase.WhenEffectDestroyed
+  fullName: VisualEffectBase.WhenEffectDestroyed
+- uid: Global.VisualEffectBase.PlayRate
+  commentId: P:Global.VisualEffectBase.PlayRate
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_PlayRate
+  name: PlayRate
+  nameWithType: VisualEffectBase.PlayRate
+  fullName: VisualEffectBase.PlayRate
+- uid: Global.VisualEffectBase.playRate
+  commentId: F:Global.VisualEffectBase.playRate
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_playRate
+  name: playRate
+  nameWithType: VisualEffectBase.playRate
+  fullName: VisualEffectBase.playRate
 - uid: Global.VisualEffectBase.status
   commentId: F:Global.VisualEffectBase.status
   parent: Global.VisualEffectBase
@@ -391,6 +477,27 @@ references:
   name: autoDestroyAfter
   nameWithType: VisualEffectBase.autoDestroyAfter
   fullName: VisualEffectBase.autoDestroyAfter
+- uid: Global.VisualEffectBase.autoStop
+  commentId: F:Global.VisualEffectBase.autoStop
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_autoStop
+  name: autoStop
+  nameWithType: VisualEffectBase.autoStop
+  fullName: VisualEffectBase.autoStop
+- uid: Global.VisualEffectBase.autoStopAfter
+  commentId: F:Global.VisualEffectBase.autoStopAfter
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_autoStopAfter
+  name: autoStopAfter
+  nameWithType: VisualEffectBase.autoStopAfter
+  fullName: VisualEffectBase.autoStopAfter
+- uid: Global.VisualEffectBase.destoryTimer
+  commentId: F:Global.VisualEffectBase.destoryTimer
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_destoryTimer
+  name: destoryTimer
+  nameWithType: VisualEffectBase.destoryTimer
+  fullName: VisualEffectBase.destoryTimer
 - uid: Global.VisualEffectBase.entryAsset
   commentId: F:Global.VisualEffectBase.entryAsset
   parent: Global.VisualEffectBase
@@ -405,23 +512,30 @@ references:
   name: freezeDuringHitstop
   nameWithType: VisualEffectBase.freezeDuringHitstop
   fullName: VisualEffectBase.freezeDuringHitstop
-- uid: Global.VisualEffectBase.FixedUpdate
-  commentId: M:Global.VisualEffectBase.FixedUpdate
+- uid: Global.VisualEffectBase.sourcePool
+  commentId: F:Global.VisualEffectBase.sourcePool
   parent: Global.VisualEffectBase
-  href: Global.VisualEffectBase.html#VisualEffectBase_FixedUpdate
-  name: FixedUpdate()
-  nameWithType: VisualEffectBase.FixedUpdate()
-  fullName: VisualEffectBase.FixedUpdate()
+  href: Global.VisualEffectBase.html#VisualEffectBase_sourcePool
+  name: sourcePool
+  nameWithType: VisualEffectBase.sourcePool
+  fullName: VisualEffectBase.sourcePool
+- uid: Global.VisualEffectBase.Reinitialize
+  commentId: M:Global.VisualEffectBase.Reinitialize
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_Reinitialize
+  name: Reinitialize()
+  nameWithType: VisualEffectBase.Reinitialize()
+  fullName: VisualEffectBase.Reinitialize()
   spec.csharp:
-  - uid: Global.VisualEffectBase.FixedUpdate
-    name: FixedUpdate
-    href: Global.VisualEffectBase.html#VisualEffectBase_FixedUpdate
+  - uid: Global.VisualEffectBase.Reinitialize
+    name: Reinitialize
+    href: Global.VisualEffectBase.html#VisualEffectBase_Reinitialize
   - name: (
   - name: )
   spec.vb:
-  - uid: Global.VisualEffectBase.FixedUpdate
-    name: FixedUpdate
-    href: Global.VisualEffectBase.html#VisualEffectBase_FixedUpdate
+  - uid: Global.VisualEffectBase.Reinitialize
+    name: Reinitialize
+    href: Global.VisualEffectBase.html#VisualEffectBase_Reinitialize
   - name: (
   - name: )
 - uid: System
@@ -481,6 +595,31 @@ references:
     isExternal: true
   - name: (
   - name: )
+- uid: Global.VisualEffectBase.FixedUpdate
+  commentId: M:Global.VisualEffectBase.FixedUpdate
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_FixedUpdate
+  name: FixedUpdate()
+  nameWithType: VisualEffectBase.FixedUpdate()
+  fullName: VisualEffectBase.FixedUpdate()
+  spec.csharp:
+  - uid: Global.VisualEffectBase.FixedUpdate
+    name: FixedUpdate
+    href: Global.VisualEffectBase.html#VisualEffectBase_FixedUpdate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.FixedUpdate
+    name: FixedUpdate
+    href: Global.VisualEffectBase.html#VisualEffectBase_FixedUpdate
+  - name: (
+  - name: )
+- uid: Global.ParticleSystemVisualEffect.FixedUpdate*
+  commentId: Overload:Global.ParticleSystemVisualEffect.FixedUpdate
+  href: Global.ParticleSystemVisualEffect.html#ParticleSystemVisualEffect_FixedUpdate
+  name: FixedUpdate
+  nameWithType: ParticleSystemVisualEffect.FixedUpdate
+  fullName: ParticleSystemVisualEffect.FixedUpdate
 - uid: Global.VisualEffectBase.Play
   commentId: M:Global.VisualEffectBase.Play
   parent: Global.VisualEffectBase
@@ -726,3 +865,28 @@ references:
   nameWithType.vb: UInteger
   fullName.vb: UInteger
   name.vb: UInteger
+- uid: Global.VisualEffectBase.UpdatePlayRate
+  commentId: M:Global.VisualEffectBase.UpdatePlayRate
+  parent: Global.VisualEffectBase
+  href: Global.VisualEffectBase.html#VisualEffectBase_UpdatePlayRate
+  name: UpdatePlayRate()
+  nameWithType: VisualEffectBase.UpdatePlayRate()
+  fullName: VisualEffectBase.UpdatePlayRate()
+  spec.csharp:
+  - uid: Global.VisualEffectBase.UpdatePlayRate
+    name: UpdatePlayRate
+    href: Global.VisualEffectBase.html#VisualEffectBase_UpdatePlayRate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.VisualEffectBase.UpdatePlayRate
+    name: UpdatePlayRate
+    href: Global.VisualEffectBase.html#VisualEffectBase_UpdatePlayRate
+  - name: (
+  - name: )
+- uid: Global.ParticleSystemVisualEffect.UpdatePlayRate*
+  commentId: Overload:Global.ParticleSystemVisualEffect.UpdatePlayRate
+  href: Global.ParticleSystemVisualEffect.html#ParticleSystemVisualEffect_UpdatePlayRate
+  name: UpdatePlayRate
+  nameWithType: ParticleSystemVisualEffect.UpdatePlayRate
+  fullName: ParticleSystemVisualEffect.UpdatePlayRate

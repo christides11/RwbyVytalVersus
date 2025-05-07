@@ -10,14 +10,23 @@ items:
   - Global.VisualEffectBase.FixedUpdate
   - Global.VisualEffectBase.Freeze
   - Global.VisualEffectBase.Play
+  - Global.VisualEffectBase.PlayRate
+  - Global.VisualEffectBase.Reinitialize
   - Global.VisualEffectBase.Resume
   - Global.VisualEffectBase.SeekTo(System.Single,System.Boolean)
   - Global.VisualEffectBase.SetSeed(System.UInt32)
   - Global.VisualEffectBase.Stop(System.Boolean)
+  - Global.VisualEffectBase.UpdatePlayRate
+  - Global.VisualEffectBase.WhenEffectDestroyed
   - Global.VisualEffectBase.autoDestroy
   - Global.VisualEffectBase.autoDestroyAfter
+  - Global.VisualEffectBase.autoStop
+  - Global.VisualEffectBase.autoStopAfter
+  - Global.VisualEffectBase.destoryTimer
   - Global.VisualEffectBase.entryAsset
   - Global.VisualEffectBase.freezeDuringHitstop
+  - Global.VisualEffectBase.playRate
+  - Global.VisualEffectBase.sourcePool
   - Global.VisualEffectBase.status
   langs:
   - csharp
@@ -33,7 +42,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: VisualEffectBase
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - rwby
   namespace: Global
@@ -47,10 +56,38 @@ items:
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
   derivedClasses:
+  - Global.AnimancerSoloAnimationVisualEffect
   - Global.AnimancerVisualEffect
   - Global.GroupVisualEffect
   - Global.ParticleSystemVisualEffect
   - Global.VFXGraphVisualEffect
+- uid: Global.VisualEffectBase.WhenEffectDestroyed
+  commentId: F:Global.VisualEffectBase.WhenEffectDestroyed
+  id: WhenEffectDestroyed
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: WhenEffectDestroyed
+  nameWithType: VisualEffectBase.WhenEffectDestroyed
+  fullName: VisualEffectBase.WhenEffectDestroyed
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: WhenEffectDestroyed
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 8
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public VisualEffectBase.EffectDelegate WhenEffectDestroyed
+    return:
+      type: Global.VisualEffectBase.EffectDelegate
+    content.vb: Public WhenEffectDestroyed As VisualEffectBase.EffectDelegate
 - uid: Global.VisualEffectBase.CurrentTime
   commentId: P:Global.VisualEffectBase.CurrentTime
   id: CurrentTime
@@ -69,7 +106,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CurrentTime
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 13
+    startLine: 17
   assemblies:
   - rwby
   namespace: Global
@@ -80,6 +117,62 @@ items:
       type: System.Single
     content.vb: Public Overridable Property CurrentTime As Single
   overload: Global.VisualEffectBase.CurrentTime*
+- uid: Global.VisualEffectBase.PlayRate
+  commentId: P:Global.VisualEffectBase.PlayRate
+  id: PlayRate
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: PlayRate
+  nameWithType: VisualEffectBase.PlayRate
+  fullName: VisualEffectBase.PlayRate
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: PlayRate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 19
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual float PlayRate { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Overridable Property PlayRate As Single
+  overload: Global.VisualEffectBase.PlayRate*
+- uid: Global.VisualEffectBase.playRate
+  commentId: F:Global.VisualEffectBase.playRate
+  id: playRate
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: playRate
+  nameWithType: VisualEffectBase.playRate
+  fullName: VisualEffectBase.playRate
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playRate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 33
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: protected float playRate
+    return:
+      type: System.Single
+    content.vb: Protected playRate As Single
 - uid: Global.VisualEffectBase.status
   commentId: F:Global.VisualEffectBase.status
   id: status
@@ -98,7 +191,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: status
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 15
+    startLine: 35
   assemblies:
   - rwby
   namespace: Global
@@ -125,7 +218,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: autoDestroy
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 17
+    startLine: 37
   assemblies:
   - rwby
   namespace: Global
@@ -152,7 +245,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: autoDestroyAfter
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 18
+    startLine: 38
   assemblies:
   - rwby
   namespace: Global
@@ -161,6 +254,87 @@ items:
     return:
       type: System.Single
     content.vb: Public autoDestroyAfter As Single
+- uid: Global.VisualEffectBase.autoStop
+  commentId: F:Global.VisualEffectBase.autoStop
+  id: autoStop
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: autoStop
+  nameWithType: VisualEffectBase.autoStop
+  fullName: VisualEffectBase.autoStop
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: autoStop
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 39
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public bool autoStop
+    return:
+      type: System.Boolean
+    content.vb: Public autoStop As Boolean
+- uid: Global.VisualEffectBase.autoStopAfter
+  commentId: F:Global.VisualEffectBase.autoStopAfter
+  id: autoStopAfter
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: autoStopAfter
+  nameWithType: VisualEffectBase.autoStopAfter
+  fullName: VisualEffectBase.autoStopAfter
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: autoStopAfter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 40
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public float autoStopAfter
+    return:
+      type: System.Single
+    content.vb: Public autoStopAfter As Single
+- uid: Global.VisualEffectBase.destoryTimer
+  commentId: F:Global.VisualEffectBase.destoryTimer
+  id: destoryTimer
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: destoryTimer
+  nameWithType: VisualEffectBase.destoryTimer
+  fullName: VisualEffectBase.destoryTimer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: destoryTimer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 41
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: protected float destoryTimer
+    return:
+      type: System.Single
+    content.vb: Protected destoryTimer As Single
 - uid: Global.VisualEffectBase.entryAsset
   commentId: F:Global.VisualEffectBase.entryAsset
   id: entryAsset
@@ -179,7 +353,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: entryAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 21
+    startLine: 43
   assemblies:
   - rwby
   namespace: Global
@@ -216,7 +390,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: freezeDuringHitstop
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 22
+    startLine: 44
   assemblies:
   - rwby
   namespace: Global
@@ -225,6 +399,33 @@ items:
     return:
       type: System.Boolean
     content.vb: Public freezeDuringHitstop As Boolean
+- uid: Global.VisualEffectBase.sourcePool
+  commentId: F:Global.VisualEffectBase.sourcePool
+  id: sourcePool
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: sourcePool
+  nameWithType: VisualEffectBase.sourcePool
+  fullName: VisualEffectBase.sourcePool
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: sourcePool
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 46
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public ObjectPool<VisualEffectBase> sourcePool
+    return:
+      type: UnityEngine.Pool.ObjectPool{VisualEffectBase}
+    content.vb: Public sourcePool As ObjectPool(Of VisualEffectBase)
 - uid: Global.VisualEffectBase.FixedUpdate
   commentId: M:Global.VisualEffectBase.FixedUpdate
   id: FixedUpdate
@@ -243,7 +444,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: FixedUpdate
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 24
+    startLine: 48
   assemblies:
   - rwby
   namespace: Global
@@ -269,7 +470,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Play
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 31
+    startLine: 55
   assemblies:
   - rwby
   namespace: Global
@@ -295,7 +496,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Freeze
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 36
+    startLine: 60
   assemblies:
   - rwby
   namespace: Global
@@ -321,7 +522,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Resume
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 41
+    startLine: 65
   assemblies:
   - rwby
   namespace: Global
@@ -347,7 +548,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SeekTo
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 46
+    startLine: 70
   assemblies:
   - rwby
   namespace: Global
@@ -381,7 +582,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Stop
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 51
+    startLine: 75
   assemblies:
   - rwby
   namespace: Global
@@ -413,7 +614,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: DestroyEffect
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 56
+    startLine: 80
   assemblies:
   - rwby
   namespace: Global
@@ -439,7 +640,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SetSeed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
-    startLine: 61
+    startLine: 85
   assemblies:
   - rwby
   namespace: Global
@@ -453,6 +654,58 @@ items:
   nameWithType.vb: VisualEffectBase.SetSeed(UInteger)
   fullName.vb: VisualEffectBase.SetSeed(UInteger)
   name.vb: SetSeed(UInteger)
+- uid: Global.VisualEffectBase.UpdatePlayRate
+  commentId: M:Global.VisualEffectBase.UpdatePlayRate
+  id: UpdatePlayRate
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: UpdatePlayRate()
+  nameWithType: VisualEffectBase.UpdatePlayRate()
+  fullName: VisualEffectBase.UpdatePlayRate()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: UpdatePlayRate
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 90
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: protected virtual void UpdatePlayRate()
+    content.vb: Protected Overridable Sub UpdatePlayRate()
+  overload: Global.VisualEffectBase.UpdatePlayRate*
+- uid: Global.VisualEffectBase.Reinitialize
+  commentId: M:Global.VisualEffectBase.Reinitialize
+  id: Reinitialize
+  parent: Global.VisualEffectBase
+  langs:
+  - csharp
+  - vb
+  name: Reinitialize()
+  nameWithType: VisualEffectBase.Reinitialize()
+  fullName: VisualEffectBase.Reinitialize()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Reinitialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/VisualEffectBase.cs
+    startLine: 95
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public virtual void Reinitialize()
+    content.vb: Public Overridable Sub Reinitialize()
+  overload: Global.VisualEffectBase.Reinitialize*
 references:
 - uid: Global
 - uid: System.Object
@@ -507,6 +760,28 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: Global.VisualEffectBase.EffectDelegate
+  commentId: T:Global.VisualEffectBase.EffectDelegate
+  href: VisualEffectBase.html
+  name: VisualEffectBase.EffectDelegate
+  nameWithType: VisualEffectBase.EffectDelegate
+  fullName: VisualEffectBase.EffectDelegate
+  spec.csharp:
+  - uid: Global.VisualEffectBase
+    name: VisualEffectBase
+    href: VisualEffectBase.html
+  - name: .
+  - uid: Global.VisualEffectBase.EffectDelegate
+    name: EffectDelegate
+    href: VisualEffectBase.EffectDelegate.html
+  spec.vb:
+  - uid: Global.VisualEffectBase
+    name: VisualEffectBase
+    href: VisualEffectBase.html
+  - name: .
+  - uid: Global.VisualEffectBase.EffectDelegate
+    name: EffectDelegate
+    href: VisualEffectBase.EffectDelegate.html
 - uid: Global.VisualEffectBase.CurrentTime*
   commentId: Overload:Global.VisualEffectBase.CurrentTime
   href: Global.VisualEffectBase.html#VisualEffectBase_CurrentTime
@@ -524,6 +799,12 @@ references:
   nameWithType.vb: Single
   fullName.vb: Single
   name.vb: Single
+- uid: Global.VisualEffectBase.PlayRate*
+  commentId: Overload:Global.VisualEffectBase.PlayRate
+  href: Global.VisualEffectBase.html#VisualEffectBase_PlayRate
+  name: PlayRate
+  nameWithType: VisualEffectBase.PlayRate
+  fullName: VisualEffectBase.PlayRate
 - uid: Global.VisualEffectBase.VisualEffectPlayStatus
   commentId: T:Global.VisualEffectBase.VisualEffectPlayStatus
   href: VisualEffectBase.html
@@ -570,6 +851,84 @@ references:
   name: Quantum
   nameWithType: Quantum
   fullName: Quantum
+- uid: UnityEngine.Pool.ObjectPool{VisualEffectBase}
+  commentId: T:UnityEngine.Pool.ObjectPool{VisualEffectBase}
+  parent: UnityEngine.Pool
+  definition: UnityEngine.Pool.ObjectPool`1
+  href: VisualEffectBase.html
+  name: ObjectPool<VisualEffectBase>
+  nameWithType: ObjectPool<VisualEffectBase>
+  fullName: UnityEngine.Pool.ObjectPool<VisualEffectBase>
+  nameWithType.vb: ObjectPool(Of VisualEffectBase)
+  fullName.vb: UnityEngine.Pool.ObjectPool(Of VisualEffectBase)
+  name.vb: ObjectPool(Of VisualEffectBase)
+  spec.csharp:
+  - uid: UnityEngine.Pool.ObjectPool`1
+    name: ObjectPool
+    isExternal: true
+  - name: <
+  - uid: Global.VisualEffectBase
+    name: VisualEffectBase
+    href: VisualEffectBase.html
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Pool.ObjectPool`1
+    name: ObjectPool
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.VisualEffectBase
+    name: VisualEffectBase
+    href: VisualEffectBase.html
+  - name: )
+- uid: UnityEngine.Pool.ObjectPool`1
+  commentId: T:UnityEngine.Pool.ObjectPool`1
+  isExternal: true
+  name: ObjectPool<T>
+  nameWithType: ObjectPool<T>
+  fullName: UnityEngine.Pool.ObjectPool<T>
+  nameWithType.vb: ObjectPool(Of T)
+  fullName.vb: UnityEngine.Pool.ObjectPool(Of T)
+  name.vb: ObjectPool(Of T)
+  spec.csharp:
+  - uid: UnityEngine.Pool.ObjectPool`1
+    name: ObjectPool
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Pool.ObjectPool`1
+    name: ObjectPool
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UnityEngine.Pool
+  commentId: N:UnityEngine.Pool
+  isExternal: true
+  name: UnityEngine.Pool
+  nameWithType: UnityEngine.Pool
+  fullName: UnityEngine.Pool
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Pool
+    name: Pool
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Pool
+    name: Pool
+    isExternal: true
 - uid: Global.VisualEffectBase.FixedUpdate*
   commentId: Overload:Global.VisualEffectBase.FixedUpdate
   href: Global.VisualEffectBase.html#VisualEffectBase_FixedUpdate
@@ -629,3 +988,15 @@ references:
   nameWithType.vb: UInteger
   fullName.vb: UInteger
   name.vb: UInteger
+- uid: Global.VisualEffectBase.UpdatePlayRate*
+  commentId: Overload:Global.VisualEffectBase.UpdatePlayRate
+  href: Global.VisualEffectBase.html#VisualEffectBase_UpdatePlayRate
+  name: UpdatePlayRate
+  nameWithType: VisualEffectBase.UpdatePlayRate
+  fullName: VisualEffectBase.UpdatePlayRate
+- uid: Global.VisualEffectBase.Reinitialize*
+  commentId: Overload:Global.VisualEffectBase.Reinitialize
+  href: Global.VisualEffectBase.html#VisualEffectBase_Reinitialize
+  name: Reinitialize
+  nameWithType: VisualEffectBase.Reinitialize
+  fullName: VisualEffectBase.Reinitialize

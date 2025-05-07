@@ -24,8 +24,8 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public abstract class StateFunctionBoolList : HNSFStateFunction<QList<bool>>'
-    content.vb: Public MustInherit Class StateFunctionBoolList Inherits HNSFStateFunction(Of QList(Of Boolean))
+    content: 'public abstract class StateFunctionBoolList : HNSFStateFunction<QList<bool>>, ILogSource'
+    content.vb: Public MustInherit Class StateFunctionBoolList Inherits HNSFStateFunction(Of QList(Of Boolean)) Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -33,6 +33,8 @@ items:
   - Quantum.AssetObject
   - Quantum.HNSFStateFunction
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Boolean}}
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Boolean}}.Label
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Boolean}}.Execute(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -138,6 +140,13 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
   - name: )
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Boolean}}.Label
   commentId: F:Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Boolean}}.Label
   parent: Quantum.HNSFStateFunction{Quantum.Collections.QList{System.Boolean}}

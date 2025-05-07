@@ -5,8 +5,9 @@ items:
   id: HudElementGenericHealthbar
   parent: rwby.core
   children:
+  - rwby.core.HudElementGenericHealthbar.Bind(Quantum.PlayerRef,Quantum.EntityRef)
   - rwby.core.HudElementGenericHealthbar.FighterDef
-  - rwby.core.HudElementGenericHealthbar.Initialize(System.Int32,System.Int32)
+  - rwby.core.HudElementGenericHealthbar.Initialize(Quantum.QuantumRunner)
   - rwby.core.HudElementGenericHealthbar.RootCanvas
   - rwby.core.HudElementGenericHealthbar.Teardown
   - rwby.core.HudElementGenericHealthbar.backBar
@@ -14,11 +15,9 @@ items:
   - rwby.core.HudElementGenericHealthbar.chipSpeed
   - rwby.core.HudElementGenericHealthbar.fighterEntityView
   - rwby.core.HudElementGenericHealthbar.frontBar
-  - rwby.core.HudElementGenericHealthbar.globalPlayerID
   - rwby.core.HudElementGenericHealthbar.healthValue
   - rwby.core.HudElementGenericHealthbar.healthbarHealthCurve
   - rwby.core.HudElementGenericHealthbar.lerpTime
-  - rwby.core.HudElementGenericHealthbar.localPlayerID
   - rwby.core.HudElementGenericHealthbar.maxHealthValue
   langs:
   - csharp
@@ -82,60 +81,6 @@ items:
   overload: rwby.core.HudElementGenericHealthbar.FighterDef*
   implements:
   - rwby.IFighterDefinitionUser.FighterDef
-- uid: rwby.core.HudElementGenericHealthbar.globalPlayerID
-  commentId: F:rwby.core.HudElementGenericHealthbar.globalPlayerID
-  id: globalPlayerID
-  parent: rwby.core.HudElementGenericHealthbar
-  langs:
-  - csharp
-  - vb
-  name: globalPlayerID
-  nameWithType: HudElementGenericHealthbar.globalPlayerID
-  fullName: rwby.core.HudElementGenericHealthbar.globalPlayerID
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: globalPlayerID
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 13
-  assemblies:
-  - Assembly-CSharp
-  namespace: rwby.core
-  syntax:
-    content: public int globalPlayerID
-    return:
-      type: System.Int32
-    content.vb: Public globalPlayerID As Integer
-- uid: rwby.core.HudElementGenericHealthbar.localPlayerID
-  commentId: F:rwby.core.HudElementGenericHealthbar.localPlayerID
-  id: localPlayerID
-  parent: rwby.core.HudElementGenericHealthbar
-  langs:
-  - csharp
-  - vb
-  name: localPlayerID
-  nameWithType: HudElementGenericHealthbar.localPlayerID
-  fullName: rwby.core.HudElementGenericHealthbar.localPlayerID
-  type: Field
-  source:
-    remote:
-      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-      branch: dev
-      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: localPlayerID
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 14
-  assemblies:
-  - Assembly-CSharp
-  namespace: rwby.core
-  syntax:
-    content: public int localPlayerID
-    return:
-      type: System.Int32
-    content.vb: Public localPlayerID As Integer
 - uid: rwby.core.HudElementGenericHealthbar.fighterEntityView
   commentId: F:rwby.core.HudElementGenericHealthbar.fighterEntityView
   id: fighterEntityView
@@ -154,7 +99,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: fighterEntityView
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 16
+    startLine: 13
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -181,7 +126,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: backBar
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 18
+    startLine: 15
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -208,7 +153,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: frontBar
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 19
+    startLine: 16
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -235,7 +180,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: healthValue
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 21
+    startLine: 18
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -272,7 +217,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: maxHealthValue
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 22
+    startLine: 19
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -309,7 +254,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: lerpTime
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 23
+    startLine: 20
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -346,7 +291,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: chipSpeed
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 24
+    startLine: 21
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -373,7 +318,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: chipDelay
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 25
+    startLine: 22
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -400,7 +345,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: healthbarHealthCurve
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 27
+    startLine: 24
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -427,7 +372,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RootCanvas
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 29
+    startLine: 26
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -441,16 +386,16 @@ items:
   overload: rwby.core.HudElementGenericHealthbar.RootCanvas*
   implements:
   - rwby.IHUDElement.RootCanvas
-- uid: rwby.core.HudElementGenericHealthbar.Initialize(System.Int32,System.Int32)
-  commentId: M:rwby.core.HudElementGenericHealthbar.Initialize(System.Int32,System.Int32)
-  id: Initialize(System.Int32,System.Int32)
+- uid: rwby.core.HudElementGenericHealthbar.Initialize(Quantum.QuantumRunner)
+  commentId: M:rwby.core.HudElementGenericHealthbar.Initialize(Quantum.QuantumRunner)
+  id: Initialize(Quantum.QuantumRunner)
   parent: rwby.core.HudElementGenericHealthbar
   langs:
   - csharp
   - vb
-  name: Initialize(int, int)
-  nameWithType: HudElementGenericHealthbar.Initialize(int, int)
-  fullName: rwby.core.HudElementGenericHealthbar.Initialize(int, int)
+  name: Initialize(QuantumRunner)
+  nameWithType: HudElementGenericHealthbar.Initialize(QuantumRunner)
+  fullName: rwby.core.HudElementGenericHealthbar.Initialize(Quantum.QuantumRunner)
   type: Method
   source:
     remote:
@@ -459,25 +404,54 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Initialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 31
+    startLine: 28
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
   example: []
   syntax:
-    content: public void Initialize(int localPlayerID, int networkPlayerID)
+    content: public void Initialize(QuantumRunner quantumRunner)
     parameters:
-    - id: localPlayerID
-      type: System.Int32
-    - id: networkPlayerID
-      type: System.Int32
-    content.vb: Public Sub Initialize(localPlayerID As Integer, networkPlayerID As Integer)
+    - id: quantumRunner
+      type: Quantum.QuantumRunner
+    content.vb: Public Sub Initialize(quantumRunner As QuantumRunner)
   overload: rwby.core.HudElementGenericHealthbar.Initialize*
   implements:
-  - rwby.IHUDElement.Initialize(System.Int32,System.Int32)
-  nameWithType.vb: HudElementGenericHealthbar.Initialize(Integer, Integer)
-  fullName.vb: rwby.core.HudElementGenericHealthbar.Initialize(Integer, Integer)
-  name.vb: Initialize(Integer, Integer)
+  - rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+- uid: rwby.core.HudElementGenericHealthbar.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  commentId: M:rwby.core.HudElementGenericHealthbar.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  id: Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  parent: rwby.core.HudElementGenericHealthbar
+  langs:
+  - csharp
+  - vb
+  name: Bind(PlayerRef, EntityRef)
+  nameWithType: HudElementGenericHealthbar.Bind(PlayerRef, EntityRef)
+  fullName: rwby.core.HudElementGenericHealthbar.Bind(Quantum.PlayerRef, Quantum.EntityRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Bind
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
+    startLine: 34
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Bind(PlayerRef playerRef, EntityRef entityRef)
+    parameters:
+    - id: playerRef
+      type: Quantum.PlayerRef
+    - id: entityRef
+      type: Quantum.EntityRef
+    content.vb: Public Sub Bind(playerRef As PlayerRef, entityRef As EntityRef)
+  overload: rwby.core.HudElementGenericHealthbar.Bind*
+  implements:
+  - rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
 - uid: rwby.core.HudElementGenericHealthbar.Teardown
   commentId: M:rwby.core.HudElementGenericHealthbar.Teardown
   id: Teardown
@@ -496,7 +470,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Teardown
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/_Common/HudElementGenericHealthbar.cs
-    startLine: 89
+    startLine: 87
   assemblies:
   - Assembly-CSharp
   namespace: rwby.core
@@ -620,17 +594,6 @@ references:
   name: IFighterDefinition
   nameWithType: IFighterDefinition
   fullName: IFighterDefinition
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: Quantum.QuantumEntityView
   commentId: T:Quantum.QuantumEntityView
   parent: Quantum
@@ -672,6 +635,17 @@ references:
   - uid: UnityEngine.UI
     name: UI
     isExternal: true
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: System.Single
   commentId: T:System.Single
   parent: System
@@ -711,51 +685,89 @@ references:
   fullName: UnityEngine.Canvas
 - uid: rwby.core.HudElementGenericHealthbar.Initialize*
   commentId: Overload:rwby.core.HudElementGenericHealthbar.Initialize
-  href: rwby.core.HudElementGenericHealthbar.html#rwby_core_HudElementGenericHealthbar_Initialize_System_Int32_System_Int32_
+  href: rwby.core.HudElementGenericHealthbar.html#rwby_core_HudElementGenericHealthbar_Initialize_Quantum_QuantumRunner_
   name: Initialize
   nameWithType: HudElementGenericHealthbar.Initialize
   fullName: rwby.core.HudElementGenericHealthbar.Initialize
-- uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
-  commentId: M:rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+- uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+  commentId: M:rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
   parent: rwby.IHUDElement
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: Initialize(int, int)
-  nameWithType: IHUDElement.Initialize(int, int)
-  fullName: rwby.IHUDElement.Initialize(int, int)
-  nameWithType.vb: IHUDElement.Initialize(Integer, Integer)
-  fullName.vb: rwby.IHUDElement.Initialize(Integer, Integer)
-  name.vb: Initialize(Integer, Integer)
+  name: Initialize(QuantumRunner)
+  nameWithType: IHUDElement.Initialize(QuantumRunner)
+  fullName: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
   spec.csharp:
-  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  - uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
     name: Initialize
   - name: (
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - uid: Quantum.QuantumRunner
+    name: QuantumRunner
   - name: )
   spec.vb:
-  - uid: rwby.IHUDElement.Initialize(System.Int32,System.Int32)
+  - uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
     name: Initialize
   - name: (
-  - uid: System.Int32
-    name: Integer
+  - uid: Quantum.QuantumRunner
+    name: QuantumRunner
+  - name: )
+- uid: Quantum.QuantumRunner
+  commentId: T:Quantum.QuantumRunner
+  parent: Quantum
+  name: QuantumRunner
+  nameWithType: QuantumRunner
+  fullName: Quantum.QuantumRunner
+- uid: rwby.core.HudElementGenericHealthbar.Bind*
+  commentId: Overload:rwby.core.HudElementGenericHealthbar.Bind
+  href: rwby.core.HudElementGenericHealthbar.html#rwby_core_HudElementGenericHealthbar_Bind_Quantum_PlayerRef_Quantum_EntityRef_
+  name: Bind
+  nameWithType: HudElementGenericHealthbar.Bind
+  fullName: rwby.core.HudElementGenericHealthbar.Bind
+- uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  commentId: M:rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  parent: rwby.IHUDElement
+  isExternal: true
+  name: Bind(PlayerRef, EntityRef)
+  nameWithType: IHUDElement.Bind(PlayerRef, EntityRef)
+  fullName: rwby.IHUDElement.Bind(Quantum.PlayerRef, Quantum.EntityRef)
+  spec.csharp:
+  - uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+    name: Bind
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
-  - uid: System.Int32
-    name: Integer
+  - uid: Quantum.EntityRef
+    name: EntityRef
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+    name: Bind
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: )
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
+  parent: Quantum
+  isExternal: true
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
 - uid: rwby.core.HudElementGenericHealthbar.Teardown*
   commentId: Overload:rwby.core.HudElementGenericHealthbar.Teardown
   href: rwby.core.HudElementGenericHealthbar.html#rwby_core_HudElementGenericHealthbar_Teardown

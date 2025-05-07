@@ -1,0 +1,648 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.FighterVisualPositioner
+  commentId: T:Global.FighterVisualPositioner
+  id: FighterVisualPositioner
+  parent: Global
+  children:
+  - Global.FighterVisualPositioner.BuildBoneMap
+  - Global.FighterVisualPositioner.GetBone(Quantum.AssetRef{Quantum.Tag})
+  - Global.FighterVisualPositioner.GetClosestVisualPosition(UnityEngine.Vector3)
+  - Global.FighterVisualPositioner.GetClosestVisualPositionByYNoXZ(UnityEngine.Vector3)
+  - Global.FighterVisualPositioner.GetClosestVisualPositionNoXZ(UnityEngine.Vector3)
+  - Global.FighterVisualPositioner.GetClosestVisualTransform(UnityEngine.Vector3)
+  - Global.FighterVisualPositioner.boneMap
+  - Global.FighterVisualPositioner.tagToBones
+  - Global.FighterVisualPositioner.visualPositions
+  langs:
+  - csharp
+  - vb
+  name: FighterVisualPositioner
+  nameWithType: FighterVisualPositioner
+  fullName: FighterVisualPositioner
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FighterVisualPositioner
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+    startLine: 4
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: 'public class FighterVisualPositioner : MonoBehaviour'
+    content.vb: Public Class FighterVisualPositioner Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: Global.FighterVisualPositioner.boneMap
+  commentId: F:Global.FighterVisualPositioner.boneMap
+  id: boneMap
+  parent: Global.FighterVisualPositioner
+  langs:
+  - csharp
+  - vb
+  name: boneMap
+  nameWithType: FighterVisualPositioner.boneMap
+  fullName: FighterVisualPositioner.boneMap
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: boneMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+    startLine: 14
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Dictionary<AssetRef<Tag>, GameObject> boneMap
+    return:
+      type: System.Collections.Generic.Dictionary{Quantum.AssetRef{Quantum.Tag},UnityEngine.GameObject}
+    content.vb: Public boneMap As Dictionary(Of AssetRef(Of Tag), GameObject)
+- uid: Global.FighterVisualPositioner.visualPositions
+  commentId: F:Global.FighterVisualPositioner.visualPositions
+  id: visualPositions
+  parent: Global.FighterVisualPositioner
+  langs:
+  - csharp
+  - vb
+  name: visualPositions
+  nameWithType: FighterVisualPositioner.visualPositions
+  fullName: FighterVisualPositioner.visualPositions
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: visualPositions
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+    startLine: 16
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Transform[] visualPositions
+    return:
+      type: UnityEngine.Transform[]
+    content.vb: Public visualPositions As Transform()
+- uid: Global.FighterVisualPositioner.tagToBones
+  commentId: F:Global.FighterVisualPositioner.tagToBones
+  id: tagToBones
+  parent: Global.FighterVisualPositioner
+  langs:
+  - csharp
+  - vb
+  name: tagToBones
+  nameWithType: FighterVisualPositioner.tagToBones
+  fullName: FighterVisualPositioner.tagToBones
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: tagToBones
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+    startLine: 18
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public FighterVisualPositioner.TagBoneDefinition[] tagToBones
+    return:
+      type: Global.FighterVisualPositioner.TagBoneDefinition[]
+    content.vb: Public tagToBones As FighterVisualPositioner.TagBoneDefinition()
+- uid: Global.FighterVisualPositioner.GetBone(Quantum.AssetRef{Quantum.Tag})
+  commentId: M:Global.FighterVisualPositioner.GetBone(Quantum.AssetRef{Quantum.Tag})
+  id: GetBone(Quantum.AssetRef{Quantum.Tag})
+  parent: Global.FighterVisualPositioner
+  langs:
+  - csharp
+  - vb
+  name: GetBone(AssetRef<Tag>)
+  nameWithType: FighterVisualPositioner.GetBone(AssetRef<Tag>)
+  fullName: FighterVisualPositioner.GetBone(Quantum.AssetRef<Quantum.Tag>)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetBone
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+    startLine: 20
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public GameObject GetBone(AssetRef<Tag> tag)
+    parameters:
+    - id: tag
+      type: Quantum.AssetRef{Quantum.Tag}
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public Function GetBone(tag As AssetRef(Of Tag)) As GameObject
+  overload: Global.FighterVisualPositioner.GetBone*
+  nameWithType.vb: FighterVisualPositioner.GetBone(AssetRef(Of Tag))
+  fullName.vb: FighterVisualPositioner.GetBone(Quantum.AssetRef(Of Quantum.Tag))
+  name.vb: GetBone(AssetRef(Of Tag))
+- uid: Global.FighterVisualPositioner.BuildBoneMap
+  commentId: M:Global.FighterVisualPositioner.BuildBoneMap
+  id: BuildBoneMap
+  parent: Global.FighterVisualPositioner
+  langs:
+  - csharp
+  - vb
+  name: BuildBoneMap()
+  nameWithType: FighterVisualPositioner.BuildBoneMap()
+  fullName: FighterVisualPositioner.BuildBoneMap()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: BuildBoneMap
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+    startLine: 26
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public void BuildBoneMap()
+    content.vb: Public Sub BuildBoneMap()
+  overload: Global.FighterVisualPositioner.BuildBoneMap*
+- uid: Global.FighterVisualPositioner.GetClosestVisualTransform(UnityEngine.Vector3)
+  commentId: M:Global.FighterVisualPositioner.GetClosestVisualTransform(UnityEngine.Vector3)
+  id: GetClosestVisualTransform(UnityEngine.Vector3)
+  parent: Global.FighterVisualPositioner
+  langs:
+  - csharp
+  - vb
+  name: GetClosestVisualTransform(Vector3)
+  nameWithType: FighterVisualPositioner.GetClosestVisualTransform(Vector3)
+  fullName: FighterVisualPositioner.GetClosestVisualTransform(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetClosestVisualTransform
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+    startLine: 35
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Transform GetClosestVisualTransform(Vector3 position)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public Function GetClosestVisualTransform(position As Vector3) As Transform
+  overload: Global.FighterVisualPositioner.GetClosestVisualTransform*
+- uid: Global.FighterVisualPositioner.GetClosestVisualPosition(UnityEngine.Vector3)
+  commentId: M:Global.FighterVisualPositioner.GetClosestVisualPosition(UnityEngine.Vector3)
+  id: GetClosestVisualPosition(UnityEngine.Vector3)
+  parent: Global.FighterVisualPositioner
+  langs:
+  - csharp
+  - vb
+  name: GetClosestVisualPosition(Vector3)
+  nameWithType: FighterVisualPositioner.GetClosestVisualPosition(Vector3)
+  fullName: FighterVisualPositioner.GetClosestVisualPosition(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetClosestVisualPosition
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+    startLine: 53
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Vector3 GetClosestVisualPosition(Vector3 position)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Function GetClosestVisualPosition(position As Vector3) As Vector3
+  overload: Global.FighterVisualPositioner.GetClosestVisualPosition*
+- uid: Global.FighterVisualPositioner.GetClosestVisualPositionNoXZ(UnityEngine.Vector3)
+  commentId: M:Global.FighterVisualPositioner.GetClosestVisualPositionNoXZ(UnityEngine.Vector3)
+  id: GetClosestVisualPositionNoXZ(UnityEngine.Vector3)
+  parent: Global.FighterVisualPositioner
+  langs:
+  - csharp
+  - vb
+  name: GetClosestVisualPositionNoXZ(Vector3)
+  nameWithType: FighterVisualPositioner.GetClosestVisualPositionNoXZ(Vector3)
+  fullName: FighterVisualPositioner.GetClosestVisualPositionNoXZ(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetClosestVisualPositionNoXZ
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+    startLine: 71
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Vector3 GetClosestVisualPositionNoXZ(Vector3 position)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Function GetClosestVisualPositionNoXZ(position As Vector3) As Vector3
+  overload: Global.FighterVisualPositioner.GetClosestVisualPositionNoXZ*
+- uid: Global.FighterVisualPositioner.GetClosestVisualPositionByYNoXZ(UnityEngine.Vector3)
+  commentId: M:Global.FighterVisualPositioner.GetClosestVisualPositionByYNoXZ(UnityEngine.Vector3)
+  id: GetClosestVisualPositionByYNoXZ(UnityEngine.Vector3)
+  parent: Global.FighterVisualPositioner
+  langs:
+  - csharp
+  - vb
+  name: GetClosestVisualPositionByYNoXZ(Vector3)
+  nameWithType: FighterVisualPositioner.GetClosestVisualPositionByYNoXZ(Vector3)
+  fullName: FighterVisualPositioner.GetClosestVisualPositionByYNoXZ(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetClosestVisualPositionByYNoXZ
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/VFX/FighterVisualPositioner.cs
+    startLine: 97
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Vector3 GetClosestVisualPositionByYNoXZ(Vector3 position)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Function GetClosestVisualPositionByYNoXZ(position As Vector3) As Vector3
+  overload: Global.FighterVisualPositioner.GetClosestVisualPositionByYNoXZ*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Collections.Generic.Dictionary{Quantum.AssetRef{Quantum.Tag},UnityEngine.GameObject}
+  commentId: T:System.Collections.Generic.Dictionary{Quantum.AssetRef{Quantum.Tag},UnityEngine.GameObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<AssetRef<Tag>, GameObject>
+  nameWithType: Dictionary<AssetRef<Tag>, GameObject>
+  fullName: System.Collections.Generic.Dictionary<Quantum.AssetRef<Quantum.Tag>, UnityEngine.GameObject>
+  nameWithType.vb: Dictionary(Of AssetRef(Of Tag), GameObject)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Quantum.AssetRef(Of Quantum.Tag), UnityEngine.GameObject)
+  name.vb: Dictionary(Of AssetRef(Of Tag), GameObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.Tag
+    name: Tag
+    href: Quantum.Tag.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.Tag
+    name: Tag
+    href: Quantum.Tag.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UnityEngine.Transform[]
+  isExternal: true
+  name: Transform[]
+  nameWithType: Transform[]
+  fullName: UnityEngine.Transform[]
+  nameWithType.vb: Transform()
+  fullName.vb: UnityEngine.Transform()
+  name.vb: Transform()
+  spec.csharp:
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Global.FighterVisualPositioner.TagBoneDefinition[]
+  isExternal: true
+  href: FighterVisualPositioner.TagBoneDefinition.html
+  name: TagBoneDefinition[]
+  nameWithType: FighterVisualPositioner.TagBoneDefinition[]
+  fullName: FighterVisualPositioner.TagBoneDefinition[]
+  nameWithType.vb: FighterVisualPositioner.TagBoneDefinition()
+  fullName.vb: FighterVisualPositioner.TagBoneDefinition()
+  name.vb: TagBoneDefinition()
+  spec.csharp:
+  - uid: Global.FighterVisualPositioner.TagBoneDefinition
+    name: TagBoneDefinition
+    href: FighterVisualPositioner.TagBoneDefinition.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.FighterVisualPositioner.TagBoneDefinition
+    name: TagBoneDefinition
+    href: FighterVisualPositioner.TagBoneDefinition.html
+  - name: (
+  - name: )
+- uid: Global.FighterVisualPositioner.GetBone*
+  commentId: Overload:Global.FighterVisualPositioner.GetBone
+  href: Global.FighterVisualPositioner.html#FighterVisualPositioner_GetBone_Quantum_AssetRef_Quantum_Tag__
+  name: GetBone
+  nameWithType: FighterVisualPositioner.GetBone
+  fullName: FighterVisualPositioner.GetBone
+- uid: Quantum.AssetRef{Quantum.Tag}
+  commentId: T:Quantum.AssetRef{Quantum.Tag}
+  parent: Quantum
+  definition: Quantum.AssetRef`1
+  href: Quantum.Tag.html
+  name: AssetRef<Tag>
+  nameWithType: AssetRef<Tag>
+  fullName: Quantum.AssetRef<Quantum.Tag>
+  nameWithType.vb: AssetRef(Of Tag)
+  fullName.vb: Quantum.AssetRef(Of Quantum.Tag)
+  name.vb: AssetRef(Of Tag)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - uid: Quantum.Tag
+    name: Tag
+    href: Quantum.Tag.html
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.Tag
+    name: Tag
+    href: Quantum.Tag.html
+  - name: )
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: Quantum.AssetRef`1
+  commentId: T:Quantum.AssetRef`1
+  isExternal: true
+  name: AssetRef<T>
+  nameWithType: AssetRef<T>
+  fullName: Quantum.AssetRef<T>
+  nameWithType.vb: AssetRef(Of T)
+  fullName.vb: Quantum.AssetRef(Of T)
+  name.vb: AssetRef(Of T)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Global.FighterVisualPositioner.BuildBoneMap*
+  commentId: Overload:Global.FighterVisualPositioner.BuildBoneMap
+  href: Global.FighterVisualPositioner.html#FighterVisualPositioner_BuildBoneMap
+  name: BuildBoneMap
+  nameWithType: FighterVisualPositioner.BuildBoneMap
+  fullName: FighterVisualPositioner.BuildBoneMap
+- uid: Global.FighterVisualPositioner.GetClosestVisualTransform*
+  commentId: Overload:Global.FighterVisualPositioner.GetClosestVisualTransform
+  href: Global.FighterVisualPositioner.html#FighterVisualPositioner_GetClosestVisualTransform_UnityEngine_Vector3_
+  name: GetClosestVisualTransform
+  nameWithType: FighterVisualPositioner.GetClosestVisualTransform
+  fullName: FighterVisualPositioner.GetClosestVisualTransform
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: Global.FighterVisualPositioner.GetClosestVisualPosition*
+  commentId: Overload:Global.FighterVisualPositioner.GetClosestVisualPosition
+  href: Global.FighterVisualPositioner.html#FighterVisualPositioner_GetClosestVisualPosition_UnityEngine_Vector3_
+  name: GetClosestVisualPosition
+  nameWithType: FighterVisualPositioner.GetClosestVisualPosition
+  fullName: FighterVisualPositioner.GetClosestVisualPosition
+- uid: Global.FighterVisualPositioner.GetClosestVisualPositionNoXZ*
+  commentId: Overload:Global.FighterVisualPositioner.GetClosestVisualPositionNoXZ
+  href: Global.FighterVisualPositioner.html#FighterVisualPositioner_GetClosestVisualPositionNoXZ_UnityEngine_Vector3_
+  name: GetClosestVisualPositionNoXZ
+  nameWithType: FighterVisualPositioner.GetClosestVisualPositionNoXZ
+  fullName: FighterVisualPositioner.GetClosestVisualPositionNoXZ
+- uid: Global.FighterVisualPositioner.GetClosestVisualPositionByYNoXZ*
+  commentId: Overload:Global.FighterVisualPositioner.GetClosestVisualPositionByYNoXZ
+  href: Global.FighterVisualPositioner.html#FighterVisualPositioner_GetClosestVisualPositionByYNoXZ_UnityEngine_Vector3_
+  name: GetClosestVisualPositionByYNoXZ
+  nameWithType: FighterVisualPositioner.GetClosestVisualPositionByYNoXZ
+  fullName: FighterVisualPositioner.GetClosestVisualPositionByYNoXZ

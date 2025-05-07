@@ -1,0 +1,608 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ComboRecorderTool
+  commentId: T:Global.ComboRecorderTool
+  id: ComboRecorderTool
+  parent: Global
+  children:
+  - Global.ComboRecorderTool.OnGUI
+  - Global.ComboRecorderTool.ShowWindow
+  - Global.ComboRecorderTool._comboString
+  - Global.ComboRecorderTool.comboString
+  - Global.ComboRecorderTool.comboingEntity
+  - Global.ComboRecorderTool.exportToEntry
+  - Global.ComboRecorderTool.recording
+  - Global.ComboRecorderTool.scrollPos
+  - Global.ComboRecorderTool.startingInput
+  langs:
+  - csharp
+  - vb
+  name: ComboRecorderTool
+  nameWithType: ComboRecorderTool
+  fullName: ComboRecorderTool
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ComboRecorderTool
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+    startLine: 7
+  assemblies:
+  - rwby.editor
+  namespace: Global
+  syntax:
+    content: 'public class ComboRecorderTool : EditorWindow'
+    content.vb: Public Class ComboRecorderTool Inherits EditorWindow
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEditor.EditorWindow
+- uid: Global.ComboRecorderTool.ShowWindow
+  commentId: M:Global.ComboRecorderTool.ShowWindow
+  id: ShowWindow
+  parent: Global.ComboRecorderTool
+  langs:
+  - csharp
+  - vb
+  name: ShowWindow()
+  nameWithType: ComboRecorderTool.ShowWindow()
+  fullName: ComboRecorderTool.ShowWindow()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: ShowWindow
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+    startLine: 9
+  assemblies:
+  - rwby.editor
+  namespace: Global
+  syntax:
+    content: >-
+      [MenuItem("Tools/Combo Recorder")]
+
+      public static void ShowWindow()
+    content.vb: >-
+      <MenuItem("Tools/Combo Recorder")>
+
+      Public Shared Sub ShowWindow()
+  overload: Global.ComboRecorderTool.ShowWindow*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Tools/Combo Recorder
+- uid: Global.ComboRecorderTool.scrollPos
+  commentId: F:Global.ComboRecorderTool.scrollPos
+  id: scrollPos
+  parent: Global.ComboRecorderTool
+  langs:
+  - csharp
+  - vb
+  name: scrollPos
+  nameWithType: ComboRecorderTool.scrollPos
+  fullName: ComboRecorderTool.scrollPos
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: scrollPos
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+    startLine: 16
+  assemblies:
+  - rwby.editor
+  namespace: Global
+  syntax:
+    content: >-
+      [SerializeField]
+
+      public Vector2 scrollPos
+    return:
+      type: UnityEngine.Vector2
+    content.vb: >-
+      <SerializeField>
+
+      Public scrollPos As Vector2
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: Global.ComboRecorderTool.comboString
+  commentId: F:Global.ComboRecorderTool.comboString
+  id: comboString
+  parent: Global.ComboRecorderTool
+  langs:
+  - csharp
+  - vb
+  name: comboString
+  nameWithType: ComboRecorderTool.comboString
+  fullName: ComboRecorderTool.comboString
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: comboString
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+    startLine: 17
+  assemblies:
+  - rwby.editor
+  namespace: Global
+  syntax:
+    content: >-
+      [SerializeField]
+
+      public List<HNSFState> comboString
+    return:
+      type: System.Collections.Generic.List{Quantum.HNSFState}
+    content.vb: >-
+      <SerializeField>
+
+      Public comboString As List(Of HNSFState)
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: Global.ComboRecorderTool._comboString
+  commentId: F:Global.ComboRecorderTool._comboString
+  id: _comboString
+  parent: Global.ComboRecorderTool
+  langs:
+  - csharp
+  - vb
+  name: _comboString
+  nameWithType: ComboRecorderTool._comboString
+  fullName: ComboRecorderTool._comboString
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: _comboString
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+    startLine: 18
+  assemblies:
+  - rwby.editor
+  namespace: Global
+  syntax:
+    content: >-
+      [SerializeField]
+
+      public ReorderableList _comboString
+    return:
+      type: Malee.List.ReorderableList
+    content.vb: >-
+      <SerializeField>
+
+      Public _comboString As ReorderableList
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: Global.ComboRecorderTool.startingInput
+  commentId: F:Global.ComboRecorderTool.startingInput
+  id: startingInput
+  parent: Global.ComboRecorderTool
+  langs:
+  - csharp
+  - vb
+  name: startingInput
+  nameWithType: ComboRecorderTool.startingInput
+  fullName: ComboRecorderTool.startingInput
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: startingInput
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+    startLine: 19
+  assemblies:
+  - rwby.editor
+  namespace: Global
+  syntax:
+    content: >-
+      [SerializeField]
+
+      public PlayerInputButtonType startingInput
+    return:
+      type: Quantum.PlayerInputButtonType
+    content.vb: >-
+      <SerializeField>
+
+      Public startingInput As PlayerInputButtonType
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: Global.ComboRecorderTool.comboingEntity
+  commentId: F:Global.ComboRecorderTool.comboingEntity
+  id: comboingEntity
+  parent: Global.ComboRecorderTool
+  langs:
+  - csharp
+  - vb
+  name: comboingEntity
+  nameWithType: ComboRecorderTool.comboingEntity
+  fullName: ComboRecorderTool.comboingEntity
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: comboingEntity
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+    startLine: 20
+  assemblies:
+  - rwby.editor
+  namespace: Global
+  syntax:
+    content: >-
+      [SerializeField]
+
+      public CustomEntityView comboingEntity
+    return:
+      type: rwby.CustomEntityView
+    content.vb: >-
+      <SerializeField>
+
+      Public comboingEntity As CustomEntityView
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: Global.ComboRecorderTool.exportToEntry
+  commentId: F:Global.ComboRecorderTool.exportToEntry
+  id: exportToEntry
+  parent: Global.ComboRecorderTool
+  langs:
+  - csharp
+  - vb
+  name: exportToEntry
+  nameWithType: ComboRecorderTool.exportToEntry
+  fullName: ComboRecorderTool.exportToEntry
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: exportToEntry
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+    startLine: 21
+  assemblies:
+  - rwby.editor
+  namespace: Global
+  syntax:
+    content: >-
+      [SerializeField]
+
+      public AIBotComboEntry exportToEntry
+    return:
+      type: Quantum.AIBotComboEntry
+    content.vb: >-
+      <SerializeField>
+
+      Public exportToEntry As AIBotComboEntry
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: Global.ComboRecorderTool.recording
+  commentId: F:Global.ComboRecorderTool.recording
+  id: recording
+  parent: Global.ComboRecorderTool
+  langs:
+  - csharp
+  - vb
+  name: recording
+  nameWithType: ComboRecorderTool.recording
+  fullName: ComboRecorderTool.recording
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: recording
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+    startLine: 23
+  assemblies:
+  - rwby.editor
+  namespace: Global
+  syntax:
+    content: >-
+      [SerializeField]
+
+      public bool recording
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <SerializeField>
+
+      Public recording As Boolean
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: Global.ComboRecorderTool.OnGUI
+  commentId: M:Global.ComboRecorderTool.OnGUI
+  id: OnGUI
+  parent: Global.ComboRecorderTool
+  langs:
+  - csharp
+  - vb
+  name: OnGUI()
+  nameWithType: ComboRecorderTool.OnGUI()
+  fullName: ComboRecorderTool.OnGUI()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnGUI
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Editor/ComboRecorderTool.cs
+    startLine: 32
+  assemblies:
+  - rwby.editor
+  namespace: Global
+  syntax:
+    content: public void OnGUI()
+    content.vb: Public Sub OnGUI()
+  overload: Global.ComboRecorderTool.OnGUI*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEditor.EditorWindow
+  commentId: T:UnityEditor.EditorWindow
+  parent: UnityEditor
+  isExternal: true
+  name: EditorWindow
+  nameWithType: EditorWindow
+  fullName: UnityEditor.EditorWindow
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: Global.ComboRecorderTool.ShowWindow*
+  commentId: Overload:Global.ComboRecorderTool.ShowWindow
+  href: Global.ComboRecorderTool.html#ComboRecorderTool_ShowWindow
+  name: ShowWindow
+  nameWithType: ComboRecorderTool.ShowWindow
+  fullName: ComboRecorderTool.ShowWindow
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: System.Collections.Generic.List{Quantum.HNSFState}
+  commentId: T:System.Collections.Generic.List{Quantum.HNSFState}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<HNSFState>
+  nameWithType: List<HNSFState>
+  fullName: System.Collections.Generic.List<Quantum.HNSFState>
+  nameWithType.vb: List(Of HNSFState)
+  fullName.vb: System.Collections.Generic.List(Of Quantum.HNSFState)
+  name.vb: List(Of HNSFState)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Quantum.HNSFState
+    name: HNSFState
+    href: Quantum.HNSFState.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Quantum.HNSFState
+    name: HNSFState
+    href: Quantum.HNSFState.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Malee.List.ReorderableList
+  commentId: T:Malee.List.ReorderableList
+  parent: Malee.List
+  isExternal: true
+  name: ReorderableList
+  nameWithType: ReorderableList
+  fullName: Malee.List.ReorderableList
+- uid: Malee.List
+  commentId: N:Malee.List
+  isExternal: true
+  name: Malee.List
+  nameWithType: Malee.List
+  fullName: Malee.List
+  spec.csharp:
+  - uid: Malee
+    name: Malee
+    isExternal: true
+  - name: .
+  - uid: Malee.List
+    name: List
+    isExternal: true
+  spec.vb:
+  - uid: Malee
+    name: Malee
+    isExternal: true
+  - name: .
+  - uid: Malee.List
+    name: List
+    isExternal: true
+- uid: Quantum.PlayerInputButtonType
+  commentId: T:Quantum.PlayerInputButtonType
+  parent: Quantum
+  href: Quantum.PlayerInputButtonType.html
+  name: PlayerInputButtonType
+  nameWithType: PlayerInputButtonType
+  fullName: Quantum.PlayerInputButtonType
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: rwby.CustomEntityView
+  commentId: T:rwby.CustomEntityView
+  parent: rwby
+  href: rwby.CustomEntityView.html
+  name: CustomEntityView
+  nameWithType: CustomEntityView
+  fullName: rwby.CustomEntityView
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: Quantum.AIBotComboEntry
+  commentId: T:Quantum.AIBotComboEntry
+  parent: Quantum
+  href: Quantum.AIBotComboEntry.html
+  name: AIBotComboEntry
+  nameWithType: AIBotComboEntry
+  fullName: Quantum.AIBotComboEntry
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Global.ComboRecorderTool.OnGUI*
+  commentId: Overload:Global.ComboRecorderTool.OnGUI
+  href: Global.ComboRecorderTool.html#ComboRecorderTool_OnGUI
+  name: OnGUI
+  nameWithType: ComboRecorderTool.OnGUI
+  fullName: ComboRecorderTool.OnGUI

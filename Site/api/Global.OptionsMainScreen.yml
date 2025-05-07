@@ -20,6 +20,7 @@ items:
   - Global.OptionsMainScreen.gameplayScreen
   - Global.OptionsMainScreen.generalMenu
   - Global.OptionsMainScreen.menuLabelSliderPrefab
+  - Global.OptionsMainScreen.optionsScreen
   - Global.OptionsMainScreen.optionsScrollRect
   - Global.OptionsMainScreen.sidebarBottomScrollView
   - Global.OptionsMainScreen.sidebarOptionPrefab
@@ -56,7 +57,8 @@ items:
   implements:
   - rwby.ui.IMenu
   inheritedMembers:
-  - rwby.ui.MenuBase.currentHandler
+  - rwby.ui.MenuBase.MenuHandler
+  - rwby.ui.MenuBase.history
 - uid: Global.OptionsMainScreen.currentTab
   commentId: F:Global.OptionsMainScreen.currentTab
   id: currentTab
@@ -75,7 +77,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: currentTab
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - rwby
   namespace: Global
@@ -94,6 +96,33 @@ items:
   - type: System.NonSerializedAttribute
     ctor: System.NonSerializedAttribute.#ctor
     arguments: []
+- uid: Global.OptionsMainScreen.optionsScreen
+  commentId: F:Global.OptionsMainScreen.optionsScreen
+  id: optionsScreen
+  parent: Global.OptionsMainScreen
+  langs:
+  - csharp
+  - vb
+  name: optionsScreen
+  nameWithType: OptionsMainScreen.optionsScreen
+  fullName: OptionsMainScreen.optionsScreen
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: optionsScreen
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public OptionsScreen optionsScreen
+    return:
+      type: Global.OptionsScreen
+    content.vb: Public optionsScreen As OptionsScreen
 - uid: Global.OptionsMainScreen.generalMenu
   commentId: F:Global.OptionsMainScreen.generalMenu
   id: generalMenu
@@ -112,7 +141,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: generalMenu
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 22
+    startLine: 24
   assemblies:
   - rwby
   namespace: Global
@@ -139,7 +168,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: optionsScrollRect
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - rwby
   namespace: Global
@@ -166,7 +195,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: sidebarTopImage
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - rwby
   namespace: Global
@@ -193,7 +222,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: sidebarTopText
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - rwby
   namespace: Global
@@ -220,7 +249,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: sidebarBottomScrollView
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 26
+    startLine: 28
   assemblies:
   - rwby
   namespace: Global
@@ -247,7 +276,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: sidebarOptionPrefab
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 27
+    startLine: 29
   assemblies:
   - rwby
   namespace: Global
@@ -274,7 +303,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: gameplayScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 30
+    startLine: 32
   assemblies:
   - rwby
   namespace: Global
@@ -313,7 +342,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: VideoScreen
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 31
+    startLine: 33
   assemblies:
   - rwby
   namespace: Global
@@ -340,7 +369,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: menuLabelSliderPrefab
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 34
+    startLine: 36
   assemblies:
   - rwby
   namespace: Global
@@ -388,7 +417,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: externalOptionPrefab
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 35
+    startLine: 37
   assemblies:
   - rwby
   namespace: Global
@@ -415,7 +444,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Open
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 37
+    startLine: 39
   assemblies:
   - rwby
   namespace: Global
@@ -448,7 +477,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TryClose
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 47
+    startLine: 50
   assemblies:
   - rwby
   namespace: Global
@@ -486,7 +515,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BUTTON_Gameplay
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 53
+    startLine: 57
   assemblies:
   - rwby
   namespace: Global
@@ -512,7 +541,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BUTTON_Controls
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 58
+    startLine: 65
   assemblies:
   - rwby
   namespace: Global
@@ -538,7 +567,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BUTTON_Video
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 63
+    startLine: 70
   assemblies:
   - rwby
   namespace: Global
@@ -564,7 +593,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BUTTON_Language
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 71
+    startLine: 78
   assemblies:
   - rwby
   namespace: Global
@@ -590,7 +619,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: BUTTON_Modding
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 76
+    startLine: 83
   assemblies:
   - rwby
   namespace: Global
@@ -616,7 +645,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ClearOptions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 90
+    startLine: 118
   assemblies:
   - rwby
   namespace: Global
@@ -642,7 +671,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: PopulateSidebar
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/Settings/OptionsMainScreen.cs
-    startLine: 98
+    startLine: 126
   assemblies:
   - rwby
   namespace: Global
@@ -708,13 +737,20 @@ references:
   name: IMenu
   nameWithType: IMenu
   fullName: rwby.ui.IMenu
-- uid: rwby.ui.MenuBase.currentHandler
-  commentId: F:rwby.ui.MenuBase.currentHandler
+- uid: rwby.ui.MenuBase.MenuHandler
+  commentId: P:rwby.ui.MenuBase.MenuHandler
   parent: rwby.ui.MenuBase
-  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_currentHandler
-  name: currentHandler
-  nameWithType: MenuBase.currentHandler
-  fullName: rwby.ui.MenuBase.currentHandler
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_MenuHandler
+  name: MenuHandler
+  nameWithType: MenuBase.MenuHandler
+  fullName: rwby.ui.MenuBase.MenuHandler
+- uid: rwby.ui.MenuBase.history
+  commentId: F:rwby.ui.MenuBase.history
+  parent: rwby.ui.MenuBase
+  href: rwby.ui.MenuBase.html#rwby_ui_MenuBase_history
+  name: history
+  nameWithType: MenuBase.history
+  fullName: rwby.ui.MenuBase.history
 - uid: System
   commentId: N:System
   isExternal: true
@@ -772,6 +808,12 @@ references:
   - uid: Global.OptionsMainScreen.OptionsTabs
     name: OptionsTabs
     href: OptionsMainScreen.OptionsTabs.html
+- uid: Global.OptionsScreen
+  commentId: T:Global.OptionsScreen
+  href: OptionsScreen.html
+  name: OptionsScreen
+  nameWithType: OptionsScreen
+  fullName: OptionsScreen
 - uid: UnityEngine.GameObject
   commentId: T:UnityEngine.GameObject
   parent: UnityEngine

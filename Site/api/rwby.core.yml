@@ -5,6 +5,12 @@ items:
   id: rwby.core
   children:
   - rwby.core.ConfigureDummyCommand
+  - rwby.core.HudElementFrameMeter
+  - rwby.core.HudElementFrameMeter.CharacterFrameMeterState
+  - rwby.core.HudElementFrameMeter.FrameMeterFrame
+  - rwby.core.HudElementFrameMeter.FrameMeterPage
+  - rwby.core.HudElementFrameMeter.FrameMeterPlayer
+  - rwby.core.HudElementFrameMeterPage
   - rwby.core.HudElementGenericAurabar
   - rwby.core.HudElementGenericHealthbar
   - rwby.core.HudElementGenericHitstunbar
@@ -14,6 +20,7 @@ items:
   - rwby.core.OutroFinishedCommand
   - rwby.core.OverheadHUDElement
   - rwby.core.OverheadHUDHandler
+  - rwby.core.SnowCameraPlacer
   - rwby.core.SpawnFighterCommand
   langs:
   - csharp
@@ -39,12 +46,117 @@ references:
   name: OverheadHUDHandler
   nameWithType: OverheadHUDHandler
   fullName: rwby.core.OverheadHUDHandler
+- uid: rwby.core.HudElementFrameMeter
+  commentId: T:rwby.core.HudElementFrameMeter
+  parent: rwby.core
+  href: rwby.core.HudElementFrameMeter.html
+  name: HudElementFrameMeter
+  nameWithType: HudElementFrameMeter
+  fullName: rwby.core.HudElementFrameMeter
+- uid: rwby.core.HudElementFrameMeter.CharacterFrameMeterState
+  commentId: T:rwby.core.HudElementFrameMeter.CharacterFrameMeterState
+  parent: rwby.core
+  href: rwby.core.HudElementFrameMeter.html
+  name: HudElementFrameMeter.CharacterFrameMeterState
+  nameWithType: HudElementFrameMeter.CharacterFrameMeterState
+  fullName: rwby.core.HudElementFrameMeter.CharacterFrameMeterState
+  spec.csharp:
+  - uid: rwby.core.HudElementFrameMeter
+    name: HudElementFrameMeter
+    href: rwby.core.HudElementFrameMeter.html
+  - name: .
+  - uid: rwby.core.HudElementFrameMeter.CharacterFrameMeterState
+    name: CharacterFrameMeterState
+    href: rwby.core.HudElementFrameMeter.CharacterFrameMeterState.html
+  spec.vb:
+  - uid: rwby.core.HudElementFrameMeter
+    name: HudElementFrameMeter
+    href: rwby.core.HudElementFrameMeter.html
+  - name: .
+  - uid: rwby.core.HudElementFrameMeter.CharacterFrameMeterState
+    name: CharacterFrameMeterState
+    href: rwby.core.HudElementFrameMeter.CharacterFrameMeterState.html
+- uid: rwby.core.HudElementFrameMeter.FrameMeterFrame
+  commentId: T:rwby.core.HudElementFrameMeter.FrameMeterFrame
+  parent: rwby.core
+  href: rwby.core.HudElementFrameMeter.html
+  name: HudElementFrameMeter.FrameMeterFrame
+  nameWithType: HudElementFrameMeter.FrameMeterFrame
+  fullName: rwby.core.HudElementFrameMeter.FrameMeterFrame
+  spec.csharp:
+  - uid: rwby.core.HudElementFrameMeter
+    name: HudElementFrameMeter
+    href: rwby.core.HudElementFrameMeter.html
+  - name: .
+  - uid: rwby.core.HudElementFrameMeter.FrameMeterFrame
+    name: FrameMeterFrame
+    href: rwby.core.HudElementFrameMeter.FrameMeterFrame.html
+  spec.vb:
+  - uid: rwby.core.HudElementFrameMeter
+    name: HudElementFrameMeter
+    href: rwby.core.HudElementFrameMeter.html
+  - name: .
+  - uid: rwby.core.HudElementFrameMeter.FrameMeterFrame
+    name: FrameMeterFrame
+    href: rwby.core.HudElementFrameMeter.FrameMeterFrame.html
+- uid: rwby.core.HudElementFrameMeter.FrameMeterPage
+  commentId: T:rwby.core.HudElementFrameMeter.FrameMeterPage
+  parent: rwby.core
+  href: rwby.core.HudElementFrameMeter.html
+  name: HudElementFrameMeter.FrameMeterPage
+  nameWithType: HudElementFrameMeter.FrameMeterPage
+  fullName: rwby.core.HudElementFrameMeter.FrameMeterPage
+  spec.csharp:
+  - uid: rwby.core.HudElementFrameMeter
+    name: HudElementFrameMeter
+    href: rwby.core.HudElementFrameMeter.html
+  - name: .
+  - uid: rwby.core.HudElementFrameMeter.FrameMeterPage
+    name: FrameMeterPage
+    href: rwby.core.HudElementFrameMeter.FrameMeterPage.html
+  spec.vb:
+  - uid: rwby.core.HudElementFrameMeter
+    name: HudElementFrameMeter
+    href: rwby.core.HudElementFrameMeter.html
+  - name: .
+  - uid: rwby.core.HudElementFrameMeter.FrameMeterPage
+    name: FrameMeterPage
+    href: rwby.core.HudElementFrameMeter.FrameMeterPage.html
+- uid: rwby.core.HudElementFrameMeter.FrameMeterPlayer
+  commentId: T:rwby.core.HudElementFrameMeter.FrameMeterPlayer
+  parent: rwby.core
+  href: rwby.core.HudElementFrameMeter.html
+  name: HudElementFrameMeter.FrameMeterPlayer
+  nameWithType: HudElementFrameMeter.FrameMeterPlayer
+  fullName: rwby.core.HudElementFrameMeter.FrameMeterPlayer
+  spec.csharp:
+  - uid: rwby.core.HudElementFrameMeter
+    name: HudElementFrameMeter
+    href: rwby.core.HudElementFrameMeter.html
+  - name: .
+  - uid: rwby.core.HudElementFrameMeter.FrameMeterPlayer
+    name: FrameMeterPlayer
+    href: rwby.core.HudElementFrameMeter.FrameMeterPlayer.html
+  spec.vb:
+  - uid: rwby.core.HudElementFrameMeter
+    name: HudElementFrameMeter
+    href: rwby.core.HudElementFrameMeter.html
+  - name: .
+  - uid: rwby.core.HudElementFrameMeter.FrameMeterPlayer
+    name: FrameMeterPlayer
+    href: rwby.core.HudElementFrameMeter.FrameMeterPlayer.html
 - uid: rwby.core.HudElementRubyRose
   commentId: T:rwby.core.HudElementRubyRose
   href: rwby.core.HudElementRubyRose.html
   name: HudElementRubyRose
   nameWithType: HudElementRubyRose
   fullName: rwby.core.HudElementRubyRose
+- uid: rwby.core.SnowCameraPlacer
+  commentId: T:rwby.core.SnowCameraPlacer
+  href: rwby.core.SnowCameraPlacer.html
+  name: SnowCameraPlacer
+  nameWithType: SnowCameraPlacer
+  fullName: rwby.core.SnowCameraPlacer
 - uid: rwby.core.HudElementGenericAurabar
   commentId: T:rwby.core.HudElementGenericAurabar
   parent: rwby.core
@@ -52,6 +164,13 @@ references:
   name: HudElementGenericAurabar
   nameWithType: HudElementGenericAurabar
   fullName: rwby.core.HudElementGenericAurabar
+- uid: rwby.core.HudElementFrameMeterPage
+  commentId: T:rwby.core.HudElementFrameMeterPage
+  parent: rwby.core
+  href: rwby.core.HudElementFrameMeterPage.html
+  name: HudElementFrameMeterPage
+  nameWithType: HudElementFrameMeterPage
+  fullName: rwby.core.HudElementFrameMeterPage
 - uid: rwby.core.HudElementGenericHitstunbar
   commentId: T:rwby.core.HudElementGenericHitstunbar
   parent: rwby.core

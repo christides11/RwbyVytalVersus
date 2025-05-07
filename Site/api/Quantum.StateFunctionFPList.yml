@@ -24,8 +24,8 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public abstract class StateFunctionFPList : HNSFStateFunction<QList<FP>>'
-    content.vb: Public MustInherit Class StateFunctionFPList Inherits HNSFStateFunction(Of QList(Of FP))
+    content: 'public abstract class StateFunctionFPList : HNSFStateFunction<QList<FP>>, ILogSource'
+    content.vb: Public MustInherit Class StateFunctionFPList Inherits HNSFStateFunction(Of QList(Of FP)) Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -33,6 +33,8 @@ items:
   - Quantum.AssetObject
   - Quantum.HNSFStateFunction
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{Photon.Deterministic.FP}}
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{Photon.Deterministic.FP}}.Label
   - Quantum.HNSFStateFunction{Quantum.Collections.QList{Photon.Deterministic.FP}}.Execute(Quantum.Frame,Quantum.EntityRef,Quantum.HNSFStateContext@)
@@ -136,6 +138,13 @@ references:
     isExternal: true
   - name: )
   - name: )
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.HNSFStateFunction{Quantum.Collections.QList{Photon.Deterministic.FP}}.Label
   commentId: F:Quantum.HNSFStateFunction{Quantum.Collections.QList{Photon.Deterministic.FP}}.Label
   parent: Quantum.HNSFStateFunction{Quantum.Collections.QList{Photon.Deterministic.FP}}

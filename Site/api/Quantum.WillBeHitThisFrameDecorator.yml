@@ -29,11 +29,11 @@ items:
     content: >-
       [Serializable]
 
-      public class WillBeHitThisFrameDecorator : BTDecorator
+      public class WillBeHitThisFrameDecorator : BTDecorator, ILogSource
     content.vb: >-
       <Serializable>
 
-      Public Class WillBeHitThisFrameDecorator Inherits BTDecorator
+      Public Class WillBeHitThisFrameDecorator Inherits BTDecorator Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -41,6 +41,8 @@ items:
   - Quantum.AssetObject
   - Quantum.BTNode
   - Quantum.BTDecorator
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.BTDecorator.Child
   - Quantum.BTDecorator.AbortType
@@ -196,6 +198,13 @@ references:
   name: BTDecorator
   nameWithType: BTDecorator
   fullName: Quantum.BTDecorator
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.BTDecorator.Child
   commentId: F:Quantum.BTDecorator.Child
   parent: Quantum.BTDecorator

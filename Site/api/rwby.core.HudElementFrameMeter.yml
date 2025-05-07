@@ -1,0 +1,718 @@
+### YamlMime:ManagedReference
+items:
+- uid: rwby.core.HudElementFrameMeter
+  commentId: T:rwby.core.HudElementFrameMeter
+  id: HudElementFrameMeter
+  parent: rwby.core
+  children:
+  - rwby.core.HudElementFrameMeter.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  - rwby.core.HudElementFrameMeter.FighterDef
+  - rwby.core.HudElementFrameMeter.Initialize(Quantum.QuantumRunner)
+  - rwby.core.HudElementFrameMeter.RootCanvas
+  - rwby.core.HudElementFrameMeter.Teardown
+  - rwby.core.HudElementFrameMeter.fighterEntityRef
+  - rwby.core.HudElementFrameMeter.frameMeterPlayerOne
+  - rwby.core.HudElementFrameMeter.frameMeterPlayerTwo
+  - rwby.core.HudElementFrameMeter.hudFrameMeterPlayerOne
+  - rwby.core.HudElementFrameMeter.hudFrameMeterPlayerTwo
+  - rwby.core.HudElementFrameMeter.pageSize
+  - rwby.core.HudElementFrameMeter.playerOneBar
+  - rwby.core.HudElementFrameMeter.playerTwoBar
+  langs:
+  - csharp
+  - vb
+  name: HudElementFrameMeter
+  nameWithType: HudElementFrameMeter
+  fullName: rwby.core.HudElementFrameMeter
+  type: Class
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: HudElementFrameMeter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: 'public class HudElementFrameMeter : MonoBehaviour, IHUDElement, IFighterDefinitionUser'
+    content.vb: Public Class HudElementFrameMeter Inherits MonoBehaviour Implements IHUDElement, IFighterDefinitionUser
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  implements:
+  - rwby.IHUDElement
+  - rwby.IFighterDefinitionUser
+- uid: rwby.core.HudElementFrameMeter.RootCanvas
+  commentId: P:rwby.core.HudElementFrameMeter.RootCanvas
+  id: RootCanvas
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: RootCanvas
+  nameWithType: HudElementFrameMeter.RootCanvas
+  fullName: rwby.core.HudElementFrameMeter.RootCanvas
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RootCanvas
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 142
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public Canvas RootCanvas { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Canvas
+    content.vb: Public Property RootCanvas As Canvas
+  overload: rwby.core.HudElementFrameMeter.RootCanvas*
+  implements:
+  - rwby.IHUDElement.RootCanvas
+- uid: rwby.core.HudElementFrameMeter.FighterDef
+  commentId: P:rwby.core.HudElementFrameMeter.FighterDef
+  id: FighterDef
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: FighterDef
+  nameWithType: HudElementFrameMeter.FighterDef
+  fullName: rwby.core.HudElementFrameMeter.FighterDef
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: FighterDef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 143
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public IFighterDefinition FighterDef { get; set; }
+    parameters: []
+    return:
+      type: Global.IFighterDefinition
+    content.vb: Public Property FighterDef As IFighterDefinition
+  overload: rwby.core.HudElementFrameMeter.FighterDef*
+  implements:
+  - rwby.IFighterDefinitionUser.FighterDef
+- uid: rwby.core.HudElementFrameMeter.playerOneBar
+  commentId: F:rwby.core.HudElementFrameMeter.playerOneBar
+  id: playerOneBar
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: playerOneBar
+  nameWithType: HudElementFrameMeter.playerOneBar
+  fullName: rwby.core.HudElementFrameMeter.playerOneBar
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playerOneBar
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 147
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public RectTransform playerOneBar
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: Public playerOneBar As RectTransform
+- uid: rwby.core.HudElementFrameMeter.playerTwoBar
+  commentId: F:rwby.core.HudElementFrameMeter.playerTwoBar
+  id: playerTwoBar
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: playerTwoBar
+  nameWithType: HudElementFrameMeter.playerTwoBar
+  fullName: rwby.core.HudElementFrameMeter.playerTwoBar
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: playerTwoBar
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 148
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public RectTransform playerTwoBar
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: Public playerTwoBar As RectTransform
+- uid: rwby.core.HudElementFrameMeter.hudFrameMeterPlayerOne
+  commentId: F:rwby.core.HudElementFrameMeter.hudFrameMeterPlayerOne
+  id: hudFrameMeterPlayerOne
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: hudFrameMeterPlayerOne
+  nameWithType: HudElementFrameMeter.hudFrameMeterPlayerOne
+  fullName: rwby.core.HudElementFrameMeter.hudFrameMeterPlayerOne
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hudFrameMeterPlayerOne
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 150
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public HudElementFrameMeterPage hudFrameMeterPlayerOne
+    return:
+      type: rwby.core.HudElementFrameMeterPage
+    content.vb: Public hudFrameMeterPlayerOne As HudElementFrameMeterPage
+- uid: rwby.core.HudElementFrameMeter.hudFrameMeterPlayerTwo
+  commentId: F:rwby.core.HudElementFrameMeter.hudFrameMeterPlayerTwo
+  id: hudFrameMeterPlayerTwo
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: hudFrameMeterPlayerTwo
+  nameWithType: HudElementFrameMeter.hudFrameMeterPlayerTwo
+  fullName: rwby.core.HudElementFrameMeter.hudFrameMeterPlayerTwo
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: hudFrameMeterPlayerTwo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 151
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public HudElementFrameMeterPage hudFrameMeterPlayerTwo
+    return:
+      type: rwby.core.HudElementFrameMeterPage
+    content.vb: Public hudFrameMeterPlayerTwo As HudElementFrameMeterPage
+- uid: rwby.core.HudElementFrameMeter.frameMeterPlayerOne
+  commentId: F:rwby.core.HudElementFrameMeter.frameMeterPlayerOne
+  id: frameMeterPlayerOne
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: frameMeterPlayerOne
+  nameWithType: HudElementFrameMeter.frameMeterPlayerOne
+  fullName: rwby.core.HudElementFrameMeter.frameMeterPlayerOne
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: frameMeterPlayerOne
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 153
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public HudElementFrameMeter.FrameMeterPlayer frameMeterPlayerOne
+    return:
+      type: rwby.core.HudElementFrameMeter.FrameMeterPlayer
+    content.vb: Public frameMeterPlayerOne As HudElementFrameMeter.FrameMeterPlayer
+- uid: rwby.core.HudElementFrameMeter.frameMeterPlayerTwo
+  commentId: F:rwby.core.HudElementFrameMeter.frameMeterPlayerTwo
+  id: frameMeterPlayerTwo
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: frameMeterPlayerTwo
+  nameWithType: HudElementFrameMeter.frameMeterPlayerTwo
+  fullName: rwby.core.HudElementFrameMeter.frameMeterPlayerTwo
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: frameMeterPlayerTwo
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 154
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public HudElementFrameMeter.FrameMeterPlayer frameMeterPlayerTwo
+    return:
+      type: rwby.core.HudElementFrameMeter.FrameMeterPlayer
+    content.vb: Public frameMeterPlayerTwo As HudElementFrameMeter.FrameMeterPlayer
+- uid: rwby.core.HudElementFrameMeter.fighterEntityRef
+  commentId: F:rwby.core.HudElementFrameMeter.fighterEntityRef
+  id: fighterEntityRef
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: fighterEntityRef
+  nameWithType: HudElementFrameMeter.fighterEntityRef
+  fullName: rwby.core.HudElementFrameMeter.fighterEntityRef
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: fighterEntityRef
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 156
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public EntityRef fighterEntityRef
+    return:
+      type: Quantum.EntityRef
+    content.vb: Public fighterEntityRef As EntityRef
+- uid: rwby.core.HudElementFrameMeter.pageSize
+  commentId: F:rwby.core.HudElementFrameMeter.pageSize
+  id: pageSize
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: pageSize
+  nameWithType: HudElementFrameMeter.pageSize
+  fullName: rwby.core.HudElementFrameMeter.pageSize
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: pageSize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 160
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  syntax:
+    content: public int pageSize
+    return:
+      type: System.Int32
+    content.vb: Public pageSize As Integer
+- uid: rwby.core.HudElementFrameMeter.Initialize(Quantum.QuantumRunner)
+  commentId: M:rwby.core.HudElementFrameMeter.Initialize(Quantum.QuantumRunner)
+  id: Initialize(Quantum.QuantumRunner)
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: Initialize(QuantumRunner)
+  nameWithType: HudElementFrameMeter.Initialize(QuantumRunner)
+  fullName: rwby.core.HudElementFrameMeter.Initialize(Quantum.QuantumRunner)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Initialize
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 162
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Initialize(QuantumRunner quantumRunner)
+    parameters:
+    - id: quantumRunner
+      type: Quantum.QuantumRunner
+    content.vb: Public Sub Initialize(quantumRunner As QuantumRunner)
+  overload: rwby.core.HudElementFrameMeter.Initialize*
+  implements:
+  - rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+- uid: rwby.core.HudElementFrameMeter.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  commentId: M:rwby.core.HudElementFrameMeter.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  id: Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: Bind(PlayerRef, EntityRef)
+  nameWithType: HudElementFrameMeter.Bind(PlayerRef, EntityRef)
+  fullName: rwby.core.HudElementFrameMeter.Bind(Quantum.PlayerRef, Quantum.EntityRef)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Bind
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 171
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Bind(PlayerRef playerRef, EntityRef entityRef)
+    parameters:
+    - id: playerRef
+      type: Quantum.PlayerRef
+    - id: entityRef
+      type: Quantum.EntityRef
+    content.vb: Public Sub Bind(playerRef As PlayerRef, entityRef As EntityRef)
+  overload: rwby.core.HudElementFrameMeter.Bind*
+  implements:
+  - rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+- uid: rwby.core.HudElementFrameMeter.Teardown
+  commentId: M:rwby.core.HudElementFrameMeter.Teardown
+  id: Teardown
+  parent: rwby.core.HudElementFrameMeter
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: HudElementFrameMeter.Teardown()
+  fullName: rwby.core.HudElementFrameMeter.Teardown()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: Teardown
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/2.Content/HUD/FrameMeter/HudElementFrameMeter.cs
+    startLine: 176
+  assemblies:
+  - Assembly-CSharp
+  namespace: rwby.core
+  example: []
+  syntax:
+    content: public void Teardown()
+    content.vb: Public Sub Teardown()
+  overload: rwby.core.HudElementFrameMeter.Teardown*
+  implements:
+  - rwby.IHUDElement.Teardown
+references:
+- uid: rwby.core
+  commentId: N:rwby.core
+  href: rwby.html
+  name: rwby.core
+  nameWithType: rwby.core
+  fullName: rwby.core
+  spec.csharp:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+  spec.vb:
+  - uid: rwby
+    name: rwby
+    href: rwby.html
+  - name: .
+  - uid: rwby.core
+    name: core
+    href: rwby.core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: rwby.IHUDElement
+  commentId: T:rwby.IHUDElement
+  parent: rwby
+  href: rwby.IHUDElement.html
+  name: IHUDElement
+  nameWithType: IHUDElement
+  fullName: rwby.IHUDElement
+- uid: rwby.IFighterDefinitionUser
+  commentId: T:rwby.IFighterDefinitionUser
+  parent: rwby
+  href: rwby.IFighterDefinitionUser.html
+  name: IFighterDefinitionUser
+  nameWithType: IFighterDefinitionUser
+  fullName: rwby.IFighterDefinitionUser
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: rwby
+  commentId: N:rwby
+  href: rwby.html
+  name: rwby
+  nameWithType: rwby
+  fullName: rwby
+- uid: rwby.core.HudElementFrameMeter.RootCanvas*
+  commentId: Overload:rwby.core.HudElementFrameMeter.RootCanvas
+  href: rwby.core.HudElementFrameMeter.html#rwby_core_HudElementFrameMeter_RootCanvas
+  name: RootCanvas
+  nameWithType: HudElementFrameMeter.RootCanvas
+  fullName: rwby.core.HudElementFrameMeter.RootCanvas
+- uid: rwby.IHUDElement.RootCanvas
+  commentId: P:rwby.IHUDElement.RootCanvas
+  parent: rwby.IHUDElement
+  name: RootCanvas
+  nameWithType: IHUDElement.RootCanvas
+  fullName: rwby.IHUDElement.RootCanvas
+- uid: UnityEngine.Canvas
+  commentId: T:UnityEngine.Canvas
+  parent: UnityEngine
+  isExternal: true
+  name: Canvas
+  nameWithType: Canvas
+  fullName: UnityEngine.Canvas
+- uid: rwby.core.HudElementFrameMeter.FighterDef*
+  commentId: Overload:rwby.core.HudElementFrameMeter.FighterDef
+  href: rwby.core.HudElementFrameMeter.html#rwby_core_HudElementFrameMeter_FighterDef
+  name: FighterDef
+  nameWithType: HudElementFrameMeter.FighterDef
+  fullName: rwby.core.HudElementFrameMeter.FighterDef
+- uid: rwby.IFighterDefinitionUser.FighterDef
+  commentId: P:rwby.IFighterDefinitionUser.FighterDef
+  parent: rwby.IFighterDefinitionUser
+  name: FighterDef
+  nameWithType: IFighterDefinitionUser.FighterDef
+  fullName: rwby.IFighterDefinitionUser.FighterDef
+- uid: Global.IFighterDefinition
+  commentId: T:Global.IFighterDefinition
+  href: IFighterDefinition.html
+  name: IFighterDefinition
+  nameWithType: IFighterDefinition
+  fullName: IFighterDefinition
+- uid: UnityEngine.RectTransform
+  commentId: T:UnityEngine.RectTransform
+  parent: UnityEngine
+  isExternal: true
+  name: RectTransform
+  nameWithType: RectTransform
+  fullName: UnityEngine.RectTransform
+- uid: rwby.core.HudElementFrameMeterPage
+  commentId: T:rwby.core.HudElementFrameMeterPage
+  parent: rwby.core
+  href: rwby.core.HudElementFrameMeterPage.html
+  name: HudElementFrameMeterPage
+  nameWithType: HudElementFrameMeterPage
+  fullName: rwby.core.HudElementFrameMeterPage
+- uid: rwby.core.HudElementFrameMeter.FrameMeterPlayer
+  commentId: T:rwby.core.HudElementFrameMeter.FrameMeterPlayer
+  parent: rwby.core
+  href: rwby.core.HudElementFrameMeter.html
+  name: HudElementFrameMeter.FrameMeterPlayer
+  nameWithType: HudElementFrameMeter.FrameMeterPlayer
+  fullName: rwby.core.HudElementFrameMeter.FrameMeterPlayer
+  spec.csharp:
+  - uid: rwby.core.HudElementFrameMeter
+    name: HudElementFrameMeter
+    href: rwby.core.HudElementFrameMeter.html
+  - name: .
+  - uid: rwby.core.HudElementFrameMeter.FrameMeterPlayer
+    name: FrameMeterPlayer
+    href: rwby.core.HudElementFrameMeter.FrameMeterPlayer.html
+  spec.vb:
+  - uid: rwby.core.HudElementFrameMeter
+    name: HudElementFrameMeter
+    href: rwby.core.HudElementFrameMeter.html
+  - name: .
+  - uid: rwby.core.HudElementFrameMeter.FrameMeterPlayer
+    name: FrameMeterPlayer
+    href: rwby.core.HudElementFrameMeter.FrameMeterPlayer.html
+- uid: Quantum.EntityRef
+  commentId: T:Quantum.EntityRef
+  parent: Quantum
+  isExternal: true
+  name: EntityRef
+  nameWithType: EntityRef
+  fullName: Quantum.EntityRef
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: rwby.core.HudElementFrameMeter.Initialize*
+  commentId: Overload:rwby.core.HudElementFrameMeter.Initialize
+  href: rwby.core.HudElementFrameMeter.html#rwby_core_HudElementFrameMeter_Initialize_Quantum_QuantumRunner_
+  name: Initialize
+  nameWithType: HudElementFrameMeter.Initialize
+  fullName: rwby.core.HudElementFrameMeter.Initialize
+- uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+  commentId: M:rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+  parent: rwby.IHUDElement
+  name: Initialize(QuantumRunner)
+  nameWithType: IHUDElement.Initialize(QuantumRunner)
+  fullName: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+  spec.csharp:
+  - uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+    name: Initialize
+  - name: (
+  - uid: Quantum.QuantumRunner
+    name: QuantumRunner
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Initialize(Quantum.QuantumRunner)
+    name: Initialize
+  - name: (
+  - uid: Quantum.QuantumRunner
+    name: QuantumRunner
+  - name: )
+- uid: Quantum.QuantumRunner
+  commentId: T:Quantum.QuantumRunner
+  parent: Quantum
+  name: QuantumRunner
+  nameWithType: QuantumRunner
+  fullName: Quantum.QuantumRunner
+- uid: rwby.core.HudElementFrameMeter.Bind*
+  commentId: Overload:rwby.core.HudElementFrameMeter.Bind
+  href: rwby.core.HudElementFrameMeter.html#rwby_core_HudElementFrameMeter_Bind_Quantum_PlayerRef_Quantum_EntityRef_
+  name: Bind
+  nameWithType: HudElementFrameMeter.Bind
+  fullName: rwby.core.HudElementFrameMeter.Bind
+- uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  commentId: M:rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+  parent: rwby.IHUDElement
+  isExternal: true
+  name: Bind(PlayerRef, EntityRef)
+  nameWithType: IHUDElement.Bind(PlayerRef, EntityRef)
+  fullName: rwby.IHUDElement.Bind(Quantum.PlayerRef, Quantum.EntityRef)
+  spec.csharp:
+  - uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+    name: Bind
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Bind(Quantum.PlayerRef,Quantum.EntityRef)
+    name: Bind
+  - name: (
+  - uid: Quantum.PlayerRef
+    name: PlayerRef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Quantum.EntityRef
+    name: EntityRef
+    isExternal: true
+  - name: )
+- uid: Quantum.PlayerRef
+  commentId: T:Quantum.PlayerRef
+  parent: Quantum
+  isExternal: true
+  name: PlayerRef
+  nameWithType: PlayerRef
+  fullName: Quantum.PlayerRef
+- uid: rwby.core.HudElementFrameMeter.Teardown*
+  commentId: Overload:rwby.core.HudElementFrameMeter.Teardown
+  href: rwby.core.HudElementFrameMeter.html#rwby_core_HudElementFrameMeter_Teardown
+  name: Teardown
+  nameWithType: HudElementFrameMeter.Teardown
+  fullName: rwby.core.HudElementFrameMeter.Teardown
+- uid: rwby.IHUDElement.Teardown
+  commentId: M:rwby.IHUDElement.Teardown
+  parent: rwby.IHUDElement
+  name: Teardown()
+  nameWithType: IHUDElement.Teardown()
+  fullName: rwby.IHUDElement.Teardown()
+  spec.csharp:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: rwby.IHUDElement.Teardown
+    name: Teardown
+  - name: (
+  - name: )

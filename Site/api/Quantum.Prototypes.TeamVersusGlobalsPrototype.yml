@@ -10,9 +10,11 @@ items:
   - Quantum.Prototypes.TeamVersusGlobalsPrototype.characterIntroType
   - Quantum.Prototypes.TeamVersusGlobalsPrototype.gameTimeLimitEndFrame
   - Quantum.Prototypes.TeamVersusGlobalsPrototype.gameTimeLimitStartFrame
-  - Quantum.Prototypes.TeamVersusGlobalsPrototype.playerData
-  - Quantum.Prototypes.TeamVersusGlobalsPrototype.playersRequestingRespawn
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.participantData
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.participantsRequestingRespawn
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.playerReadyStatus
   - Quantum.Prototypes.TeamVersusGlobalsPrototype.teamScores
+  - Quantum.Prototypes.TeamVersusGlobalsPrototype.timer
   - Quantum.Prototypes.TeamVersusGlobalsPrototype.winningTeam
   langs:
   - csharp
@@ -28,7 +30,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TeamVersusGlobalsPrototype
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1578
+    startLine: 1797
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -65,25 +67,25 @@ items:
     arguments:
     - type: System.Type
       value: Quantum.TeamVersusGlobals
-- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.playerData
-  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.playerData
-  id: playerData
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.playerReadyStatus
+  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.playerReadyStatus
+  id: playerReadyStatus
   parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
   langs:
   - csharp
   - vb
-  name: playerData
-  nameWithType: TeamVersusGlobalsPrototype.playerData
-  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.playerData
+  name: playerReadyStatus
+  nameWithType: TeamVersusGlobalsPrototype.playerReadyStatus
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.playerReadyStatus
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: playerData
+    id: playerReadyStatus
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1583
+    startLine: 1802
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -93,15 +95,15 @@ items:
 
       [DynamicCollection]
 
-      public DictionaryEntry_Int32_TeamVersusPlayerData[] playerData
+      public DictionaryEntry_Int32_QBoolean[] playerReadyStatus
     return:
-      type: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData[]
+      type: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean[]
     content.vb: >-
       <Dictionary>
 
       <DynamicCollection>
 
-      Public playerData As DictionaryEntry_Int32_TeamVersusPlayerData()
+      Public playerReadyStatus As DictionaryEntry_Int32_QBoolean()
   attributes:
   - type: Quantum.DictionaryAttribute
     ctor: Quantum.DictionaryAttribute.#ctor
@@ -109,25 +111,25 @@ items:
   - type: Quantum.DynamicCollectionAttribute
     ctor: Quantum.DynamicCollectionAttribute.#ctor
     arguments: []
-- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.playersRequestingRespawn
-  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.playersRequestingRespawn
-  id: playersRequestingRespawn
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.participantData
+  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.participantData
+  id: participantData
   parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
   langs:
   - csharp
   - vb
-  name: playersRequestingRespawn
-  nameWithType: TeamVersusGlobalsPrototype.playersRequestingRespawn
-  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.playersRequestingRespawn
+  name: participantData
+  nameWithType: TeamVersusGlobalsPrototype.participantData
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.participantData
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: playersRequestingRespawn
+    id: participantData
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1586
+    startLine: 1805
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -137,15 +139,59 @@ items:
 
       [DynamicCollection]
 
-      public DictionaryEntry_PlayerRef_Int32[] playersRequestingRespawn
+      public DictionaryEntry_Int32_TeamVersusParticipantData[] participantData
     return:
-      type: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32[]
+      type: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData[]
     content.vb: >-
       <Dictionary>
 
       <DynamicCollection>
 
-      Public playersRequestingRespawn As DictionaryEntry_PlayerRef_Int32()
+      Public participantData As DictionaryEntry_Int32_TeamVersusParticipantData()
+  attributes:
+  - type: Quantum.DictionaryAttribute
+    ctor: Quantum.DictionaryAttribute.#ctor
+    arguments: []
+  - type: Quantum.DynamicCollectionAttribute
+    ctor: Quantum.DynamicCollectionAttribute.#ctor
+    arguments: []
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.participantsRequestingRespawn
+  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.participantsRequestingRespawn
+  id: participantsRequestingRespawn
+  parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  langs:
+  - csharp
+  - vb
+  name: participantsRequestingRespawn
+  nameWithType: TeamVersusGlobalsPrototype.participantsRequestingRespawn
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.participantsRequestingRespawn
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: participantsRequestingRespawn
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1808
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: >-
+      [Dictionary]
+
+      [DynamicCollection]
+
+      public DictionaryEntry_Int32_Int32[] participantsRequestingRespawn
+    return:
+      type: Quantum.Prototypes.DictionaryEntry_Int32_Int32[]
+    content.vb: >-
+      <Dictionary>
+
+      <DynamicCollection>
+
+      Public participantsRequestingRespawn As DictionaryEntry_Int32_Int32()
   attributes:
   - type: Quantum.DictionaryAttribute
     ctor: Quantum.DictionaryAttribute.#ctor
@@ -171,7 +217,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: teamScores
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1589
+    startLine: 1811
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -215,7 +261,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: gameTimeLimitStartFrame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1590
+    startLine: 1812
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -242,7 +288,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: gameTimeLimitEndFrame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1591
+    startLine: 1813
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -269,7 +315,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: winningTeam
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1592
+    startLine: 1814
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -296,7 +342,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: characterIntroType
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1593
+    startLine: 1815
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -305,6 +351,33 @@ items:
     return:
       type: Quantum.QEnum32{Quantum.CharacterIntroType}
     content.vb: Public characterIntroType As QEnum32(Of CharacterIntroType)
+- uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.timer
+  commentId: F:Quantum.Prototypes.TeamVersusGlobalsPrototype.timer
+  id: timer
+  parent: Quantum.Prototypes.TeamVersusGlobalsPrototype
+  langs:
+  - csharp
+  - vb
+  name: timer
+  nameWithType: TeamVersusGlobalsPrototype.timer
+  fullName: Quantum.Prototypes.TeamVersusGlobalsPrototype.timer
+  type: Field
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: timer
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
+    startLine: 1816
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum.Prototypes
+  syntax:
+    content: public FrameTimerPrototype timer
+    return:
+      type: Quantum.Prototypes.FrameTimerPrototype
+    content.vb: Public timer As FrameTimerPrototype
 - uid: Quantum.Prototypes.TeamVersusGlobalsPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   commentId: M:Quantum.Prototypes.TeamVersusGlobalsPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   id: AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
@@ -323,7 +396,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AddToEntity
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1595
+    startLine: 1817
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -363,7 +436,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Materialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Prototypes.cs
-    startLine: 1600
+    startLine: 1822
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.Prototypes
@@ -585,46 +658,46 @@ references:
   fullName: Quantum.ComponentPrototype<T>.ComponentType
   nameWithType.vb: ComponentPrototype(Of T).ComponentType
   fullName.vb: Quantum.ComponentPrototype(Of T).ComponentType
-- uid: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData[]
+- uid: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean[]
   isExternal: true
-  href: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData.html
-  name: DictionaryEntry_Int32_TeamVersusPlayerData[]
-  nameWithType: DictionaryEntry_Int32_TeamVersusPlayerData[]
-  fullName: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData[]
-  nameWithType.vb: DictionaryEntry_Int32_TeamVersusPlayerData()
-  fullName.vb: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData()
-  name.vb: DictionaryEntry_Int32_TeamVersusPlayerData()
+  href: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean.html
+  name: DictionaryEntry_Int32_QBoolean[]
+  nameWithType: DictionaryEntry_Int32_QBoolean[]
+  fullName: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean[]
+  nameWithType.vb: DictionaryEntry_Int32_QBoolean()
+  fullName.vb: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean()
+  name.vb: DictionaryEntry_Int32_QBoolean()
   spec.csharp:
-  - uid: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData
-    name: DictionaryEntry_Int32_TeamVersusPlayerData
-    href: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData.html
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean
+    name: DictionaryEntry_Int32_QBoolean
+    href: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData
-    name: DictionaryEntry_Int32_TeamVersusPlayerData
-    href: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusPlayerData.html
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean
+    name: DictionaryEntry_Int32_QBoolean
+    href: Quantum.Prototypes.DictionaryEntry_Int32_QBoolean.html
   - name: (
   - name: )
-- uid: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32[]
+- uid: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData[]
   isExternal: true
-  href: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32.html
-  name: DictionaryEntry_PlayerRef_Int32[]
-  nameWithType: DictionaryEntry_PlayerRef_Int32[]
-  fullName: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32[]
-  nameWithType.vb: DictionaryEntry_PlayerRef_Int32()
-  fullName.vb: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32()
-  name.vb: DictionaryEntry_PlayerRef_Int32()
+  href: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData.html
+  name: DictionaryEntry_Int32_TeamVersusParticipantData[]
+  nameWithType: DictionaryEntry_Int32_TeamVersusParticipantData[]
+  fullName: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData[]
+  nameWithType.vb: DictionaryEntry_Int32_TeamVersusParticipantData()
+  fullName.vb: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData()
+  name.vb: DictionaryEntry_Int32_TeamVersusParticipantData()
   spec.csharp:
-  - uid: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32
-    name: DictionaryEntry_PlayerRef_Int32
-    href: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32.html
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData
+    name: DictionaryEntry_Int32_TeamVersusParticipantData
+    href: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32
-    name: DictionaryEntry_PlayerRef_Int32
-    href: Quantum.Prototypes.DictionaryEntry_PlayerRef_Int32.html
+  - uid: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData
+    name: DictionaryEntry_Int32_TeamVersusParticipantData
+    href: Quantum.Prototypes.DictionaryEntry_Int32_TeamVersusParticipantData.html
   - name: (
   - name: )
 - uid: Quantum.Prototypes.DictionaryEntry_Int32_Int32[]
@@ -715,6 +788,13 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: Quantum.Prototypes.FrameTimerPrototype
+  commentId: T:Quantum.Prototypes.FrameTimerPrototype
+  parent: Quantum.Prototypes
+  isExternal: true
+  name: FrameTimerPrototype
+  nameWithType: FrameTimerPrototype
+  fullName: Quantum.Prototypes.FrameTimerPrototype
 - uid: Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   commentId: M:Quantum.ComponentPrototype.AddToEntity(Quantum.Core.FrameBase,Quantum.EntityRef,Quantum.PrototypeMaterializationContext@)
   parent: Quantum.ComponentPrototype

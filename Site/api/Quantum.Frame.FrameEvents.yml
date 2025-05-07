@@ -14,6 +14,8 @@ items:
   - Quantum.Frame.FrameEvents.EventTypeCount
   - Quantum.Frame.FrameEvents.FighterDied(Quantum.EntityRef,Quantum.EntityRef,Photon.Deterministic.FPVector3)
   - Quantum.Frame.FrameEvents.GameResult(Quantum.GameResult)
+  - Quantum.Frame.FrameEvents.GamemodeParticipantEntityUpdated(System.Int32)
+  - Quantum.Frame.FrameEvents.GamemodeParticipantSpawned(System.Int32)
   - Quantum.Frame.FrameEvents.GamemodeStateChanged(Quantum.GenericGamemodeStates,Quantum.GenericGamemodeStates)
   - Quantum.Frame.FrameEvents.GamemodeTeamScoreChanged(System.Int32,System.Int32,System.Int32)
   - Quantum.Frame.FrameEvents.GetEventType(System.Int32)
@@ -21,11 +23,11 @@ items:
   - Quantum.Frame.FrameEvents.HealthDecreased(Quantum.EntityRef,System.Int32,System.Int32)
   - Quantum.Frame.FrameEvents.HealthIncreased(Quantum.EntityRef,System.Int32,System.Int32)
   - Quantum.Frame.FrameEvents.PlayCutsceneEvent(Quantum.EntityRef,Quantum.AssetRef{Quantum.Tag},Quantum.QBoolean)
-  - Quantum.Frame.FrameEvents.PlayEffectEvent(Quantum.AssetRef{Quantum.VisualEffectEntry},Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3)
+  - Quantum.Frame.FrameEvents.PlayEffectEvent(Quantum.AssetRef{Quantum.VisualEffectEntry},Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Quantum.AssetRef{Quantum.Tag})
   - Quantum.Frame.FrameEvents.PlaySoundEvent(Quantum.EntityRef,Quantum.EntityRef,Quantum.AssetRef{Quantum.SoundEntry},Photon.Deterministic.FP,Photon.Deterministic.FP,Photon.Deterministic.FP,Quantum.QBoolean,Quantum.QBoolean,Quantum.AssetRef{Quantum.AudioSourceConfig},Photon.Deterministic.FPVector3,Quantum.AssetRef{Quantum.Tag})
   - Quantum.Frame.FrameEvents.ResetEntityAfterCutsceneEvent(Quantum.EntityRef)
   - Quantum.Frame.FrameEvents.StopCutsceneEvent(Quantum.EntityRef,Quantum.AssetRef{Quantum.Tag})
-  - Quantum.Frame.FrameEvents.StopEffectEvent(Quantum.EntityRef,System.Int32,Quantum.QBoolean)
+  - Quantum.Frame.FrameEvents.StopEffectEvent(Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Quantum.QBoolean,Quantum.AssetRef{Quantum.VisualEffectEntry},System.Int32)
   - Quantum.Frame.FrameEvents.TeleportCameraEvent(Quantum.EntityRef)
   langs:
   - csharp
@@ -41,7 +43,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: FrameEvents
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 1609
+    startLine: 1615
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -66,7 +68,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CauseHitstopShakeEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 82
+    startLine: 84
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -102,7 +104,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: EntityHit
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 89
+    startLine: 91
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -135,7 +137,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CharaLinkAddedEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 96
+    startLine: 98
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -171,7 +173,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: CharaLinkRemovedEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 103
+    startLine: 105
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -207,7 +209,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TeleportCameraEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 110
+    startLine: 112
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -238,7 +240,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: FighterDied
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 116
+    startLine: 118
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -255,6 +257,74 @@ items:
       type: Quantum.EventFighterDied
     content.vb: Public Function FighterDied(WhoDied As EntityRef, WhoKilled As EntityRef, Position As FPVector3) As EventFighterDied
   overload: Quantum.Frame.FrameEvents.FighterDied*
+- uid: Quantum.Frame.FrameEvents.GamemodeParticipantEntityUpdated(System.Int32)
+  commentId: M:Quantum.Frame.FrameEvents.GamemodeParticipantEntityUpdated(System.Int32)
+  id: GamemodeParticipantEntityUpdated(System.Int32)
+  parent: Quantum.Frame.FrameEvents
+  langs:
+  - csharp
+  - vb
+  name: GamemodeParticipantEntityUpdated(int)
+  nameWithType: Frame.FrameEvents.GamemodeParticipantEntityUpdated(int)
+  fullName: Quantum.Frame.FrameEvents.GamemodeParticipantEntityUpdated(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GamemodeParticipantEntityUpdated
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+    startLine: 127
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public EventGamemodeParticipantEntityUpdated GamemodeParticipantEntityUpdated(int participantId)
+    parameters:
+    - id: participantId
+      type: System.Int32
+    return:
+      type: Quantum.EventGamemodeParticipantEntityUpdated
+    content.vb: Public Function GamemodeParticipantEntityUpdated(participantId As Integer) As EventGamemodeParticipantEntityUpdated
+  overload: Quantum.Frame.FrameEvents.GamemodeParticipantEntityUpdated*
+  nameWithType.vb: Frame.FrameEvents.GamemodeParticipantEntityUpdated(Integer)
+  fullName.vb: Quantum.Frame.FrameEvents.GamemodeParticipantEntityUpdated(Integer)
+  name.vb: GamemodeParticipantEntityUpdated(Integer)
+- uid: Quantum.Frame.FrameEvents.GamemodeParticipantSpawned(System.Int32)
+  commentId: M:Quantum.Frame.FrameEvents.GamemodeParticipantSpawned(System.Int32)
+  id: GamemodeParticipantSpawned(System.Int32)
+  parent: Quantum.Frame.FrameEvents
+  langs:
+  - csharp
+  - vb
+  name: GamemodeParticipantSpawned(int)
+  nameWithType: Frame.FrameEvents.GamemodeParticipantSpawned(int)
+  fullName: Quantum.Frame.FrameEvents.GamemodeParticipantSpawned(int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GamemodeParticipantSpawned
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
+    startLine: 134
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public EventGamemodeParticipantSpawned GamemodeParticipantSpawned(int participantId)
+    parameters:
+    - id: participantId
+      type: System.Int32
+    return:
+      type: Quantum.EventGamemodeParticipantSpawned
+    content.vb: Public Function GamemodeParticipantSpawned(participantId As Integer) As EventGamemodeParticipantSpawned
+  overload: Quantum.Frame.FrameEvents.GamemodeParticipantSpawned*
+  nameWithType.vb: Frame.FrameEvents.GamemodeParticipantSpawned(Integer)
+  fullName.vb: Quantum.Frame.FrameEvents.GamemodeParticipantSpawned(Integer)
+  name.vb: GamemodeParticipantSpawned(Integer)
 - uid: Quantum.Frame.FrameEvents.GamemodeStateChanged(Quantum.GenericGamemodeStates,Quantum.GenericGamemodeStates)
   commentId: M:Quantum.Frame.FrameEvents.GamemodeStateChanged(Quantum.GenericGamemodeStates,Quantum.GenericGamemodeStates)
   id: GamemodeStateChanged(Quantum.GenericGamemodeStates,Quantum.GenericGamemodeStates)
@@ -273,7 +343,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GamemodeStateChanged
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 125
+    startLine: 141
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -306,7 +376,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GamemodeTeamScoreChanged
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 133
+    startLine: 149
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -344,7 +414,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: HealthDecreased
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 142
+    startLine: 158
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -382,7 +452,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: HealthIncreased
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 150
+    startLine: 166
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -420,7 +490,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: PlayCutsceneEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 158
+    startLine: 174
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -458,7 +528,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ResetEntityAfterCutsceneEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 166
+    startLine: 182
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -489,7 +559,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: PlaySoundEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 172
+    startLine: 188
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -543,7 +613,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: StopCutsceneEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 188
+    startLine: 204
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -561,16 +631,16 @@ items:
   nameWithType.vb: Frame.FrameEvents.StopCutsceneEvent(EntityRef, AssetRef(Of Tag))
   fullName.vb: Quantum.Frame.FrameEvents.StopCutsceneEvent(Quantum.EntityRef, Quantum.AssetRef(Of Quantum.Tag))
   name.vb: StopCutsceneEvent(EntityRef, AssetRef(Of Tag))
-- uid: Quantum.Frame.FrameEvents.PlayEffectEvent(Quantum.AssetRef{Quantum.VisualEffectEntry},Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3)
-  commentId: M:Quantum.Frame.FrameEvents.PlayEffectEvent(Quantum.AssetRef{Quantum.VisualEffectEntry},Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3)
-  id: PlayEffectEvent(Quantum.AssetRef{Quantum.VisualEffectEntry},Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3)
+- uid: Quantum.Frame.FrameEvents.PlayEffectEvent(Quantum.AssetRef{Quantum.VisualEffectEntry},Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Quantum.AssetRef{Quantum.Tag})
+  commentId: M:Quantum.Frame.FrameEvents.PlayEffectEvent(Quantum.AssetRef{Quantum.VisualEffectEntry},Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Quantum.AssetRef{Quantum.Tag})
+  id: PlayEffectEvent(Quantum.AssetRef{Quantum.VisualEffectEntry},Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Photon.Deterministic.FPVector3,Quantum.QBoolean,Quantum.AssetRef{Quantum.Tag})
   parent: Quantum.Frame.FrameEvents
   langs:
   - csharp
   - vb
-  name: PlayEffectEvent(AssetRef<VisualEffectEntry>, EntityRef, QBoolean, QBoolean, FPVector3, QBoolean, FPVector3)
-  nameWithType: Frame.FrameEvents.PlayEffectEvent(AssetRef<VisualEffectEntry>, EntityRef, QBoolean, QBoolean, FPVector3, QBoolean, FPVector3)
-  fullName: Quantum.Frame.FrameEvents.PlayEffectEvent(Quantum.AssetRef<Quantum.VisualEffectEntry>, Quantum.EntityRef, Quantum.QBoolean, Quantum.QBoolean, Photon.Deterministic.FPVector3, Quantum.QBoolean, Photon.Deterministic.FPVector3)
+  name: PlayEffectEvent(AssetRef<VisualEffectEntry>, EntityRef, QBoolean, QBoolean, FPVector3, QBoolean, FPVector3, QBoolean, FPVector3, QBoolean, AssetRef<Tag>)
+  nameWithType: Frame.FrameEvents.PlayEffectEvent(AssetRef<VisualEffectEntry>, EntityRef, QBoolean, QBoolean, FPVector3, QBoolean, FPVector3, QBoolean, FPVector3, QBoolean, AssetRef<Tag>)
+  fullName: Quantum.Frame.FrameEvents.PlayEffectEvent(Quantum.AssetRef<Quantum.VisualEffectEntry>, Quantum.EntityRef, Quantum.QBoolean, Quantum.QBoolean, Photon.Deterministic.FPVector3, Quantum.QBoolean, Photon.Deterministic.FPVector3, Quantum.QBoolean, Photon.Deterministic.FPVector3, Quantum.QBoolean, Quantum.AssetRef<Quantum.Tag>)
   type: Method
   source:
     remote:
@@ -579,12 +649,12 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: PlayEffectEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 195
+    startLine: 211
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public EventPlayEffectEvent PlayEffectEvent(AssetRef<VisualEffectEntry> visualEffectRef, EntityRef parent, QBoolean parented, QBoolean positionAsOffset, FPVector3 position, QBoolean rotationAsOffset, FPVector3 rotation)
+    content: public EventPlayEffectEvent PlayEffectEvent(AssetRef<VisualEffectEntry> visualEffectRef, EntityRef parent, QBoolean parented, QBoolean positionAsOffset, FPVector3 position, QBoolean rotationAsOffset, FPVector3 rotation, QBoolean atClosestBodyPosition, FPVector3 sourcePosition, QBoolean setRotationToForceDir, AssetRef<Tag> parentBoneTag)
     parameters:
     - id: visualEffectRef
       type: Quantum.AssetRef{Quantum.VisualEffectEntry}
@@ -600,23 +670,31 @@ items:
       type: Quantum.QBoolean
     - id: rotation
       type: Photon.Deterministic.FPVector3
+    - id: atClosestBodyPosition
+      type: Quantum.QBoolean
+    - id: sourcePosition
+      type: Photon.Deterministic.FPVector3
+    - id: setRotationToForceDir
+      type: Quantum.QBoolean
+    - id: parentBoneTag
+      type: Quantum.AssetRef{Quantum.Tag}
     return:
       type: Quantum.EventPlayEffectEvent
-    content.vb: Public Function PlayEffectEvent(visualEffectRef As AssetRef(Of VisualEffectEntry), parent As EntityRef, parented As QBoolean, positionAsOffset As QBoolean, position As FPVector3, rotationAsOffset As QBoolean, rotation As FPVector3) As EventPlayEffectEvent
+    content.vb: Public Function PlayEffectEvent(visualEffectRef As AssetRef(Of VisualEffectEntry), parent As EntityRef, parented As QBoolean, positionAsOffset As QBoolean, position As FPVector3, rotationAsOffset As QBoolean, rotation As FPVector3, atClosestBodyPosition As QBoolean, sourcePosition As FPVector3, setRotationToForceDir As QBoolean, parentBoneTag As AssetRef(Of Tag)) As EventPlayEffectEvent
   overload: Quantum.Frame.FrameEvents.PlayEffectEvent*
-  nameWithType.vb: Frame.FrameEvents.PlayEffectEvent(AssetRef(Of VisualEffectEntry), EntityRef, QBoolean, QBoolean, FPVector3, QBoolean, FPVector3)
-  fullName.vb: Quantum.Frame.FrameEvents.PlayEffectEvent(Quantum.AssetRef(Of Quantum.VisualEffectEntry), Quantum.EntityRef, Quantum.QBoolean, Quantum.QBoolean, Photon.Deterministic.FPVector3, Quantum.QBoolean, Photon.Deterministic.FPVector3)
-  name.vb: PlayEffectEvent(AssetRef(Of VisualEffectEntry), EntityRef, QBoolean, QBoolean, FPVector3, QBoolean, FPVector3)
-- uid: Quantum.Frame.FrameEvents.StopEffectEvent(Quantum.EntityRef,System.Int32,Quantum.QBoolean)
-  commentId: M:Quantum.Frame.FrameEvents.StopEffectEvent(Quantum.EntityRef,System.Int32,Quantum.QBoolean)
-  id: StopEffectEvent(Quantum.EntityRef,System.Int32,Quantum.QBoolean)
+  nameWithType.vb: Frame.FrameEvents.PlayEffectEvent(AssetRef(Of VisualEffectEntry), EntityRef, QBoolean, QBoolean, FPVector3, QBoolean, FPVector3, QBoolean, FPVector3, QBoolean, AssetRef(Of Tag))
+  fullName.vb: Quantum.Frame.FrameEvents.PlayEffectEvent(Quantum.AssetRef(Of Quantum.VisualEffectEntry), Quantum.EntityRef, Quantum.QBoolean, Quantum.QBoolean, Photon.Deterministic.FPVector3, Quantum.QBoolean, Photon.Deterministic.FPVector3, Quantum.QBoolean, Photon.Deterministic.FPVector3, Quantum.QBoolean, Quantum.AssetRef(Of Quantum.Tag))
+  name.vb: PlayEffectEvent(AssetRef(Of VisualEffectEntry), EntityRef, QBoolean, QBoolean, FPVector3, QBoolean, FPVector3, QBoolean, FPVector3, QBoolean, AssetRef(Of Tag))
+- uid: Quantum.Frame.FrameEvents.StopEffectEvent(Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Quantum.QBoolean,Quantum.AssetRef{Quantum.VisualEffectEntry},System.Int32)
+  commentId: M:Quantum.Frame.FrameEvents.StopEffectEvent(Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Quantum.QBoolean,Quantum.AssetRef{Quantum.VisualEffectEntry},System.Int32)
+  id: StopEffectEvent(Quantum.EntityRef,Quantum.QBoolean,Quantum.QBoolean,Quantum.QBoolean,Quantum.AssetRef{Quantum.VisualEffectEntry},System.Int32)
   parent: Quantum.Frame.FrameEvents
   langs:
   - csharp
   - vb
-  name: StopEffectEvent(EntityRef, int, QBoolean)
-  nameWithType: Frame.FrameEvents.StopEffectEvent(EntityRef, int, QBoolean)
-  fullName: Quantum.Frame.FrameEvents.StopEffectEvent(Quantum.EntityRef, int, Quantum.QBoolean)
+  name: StopEffectEvent(EntityRef, QBoolean, QBoolean, QBoolean, AssetRef<VisualEffectEntry>, int)
+  nameWithType: Frame.FrameEvents.StopEffectEvent(EntityRef, QBoolean, QBoolean, QBoolean, AssetRef<VisualEffectEntry>, int)
+  fullName: Quantum.Frame.FrameEvents.StopEffectEvent(Quantum.EntityRef, Quantum.QBoolean, Quantum.QBoolean, Quantum.QBoolean, Quantum.AssetRef<Quantum.VisualEffectEntry>, int)
   type: Method
   source:
     remote:
@@ -625,26 +703,32 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: StopEffectEvent
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Events.cs
-    startLine: 207
+    startLine: 227
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public EventStopEffectEvent StopEffectEvent(EntityRef parent, int identifier, QBoolean destroyAllParticles)
+    content: public EventStopEffectEvent StopEffectEvent(EntityRef parent, QBoolean stopAllInstances, QBoolean destroyAllParticles, QBoolean unparent, AssetRef<VisualEffectEntry> effectToStop, int offset)
     parameters:
     - id: parent
       type: Quantum.EntityRef
-    - id: identifier
-      type: System.Int32
+    - id: stopAllInstances
+      type: Quantum.QBoolean
     - id: destroyAllParticles
       type: Quantum.QBoolean
+    - id: unparent
+      type: Quantum.QBoolean
+    - id: effectToStop
+      type: Quantum.AssetRef{Quantum.VisualEffectEntry}
+    - id: offset
+      type: System.Int32
     return:
       type: Quantum.EventStopEffectEvent
-    content.vb: Public Function StopEffectEvent(parent As EntityRef, identifier As Integer, destroyAllParticles As QBoolean) As EventStopEffectEvent
+    content.vb: Public Function StopEffectEvent(parent As EntityRef, stopAllInstances As QBoolean, destroyAllParticles As QBoolean, unparent As QBoolean, effectToStop As AssetRef(Of VisualEffectEntry), offset As Integer) As EventStopEffectEvent
   overload: Quantum.Frame.FrameEvents.StopEffectEvent*
-  nameWithType.vb: Frame.FrameEvents.StopEffectEvent(EntityRef, Integer, QBoolean)
-  fullName.vb: Quantum.Frame.FrameEvents.StopEffectEvent(Quantum.EntityRef, Integer, Quantum.QBoolean)
-  name.vb: StopEffectEvent(EntityRef, Integer, QBoolean)
+  nameWithType.vb: Frame.FrameEvents.StopEffectEvent(EntityRef, QBoolean, QBoolean, QBoolean, AssetRef(Of VisualEffectEntry), Integer)
+  fullName.vb: Quantum.Frame.FrameEvents.StopEffectEvent(Quantum.EntityRef, Quantum.QBoolean, Quantum.QBoolean, Quantum.QBoolean, Quantum.AssetRef(Of Quantum.VisualEffectEntry), Integer)
+  name.vb: StopEffectEvent(EntityRef, QBoolean, QBoolean, QBoolean, AssetRef(Of VisualEffectEntry), Integer)
 - uid: Quantum.Frame.FrameEvents.GetParentEventID(System.Int32)
   commentId: M:Quantum.Frame.FrameEvents.GetParentEventID(System.Int32)
   id: GetParentEventID(System.Int32)
@@ -820,7 +904,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: .ctor
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/Photon/Quantum/Simulation/QuantumSimulationCore.cs
-    startLine: 1612
+    startLine: 1618
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -1029,6 +1113,32 @@ references:
   - uid: Photon.Deterministic
     name: Deterministic
     isExternal: true
+- uid: Quantum.Frame.FrameEvents.GamemodeParticipantEntityUpdated*
+  commentId: Overload:Quantum.Frame.FrameEvents.GamemodeParticipantEntityUpdated
+  href: Quantum.Frame.FrameEvents.html#Quantum_Frame_FrameEvents_GamemodeParticipantEntityUpdated_System_Int32_
+  name: GamemodeParticipantEntityUpdated
+  nameWithType: Frame.FrameEvents.GamemodeParticipantEntityUpdated
+  fullName: Quantum.Frame.FrameEvents.GamemodeParticipantEntityUpdated
+- uid: Quantum.EventGamemodeParticipantEntityUpdated
+  commentId: T:Quantum.EventGamemodeParticipantEntityUpdated
+  parent: Quantum
+  href: Quantum.EventGamemodeParticipantEntityUpdated.html
+  name: EventGamemodeParticipantEntityUpdated
+  nameWithType: EventGamemodeParticipantEntityUpdated
+  fullName: Quantum.EventGamemodeParticipantEntityUpdated
+- uid: Quantum.Frame.FrameEvents.GamemodeParticipantSpawned*
+  commentId: Overload:Quantum.Frame.FrameEvents.GamemodeParticipantSpawned
+  href: Quantum.Frame.FrameEvents.html#Quantum_Frame_FrameEvents_GamemodeParticipantSpawned_System_Int32_
+  name: GamemodeParticipantSpawned
+  nameWithType: Frame.FrameEvents.GamemodeParticipantSpawned
+  fullName: Quantum.Frame.FrameEvents.GamemodeParticipantSpawned
+- uid: Quantum.EventGamemodeParticipantSpawned
+  commentId: T:Quantum.EventGamemodeParticipantSpawned
+  parent: Quantum
+  href: Quantum.EventGamemodeParticipantSpawned.html
+  name: EventGamemodeParticipantSpawned
+  nameWithType: EventGamemodeParticipantSpawned
+  fullName: Quantum.EventGamemodeParticipantSpawned
 - uid: Quantum.Frame.FrameEvents.GamemodeStateChanged*
   commentId: Overload:Quantum.Frame.FrameEvents.GamemodeStateChanged
   href: Quantum.Frame.FrameEvents.html#Quantum_Frame_FrameEvents_GamemodeStateChanged_Quantum_GenericGamemodeStates_Quantum_GenericGamemodeStates_
@@ -1249,7 +1359,7 @@ references:
   fullName: Quantum.EventStopCutsceneEvent
 - uid: Quantum.Frame.FrameEvents.PlayEffectEvent*
   commentId: Overload:Quantum.Frame.FrameEvents.PlayEffectEvent
-  href: Quantum.Frame.FrameEvents.html#Quantum_Frame_FrameEvents_PlayEffectEvent_Quantum_AssetRef_Quantum_VisualEffectEntry__Quantum_EntityRef_Quantum_QBoolean_Quantum_QBoolean_Photon_Deterministic_FPVector3_Quantum_QBoolean_Photon_Deterministic_FPVector3_
+  href: Quantum.Frame.FrameEvents.html#Quantum_Frame_FrameEvents_PlayEffectEvent_Quantum_AssetRef_Quantum_VisualEffectEntry__Quantum_EntityRef_Quantum_QBoolean_Quantum_QBoolean_Photon_Deterministic_FPVector3_Quantum_QBoolean_Photon_Deterministic_FPVector3_Quantum_QBoolean_Photon_Deterministic_FPVector3_Quantum_QBoolean_Quantum_AssetRef_Quantum_Tag__
   name: PlayEffectEvent
   nameWithType: Frame.FrameEvents.PlayEffectEvent
   fullName: Quantum.Frame.FrameEvents.PlayEffectEvent
@@ -1293,7 +1403,7 @@ references:
   fullName: Quantum.EventPlayEffectEvent
 - uid: Quantum.Frame.FrameEvents.StopEffectEvent*
   commentId: Overload:Quantum.Frame.FrameEvents.StopEffectEvent
-  href: Quantum.Frame.FrameEvents.html#Quantum_Frame_FrameEvents_StopEffectEvent_Quantum_EntityRef_System_Int32_Quantum_QBoolean_
+  href: Quantum.Frame.FrameEvents.html#Quantum_Frame_FrameEvents_StopEffectEvent_Quantum_EntityRef_Quantum_QBoolean_Quantum_QBoolean_Quantum_QBoolean_Quantum_AssetRef_Quantum_VisualEffectEntry__System_Int32_
   name: StopEffectEvent
   nameWithType: Frame.FrameEvents.StopEffectEvent
   fullName: Quantum.Frame.FrameEvents.StopEffectEvent

@@ -20,13 +20,19 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UpdateCombatTargetSystem
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateCombatTargetSystem.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.mfo.Systems
   syntax:
-    content: 'public class UpdateCombatTargetSystem : SystemMainThread'
-    content.vb: Public Class UpdateCombatTargetSystem Inherits SystemMainThread
+    content: >-
+      [Preserve]
+
+      public class UpdateCombatTargetSystem : SystemMainThread
+    content.vb: >-
+      <Preserve>
+
+      Public Class UpdateCombatTargetSystem Inherits SystemMainThread
   inheritance:
   - System.Object
   - Quantum.SystemBase
@@ -43,6 +49,10 @@ items:
   - Quantum.SystemBase.OnEnabled(Quantum.Frame)
   - Quantum.SystemBase.OnDisabled(Quantum.Frame)
   - Quantum.SystemBase.OnSchedule(Quantum.Frame,Quantum.Task.TaskHandle)
+  attributes:
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
 - uid: Quantum.mfo.Systems.UpdateCombatTargetSystem.Update(Quantum.Frame)
   commentId: M:Quantum.mfo.Systems.UpdateCombatTargetSystem.Update(Quantum.Frame)
   id: Update(Quantum.Frame)
@@ -61,7 +71,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Update
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Systems/UpdateCombatTargetSystem.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - Quantum.Simulation
   namespace: Quantum.mfo.Systems

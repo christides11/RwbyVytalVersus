@@ -5,11 +5,15 @@ items:
   id: AddressablesGamemodeDefinition
   parent: Global
   children:
+  - Global.AddressablesGamemodeDefinition.DefaultSettings
   - Global.AddressablesGamemodeDefinition.Description
+  - Global.AddressablesGamemodeDefinition.GetDefaultTeamConfig
+  - Global.AddressablesGamemodeDefinition.GetGamemodeTeamTypes
   - Global.AddressablesGamemodeDefinition.GetMatchHandler
   - Global.AddressablesGamemodeDefinition.GetQuantumDataAsset
-  - Global.AddressablesGamemodeDefinition.GetTeamConfig
   - Global.AddressablesGamemodeDefinition.LoadAssets
+  - Global.AddressablesGamemodeDefinition.MaximumPlayers
+  - Global.AddressablesGamemodeDefinition.MinimumPlayers
   - Global.AddressablesGamemodeDefinition.Name
   - Global.AddressablesGamemodeDefinition.RegisterQuantumAsset
   - Global.AddressablesGamemodeDefinition.Unload
@@ -29,7 +33,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: AddressablesGamemodeDefinition
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - rwby
   namespace: Global
@@ -57,6 +61,7 @@ items:
   - Global.IContentDefinition.ID
   - Global.IContentDefinition.Tags
   - Global.IContentDefinition.Load(System.String)
+  - Global.IContentDefinition.GetAssetSoftReference
   attributes:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
@@ -86,7 +91,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Name
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - rwby
   namespace: Global
@@ -117,7 +122,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Description
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - rwby
   namespace: Global
@@ -130,36 +135,159 @@ items:
     content.vb: Public Overrides ReadOnly Property Description As String
   overridden: Global.IContentDefinition.Description
   overload: Global.AddressablesGamemodeDefinition.Description*
-- uid: Global.AddressablesGamemodeDefinition.GetTeamConfig
-  commentId: M:Global.AddressablesGamemodeDefinition.GetTeamConfig
-  id: GetTeamConfig
+- uid: Global.AddressablesGamemodeDefinition.DefaultSettings
+  commentId: P:Global.AddressablesGamemodeDefinition.DefaultSettings
+  id: DefaultSettings
   parent: Global.AddressablesGamemodeDefinition
   langs:
   - csharp
   - vb
-  name: GetTeamConfig()
-  nameWithType: AddressablesGamemodeDefinition.GetTeamConfig()
-  fullName: AddressablesGamemodeDefinition.GetTeamConfig()
+  name: DefaultSettings
+  nameWithType: AddressablesGamemodeDefinition.DefaultSettings
+  fullName: AddressablesGamemodeDefinition.DefaultSettings
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: DefaultSettings
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
+    startLine: 24
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override GamemodeSettingsBase DefaultSettings { get; protected set; }
+    parameters: []
+    return:
+      type: Quantum.GamemodeSettingsBase
+    content.vb: Public Overrides Property DefaultSettings As GamemodeSettingsBase
+  overridden: Global.BaseGamemodeDefinition.DefaultSettings
+  overload: Global.AddressablesGamemodeDefinition.DefaultSettings*
+- uid: Global.AddressablesGamemodeDefinition.MinimumPlayers
+  commentId: P:Global.AddressablesGamemodeDefinition.MinimumPlayers
+  id: MinimumPlayers
+  parent: Global.AddressablesGamemodeDefinition
+  langs:
+  - csharp
+  - vb
+  name: MinimumPlayers
+  nameWithType: AddressablesGamemodeDefinition.MinimumPlayers
+  fullName: AddressablesGamemodeDefinition.MinimumPlayers
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: MinimumPlayers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
+    startLine: 25
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override int MinimumPlayers { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Property MinimumPlayers As Integer
+  overridden: Global.BaseGamemodeDefinition.MinimumPlayers
+  overload: Global.AddressablesGamemodeDefinition.MinimumPlayers*
+- uid: Global.AddressablesGamemodeDefinition.MaximumPlayers
+  commentId: P:Global.AddressablesGamemodeDefinition.MaximumPlayers
+  id: MaximumPlayers
+  parent: Global.AddressablesGamemodeDefinition
+  langs:
+  - csharp
+  - vb
+  name: MaximumPlayers
+  nameWithType: AddressablesGamemodeDefinition.MaximumPlayers
+  fullName: AddressablesGamemodeDefinition.MaximumPlayers
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: MaximumPlayers
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
+    startLine: 26
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override int MaximumPlayers { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Property MaximumPlayers As Integer
+  overridden: Global.BaseGamemodeDefinition.MaximumPlayers
+  overload: Global.AddressablesGamemodeDefinition.MaximumPlayers*
+- uid: Global.AddressablesGamemodeDefinition.GetGamemodeTeamTypes
+  commentId: M:Global.AddressablesGamemodeDefinition.GetGamemodeTeamTypes
+  id: GetGamemodeTeamTypes
+  parent: Global.AddressablesGamemodeDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetGamemodeTeamTypes()
+  nameWithType: AddressablesGamemodeDefinition.GetGamemodeTeamTypes()
+  fullName: AddressablesGamemodeDefinition.GetGamemodeTeamTypes()
   type: Method
   source:
     remote:
       path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: GetTeamConfig
+    id: GetGamemodeTeamTypes
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
-    startLine: 27
+    startLine: 32
   assemblies:
   - rwby
   namespace: Global
   example: []
   syntax:
-    content: public override GamemodeTeamConfig[] GetTeamConfig()
+    content: public override GamemodeTeamTypeConfig[] GetGamemodeTeamTypes()
+    return:
+      type: Global.GamemodeTeamTypeConfig[]
+    content.vb: Public Overrides Function GetGamemodeTeamTypes() As GamemodeTeamTypeConfig()
+  overridden: Global.BaseGamemodeDefinition.GetGamemodeTeamTypes
+  overload: Global.AddressablesGamemodeDefinition.GetGamemodeTeamTypes*
+- uid: Global.AddressablesGamemodeDefinition.GetDefaultTeamConfig
+  commentId: M:Global.AddressablesGamemodeDefinition.GetDefaultTeamConfig
+  id: GetDefaultTeamConfig
+  parent: Global.AddressablesGamemodeDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultTeamConfig()
+  nameWithType: AddressablesGamemodeDefinition.GetDefaultTeamConfig()
+  fullName: AddressablesGamemodeDefinition.GetDefaultTeamConfig()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetDefaultTeamConfig
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
+    startLine: 37
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override GamemodeTeamConfig[] GetDefaultTeamConfig()
     return:
       type: Global.GamemodeTeamConfig[]
-    content.vb: Public Overrides Function GetTeamConfig() As GamemodeTeamConfig()
-  overridden: Global.BaseGamemodeDefinition.GetTeamConfig
-  overload: Global.AddressablesGamemodeDefinition.GetTeamConfig*
+    content.vb: Public Overrides Function GetDefaultTeamConfig() As GamemodeTeamConfig()
+  overridden: Global.BaseGamemodeDefinition.GetDefaultTeamConfig
+  overload: Global.AddressablesGamemodeDefinition.GetDefaultTeamConfig*
 - uid: Global.AddressablesGamemodeDefinition.LoadAssets
   commentId: M:Global.AddressablesGamemodeDefinition.LoadAssets
   id: LoadAssets
@@ -178,7 +306,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: LoadAssets
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
-    startLine: 32
+    startLine: 42
   assemblies:
   - rwby
   namespace: Global
@@ -208,7 +336,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: RegisterQuantumAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
-    startLine: 78
+    startLine: 88
   assemblies:
   - rwby
   namespace: Global
@@ -236,7 +364,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetMatchHandler
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
-    startLine: 91
+    startLine: 101
   assemblies:
   - rwby
   namespace: Global
@@ -266,7 +394,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetQuantumDataAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
-    startLine: 96
+    startLine: 106
   assemblies:
   - rwby
   namespace: Global
@@ -296,7 +424,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnregisterQuantumAsset
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
-    startLine: 101
+    startLine: 111
   assemblies:
   - rwby
   namespace: Global
@@ -324,7 +452,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnloadAssets
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
-    startLine: 107
+    startLine: 117
   assemblies:
   - rwby
   namespace: Global
@@ -352,7 +480,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Unload
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Modding/Addressables/Content/AddressablesGamemodeDefinition.cs
-    startLine: 119
+    startLine: 129
   assemblies:
   - rwby
   namespace: Global
@@ -453,6 +581,25 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+- uid: Global.IContentDefinition.GetAssetSoftReference
+  commentId: M:Global.IContentDefinition.GetAssetSoftReference
+  parent: Global.IContentDefinition
+  href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  name: GetAssetSoftReference()
+  nameWithType: IContentDefinition.GetAssetSoftReference()
+  fullName: IContentDefinition.GetAssetSoftReference()
+  spec.csharp:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.IContentDefinition.GetAssetSoftReference
+    name: GetAssetSoftReference
+    href: Global.IContentDefinition.html#IContentDefinition_GetAssetSoftReference
+  - name: (
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -503,31 +650,140 @@ references:
   name: Description
   nameWithType: AddressablesGamemodeDefinition.Description
   fullName: AddressablesGamemodeDefinition.Description
-- uid: Global.BaseGamemodeDefinition.GetTeamConfig
-  commentId: M:Global.BaseGamemodeDefinition.GetTeamConfig
+- uid: Global.BaseGamemodeDefinition.DefaultSettings
+  commentId: P:Global.BaseGamemodeDefinition.DefaultSettings
   parent: Global.BaseGamemodeDefinition
-  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetTeamConfig
-  name: GetTeamConfig()
-  nameWithType: BaseGamemodeDefinition.GetTeamConfig()
-  fullName: BaseGamemodeDefinition.GetTeamConfig()
+  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_DefaultSettings
+  name: DefaultSettings
+  nameWithType: BaseGamemodeDefinition.DefaultSettings
+  fullName: BaseGamemodeDefinition.DefaultSettings
+- uid: Global.AddressablesGamemodeDefinition.DefaultSettings*
+  commentId: Overload:Global.AddressablesGamemodeDefinition.DefaultSettings
+  href: Global.AddressablesGamemodeDefinition.html#AddressablesGamemodeDefinition_DefaultSettings
+  name: DefaultSettings
+  nameWithType: AddressablesGamemodeDefinition.DefaultSettings
+  fullName: AddressablesGamemodeDefinition.DefaultSettings
+- uid: Quantum.GamemodeSettingsBase
+  commentId: T:Quantum.GamemodeSettingsBase
+  parent: Quantum
+  href: Quantum.GamemodeSettingsBase.html
+  name: GamemodeSettingsBase
+  nameWithType: GamemodeSettingsBase
+  fullName: Quantum.GamemodeSettingsBase
+- uid: Quantum
+  commentId: N:Quantum
+  href: Quantum.html
+  name: Quantum
+  nameWithType: Quantum
+  fullName: Quantum
+- uid: Global.BaseGamemodeDefinition.MinimumPlayers
+  commentId: P:Global.BaseGamemodeDefinition.MinimumPlayers
+  parent: Global.BaseGamemodeDefinition
+  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_MinimumPlayers
+  name: MinimumPlayers
+  nameWithType: BaseGamemodeDefinition.MinimumPlayers
+  fullName: BaseGamemodeDefinition.MinimumPlayers
+- uid: Global.AddressablesGamemodeDefinition.MinimumPlayers*
+  commentId: Overload:Global.AddressablesGamemodeDefinition.MinimumPlayers
+  href: Global.AddressablesGamemodeDefinition.html#AddressablesGamemodeDefinition_MinimumPlayers
+  name: MinimumPlayers
+  nameWithType: AddressablesGamemodeDefinition.MinimumPlayers
+  fullName: AddressablesGamemodeDefinition.MinimumPlayers
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Global.BaseGamemodeDefinition.MaximumPlayers
+  commentId: P:Global.BaseGamemodeDefinition.MaximumPlayers
+  parent: Global.BaseGamemodeDefinition
+  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_MaximumPlayers
+  name: MaximumPlayers
+  nameWithType: BaseGamemodeDefinition.MaximumPlayers
+  fullName: BaseGamemodeDefinition.MaximumPlayers
+- uid: Global.AddressablesGamemodeDefinition.MaximumPlayers*
+  commentId: Overload:Global.AddressablesGamemodeDefinition.MaximumPlayers
+  href: Global.AddressablesGamemodeDefinition.html#AddressablesGamemodeDefinition_MaximumPlayers
+  name: MaximumPlayers
+  nameWithType: AddressablesGamemodeDefinition.MaximumPlayers
+  fullName: AddressablesGamemodeDefinition.MaximumPlayers
+- uid: Global.BaseGamemodeDefinition.GetGamemodeTeamTypes
+  commentId: M:Global.BaseGamemodeDefinition.GetGamemodeTeamTypes
+  parent: Global.BaseGamemodeDefinition
+  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetGamemodeTeamTypes
+  name: GetGamemodeTeamTypes()
+  nameWithType: BaseGamemodeDefinition.GetGamemodeTeamTypes()
+  fullName: BaseGamemodeDefinition.GetGamemodeTeamTypes()
   spec.csharp:
-  - uid: Global.BaseGamemodeDefinition.GetTeamConfig
-    name: GetTeamConfig
-    href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetTeamConfig
+  - uid: Global.BaseGamemodeDefinition.GetGamemodeTeamTypes
+    name: GetGamemodeTeamTypes
+    href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetGamemodeTeamTypes
   - name: (
   - name: )
   spec.vb:
-  - uid: Global.BaseGamemodeDefinition.GetTeamConfig
-    name: GetTeamConfig
-    href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetTeamConfig
+  - uid: Global.BaseGamemodeDefinition.GetGamemodeTeamTypes
+    name: GetGamemodeTeamTypes
+    href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetGamemodeTeamTypes
   - name: (
   - name: )
-- uid: Global.AddressablesGamemodeDefinition.GetTeamConfig*
-  commentId: Overload:Global.AddressablesGamemodeDefinition.GetTeamConfig
-  href: Global.AddressablesGamemodeDefinition.html#AddressablesGamemodeDefinition_GetTeamConfig
-  name: GetTeamConfig
-  nameWithType: AddressablesGamemodeDefinition.GetTeamConfig
-  fullName: AddressablesGamemodeDefinition.GetTeamConfig
+- uid: Global.AddressablesGamemodeDefinition.GetGamemodeTeamTypes*
+  commentId: Overload:Global.AddressablesGamemodeDefinition.GetGamemodeTeamTypes
+  href: Global.AddressablesGamemodeDefinition.html#AddressablesGamemodeDefinition_GetGamemodeTeamTypes
+  name: GetGamemodeTeamTypes
+  nameWithType: AddressablesGamemodeDefinition.GetGamemodeTeamTypes
+  fullName: AddressablesGamemodeDefinition.GetGamemodeTeamTypes
+- uid: Global.GamemodeTeamTypeConfig[]
+  isExternal: true
+  href: GamemodeTeamTypeConfig.html
+  name: GamemodeTeamTypeConfig[]
+  nameWithType: GamemodeTeamTypeConfig[]
+  fullName: GamemodeTeamTypeConfig[]
+  nameWithType.vb: GamemodeTeamTypeConfig()
+  fullName.vb: GamemodeTeamTypeConfig()
+  name.vb: GamemodeTeamTypeConfig()
+  spec.csharp:
+  - uid: Global.GamemodeTeamTypeConfig
+    name: GamemodeTeamTypeConfig
+    href: GamemodeTeamTypeConfig.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.GamemodeTeamTypeConfig
+    name: GamemodeTeamTypeConfig
+    href: GamemodeTeamTypeConfig.html
+  - name: (
+  - name: )
+- uid: Global.BaseGamemodeDefinition.GetDefaultTeamConfig
+  commentId: M:Global.BaseGamemodeDefinition.GetDefaultTeamConfig
+  parent: Global.BaseGamemodeDefinition
+  href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetDefaultTeamConfig
+  name: GetDefaultTeamConfig()
+  nameWithType: BaseGamemodeDefinition.GetDefaultTeamConfig()
+  fullName: BaseGamemodeDefinition.GetDefaultTeamConfig()
+  spec.csharp:
+  - uid: Global.BaseGamemodeDefinition.GetDefaultTeamConfig
+    name: GetDefaultTeamConfig
+    href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetDefaultTeamConfig
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Global.BaseGamemodeDefinition.GetDefaultTeamConfig
+    name: GetDefaultTeamConfig
+    href: Global.BaseGamemodeDefinition.html#BaseGamemodeDefinition_GetDefaultTeamConfig
+  - name: (
+  - name: )
+- uid: Global.AddressablesGamemodeDefinition.GetDefaultTeamConfig*
+  commentId: Overload:Global.AddressablesGamemodeDefinition.GetDefaultTeamConfig
+  href: Global.AddressablesGamemodeDefinition.html#AddressablesGamemodeDefinition_GetDefaultTeamConfig
+  name: GetDefaultTeamConfig
+  nameWithType: AddressablesGamemodeDefinition.GetDefaultTeamConfig
+  fullName: AddressablesGamemodeDefinition.GetDefaultTeamConfig
 - uid: Global.GamemodeTeamConfig[]
   isExternal: true
   href: GamemodeTeamConfig.html
@@ -751,12 +1007,6 @@ references:
   name: GamemodeQuantumData
   nameWithType: GamemodeQuantumData
   fullName: Quantum.GamemodeQuantumData
-- uid: Quantum
-  commentId: N:Quantum
-  href: Quantum.html
-  name: Quantum
-  nameWithType: Quantum
-  fullName: Quantum
 - uid: Global.IContentDefinition.UnregisterQuantumAsset
   commentId: M:Global.IContentDefinition.UnregisterQuantumAsset
   parent: Global.IContentDefinition

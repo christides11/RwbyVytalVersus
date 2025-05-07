@@ -21,34 +21,50 @@ items:
   - rwby.BaseCommandListMovesetDefinition
   - rwby.BaseSongDefinition
   - rwby.BaseSongDefinitionContainer
+  - rwby.BehaviourCutsceneBindingSource
+  - rwby.BehaviourCutsceneBindingSource.BindingData
+  - rwby.BehaviourCutsceneBindingSourceGroup
+  - rwby.BetterCutsceneBinder
   - rwby.Bootloader
+  - rwby.CharacterSelectSceneInstanceManager
+  - rwby.CharacterSelectSceneManager
+  - rwby.CharacterSelectSceneScreenManager
+  - rwby.CharacterSelectSceneVisualSlotInstance
   - rwby.ClientManager
   - rwby.ClientManager.ClientManagerEvent
   - rwby.ClientManager.ClientManagerPlayerCountEvent
   - rwby.CreateLobbyScreen
   - rwby.CustomEntityView
   - rwby.CustomEntityView.EntityAction
-  - rwby.CustomEntityViewUpdater
   - rwby.CutsceneBinder
   - rwby.CutsceneBinder.CinemachineTrackBindingDefinition
   - rwby.CutsceneBindingSource
   - rwby.CutsceneBindingSourceCondition
+  - rwby.CutsceneBindingSourceGroup
   - rwby.CutsceneGrouping
   - rwby.DummyCamera
   - rwby.EntityAnimationUpdater
   - rwby.ExternalModAssetSoftReference
   - rwby.ExternalOptionDefinition
+  - rwby.FighterMenuVisualHandler
+  - rwby.FighterMenuVisualHandler.TagToAnimInfo
   - rwby.FindLobbyScreen
   - rwby.ForceRenderRate
+  - rwby.FrameMeterBar
+  - rwby.FrameMeterCharacter
   - rwby.GameConstants
   - rwby.GameManager
   - rwby.GlobalCutsceneManager
   - rwby.HudElementContainer
   - rwby.IClosableMenu
-  - rwby.ICutsceneBinding
   - rwby.IFighterDefinitionUser
   - rwby.IHUDElement
   - rwby.ILocalEntityHolder
+  - rwby.IOnUModPrebuild
+  - rwby.ITimelineDirectorBinder
+  - rwby.ITimelineDirectorBindingGetter
+  - rwby.ITimelineDirectorBindingSource
+  - rwby.ITimelineExposedReferenceData
   - rwby.InputActions
   - rwby.InputActions.IPlayerActions
   - rwby.InputActions.IUIActions
@@ -56,12 +72,20 @@ items:
   - rwby.InputActions.UIActions
   - rwby.InputManager
   - rwby.InputManager.ControlSchemeType
+  - rwby.InputPromptsLister
   - rwby.LoadingScreenManager
   - rwby.LobbyClientState
+  - rwby.LobbyGamemodeParticipantInfo
   - rwby.LobbyModStrictness
+  - rwby.MainMenuLocalScreen
+  - rwby.MainMenuLocalScreen.EnumMenuOptions
+  - rwby.MainMenuScreenSceneManager
+  - rwby.MainMenuTransitionalHelper
   - rwby.MatchHandlerBase
   - rwby.MatchHandlerBase.MatchEvent
+  - rwby.MenuCutsceneBindingActor
   - rwby.MenuLabelExternalOptionElement
+  - rwby.MirrorCustomReadWriteExtensions
   - rwby.MirrorNetworkManager
   - rwby.MirrorNetworkManager.EmptyEvent
   - rwby.MirrorNetworkManager.ServerClientEvent
@@ -72,16 +96,24 @@ items:
   - rwby.NetworkConsoleCommands
   - rwby.NetworkManager
   - rwby.NetworkMatchSessionHandler
-  - rwby.NetworkMatchSessionHandler.MatchEvent
   - rwby.NetworkMessagesCharacterLoading
   - rwby.NetworkMessagesCharacterLoading.ClientToServerRequestRoomMembersLoadFighter
   - rwby.OfflineMatchSessionHandler
   - rwby.ParentSelectable
   - rwby.QuickBootloader
+  - rwby.QuickMatchFighterVisualSelectionHandler
+  - rwby.QuickMatchFighterVisualSelectionHandler.ButtonClickedEvent
+  - rwby.QuickMatchSceneInstanceManager
+  - rwby.QuickMatchScreenCharacterSelect
+  - rwby.QuickMatchScreenFighterVisualSlot
+  - rwby.QuickMatchScreenMain
+  - rwby.QuickMatchScreenManager
+  - rwby.QuickMatchScreensManager
+  - rwby.RotateObjectViaCurve
   - rwby.SaveData
   - rwby.SaveManager
   - rwby.SessionHandlerBase
-  - rwby.SetPositionFromCutsceneBinding
+  - rwby.SetPositionFromTimelineBindingObject
   - rwby.SetTextFromVersion
   - rwby.SettingsManager
   - rwby.SettingsManager.SettingsChangedEvent
@@ -91,10 +123,13 @@ items:
   - rwby.TargetCameraManager
   - rwby.TargetCameraManager.CameraState
   - rwby.TestUIMenu
+  - rwby.TimelineAssetOverride
+  - rwby.TimelineAssetOverrideEditor
+  - rwby.TimelineExposedReferenceDataFromBindingSource
+  - rwby.TimelineExposedReferenceDataGameObject
+  - rwby.TimelineExposedReferenceDataScriptableObject
   - rwby.TitleMainScreen
-  - rwby.TitleMainScreen.SubmenuType
   - rwby.TitleScreen
-  - rwby.UIElementTweenSequence
   - rwby.UModGamemodeDefinition
   - rwby.UModHudElementDefinition
   - rwby.UModHudElementDefinitionContainer
@@ -105,6 +140,19 @@ items:
   - rwby.UModSongDefinitionContainer
   - rwby.UrpCameraSettingsUpdater
   - rwby.VideoSettings
+  - rwby.VytalMatchSceneFestivalSelectScreen
+  - rwby.VytalMatchSceneFestivalViewItem
+  - rwby.VytalMatchSceneGamemodeSettingsScreen
+  - rwby.VytalMatchSceneInstanceManager
+  - rwby.VytalMatchSceneMainScreen
+  - rwby.VytalMatchSceneManager
+  - rwby.VytalMatchSceneManager.GeneralDelegate
+  - rwby.VytalMatchSceneManager.ParticipantDelegate
+  - rwby.VytalMatchSceneMapSelectScreen
+  - rwby.VytalMatchSceneMapViewItem
+  - rwby.VytalMatchSceneParticipantViewItem
+  - rwby.VytalMatchSceneReadyScreen
+  - rwby.VytalMatchSceneScreenManager
   langs:
   - csharp
   - vb
@@ -113,8 +161,21 @@ items:
   fullName: rwby
   type: Namespace
   assemblies:
-  - Quantum.Simulation
+  - Assembly-CSharp
 references:
+- uid: rwby.FrameMeterBar
+  commentId: T:rwby.FrameMeterBar
+  parent: rwby
+  href: rwby.FrameMeterBar.html
+  name: FrameMeterBar
+  nameWithType: FrameMeterBar
+  fullName: rwby.FrameMeterBar
+- uid: rwby.FrameMeterCharacter
+  commentId: T:rwby.FrameMeterCharacter
+  href: rwby.FrameMeterCharacter.html
+  name: FrameMeterCharacter
+  nameWithType: FrameMeterCharacter
+  fullName: rwby.FrameMeterCharacter
 - uid: rwby.AuraBurnoutSystem
   commentId: T:rwby.AuraBurnoutSystem
   href: rwby.AuraBurnoutSystem.html
@@ -151,29 +212,79 @@ references:
   name: NetworkMatchSessionHandler
   nameWithType: NetworkMatchSessionHandler
   fullName: rwby.NetworkMatchSessionHandler
-- uid: rwby.NetworkMatchSessionHandler.MatchEvent
-  commentId: T:rwby.NetworkMatchSessionHandler.MatchEvent
+- uid: rwby.ITimelineDirectorBindingGetter
+  commentId: T:rwby.ITimelineDirectorBindingGetter
   parent: rwby
-  href: rwby.NetworkMatchSessionHandler.html
-  name: NetworkMatchSessionHandler.MatchEvent
-  nameWithType: NetworkMatchSessionHandler.MatchEvent
-  fullName: rwby.NetworkMatchSessionHandler.MatchEvent
+  href: rwby.ITimelineDirectorBindingGetter.html
+  name: ITimelineDirectorBindingGetter
+  nameWithType: ITimelineDirectorBindingGetter
+  fullName: rwby.ITimelineDirectorBindingGetter
+- uid: rwby.TimelineExposedReferenceDataScriptableObject
+  commentId: T:rwby.TimelineExposedReferenceDataScriptableObject
+  href: rwby.TimelineExposedReferenceDataScriptableObject.html
+  name: TimelineExposedReferenceDataScriptableObject
+  nameWithType: TimelineExposedReferenceDataScriptableObject
+  fullName: rwby.TimelineExposedReferenceDataScriptableObject
+- uid: rwby.QuickMatchScreenCharacterSelect
+  commentId: T:rwby.QuickMatchScreenCharacterSelect
+  parent: rwby
+  href: rwby.QuickMatchScreenCharacterSelect.html
+  name: QuickMatchScreenCharacterSelect
+  nameWithType: QuickMatchScreenCharacterSelect
+  fullName: rwby.QuickMatchScreenCharacterSelect
+- uid: rwby.VytalMatchSceneManager
+  commentId: T:rwby.VytalMatchSceneManager
+  parent: rwby
+  href: rwby.VytalMatchSceneManager.html
+  name: VytalMatchSceneManager
+  nameWithType: VytalMatchSceneManager
+  fullName: rwby.VytalMatchSceneManager
+- uid: rwby.VytalMatchSceneManager.GeneralDelegate
+  commentId: T:rwby.VytalMatchSceneManager.GeneralDelegate
+  parent: rwby
+  href: rwby.VytalMatchSceneManager.html
+  name: VytalMatchSceneManager.GeneralDelegate
+  nameWithType: VytalMatchSceneManager.GeneralDelegate
+  fullName: rwby.VytalMatchSceneManager.GeneralDelegate
   spec.csharp:
-  - uid: rwby.NetworkMatchSessionHandler
-    name: NetworkMatchSessionHandler
-    href: rwby.NetworkMatchSessionHandler.html
+  - uid: rwby.VytalMatchSceneManager
+    name: VytalMatchSceneManager
+    href: rwby.VytalMatchSceneManager.html
   - name: .
-  - uid: rwby.NetworkMatchSessionHandler.MatchEvent
-    name: MatchEvent
-    href: rwby.NetworkMatchSessionHandler.MatchEvent.html
+  - uid: rwby.VytalMatchSceneManager.GeneralDelegate
+    name: GeneralDelegate
+    href: rwby.VytalMatchSceneManager.GeneralDelegate.html
   spec.vb:
-  - uid: rwby.NetworkMatchSessionHandler
-    name: NetworkMatchSessionHandler
-    href: rwby.NetworkMatchSessionHandler.html
+  - uid: rwby.VytalMatchSceneManager
+    name: VytalMatchSceneManager
+    href: rwby.VytalMatchSceneManager.html
   - name: .
-  - uid: rwby.NetworkMatchSessionHandler.MatchEvent
-    name: MatchEvent
-    href: rwby.NetworkMatchSessionHandler.MatchEvent.html
+  - uid: rwby.VytalMatchSceneManager.GeneralDelegate
+    name: GeneralDelegate
+    href: rwby.VytalMatchSceneManager.GeneralDelegate.html
+- uid: rwby.VytalMatchSceneManager.ParticipantDelegate
+  commentId: T:rwby.VytalMatchSceneManager.ParticipantDelegate
+  parent: rwby
+  href: rwby.VytalMatchSceneManager.html
+  name: VytalMatchSceneManager.ParticipantDelegate
+  nameWithType: VytalMatchSceneManager.ParticipantDelegate
+  fullName: rwby.VytalMatchSceneManager.ParticipantDelegate
+  spec.csharp:
+  - uid: rwby.VytalMatchSceneManager
+    name: VytalMatchSceneManager
+    href: rwby.VytalMatchSceneManager.html
+  - name: .
+  - uid: rwby.VytalMatchSceneManager.ParticipantDelegate
+    name: ParticipantDelegate
+    href: rwby.VytalMatchSceneManager.ParticipantDelegate.html
+  spec.vb:
+  - uid: rwby.VytalMatchSceneManager
+    name: VytalMatchSceneManager
+    href: rwby.VytalMatchSceneManager.html
+  - name: .
+  - uid: rwby.VytalMatchSceneManager.ParticipantDelegate
+    name: ParticipantDelegate
+    href: rwby.VytalMatchSceneManager.ParticipantDelegate.html
 - uid: rwby.BaseSongDefinitionContainer
   commentId: T:rwby.BaseSongDefinitionContainer
   parent: rwby
@@ -181,12 +292,25 @@ references:
   name: BaseSongDefinitionContainer
   nameWithType: BaseSongDefinitionContainer
   fullName: rwby.BaseSongDefinitionContainer
+- uid: rwby.BetterCutsceneBinder
+  commentId: T:rwby.BetterCutsceneBinder
+  parent: rwby
+  href: rwby.BetterCutsceneBinder.html
+  name: BetterCutsceneBinder
+  nameWithType: BetterCutsceneBinder
+  fullName: rwby.BetterCutsceneBinder
 - uid: rwby.TestUIMenu
   commentId: T:rwby.TestUIMenu
   href: rwby.TestUIMenu.html
   name: TestUIMenu
   nameWithType: TestUIMenu
   fullName: rwby.TestUIMenu
+- uid: rwby.BehaviourCutsceneBindingSourceGroup
+  commentId: T:rwby.BehaviourCutsceneBindingSourceGroup
+  href: rwby.BehaviourCutsceneBindingSourceGroup.html
+  name: BehaviourCutsceneBindingSourceGroup
+  nameWithType: BehaviourCutsceneBindingSourceGroup
+  fullName: rwby.BehaviourCutsceneBindingSourceGroup
 - uid: rwby.CutsceneBindingSource
   commentId: T:rwby.CutsceneBindingSource
   parent: rwby
@@ -194,6 +318,19 @@ references:
   name: CutsceneBindingSource
   nameWithType: CutsceneBindingSource
   fullName: rwby.CutsceneBindingSource
+- uid: rwby.MainMenuScreenSceneManager
+  commentId: T:rwby.MainMenuScreenSceneManager
+  href: rwby.MainMenuScreenSceneManager.html
+  name: MainMenuScreenSceneManager
+  nameWithType: MainMenuScreenSceneManager
+  fullName: rwby.MainMenuScreenSceneManager
+- uid: rwby.VytalMatchSceneReadyScreen
+  commentId: T:rwby.VytalMatchSceneReadyScreen
+  parent: rwby
+  href: rwby.VytalMatchSceneReadyScreen.html
+  name: VytalMatchSceneReadyScreen
+  nameWithType: VytalMatchSceneReadyScreen
+  fullName: rwby.VytalMatchSceneReadyScreen
 - uid: rwby.LoadingScreenManager
   commentId: T:rwby.LoadingScreenManager
   parent: rwby
@@ -221,19 +358,24 @@ references:
   name: SessionHandlerBase
   nameWithType: SessionHandlerBase
   fullName: rwby.SessionHandlerBase
-- uid: rwby.ICutsceneBinding
-  commentId: T:rwby.ICutsceneBinding
-  parent: rwby
-  href: rwby.ICutsceneBinding.html
-  name: ICutsceneBinding
-  nameWithType: ICutsceneBinding
-  fullName: rwby.ICutsceneBinding
 - uid: rwby.AddressablesCommandListDefinition
   commentId: T:rwby.AddressablesCommandListDefinition
   href: rwby.AddressablesCommandListDefinition.html
   name: AddressablesCommandListDefinition
   nameWithType: AddressablesCommandListDefinition
   fullName: rwby.AddressablesCommandListDefinition
+- uid: rwby.TimelineExposedReferenceDataFromBindingSource
+  commentId: T:rwby.TimelineExposedReferenceDataFromBindingSource
+  href: rwby.TimelineExposedReferenceDataFromBindingSource.html
+  name: TimelineExposedReferenceDataFromBindingSource
+  nameWithType: TimelineExposedReferenceDataFromBindingSource
+  fullName: rwby.TimelineExposedReferenceDataFromBindingSource
+- uid: rwby.SetPositionFromTimelineBindingObject
+  commentId: T:rwby.SetPositionFromTimelineBindingObject
+  href: rwby.SetPositionFromTimelineBindingObject.html
+  name: SetPositionFromTimelineBindingObject
+  nameWithType: SetPositionFromTimelineBindingObject
+  fullName: rwby.SetPositionFromTimelineBindingObject
 - uid: rwby.CutsceneBinder
   commentId: T:rwby.CutsceneBinder
   parent: rwby
@@ -269,6 +411,19 @@ references:
   name: AddressablesSongDefinitionContainer
   nameWithType: AddressablesSongDefinitionContainer
   fullName: rwby.AddressablesSongDefinitionContainer
+- uid: rwby.QuickMatchScreenManager
+  commentId: T:rwby.QuickMatchScreenManager
+  parent: rwby
+  href: rwby.QuickMatchScreenManager.html
+  name: QuickMatchScreenManager
+  nameWithType: QuickMatchScreenManager
+  fullName: rwby.QuickMatchScreenManager
+- uid: rwby.TimelineExposedReferenceDataGameObject
+  commentId: T:rwby.TimelineExposedReferenceDataGameObject
+  href: rwby.TimelineExposedReferenceDataGameObject.html
+  name: TimelineExposedReferenceDataGameObject
+  nameWithType: TimelineExposedReferenceDataGameObject
+  fullName: rwby.TimelineExposedReferenceDataGameObject
 - uid: rwby.BaseCommandListEntry
   commentId: T:rwby.BaseCommandListEntry
   parent: rwby
@@ -276,6 +431,13 @@ references:
   name: BaseCommandListEntry
   nameWithType: BaseCommandListEntry
   fullName: rwby.BaseCommandListEntry
+- uid: rwby.TimelineAssetOverride
+  commentId: T:rwby.TimelineAssetOverride
+  parent: rwby
+  href: rwby.TimelineAssetOverride.html
+  name: TimelineAssetOverride
+  nameWithType: TimelineAssetOverride
+  fullName: rwby.TimelineAssetOverride
 - uid: rwby.MusicLooper
   commentId: T:rwby.MusicLooper
   parent: rwby
@@ -320,6 +482,13 @@ references:
   name: MenuLabelExternalOptionElement
   nameWithType: MenuLabelExternalOptionElement
   fullName: rwby.MenuLabelExternalOptionElement
+- uid: rwby.VytalMatchSceneMapViewItem
+  commentId: T:rwby.VytalMatchSceneMapViewItem
+  parent: rwby
+  href: rwby.VytalMatchSceneMapViewItem.html
+  name: VytalMatchSceneMapViewItem
+  nameWithType: VytalMatchSceneMapViewItem
+  fullName: rwby.VytalMatchSceneMapViewItem
 - uid: rwby.GameManager
   commentId: T:rwby.GameManager
   parent: rwby
@@ -476,12 +645,55 @@ references:
   name: SongLoopType
   nameWithType: SongLoopType
   fullName: rwby.SongLoopType
+- uid: rwby.InputPromptsLister
+  commentId: T:rwby.InputPromptsLister
+  parent: rwby
+  href: rwby.InputPromptsLister.html
+  name: InputPromptsLister
+  nameWithType: InputPromptsLister
+  fullName: rwby.InputPromptsLister
+- uid: rwby.MainMenuLocalScreen
+  commentId: T:rwby.MainMenuLocalScreen
+  parent: rwby
+  href: rwby.MainMenuLocalScreen.html
+  name: MainMenuLocalScreen
+  nameWithType: MainMenuLocalScreen
+  fullName: rwby.MainMenuLocalScreen
+- uid: rwby.MainMenuLocalScreen.EnumMenuOptions
+  commentId: T:rwby.MainMenuLocalScreen.EnumMenuOptions
+  parent: rwby
+  href: rwby.MainMenuLocalScreen.html
+  name: MainMenuLocalScreen.EnumMenuOptions
+  nameWithType: MainMenuLocalScreen.EnumMenuOptions
+  fullName: rwby.MainMenuLocalScreen.EnumMenuOptions
+  spec.csharp:
+  - uid: rwby.MainMenuLocalScreen
+    name: MainMenuLocalScreen
+    href: rwby.MainMenuLocalScreen.html
+  - name: .
+  - uid: rwby.MainMenuLocalScreen.EnumMenuOptions
+    name: EnumMenuOptions
+    href: rwby.MainMenuLocalScreen.EnumMenuOptions.html
+  spec.vb:
+  - uid: rwby.MainMenuLocalScreen
+    name: MainMenuLocalScreen
+    href: rwby.MainMenuLocalScreen.html
+  - name: .
+  - uid: rwby.MainMenuLocalScreen.EnumMenuOptions
+    name: EnumMenuOptions
+    href: rwby.MainMenuLocalScreen.EnumMenuOptions.html
 - uid: rwby.ParentSelectable
   commentId: T:rwby.ParentSelectable
   href: rwby.ParentSelectable.html
   name: ParentSelectable
   nameWithType: ParentSelectable
   fullName: rwby.ParentSelectable
+- uid: rwby.MirrorCustomReadWriteExtensions
+  commentId: T:rwby.MirrorCustomReadWriteExtensions
+  href: rwby.MirrorCustomReadWriteExtensions.html
+  name: MirrorCustomReadWriteExtensions
+  nameWithType: MirrorCustomReadWriteExtensions
+  fullName: rwby.MirrorCustomReadWriteExtensions
 - uid: rwby.VideoSettings
   commentId: T:rwby.VideoSettings
   parent: rwby
@@ -489,6 +701,13 @@ references:
   name: VideoSettings
   nameWithType: VideoSettings
   fullName: rwby.VideoSettings
+- uid: rwby.CharacterSelectSceneScreenManager
+  commentId: T:rwby.CharacterSelectSceneScreenManager
+  parent: rwby
+  href: rwby.CharacterSelectSceneScreenManager.html
+  name: CharacterSelectSceneScreenManager
+  nameWithType: CharacterSelectSceneScreenManager
+  fullName: rwby.CharacterSelectSceneScreenManager
 - uid: rwby.ActorCutscenePlayer
   commentId: T:rwby.ActorCutscenePlayer
   parent: rwby
@@ -519,6 +738,27 @@ references:
   - uid: rwby.ActorCutscenePlayer.CutsceneEvent
     name: CutsceneEvent
     href: rwby.ActorCutscenePlayer.CutsceneEvent.html
+- uid: rwby.IOnUModPrebuild
+  commentId: T:rwby.IOnUModPrebuild
+  parent: rwby
+  href: rwby.IOnUModPrebuild.html
+  name: IOnUModPrebuild
+  nameWithType: IOnUModPrebuild
+  fullName: rwby.IOnUModPrebuild
+- uid: rwby.VytalMatchSceneParticipantViewItem
+  commentId: T:rwby.VytalMatchSceneParticipantViewItem
+  parent: rwby
+  href: rwby.VytalMatchSceneParticipantViewItem.html
+  name: VytalMatchSceneParticipantViewItem
+  nameWithType: VytalMatchSceneParticipantViewItem
+  fullName: rwby.VytalMatchSceneParticipantViewItem
+- uid: rwby.ITimelineDirectorBinder
+  commentId: T:rwby.ITimelineDirectorBinder
+  parent: rwby
+  href: rwby.ITimelineDirectorBinder.html
+  name: ITimelineDirectorBinder
+  nameWithType: ITimelineDirectorBinder
+  fullName: rwby.ITimelineDirectorBinder
 - uid: rwby.ClientManager
   commentId: T:rwby.ClientManager
   parent: rwby
@@ -571,6 +811,13 @@ references:
   - uid: rwby.ClientManager.ClientManagerPlayerCountEvent
     name: ClientManagerPlayerCountEvent
     href: rwby.ClientManager.ClientManagerPlayerCountEvent.html
+- uid: rwby.VytalMatchSceneGamemodeSettingsScreen
+  commentId: T:rwby.VytalMatchSceneGamemodeSettingsScreen
+  parent: rwby
+  href: rwby.VytalMatchSceneGamemodeSettingsScreen.html
+  name: VytalMatchSceneGamemodeSettingsScreen
+  nameWithType: VytalMatchSceneGamemodeSettingsScreen
+  fullName: rwby.VytalMatchSceneGamemodeSettingsScreen
 - uid: rwby.MusicLooperTrack
   commentId: T:rwby.MusicLooperTrack
   href: rwby.MusicLooperTrack.html
@@ -607,6 +854,20 @@ references:
   - uid: rwby.TargetCameraManager.CameraState
     name: CameraState
     href: rwby.TargetCameraManager.CameraState.html
+- uid: rwby.CutsceneBindingSourceGroup
+  commentId: T:rwby.CutsceneBindingSourceGroup
+  parent: rwby
+  href: rwby.CutsceneBindingSourceGroup.html
+  name: CutsceneBindingSourceGroup
+  nameWithType: CutsceneBindingSourceGroup
+  fullName: rwby.CutsceneBindingSourceGroup
+- uid: rwby.ITimelineDirectorBindingSource
+  commentId: T:rwby.ITimelineDirectorBindingSource
+  parent: rwby
+  href: rwby.ITimelineDirectorBindingSource.html
+  name: ITimelineDirectorBindingSource
+  nameWithType: ITimelineDirectorBindingSource
+  fullName: rwby.ITimelineDirectorBindingSource
 - uid: rwby.GlobalCutsceneManager
   commentId: T:rwby.GlobalCutsceneManager
   parent: rwby
@@ -616,33 +877,11 @@ references:
   fullName: rwby.GlobalCutsceneManager
 - uid: rwby.TitleMainScreen
   commentId: T:rwby.TitleMainScreen
+  parent: rwby
   href: rwby.TitleMainScreen.html
   name: TitleMainScreen
   nameWithType: TitleMainScreen
   fullName: rwby.TitleMainScreen
-- uid: rwby.TitleMainScreen.SubmenuType
-  commentId: T:rwby.TitleMainScreen.SubmenuType
-  parent: rwby
-  href: rwby.TitleMainScreen.html
-  name: TitleMainScreen.SubmenuType
-  nameWithType: TitleMainScreen.SubmenuType
-  fullName: rwby.TitleMainScreen.SubmenuType
-  spec.csharp:
-  - uid: rwby.TitleMainScreen
-    name: TitleMainScreen
-    href: rwby.TitleMainScreen.html
-  - name: .
-  - uid: rwby.TitleMainScreen.SubmenuType
-    name: SubmenuType
-    href: rwby.TitleMainScreen.SubmenuType.html
-  spec.vb:
-  - uid: rwby.TitleMainScreen
-    name: TitleMainScreen
-    href: rwby.TitleMainScreen.html
-  - name: .
-  - uid: rwby.TitleMainScreen.SubmenuType
-    name: SubmenuType
-    href: rwby.TitleMainScreen.SubmenuType.html
 - uid: rwby.BaseCommandListEntryGrouping
   commentId: T:rwby.BaseCommandListEntryGrouping
   href: rwby.BaseCommandListEntryGrouping.html
@@ -656,6 +895,20 @@ references:
   name: LobbyModStrictness
   nameWithType: LobbyModStrictness
   fullName: rwby.LobbyModStrictness
+- uid: rwby.VytalMatchSceneFestivalSelectScreen
+  commentId: T:rwby.VytalMatchSceneFestivalSelectScreen
+  parent: rwby
+  href: rwby.VytalMatchSceneFestivalSelectScreen.html
+  name: VytalMatchSceneFestivalSelectScreen
+  nameWithType: VytalMatchSceneFestivalSelectScreen
+  fullName: rwby.VytalMatchSceneFestivalSelectScreen
+- uid: rwby.VytalMatchSceneScreenManager
+  commentId: T:rwby.VytalMatchSceneScreenManager
+  parent: rwby
+  href: rwby.VytalMatchSceneScreenManager.html
+  name: VytalMatchSceneScreenManager
+  nameWithType: VytalMatchSceneScreenManager
+  fullName: rwby.VytalMatchSceneScreenManager
 - uid: rwby.EntityAnimationUpdater
   commentId: T:rwby.EntityAnimationUpdater
   href: rwby.EntityAnimationUpdater.html
@@ -745,12 +998,13 @@ references:
   - uid: rwby.MirrorNetworkManager.ServerClientEvent
     name: ServerClientEvent
     href: rwby.MirrorNetworkManager.ServerClientEvent.html
-- uid: rwby.UIElementTweenSequence
-  commentId: T:rwby.UIElementTweenSequence
-  href: rwby.UIElementTweenSequence.html
-  name: UIElementTweenSequence
-  nameWithType: UIElementTweenSequence
-  fullName: rwby.UIElementTweenSequence
+- uid: rwby.VytalMatchSceneMapSelectScreen
+  commentId: T:rwby.VytalMatchSceneMapSelectScreen
+  parent: rwby
+  href: rwby.VytalMatchSceneMapSelectScreen.html
+  name: VytalMatchSceneMapSelectScreen
+  nameWithType: VytalMatchSceneMapSelectScreen
+  fullName: rwby.VytalMatchSceneMapSelectScreen
 - uid: rwby.NetworkMessagesCharacterLoading
   commentId: T:rwby.NetworkMessagesCharacterLoading
   href: rwby.NetworkMessagesCharacterLoading.html
@@ -787,6 +1041,12 @@ references:
   name: GameConstants
   nameWithType: GameConstants
   fullName: rwby.GameConstants
+- uid: rwby.CharacterSelectSceneManager
+  commentId: T:rwby.CharacterSelectSceneManager
+  href: rwby.CharacterSelectSceneManager.html
+  name: CharacterSelectSceneManager
+  nameWithType: CharacterSelectSceneManager
+  fullName: rwby.CharacterSelectSceneManager
 - uid: rwby.LobbyClientState
   commentId: T:rwby.LobbyClientState
   parent: rwby
@@ -801,25 +1061,60 @@ references:
   name: SaveManager
   nameWithType: SaveManager
   fullName: rwby.SaveManager
+- uid: rwby.LobbyGamemodeParticipantInfo
+  commentId: T:rwby.LobbyGamemodeParticipantInfo
+  parent: rwby
+  href: rwby.LobbyGamemodeParticipantInfo.html
+  name: LobbyGamemodeParticipantInfo
+  nameWithType: LobbyGamemodeParticipantInfo
+  fullName: rwby.LobbyGamemodeParticipantInfo
 - uid: rwby.Bootloader
   commentId: T:rwby.Bootloader
   href: rwby.Bootloader.html
   name: Bootloader
   nameWithType: Bootloader
   fullName: rwby.Bootloader
-- uid: rwby.SetPositionFromCutsceneBinding
-  commentId: T:rwby.SetPositionFromCutsceneBinding
-  href: rwby.SetPositionFromCutsceneBinding.html
-  name: SetPositionFromCutsceneBinding
-  nameWithType: SetPositionFromCutsceneBinding
-  fullName: rwby.SetPositionFromCutsceneBinding
-- uid: rwby.CustomEntityViewUpdater
-  commentId: T:rwby.CustomEntityViewUpdater
+- uid: rwby.MainMenuTransitionalHelper
+  commentId: T:rwby.MainMenuTransitionalHelper
+  href: rwby.MainMenuTransitionalHelper.html
+  name: MainMenuTransitionalHelper
+  nameWithType: MainMenuTransitionalHelper
+  fullName: rwby.MainMenuTransitionalHelper
+- uid: rwby.CharacterSelectSceneInstanceManager
+  commentId: T:rwby.CharacterSelectSceneInstanceManager
   parent: rwby
-  href: rwby.CustomEntityViewUpdater.html
-  name: CustomEntityViewUpdater
-  nameWithType: CustomEntityViewUpdater
-  fullName: rwby.CustomEntityViewUpdater
+  href: rwby.CharacterSelectSceneInstanceManager.html
+  name: CharacterSelectSceneInstanceManager
+  nameWithType: CharacterSelectSceneInstanceManager
+  fullName: rwby.CharacterSelectSceneInstanceManager
+- uid: rwby.FighterMenuVisualHandler
+  commentId: T:rwby.FighterMenuVisualHandler
+  href: rwby.FighterMenuVisualHandler.html
+  name: FighterMenuVisualHandler
+  nameWithType: FighterMenuVisualHandler
+  fullName: rwby.FighterMenuVisualHandler
+- uid: rwby.FighterMenuVisualHandler.TagToAnimInfo
+  commentId: T:rwby.FighterMenuVisualHandler.TagToAnimInfo
+  href: rwby.FighterMenuVisualHandler.html
+  name: FighterMenuVisualHandler.TagToAnimInfo
+  nameWithType: FighterMenuVisualHandler.TagToAnimInfo
+  fullName: rwby.FighterMenuVisualHandler.TagToAnimInfo
+  spec.csharp:
+  - uid: rwby.FighterMenuVisualHandler
+    name: FighterMenuVisualHandler
+    href: rwby.FighterMenuVisualHandler.html
+  - name: .
+  - uid: rwby.FighterMenuVisualHandler.TagToAnimInfo
+    name: TagToAnimInfo
+    href: rwby.FighterMenuVisualHandler.TagToAnimInfo.html
+  spec.vb:
+  - uid: rwby.FighterMenuVisualHandler
+    name: FighterMenuVisualHandler
+    href: rwby.FighterMenuVisualHandler.html
+  - name: .
+  - uid: rwby.FighterMenuVisualHandler.TagToAnimInfo
+    name: TagToAnimInfo
+    href: rwby.FighterMenuVisualHandler.TagToAnimInfo.html
 - uid: rwby.CutsceneBindingSourceCondition
   commentId: T:rwby.CutsceneBindingSourceCondition
   href: rwby.CutsceneBindingSourceCondition.html
@@ -859,12 +1154,31 @@ references:
   name: CreateLobbyScreen
   nameWithType: CreateLobbyScreen
   fullName: rwby.CreateLobbyScreen
+- uid: rwby.VytalMatchSceneFestivalViewItem
+  commentId: T:rwby.VytalMatchSceneFestivalViewItem
+  parent: rwby
+  href: rwby.VytalMatchSceneFestivalViewItem.html
+  name: VytalMatchSceneFestivalViewItem
+  nameWithType: VytalMatchSceneFestivalViewItem
+  fullName: rwby.VytalMatchSceneFestivalViewItem
 - uid: rwby.AddressablesHudElementDefinitionContainer
   commentId: T:rwby.AddressablesHudElementDefinitionContainer
   href: rwby.AddressablesHudElementDefinitionContainer.html
   name: AddressablesHudElementDefinitionContainer
   nameWithType: AddressablesHudElementDefinitionContainer
   fullName: rwby.AddressablesHudElementDefinitionContainer
+- uid: rwby.CharacterSelectSceneVisualSlotInstance
+  commentId: T:rwby.CharacterSelectSceneVisualSlotInstance
+  href: rwby.CharacterSelectSceneVisualSlotInstance.html
+  name: CharacterSelectSceneVisualSlotInstance
+  nameWithType: CharacterSelectSceneVisualSlotInstance
+  fullName: rwby.CharacterSelectSceneVisualSlotInstance
+- uid: rwby.QuickMatchScreensManager
+  commentId: T:rwby.QuickMatchScreensManager
+  href: rwby.QuickMatchScreensManager.html
+  name: QuickMatchScreensManager
+  nameWithType: QuickMatchScreensManager
+  fullName: rwby.QuickMatchScreensManager
 - uid: rwby.SaveData
   commentId: T:rwby.SaveData
   parent: rwby
@@ -872,6 +1186,43 @@ references:
   name: SaveData
   nameWithType: SaveData
   fullName: rwby.SaveData
+- uid: rwby.ITimelineExposedReferenceData
+  commentId: T:rwby.ITimelineExposedReferenceData
+  parent: rwby
+  href: rwby.ITimelineExposedReferenceData.html
+  name: ITimelineExposedReferenceData
+  nameWithType: ITimelineExposedReferenceData
+  fullName: rwby.ITimelineExposedReferenceData
+- uid: rwby.QuickMatchFighterVisualSelectionHandler
+  commentId: T:rwby.QuickMatchFighterVisualSelectionHandler
+  parent: rwby
+  href: rwby.QuickMatchFighterVisualSelectionHandler.html
+  name: QuickMatchFighterVisualSelectionHandler
+  nameWithType: QuickMatchFighterVisualSelectionHandler
+  fullName: rwby.QuickMatchFighterVisualSelectionHandler
+- uid: rwby.QuickMatchFighterVisualSelectionHandler.ButtonClickedEvent
+  commentId: T:rwby.QuickMatchFighterVisualSelectionHandler.ButtonClickedEvent
+  parent: rwby
+  href: rwby.QuickMatchFighterVisualSelectionHandler.html
+  name: QuickMatchFighterVisualSelectionHandler.ButtonClickedEvent
+  nameWithType: QuickMatchFighterVisualSelectionHandler.ButtonClickedEvent
+  fullName: rwby.QuickMatchFighterVisualSelectionHandler.ButtonClickedEvent
+  spec.csharp:
+  - uid: rwby.QuickMatchFighterVisualSelectionHandler
+    name: QuickMatchFighterVisualSelectionHandler
+    href: rwby.QuickMatchFighterVisualSelectionHandler.html
+  - name: .
+  - uid: rwby.QuickMatchFighterVisualSelectionHandler.ButtonClickedEvent
+    name: ButtonClickedEvent
+    href: rwby.QuickMatchFighterVisualSelectionHandler.ButtonClickedEvent.html
+  spec.vb:
+  - uid: rwby.QuickMatchFighterVisualSelectionHandler
+    name: QuickMatchFighterVisualSelectionHandler
+    href: rwby.QuickMatchFighterVisualSelectionHandler.html
+  - name: .
+  - uid: rwby.QuickMatchFighterVisualSelectionHandler.ButtonClickedEvent
+    name: ButtonClickedEvent
+    href: rwby.QuickMatchFighterVisualSelectionHandler.ButtonClickedEvent.html
 - uid: rwby.HudElementContainer
   commentId: T:rwby.HudElementContainer
   parent: rwby
@@ -899,6 +1250,19 @@ references:
   name: AddressablesCommandListEntry
   nameWithType: AddressablesCommandListEntry
   fullName: rwby.AddressablesCommandListEntry
+- uid: rwby.QuickMatchScreenFighterVisualSlot
+  commentId: T:rwby.QuickMatchScreenFighterVisualSlot
+  href: rwby.QuickMatchScreenFighterVisualSlot.html
+  name: QuickMatchScreenFighterVisualSlot
+  nameWithType: QuickMatchScreenFighterVisualSlot
+  fullName: rwby.QuickMatchScreenFighterVisualSlot
+- uid: rwby.VytalMatchSceneInstanceManager
+  commentId: T:rwby.VytalMatchSceneInstanceManager
+  parent: rwby
+  href: rwby.VytalMatchSceneInstanceManager.html
+  name: VytalMatchSceneInstanceManager
+  nameWithType: VytalMatchSceneInstanceManager
+  fullName: rwby.VytalMatchSceneInstanceManager
 - uid: rwby.ExternalModAssetSoftReference
   commentId: T:rwby.ExternalModAssetSoftReference
   parent: rwby
@@ -1005,6 +1369,12 @@ references:
   - uid: rwby.InputActions.IUIActions
     name: IUIActions
     href: rwby.InputActions.IUIActions.html
+- uid: rwby.MenuCutsceneBindingActor
+  commentId: T:rwby.MenuCutsceneBindingActor
+  href: rwby.MenuCutsceneBindingActor.html
+  name: MenuCutsceneBindingActor
+  nameWithType: MenuCutsceneBindingActor
+  fullName: rwby.MenuCutsceneBindingActor
 - uid: rwby.ForceRenderRate
   commentId: T:rwby.ForceRenderRate
   parent: rwby
@@ -1012,6 +1382,19 @@ references:
   name: ForceRenderRate
   nameWithType: ForceRenderRate
   fullName: rwby.ForceRenderRate
+- uid: rwby.QuickMatchSceneInstanceManager
+  commentId: T:rwby.QuickMatchSceneInstanceManager
+  parent: rwby
+  href: rwby.QuickMatchSceneInstanceManager.html
+  name: QuickMatchSceneInstanceManager
+  nameWithType: QuickMatchSceneInstanceManager
+  fullName: rwby.QuickMatchSceneInstanceManager
+- uid: rwby.RotateObjectViaCurve
+  commentId: T:rwby.RotateObjectViaCurve
+  href: rwby.RotateObjectViaCurve.html
+  name: RotateObjectViaCurve
+  nameWithType: RotateObjectViaCurve
+  fullName: rwby.RotateObjectViaCurve
 - uid: rwby.QuickBootloader
   commentId: T:rwby.QuickBootloader
   href: rwby.QuickBootloader.html
@@ -1025,6 +1408,35 @@ references:
   name: MusicManager
   nameWithType: MusicManager
   fullName: rwby.MusicManager
+- uid: rwby.BehaviourCutsceneBindingSource
+  commentId: T:rwby.BehaviourCutsceneBindingSource
+  parent: rwby
+  href: rwby.BehaviourCutsceneBindingSource.html
+  name: BehaviourCutsceneBindingSource
+  nameWithType: BehaviourCutsceneBindingSource
+  fullName: rwby.BehaviourCutsceneBindingSource
+- uid: rwby.BehaviourCutsceneBindingSource.BindingData
+  commentId: T:rwby.BehaviourCutsceneBindingSource.BindingData
+  href: rwby.BehaviourCutsceneBindingSource.html
+  name: BehaviourCutsceneBindingSource.BindingData
+  nameWithType: BehaviourCutsceneBindingSource.BindingData
+  fullName: rwby.BehaviourCutsceneBindingSource.BindingData
+  spec.csharp:
+  - uid: rwby.BehaviourCutsceneBindingSource
+    name: BehaviourCutsceneBindingSource
+    href: rwby.BehaviourCutsceneBindingSource.html
+  - name: .
+  - uid: rwby.BehaviourCutsceneBindingSource.BindingData
+    name: BindingData
+    href: rwby.BehaviourCutsceneBindingSource.BindingData.html
+  spec.vb:
+  - uid: rwby.BehaviourCutsceneBindingSource
+    name: BehaviourCutsceneBindingSource
+    href: rwby.BehaviourCutsceneBindingSource.html
+  - name: .
+  - uid: rwby.BehaviourCutsceneBindingSource.BindingData
+    name: BindingData
+    href: rwby.BehaviourCutsceneBindingSource.BindingData.html
 - uid: rwby.TitleScreen
   commentId: T:rwby.TitleScreen
   href: rwby.TitleScreen.html
@@ -1038,6 +1450,26 @@ references:
   name: ExternalOptionDefinition
   nameWithType: ExternalOptionDefinition
   fullName: rwby.ExternalOptionDefinition
+- uid: rwby.QuickMatchScreenMain
+  commentId: T:rwby.QuickMatchScreenMain
+  parent: rwby
+  href: rwby.QuickMatchScreenMain.html
+  name: QuickMatchScreenMain
+  nameWithType: QuickMatchScreenMain
+  fullName: rwby.QuickMatchScreenMain
+- uid: rwby.VytalMatchSceneMainScreen
+  commentId: T:rwby.VytalMatchSceneMainScreen
+  parent: rwby
+  href: rwby.VytalMatchSceneMainScreen.html
+  name: VytalMatchSceneMainScreen
+  nameWithType: VytalMatchSceneMainScreen
+  fullName: rwby.VytalMatchSceneMainScreen
+- uid: rwby.TimelineAssetOverrideEditor
+  commentId: T:rwby.TimelineAssetOverrideEditor
+  href: rwby.TimelineAssetOverrideEditor.html
+  name: TimelineAssetOverrideEditor
+  nameWithType: TimelineAssetOverrideEditor
+  fullName: rwby.TimelineAssetOverrideEditor
 - uid: rwby.UModSongDefinition
   commentId: T:rwby.UModSongDefinition
   href: rwby.UModSongDefinition.html

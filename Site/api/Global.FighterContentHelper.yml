@@ -5,6 +5,7 @@ items:
   id: FighterContentHelper
   parent: Global
   children:
+  - Global.FighterContentHelper.GetAllCoreFighterDefinitions
   - Global.FighterContentHelper.GetAllFighterDefinitions
   - Global.FighterContentHelper.UnloadDefinitions(System.Collections.Generic.List{IFighterDefinition})
   langs:
@@ -30,6 +31,34 @@ items:
     content.vb: Public Module FighterContentHelper
   inheritance:
   - System.Object
+- uid: Global.FighterContentHelper.GetAllCoreFighterDefinitions
+  commentId: M:Global.FighterContentHelper.GetAllCoreFighterDefinitions
+  id: GetAllCoreFighterDefinitions
+  parent: Global.FighterContentHelper
+  langs:
+  - csharp
+  - vb
+  name: GetAllCoreFighterDefinitions()
+  nameWithType: FighterContentHelper.GetAllCoreFighterDefinitions()
+  fullName: FighterContentHelper.GetAllCoreFighterDefinitions()
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/FighterContentHelper.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: GetAllCoreFighterDefinitions
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/FighterContentHelper.cs
+    startLine: 7
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public static UniTask<List<IFighterDefinition>> GetAllCoreFighterDefinitions()
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{System.Collections.Generic.List{IFighterDefinition}}
+    content.vb: Public Shared Function GetAllCoreFighterDefinitions() As UniTask(Of List(Of IFighterDefinition))
+  overload: Global.FighterContentHelper.GetAllCoreFighterDefinitions*
 - uid: Global.FighterContentHelper.GetAllFighterDefinitions
   commentId: M:Global.FighterContentHelper.GetAllFighterDefinitions
   id: GetAllFighterDefinitions
@@ -48,7 +77,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetAllFighterDefinitions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/FighterContentHelper.cs
-    startLine: 7
+    startLine: 23
   assemblies:
   - rwby
   namespace: Global
@@ -76,7 +105,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: UnloadDefinitions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/Content/Fighters/FighterContentHelper.cs
-    startLine: 27
+    startLine: 43
   assemblies:
   - rwby
   namespace: Global
@@ -110,12 +139,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Global.FighterContentHelper.GetAllFighterDefinitions*
-  commentId: Overload:Global.FighterContentHelper.GetAllFighterDefinitions
-  href: Global.FighterContentHelper.html#FighterContentHelper_GetAllFighterDefinitions
-  name: GetAllFighterDefinitions
-  nameWithType: FighterContentHelper.GetAllFighterDefinitions
-  fullName: FighterContentHelper.GetAllFighterDefinitions
+- uid: Global.FighterContentHelper.GetAllCoreFighterDefinitions*
+  commentId: Overload:Global.FighterContentHelper.GetAllCoreFighterDefinitions
+  href: Global.FighterContentHelper.html#FighterContentHelper_GetAllCoreFighterDefinitions
+  name: GetAllCoreFighterDefinitions
+  nameWithType: FighterContentHelper.GetAllCoreFighterDefinitions
+  fullName: FighterContentHelper.GetAllCoreFighterDefinitions
 - uid: Cysharp.Threading.Tasks.UniTask{System.Collections.Generic.List{IFighterDefinition}}
   commentId: T:Cysharp.Threading.Tasks.UniTask{System.Collections.Generic.List{IFighterDefinition}}
   parent: Cysharp.Threading.Tasks
@@ -216,6 +245,12 @@ references:
   - uid: Cysharp.Threading.Tasks
     name: Tasks
     isExternal: true
+- uid: Global.FighterContentHelper.GetAllFighterDefinitions*
+  commentId: Overload:Global.FighterContentHelper.GetAllFighterDefinitions
+  href: Global.FighterContentHelper.html#FighterContentHelper_GetAllFighterDefinitions
+  name: GetAllFighterDefinitions
+  nameWithType: FighterContentHelper.GetAllFighterDefinitions
+  fullName: FighterContentHelper.GetAllFighterDefinitions
 - uid: Global.FighterContentHelper.UnloadDefinitions*
   commentId: Overload:Global.FighterContentHelper.UnloadDefinitions
   href: Global.FighterContentHelper.html#FighterContentHelper_UnloadDefinitions_System_Collections_Generic_List_IFighterDefinition__

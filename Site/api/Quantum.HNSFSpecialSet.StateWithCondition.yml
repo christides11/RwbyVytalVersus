@@ -6,7 +6,7 @@ items:
   parent: Quantum
   children:
   - Quantum.HNSFSpecialSet.StateWithCondition.checkToStateCondition
-  - Quantum.HNSFSpecialSet.StateWithCondition.condition
+  - Quantum.HNSFSpecialSet.StateWithCondition.conditions
   - Quantum.HNSFSpecialSet.StateWithCondition.overrideTransitionRequests
   - Quantum.HNSFSpecialSet.StateWithCondition.state
   - Quantum.HNSFSpecialSet.StateWithCondition.toFrame
@@ -24,7 +24,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: StateWithCondition
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -43,33 +43,45 @@ items:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
     arguments: []
-- uid: Quantum.HNSFSpecialSet.StateWithCondition.condition
-  commentId: F:Quantum.HNSFSpecialSet.StateWithCondition.condition
-  id: condition
+- uid: Quantum.HNSFSpecialSet.StateWithCondition.conditions
+  commentId: F:Quantum.HNSFSpecialSet.StateWithCondition.conditions
+  id: conditions
   parent: Quantum.HNSFSpecialSet.StateWithCondition
   langs:
   - csharp
   - vb
-  name: condition
-  nameWithType: HNSFSpecialSet.StateWithCondition.condition
-  fullName: Quantum.HNSFSpecialSet.StateWithCondition.condition
+  name: conditions
+  nameWithType: HNSFSpecialSet.StateWithCondition.conditions
+  fullName: Quantum.HNSFSpecialSet.StateWithCondition.conditions
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: condition
+    id: conditions
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs
-    startLine: 7
+    startLine: 9
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public AssetRef<HNSFStateDecision> condition
+    content: >-
+      [FormerlySerializedAs("condition")]
+
+      public AssetRef<HNSFStateDecision>[] conditions
     return:
-      type: Quantum.AssetRef{Quantum.HNSFStateDecision}
-    content.vb: Public condition As AssetRef(Of HNSFStateDecision)
+      type: Quantum.AssetRef{Quantum.HNSFStateDecision}[]
+    content.vb: >-
+      <FormerlySerializedAs("condition")>
+
+      Public conditions As AssetRef(Of HNSFStateDecision)()
+  attributes:
+  - type: UnityEngine.Serialization.FormerlySerializedAsAttribute
+    ctor: UnityEngine.Serialization.FormerlySerializedAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: condition
 - uid: Quantum.HNSFSpecialSet.StateWithCondition.state
   commentId: F:Quantum.HNSFSpecialSet.StateWithCondition.state
   id: state
@@ -88,7 +100,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: state
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs
-    startLine: 8
+    startLine: 10
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -115,7 +127,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: overrideTransitionRequests
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -142,7 +154,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: checkToStateCondition
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -169,7 +181,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: toFrame
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Combat/HNSFSpecialSet.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -203,17 +215,15 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Quantum.AssetRef{Quantum.HNSFStateDecision}
-  commentId: T:Quantum.AssetRef{Quantum.HNSFStateDecision}
-  parent: Quantum
-  definition: Quantum.AssetRef`1
+- uid: Quantum.AssetRef{Quantum.HNSFStateDecision}[]
+  isExternal: true
   href: Quantum.HNSFStateDecision.html
-  name: AssetRef<HNSFStateDecision>
-  nameWithType: AssetRef<HNSFStateDecision>
-  fullName: Quantum.AssetRef<Quantum.HNSFStateDecision>
-  nameWithType.vb: AssetRef(Of HNSFStateDecision)
-  fullName.vb: Quantum.AssetRef(Of Quantum.HNSFStateDecision)
-  name.vb: AssetRef(Of HNSFStateDecision)
+  name: AssetRef<HNSFStateDecision>[]
+  nameWithType: AssetRef<HNSFStateDecision>[]
+  fullName: Quantum.AssetRef<Quantum.HNSFStateDecision>[]
+  nameWithType.vb: AssetRef(Of HNSFStateDecision)()
+  fullName.vb: Quantum.AssetRef(Of Quantum.HNSFStateDecision)()
+  name.vb: AssetRef(Of HNSFStateDecision)()
   spec.csharp:
   - uid: Quantum.AssetRef`1
     name: AssetRef
@@ -223,6 +233,8 @@ references:
     name: HNSFStateDecision
     href: Quantum.HNSFStateDecision.html
   - name: '>'
+  - name: '['
+  - name: ']'
   spec.vb:
   - uid: Quantum.AssetRef`1
     name: AssetRef
@@ -234,30 +246,7 @@ references:
     name: HNSFStateDecision
     href: Quantum.HNSFStateDecision.html
   - name: )
-- uid: Quantum.AssetRef`1
-  commentId: T:Quantum.AssetRef`1
-  isExternal: true
-  name: AssetRef<T>
-  nameWithType: AssetRef<T>
-  fullName: Quantum.AssetRef<T>
-  nameWithType.vb: AssetRef(Of T)
-  fullName.vb: Quantum.AssetRef(Of T)
-  name.vb: AssetRef(Of T)
-  spec.csharp:
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: Quantum.AssetRef`1
-    name: AssetRef
-    isExternal: true
   - name: (
-  - name: Of
-  - name: " "
-  - name: T
   - name: )
 - uid: Quantum.AssetRef{Quantum.HNSFState}
   commentId: T:Quantum.AssetRef{Quantum.HNSFState}
@@ -289,6 +278,31 @@ references:
   - uid: Quantum.HNSFState
     name: HNSFState
     href: Quantum.HNSFState.html
+  - name: )
+- uid: Quantum.AssetRef`1
+  commentId: T:Quantum.AssetRef`1
+  isExternal: true
+  name: AssetRef<T>
+  nameWithType: AssetRef<T>
+  fullName: Quantum.AssetRef<T>
+  nameWithType.vb: AssetRef(Of T)
+  fullName.vb: Quantum.AssetRef(Of T)
+  name.vb: AssetRef(Of T)
+  spec.csharp:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Quantum.AssetRef`1
+    name: AssetRef
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
   - name: )
 - uid: System.Boolean
   commentId: T:System.Boolean

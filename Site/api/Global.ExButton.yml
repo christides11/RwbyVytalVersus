@@ -5,7 +5,14 @@ items:
   id: ExButton
   parent: Global
   children:
+  - Global.ExButton.OnDeselect(UnityEngine.EventSystems.BaseEventData)
+  - Global.ExButton.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  - Global.ExButton.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
   - Global.ExButton.OnSelect(UnityEngine.EventSystems.BaseEventData)
+  - Global.ExButton.OnSubmit(UnityEngine.EventSystems.BaseEventData)
+  - Global.ExButton.onDeselected
+  - Global.ExButton.onPointerEnter
+  - Global.ExButton.onPointerExit
   - Global.ExButton.onSelected
   langs:
   - csharp
@@ -55,7 +62,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: onSelected
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - rwby
   namespace: Global
@@ -66,6 +73,124 @@ items:
       type: UnityEngine.UI.Button.ButtonClickedEvent
     content.vb: Public Property onSelected As Button.ButtonClickedEvent
   overload: Global.ExButton.onSelected*
+- uid: Global.ExButton.onDeselected
+  commentId: P:Global.ExButton.onDeselected
+  id: onDeselected
+  parent: Global.ExButton
+  langs:
+  - csharp
+  - vb
+  name: onDeselected
+  nameWithType: ExButton.onDeselected
+  fullName: ExButton.onDeselected
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onDeselected
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+    startLine: 17
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Button.ButtonClickedEvent onDeselected { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.UI.Button.ButtonClickedEvent
+    content.vb: Public Property onDeselected As Button.ButtonClickedEvent
+  overload: Global.ExButton.onDeselected*
+- uid: Global.ExButton.onPointerEnter
+  commentId: P:Global.ExButton.onPointerEnter
+  id: onPointerEnter
+  parent: Global.ExButton
+  langs:
+  - csharp
+  - vb
+  name: onPointerEnter
+  nameWithType: ExButton.onPointerEnter
+  fullName: ExButton.onPointerEnter
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onPointerEnter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+    startLine: 23
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Button.ButtonClickedEvent onPointerEnter { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.UI.Button.ButtonClickedEvent
+    content.vb: Public Property onPointerEnter As Button.ButtonClickedEvent
+  overload: Global.ExButton.onPointerEnter*
+- uid: Global.ExButton.onPointerExit
+  commentId: P:Global.ExButton.onPointerExit
+  id: onPointerExit
+  parent: Global.ExButton
+  langs:
+  - csharp
+  - vb
+  name: onPointerExit
+  nameWithType: ExButton.onPointerExit
+  fullName: ExButton.onPointerExit
+  type: Property
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: onPointerExit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+    startLine: 29
+  assemblies:
+  - rwby
+  namespace: Global
+  syntax:
+    content: public Button.ButtonClickedEvent onPointerExit { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.UI.Button.ButtonClickedEvent
+    content.vb: Public Property onPointerExit As Button.ButtonClickedEvent
+  overload: Global.ExButton.onPointerExit*
+- uid: Global.ExButton.OnSubmit(UnityEngine.EventSystems.BaseEventData)
+  commentId: M:Global.ExButton.OnSubmit(UnityEngine.EventSystems.BaseEventData)
+  id: OnSubmit(UnityEngine.EventSystems.BaseEventData)
+  parent: Global.ExButton
+  langs:
+  - csharp
+  - vb
+  name: OnSubmit(BaseEventData)
+  nameWithType: ExButton.OnSubmit(BaseEventData)
+  fullName: ExButton.OnSubmit(UnityEngine.EventSystems.BaseEventData)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnSubmit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+    startLine: 35
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void OnSubmit(BaseEventData eventData)
+    parameters:
+    - id: eventData
+      type: UnityEngine.EventSystems.BaseEventData
+    content.vb: Public Overrides Sub OnSubmit(eventData As BaseEventData)
+  overridden: UnityEngine.UI.Button.OnSubmit(UnityEngine.EventSystems.BaseEventData)
+  overload: Global.ExButton.OnSubmit*
 - uid: Global.ExButton.OnSelect(UnityEngine.EventSystems.BaseEventData)
   commentId: M:Global.ExButton.OnSelect(UnityEngine.EventSystems.BaseEventData)
   id: OnSelect(UnityEngine.EventSystems.BaseEventData)
@@ -84,7 +209,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnSelect
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
-    startLine: 15
+    startLine: 40
   assemblies:
   - rwby
   namespace: Global
@@ -97,6 +222,99 @@ items:
     content.vb: Public Overrides Sub OnSelect(eventData As BaseEventData)
   overridden: UnityEngine.UI.Selectable.OnSelect(UnityEngine.EventSystems.BaseEventData)
   overload: Global.ExButton.OnSelect*
+- uid: Global.ExButton.OnDeselect(UnityEngine.EventSystems.BaseEventData)
+  commentId: M:Global.ExButton.OnDeselect(UnityEngine.EventSystems.BaseEventData)
+  id: OnDeselect(UnityEngine.EventSystems.BaseEventData)
+  parent: Global.ExButton
+  langs:
+  - csharp
+  - vb
+  name: OnDeselect(BaseEventData)
+  nameWithType: ExButton.OnDeselect(BaseEventData)
+  fullName: ExButton.OnDeselect(UnityEngine.EventSystems.BaseEventData)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnDeselect
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+    startLine: 46
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void OnDeselect(BaseEventData eventData)
+    parameters:
+    - id: eventData
+      type: UnityEngine.EventSystems.BaseEventData
+    content.vb: Public Overrides Sub OnDeselect(eventData As BaseEventData)
+  overridden: UnityEngine.UI.Selectable.OnDeselect(UnityEngine.EventSystems.BaseEventData)
+  overload: Global.ExButton.OnDeselect*
+- uid: Global.ExButton.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:Global.ExButton.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  id: OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  parent: Global.ExButton
+  langs:
+  - csharp
+  - vb
+  name: OnPointerEnter(PointerEventData)
+  nameWithType: ExButton.OnPointerEnter(PointerEventData)
+  fullName: ExButton.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnPointerEnter
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+    startLine: 52
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void OnPointerEnter(PointerEventData eventData)
+    parameters:
+    - id: eventData
+      type: UnityEngine.EventSystems.PointerEventData
+    content.vb: Public Overrides Sub OnPointerEnter(eventData As PointerEventData)
+  overridden: UnityEngine.UI.Selectable.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  overload: Global.ExButton.OnPointerEnter*
+- uid: Global.ExButton.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:Global.ExButton.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+  id: OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+  parent: Global.ExButton
+  langs:
+  - csharp
+  - vb
+  name: OnPointerExit(PointerEventData)
+  nameWithType: ExButton.OnPointerExit(PointerEventData)
+  fullName: ExButton.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: OnPointerExit
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/1.Project/Scripts/UI/ExButton.cs
+    startLine: 58
+  assemblies:
+  - rwby
+  namespace: Global
+  example: []
+  syntax:
+    content: public override void OnPointerExit(PointerEventData eventData)
+    parameters:
+    - id: eventData
+      type: UnityEngine.EventSystems.PointerEventData
+    content.vb: Public Overrides Sub OnPointerExit(eventData As PointerEventData)
+  overridden: UnityEngine.UI.Selectable.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+  overload: Global.ExButton.OnPointerExit*
 references:
 - uid: Global
 - uid: System.Object
@@ -245,6 +463,62 @@ references:
   - uid: UnityEngine.UI.Button.ButtonClickedEvent
     name: ButtonClickedEvent
     isExternal: true
+- uid: Global.ExButton.onDeselected*
+  commentId: Overload:Global.ExButton.onDeselected
+  href: Global.ExButton.html#ExButton_onDeselected
+  name: onDeselected
+  nameWithType: ExButton.onDeselected
+  fullName: ExButton.onDeselected
+- uid: Global.ExButton.onPointerEnter*
+  commentId: Overload:Global.ExButton.onPointerEnter
+  href: Global.ExButton.html#ExButton_onPointerEnter
+  name: onPointerEnter
+  nameWithType: ExButton.onPointerEnter
+  fullName: ExButton.onPointerEnter
+- uid: Global.ExButton.onPointerExit*
+  commentId: Overload:Global.ExButton.onPointerExit
+  href: Global.ExButton.html#ExButton_onPointerExit
+  name: onPointerExit
+  nameWithType: ExButton.onPointerExit
+  fullName: ExButton.onPointerExit
+- uid: UnityEngine.UI.Button.OnSubmit(UnityEngine.EventSystems.BaseEventData)
+  commentId: M:UnityEngine.UI.Button.OnSubmit(UnityEngine.EventSystems.BaseEventData)
+  parent: UnityEngine.UI.Button
+  isExternal: true
+  name: OnSubmit(BaseEventData)
+  nameWithType: Button.OnSubmit(BaseEventData)
+  fullName: UnityEngine.UI.Button.OnSubmit(UnityEngine.EventSystems.BaseEventData)
+  spec.csharp:
+  - uid: UnityEngine.UI.Button.OnSubmit(UnityEngine.EventSystems.BaseEventData)
+    name: OnSubmit
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.BaseEventData
+    name: BaseEventData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.Button.OnSubmit(UnityEngine.EventSystems.BaseEventData)
+    name: OnSubmit
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.BaseEventData
+    name: BaseEventData
+    isExternal: true
+  - name: )
+- uid: Global.ExButton.OnSubmit*
+  commentId: Overload:Global.ExButton.OnSubmit
+  href: Global.ExButton.html#ExButton_OnSubmit_UnityEngine_EventSystems_BaseEventData_
+  name: OnSubmit
+  nameWithType: ExButton.OnSubmit
+  fullName: ExButton.OnSubmit
+- uid: UnityEngine.EventSystems.BaseEventData
+  commentId: T:UnityEngine.EventSystems.BaseEventData
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: BaseEventData
+  nameWithType: BaseEventData
+  fullName: UnityEngine.EventSystems.BaseEventData
 - uid: UnityEngine.UI.Selectable.OnSelect(UnityEngine.EventSystems.BaseEventData)
   commentId: M:UnityEngine.UI.Selectable.OnSelect(UnityEngine.EventSystems.BaseEventData)
   parent: UnityEngine.UI.Selectable
@@ -276,10 +550,103 @@ references:
   name: OnSelect
   nameWithType: ExButton.OnSelect
   fullName: ExButton.OnSelect
-- uid: UnityEngine.EventSystems.BaseEventData
-  commentId: T:UnityEngine.EventSystems.BaseEventData
+- uid: UnityEngine.UI.Selectable.OnDeselect(UnityEngine.EventSystems.BaseEventData)
+  commentId: M:UnityEngine.UI.Selectable.OnDeselect(UnityEngine.EventSystems.BaseEventData)
+  parent: UnityEngine.UI.Selectable
+  isExternal: true
+  name: OnDeselect(BaseEventData)
+  nameWithType: Selectable.OnDeselect(BaseEventData)
+  fullName: UnityEngine.UI.Selectable.OnDeselect(UnityEngine.EventSystems.BaseEventData)
+  spec.csharp:
+  - uid: UnityEngine.UI.Selectable.OnDeselect(UnityEngine.EventSystems.BaseEventData)
+    name: OnDeselect
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.BaseEventData
+    name: BaseEventData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.Selectable.OnDeselect(UnityEngine.EventSystems.BaseEventData)
+    name: OnDeselect
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.BaseEventData
+    name: BaseEventData
+    isExternal: true
+  - name: )
+- uid: Global.ExButton.OnDeselect*
+  commentId: Overload:Global.ExButton.OnDeselect
+  href: Global.ExButton.html#ExButton_OnDeselect_UnityEngine_EventSystems_BaseEventData_
+  name: OnDeselect
+  nameWithType: ExButton.OnDeselect
+  fullName: ExButton.OnDeselect
+- uid: UnityEngine.UI.Selectable.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:UnityEngine.UI.Selectable.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  parent: UnityEngine.UI.Selectable
+  isExternal: true
+  name: OnPointerEnter(PointerEventData)
+  nameWithType: Selectable.OnPointerEnter(PointerEventData)
+  fullName: UnityEngine.UI.Selectable.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  spec.csharp:
+  - uid: UnityEngine.UI.Selectable.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+    name: OnPointerEnter
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.Selectable.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+    name: OnPointerEnter
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+- uid: Global.ExButton.OnPointerEnter*
+  commentId: Overload:Global.ExButton.OnPointerEnter
+  href: Global.ExButton.html#ExButton_OnPointerEnter_UnityEngine_EventSystems_PointerEventData_
+  name: OnPointerEnter
+  nameWithType: ExButton.OnPointerEnter
+  fullName: ExButton.OnPointerEnter
+- uid: UnityEngine.EventSystems.PointerEventData
+  commentId: T:UnityEngine.EventSystems.PointerEventData
   parent: UnityEngine.EventSystems
   isExternal: true
-  name: BaseEventData
-  nameWithType: BaseEventData
-  fullName: UnityEngine.EventSystems.BaseEventData
+  name: PointerEventData
+  nameWithType: PointerEventData
+  fullName: UnityEngine.EventSystems.PointerEventData
+- uid: UnityEngine.UI.Selectable.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:UnityEngine.UI.Selectable.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+  parent: UnityEngine.UI.Selectable
+  isExternal: true
+  name: OnPointerExit(PointerEventData)
+  nameWithType: Selectable.OnPointerExit(PointerEventData)
+  fullName: UnityEngine.UI.Selectable.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+  spec.csharp:
+  - uid: UnityEngine.UI.Selectable.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+    name: OnPointerExit
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UI.Selectable.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+    name: OnPointerExit
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+- uid: Global.ExButton.OnPointerExit*
+  commentId: Overload:Global.ExButton.OnPointerExit
+  href: Global.ExButton.html#ExButton_OnPointerExit_UnityEngine_EventSystems_PointerEventData_
+  name: OnPointerExit
+  nameWithType: ExButton.OnPointerExit
+  fullName: ExButton.OnPointerExit

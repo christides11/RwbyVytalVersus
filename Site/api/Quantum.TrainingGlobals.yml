@@ -6,14 +6,16 @@ items:
   parent: Quantum
   children:
   - Quantum.TrainingGlobals.ALIGNMENT
+  - Quantum.TrainingGlobals.AddPlayerData(Quantum.Frame,System.Int32)
   - Quantum.TrainingGlobals.ClearPointers(Quantum.Core.FrameBase,Quantum.EntityRef)
   - Quantum.TrainingGlobals.GetHashCode
   - Quantum.TrainingGlobals.OnRemoved(Quantum.Core.FrameBase,Quantum.EntityRef,System.Void*)
+  - Quantum.TrainingGlobals.RemovePlayerData(Quantum.Frame,System.Int32)
   - Quantum.TrainingGlobals.SIZE
   - Quantum.TrainingGlobals.Serialize(System.Void*,Quantum.FrameSerializer)
-  - Quantum.TrainingGlobals.dummies
-  - Quantum.TrainingGlobals.playerData
-  - Quantum.TrainingGlobals.playersRequestingRespawn
+  - Quantum.TrainingGlobals.participantData
+  - Quantum.TrainingGlobals.playerReadyStatus
+  - Quantum.TrainingGlobals.timer
   langs:
   - csharp
   - vb
@@ -23,12 +25,12 @@ items:
   type: Struct
   source:
     remote:
-      path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingGlobals.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: TrainingGlobals
-    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2908
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingGlobals.cs
+    startLine: 2
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -56,15 +58,15 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: SIZE
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2910
+    startLine: 3293
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public const int SIZE = 48
+    content: public const int SIZE = 16
     return:
       type: System.Int32
-    content.vb: Public Const SIZE As Integer = 48
+    content.vb: Public Const SIZE As Integer = 16
 - uid: Quantum.TrainingGlobals.ALIGNMENT
   commentId: F:Quantum.TrainingGlobals.ALIGNMENT
   id: ALIGNMENT
@@ -83,7 +85,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ALIGNMENT
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2911
+    startLine: 3294
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -92,89 +94,87 @@ items:
     return:
       type: System.Int32
     content.vb: Public Const ALIGNMENT As Integer = 8
-- uid: Quantum.TrainingGlobals.playerData
-  commentId: F:Quantum.TrainingGlobals.playerData
-  id: playerData
+- uid: Quantum.TrainingGlobals.playerReadyStatus
+  commentId: F:Quantum.TrainingGlobals.playerReadyStatus
+  id: playerReadyStatus
   parent: Quantum.TrainingGlobals
   langs:
   - csharp
   - vb
-  name: playerData
-  nameWithType: TrainingGlobals.playerData
-  fullName: Quantum.TrainingGlobals.playerData
+  name: playerReadyStatus
+  nameWithType: TrainingGlobals.playerReadyStatus
+  fullName: Quantum.TrainingGlobals.playerReadyStatus
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: playerData
+    id: playerReadyStatus
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2913
+    startLine: 3296
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public QDictionaryPtr<int, TrainingPlayerData> playerData
+    content: public QDictionaryPtr<int, QBoolean> playerReadyStatus
     return:
-      type: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TrainingPlayerData}
-    content.vb: Public playerData As QDictionaryPtr(Of Integer, TrainingPlayerData)
-- uid: Quantum.TrainingGlobals.playersRequestingRespawn
-  commentId: F:Quantum.TrainingGlobals.playersRequestingRespawn
-  id: playersRequestingRespawn
+      type: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.QBoolean}
+    content.vb: Public playerReadyStatus As QDictionaryPtr(Of Integer, QBoolean)
+- uid: Quantum.TrainingGlobals.participantData
+  commentId: F:Quantum.TrainingGlobals.participantData
+  id: participantData
   parent: Quantum.TrainingGlobals
   langs:
   - csharp
   - vb
-  name: playersRequestingRespawn
-  nameWithType: TrainingGlobals.playersRequestingRespawn
-  fullName: Quantum.TrainingGlobals.playersRequestingRespawn
+  name: participantData
+  nameWithType: TrainingGlobals.participantData
+  fullName: Quantum.TrainingGlobals.participantData
   type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: playersRequestingRespawn
+    id: participantData
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2915
+    startLine: 3298
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public QDictionaryPtr<PlayerRef, int> playersRequestingRespawn
+    content: public QDictionaryPtr<int, TrainingParticipantData> participantData
     return:
-      type: Quantum.Collections.QDictionaryPtr{Quantum.PlayerRef,System.Int32}
-    content.vb: Public playersRequestingRespawn As QDictionaryPtr(Of PlayerRef, Integer)
-- uid: Quantum.TrainingGlobals.dummies
-  commentId: P:Quantum.TrainingGlobals.dummies
-  id: dummies
+      type: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TrainingParticipantData}
+    content.vb: Public participantData As QDictionaryPtr(Of Integer, TrainingParticipantData)
+- uid: Quantum.TrainingGlobals.timer
+  commentId: F:Quantum.TrainingGlobals.timer
+  id: timer
   parent: Quantum.TrainingGlobals
   langs:
   - csharp
   - vb
-  name: dummies
-  nameWithType: TrainingGlobals.dummies
-  fullName: Quantum.TrainingGlobals.dummies
-  type: Property
+  name: timer
+  nameWithType: TrainingGlobals.timer
+  fullName: Quantum.TrainingGlobals.timer
+  type: Field
   source:
     remote:
       path: rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
       branch: dev
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
-    id: dummies
+    id: timer
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2919
+    startLine: 3300
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: public FixedArray<EntityRef> dummies { get; }
-    parameters: []
+    content: public FrameTimer timer
     return:
-      type: Quantum.FixedArray{Quantum.EntityRef}
-    content.vb: Public ReadOnly Property dummies As FixedArray(Of EntityRef)
-  overload: Quantum.TrainingGlobals.dummies*
+      type: Quantum.FrameTimer
+    content.vb: Public timer As FrameTimer
 - uid: Quantum.TrainingGlobals.GetHashCode
   commentId: M:Quantum.TrainingGlobals.GetHashCode
   id: GetHashCode
@@ -193,7 +193,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: GetHashCode
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2924
+    startLine: 3301
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -223,7 +223,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: ClearPointers
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2933
+    startLine: 3310
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -254,7 +254,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: OnRemoved
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2937
+    startLine: 3314
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -290,7 +290,7 @@ items:
       repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
     id: Serialize
     path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/Generated/Quantum.CodeGen.Core.cs
-    startLine: 2941
+    startLine: 3318
   assemblies:
   - Quantum.Simulation
   namespace: Quantum
@@ -306,6 +306,74 @@ items:
   nameWithType.vb: TrainingGlobals.Serialize(Void*, FrameSerializer)
   fullName.vb: Quantum.TrainingGlobals.Serialize(Void*, Quantum.FrameSerializer)
   name.vb: Serialize(Void*, FrameSerializer)
+- uid: Quantum.TrainingGlobals.AddPlayerData(Quantum.Frame,System.Int32)
+  commentId: M:Quantum.TrainingGlobals.AddPlayerData(Quantum.Frame,System.Int32)
+  id: AddPlayerData(Quantum.Frame,System.Int32)
+  parent: Quantum.TrainingGlobals
+  langs:
+  - csharp
+  - vb
+  name: AddPlayerData(Frame, int)
+  nameWithType: TrainingGlobals.AddPlayerData(Frame, int)
+  fullName: Quantum.TrainingGlobals.AddPlayerData(Quantum.Frame, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingGlobals.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: AddPlayerData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingGlobals.cs
+    startLine: 4
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void AddPlayerData(Frame frame, int key)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: key
+      type: System.Int32
+    content.vb: Public Sub AddPlayerData(frame As Frame, key As Integer)
+  overload: Quantum.TrainingGlobals.AddPlayerData*
+  nameWithType.vb: TrainingGlobals.AddPlayerData(Frame, Integer)
+  fullName.vb: Quantum.TrainingGlobals.AddPlayerData(Quantum.Frame, Integer)
+  name.vb: AddPlayerData(Frame, Integer)
+- uid: Quantum.TrainingGlobals.RemovePlayerData(Quantum.Frame,System.Int32)
+  commentId: M:Quantum.TrainingGlobals.RemovePlayerData(Quantum.Frame,System.Int32)
+  id: RemovePlayerData(Quantum.Frame,System.Int32)
+  parent: Quantum.TrainingGlobals
+  langs:
+  - csharp
+  - vb
+  name: RemovePlayerData(Frame, int)
+  nameWithType: TrainingGlobals.RemovePlayerData(Frame, int)
+  fullName: Quantum.TrainingGlobals.RemovePlayerData(Quantum.Frame, int)
+  type: Method
+  source:
+    remote:
+      path: rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingGlobals.cs
+      branch: dev
+      repo: https://ChrisTides11@dev.azure.com/ChrisTides11/rwbyq/_git/rwbyq
+    id: RemovePlayerData
+    path: ../../../Unity/rwbyq/rwbyq_unity/Assets/QuantumUser/Simulation/mfo/Gamemode/Training/TrainingGlobals.cs
+    startLine: 19
+  assemblies:
+  - Quantum.Simulation
+  namespace: Quantum
+  syntax:
+    content: public void RemovePlayerData(Frame frame, int key)
+    parameters:
+    - id: frame
+      type: Quantum.Frame
+    - id: key
+      type: System.Int32
+    content.vb: Public Sub RemovePlayerData(frame As Frame, key As Integer)
+  overload: Quantum.TrainingGlobals.RemovePlayerData*
+  nameWithType.vb: TrainingGlobals.RemovePlayerData(Frame, Integer)
+  fullName.vb: Quantum.TrainingGlobals.RemovePlayerData(Quantum.Frame, Integer)
+  name.vb: RemovePlayerData(Frame, Integer)
 references:
 - uid: Quantum
   commentId: N:Quantum
@@ -345,17 +413,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TrainingPlayerData}
-  commentId: T:Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TrainingPlayerData}
+- uid: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.QBoolean}
+  commentId: T:Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.QBoolean}
   parent: Quantum.Collections
   definition: Quantum.Collections.QDictionaryPtr`2
   href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: QDictionaryPtr<int, TrainingPlayerData>
-  nameWithType: QDictionaryPtr<int, TrainingPlayerData>
-  fullName: Quantum.Collections.QDictionaryPtr<int, Quantum.TrainingPlayerData>
-  nameWithType.vb: QDictionaryPtr(Of Integer, TrainingPlayerData)
-  fullName.vb: Quantum.Collections.QDictionaryPtr(Of Integer, Quantum.TrainingPlayerData)
-  name.vb: QDictionaryPtr(Of Integer, TrainingPlayerData)
+  name: QDictionaryPtr<int, QBoolean>
+  nameWithType: QDictionaryPtr<int, QBoolean>
+  fullName: Quantum.Collections.QDictionaryPtr<int, Quantum.QBoolean>
+  nameWithType.vb: QDictionaryPtr(Of Integer, QBoolean)
+  fullName.vb: Quantum.Collections.QDictionaryPtr(Of Integer, Quantum.QBoolean)
+  name.vb: QDictionaryPtr(Of Integer, QBoolean)
   spec.csharp:
   - uid: Quantum.Collections.QDictionaryPtr`2
     name: QDictionaryPtr
@@ -367,9 +435,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
-  - uid: Quantum.TrainingPlayerData
-    name: TrainingPlayerData
-    href: Quantum.TrainingPlayerData.html
+  - uid: Quantum.QBoolean
+    name: QBoolean
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: Quantum.Collections.QDictionaryPtr`2
@@ -384,9 +452,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
-  - uid: Quantum.TrainingPlayerData
-    name: TrainingPlayerData
-    href: Quantum.TrainingPlayerData.html
+  - uid: Quantum.QBoolean
+    name: QBoolean
+    isExternal: true
   - name: )
 - uid: Quantum.Collections.QDictionaryPtr`2
   commentId: T:Quantum.Collections.QDictionaryPtr`2
@@ -441,31 +509,31 @@ references:
   - uid: Quantum.Collections
     name: Collections
     isExternal: true
-- uid: Quantum.Collections.QDictionaryPtr{Quantum.PlayerRef,System.Int32}
-  commentId: T:Quantum.Collections.QDictionaryPtr{Quantum.PlayerRef,System.Int32}
+- uid: Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TrainingParticipantData}
+  commentId: T:Quantum.Collections.QDictionaryPtr{System.Int32,Quantum.TrainingParticipantData}
   parent: Quantum.Collections
   definition: Quantum.Collections.QDictionaryPtr`2
   href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: QDictionaryPtr<PlayerRef, int>
-  nameWithType: QDictionaryPtr<PlayerRef, int>
-  fullName: Quantum.Collections.QDictionaryPtr<Quantum.PlayerRef, int>
-  nameWithType.vb: QDictionaryPtr(Of PlayerRef, Integer)
-  fullName.vb: Quantum.Collections.QDictionaryPtr(Of Quantum.PlayerRef, Integer)
-  name.vb: QDictionaryPtr(Of PlayerRef, Integer)
+  name: QDictionaryPtr<int, TrainingParticipantData>
+  nameWithType: QDictionaryPtr<int, TrainingParticipantData>
+  fullName: Quantum.Collections.QDictionaryPtr<int, Quantum.TrainingParticipantData>
+  nameWithType.vb: QDictionaryPtr(Of Integer, TrainingParticipantData)
+  fullName.vb: Quantum.Collections.QDictionaryPtr(Of Integer, Quantum.TrainingParticipantData)
+  name.vb: QDictionaryPtr(Of Integer, TrainingParticipantData)
   spec.csharp:
   - uid: Quantum.Collections.QDictionaryPtr`2
     name: QDictionaryPtr
     isExternal: true
   - name: <
-  - uid: Quantum.PlayerRef
-    name: PlayerRef
-    isExternal: true
-  - name: ','
-  - name: " "
   - uid: System.Int32
     name: int
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.TrainingParticipantData
+    name: TrainingParticipantData
+    href: Quantum.TrainingParticipantData.html
   - name: '>'
   spec.vb:
   - uid: Quantum.Collections.QDictionaryPtr`2
@@ -473,78 +541,24 @@ references:
     isExternal: true
   - name: (
   - name: Of
-  - name: " "
-  - uid: Quantum.PlayerRef
-    name: PlayerRef
-    isExternal: true
-  - name: ','
   - name: " "
   - uid: System.Int32
     name: Integer
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Quantum.TrainingParticipantData
+    name: TrainingParticipantData
+    href: Quantum.TrainingParticipantData.html
   - name: )
-- uid: Quantum.TrainingGlobals.dummies*
-  commentId: Overload:Quantum.TrainingGlobals.dummies
-  href: Quantum.TrainingGlobals.html#Quantum_TrainingGlobals_dummies
-  name: dummies
-  nameWithType: TrainingGlobals.dummies
-  fullName: Quantum.TrainingGlobals.dummies
-- uid: Quantum.FixedArray{Quantum.EntityRef}
-  commentId: T:Quantum.FixedArray{Quantum.EntityRef}
+- uid: Quantum.FrameTimer
+  commentId: T:Quantum.FrameTimer
   parent: Quantum
-  definition: Quantum.FixedArray`1
-  name: FixedArray<EntityRef>
-  nameWithType: FixedArray<EntityRef>
-  fullName: Quantum.FixedArray<Quantum.EntityRef>
-  nameWithType.vb: FixedArray(Of EntityRef)
-  fullName.vb: Quantum.FixedArray(Of Quantum.EntityRef)
-  name.vb: FixedArray(Of EntityRef)
-  spec.csharp:
-  - uid: Quantum.FixedArray`1
-    name: FixedArray
-    isExternal: true
-  - name: <
-  - uid: Quantum.EntityRef
-    name: EntityRef
-    isExternal: true
-  - name: '>'
-  spec.vb:
-  - uid: Quantum.FixedArray`1
-    name: FixedArray
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Quantum.EntityRef
-    name: EntityRef
-    isExternal: true
-  - name: )
-- uid: Quantum.FixedArray`1
-  commentId: T:Quantum.FixedArray`1
   isExternal: true
-  name: FixedArray<T>
-  nameWithType: FixedArray<T>
-  fullName: Quantum.FixedArray<T>
-  nameWithType.vb: FixedArray(Of T)
-  fullName.vb: Quantum.FixedArray(Of T)
-  name.vb: FixedArray(Of T)
-  spec.csharp:
-  - uid: Quantum.FixedArray`1
-    name: FixedArray
-    isExternal: true
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: Quantum.FixedArray`1
-    name: FixedArray
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
+  name: FrameTimer
+  nameWithType: FrameTimer
+  fullName: Quantum.FrameTimer
 - uid: System.ValueType.GetHashCode
   commentId: M:System.ValueType.GetHashCode
   parent: System.ValueType
@@ -663,3 +677,22 @@ references:
   name: FrameSerializer
   nameWithType: FrameSerializer
   fullName: Quantum.FrameSerializer
+- uid: Quantum.TrainingGlobals.AddPlayerData*
+  commentId: Overload:Quantum.TrainingGlobals.AddPlayerData
+  href: Quantum.TrainingGlobals.html#Quantum_TrainingGlobals_AddPlayerData_Quantum_Frame_System_Int32_
+  name: AddPlayerData
+  nameWithType: TrainingGlobals.AddPlayerData
+  fullName: Quantum.TrainingGlobals.AddPlayerData
+- uid: Quantum.Frame
+  commentId: T:Quantum.Frame
+  parent: Quantum
+  href: Quantum.Frame.html
+  name: Frame
+  nameWithType: Frame
+  fullName: Quantum.Frame
+- uid: Quantum.TrainingGlobals.RemovePlayerData*
+  commentId: Overload:Quantum.TrainingGlobals.RemovePlayerData
+  href: Quantum.TrainingGlobals.html#Quantum_TrainingGlobals_RemovePlayerData_Quantum_Frame_System_Int32_
+  name: RemovePlayerData
+  nameWithType: TrainingGlobals.RemovePlayerData
+  fullName: Quantum.TrainingGlobals.RemovePlayerData

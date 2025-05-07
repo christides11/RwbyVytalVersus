@@ -26,8 +26,8 @@ items:
   - Quantum.Simulation
   namespace: Quantum
   syntax:
-    content: 'public abstract class KCCProcessor : AssetObject'
-    content.vb: Public MustInherit Class KCCProcessor Inherits AssetObject
+    content: 'public abstract class KCCProcessor : AssetObject, ILogSource'
+    content.vb: Public MustInherit Class KCCProcessor Inherits AssetObject Implements ILogSource
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -38,6 +38,8 @@ items:
   - Quantum.FighterEnvironmentProcessor
   - Quantum.GroundSnapProcessor
   - Quantum.StepUpProcessor
+  implements:
+  - Quantum.ILogSource
   inheritedMembers:
   - Quantum.AssetObject.Identifier
   - Quantum.AssetObject.Loaded(Quantum.IResourceManager,Photon.Deterministic.Native.Allocator)
@@ -183,6 +185,13 @@ references:
   name: AssetObject
   nameWithType: AssetObject
   fullName: Quantum.AssetObject
+- uid: Quantum.ILogSource
+  commentId: T:Quantum.ILogSource
+  parent: Quantum
+  isExternal: true
+  name: ILogSource
+  nameWithType: ILogSource
+  fullName: Quantum.ILogSource
 - uid: Quantum.AssetObject.Identifier
   commentId: F:Quantum.AssetObject.Identifier
   parent: Quantum.AssetObject
